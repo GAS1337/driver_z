@@ -139,7 +139,104 @@
       "__version": 1,
       "__Prefab": "prefabs/truckkenney.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "725cae78-cb19-4237-8d3e-824ddba90f80"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "18d3e3b1-eb9f-47f0-8189-b1289279e1fe"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "8be5ca86-0216-48da-8dea-629b47f53c68"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "725cae78-cb19-4237-8d3e-824ddba90f80",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "lantern",
+              "Position": "-24.94919,0.000004291534,119.3202",
+              "Rotation": "0,0,0,1",
+              "Scale": "0.4181889,1,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "630a8806-65fd-45c5-9e96-7545c0824816"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "725cae78-cb19-4237-8d3e-824ddba90f80"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "630a8806-65fd-45c5-9e96-7545c0824816",
+              "__enabled": true,
+              "Distance": 512,
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Falloff": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 3.1415927,
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/lantern.sound",
+              "SoundOverride": false,
+              "StopOnNew": false,
+              "TargetMixer": {
+                "Name": "unknown",
+                "Id": "00000000-0000-0000-0000-000000000000"
+              },
+              "Volume": 1
+            }
+          }
+        ],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
