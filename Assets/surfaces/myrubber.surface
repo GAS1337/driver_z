@@ -1,0 +1,60 @@
+{
+  "BaseSurface": "surfaces/default.surface",
+  "AudioSurface": "Generic",
+  "Description": "",
+  "Friction": 200,
+  "Elasticity": 0.1953125,
+  "Density": 715,
+  "RollingResistance": 0,
+  "BounceThreshold": 50.260418,
+  "Dampening": 0,
+  "ImpactEffects": {
+    "Regular": [],
+    "Bullet": [],
+    "BulletDecal": [
+      "decals/bullet-rubber.decal"
+    ],
+    "SoftParticles": null,
+    "SoftDecal": null,
+    "HardParticles": null,
+    "HardDecal": null
+  },
+  "ScrapeEffects": {
+    "RoughnessFactor": 0.25,
+    "RoughThreshold": 0.5,
+    "SmoothParticles": null,
+    "RoughParticles": null,
+    "SmoothDecal": null,
+    "RoughDecal": null
+  },
+  "Sounds": {
+    "FootLeft": "",
+    "FootRight": "",
+    "FootLaunch": "",
+    "FootLand": "",
+    "Bullet": "",
+    "ImpactHard": "",
+    "ImpactSoft": "",
+    "ScrapeRough": null,
+    "ScrapeSmooth": null
+  },
+  "PrefabCollection": {
+    "BulletImpact": null,
+    "BluntImpact": null
+  },
+  "SoundCollection": {
+    "FootLeft": null,
+    "FootRight": null,
+    "FootLaunch": null,
+    "FootLand": null,
+    "Bullet": null,
+    "ImpactHard": null,
+    "ImpactSoft": null,
+    "ScrapeRough": null,
+    "ScrapeSmooth": null,
+    "Break": null
+  },
+  "Tags": null,
+  "__references": [],
+  "__version": 0
+}
