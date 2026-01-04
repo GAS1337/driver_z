@@ -1,0 +1,451 @@
+{
+  "RootObject": {
+    "__guid": "3f383b9a-a89b-4c7f-a39b-c8321446b19e",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "road-straight double with trees",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "10.25,10.25,10.25",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "75474672-f3f1-4636-8cf4-2aa641bc6ef2",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "75474672-f3f1-4636-8cf4-2aa641bc6ef2",
+          "60bddcac-e788-4229-9f02-14de87634504": "925671be-896d-4fdc-89ea-b11c136a0b68"
+        }
+      },
+      {
+        "__guid": "cc60fa5c-d105-4f65-9fce-47eef8a186b4",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Name",
+              "Value": "road-straight (5)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Position",
+              "Value": "99.90244,0,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "cc60fa5c-d105-4f65-9fce-47eef8a186b4",
+          "60bddcac-e788-4229-9f02-14de87634504": "024fde19-18cb-4ce3-991b-ff26e41d4721"
+        }
+      },
+      {
+        "__guid": "9d9b7f5d-49bd-40c3-990d-0ebda2c58a7e",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Name",
+              "Value": "road-straight (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Position",
+              "Value": "0,-99.90244,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "9d9b7f5d-49bd-40c3-990d-0ebda2c58a7e",
+          "60bddcac-e788-4229-9f02-14de87634504": "bd038131-61b2-47da-9670-3eaf37ed0374"
+        }
+      },
+      {
+        "__guid": "7eac8a24-2767-4a28-9afa-1452ef36ffd7",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Name",
+              "Value": "road-straight (3)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Position",
+              "Value": "99.90244,-99.90244,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "7eac8a24-2767-4a28-9afa-1452ef36ffd7",
+          "60bddcac-e788-4229-9f02-14de87634504": "51e87f2b-cdc3-4718-a615-26d93abd2289"
+        }
+      },
+      {
+        "__guid": "aeb29309-25c6-487a-85ca-b79df2c8e211",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Name",
+              "Value": "road-straight (2)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Position",
+              "Value": "0,-199.8049,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "aeb29309-25c6-487a-85ca-b79df2c8e211",
+          "60bddcac-e788-4229-9f02-14de87634504": "c3ed13fd-a23d-4325-9d72-99d8b03c0891"
+        }
+      },
+      {
+        "__guid": "13bce8d5-70d0-4afa-95e0-c741cfd50784",
+        "__version": 1,
+        "__Prefab": "prefabs/road-straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Name",
+              "Value": "road-straight (4)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Position",
+              "Value": "99.90244,-199.8049,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "c4a7f8a6-55c3-4cf1-9311-924de83f3b1e": "13bce8d5-70d0-4afa-95e0-c741cfd50784",
+          "60bddcac-e788-4229-9f02-14de87634504": "22d17f85-fc03-4d93-882e-e71c1bf16141"
+        }
+      },
+      {
+        "__guid": "7ed54134-1975-49e2-8e39-0aecf2c5eae9",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "detail-tree-large",
+        "Position": "49.95121,-212.2927,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "eb562575-ed46-4ce8-8d01-5d16d8946abd",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/tower defense kit/detail-tree-large.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "95b62fc6-6647-4d71-8ffc-5a5be4e9638c",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "detail-tree-large (1)",
+        "Position": "49.95121,-137.3659,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "c8d2622e-156f-4df6-98bb-785308de8c56",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/tower defense kit/detail-tree-large.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "e0d604de-6e74-44e0-bc95-3f62244b2c36",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "detail-tree-large (2)",
+        "Position": "49.95121,-62.43903,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8afc2516-0d36-4759-b1b7-90b782abd1df",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/tower defense kit/detail-tree-large.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "22b51b08-f266-48e7-b4ab-fdc413da8f9b",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "detail-tree-large (3)",
+        "Position": "49.95121,12.4878,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "44d6842f-b725-4596-b5e3-638e685500e4",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/tower defense kit/detail-tree-large.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

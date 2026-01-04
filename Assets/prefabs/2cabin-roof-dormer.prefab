@@ -1,0 +1,147 @@
+{
+  "RootObject": {
+    "__guid": "59942f0f-3d6e-4811-87d5-d0dae66da167",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "cabin-roof-dormer",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "3.729964,3.729964,3.729964",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "2b7e42f6-6f7e-4ec5-bf7f-bfeaf0298177",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "LodOverride": null,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Materials": null,
+        "Model": "models/holiday kit/cabin-roof-dormer.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "6a0aac09-ced5-4c7f-9da5-895cc4107971",
+        "__enabled": true,
+        "Center": "0.5419579,2.041794,63.89593",
+        "ColliderFlags": 0,
+        "Elasticity": null,
+        "Friction": null,
+        "IsTrigger": false,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Scale": "99.40844,97.60736,127.5326",
+        "Static": true,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "61400e64-ad8d-4b3f-aa7a-bb698c5bb86e",
+        "__version": 1,
+        "__Prefab": "prefabs/wreath.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "71f22a64-5eec-43c3-9992-6512ca4ffd19"
+              },
+              "Property": "Name",
+              "Value": "wreath (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "71f22a64-5eec-43c3-9992-6512ca4ffd19"
+              },
+              "Property": "Position",
+              "Value": "55.5391,38.03027,9.859553"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "71f22a64-5eec-43c3-9992-6512ca4ffd19"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0.2214351,0.9751751"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "71f22a64-5eec-43c3-9992-6512ca4ffd19"
+              },
+              "Property": "Scale",
+              "Value": "0.5,0.5,0.5"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "71f22a64-5eec-43c3-9992-6512ca4ffd19": "61400e64-ad8d-4b3f-aa7a-bb698c5bb86e",
+          "c4284f3c-3987-42eb-8436-0b3a9ccf36b4": "837b11e6-9f50-44a1-8b2a-ee2ea9d58174"
+        }
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
