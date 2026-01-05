@@ -255,14 +255,6 @@
             },
             "Property": "Position",
             "Value": "-1216,0.00003051758,960"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "7f77739e-46e6-4f9e-91cc-26623f9bc232"
-            },
-            "Property": "ZFar",
-            "Value": 30000
           }
         ],
         "MovedObjects": []
@@ -320,7 +312,7 @@
       "__version": 1,
       "Flags": 0,
       "Name": "ambulance",
-      "Position": "2848.312,10088.57,315.751",
+      "Position": "2849.224,10088.58,219.7554",
       "Rotation": "0.2715002,0.6554772,-0.6528825,-0.2652952",
       "Scale": "1,1,1",
       "Tags": "",
@@ -18044,7 +18036,7 @@
       "Children": []
     },
     {
-      "__guid": "3d8889db-6340-4376-a8c3-640f9d1d117e",
+      "__guid": "bbf8595e-f4ed-4da1-90ae-0e11bc0d1874",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -18054,11 +18046,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "f875e94d-eede-4fe0-9570-a25cd9dfaaa6": "def4f6aa-e7b3-4610-a639-012c4abbc71f"
+        "ba2fbb6b-e89d-4153-a19f-1a64282e5b95": "b39abb33-c9f1-49eb-9ab9-f030abaf86e6"
       }
     },
     {
-      "__guid": "57e3feb7-0dc6-4ecf-838e-68799f837a2f",
+      "__guid": "b8aeea20-c84c-4e2b-944d-7c1b10141f8d",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -18068,7 +18060,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "f875e94d-eede-4fe0-9570-a25cd9dfaaa6": "3b258d2e-54cc-4725-82e2-9f2e289f5d9b"
+        "ba2fbb6b-e89d-4153-a19f-1a64282e5b95": "a5393d01-a31c-41b0-be30-8586e729761f"
       }
     },
     {
@@ -22866,32 +22858,93 @@
       "__version": 1,
       "__Prefab": "prefabs/track-wide-straight-skew-right-side.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
+        "AddedObjects": [
           {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "a0dffcda-c35f-483f-ba2f-0a69044ca1d0"
+            "Id": {
+              "Type": "Component",
+              "IdValue": "0c5e9444-e7ff-42d9-ac6a-e73eb8d12bc9"
             },
-            "Property": "Position",
-            "Value": "896,10832,1592"
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "fc07c993-cca0-4f2a-9a8d-b866a87d432c"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0c5e9444-e7ff-42d9-ac6a-e73eb8d12bc9",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/toy car kit/track-wide-straight-skew-right-side.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
           },
           {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "a0dffcda-c35f-483f-ba2f-0a69044ca1d0"
+            "Id": {
+              "Type": "Component",
+              "IdValue": "77fd7599-9f0a-4271-9695-f0041eafa8ec"
             },
-            "Property": "Scale",
-            "Value": "5.125,5.125,5.125"
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "fc07c993-cca0-4f2a-9a8d-b866a87d432c"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "0c5e9444-e7ff-42d9-ac6a-e73eb8d12bc9"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "77fd7599-9f0a-4271-9695-f0041eafa8ec",
+              "__enabled": true,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/toy car kit/track-wide-straight-skew-right-side.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
           }
         ],
+        "RemovedObjects": [],
+        "PropertyOverrides": [],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "a0dffcda-c35f-483f-ba2f-0a69044ca1d0": "fc07c993-cca0-4f2a-9a8d-b866a87d432c",
-        "e27d6eeb-7a46-42bd-9de3-3e32804d584a": "0c5e9444-e7ff-42d9-ac6a-e73eb8d12bc9",
-        "18f7c968-5343-4ead-8cd9-ae0271c823aa": "77fd7599-9f0a-4271-9695-f0041eafa8ec"
+        "5162bf20-d10d-4aa1-b959-b7888fa94277": "8f744313-eaf5-43c0-8b5c-e72155a7ec52"
       }
     },
     {
@@ -23216,7 +23269,7 @@
       }
     },
     {
-      "__guid": "5cb5ede3-f53e-4745-a061-3d31bd5a1dea",
+      "__guid": "bd3fab83-b617-421e-a90b-a32d95772d32",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23226,11 +23279,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "6ebbba2e-6386-42d1-a0de-200c48c1f613": "dad57402-221e-4bb1-8d02-a39c7326f75c"
+        "5ffcce28-309b-427a-ae5c-83501f7d3ff6": "a142a2cf-731f-4bed-b13a-23b74d48ecc1"
       }
     },
     {
-      "__guid": "d809d785-1df7-4fdf-9d31-67ab2c31eb52",
+      "__guid": "ae3fcb8a-3447-4967-92b8-5acd1fcad914",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23240,7 +23293,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "6ebbba2e-6386-42d1-a0de-200c48c1f613": "f6e94528-d0da-49f8-a614-1a268a08073b"
+        "5ffcce28-309b-427a-ae5c-83501f7d3ff6": "f3dc2125-7a03-4fb7-a545-9f4767fe502a"
       }
     },
     {
