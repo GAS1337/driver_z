@@ -1,0 +1,54 @@
+{
+  "RootObject": {
+    "__guid": "9e344654-5cc0-44b9-806a-ae1b35587190",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "building-type-j farmhouse (1)",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "5.125,5.125,5.125",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "6804b949-4a1e-444a-a99c-ff710998e27d",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "LodOverride": null,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Materials": null,
+        "Model": "models/city kit suburban/building-type-j.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

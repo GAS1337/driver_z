@@ -1,0 +1,231 @@
+{
+  "RootObject": {
+    "__guid": "c890f562-7bfc-4eaf-864a-258c617984d6",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "iron-fence-border 8x straight +2 corners",
+    "Position": "0,0,0",
+    "Rotation": "0,0,-0.7071067,0.7071068",
+    "Scale": "3,3,3",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "8033f508-8684-4ee3-838c-427cdfe76939",
+        "__version": 1,
+        "__Prefab": "iron-fence-border 4x straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "746279d6-c489-4c8e-8f05-2ee5e8f11df3": "8033f508-8684-4ee3-838c-427cdfe76939",
+          "3dfcdaff-5860-4121-99ca-c2f8e3dd7198": "e2940ccb-967e-4d3e-bc70-a599cd5c126b",
+          "a1fce7c9-129d-4fe3-b71a-730993955107": "733322ec-2a32-4230-807c-203c09385e2e",
+          "1992dc87-daa7-49aa-bd92-16d2d64d2ca9": "59699dc0-2c89-4677-8952-3b1cfabd2ff7",
+          "42fa055c-3d09-45aa-8753-c0a291247ab4": "ade057b5-fe9e-4a66-81b6-5385f043a47c",
+          "54e19ef7-7e3f-4a9d-aeb9-e28e7727311a": "366cb847-7091-4c37-853d-7dd772049b8e",
+          "992faa03-d373-45b0-b4d3-0641281f0c60": "2786ce10-401e-4e65-84ab-d5b99954a1ed",
+          "ed48ca74-f702-4e7c-b8d0-f8c1ff7b7038": "2a72a8d8-4a0b-4c12-af2d-3ca06c8e20dc",
+          "2fb7055d-f5fe-49e7-845d-fbb3fd935cde": "85e08828-4b88-47de-aa88-75a6a366ef7d"
+        }
+      },
+      {
+        "__guid": "db28b91c-8ee1-43f2-baa3-2fb4b041359b",
+        "__version": 1,
+        "__Prefab": "iron-fence-border 4x straight.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Name",
+              "Value": "iron-fence-border 4x straight (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Position",
+              "Value": "-0.0001017253,500.0001,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "746279d6-c489-4c8e-8f05-2ee5e8f11df3"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "746279d6-c489-4c8e-8f05-2ee5e8f11df3": "db28b91c-8ee1-43f2-baa3-2fb4b041359b",
+          "3dfcdaff-5860-4121-99ca-c2f8e3dd7198": "8ee404d8-0d49-4d15-a2e4-82047b38f7f3",
+          "a1fce7c9-129d-4fe3-b71a-730993955107": "cd56ccd0-0e93-49f9-b9a1-0cacc078640b",
+          "1992dc87-daa7-49aa-bd92-16d2d64d2ca9": "db59f146-1e14-40a6-bac5-86a8836c39ed",
+          "42fa055c-3d09-45aa-8753-c0a291247ab4": "f097ceb4-b862-40cb-b960-806b0d11d44b",
+          "54e19ef7-7e3f-4a9d-aeb9-e28e7727311a": "0907b5f4-b1d6-4ab5-bf5f-0d2434272c3f",
+          "992faa03-d373-45b0-b4d3-0641281f0c60": "d46aafb8-7911-434c-8ff6-b2715c332e94",
+          "ed48ca74-f702-4e7c-b8d0-f8c1ff7b7038": "6c1045d5-6346-4612-9969-7e501abc4dce",
+          "2fb7055d-f5fe-49e7-845d-fbb3fd935cde": "88baff27-3929-4c27-a84d-f250b27d94e6"
+        }
+      },
+      {
+        "__guid": "a445d634-225f-4373-a605-d12288391869",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "iron-fence-border-curve (1)",
+        "Position": "-64.66749,-99.99973,0",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "96b0136a-2549-40b5-b686-8979eee54c01",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/graveyard kit/iron-fence-border-curve.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "6b07412d-00ec-476b-9135-37f983c5a86f",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "iron-fence-border-curve",
+        "Position": "-64.66683,896.6671,0",
+        "Rotation": "0,0,0.9999999,0.0000001490116",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2944b7d3-a4fe-4647-8246-b38f071a4ff9",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/graveyard kit/iron-fence-border-curve.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
