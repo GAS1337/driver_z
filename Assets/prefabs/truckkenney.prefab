@@ -146,6 +146,7 @@
               "go": "d510eae4-ff9d-454f-aad8-d0267b3b0346",
               "component_type": "WheelJoint"
             },
+            "FullSpeedAdd": 2000,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -164,33 +165,36 @@
               "go": "1144d7d1-ba53-47f1-b7dd-00f7329c8f55",
               "component_type": "WheelJoint"
             },
-            "Speed": 4000,
+            "Speed": 2000,
             "SteeringAngle": 25,
             "Torque": 400
           },
           {
-            "__type": "CameraController",
-            "__guid": "1cf9f2dc-4361-4b74-ae59-dbbdc2f08f71",
+            "__type": "OrbitalCameraController",
+            "__guid": "d113effd-d6e9-4fb9-80b4-0e6ebbe9d579",
             "__enabled": true,
-            "body": {
-              "_type": "component",
-              "component_id": "1efbba87-9223-4728-ac25-3d981c9860ab",
-              "go": "18d3e3b1-eb9f-47f0-8189-b1289279e1fe",
-              "component_type": "Rigidbody"
-            },
+            "AutoZoomStrength": 10,
             "DistanceToPlayer": 2000,
-            "main_camera": {
+            "MainCamera": {
               "_type": "component",
               "component_id": "7f77739e-46e6-4f9e-91cc-26623f9bc232",
               "go": "c6cb2f06-09ff-4d3a-98eb-1726315f4c74",
               "component_type": "CameraComponent"
             },
+            "MaxDistanceToPlayer": 10000,
+            "MinDistanceToPlayer": 64,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
-            "OnComponentUpdate": null
+            "OnComponentUpdate": null,
+            "Player": {
+              "_type": "gameobject",
+              "go": "18d3e3b1-eb9f-47f0-8189-b1289279e1fe"
+            },
+            "TargetDistanceToPlayer": 2000,
+            "ZoomStrength": 100
           },
           {
             "__type": "Sandbox.SphereCollider",
@@ -350,7 +354,7 @@
                 "__version": 1,
                 "Flags": 0,
                 "Name": "RearRight",
-                "Position": "-26.69127,-70.43919,-4.167297",
+                "Position": "-26.6913,-63.84059,-4.167268",
                 "Rotation": "-0.5,0.5,0.5,0.5",
                 "Scale": "1.8,1.8,1.8",
                 "Tags": "",
@@ -415,7 +419,7 @@
                 "__version": 1,
                 "Flags": 0,
                 "Name": "RearLeft",
-                "Position": "-26.60378,70.57431,-5.55777",
+                "Position": "-26.6038,64.19801,-5.557893",
                 "Rotation": "-0.5,0.5,0.5,0.5",
                 "Scale": "1.8,1.8,1.8",
                 "Tags": "",
@@ -480,7 +484,7 @@
                 "__version": 1,
                 "Flags": 0,
                 "Name": "FrontRight",
-                "Position": "32.2919,-72.41718,-3.542114",
+                "Position": "32.29192,-65.81861,-3.542084",
                 "Rotation": "-0.5,0.5,0.5,0.5",
                 "Scale": "0.8363776,1,1",
                 "Tags": "",
@@ -545,7 +549,7 @@
                 "__version": 1,
                 "Flags": 0,
                 "Name": "FrontLeft",
-                "Position": "33.01085,72.50844,-5.628052",
+                "Position": "33.01089,66.13216,-5.628175",
                 "Rotation": "-0.5,0.5,0.5,0.5",
                 "Scale": "0.8363776,1,1",
                 "Tags": "",
@@ -623,7 +627,7 @@
                 "Components": [
                   {
                     "__type": "Sandbox.ModelRenderer",
-                    "__guid": "648841f3-98c2-4980-b2c6-c6be340fc25f",
+                    "__guid": "79bc5a59-256a-469b-b9c8-583a03ab7a5f",
                     "__enabled": true,
                     "BodyGroups": 18446744073709551615,
                     "CreateAttachments": false,
@@ -649,6 +653,147 @@
                   }
                 ],
                 "Children": []
+              },
+              {
+                "__guid": "c0830c18-1d7a-455b-a196-ee199148dfcb",
+                "__version": 1,
+                "Flags": 0,
+                "Name": "Turret",
+                "Position": "-27.5969,0.0002403259,119.3656",
+                "Rotation": "0,0,-0.9999999,0.00000005960464",
+                "Scale": "0.4181889,1,2",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkInterpolation": true,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.SkinnedModelRenderer",
+                    "__guid": "bee22e46-f2ed-4bc8-9420-1abb8b4d7975",
+                    "__enabled": true,
+                    "AnimationGraph": null,
+                    "BodyGroups": 18446744073709551615,
+                    "BoneMergeTarget": null,
+                    "CreateAttachments": false,
+                    "CreateBoneObjects": false,
+                    "LodOverride": null,
+                    "MaterialGroup": null,
+                    "MaterialOverride": null,
+                    "Materials": null,
+                    "Model": "models/3d road tiles kit/turret.vmdl",
+                    "Morphs": {},
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Parameters": {
+                      "bools": {},
+                      "ints": {},
+                      "floats": {},
+                      "vectors": {},
+                      "rotations": {}
+                    },
+                    "PlaybackRate": 1,
+                    "RenderOptions": {
+                      "GameLayer": true,
+                      "OverlayLayer": false,
+                      "BloomLayer": false,
+                      "AfterUILayer": false
+                    },
+                    "RenderType": "On",
+                    "Sequence": {
+                      "Name": null,
+                      "Looping": true,
+                      "Blending": false
+                    },
+                    "Tint": "1,1,1,1",
+                    "UseAnimGraph": true
+                  }
+                ],
+                "Children": []
+              },
+              {
+                "__guid": "390f1d8f-245e-46e6-928c-714dd7f76f84",
+                "__version": 1,
+                "Flags": 0,
+                "Name": "JukeBox",
+                "Position": "12.42264,0,24.93744",
+                "Rotation": "0,0,-0.7071068,0.7071068",
+                "Scale": "0.4181889,1,2",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkInterpolation": true,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.SoundPointComponent",
+                    "__guid": "3e64b473-d6e3-435e-9f61-acb2b917ce43",
+                    "__enabled": true,
+                    "Distance": 7000,
+                    "DistanceAttenuation": false,
+                    "DistanceAttenuationOverride": true,
+                    "Falloff": {
+                      "rangey": "0.205,0.5975",
+                      "frames": [
+                        {
+                          "x": 0,
+                          "y": 1,
+                          "in": 0.6785713,
+                          "out": -0.6785713,
+                          "mode": "Mirrored"
+                        },
+                        {
+                          "x": 0.796875,
+                          "y": 0.6027339,
+                          "in": 0.5408934,
+                          "out": -0.5408934,
+                          "mode": "Mirrored"
+                        },
+                        {
+                          "x": 1,
+                          "y": 0,
+                          "in": 0.03636379,
+                          "out": -0.03636379,
+                          "mode": "Mirrored"
+                        }
+                      ]
+                    },
+                    "Force2d": false,
+                    "MaxRepeatTime": 1,
+                    "MinRepeatTime": 1,
+                    "Occlusion": false,
+                    "OcclusionOverride": false,
+                    "OcclusionRadius": 32,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Pitch": 1,
+                    "PlayOnStart": true,
+                    "ReflectionOverride": false,
+                    "Reflections": false,
+                    "Repeat": false,
+                    "SoundEvent": "sounds/lantern.sound",
+                    "SoundOverride": false,
+                    "StopOnNew": false,
+                    "TargetMixer": {
+                      "Name": "unknown",
+                      "Id": "00000000-0000-0000-0000-000000000000"
+                    },
+                    "Volume": 1
+                  }
+                ],
+                "Children": []
               }
             ]
           },
@@ -657,7 +802,7 @@
             "__version": 1,
             "Flags": 0,
             "Name": "wheelRR",
-            "Position": "-63.82616,-70.43921,30.43425",
+            "Position": "-63.82618,-63.84065,30.43425",
             "Rotation": "0,0,0,1",
             "Scale": "1.8,1.8,1.8",
             "Tags": "",
@@ -778,7 +923,7 @@
             "__version": 1,
             "Flags": 0,
             "Name": "wheelRL",
-            "Position": "-63.61603,70.57429,29.73901",
+            "Position": "-63.61597,64.19801,29.73896",
             "Rotation": "0,0,1,-0.00000004371139",
             "Scale": "1.8,1.8,1.8",
             "Tags": "",
@@ -899,7 +1044,7 @@
             "__version": 1,
             "Flags": 0,
             "Name": "wheelFR",
-            "Position": "77.21875,-72.41718,30.74684",
+            "Position": "77.21876,-65.81861,30.74685",
             "Rotation": "0,0,0,1",
             "Scale": "1.8,1.8,1.8",
             "Tags": "",
@@ -1020,7 +1165,7 @@
             "__version": 1,
             "Flags": 0,
             "Name": "wheelFL",
-            "Position": "78.93729,72.5085,29.70387",
+            "Position": "78.93726,66.13221,29.7038",
             "Rotation": "0,0,1,-0.00000004371139",
             "Scale": "1.8,1.8,1.8",
             "Tags": "",
