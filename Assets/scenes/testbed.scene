@@ -640,25 +640,35 @@
               "__type": "Sandbox.SoundPointComponent",
               "__guid": "a2a54b68-964c-4e4a-97db-83991360a904",
               "__enabled": true,
-              "Distance": 512,
+              "Distance": 7000,
               "DistanceAttenuation": false,
-              "DistanceAttenuationOverride": false,
-              "Falloff": [
-                {
-                  "x": 0,
-                  "y": 1,
-                  "in": 3.1415927,
-                  "out": -3.1415927,
-                  "mode": "Mirrored"
-                },
-                {
-                  "x": 1,
-                  "y": 0,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
+              "DistanceAttenuationOverride": true,
+              "Falloff": {
+                "rangey": "0.205,0.5975",
+                "frames": [
+                  {
+                    "x": 0,
+                    "y": 1,
+                    "in": 0.6785713,
+                    "out": -0.6785713,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 0.796875,
+                    "y": 0.6027339,
+                    "in": 0.5408934,
+                    "out": -0.5408934,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 1,
+                    "y": 0,
+                    "in": 0.03636379,
+                    "out": -0.03636379,
+                    "mode": "Mirrored"
+                  }
+                ]
+              },
               "Force2d": false,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
@@ -733,6 +743,86 @@
             },
             "Property": "ZFar",
             "Value": 30000
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "bccb6df0-1218-4bac-bfcb-14c715bbccab"
+            },
+            "Property": "FullSpeedAdd",
+            "Value": 2000
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "bccb6df0-1218-4bac-bfcb-14c715bbccab"
+            },
+            "Property": "Speed",
+            "Value": 2000
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1144d7d1-ba53-47f1-b7dd-00f7329c8f55"
+            },
+            "Property": "Position",
+            "Value": "-26.6913,-63.84059,-4.167268"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c5255456-015d-4db3-ab4a-48409bfc6ff1"
+            },
+            "Property": "Position",
+            "Value": "-26.6038,64.19801,-5.557893"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d510eae4-ff9d-454f-aad8-d0267b3b0346"
+            },
+            "Property": "Position",
+            "Value": "32.29192,-65.81861,-3.542084"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "29b2f363-5847-45d9-8187-aa65285a1a98"
+            },
+            "Property": "Position",
+            "Value": "33.01089,66.13216,-5.628175"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6648665d-1661-46d1-99f7-c23e3d8886c1"
+            },
+            "Property": "Position",
+            "Value": "-63.82618,-63.84065,30.43425"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "52c1cf07-e06e-4195-a945-e8b47717f41a"
+            },
+            "Property": "Position",
+            "Value": "-63.61597,64.19801,29.73896"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0fd040c9-33d6-4745-a498-248cbe8bc10b"
+            },
+            "Property": "Position",
+            "Value": "77.21876,-65.81861,30.74685"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "67f0c335-ecd6-4eed-b5b7-fed63d0cb00f"
+            },
+            "Property": "Position",
+            "Value": "78.93726,66.13221,29.7038"
           }
         ],
         "MovedObjects": [

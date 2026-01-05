@@ -46,7 +46,7 @@ public sealed class OrbitalCameraController : Component
 		}
 		if ( checkingSightline.Hit ) // If sightline is blocked change distance to be in front of hit collider
 		{
-			DistanceToPlayer = Math.Max( (int)(checkingSightline.HitPosition - Player.WorldPosition).Length - 15, MinDistanceToPlayer ); // -15 cheats it infront
+			DistanceToPlayer = Math.Max( (int)(checkingSightline.HitPosition - Player.WorldPosition).Length - AutoZoomStrength, MinDistanceToPlayer ); // -AutoZoomStrength cheats it infront
 		}
 
 		// Apply Position and Rotation

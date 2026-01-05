@@ -10,8 +10,11 @@ public sealed class WheelController : Component
 
 	[Property] bool FourWheelDrive = true;
 	[Property] int Speed = 2000;
+	[Property] int FullSpeedAdd = 2000;
 	[Property] int Torque = 300;
 	[Property] int SteeringAngle = 50;
+
+	bool FullThrottle = false;
 
 	protected override void OnUpdate()
 	{
@@ -24,11 +27,21 @@ public sealed class WheelController : Component
 		{
 			RearLeft.SpinMotorSpeed = Speed;
 			RearRight.SpinMotorSpeed = Speed;
-			if ( FourWheelDrive )
+			if ( Input.Down( "Run" ) ) 
 			{
-				FrontLeft.SpinMotorSpeed = Speed;
-				FrontRight.SpinMotorSpeed = Speed;
+				RearLeft.SpinMotorSpeed += FullSpeedAdd;
+				RearRight.SpinMotorSpeed += FullSpeedAdd;
 			}
+			if ( !FourWheelDrive ) return;
+			
+			FrontLeft.SpinMotorSpeed = Speed;
+			FrontRight.SpinMotorSpeed = Speed;
+			if ( Input.Down( "Run" ) )
+			{
+				FrontLeft.SpinMotorSpeed += FullSpeedAdd;
+				FrontRight.SpinMotorSpeed += FullSpeedAdd;
+			}
+			
 		}
 		else if ( Input.Down( "Backward" ) )
 		{
