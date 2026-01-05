@@ -255,6 +255,14 @@
             },
             "Property": "Position",
             "Value": "-1216,0.00003051758,960"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "7f77739e-46e6-4f9e-91cc-26623f9bc232"
+            },
+            "Property": "ZFar",
+            "Value": 30000
           }
         ],
         "MovedObjects": []
@@ -18036,7 +18044,7 @@
       "Children": []
     },
     {
-      "__guid": "8e3a4035-cf1f-442c-9a61-c77c9c8132c6",
+      "__guid": "3d8889db-6340-4376-a8c3-640f9d1d117e",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -18046,11 +18054,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "cd694033-3b0b-4815-98a6-3ba3855bbfe8": "e8949014-1bf8-4dcc-b412-19bf983f5bef"
+        "f875e94d-eede-4fe0-9570-a25cd9dfaaa6": "def4f6aa-e7b3-4610-a639-012c4abbc71f"
       }
     },
     {
-      "__guid": "ded50385-f0f2-4e1f-afe0-0da59f0dcc0c",
+      "__guid": "57e3feb7-0dc6-4ecf-838e-68799f837a2f",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -18060,7 +18068,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "cd694033-3b0b-4815-98a6-3ba3855bbfe8": "7d3ea24f-bded-411a-bb12-8a465aa7c2ec"
+        "f875e94d-eede-4fe0-9570-a25cd9dfaaa6": "3b258d2e-54cc-4725-82e2-9f2e289f5d9b"
       }
     },
     {
@@ -23208,7 +23216,7 @@
       }
     },
     {
-      "__guid": "b487ba15-6164-4f89-b38e-a07dffcba588",
+      "__guid": "5cb5ede3-f53e-4745-a061-3d31bd5a1dea",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23218,11 +23226,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "8cd7a0b8-0b5d-4024-9057-e2be396d9a86": "aefcc922-5250-4602-b8d2-0de6cacfd97a"
+        "6ebbba2e-6386-42d1-a0de-200c48c1f613": "dad57402-221e-4bb1-8d02-a39c7326f75c"
       }
     },
     {
-      "__guid": "088fee23-548d-4a34-8f8f-8cad12bd9941",
+      "__guid": "d809d785-1df7-4fdf-9d31-67ab2c31eb52",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23232,7 +23240,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "8cd7a0b8-0b5d-4024-9057-e2be396d9a86": "1ab20d7f-4f68-407c-b4b1-884d28932b67"
+        "6ebbba2e-6386-42d1-a0de-200c48c1f613": "f6e94528-d0da-49f8-a614-1a268a08073b"
       }
     },
     {
