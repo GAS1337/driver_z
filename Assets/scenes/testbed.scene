@@ -436,6 +436,7 @@
               "__type": "OrbitalCameraController",
               "__guid": "942a9029-570e-4633-baf2-af0920cc7a8d",
               "__enabled": true,
+              "AutoZoomStrength": 10,
               "DistanceToPlayer": 2000,
               "MainCamera": {
                 "_type": "component",
@@ -444,7 +445,7 @@
                 "component_type": "CameraComponent"
               },
               "MaxDistanceToPlayer": 10000,
-              "MinDistanceToPlayer": 24,
+              "MinDistanceToPlayer": 64,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -455,7 +456,8 @@
                 "_type": "gameobject",
                 "go": "18d3e3b1-eb9f-47f0-8189-b1289279e1fe"
               },
-              "ZoomStrength": 200
+              "TargetDistanceToPlayer": 2000,
+              "ZoomStrength": 100
             }
           },
           {
@@ -516,7 +518,7 @@
               "__guid": "0b318832-1b37-421b-b29f-176e942b998d",
               "__version": 1,
               "Flags": 0,
-              "Name": "turret",
+              "Name": "Turret",
               "Position": "-27.5969,0.0002403259,119.3656",
               "Rotation": "0,0,-0.9999999,0.00000005960464",
               "Scale": "0.4181889,1,2",
@@ -586,6 +588,102 @@
               },
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "cd0b351e-ccb0-420b-93e3-3d3dd78dfa9a"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "18d3e3b1-eb9f-47f0-8189-b1289279e1fe"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "0b318832-1b37-421b-b29f-176e942b998d"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "cd0b351e-ccb0-420b-93e3-3d3dd78dfa9a",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "JukeBox",
+              "Position": "12.42264,0,24.93744",
+              "Rotation": "0,0,-0.7071068,0.7071068",
+              "Scale": "0.4181889,1,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "a2a54b68-964c-4e4a-97db-83991360a904"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "cd0b351e-ccb0-420b-93e3-3d3dd78dfa9a"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "a2a54b68-964c-4e4a-97db-83991360a904",
+              "__enabled": true,
+              "Distance": 512,
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Falloff": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 3.1415927,
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/lantern.sound",
+              "SoundOverride": false,
+              "StopOnNew": false,
+              "TargetMixer": {
+                "Name": "unknown",
+                "Id": "00000000-0000-0000-0000-000000000000"
+              },
+              "Volume": 1
             }
           }
         ],
@@ -876,14 +974,6 @@
             },
             "Property": "Position",
             "Value": "-1650.856,-4408.85,127.9995"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "82f7e0b6-6409-44a8-8455-2a667acd7dff"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0,0.9999999"
           }
         ],
         "MovedObjects": []

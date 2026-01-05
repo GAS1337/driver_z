@@ -6,10 +6,12 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description("Camera to control")] CameraComponent MainCamera;
 	[Property, Description("Player to follow")] GameObject Player;
 
+	[Property, Description( "Starting distance" )] int TargetDistanceToPlayer = 2000;
 	[Property, Description("Starting distance")] int DistanceToPlayer = 2000;
 	[Property, Description( "Minimal distance to player" )] int MinDistanceToPlayer = 600;
 	[Property, Description( "Maximal distance to player" )] int MaxDistanceToPlayer = 10000;
-	[Property, Description("Units one step zooms")] int ZoomStrength = 200;
+	[Property, Description( "Units one step zooms" )] int ZoomStrength = 200;
+	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 25;
 
 	float Pitch = 0;
 	float Yaw = 0;
@@ -29,12 +31,22 @@ public sealed class OrbitalCameraController : Component
 			.Run();
 		// DebugOverlay.Trace( checkingSightline );
 
-		if ( Input.MouseWheel.y < 0 ) { DistanceToPlayer = Math.Min( DistanceToPlayer + ZoomStrength, MaxDistanceToPlayer ); }
-		if ( Input.MouseWheel.y > 0 ) { DistanceToPlayer = Math.Max(DistanceToPlayer - ZoomStrength, MinDistanceToPlayer); }
+		if ( Input.MouseWheel.y < 0 ) { TargetDistanceToPlayer = Math.Min( TargetDistanceToPlayer + ZoomStrength, MaxDistanceToPlayer ); }
+		if ( Input.MouseWheel.y > 0 ) { TargetDistanceToPlayer = Math.Max( TargetDistanceToPlayer - ZoomStrength, MinDistanceToPlayer); }
 
+		switch ((TargetDistanceToPlayer, checkingSightline.Distance, checkingSightline.Hit ))
+		{
+			default: break;
+			case( > 0, >0, false) when TargetDistanceToPlayer > checkingSightline.Distance + AutoZoomStrength:
+				DistanceToPlayer += AutoZoomStrength;
+				break;
+			case ( > 0, > 0, false ) when TargetDistanceToPlayer < checkingSightline.Distance - AutoZoomStrength:
+				DistanceToPlayer -= AutoZoomStrength;
+				break;
+		}
 		if ( checkingSightline.Hit ) // If sightline is blocked change distance to be in front of hit collider
 		{
-			DistanceToPlayer = Math.Max( (int)(checkingSightline.HitPosition - Player.WorldPosition).Length -15, MinDistanceToPlayer ); // -15 cheats it infront
+			DistanceToPlayer = Math.Max( (int)(checkingSightline.HitPosition - Player.WorldPosition).Length - 15, MinDistanceToPlayer ); // -15 cheats it infront
 		}
 
 		// Apply Position and Rotation
