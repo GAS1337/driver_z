@@ -1,0 +1,265 @@
+{
+  "RootObject": {
+    "__guid": "5973bdca-6afc-4d87-aa0b-867072032a38",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "5x fence",
+    "Position": "0,0,0",
+    "Rotation": "0,0,-0.9999999,0.0000001490116",
+    "Scale": "5.125,5.125,5.125",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "f287bc2e-31db-41b0-861e-1dd3362ccd1e",
+        "__version": 1,
+        "__Prefab": "prefabs/fence.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Name",
+              "Value": "fence (6)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.00000000000001421085,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "5ef2c592-547e-43b7-b467-7cd392b5c434": "f287bc2e-31db-41b0-861e-1dd3362ccd1e",
+          "d8186131-bae6-479c-870f-dd75453e32ee": "1036a2cf-736c-4e30-bab6-4dd8d59c3586",
+          "9c1b1cd8-c5b3-4f03-af48-615c6dcd3766": "6b4f5807-f7ee-412f-b30a-c77cfede6eb1"
+        }
+      },
+      {
+        "__guid": "de33b801-1645-4d5e-89a5-ad561243c489",
+        "__version": 1,
+        "__Prefab": "prefabs/fence.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Name",
+              "Value": "fence (5)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Position",
+              "Value": "0.00001209537,40.58533,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.00000000000001421085,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "5ef2c592-547e-43b7-b467-7cd392b5c434": "de33b801-1645-4d5e-89a5-ad561243c489",
+          "d8186131-bae6-479c-870f-dd75453e32ee": "7534b632-301c-432e-993c-5e6ef1a76c63",
+          "9c1b1cd8-c5b3-4f03-af48-615c6dcd3766": "8bbd9350-53ac-46b8-bb8f-33b04631d395"
+        }
+      },
+      {
+        "__guid": "4c488ac8-f609-4073-a1a8-5a458467d924",
+        "__version": 1,
+        "__Prefab": "prefabs/fence.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Name",
+              "Value": "fence (4)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Position",
+              "Value": "0.00002419076,81.17071,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.00000000000001421085,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "5ef2c592-547e-43b7-b467-7cd392b5c434": "4c488ac8-f609-4073-a1a8-5a458467d924",
+          "d8186131-bae6-479c-870f-dd75453e32ee": "204bc999-3b9f-448c-9dc1-d0a3fde1671a",
+          "9c1b1cd8-c5b3-4f03-af48-615c6dcd3766": "fd148e68-05f6-4963-abdc-b11c4836f345"
+        }
+      },
+      {
+        "__guid": "2dcbc31b-0972-4c93-aa6e-4767c6a3d0ab",
+        "__version": 1,
+        "__Prefab": "prefabs/fence.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Name",
+              "Value": "fence (3)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Position",
+              "Value": "0.00003628614,121.7561,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.00000000000001421085,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "5ef2c592-547e-43b7-b467-7cd392b5c434": "2dcbc31b-0972-4c93-aa6e-4767c6a3d0ab",
+          "d8186131-bae6-479c-870f-dd75453e32ee": "6e69e145-0191-411e-8ee4-54e58eaed7fd",
+          "9c1b1cd8-c5b3-4f03-af48-615c6dcd3766": "8a1bd3f2-9902-4b68-a691-7c54c1f63c77"
+        }
+      },
+      {
+        "__guid": "6afb6dda-9167-4a9e-a963-ed1d019c94c1",
+        "__version": 1,
+        "__Prefab": "prefabs/fence.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Name",
+              "Value": "fence (2)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Position",
+              "Value": "0.00004849782,162.7317,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.00000000000001421085,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "5ef2c592-547e-43b7-b467-7cd392b5c434"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "5ef2c592-547e-43b7-b467-7cd392b5c434": "6afb6dda-9167-4a9e-a963-ed1d019c94c1",
+          "d8186131-bae6-479c-870f-dd75453e32ee": "42c847f1-60c8-40dd-96ed-8740a407b7be",
+          "9c1b1cd8-c5b3-4f03-af48-615c6dcd3766": "bfbbd9c9-6bb6-42f3-9692-785606269fc2"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

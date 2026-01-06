@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
-=======
-﻿<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
->>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874
 {
 	rootNode = 
 	{
@@ -17,7 +13,7 @@
 						_class = "DefaultMaterialGroup"
 						remaps = [  ]
 						use_global_default = true
-						global_default_material = "materials/Toy Car kit colormap.vmat"
+						global_default_material = "materials/toy car kit colormap.vmat"
 					},
 				]
 			},
@@ -46,29 +42,10 @@
 					},
 				]
 			},
-<<<<<<< HEAD
-			{
-				_class = "PhysicsShapeList"
-				children = 
-				[
-					{
-						_class = "PhysicsMeshFromRender"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
-					},
-				]
-			},
-=======
->>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
 		anim_graph_name = ""
 		base_model_name = ""
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874

@@ -1,12 +1,12 @@
 {
   "RootObject": {
-    "__guid": "2d4689f5-eec5-4b04-b712-cf0529bb5f82",
+    "__guid": "33eee7ac-421c-434d-bff0-706085264ede",
     "__version": 1,
     "Flags": 0,
-    "Name": "fence-1x4",
+    "Name": "lantern",
     "Position": "0,0,0",
-    "Rotation": "0,0,-0.7071067,0.7071068",
-    "Scale": "5.125,5.125,5.125",
+    "Rotation": "0,0,0,1",
+    "Scale": "2,2,2",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -17,7 +17,7 @@
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
-        "__guid": "ebc85b29-06aa-4013-be99-b3abd547945b",
+        "__guid": "e8ab2cb1-2a49-46f2-920c-767fdaf5bc19",
         "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
@@ -25,7 +25,7 @@
         "MaterialGroup": null,
         "MaterialOverride": null,
         "Materials": null,
-        "Model": "models/city kit suburban/fence-1x4.vmdl",
+        "Model": "models/holiday kit/lantern.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -42,14 +42,14 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Sandbox.ModelCollider",
-        "__guid": "6cb0e052-dc12-49e5-b1e8-70a8a8caf26a",
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "3d9fae39-b85b-44f3-9b49-c48fe9183d9c",
         "__enabled": true,
+        "Center": "0.9999981,0.0000009536743,84",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/city kit suburban/fence-1x4.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -61,7 +61,8 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Static": true,
+        "Scale": "24.00001,26,170",
+        "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
       }

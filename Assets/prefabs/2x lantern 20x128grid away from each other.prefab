@@ -1,0 +1,94 @@
+{
+  "RootObject": {
+    "__guid": "b6c1c59f-8672-45a2-9060-1a1eef0d31ec",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "2x lantern 20x128grid away from each other",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "2,2,2",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "a63528ca-9984-45ac-8e0a-d5d8f4f93ac9",
+        "__version": 1,
+        "__Prefab": "prefabs/lantern.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "33eee7ac-421c-434d-bff0-706085264ede"
+              },
+              "Property": "Name",
+              "Value": "lantern (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "33eee7ac-421c-434d-bff0-706085264ede"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "33eee7ac-421c-434d-bff0-706085264ede": "a63528ca-9984-45ac-8e0a-d5d8f4f93ac9",
+          "e8ab2cb1-2a49-46f2-920c-767fdaf5bc19": "e955da6f-ffa7-42fa-a58c-f96b69d8b042",
+          "3d9fae39-b85b-44f3-9b49-c48fe9183d9c": "f002928b-1679-445e-9dc6-f8df8b014359"
+        }
+      },
+      {
+        "__guid": "8ac03c11-a486-425f-a214-27633283dd57",
+        "__version": 1,
+        "__Prefab": "prefabs/lantern.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "33eee7ac-421c-434d-bff0-706085264ede"
+              },
+              "Property": "Position",
+              "Value": "1280,0,0"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "33eee7ac-421c-434d-bff0-706085264ede"
+              },
+              "Property": "Scale",
+              "Value": "1,1,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "33eee7ac-421c-434d-bff0-706085264ede": "8ac03c11-a486-425f-a214-27633283dd57",
+          "e8ab2cb1-2a49-46f2-920c-767fdaf5bc19": "ac40f33b-c328-496d-a65b-d73776441a51",
+          "3d9fae39-b85b-44f3-9b49-c48fe9183d9c": "47bdba56-b5a2-425b-a697-2f4d2ce58ad7"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
