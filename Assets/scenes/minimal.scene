@@ -60,7 +60,7 @@
           "__enabled": true,
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "0.94419,0.97767,1,1",
+          "LightColor": "0.10233,0.10233,0.10233,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -68,7 +68,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Shadows": true,
-          "SkyColor": "0.2532,0.32006,0.35349,1"
+          "SkyColor": "0.01376,0.01699,0.0186,1"
         }
       ],
       "Children": []
@@ -101,7 +101,7 @@
           "OnComponentUpdate": null,
           "SkyIndirectLighting": true,
           "SkyMaterial": "materials/skybox/skybox_overcast_02.vmat",
-          "Tint": "0.34419,0.21452,0.21452,1"
+          "Tint": "0.03256,0.03256,0.03256,1"
         },
         {
           "__type": "Sandbox.EnvmapProbe",
@@ -165,6 +165,14 @@
             },
             "Property": "Scale",
             "Value": "10.25,20.5,10.25"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430"
+            },
+            "Property": "Static",
+            "Value": false
           }
         ],
         "MovedObjects": []
@@ -243,18 +251,26 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "62a2da11-5544-4ab9-b8c1-153bef2f4077"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.7071067,0.7071067"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "c6cb2f06-09ff-4d3a-98eb-1726315f4c74"
             },
             "Property": "Position",
             "Value": "-1216,0.00003051758,960"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "bccb6df0-1218-4bac-bfcb-14c715bbccab"
+            },
+            "Property": "FullSpeedAdd",
+            "Value": 1500
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "bccb6df0-1218-4bac-bfcb-14c715bbccab"
+            },
+            "Property": "Speed",
+            "Value": 2500
           }
         ],
         "MovedObjects": []
@@ -17888,7 +17904,7 @@
       "Children": []
     },
     {
-      "__guid": "cb1fa524-bf48-4afb-8e0f-7b244c2722e3",
+      "__guid": "08c890f6-42b3-4c11-a5a0-653cd08ee650",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -17898,11 +17914,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "2e5ebecf-647c-4de5-b41d-47000552acb1": "fe8258d2-b085-49ae-9986-b6055f26ab32"
+        "be81f575-5b8f-4d8f-b881-7acb1b453ee9": "3aaee6c0-8321-4e4a-bcd0-ba1723c03f84"
       }
     },
     {
-      "__guid": "bc59a1e8-82c4-4a54-ad28-e4526b4d9320",
+      "__guid": "2ccacf81-660e-4679-b20c-a1330dd90558",
       "__version": 1,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -17912,7 +17928,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "2e5ebecf-647c-4de5-b41d-47000552acb1": "b8ae2404-606f-4b44-91e5-39b5cb149c0d"
+        "be81f575-5b8f-4d8f-b881-7acb1b453ee9": "251d86a2-854e-4a2a-b4fd-877c56b9441d"
       }
     },
     {
@@ -20342,6 +20358,14 @@
             },
             "Property": "Position",
             "Value": "-1396,-2374,147.9999"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "c0ea2b56-3d10-45e9-8e4d-b7a02c32fe2c"
+            },
+            "Property": "Static",
+            "Value": true
           }
         ],
         "MovedObjects": []
@@ -22706,7 +22730,7 @@
       "Children": []
     },
     {
-      "__guid": "f95f1a48-c808-4730-acf9-d8f95ed2cf87",
+      "__guid": "ad3a7261-f8fa-44bd-80c9-05a998a31788",
       "__version": 1,
       "__Prefab": "prefabs/track-wide-straight-skew-right-side.prefab",
       "__PrefabInstancePatch": {
@@ -22716,7 +22740,9 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "d2e1c0bd-4000-4b8b-9699-3ee10c37f9de": "de2dd9bb-1e8d-4126-a84e-355a4bb39986"
+        "a0dffcda-c35f-483f-ba2f-0a69044ca1d0": "ad3a7261-f8fa-44bd-80c9-05a998a31788",
+        "e27d6eeb-7a46-42bd-9de3-3e32804d584a": "13dbfdca-d345-4327-99cf-9f05166dd302",
+        "18f7c968-5343-4ead-8cd9-ae0271c823aa": "f3b518f8-da2e-45d8-9865-4e01f300c8a1"
       }
     },
     {
@@ -23016,7 +23042,7 @@
       "Children": []
     },
     {
-      "__guid": "d5be2e4d-f771-4dc8-b8d9-676ae8371a23",
+      "__guid": "e0802949-7abd-45fb-955a-7f559dc57dc9",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23026,11 +23052,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "5636b5f3-2683-43e7-8426-29b094fcf9cf": "77fd24c4-1005-4d78-9dbb-db1077bbf357"
+        "d68d42a0-9113-439f-b204-8f469f62ec28": "eb8f9afd-105b-429e-9f0f-f7be0cde9f95"
       }
     },
     {
-      "__guid": "c07d3e8d-4d2f-4d69-8671-c26bb7335690",
+      "__guid": "ffd0cb27-1595-4cc0-9ee9-96f14ceab368",
       "__version": 1,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23040,11 +23066,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "5636b5f3-2683-43e7-8426-29b094fcf9cf": "6b134f02-0e6e-44eb-8d79-8b79d93997dc"
+        "d68d42a0-9113-439f-b204-8f469f62ec28": "5d7c9701-d438-4cbd-8fee-ea61fad20b2c"
       }
     },
     {
-      "__guid": "1abf508c-7bca-4347-bc4d-a5207ae68349",
+      "__guid": "b5434a71-2957-4e9d-8410-eb2e9a7dd009",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23054,11 +23080,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "a60ad80c-5731-46d0-ba03-f1d2e5f8a860"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "15dddf01-6910-444c-a9b0-5bc78985af87"
       }
     },
     {
-      "__guid": "2c11b8fd-c050-4178-ad21-9fa09321ec9f",
+      "__guid": "fcaeda14-343e-40a2-a6d8-adee61277a97",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23068,11 +23094,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "3ffa1be2-8b43-441f-a99e-38dd92d30a5a"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "db36ad63-3587-487f-8a0c-ee0220582d29"
       }
     },
     {
-      "__guid": "eacfea97-461d-4cb3-aa34-292ee4b21ab6",
+      "__guid": "ea74d112-632f-419a-af4a-1d98adebb9cb",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23082,11 +23108,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "558d3937-ec69-4404-9995-f04ca0bb15ea"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "0a36731a-00f2-4b43-b534-ad2dd9c0625d"
       }
     },
     {
-      "__guid": "050112b1-29f3-4223-9796-a32d70d214cc",
+      "__guid": "c7210d13-4659-4c95-b88f-283e9ade02d1",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23096,11 +23122,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "feb91f73-8667-499f-94db-3f86ade2a5ee"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "2e631605-77fd-4fed-a4e3-3f97d9cfa13b"
       }
     },
     {
-      "__guid": "64ea5c08-bc66-47b0-8396-1d2e6728a111",
+      "__guid": "85463c80-35a4-4305-96af-cb4db4151d3c",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23110,11 +23136,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "5533169d-ea7a-452c-a2e7-f8181f8ce4a6"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "ebf77910-e56b-4d2b-a739-f961b86bef5e"
       }
     },
     {
-      "__guid": "7662d6f7-3098-42d9-a7ca-567820bfcfa0",
+      "__guid": "b5ba0cd4-f828-4cdf-8c3c-9f4c9f225c36",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23124,11 +23150,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "076aee05-640e-44c8-ba46-38a8be68dea3"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "792a4db3-c4a6-475c-a266-7d8e5affb219"
       }
     },
     {
-      "__guid": "73657fe7-f963-4ffe-8f63-37db93083d48",
+      "__guid": "8593597a-35fb-4115-bcb1-977657cf959e",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23138,11 +23164,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "079f5216-8ae3-497d-a547-97305a1bd4ae"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "63b45dcf-7477-42fe-b7fd-6ab1d9b6bbeb"
       }
     },
     {
-      "__guid": "2617c0d4-3a43-4e01-a691-c5f0526ea969",
+      "__guid": "22103a1f-6f1b-49a2-b11f-9bbc09abfdfb",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23152,11 +23178,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "54cde6ef-4a0c-4f08-8f3b-9df5cf1efb1b"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "835257e1-1778-415b-905d-14fddacbb4be"
       }
     },
     {
-      "__guid": "3684dec5-37e4-463f-a074-f19448111f54",
+      "__guid": "d50172e7-e324-4099-a6d9-7c6fb466f576",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23166,11 +23192,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "47c5f4d4-958c-4de2-971d-13c85dbb10c3"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "607c05e0-62d8-437d-987f-ae183beee2fe"
       }
     },
     {
-      "__guid": "f82a7710-fc00-460e-8acf-457f8dc8f4b7",
+      "__guid": "447c0f52-8237-4f30-8fb5-47bfe5b02f92",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23180,11 +23206,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "8838233c-a3b8-4f67-8b3b-87607427b23c"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "231b5e06-db76-4885-9006-a000f30489df"
       }
     },
     {
-      "__guid": "7dbbd85e-7158-4d2b-a21a-99f03feef6ec",
+      "__guid": "bf383a18-8a05-4e2f-a482-bd676f9f98f1",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23194,11 +23220,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "b5dc47f3-2aef-44f7-a420-7e93df644677"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "8459bc7b-66bd-4d9e-aa95-99872f775f7e"
       }
     },
     {
-      "__guid": "e87e1420-fd29-4b76-9d45-c544d519f981",
+      "__guid": "c896d166-a878-4dad-931c-f88ba7ae42fa",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -23208,7 +23234,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "5d27b758-77d0-4e39-a090-8557b038d4b4"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "d05ac7ef-a082-485d-9488-a6203e7aa80a"
       }
     },
     {
@@ -26376,7 +26402,7 @@
       }
     },
     {
-      "__guid": "5088a1dc-8e90-4c44-b63e-37d9b7427ede",
+      "__guid": "e71cf4ac-6669-4853-943d-4fc55f3b7cb5",
       "__version": 1,
       "__Prefab": "prefabs/fence-1x4.prefab",
       "__PrefabInstancePatch": {
@@ -26386,11 +26412,13 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "c87f389e-cf89-4559-bd85-f04947f73b3c": "f4dd201f-d117-4d0e-b2ac-9f334b263f15"
+        "2d4689f5-eec5-4b04-b712-cf0529bb5f82": "e71cf4ac-6669-4853-943d-4fc55f3b7cb5",
+        "ebc85b29-06aa-4013-be99-b3abd547945b": "c9078f6c-95a2-422b-81ac-163a93523459",
+        "6cb0e052-dc12-49e5-b1e8-70a8a8caf26a": "915ed4f8-1649-403a-a988-3eb034e1f577"
       }
     },
     {
-      "__guid": "0bdc261c-5438-44f1-aa47-ba2955220a03",
+      "__guid": "63ba75d6-3e6f-4206-81c1-eef5c79da9f2",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26400,11 +26428,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "fb4e4ec2-ae38-4563-a84a-5b7bfa10176d"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "1bd699c9-e97d-4ee7-99d4-2cd5c4efebbb"
       }
     },
     {
-      "__guid": "821b1b92-b345-4d2c-ae8f-4afc5031965f",
+      "__guid": "8395fbca-3998-478e-bfee-4ee5151dc03e",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26414,11 +26442,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "0b4bd24a-5573-4ce4-93ac-7bdc8a838295"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "f2ef87a6-deee-4642-84d9-1b53e2776c9d"
       }
     },
     {
-      "__guid": "40acf108-db0d-4b87-9a99-2e5623ee1bf8",
+      "__guid": "5d48d0d6-5de4-4b30-b15b-c94d087309a6",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26428,11 +26456,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "c0736988-8503-42a0-b9a6-b100d03e25b8"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "99f65634-b8a5-477d-8764-766c61c2ee48"
       }
     },
     {
-      "__guid": "a7020e97-0aac-489e-815a-8feaa20ffd2c",
+      "__guid": "70a4c092-bfc4-4fa8-b31b-e31f5c1f62e9",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26442,7 +26470,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "72e67a30-0c47-4b85-abbf-1406bc3c8754"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "fe6762df-8761-4a37-8895-000fb4ea3355"
       }
     },
     {
@@ -26487,7 +26515,7 @@
       }
     },
     {
-      "__guid": "8ea38b66-7b1e-4f5c-b2b9-d29af8c6f7ab",
+      "__guid": "9957ed07-cb56-4814-b861-7fbfc3c72efa",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26497,11 +26525,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "b6f0fc0d-4a44-47a9-b37f-3e119cc9fb78"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "a718003c-c2c1-4433-bca8-5e52d61d5aad"
       }
     },
     {
-      "__guid": "d951c2a9-edb2-4b56-a4e5-e830dcacb4f8",
+      "__guid": "c4d840af-fcbb-424e-9741-9b8e79d3ed6e",
       "__version": 1,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -26511,7 +26539,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "e5ec65e0-6f7f-46af-b410-67eb50247bf8": "f3da7ad8-822c-4e8f-bc40-bfad618fe45e"
+        "31991191-aa35-4b7b-aa84-00819886d48e": "e775e3c4-042f-43ef-90a4-3ef7d298d7ae"
       }
     },
     {
@@ -26816,6 +26844,14 @@
             },
             "Property": "Rotation",
             "Value": "0,0,-0.1305262,0.9914449"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "7c97833d-1381-4fe4-9ef3-fca7267027c8"
+            },
+            "Property": "Static",
+            "Value": true
           }
         ],
         "MovedObjects": []
