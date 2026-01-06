@@ -5,7 +5,7 @@
     "Flags": 0,
     "Name": "truckkenney",
     "Position": "0,0,0",
-    "Rotation": "0,0,0.1305263,0.9914448",
+    "Rotation": "0,0,0.7071067,0.7071067",
     "Scale": "1,1,1",
     "Tags": "",
     "Enabled": true,
@@ -57,7 +57,7 @@
             "RenderTexture": null,
             "TargetEye": "None",
             "Viewport": "0,0,1,1",
-            "ZFar": 10000,
+            "ZFar": 30000,
             "ZNear": 10
           },
           {

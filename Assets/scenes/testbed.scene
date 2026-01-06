@@ -430,26 +430,10 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "62a2da11-5544-4ab9-b8c1-153bef2f4077"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.7071067,0.7071067"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "c6cb2f06-09ff-4d3a-98eb-1726315f4c74"
             },
             "Property": "Position",
             "Value": "-1216,0.00003051758,960"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "7f77739e-46e6-4f9e-91cc-26623f9bc232"
-            },
-            "Property": "ZFar",
-            "Value": 30000
           }
         ],
         "MovedObjects": []
