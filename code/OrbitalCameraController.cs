@@ -50,7 +50,7 @@ public sealed class OrbitalCameraController : Component
 		}
 
 		// Apply Position and Rotation
-		MainCamera.WorldPosition = Player.WorldPosition - rotation.Forward * DistanceToPlayer;
+		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * 32 - rotation.Forward * DistanceToPlayer;
 		MainCamera.WorldRotation = rotation;
 		
 	}
