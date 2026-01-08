@@ -13,8 +13,8 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description( "Units one step zooms" )] int ZoomStrength = 200;
 	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 25;
 
-	float Pitch = 0;
-	float Yaw = 0;
+	float Pitch = 30;
+	float Yaw = 90;
 
 	protected override void OnUpdate()
 	{
@@ -25,7 +25,7 @@ public sealed class OrbitalCameraController : Component
 		Rotation rotation = Rotation.From( Pitch, Yaw, Player.WorldRotation.Roll() / 15 );
 
 		SceneTraceResult checkingSightline = Scene.Trace
-			.Ray( MainCamera.WorldPosition, Player.WorldPosition )
+			.Ray( MainCamera.WorldPosition, Player.WorldPosition + Vector3.Up * 32 )
 			.Radius(1)
 			.IgnoreGameObjectHierarchy(GameObject) // Ignores itself. Use tags depending on your setup
 			.Run();
@@ -50,7 +50,7 @@ public sealed class OrbitalCameraController : Component
 		}
 
 		// Apply Position and Rotation
-		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * 32 - rotation.Forward * DistanceToPlayer;
+		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * 32 - rotation.Forward * DistanceToPlayer; 
 		MainCamera.WorldRotation = rotation;
 		
 	}

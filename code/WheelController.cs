@@ -14,8 +14,6 @@ public sealed class WheelController : Component
 	[Property] int Torque = 300;
 	[Property] int SteeringAngle = 50;
 
-	bool FullThrottle = false;
-
 	protected override void OnUpdate()
 	{
 		RearLeft.MaxSpinTorque = Torque;
@@ -25,6 +23,7 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Forward" ) )
 		{
+			Log.Info( "Test" );
 			RearLeft.SpinMotorSpeed = Speed;
 			RearRight.SpinMotorSpeed = Speed;
 			if ( Input.Down( "Run" ) ) 
@@ -56,8 +55,8 @@ public sealed class WheelController : Component
 		else { RearLeft.SpinMotorSpeed = 0f; RearRight.SpinMotorSpeed = 0f; 
 			FrontLeft.SpinMotorSpeed = 0f; FrontRight.SpinMotorSpeed = 0f; }
 
-		if ( Input.Down( "Left" ) ) { FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle; }
-		else if ( Input.Down( "Right" ) ) { FrontLeft.TargetSteeringAngle = SteeringAngle; FrontRight.TargetSteeringAngle = SteeringAngle; }
+		if ( Input.Down( "Left" ) ) { FrontLeft.TargetSteeringAngle = SteeringAngle; FrontRight.TargetSteeringAngle = SteeringAngle; }
+		else if ( Input.Down( "Right" ) ) { FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle; }
 		else { FrontLeft.TargetSteeringAngle = 0f; FrontRight.TargetSteeringAngle = 0f; }
 
 
