@@ -52,9 +52,9 @@
           "go": "cb6f5880-5192-4ddf-b2b8-f0373e929cac",
           "component_type": "WheelJoint"
         },
-        "Speed": 4000,
-        "SteeringAngle": 15,
-        "Torque": 5000
+        "Speed": 2500,
+        "SteeringAngle": 9,
+        "Torque": 7500
       },
       {
         "__type": "OrbitalCameraController",
@@ -192,9 +192,9 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFL",
-        "Position": "-77.89426,-61.052,31.16699",
+        "Position": "-77.89426,-52.76245,31.16699",
         "Rotation": "0,0,0,1",
-        "Scale": "1.5,1.5,1.5",
+        "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -362,7 +362,7 @@
                   "Rotation": "0,0,0,0"
                 },
                 "MaxSpinTorque": 5000,
-                "MaxSteeringTorque": 5000,
+                "MaxSteeringTorque": 15000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -373,10 +373,10 @@
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
                 "SteeringDampingRatio": 1,
-                "SteeringHertz": 10,
-                "SteeringLimits": "-25,25",
+                "SteeringHertz": 3,
+                "SteeringLimits": "-10,10",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 10,
+                "SuspensionHertz": 8,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -390,9 +390,9 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFR",
-        "Position": "-77.97113,61.06396,30.35367",
+        "Position": "-77.97113,52.39819,30.35367",
         "Rotation": "0,0,1,-0.00000004371139",
-        "Scale": "1.5,1.5,1.5",
+        "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -560,7 +560,7 @@
                   "Rotation": "0,0,0,0"
                 },
                 "MaxSpinTorque": 5000,
-                "MaxSteeringTorque": 5000,
+                "MaxSteeringTorque": 15000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -571,10 +571,10 @@
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
                 "SteeringDampingRatio": 1,
-                "SteeringHertz": 10,
-                "SteeringLimits": "-25,25",
+                "SteeringHertz": 3,
+                "SteeringLimits": "-10,10",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 10,
+                "SuspensionHertz": 8,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -588,9 +588,9 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRL",
-        "Position": "63.55414,-60.91016,30.16785",
+        "Position": "63.55414,-52.62061,30.16785",
         "Rotation": "0,0,0,1",
-        "Scale": "1.5,1.5,1.5",
+        "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -772,7 +772,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 10,
+                "SuspensionHertz": 8,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -786,9 +786,9 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRR",
-        "Position": "63.81158,60.64429,29.87454",
+        "Position": "63.81158,51.97852,29.87454",
         "Rotation": "0,0,1,-0.00000004371139",
-        "Scale": "1.5,1.5,1.5",
+        "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -970,7 +970,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 10,
+                "SuspensionHertz": 8,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -1027,7 +1027,7 @@
             "__guid": "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd",
             "__enabled": true,
             "Flags": 0,
-            "Center": "2.217552,0.1141129,46.33713",
+            "Center": "2.896294,0.1141129,81.57771",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -1043,9 +1043,9 @@
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
             "RollingResistance": null,
-            "Scale": "238.1156,142.5779,29.14297",
+            "Scale": "236.7581,142.5779,48.65428",
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/carbody.surface",
             "SurfaceVelocity": "0,0,0"
           },
           {
@@ -1068,7 +1068,7 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,-20",
+            "MassCenterOverride": "-7,0,-15",
             "MassOverride": 100,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
@@ -1089,7 +1089,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Model",
-            "Position": "0,0,0",
+            "Position": "0,0,26.34927",
             "Rotation": "0,0,0.9999999,0.00000005960464",
             "Scale": "1,1.3,1",
             "Tags": "",
@@ -1214,7 +1214,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Turret",
-            "Position": "44.44452,0,87.31259",
+            "Position": "44.44452,0,112.7824",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -1275,7 +1275,26 @@
           }
         ]
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
