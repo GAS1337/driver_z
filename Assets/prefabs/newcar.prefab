@@ -53,7 +53,7 @@
           "component_type": "WheelJoint"
         },
         "Speed": 2500,
-        "SteeringAngle": 9,
+        "SteeringAngle": 15,
         "Torque": 7500
       },
       {
@@ -62,7 +62,7 @@
         "__enabled": true,
         "Flags": 0,
         "AutoZoomStrength": 25,
-        "DistanceToPlayer": 2000,
+        "DistanceToPlayer": 800,
         "MainCamera": {
           "_type": "component",
           "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
@@ -81,7 +81,7 @@
           "_type": "gameobject",
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
         },
-        "TargetDistanceToPlayer": 2000,
+        "TargetDistanceToPlayer": 800,
         "ZoomStrength": 200
       }
     ],
@@ -362,7 +362,7 @@
                   "Rotation": "0,0,0,0"
                 },
                 "MaxSpinTorque": 5000,
-                "MaxSteeringTorque": 15000,
+                "MaxSteeringTorque": 200000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -374,9 +374,9 @@
                 "StartBroken": false,
                 "SteeringDampingRatio": 1,
                 "SteeringHertz": 3,
-                "SteeringLimits": "-10,10",
+                "SteeringLimits": "-15,15",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 8,
+                "SuspensionHertz": 5,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -560,7 +560,7 @@
                   "Rotation": "0,0,0,0"
                 },
                 "MaxSpinTorque": 5000,
-                "MaxSteeringTorque": 15000,
+                "MaxSteeringTorque": 200000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -572,9 +572,9 @@
                 "StartBroken": false,
                 "SteeringDampingRatio": 1,
                 "SteeringHertz": 3,
-                "SteeringLimits": "-10,10",
+                "SteeringLimits": "-15,15",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 8,
+                "SuspensionHertz": 5,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -772,7 +772,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 8,
+                "SuspensionHertz": 5,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -970,7 +970,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 8,
+                "SuspensionHertz": 5,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -1027,7 +1027,7 @@
             "__guid": "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd",
             "__enabled": true,
             "Flags": 0,
-            "Center": "2.896294,0.1141129,81.57771",
+            "Center": "-4.723831,-0.3401871,104.4008",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -1043,7 +1043,7 @@
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
             "RollingResistance": null,
-            "Scale": "236.7581,142.5779,48.65428",
+            "Scale": "142.0849,90.53017,39.71709",
             "Static": false,
             "Surface": "surfaces/carbody.surface",
             "SurfaceVelocity": "0,0,0"
@@ -1068,7 +1068,7 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "-7,0,-15",
+            "MassCenterOverride": "0,0,0",
             "MassOverride": 100,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
@@ -1089,9 +1089,9 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Model",
-            "Position": "0,0,26.34927",
-            "Rotation": "0,0,0.9999999,0.00000005960464",
-            "Scale": "1,1.3,1",
+            "Position": "0,0,-2.805161",
+            "Rotation": "0,0,0,1",
+            "Scale": "2.5,2.5,2",
             "Tags": "",
             "Enabled": true,
             "NetworkMode": 2,
@@ -1102,8 +1102,35 @@
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
-                "__guid": "18295f08-01b7-4bcf-8ff1-068094858306",
+                "__guid": "3a37987b-f1ff-4b0c-9e79-b7d6acc1dea2",
                 "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/toy car kit/vehicle-monster-truck.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "18295f08-01b7-4bcf-8ff1-068094858306",
+                "__enabled": false,
                 "Flags": 0,
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
@@ -1214,7 +1241,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Turret",
-            "Position": "44.44452,0,112.7824",
+            "Position": "31.92175,0,115.9018",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",

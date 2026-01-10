@@ -35,19 +35,21 @@ public sealed class WheelController : Component
 		FrontLeft.MaxSpinTorque = originalTorque;
 		FrontRight.MaxSpinTorque = originalTorque;
 
+		int slowingfactor = 500;
+
 		if ( Input.Down( "Forward" ) )
 		{
-			RearLeft.SpinMotorSpeed = Speed;
-			RearRight.SpinMotorSpeed = Speed;
+			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp(0, Speed);
+			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
 			if ( Input.Down( "Run" ) ) 
 			{
 				RearLeft.SpinMotorSpeed += FullSpeedAdd;
 				RearRight.SpinMotorSpeed += FullSpeedAdd;
 			}
 			if ( !FourWheelDrive ) return;
-			
-			FrontLeft.SpinMotorSpeed = Speed;
-			FrontRight.SpinMotorSpeed = Speed;
+
+			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
+			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
 			if ( Input.Down( "Run" ) )
 			{
 				FrontLeft.SpinMotorSpeed += FullSpeedAdd;
@@ -57,12 +59,12 @@ public sealed class WheelController : Component
 		}
 		else if ( Input.Down( "Backward" ) )
 		{
-			RearLeft.SpinMotorSpeed = -Speed;
-			RearRight.SpinMotorSpeed = -Speed;
+			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
+			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
 			if ( FourWheelDrive )
 			{
-				FrontLeft.SpinMotorSpeed = -Speed;
-				FrontRight.SpinMotorSpeed = -Speed;
+				FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
+				FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
 			}
 		}
 		else {
