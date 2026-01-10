@@ -62,7 +62,7 @@
           "Flags": 0,
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "1,1,1,1",
+          "LightColor": "0.32558,0.32558,0.32558,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -350,7 +350,7 @@
               "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
             },
             "Property": "Position",
-            "Value": "-11471,1960.998,128"
+            "Value": "-27144,1959.982,128"
           },
           {
             "Target": {
@@ -358,7 +358,7 @@
               "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
             },
             "Property": "Rotation",
-            "Value": "0,0,-0.7071066,0.7071068"
+            "Value": "0,0,0.7071064,-0.7071071"
           },
           {
             "Target": {
@@ -366,7 +366,7 @@
               "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
             },
             "Property": "Scale",
-            "Value": "10.25,20.5,10.25"
+            "Value": "10.25,20.5,9.5"
           },
           {
             "Target": {
@@ -383,6 +383,177 @@
         "34b80913-912d-4e77-8bdc-5917851b4046": "14988438-735a-43d1-96f5-e0caaf709fb0",
         "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "df969d0b-eca0-4bc9-a702-69360e449946",
         "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "4082bf1f-381b-40a1-ae51-0fa55ebe1fe4"
+      }
+    },
+    {
+      "__guid": "b471bcf9-3c8b-4148-b345-620d7bb8208f",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-high.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Name",
+            "Value": "road-slant-high (4)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Position",
+            "Value": "-27144.01,11459.97,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.7071064,-0.7071071"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Scale",
+            "Value": "10.25,20.5,9.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "34b80913-912d-4e77-8bdc-5917851b4046": "b471bcf9-3c8b-4148-b345-620d7bb8208f",
+        "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "1666c43b-649e-450c-b083-03c1462dce3b",
+        "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "4ad68c96-0d00-45dc-b79c-d7f897c2d1e3"
+      }
+    },
+    {
+      "__guid": "3e4babb8-6da1-4629-bdfb-ed9f3355a73d",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-high.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Name",
+            "Value": "road-slant-high (5)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Position",
+            "Value": "-22852.02,14275.97,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.9999999,-0.0000005960464"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Scale",
+            "Value": "10.25,20.5,9.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "34b80913-912d-4e77-8bdc-5917851b4046": "3e4babb8-6da1-4629-bdfb-ed9f3355a73d",
+        "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "524c620c-55a8-46cf-88e1-11a18ab7cef3",
+        "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "31c3cba1-e46c-4a08-bd31-b6cbb7e0e172"
+      }
+    },
+    {
+      "__guid": "ff0cc36d-525c-42ad-8dfe-3403857373c4",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-high.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Name",
+            "Value": "road-slant-high (6)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Position",
+            "Value": "-22852,-1528.036,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.0000007907536,0.9999999"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Scale",
+            "Value": "10.25,20.5,9.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "34b80913-912d-4e77-8bdc-5917851b4046": "ff0cc36d-525c-42ad-8dfe-3403857373c4",
+        "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "32774638-638d-4e82-b980-675f03c3fb82",
+        "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "29eae4ee-10f9-46d8-99ab-61f60b55d1bc"
       }
     },
     {
@@ -577,9 +748,9 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Block (1)",
-      "Position": "-3200,-4736,63.99992",
+      "Position": "-2263,-1312,64",
       "Rotation": "0,0,0,1",
-      "Scale": "2.5,2.5,1",
+      "Scale": "2.25,2.1,1",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -602,7 +773,7 @@
           "IsTrigger": false,
           "Mesh": {
             "Topology": "H4sIAAAAAAAACl2QCQ4CMQwDB7rAct/H/z9aNMKVIipVVWPHcTwDH2DN7yyBKf8Z2AEH4AQscuXUcwVWqbf0U7iP1Ft4/7PepWdTdFu4t3Dt3cZT771P8XgvnvfxKy5f7itaah+zi7h8uc9oq3GOprh8uZeys7ta9+8rpubo14saIwu9D8x5ztKjmPmYje/IzyxqVnp359GvLzWty1XvC8YUFhrEAQAA",
-            "Position": "-3200,-4736,63.99992",
+            "Position": "-2263,-1312,64",
             "Rotation": "0,0,0,1",
             "Positions": [
               "-12544,-11648,64",
@@ -657,20 +828,20 @@
               "-0,0,-1"
             ],
             "TextureScale": [
-              "0.6250001,0.6250001",
+              "0.5625001,0.525",
               "0.25,0.25",
-              "0.6250001,0.25",
-              "0.6250001,0.25",
-              "0.6250001,0.25",
-              "0.6250001,0.25"
+              "0.5249999,0.25",
+              "0.5249999,0.25",
+              "0.5625,0.25",
+              "0.5625,0.25"
             ],
             "TextureOffset": [
-              "511.9961,102.4023",
+              "439.1094,60.95703",
               "0,0",
-              "102.3984,511.9997",
-              "409.6016,511.9997",
-              "511.9961,511.9997",
-              "0.00390625,511.9997"
+              "60.95703,0",
+              "451.043,0",
+              "72.89062,0",
+              "439.1094,0"
             ],
             "MaterialIndex": [
               0,
@@ -17910,7 +18081,7 @@
       "Children": []
     },
     {
-      "__guid": "3e3f2f7b-0b6e-439c-af6d-a802d9121a1c",
+      "__guid": "0649782d-ce19-47d8-9a23-e9eb8f24d477",
       "__version": 2,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -17920,11 +18091,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "22a63f25-9477-438a-ab01-b08c18454ce7": "5373c25d-7309-4e98-ad6c-13f4d55f0a1e"
+        "a1f3658e-f576-4b35-b047-44b434572a44": "04d3a65f-ef5f-4e66-b7e0-1e072e723ffc"
       }
     },
     {
-      "__guid": "b8994f3b-b143-4774-9187-54164194ce91",
+      "__guid": "6557e215-cab9-4c4c-827f-15f082312ad7",
       "__version": 2,
       "__Prefab": "iron-fence-border 8x straight +2 corners.prefab",
       "__PrefabInstancePatch": {
@@ -17934,7 +18105,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "22a63f25-9477-438a-ab01-b08c18454ce7": "86ba431e-b754-414a-83c9-254ad16f33cb"
+        "a1f3658e-f576-4b35-b047-44b434572a44": "c92d1483-4785-4e49-b487-8080c7c1abc8"
       }
     },
     {
@@ -24860,7 +25031,7 @@
       "Children": []
     },
     {
-      "__guid": "ac6cde37-aa21-4355-946f-a50c1928c655",
+      "__guid": "6d294763-f53a-40d8-8082-40e6f964a962",
       "__version": 2,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24870,11 +25041,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "a476a70e-3be9-4f52-b95e-ea4acf0e0c9c": "0b68de43-214c-4971-b4f1-a9642ed669a5"
+        "69be751f-6b20-494a-af75-fc2043c98218": "f04cee68-a626-4678-8619-53cf0b8c4f31"
       }
     },
     {
-      "__guid": "28479169-d269-4c24-b87d-fc116735f925",
+      "__guid": "b3e7ce78-d5c9-4d07-ba29-39370d917e7b",
       "__version": 2,
       "__Prefab": "fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24884,11 +25055,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "a476a70e-3be9-4f52-b95e-ea4acf0e0c9c": "a50a451b-ee56-4c17-b16f-572b86452e5f"
+        "69be751f-6b20-494a-af75-fc2043c98218": "cd9d4938-8041-481c-894e-3a0544c67c76"
       }
     },
     {
-      "__guid": "765f9e27-d6c0-46b6-915c-ec7e48abc17b",
+      "__guid": "ef33fde0-adaf-4c3e-8bd1-9886c44a851f",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24898,11 +25069,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "718a8d65-48fa-42ec-8c4a-6efcf270751b"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "7e7b5bff-a1ce-4520-9fce-c85c1c3d2591"
       }
     },
     {
-      "__guid": "b843a490-ade1-4c94-8b56-c0e4812d4438",
+      "__guid": "1b97e333-fdb9-4f14-be9c-6d4ce67a6618",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24912,11 +25083,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "da1bca93-7527-4048-b549-def3b0f65155"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "cfa2da4a-61fd-4d07-8aaa-6e8bc458a9ea"
       }
     },
     {
-      "__guid": "a687feaf-1381-4248-9766-f2a72284fb31",
+      "__guid": "a8a0694a-8e82-4505-b798-ecc2defcb202",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24926,11 +25097,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "596bf902-abfe-47fd-bea1-f4614df659fc"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "6cc83165-db77-4f9e-9764-35c0ac6ce35e"
       }
     },
     {
-      "__guid": "e274947e-e974-4d91-8111-16013ce1a615",
+      "__guid": "e203a483-0500-4865-82a7-036af4e0957a",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24940,11 +25111,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "4e00f689-fd6e-43a2-afee-f173cbbbbc45"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "a7c34f26-1949-4187-a309-3792fd4ee157"
       }
     },
     {
-      "__guid": "cc56542b-9e62-4b03-82ba-567b3bfc619d",
+      "__guid": "2e90cbe1-e18f-499b-a584-9721887d4887",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24954,11 +25125,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "7410adf2-7c00-463f-8327-3c9c47f9b6f8"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "e1f9d5f3-4f40-4167-8141-3cb5cc26dfb8"
       }
     },
     {
-      "__guid": "8eba7449-fdfb-49ac-a2ff-a3f7163d5ebb",
+      "__guid": "0aca0f30-77dd-4730-b3f9-d34cbe1bdbe6",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24968,11 +25139,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "1502358b-c577-4320-8959-c831d6637c6f"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "56ccd1ab-15bb-4aea-b84e-f070130f95a3"
       }
     },
     {
-      "__guid": "10d00bb7-6424-4fc2-9153-7ea6d7a09485",
+      "__guid": "8f768b69-d45c-4ff6-95c1-010908572971",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24982,11 +25153,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "5fb7d7b9-6613-4940-8512-63b38d452cfe"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "b86a91c9-2a25-49e5-bac7-c3657e6a6c2f"
       }
     },
     {
-      "__guid": "edc1de19-e971-425c-9237-66afb7fa84b0",
+      "__guid": "68d0ff88-f621-4e64-bd31-872d823f0bb8",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -24996,11 +25167,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "02afece7-4535-4faf-9794-453d6a8935a2"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "08fe84fb-40b7-4ac3-87a9-44d72e3876a9"
       }
     },
     {
-      "__guid": "afdc87c6-6cc3-41e2-bac0-23078354c0e4",
+      "__guid": "3ce3917e-210a-49bc-ad38-709ece726073",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -25010,11 +25181,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "869e979a-5281-4885-9eb8-742747b130d9"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "dfb1906d-6552-488b-8dec-03e76a437ac7"
       }
     },
     {
-      "__guid": "543d12bf-c6ed-4855-a3ae-01df6806209f",
+      "__guid": "163dad8f-01a2-4361-93e6-90ada0f5d2e8",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -25024,11 +25195,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "5c7d391c-4bba-4078-9411-f0bdc793e566"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "ddd0cac8-f5e4-4faf-80e1-68c7982db6f0"
       }
     },
     {
-      "__guid": "4209dde4-e61d-4ca4-bd32-0247f3f10501",
+      "__guid": "db67ea0c-47ec-46fe-921c-a11658669bef",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -25038,11 +25209,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "f4b873c1-9cf5-4075-a993-dffa7c723c9b"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "547a5bbd-2379-4f60-a580-51ba2bd5669c"
       }
     },
     {
-      "__guid": "7f0661d2-650a-495f-882d-0b9ba857ae9d",
+      "__guid": "2a02bc5e-656e-48cb-baf3-7dc37ce0ebe5",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -25052,7 +25223,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "08af3310-e3dd-475d-acc8-6318c9b70cc2"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "90c3c6e4-c621-4b62-86bd-4eddc5636ad9"
       }
     },
     {
@@ -27719,7 +27890,7 @@
       }
     },
     {
-      "__guid": "ece45922-924c-4324-a051-9d3311b2d580",
+      "__guid": "1a4515b7-e7ac-41d1-94e8-a2457ac068bc",
       "__version": 2,
       "__Prefab": "prefabs/fence-1x4.prefab",
       "__PrefabInstancePatch": {
@@ -27729,13 +27900,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "2d4689f5-eec5-4b04-b712-cf0529bb5f82": "ece45922-924c-4324-a051-9d3311b2d580",
-        "ebc85b29-06aa-4013-be99-b3abd547945b": "1c4d3ca4-3ceb-4f3e-8493-e7965ca3f99d",
-        "6cb0e052-dc12-49e5-b1e8-70a8a8caf26a": "7c3480b1-3ee6-41c7-962b-249bfde173e0"
+        "27b67227-e029-4113-8e54-10035ce023d1": "9d266f8e-32c1-4bbd-aad1-28f5dd42682d"
       }
     },
     {
-      "__guid": "0a164afd-69ac-4dc5-ab8e-bf6412edb468",
+      "__guid": "299e2008-14a2-4bae-81f5-7e0dc5082557",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27745,11 +27914,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "d3e8dd74-3828-40b3-9613-be34620c2ade"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "ae1436fb-170a-497a-8b73-736e658f62d0"
       }
     },
     {
-      "__guid": "79f8deb8-94de-4cda-8622-7c8125e1a029",
+      "__guid": "2519771f-55c0-4e2b-992f-145240dff4c2",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27759,11 +27928,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "16331a8b-19c1-4592-8ab3-72e5ae565d41"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "b0a22ade-ca71-47a7-98e0-b2e2a3946654"
       }
     },
     {
-      "__guid": "f4b48f97-eb2e-494d-a4d3-66fd0a94df9d",
+      "__guid": "0c87b4e8-b51f-4749-8057-0de21aa37618",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27773,11 +27942,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "0a4e9a57-dcff-49d3-b8ed-c962a2007da3"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "57c1921f-8fbc-49d2-8b41-ce3be70b3847"
       }
     },
     {
-      "__guid": "2ecd4ccd-ec21-4ac8-bb01-9531d8c5093e",
+      "__guid": "3682faa8-d048-4780-858c-5da22cead0cb",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27787,7 +27956,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "982cbca0-3433-49da-bfc7-5fbcc15b2ddb"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "4e103edc-27c2-49fc-afd4-2bdebe24b279"
       }
     },
     {
@@ -27832,7 +28001,7 @@
       }
     },
     {
-      "__guid": "34908ec8-ff68-46e0-967a-cb2ab03ea344",
+      "__guid": "a3483b6d-0c1f-4d69-a7b8-bd521d78e506",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27842,11 +28011,11 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "dd51d158-1f88-4400-9d9f-0a5fe7955520"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "fcabd29c-9aa4-4e4d-8d2d-cce2efe26722"
       }
     },
     {
-      "__guid": "687bd28a-ac46-4e7f-b880-e78acb3fce82",
+      "__guid": "8b19342f-4d13-478f-8874-abd3ece2e7ff",
       "__version": 2,
       "__Prefab": "prefabs/fence 4x.prefab",
       "__PrefabInstancePatch": {
@@ -27856,7 +28025,7 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "0976f4b3-280f-43c5-87c0-7c36886a689c": "068acf1d-ca04-4213-b9bd-61076328b022"
+        "a605c5eb-6730-4a56-a91c-95221fcab654": "a0d6be4a-7191-490c-9111-172f4f3930f8"
       }
     },
     {
@@ -31706,7 +31875,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence-straight",
-      "Position": "-18368,-1104,163",
+      "Position": "-16932.6,-6982.131,163.0001",
       "Rotation": "0,0,-0.8660254,0.5000001",
       "Scale": "10,10,10",
       "Tags": "",
@@ -44621,379 +44790,4125 @@
     {
       "__guid": "08658e69-0fb5-4605-bfc3-cb32369ea72c",
       "__version": 2,
-      "Flags": 0,
-      "Name": "bowl-corner-inner",
-      "Position": "-19826,870.9999,128",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "4f5cfe10-de2a-4dc0-950a-d6f057cda4d8",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/bowl-corner-inner.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/bowl-corner-inner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Position",
+            "Value": "-20440,-199.9951,128"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.7071067,0.7071068"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9": "08658e69-0fb5-4605-bfc3-cb32369ea72c",
+        "999b9f7e-8f1a-4dc4-8e27-6c25db0e5852": "4f5cfe10-de2a-4dc0-950a-d6f057cda4d8",
+        "08db5148-2e63-4ae4-888a-129b2dd01fc6": "46c87e33-0621-4c55-8b3c-1b0f0a11986e"
+      }
     },
     {
-      "__guid": "a1587db5-4cf5-41db-9306-71c813381887",
+      "__guid": "c85b9bb6-243e-4d0a-8f34-8b72674170e2",
       "__version": 2,
-      "Flags": 0,
-      "Name": "bowl-corner-outer",
-      "Position": "-19744,261.9999,127.9998",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "6b0d7181-21e2-4083-85b4-85bf627e9176",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/bowl-corner-outer.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/bowl-corner-inner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-inner (2)"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Position",
+            "Value": "-25816,-199.999,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9": "c85b9bb6-243e-4d0a-8f34-8b72674170e2",
+        "999b9f7e-8f1a-4dc4-8e27-6c25db0e5852": "2752d824-a35e-45fd-8749-6cd1f0caba43",
+        "08db5148-2e63-4ae4-888a-129b2dd01fc6": "50ad8f7a-d2b2-4e62-83ea-0b9bc9be3893"
+      }
     },
     {
-      "__guid": "15e2db15-2204-46b1-81b4-3cb73b80ee48",
+      "__guid": "35e7d4d2-95b0-4bbb-8fc4-5daf07513a1b",
       "__version": 2,
-      "Flags": 0,
-      "Name": "bowl-side",
-      "Position": "-19305,-648.9999,128.0002",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "f4870a82-e17d-41fd-95a3-08671f6f3260",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/bowl-side.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/bowl-corner-inner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-inner (3)"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Position",
+            "Value": "-25816,12951.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9": "35e7d4d2-95b0-4bbb-8fc4-5daf07513a1b",
+        "999b9f7e-8f1a-4dc4-8e27-6c25db0e5852": "eb1396bb-d61e-42b8-b1ce-ed4513689a62",
+        "08db5148-2e63-4ae4-888a-129b2dd01fc6": "a8f8c86a-76df-4cee-8b10-2fd6de291f17"
+      }
+    },
+    {
+      "__guid": "90294d5b-aa9b-4733-bd38-41f9460ffa3f",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-inner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-inner (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Position",
+            "Value": "-20440,12950,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.9999999,0.0000001490116"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "1aea6bfd-7414-439a-9cf0-7d14fa76f9a9": "90294d5b-aa9b-4733-bd38-41f9460ffa3f",
+        "999b9f7e-8f1a-4dc4-8e27-6c25db0e5852": "054debec-52b4-4fb5-849e-117f4bd5b686",
+        "08db5148-2e63-4ae4-888a-129b2dd01fc6": "b852aef6-6c39-4faa-9485-501bb5c3234c"
+      }
+    },
+    {
+      "__guid": "a2700e27-bf89-41aa-a8b0-5d4348f976ff",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-19840,7571.988,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "a2700e27-bf89-41aa-a8b0-5d4348f976ff",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "65b80013-6498-40ee-a106-df694e151192",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "87b7af4e-7cbf-4410-b68d-d46dd1c2f0cf"
+      }
+    },
+    {
+      "__guid": "98bbd8ab-f6dd-474e-b79b-ff07b9aad3ca",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (6)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-19840,5175.997,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "98bbd8ab-f6dd-474e-b79b-ff07b9aad3ca",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "b1702d41-4f0b-4157-9f01-89e16b4801cc",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "67bb408a-3998-451c-847b-0344d4563073"
+      }
+    },
+    {
+      "__guid": "465ed218-57be-4f69-aebd-0fd4ffbc6b09",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (5)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-19840,5775.987,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000002980232,-0.9999999"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "465ed218-57be-4f69-aebd-0fd4ffbc6b09",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "42537735-bbda-43e3-a84f-4d28272a2dcc",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "751844a0-112f-4936-8f0f-8793fa105f7f"
+      }
+    },
+    {
+      "__guid": "2cb85f9a-7629-4585-9da2-8310f26bdc50",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (4)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-20440,5775.989,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "2cb85f9a-7629-4585-9da2-8310f26bdc50",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "09a45241-65d3-41ae-988c-952eaa84fe28",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "937ed003-87d2-4ed3-b94c-78358c41eeff"
+      }
+    },
+    {
+      "__guid": "f3523466-1c3a-4e04-b875-7f2544c6bbe0",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (3)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-20440,7571.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.9999999,0.0000001490116"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "f3523466-1c3a-4e04-b875-7f2544c6bbe0",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "79f5c91c-94cb-4c17-a525-d105a999014a",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "48cab71a-bea7-4ae0-a3bb-fde88b3c8f5a"
+      }
+    },
+    {
+      "__guid": "c70a94f0-b81b-4eb2-874b-61ea61b27b08",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-corner-outer.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Name",
+            "Value": "bowl-corner-outer (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "aefdeaef-915e-4c9e-bb57-6b157e1c6103"
+            },
+            "Property": "Position",
+            "Value": "-19840,8171.995,129"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "aefdeaef-915e-4c9e-bb57-6b157e1c6103": "c70a94f0-b81b-4eb2-874b-61ea61b27b08",
+        "1e03d503-59c6-4d27-8269-9a5c64f3a51e": "0f34b6e4-f6b4-4383-a57f-c5030b15f4b6",
+        "04ce9b76-bd16-490f-82a5-8accd4707cff": "2f6c0a26-33f0-40d1-9385-7c18af1d960c"
+      }
     },
     {
       "__guid": "1e08de2a-7727-46d2-a1c5-6bd7a4f54a73",
       "__version": 2,
-      "Flags": 0,
-      "Name": "obstacle-middle",
-      "Position": "-19796,-1180,128.0002",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "3688d342-0637-4594-afe6-94a63ddae5f2",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/obstacle-middle.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/obstacle-middle.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63273698-3bbf-4f27-90e4-f0b5938f0210"
+            },
+            "Property": "Position",
+            "Value": "-23244,8827.995,128"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63273698-3bbf-4f27-90e4-f0b5938f0210"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63273698-3bbf-4f27-90e4-f0b5938f0210"
+            },
+            "Property": "Scale",
+            "Value": "24,12,6"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "63273698-3bbf-4f27-90e4-f0b5938f0210": "1e08de2a-7727-46d2-a1c5-6bd7a4f54a73",
+        "dcd187fb-714c-4441-a8ee-55e0b49012ac": "3688d342-0637-4594-afe6-94a63ddae5f2",
+        "04e409ef-c439-449c-9031-145d6dae1195": "3ea85cf2-b066-4689-8104-922789382a8a"
+      }
     },
     {
       "__guid": "f5e6fdd3-3344-42ab-8e8b-7b40be4411b1",
       "__version": 2,
-      "Flags": 0,
-      "Name": "obstacle-end",
-      "Position": "-20098,-201,127.9998",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "5b0a7f15-d0d2-4ce8-8ffe-5630fdadb0e2",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/obstacle-end.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/obstacle-end.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4e45feca-af5d-423b-9c5c-7091a18e1d5a"
+            },
+            "Property": "Position",
+            "Value": "-22756,-1183.496,127.9998"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4e45feca-af5d-423b-9c5c-7091a18e1d5a": "f5e6fdd3-3344-42ab-8e8b-7b40be4411b1",
+        "ec76c296-1521-4852-b2db-9eacacc71f26": "5b0a7f15-d0d2-4ce8-8ffe-5630fdadb0e2",
+        "90f65cfc-4351-4e1a-ae03-6411126bc765": "0261d75a-72d2-42cc-ac31-e009ba4c0af5"
+      }
+    },
+    {
+      "__guid": "e4405909-dbf4-4786-8ac3-fb5a7a785206",
+      "__version": 2,
+      "__Prefab": "prefabs/obstacle-end.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4e45feca-af5d-423b-9c5c-7091a18e1d5a"
+            },
+            "Property": "Name",
+            "Value": "obstacle-end (1)"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4e45feca-af5d-423b-9c5c-7091a18e1d5a"
+            },
+            "Property": "Position",
+            "Value": "-22756,-1183.496,127.9998"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4e45feca-af5d-423b-9c5c-7091a18e1d5a": "e4405909-dbf4-4786-8ac3-fb5a7a785206",
+        "ec76c296-1521-4852-b2db-9eacacc71f26": "00ba7597-8637-404d-a731-8d21a9b8732f",
+        "90f65cfc-4351-4e1a-ae03-6411126bc765": "6b99a161-3a74-4ea8-8923-bc59b0e2d8c7"
+      }
     },
     {
       "__guid": "f666ba84-27c6-4923-a221-7378c6040174",
       "__version": 2,
-      "Flags": 0,
-      "Name": "obstacle-box",
-      "Position": "-20049,1305,133.0002",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "ccdb05e0-d679-4a48-82a2-7f93b5a5f4bc",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/obstacle-box.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/obstacle-box.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Position",
+            "Value": "-23392,2144,136"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4074b06e-97dc-4748-97f8-f9c771dd589e": "f666ba84-27c6-4923-a221-7378c6040174",
+        "dceec0db-1d6d-48e0-a3a7-67f4625d74a9": "ccdb05e0-d679-4a48-82a2-7f93b5a5f4bc"
+      }
+    },
+    {
+      "__guid": "f47723fd-8e7c-4df5-ba43-83e5f52fc356",
+      "__version": 2,
+      "__Prefab": "prefabs/obstacle-box.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Name",
+            "Value": "obstacle-box (3)"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Position",
+            "Value": "-24672,1068,136"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.258819,0.9659258"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4074b06e-97dc-4748-97f8-f9c771dd589e": "f47723fd-8e7c-4df5-ba43-83e5f52fc356",
+        "dceec0db-1d6d-48e0-a3a7-67f4625d74a9": "8ec5b0c3-fb7f-40a0-bf37-e2de363f8e09"
+      }
+    },
+    {
+      "__guid": "fe752ee3-807a-407d-8f31-2f230102fe45",
+      "__version": 2,
+      "__Prefab": "prefabs/obstacle-box.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Name",
+            "Value": "obstacle-box (4)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Position",
+            "Value": "-24404,3388,136"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.1305262,0.9914449"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4074b06e-97dc-4748-97f8-f9c771dd589e": "fe752ee3-807a-407d-8f31-2f230102fe45",
+        "dceec0db-1d6d-48e0-a3a7-67f4625d74a9": "468c97bd-1f63-4e95-9293-93bb57ef13d6"
+      }
+    },
+    {
+      "__guid": "6da48f88-cb0a-4b1a-b544-e93b3a86114a",
+      "__version": 2,
+      "__Prefab": "prefabs/obstacle-box.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Name",
+            "Value": "obstacle-box (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Position",
+            "Value": "-22068,3248,136"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.1305262,0.9914449"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4074b06e-97dc-4748-97f8-f9c771dd589e": "6da48f88-cb0a-4b1a-b544-e93b3a86114a",
+        "dceec0db-1d6d-48e0-a3a7-67f4625d74a9": "5d9689a0-cb92-4afa-ac7e-73f1409c9998"
+      }
+    },
+    {
+      "__guid": "2ec4e82b-9785-4a9d-8bdd-a5018468f1f5",
+      "__version": 2,
+      "__Prefab": "prefabs/obstacle-box.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Name",
+            "Value": "obstacle-box (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Position",
+            "Value": "-22240,1460,136"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "4074b06e-97dc-4748-97f8-f9c771dd589e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.3826834,0.9238796"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "4074b06e-97dc-4748-97f8-f9c771dd589e": "2ec4e82b-9785-4a9d-8bdd-a5018468f1f5",
+        "dceec0db-1d6d-48e0-a3a7-67f4625d74a9": "0a584135-0141-42c3-b963-5af780c45f5d"
+      }
     },
     {
       "__guid": "2b6bc6e9-7c0c-446e-ba6a-3694a17afd4a",
       "__version": 2,
-      "Flags": 0,
-      "Name": "half-pipe",
-      "Position": "-19885,2315,128",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "1e4a2fb6-cb80-4e49-8165-d2f58dc21fcb",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/half-pipe.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+      "__Prefab": "prefabs/half-pipe.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ea590e1a-1503-4202-ad0a-85bdb283c042"
+            },
+            "Property": "Position",
+            "Value": "-20160,-6928,128"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ea590e1a-1503-4202-ad0a-85bdb283c042"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "ea590e1a-1503-4202-ad0a-85bdb283c042": "2b6bc6e9-7c0c-446e-ba6a-3694a17afd4a",
+        "f29f3078-58b0-4a0a-bf46-8cf9b63149f2": "1e4a2fb6-cb80-4e49-8165-d2f58dc21fcb",
+        "66281d8f-58f0-4d12-b0d2-462c9c08bc5a": "54d72177-99e0-426b-bac1-ffa25201d9d9"
+      }
     },
     {
       "__guid": "ae6e4940-b24e-477c-8d4e-086c7d2bcbc1",
       "__version": 2,
-      "Flags": 0,
-      "Name": "pallet",
-      "Position": "-19661,-1367,128",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "8e1b3aae-ab0f-4e43-8a6a-db9656b6a94a",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/pallet.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
+      "__Prefab": "prefabs/pallet.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "e82500a3-664b-4fa3-82fd-2b7b0443632e"
+            },
+            "Property": "Position",
+            "Value": "-21064,-5688,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "e82500a3-664b-4fa3-82fd-2b7b0443632e": "ae6e4940-b24e-477c-8d4e-086c7d2bcbc1",
+        "a32a9011-85e8-49ca-93f1-e345cc1e995f": "8e1b3aae-ab0f-4e43-8a6a-db9656b6a94a",
+        "5dacc393-3baa-4b48-b581-08a277bd60a3": "42b49d5c-732f-4504-97a4-12edac0a24f0"
+      }
     },
     {
       "__guid": "74c83bed-6089-4574-9d3d-51b2453c49a8",
       "__version": 2,
+      "__Prefab": "prefabs/rail-curve.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63f0a31c-9b85-425e-a6ab-4b41c26bdf0c"
+            },
+            "Property": "Position",
+            "Value": "-23996,-7944,172"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "63f0a31c-9b85-425e-a6ab-4b41c26bdf0c": "74c83bed-6089-4574-9d3d-51b2453c49a8",
+        "55164694-3797-4622-81b4-be8f65ea430f": "49d318a0-2950-4f69-8bab-b841944d07c2",
+        "07ad3130-dbf3-4fd9-bda9-ddf5de58b345": "2f38eaf8-9219-48a6-8a9b-13e843d883c0"
+      }
+    },
+    {
+      "__guid": "e42d0683-37cf-474b-bc33-e292a8c80484",
+      "__version": 2,
+      "__Prefab": "prefabs/floor-wood.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "8197e6db-330e-4ac8-a6af-2b205b624012"
+            },
+            "Property": "Position",
+            "Value": "-20516,-6152,256"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "8197e6db-330e-4ac8-a6af-2b205b624012": "e42d0683-37cf-474b-bc33-e292a8c80484",
+        "c4ceb14a-cc76-4afd-9cc3-62d2467fc360": "752b5a6f-2873-425c-8ce5-c1d2d8ed740b",
+        "ed26c189-a00b-484c-a687-7de73325554c": "b545dc3c-ee90-44a7-9f40-4dfcc6dafcc8"
+      }
+    },
+    {
+      "__guid": "63e4e6d7-7f14-4785-b4c7-99d501a3a442",
+      "__version": 2,
+      "__Prefab": "prefabs/floor-concrete.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "76613c3a-fecd-4a8d-b109-cca96d3626ed"
+            },
+            "Property": "Position",
+            "Value": "-22204,-6824,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "76613c3a-fecd-4a8d-b109-cca96d3626ed": "63e4e6d7-7f14-4785-b4c7-99d501a3a442",
+        "32729aa7-2e2d-4c09-8170-94cee6a6cbc9": "cab66961-5bd3-4a23-9a67-54403e722e81",
+        "e76f2d97-fe10-49b7-972f-ae43961aa1b6": "153c673e-666d-4144-8465-c87e8bade8ea"
+      }
+    },
+    {
+      "__guid": "fd1a2efa-c300-49b8-a534-6f1390d9d8f9",
+      "__version": 2,
+      "__Prefab": "prefabs/steps.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "725b7a3d-776e-48a1-987b-5cf96e8e9460"
+            },
+            "Property": "Position",
+            "Value": "-21952,-9064,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "725b7a3d-776e-48a1-987b-5cf96e8e9460": "fd1a2efa-c300-49b8-a534-6f1390d9d8f9",
+        "0f9ca218-b335-4540-9f97-8a724efb3067": "5e55095c-e312-4d65-9878-ab89da7318b4",
+        "1e25cabd-8a1f-4e76-bdd4-2e0d5c4a93ca": "d6586558-15aa-4d2b-997a-7da2553af2ee"
+      }
+    },
+    {
+      "__guid": "704c407e-f6e6-437d-855c-12cd9fdbd455",
+      "__version": 2,
+      "__Prefab": "prefabs/structure-platform.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "23881646-69d4-41d7-ac3b-f9e760d928f9"
+            },
+            "Property": "Position",
+            "Value": "-21120,-6384,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "23881646-69d4-41d7-ac3b-f9e760d928f9": "704c407e-f6e6-437d-855c-12cd9fdbd455",
+        "1dac841c-333a-49af-aa2f-514ef64e52ca": "02c4ad9d-5f41-4c7d-a1d2-f18c859653ed",
+        "0aea9c54-be43-4d02-b159-00ae0404e439": "e4f4f8d1-7d0c-4185-8b0c-7904e58b263a"
+      }
+    },
+    {
+      "__guid": "6cb747b6-d604-44e0-a663-0763adb6ae1c",
+      "__version": 2,
+      "__Prefab": "prefabs/structure-wood.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "7ad43ec6-76d3-4f2e-9f4a-922318462d67"
+            },
+            "Property": "Position",
+            "Value": "-22664,-7784,128"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "7ad43ec6-76d3-4f2e-9f4a-922318462d67": "6cb747b6-d604-44e0-a663-0763adb6ae1c",
+        "1285a4a2-54db-4d36-b097-58075194b01c": "c7e870c3-63b4-43dd-9aa4-131cf4aa024d",
+        "445510ed-88a1-4ed5-af6a-8e1e2d646e68": "43afc2a1-632e-418f-b153-31cc18ab0625"
+      }
+    },
+    {
+      "__guid": "13b6b62c-db2f-4c73-884a-b1669cf34581",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-21500,-7440.009,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "13b6b62c-db2f-4c73-884a-b1669cf34581",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "0211f1b6-e9f6-4267-8b5e-943c1bc1c83b",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "9a2237c3-1529-4559-ac2d-75940ad230f1",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "8a2aed85-22dd-4d63-80a2-d28d630b5538",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "789ef6a4-ac6a-48f8-b362-fa4cf09b3603"
+      }
+    },
+    {
+      "__guid": "23c4b64c-5795-40fd-bbeb-17649acb650a",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,8171.987,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "23c4b64c-5795-40fd-bbeb-17649acb650a",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "84d0ba86-d166-4f71-9ede-c79f0fb7b229",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "1ece08b2-2636-4587-817f-9302fe9ac045",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "5a55b5dd-0447-4b4a-9699-27cfbb6a5884",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "5ec5ab86-2867-4c5a-b375-0778016c7494"
+      }
+    },
+    {
+      "__guid": "95f31d59-b7a1-4111-97c5-28e19ea0f83b",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (17)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,4577.499,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "95f31d59-b7a1-4111-97c5-28e19ea0f83b",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "6fc47ded-ce7c-4710-b19f-a8db46ae224a",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "f1f5a984-ef25-40be-948d-01c6c47cf77b",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "1648e07f-e452-4e15-b250-222745ec5e18",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "8fbf7d33-f129-4f37-b949-73781e7b819f"
+      }
+    },
+    {
+      "__guid": "0d1809ee-cae8-4a9c-82a7-7e3bc7344cb7",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (16)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,3981.489,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "0d1809ee-cae8-4a9c-82a7-7e3bc7344cb7",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "8a5c86ad-cf35-4fa8-b217-d511faf02191",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "ce403538-7979-4114-ae86-ff84bb107b63",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "5e090a31-d956-4359-958c-6216e01c0dee",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "a7a8057b-10cf-4ead-8593-43ea5dfa806e"
+      }
+    },
+    {
+      "__guid": "2193a1f9-11c9-47a7-a6e2-f65c3710675d",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (15)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,3383.489,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "2193a1f9-11c9-47a7-a6e2-f65c3710675d",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "8cd79f1b-7cd8-41e0-8ba5-2b92175885c4",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "2b02417b-b1a8-4893-a7bf-3f863e5d6642",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "cfc28c76-ce72-45bc-8857-5e4f613c5eb0",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "b9d8863d-1da1-4bb4-b809-75ab34e81dac"
+      }
+    },
+    {
+      "__guid": "d331ea56-5868-4f5b-91ca-8f227bcd2fa0",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (14)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,2787.489,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "d331ea56-5868-4f5b-91ca-8f227bcd2fa0",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "52ce4826-f57a-42a7-87b2-a887822f0888",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "48a14505-be21-46bf-b4c4-8b30cee55119",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "bb8e7782-b44d-45ad-96f4-5d40c87007d4",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "1df4c749-9530-4776-a797-9b5b4a3a5217"
+      }
+    },
+    {
+      "__guid": "85efb562-41ef-48ff-ace6-fa06155d5b77",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (13)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,2188.494,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "85efb562-41ef-48ff-ace6-fa06155d5b77",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5abc30be-80d6-421e-9cb8-a3d57634d0a2",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "281e20c6-0a50-4a7e-b021-72eeb00e8041",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "2c1464f5-a892-4a2a-b7bc-e497fa242a48",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "e23de35b-4b3a-465a-8291-6f373e8a01b6"
+      }
+    },
+    {
+      "__guid": "d8d7704f-3297-45b0-9634-396374fee3f1",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (12)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,1592.489,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "d8d7704f-3297-45b0-9634-396374fee3f1",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "10636180-c5cb-4e07-a112-bbd15a356cac",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d5dfd00b-f86c-44d1-905c-227552e0a9bc",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "ae89691b-347b-4064-8cb4-5598cc377f94",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "e735476f-b961-465a-b38c-030df3758083"
+      }
+    },
+    {
+      "__guid": "8902f324-d1c8-4a0b-9b40-5e219d3920e9",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (11)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,994.4907,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "8902f324-d1c8-4a0b-9b40-5e219d3920e9",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5249744d-5f94-4be8-ac81-0205cdae9506",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d08cb65a-f6ce-43a9-ac0d-3600413353ac",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "c9ed8336-ced6-4712-b48b-217378b97cb1",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "b212046b-e5bf-4bf3-bea1-73a4d0e6b700"
+      }
+    },
+    {
+      "__guid": "91535354-ab20-4cb7-af94-bab2f4ae08b0",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (10)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,398.4854,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "91535354-ab20-4cb7-af94-bab2f4ae08b0",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "6e155048-fd65-4dfe-af09-3ad9ca19fcad",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "94b739e5-90c8-4822-8cc4-43372170fde2",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "04bff0f2-d2e8-4a1a-87c4-3dca02a77bda",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "114bee9f-8791-479f-8404-e8d149c10c00"
+      }
+    },
+    {
+      "__guid": "83a5c7a1-66f4-4164-89f6-02377ecd090b",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (50)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,398.4824,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "83a5c7a1-66f4-4164-89f6-02377ecd090b",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "b2c46679-79bc-4a43-ac74-93f032f9af55",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "9f3640b8-0a24-4975-aef4-3a99427c7d29",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "bf85872a-ec12-44f6-9412-46f0e026b2ed",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "0cb04988-040a-4303-84f2-6641e6e75970"
+      }
+    },
+    {
+      "__guid": "c81e7c36-5a47-47ef-9842-d758df807538",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (49)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,1592.492,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "c81e7c36-5a47-47ef-9842-d758df807538",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "2ad5b349-84aa-4ec1-97bb-81439ec9370b",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "ee767840-22cf-43a6-913a-2f8dd4f438cf",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "d04ce915-30fd-48da-b1d5-087c1c7012ff",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "8662f7a9-58e5-4a4a-967b-d651f126a565"
+      }
+    },
+    {
+      "__guid": "fc9a2b04-58c7-442d-bca1-0a14999ecec2",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (48)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,994.4922,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "fc9a2b04-58c7-442d-bca1-0a14999ecec2",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "bd5aa1af-b6cf-40e8-af7b-1dc6aac3f88c",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "77c0ebb0-692e-47e2-bc2a-3d1b5a278374",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "994f9726-802d-4389-9285-8047c8764fc5",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "b45e5189-f5b5-46dd-8a46-48c090bceca2"
+      }
+    },
+    {
+      "__guid": "4390a23a-82c8-4070-bee4-42c2d7faba96",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (47)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,2188.492,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "4390a23a-82c8-4070-bee4-42c2d7faba96",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "f52e32e8-7740-40e4-91ef-810ae0795738",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "dc320955-aa40-4ba0-9375-79a9a2025d11",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "24328504-d27c-461b-9a18-963cee6754e7",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "c203bc90-f195-4116-aca1-02e341151d0e"
+      }
+    },
+    {
+      "__guid": "c97114fd-fa80-497a-a370-fc39add04206",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (46)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,2787.487,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "c97114fd-fa80-497a-a370-fc39add04206",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "005d55ef-f883-4ec7-9b94-4e80f5924b70",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "b9f31ff7-f9f1-4609-810d-b3943ab07b18",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "a53f35ab-2d55-45a2-a77a-9a3d7604dbcf",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "1ab199fa-5278-44f5-abfa-d9af6d4affde"
+      }
+    },
+    {
+      "__guid": "dca12e33-0d08-49a6-8b4a-da7a59bd4268",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (45)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,3383.492,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "dca12e33-0d08-49a6-8b4a-da7a59bd4268",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "a8d0d3d2-1cd8-449d-a87a-86aac7137bf7",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "5094e4c6-146a-4f25-9175-53fb7f2a3c5e",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "2f073529-2baf-4fa4-88c8-df4a35e8a5e8",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "19c2a018-5411-4faa-80cb-393beef81dcc"
+      }
+    },
+    {
+      "__guid": "ef5f3060-d089-4ce1-af0a-6f67a9868ee2",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (44)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,3981.49,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "ef5f3060-d089-4ce1-af0a-6f67a9868ee2",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "13c3b718-fa7f-486b-bc41-021ec188b4a7",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "96caf244-27cb-49a1-a285-4500c2e7208e",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "c6835126-2879-4054-997b-513b53551e64",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "7d51fa3e-10cd-4f9e-84de-9028ddf95926"
+      }
+    },
+    {
+      "__guid": "ce40cc90-c994-430b-ae71-f621c18d0bf9",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (43)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,4577.496,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "ce40cc90-c994-430b-ae71-f621c18d0bf9",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5a5dd0e8-e52d-47d7-9c7d-38ddee735a1f",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "5b2bb52d-4a33-43cd-aa8b-f178f7590d26",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "bd3ef44a-84e7-4d2c-ac03-129d06b838d2",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "80b5ebe2-139d-45df-be4d-7aea797431f3"
+      }
+    },
+    {
+      "__guid": "b09cb417-80f6-449e-82e6-9e2ff058a3bf",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (54)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,5179.979,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6.1,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "b09cb417-80f6-449e-82e6-9e2ff058a3bf",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "61b8764b-33ad-4bf7-b0d4-fa79c08f7a4a",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "643f2669-746a-4898-aa7b-6e1f93e38d4a",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "5181d75e-f5e8-4f89-870e-97e66d750341",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "61c4515c-aa55-45eb-8a5d-6fdd9302a409"
+      }
+    },
+    {
+      "__guid": "dafa7308-09f0-4e49-8a73-9e8de5f60742",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (53)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,5780.979,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "dafa7308-09f0-4e49-8a73-9e8de5f60742",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "892aee59-0f4b-4661-bf97-3af3743384d3",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "dcc4ff75-6914-4dda-83b5-24a781f81037",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "c4c62034-8e7f-4b30-ba81-5aa641578cac",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "133f38cc-c4f1-40da-a132-1a234435c190"
+      }
+    },
+    {
+      "__guid": "f0538a5b-ab12-4a40-92ec-3d3b9110f7f0",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (52)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,6378.978,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "f0538a5b-ab12-4a40-92ec-3d3b9110f7f0",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "a57fe4d2-c9ef-4473-9888-8dfa260a70b1",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "77dc545d-6f44-42bc-ae44-1a4f157107ea",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "6071827d-ef83-4dec-9cab-f1a509bca4c7",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "1438a57b-5529-4fa6-a1c3-28fa1a894589"
+      }
+    },
+    {
+      "__guid": "4248d061-d573-4470-a0af-eef785fa6bc5",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (51)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,6974.984,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "4248d061-d573-4470-a0af-eef785fa6bc5",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "7ba19100-9bd1-45f2-a7b9-d4ec2dd63245",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "33441e17-7a71-4866-9cd6-281dd258d5fc",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "e99c8e82-ec76-4089-becf-73c1642538f1",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "be3b63c6-a14f-4eb7-94e6-ab81bc35ac25"
+      }
+    },
+    {
+      "__guid": "b8656896-ce65-41e3-bc0c-f86d671ffd46",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (42)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,7573.49,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "b8656896-ce65-41e3-bc0c-f86d671ffd46",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "81c9b102-a55d-4521-8112-e2bb5dbfb883",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d461341a-a828-4179-87cf-1677734e0f30",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "ef9d9095-64e4-4bde-80b3-f8ecb591e6f9",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "74d18331-6d3c-4997-afa3-232cf3bf82e7"
+      }
+    },
+    {
+      "__guid": "ffb09304-a881-4169-b8d6-286df53fe29a",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (41)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,8171.983,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "ffb09304-a881-4169-b8d6-286df53fe29a",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "36723c39-a852-4198-a009-d519cf5ac176",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "9754e8ea-cc7b-40e6-99fc-095936078e24",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "d1a511a4-40c5-4ceb-ad4d-0fac932a6f5a",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "9aabdc8e-5c2a-423d-ab02-9dc411973b1d"
+      }
+    },
+    {
+      "__guid": "1b868aa2-3dc2-4c97-af96-a04692b0312c",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (40)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816,8767.993,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "1b868aa2-3dc2-4c97-af96-a04692b0312c",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "67f5f8c5-b770-4d3b-8518-0c7059a760af",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "f2a21136-50bd-407f-8971-22d512d99309",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "88f6c41a-50f9-4a97-adbd-1870eea2dff2",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "571abac7-4001-401d-8611-558d95b0e441"
+      }
+    },
+    {
+      "__guid": "b8fbb085-be5b-4b26-a6e9-2e30af17b906",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (39)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,9365.993,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "b8fbb085-be5b-4b26-a6e9-2e30af17b906",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "ea9a811f-6a56-4b92-9945-349fb9392d2e",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "2c7c5472-c250-4328-b47d-84004c1e13e2",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "b88a1629-a9d5-444a-ad2e-f63efff50e22",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "3c304579-5222-4fdd-95fe-51c5244c9d57"
+      }
+    },
+    {
+      "__guid": "83afc8bd-e70f-40e7-91c3-62b11f213039",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (38)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,9961.993,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "83afc8bd-e70f-40e7-91c3-62b11f213039",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "fc18b44b-6a5d-4546-881a-9fa93df0b444",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "3fc38009-4e99-4420-879b-acff1a236ac0",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "6d603a2d-fe54-4992-9698-8fde1b4d1bd4",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "750b6589-53e8-47ff-a3ea-59be238504f2"
+      }
+    },
+    {
+      "__guid": "7428f2d0-9a3b-44d3-a110-4aa88a552c1d",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (37)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,10560.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "7428f2d0-9a3b-44d3-a110-4aa88a552c1d",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "c9107887-8dca-47ed-bf0b-2b29bec72188",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "3eefcca3-c5e9-43e8-895e-fc96d612a04b",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "71e68634-3dc5-4120-8fdc-91dfbc5ee982",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "5a788f72-1c9a-44b4-ba8e-22cce7d01a81"
+      }
+    },
+    {
+      "__guid": "a1799acc-f049-413e-ba65-74d155435ccb",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (36)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,11156.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "a1799acc-f049-413e-ba65-74d155435ccb",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "bedae2d0-f406-4710-9776-7d5338ace3be",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d59b1262-441b-4a14-be30-e62e39ffdc89",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "b7fc3f83-85d6-41bf-a0d8-3a51184a1fb3",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "1084fb57-388e-4b96-b334-c657152e631b"
+      }
+    },
+    {
+      "__guid": "00679edf-fa38-477f-a6f8-fa088ea16e8f",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (35)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,11754.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "00679edf-fa38-477f-a6f8-fa088ea16e8f",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "8ae99034-0a08-4801-9cc5-e67510244300",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "208d95dc-004e-49eb-8fd1-76ee7e9595ac",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "b93ab5ff-93d5-4805-a7d2-7f608f457ddc",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "84ae50b2-61c8-45bd-8d3e-5d53c3fb992b"
+      }
+    },
+    {
+      "__guid": "ce094973-322e-4890-841e-58a1f49fe6ab",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (34)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25816.01,12351,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.0000003894144,-1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "ce094973-322e-4890-841e-58a1f49fe6ab",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "4238ec0a-80ee-4721-b0fd-92af0d302131",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "62081dc0-6408-464a-bc92-d0c11af03042",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "ad93b99b-7b40-4914-b8be-3ad8478c70ad",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "12c30a4c-bd35-4b7f-a691-3ced4b7c4b83"
+      }
+    },
+    {
+      "__guid": "12c54718-8b1f-4336-9568-01dfc16ea822",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (3)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,8767.992,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "12c54718-8b1f-4336-9568-01dfc16ea822",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "bde3be44-faa9-44da-a839-c0f53710607e",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "05681ad8-0ca1-4fd2-b805-7c0c56f10306",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "55f2014a-c0c4-4a56-b737-e45d641bd705",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "b0e54572-878d-4863-86eb-95e4f59b85a2"
+      }
+    },
+    {
+      "__guid": "42edb936-a69f-4095-a3eb-c9aa35d92835",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (5)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,9365.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "42edb936-a69f-4095-a3eb-c9aa35d92835",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "7f40ab41-c5fd-4d8d-8192-7edad9a6166f",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "382bb377-f38e-4a8f-a8c6-7524aadd5675",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "098f3c9e-1cb9-4392-9c24-5d9abb3791d5",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "1c772fe2-23ad-43f4-b69c-10e8af52e5bc"
+      }
+    },
+    {
+      "__guid": "fba478cf-4027-4dcc-9c4e-069b6de40fff",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (4)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,9961.995,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "fba478cf-4027-4dcc-9c4e-069b6de40fff",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "c672560e-7d97-413d-afea-cbe2ec4439d8",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "688265ce-5dbc-4a83-8842-4a8485fb4fde",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "6af8077e-3c62-4a04-b259-e90345660c1d",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "7b5fb038-3bc1-49ed-a351-5d1ce878fa22"
+      }
+    },
+    {
+      "__guid": "cd4eca90-db9d-4d26-b50f-ab2fd0d45fba",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (9)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,10560.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "cd4eca90-db9d-4d26-b50f-ab2fd0d45fba",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5e7de435-3bb2-431a-b944-e64214014c62",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "3b68337f-5507-4e31-80a2-cc432b967359",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "981bf0eb-586e-4f44-977f-c14a706b73af",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "c954d591-53c2-4882-bb24-1cc9821ab6af"
+      }
+    },
+    {
+      "__guid": "c56d1ca7-8c13-4c11-ad09-c6535916104c",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (8)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,11156.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "c56d1ca7-8c13-4c11-ad09-c6535916104c",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "eff01d18-ea7d-4b8b-8e30-4975daa46ce6",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "a5263cce-5b09-4a77-b126-505c997f9abf",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "9f74f61b-43dc-4a15-ab98-95c2c7453023",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "3add5ce7-a5b0-4e6b-a203-c9d8da7488e4"
+      }
+    },
+    {
+      "__guid": "6d74b319-0bcd-4be6-acb8-3122998448dd",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (7)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,11754.99,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "6d74b319-0bcd-4be6-acb8-3122998448dd",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "3818d425-7a87-4d36-b27a-62e19ff27bcf",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "f77259f3-72cf-4bee-bcfb-245a9388bc29",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "63c14666-fd07-4e07-b774-50471cf07443",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "97be098d-8dba-470b-973c-ab94e40d834f"
+      }
+    },
+    {
+      "__guid": "d612d5c5-2c5b-4fc9-bfe0-52fbaf0cc816",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (6)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,12351,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "d612d5c5-2c5b-4fc9-bfe0-52fbaf0cc816",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "077056eb-b489-459f-87be-b060632885f8",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "9d93c9e5-f439-45d8-8e21-e40d40548f97",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "acf6fa84-c7e1-482c-a2d1-673e76ff4d7f",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "c5ef54dc-e391-46d6-966f-ffd66dd014da"
+      }
+    },
+    {
+      "__guid": "462c3150-a344-40b6-b00b-b668a9b3c818",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (25)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-21038.49,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "462c3150-a344-40b6-b00b-b668a9b3c818",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "b88f30b1-fbd2-42c9-9eff-2cc77b992596",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "c6e8f75e-fe35-473f-8e65-797ccdd8f1f8",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "b35ef307-3040-41b1-8369-e4e61e015ab3",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "30f77a77-b7aa-45e1-b4da-cd1e796c891f"
+      }
+    },
+    {
+      "__guid": "2f43363b-4643-45c8-905e-8da083bf2399",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (33)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-21038.49,-200.0111,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "2f43363b-4643-45c8-905e-8da083bf2399",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "a9bf72d2-e40b-4ca2-bd29-e68399b17dca",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "a434ae8b-ccea-4ec1-a567-b377e1462269",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "0f6dbb9e-0bd9-4846-964d-42b2238bf055",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "48cdea67-ed64-4796-bc22-2832a7b52dbf"
+      }
+    },
+    {
+      "__guid": "4018e1f5-c826-4356-a4d0-6cc652f8ff12",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (32)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-21634.5,-200.0113,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "4018e1f5-c826-4356-a4d0-6cc652f8ff12",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "61a4a837-da69-4ce1-a3c3-cb2eb04cb0ac",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "67e11781-b7d9-4ec3-9448-21ac4a1c30e3",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "78686e53-59a8-4eed-9b88-f20823c84bce",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "c913b0b7-91ba-462d-bbd2-d3a99220d300"
+      }
+    },
+    {
+      "__guid": "d1d16f49-0c2f-43ba-8676-615275899c32",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (31)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-22232.5,-200.0114,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "d1d16f49-0c2f-43ba-8676-615275899c32",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "a281b1fe-a4ba-4beb-870f-352be4b1d274",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "6ae39c0a-39e0-41f2-9798-31a595433f5a",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "4ee2a094-7247-4ecc-88b0-047831eb06b0",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "54c9e8b3-0ec5-46a7-a162-3ee072262db3"
+      }
+    },
+    {
+      "__guid": "c0547833-0e48-48da-90fc-07be89e57521",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (30)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-22828.5,-200.0116,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "c0547833-0e48-48da-90fc-07be89e57521",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5c15618d-a4ec-4c31-96ef-5a0e85ae76fa",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "8d1d377b-209a-451b-8404-d7c66374cdcb",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "155ee744-ade6-4f78-943b-ec7230b9718b",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "e0416c97-d920-4ca1-ac32-5964d51de110"
+      }
+    },
+    {
+      "__guid": "6b830faa-6506-4fa9-b922-a13016447781",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (29)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-23427.5,-200.0118,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "6b830faa-6506-4fa9-b922-a13016447781",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "c30f86ef-8c06-444e-a957-cc045e39d7a4",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "c39072ec-a944-4316-8953-2cfb03547842",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "d8eb4a3a-c741-43ec-a2f4-2a95e87bc515",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "952bc985-bec4-4c3e-95fa-bb08ac7d9bc9"
+      }
+    },
+    {
+      "__guid": "2f72cc6d-c247-4649-8995-fe23cd86f016",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (28)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-24023.5,-200.012,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "2f72cc6d-c247-4649-8995-fe23cd86f016",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "88518341-a122-47c2-8d17-0239e150a582",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "da36cf9e-18b9-4c5f-918c-04eaaf970286",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "8e871e8e-61d8-4b9e-9464-67d61804a1c9",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "6d460206-c401-43b6-afb4-bca7a5385c84"
+      }
+    },
+    {
+      "__guid": "3c7de520-850c-45d4-b513-e99b5ea70362",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (27)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-24621.5,-200.0122,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "3c7de520-850c-45d4-b513-e99b5ea70362",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "a3d8ec2b-49b1-4dc8-808d-7ed01dd6ecd9",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "cd655d57-08b8-49b5-a210-7196f08f1d78",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "ff358926-ee50-4c64-a03a-bad70541d948",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "518565c0-836f-42a4-b6e2-6b9c3dc5303f"
+      }
+    },
+    {
+      "__guid": "2cfe786b-dcfe-48de-93d3-2933bf538e33",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (26)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25217.51,-200.0123,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071069,-0.7071066"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "2cfe786b-dcfe-48de-93d3-2933bf538e33",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "4f6470a3-6b4d-4f3c-96ec-c1742b8c79be",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d2620c41-4daf-455f-a39a-c478439194b9",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "726d5088-d2a3-4ff1-b440-bccb1b095892",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "5269c119-611c-429a-bc02-9a39eb7d4884"
+      }
+    },
+    {
+      "__guid": "4bced66c-a669-4817-adca-ffd8f14480af",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (24)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-21634.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "4bced66c-a669-4817-adca-ffd8f14480af",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "0a66408c-31b6-4000-b3d7-f0935bcd915d",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "005300c4-5097-4671-b278-d60bbc9dade5",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "bb71cac7-5228-42f6-a07e-1caf58f07aa4",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "3c4727f7-d1c3-41a3-9254-36dd657b1f4f"
+      }
+    },
+    {
+      "__guid": "354bb1c9-d892-41a2-8be2-cbeeea2d0c37",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (23)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-22232.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "354bb1c9-d892-41a2-8be2-cbeeea2d0c37",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "4c22e6fc-0c15-4bae-85f3-e8d60505e2b8",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "9e02f625-8e4a-4165-8179-24d0ae8fc6cc",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "5ed6af12-a4ea-498e-9059-8f6d214fa788",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "7ac0ad69-40d5-4c1e-9238-98c81ccf2f00"
+      }
+    },
+    {
+      "__guid": "d7882c8e-d89e-4fb8-a590-67bc2c24db55",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (22)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-22828.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "d7882c8e-d89e-4fb8-a590-67bc2c24db55",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "7ab10964-7865-43b8-8da8-f7bf96e83103",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "0a7e866a-466e-407e-a6cd-ab4821297683",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "815955ec-a7ba-49d7-b2ba-b075c6508a3c",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "508fc904-6fc5-4193-9b6b-3a25fb9fe472"
+      }
+    },
+    {
+      "__guid": "b5003255-0161-4b44-b93c-9d8a33d0bfb5",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (21)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-23427.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "b5003255-0161-4b44-b93c-9d8a33d0bfb5",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "2477782a-f546-4696-a3b3-8765b291fef8",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "f86a6728-c972-48bb-a6ef-81f4ba1aab3f",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "c39640d9-9e75-4f97-94ec-5bc46a4f35bf",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "dff306c9-ec43-443d-9204-117abfbb3f84"
+      }
+    },
+    {
+      "__guid": "dc358d0e-23f2-44fc-9c53-df47e23f9e68",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (20)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-24023.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "dc358d0e-23f2-44fc-9c53-df47e23f9e68",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "e5a0a216-b258-4d1c-8019-290addc06f6d",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "d58cdf95-7e2b-4158-8581-ee21b7f60c21",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "508b539b-5e29-47d4-b982-5094b1f74afe",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "278c91ea-6e74-418a-a6e3-6605d3a7c6dc"
+      }
+    },
+    {
+      "__guid": "24177dbd-910a-4be1-ab20-f01f5e4919b6",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (19)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-24621.5,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "24177dbd-910a-4be1-ab20-f01f5e4919b6",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "164764d2-a12e-4965-b9c1-7f9d4e38d0a5",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "cedc1fcc-a6b6-439b-8dd0-dd6d2708bdf2",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "73fb5fa4-07fa-4375-aa74-07f5b6636154",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "7931b71d-7d76-458f-9464-014a93495df5"
+      }
+    },
+    {
+      "__guid": "1b3ec364-c1a3-4475-84c1-29a65f2ceebf",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (18)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-25217.51,12950,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071067,0.7071068"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "1b3ec364-c1a3-4475-84c1-29a65f2ceebf",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "5b0db3a1-e342-4153-898d-645accafa144",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "6eb1c86b-e1e9-4f88-a249-69a899b0d795",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "0b4d6f3b-4909-42c0-933c-6b4a6d63f282",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "30072368-3cb0-49e7-a7ed-0006309299b8"
+      }
+    },
+    {
+      "__guid": "e75b3620-3f0f-446c-80aa-36fac9e9e08e",
+      "__version": 2,
+      "__Prefab": "prefabs/bowl-side.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Name",
+            "Value": "bowl-side (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Position",
+            "Value": "-20440,5175.992,129"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1,0.0000001947072"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5847df-6edf-4e01-b6b4-09446ac85c05"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "35b545fd-a835-44fe-a9cd-2cfc840724d7"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5847df-6edf-4e01-b6b4-09446ac85c05": "e75b3620-3f0f-446c-80aa-36fac9e9e08e",
+        "86d87426-d30d-49b4-a882-628e7d4f3668": "fe4145c3-34d3-4870-92b8-95e7a25cf5a0",
+        "ce22b6f3-4531-4c9f-96ba-2db070577f20": "c0c51881-dc23-4f60-9d44-18bf1782a038",
+        "35b545fd-a835-44fe-a9cd-2cfc840724d7": "c43af962-52f1-40a3-ab07-20be623bdb4d",
+        "713fdd06-7b8b-4bb5-b1b7-a5a2e8ba82f6": "99f9ca0c-b4f6-42be-8211-737a043eab08"
+      }
+    },
+    {
+      "__guid": "92fb4f94-aef5-4e05-b8c3-924001f9c4e5",
+      "__version": 2,
       "Flags": 0,
-      "Name": "rail-curve",
-      "Position": "-19772,-2163,173.0002",
+      "Name": "floor-wood",
+      "Position": "-19840,6976,129",
       "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
+      "Scale": "6,6,6",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -45003,54 +48918,29 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "49d318a0-2950-4f69-8bab-b841944d07c2",
+          "__type": "Sandbox.Prop",
+          "__guid": "1b239d80-deec-4c95-ae92-65ac2e96534a",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
+          "Health": 0,
+          "IsStatic": false,
           "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/rail-curve.vmdl",
+          "Model": "models/mini skate kit/floor-wood.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
           "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "e42d0683-37cf-474b-bc33-e292a8c80484",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "floor-wood",
-      "Position": "-20050,-848.9999,127.9998",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+        },
         {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "752b5a6f-2873-425c-8ce5-c1d2d8ed740b",
+          "__guid": "dfe4a4f3-58f0-43c9-b400-16855630cb5a",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -45074,18 +48964,77 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "489d0d8b-6c64-44e1-9934-02291f32ea47",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a1f51567-90ac-46c9-acec-0b1c0091eb90",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": []
     },
     {
-      "__guid": "63e4e6d7-7f14-4785-b4c7-99d501a3a442",
+      "__guid": "08771731-e0e9-4644-b944-6ebb19f4239e",
       "__version": 2,
       "Flags": 0,
-      "Name": "floor-concrete",
-      "Position": "-20154,299.9999,128",
+      "Name": "floor-wood (1)",
+      "Position": "-19840,6376,129",
       "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
+      "Scale": "6,6,6",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -45095,8 +49044,29 @@
       "OwnerTransfer": 1,
       "Components": [
         {
+          "__type": "Sandbox.Prop",
+          "__guid": "a99c446e-69fd-4773-813f-895338984610",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "cab66961-5bd3-4a23-9a67-54403e722e81",
+          "__guid": "928670c8-8457-4314-ac17-e9bbccbb43b3",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -45105,7 +49075,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/mini skate kit/floor-concrete.vmdl",
+          "Model": "models/mini skate kit/floor-wood.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -45120,18 +49090,77 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "0b7fa5cc-0da5-49bd-95c5-be11993f2ccd",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "fe7974bf-400f-4c57-b99e-ee2004dc3c6a",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": []
     },
     {
-      "__guid": "fd1a2efa-c300-49b8-a534-6f1390d9d8f9",
+      "__guid": "3e369e81-2552-431b-9d34-1d977997717a",
       "__version": 2,
       "Flags": 0,
-      "Name": "steps",
-      "Position": "-20078,-1394,128",
+      "Name": "floor-wood (3)",
+      "Position": "-20440,6976,129",
       "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
+      "Scale": "6,6,6",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -45141,8 +49170,29 @@
       "OwnerTransfer": 1,
       "Components": [
         {
+          "__type": "Sandbox.Prop",
+          "__guid": "65e12ed2-0a07-429c-a2e8-924084ee344d",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "5e55095c-e312-4d65-9878-ab89da7318b4",
+          "__guid": "d28ce117-bc6c-4d31-97c6-81368fc72e9e",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -45151,7 +49201,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/mini skate kit/steps.vmdl",
+          "Model": "models/mini skate kit/floor-wood.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -45166,18 +49216,77 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "ab76abf9-6bc4-4073-acf9-9ca2ef1863f3",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "ce84c52a-a2df-406c-a272-21b4a15a2291",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": []
     },
     {
-      "__guid": "704c407e-f6e6-437d-855c-12cd9fdbd455",
+      "__guid": "ed296ffd-ccee-45a1-83e9-cf1b719dd40f",
       "__version": 2,
       "Flags": 0,
-      "Name": "structure-platform",
-      "Position": "-20196,801.9999,128.0002",
+      "Name": "floor-wood (2)",
+      "Position": "-20440,6376,129",
       "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
+      "Scale": "6,6,6",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -45187,8 +49296,29 @@
       "OwnerTransfer": 1,
       "Components": [
         {
+          "__type": "Sandbox.Prop",
+          "__guid": "d164906e-a5dc-4cad-9147-8b89cc6325fa",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "02c4ad9d-5f41-4c7d-a1d2-f18c859653ed",
+          "__guid": "83117c0a-ea58-49ad-90f4-98c0cc15f7f7",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -45197,7 +49327,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/mini skate kit/structure-platform.vmdl",
+          "Model": "models/mini skate kit/floor-wood.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -45212,98 +49342,65 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "6cb747b6-d604-44e0-a663-0763adb6ae1c",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "structure-wood",
-      "Position": "-20329,1823,127.9998",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+        },
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "c7e870c3-63b4-43dd-9aa4-131cf4aa024d",
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "f40089b7-36d3-4a4f-9673-43ad4eb3f633",
           "__enabled": true,
           "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/structure-wood.vmdl",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/mini skate kit/floor-wood.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "8cc3cb69-3877-49cb-a2ff-c267acdd1ab9",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "bowl-side",
-      "Position": "-19719,-1659,127.9998",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "0b9cab56-cebe-4bba-b9b1-f69ccc46006c",
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "c5944f15-a532-4203-a062-b2f9d0a2aa0a",
           "__enabled": true,
           "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/mini skate kit/bowl-side.vmdl",
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": []
