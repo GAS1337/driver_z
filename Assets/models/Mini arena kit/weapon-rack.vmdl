@@ -16,7 +16,7 @@
 <<<<<<< HEAD
 						global_default_material = "materials/mini arena colormap.vmat"
 =======
-						global_default_material = "materials/Mini arena kit colormap.vmat"
+						global_default_material = "materials/mini arena colormap.vmat"
 >>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874
 					},
 				]
@@ -58,3 +58,4 @@
 
 =======
 >>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874
+
