@@ -3,7 +3,7 @@
     "__guid": "7e60c9af-5288-40f9-bedb-c6dcf35abd30",
     "__version": 2,
     "Flags": 0,
-    "Name": "NewCar",
+    "Name": "newcar",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -1025,7 +1025,7 @@
           {
             "__type": "Sandbox.BoxCollider",
             "__guid": "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "Center": "-4.723831,-0.3401871,104.4008",
             "ColliderFlags": 0,
@@ -1057,7 +1057,7 @@
             "EnableImpactDamage": true,
             "EnhancedCcd": false,
             "Gravity": true,
-            "GravityScale": 1,
+            "GravityScale": 1.1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -1068,7 +1068,7 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,-10",
+            "MassCenterOverride": "0,0,35",
             "MassOverride": 100,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
@@ -1081,6 +1081,32 @@
             "OverrideMassCenter": true,
             "RigidbodyFlags": 0,
             "StartAsleep": false
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "77e24753-b230-4a46-a335-aea5ec610fe0",
+            "__enabled": true,
+            "Flags": 0,
+            "Center": "33.87172,-0.614687,154.4334",
+            "ColliderFlags": 0,
+            "Elasticity": null,
+            "Friction": null,
+            "IsTrigger": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnObjectTriggerEnter": null,
+            "OnObjectTriggerExit": null,
+            "OnTriggerEnter": null,
+            "OnTriggerExit": null,
+            "RollingResistance": null,
+            "Scale": "50.323,40.47958,66.2002",
+            "Static": false,
+            "Surface": "surfaces/carbody.surface",
+            "SurfaceVelocity": "0,0,0"
           }
         ],
         "Children": [
