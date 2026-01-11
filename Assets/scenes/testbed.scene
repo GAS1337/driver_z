@@ -123,14 +123,6 @@
             },
             "Property": "Position",
             "Value": "790.427,-3666.064,139.6857"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "e3fef6f5-e97b-4818-aabb-f321911e9a6e"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.0000001351025,0.9999999"
           }
         ],
         "MovedObjects": []

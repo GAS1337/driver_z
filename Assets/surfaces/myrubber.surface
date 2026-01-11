@@ -2,7 +2,7 @@
   "BaseSurface": "surfaces/default.surface",
   "AudioSurface": "Generic",
   "Description": "",
-  "Friction": 5,
+  "Friction": 10,
   "Elasticity": 0.6067708,
   "Density": 715,
   "RollingResistance": 0.0052083335,
