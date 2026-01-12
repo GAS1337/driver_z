@@ -16,10 +16,44 @@
     "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "WheelController",
-        "__guid": "e9987f93-9753-43d7-afe7-a4c927fcc126",
+        "__type": "OrbitalCameraController",
+        "__guid": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20",
         "__enabled": true,
         "Flags": 0,
+        "AutoZoomStrength": 25,
+        "DistanceToPlayer": 800,
+        "MainCamera": {
+          "_type": "component",
+          "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
+          "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
+          "component_type": "CameraComponent"
+        },
+        "MaxDistanceToPlayer": 10000,
+        "MinDistanceToPlayer": 400,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Player": {
+          "_type": "gameobject",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+        },
+        "TargetDistanceToPlayer": 800,
+        "ZoomStrength": 200
+      },
+      {
+        "__type": "WheelController",
+        "__guid": "c86ccdc8-e5b2-45ad-b244-1303668782a4",
+        "__enabled": true,
+        "Flags": 0,
+        "CarBody": {
+          "_type": "component",
+          "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
+          "component_type": "Rigidbody"
+        },
         "FourWheelDrive": true,
         "FrontLeft": {
           "_type": "component",
@@ -53,36 +87,8 @@
           "component_type": "WheelJoint"
         },
         "Speed": 3000,
-        "SteeringAngle": 30,
+        "SteeringAngle": 20,
         "Torque": 15000
-      },
-      {
-        "__type": "OrbitalCameraController",
-        "__guid": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20",
-        "__enabled": true,
-        "Flags": 0,
-        "AutoZoomStrength": 25,
-        "DistanceToPlayer": 800,
-        "MainCamera": {
-          "_type": "component",
-          "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
-          "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
-          "component_type": "CameraComponent"
-        },
-        "MaxDistanceToPlayer": 10000,
-        "MinDistanceToPlayer": 600,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "Player": {
-          "_type": "gameobject",
-          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-        },
-        "TargetDistanceToPlayer": 800,
-        "ZoomStrength": 200
       },
       {
         "__type": "RotationControl",
@@ -109,8 +115,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "Camera",
-        "Position": "-127.9996,-780.7051,416.4435",
-        "Rotation": "-0.1830127,0.1830127,0.6830126,0.6830126",
+        "Position": "-6949.456,2689.783,208.3307",
+        "Rotation": "-0.06193081,-0.1075477,0.4951601,-0.8598922",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -210,8 +216,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFL",
-        "Position": "-77.89406,-68.78746,31.16699",
-        "Rotation": "0,0,0,1",
+        "Position": "-60,40,27",
+        "Rotation": "0.0174877,0.8894746,-0.007055074,0.4565954",
         "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
@@ -280,7 +286,7 @@
             "Flags": 0,
             "AngularDamping": 0,
             "EnableImpactDamage": true,
-            "EnhancedCcd": false,
+            "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
@@ -340,7 +346,7 @@
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
-            "End": "0,5,0",
+            "End": "0,13,0",
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -353,11 +359,11 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 16,
+            "Radius": 19,
             "RollingResistance": null,
-            "Start": "0,-5,0",
+            "Start": "0,1,0",
             "Static": false,
-            "Surface": "surfaces/frontrubber.surface",
+            "Surface": "surfaces/myrubber.surface",
             "SurfaceVelocity": "0,0,0"
           }
         ],
@@ -383,7 +389,7 @@
                 "__guid": "85154a6b-a2e3-4d5b-b81f-5875e9171672",
                 "__enabled": true,
                 "Flags": 0,
-                "Attachment": "Auto",
+                "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
                   "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
@@ -398,15 +404,15 @@
                 "EnableSuspensionLimit": true,
                 "LocalFrame1": {
                   "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "LocalFrame2": {
-                  "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Position": "-62,-74.99999,38.1857",
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
-                "MaxSpinTorque": 5000,
+                "MaxSpinTorque": 15000,
                 "MaxSteeringTorque": 2000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
@@ -421,7 +427,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-30,30",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 5,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -435,8 +441,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFR",
-        "Position": "-62.58397,68.69812,30",
-        "Rotation": "0,0,1,-0.00000004371139",
+        "Position": "-60,-40,27",
+        "Rotation": "0.1527645,-0.0003736168,0.9881698,0.01354027",
         "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
@@ -505,7 +511,7 @@
             "Flags": 0,
             "AngularDamping": 0,
             "EnableImpactDamage": true,
-            "EnhancedCcd": false,
+            "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
@@ -565,7 +571,7 @@
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
-            "End": "0,5,0",
+            "End": "0,13,0",
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -578,11 +584,11 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 16,
+            "Radius": 19,
             "RollingResistance": null,
-            "Start": "0,-5,0",
+            "Start": "0,1,0",
             "Static": false,
-            "Surface": "surfaces/frontrubber.surface",
+            "Surface": "surfaces/myrubber.surface",
             "SurfaceVelocity": "0,0,0"
           }
         ],
@@ -608,7 +614,7 @@
                 "__guid": "20c90ccc-1561-4869-8e82-0c44e6f0b4e8",
                 "__enabled": true,
                 "Flags": 0,
-                "Attachment": "Auto",
+                "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
                   "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
@@ -623,15 +629,15 @@
                 "EnableSuspensionLimit": true,
                 "LocalFrame1": {
                   "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Scale": "1,1,1",
+                  "Rotation": "0.4999999,0.4999999,0.4999999,-0.4999999"
                 },
                 "LocalFrame2": {
-                  "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Position": "-61.99998,75.00001,38.1857",
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.5,0.4999998,-0.5,-0.4999998"
                 },
-                "MaxSpinTorque": 5000,
+                "MaxSpinTorque": 15000,
                 "MaxSteeringTorque": 2000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
@@ -646,7 +652,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-30,30",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 5,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -660,8 +666,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRL",
-        "Position": "62.35057,-66.19398,30",
-        "Rotation": "0,0,0,1",
+        "Position": "62,40,27",
+        "Rotation": "0.01491809,0.9179553,-0.00634031,0.3963524",
         "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
@@ -730,7 +736,7 @@
             "Flags": 0,
             "AngularDamping": 0,
             "EnableImpactDamage": true,
-            "EnhancedCcd": false,
+            "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
@@ -790,7 +796,7 @@
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
-            "End": "0,5,0",
+            "End": "0,13,0",
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -803,9 +809,9 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 16,
+            "Radius": 19,
             "RollingResistance": null,
-            "Start": "0,-5,0",
+            "Start": "0,1,0",
             "Static": false,
             "Surface": "surfaces/myrubber.surface",
             "SurfaceVelocity": "0,0,0"
@@ -833,7 +839,7 @@
                 "__guid": "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10",
                 "__enabled": true,
                 "Flags": 0,
-                "Attachment": "Auto",
+                "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
                   "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
@@ -848,15 +854,15 @@
                 "EnableSuspensionLimit": true,
                 "LocalFrame1": {
                   "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "LocalFrame2": {
-                  "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Position": "61.99998,-75.00001,38.1857",
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
-                "MaxSpinTorque": 5000,
+                "MaxSpinTorque": 15000,
                 "MaxSteeringTorque": 5000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
@@ -871,7 +877,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 5,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -885,8 +891,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRR",
-        "Position": "62.792,68.96715,30",
-        "Rotation": "0,0,1,-0.00000004371139",
+        "Position": "62,-40,27",
+        "Rotation": "0.6480455,-0.01039869,-0.7614343,-0.01211172",
         "Scale": "2,2,2",
         "Tags": "",
         "Enabled": true,
@@ -955,7 +961,7 @@
             "Flags": 0,
             "AngularDamping": 0,
             "EnableImpactDamage": true,
-            "EnhancedCcd": false,
+            "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
@@ -1015,7 +1021,7 @@
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
-            "End": "0,5,0",
+            "End": "0,13,0",
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -1028,9 +1034,9 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 16,
+            "Radius": 19,
             "RollingResistance": null,
-            "Start": "0,-5,0",
+            "Start": "0,1,0",
             "Static": false,
             "Surface": "surfaces/myrubber.surface",
             "SurfaceVelocity": "0,0,0"
@@ -1058,7 +1064,7 @@
                 "__guid": "88ecb4da-91f6-40e6-b542-8e5149925945",
                 "__enabled": true,
                 "Flags": 0,
-                "Attachment": "Auto",
+                "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
                   "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
@@ -1073,15 +1079,15 @@
                 "EnableSuspensionLimit": true,
                 "LocalFrame1": {
                   "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Scale": "1,1,1",
+                  "Rotation": "0.4999999,0.5,0.4999999,-0.5"
                 },
                 "LocalFrame2": {
-                  "Position": "0,0,0",
-                  "Scale": "0,0,0",
-                  "Rotation": "0,0,0,0"
+                  "Position": "62,74.99999,38.1857",
+                  "Scale": "1,1,1",
+                  "Rotation": "-0.5,0.4999999,-0.5,-0.4999999"
                 },
-                "MaxSpinTorque": 5000,
+                "MaxSpinTorque": 15000,
                 "MaxSteeringTorque": 5000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
@@ -1096,7 +1102,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 5,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -1111,7 +1117,7 @@
         "Flags": 0,
         "Name": "CarBody",
         "Position": "0,0,0",
-        "Rotation": "0,0,0,1",
+        "Rotation": "0.000007717837,0.00001458128,-0.01610044,0.9998704",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -1153,7 +1159,7 @@
             "__guid": "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd",
             "__enabled": true,
             "Flags": 0,
-            "Center": "-4.723831,-0.3401871,104.4008",
+            "Center": "-4.723831,-0.3401871,107.4806",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -1169,7 +1175,7 @@
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
             "RollingResistance": null,
-            "Scale": "142.0849,90.53017,39.71709",
+            "Scale": "142.0849,90.53017,33.55746",
             "Static": false,
             "Surface": "surfaces/carbody.surface",
             "SurfaceVelocity": "0,0,0"
@@ -1179,11 +1185,11 @@
             "__guid": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0,
+            "AngularDamping": 15,
             "EnableImpactDamage": true,
             "EnhancedCcd": false,
             "Gravity": true,
-            "GravityScale": 1.1,
+            "GravityScale": 1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -1241,9 +1247,9 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Model",
-            "Position": "0,0,-2.805161",
+            "Position": "0.0000893558,-0.00004546943,-3.038558",
             "Rotation": "0,0,0,1",
-            "Scale": "2.5,2.5,2",
+            "Scale": "2.5,2.999997,2",
             "Tags": "",
             "Enabled": true,
             "NetworkMode": 2,

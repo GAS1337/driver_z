@@ -123,42 +123,12 @@
             },
             "Property": "Position",
             "Value": "790.427,-3666.064,139.6857"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "e9987f93-9753-43d7-afe7-a4c927fcc126"
-            },
-            "Property": "CarBody",
-            "Value": {
-              "_type": "component",
-              "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
-              "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
-              "component_type": "Rigidbody"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117"
-            },
-            "Property": "Surface",
-            "Value": "surfaces/myrubber.surface"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc"
-            },
-            "Property": "Surface",
-            "Value": "surfaces/myrubber.surface"
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
         "7e60c9af-5288-40f9-bedb-c6dcf35abd30": "d2787cbe-7ac9-4627-b7c8-9eb15c920c6f",
-        "e9987f93-9753-43d7-afe7-a4c927fcc126": "146371e0-2098-4541-a514-bae4b94b93c1",
         "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20": "62033298-1ce7-493c-b672-912193e4bf00",
         "b96d3897-f570-433d-ba9b-47fca7b01d3e": "e52de3e1-70af-42b9-b639-d42ba744eda8",
         "781863f3-a639-41e1-8c9e-d406498701f2": "ae557e19-a4c5-4c0d-9f01-1e703898842c",
@@ -209,7 +179,8 @@
         "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117": "b718ac72-609c-4123-a134-68f55989563a",
         "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc": "a54da8a2-3c5e-4046-9761-6b1935479d3c",
         "41165a34-001c-4e78-a9a7-37b76425435f": "0b50e880-b881-41c5-8a72-4df2d96bed13",
-        "77e24753-b230-4a46-a335-aea5ec610fe0": "c9f6cf80-000a-419a-b3b8-bcf7a9ae2caf"
+        "77e24753-b230-4a46-a335-aea5ec610fe0": "c9f6cf80-000a-419a-b3b8-bcf7a9ae2caf",
+        "c86ccdc8-e5b2-45ad-b244-1303668782a4": "3ed05399-33fe-4ea8-9ee2-a3c1e1f4ab8f"
       }
     },
     {
@@ -613,6 +584,202 @@
         "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3": "05c078f5-380e-4cdc-937c-2503f692b73d",
         "78ae7208-f526-4c5b-abfd-48ba76930476": "e264337b-15a6-4453-8934-f31591d8f457",
         "69f026be-08f0-49b6-aaf7-1ec5c7239da5": "31a8782d-534d-4cfe-ad7d-107e513eb1c4"
+      }
+    },
+    {
+      "__guid": "de98bb10-1765-4d15-9b03-4339b02cd09b",
+      "__version": 2,
+      "__Prefab": "prefabs/detail-tank.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Name",
+            "Value": "detail-tank (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Position",
+            "Value": "1184,-2368,-32"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Rotation",
+            "Value": "0.09229594,0.09229596,0.7010573,0.7010574"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "69f026be-08f0-49b6-aaf7-1ec5c7239da5"
+            },
+            "Property": "Static",
+            "Value": true
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3": "de98bb10-1765-4d15-9b03-4339b02cd09b",
+        "78ae7208-f526-4c5b-abfd-48ba76930476": "8f8eab55-204e-44ff-aa73-71a21fbfeb81",
+        "69f026be-08f0-49b6-aaf7-1ec5c7239da5": "e35af0c8-2faa-43ea-b272-7c9d78f45da6"
+      }
+    },
+    {
+      "__guid": "f630a0d2-cf76-408e-8d17-fed6786d9939",
+      "__version": 2,
+      "__Prefab": "prefabs/detail-tank.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Name",
+            "Value": "detail-tank (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Position",
+            "Value": "832,-2368,96"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Rotation",
+            "Value": "0.1830127,0.1830127,0.6830127,0.6830128"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "69f026be-08f0-49b6-aaf7-1ec5c7239da5"
+            },
+            "Property": "Static",
+            "Value": true
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3": "f630a0d2-cf76-408e-8d17-fed6786d9939",
+        "78ae7208-f526-4c5b-abfd-48ba76930476": "57c7a7e1-77c0-40b0-beb9-e3a06afeca50",
+        "69f026be-08f0-49b6-aaf7-1ec5c7239da5": "739042c5-1f4b-4220-8297-86aa13931ed4"
+      }
+    },
+    {
+      "__guid": "810b1717-e602-449a-a8cb-feafc49da271",
+      "__version": 2,
+      "__Prefab": "prefabs/detail-tank.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Name",
+            "Value": "detail-tank (3)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Position",
+            "Value": "544,-2368,288"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Rotation",
+            "Value": "0.270598,0.2705981,0.6532815,0.6532816"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "69f026be-08f0-49b6-aaf7-1ec5c7239da5"
+            },
+            "Property": "Static",
+            "Value": true
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3": "810b1717-e602-449a-a8cb-feafc49da271",
+        "78ae7208-f526-4c5b-abfd-48ba76930476": "6be34c2f-aafd-4cb7-9e0d-1c2c471031f5",
+        "69f026be-08f0-49b6-aaf7-1ec5c7239da5": "57a82e84-56aa-4605-944e-5d499b02b4ea"
+      }
+    },
+    {
+      "__guid": "53db0d6d-31b4-4d7c-b4de-eb939e218ccc",
+      "__version": 2,
+      "__Prefab": "prefabs/detail-tank.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Name",
+            "Value": "detail-tank (4)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Position",
+            "Value": "320,-2368,544"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
+            },
+            "Property": "Rotation",
+            "Value": "0.3535534,0.3535534,0.6123725,0.6123725"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "69f026be-08f0-49b6-aaf7-1ec5c7239da5"
+            },
+            "Property": "Static",
+            "Value": true
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3": "53db0d6d-31b4-4d7c-b4de-eb939e218ccc",
+        "78ae7208-f526-4c5b-abfd-48ba76930476": "32f14358-2852-4f01-bb49-aad0545e0a50",
+        "69f026be-08f0-49b6-aaf7-1ec5c7239da5": "1c72c9ae-1c5e-4a56-9095-4b92c75063f9"
       }
     },
     {

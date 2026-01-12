@@ -6,9 +6,15 @@ public sealed class RotationControl : Component
 
 	protected override void OnFixedUpdate()
 	{
-		Angles angles = new Angles( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw(), 0 );
-		Rotation targetRotation = Rotation.From(angles);
+		SceneTraceResult groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 60 )
+			.Radius( 1 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+		// DebugOverlay.Trace( groundCheck );
 
-		CarBody.SmoothRotate( targetRotation, 0.5f, 1/100 );
+		if ( groundCheck.Hit )
+		{
+			 CarBody.WorldRotation = CarBody.WorldRotation.Angles().WithRoll( CarBody.WorldRotation.Roll() / 1.5f );
+		}
 	}
 }
