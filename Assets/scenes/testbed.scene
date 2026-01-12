@@ -123,6 +123,35 @@
             },
             "Property": "Position",
             "Value": "790.427,-3666.064,139.6857"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "e9987f93-9753-43d7-afe7-a4c927fcc126"
+            },
+            "Property": "CarBody",
+            "Value": {
+              "_type": "component",
+              "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
+              "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
+              "component_type": "Rigidbody"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117"
+            },
+            "Property": "Surface",
+            "Value": "surfaces/myrubber.surface"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc"
+            },
+            "Property": "Surface",
+            "Value": "surfaces/myrubber.surface"
           }
         ],
         "MovedObjects": []
@@ -174,7 +203,13 @@
         "dab8fdab-6880-4623-b8d7-4112df3d86fc": "5cf8e74f-986e-48dd-bb49-5bb3e9a5ae38",
         "20bf578f-cb8d-4008-aa27-1b1c6815ab34": "ca834b9d-1eba-4bd1-a98f-1f1cdba1ac89",
         "ae4d4ab2-3acd-4413-b8ae-547d63c8b7f3": "058aa182-3a25-4c31-b810-0450e4d308ee",
-        "3a37987b-f1ff-4b0c-9e79-b7d6acc1dea2": "4428224d-8dbb-4b1d-b63e-eca1a64da50f"
+        "3a37987b-f1ff-4b0c-9e79-b7d6acc1dea2": "4428224d-8dbb-4b1d-b63e-eca1a64da50f",
+        "e1cb6b0a-b5ed-4939-a2a2-0ddf195bb67a": "479a22c6-4f36-47ab-a72f-2a2b26740c59",
+        "68d3e1d8-4f5a-453e-8b52-7c38cc29a320": "4fe0538f-5e06-410c-b03a-b8e53261d090",
+        "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117": "b718ac72-609c-4123-a134-68f55989563a",
+        "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc": "a54da8a2-3c5e-4046-9761-6b1935479d3c",
+        "41165a34-001c-4e78-a9a7-37b76425435f": "0b50e880-b881-41c5-8a72-4df2d96bed13",
+        "77e24753-b230-4a46-a335-aea5ec610fe0": "c9f6cf80-000a-419a-b3b8-bcf7a9ae2caf"
       }
     },
     {

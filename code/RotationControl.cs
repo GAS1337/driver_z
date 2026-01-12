@@ -6,10 +6,9 @@ public sealed class RotationControl : Component
 
 	protected override void OnFixedUpdate()
 	{
-		Rotation oldRotation = CarBody.WorldRotation;
-		Angles angles = new Angles( 0 , oldRotation.Yaw(), 0 );
+		Angles angles = new Angles( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw(), 0 );
 		Rotation targetRotation = Rotation.From(angles);
 
-		CarBody.SmoothRotate( targetRotation, 0.5f, Time.Delta );
+		CarBody.SmoothRotate( targetRotation, 0.5f, 1/100 );
 	}
 }
