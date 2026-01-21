@@ -284,11 +284,11 @@
             "__guid": "b9f69343-c306-48c0-9511-9829a6afe904",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0,
-            "EnableImpactDamage": true,
+            "AngularDamping": 1,
+            "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
-            "GravityScale": 1.5,
+            "GravityScale": 1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -300,7 +300,7 @@
               "Roll": false
             },
             "MassCenterOverride": "0,0,0",
-            "MassOverride": 10,
+            "MassOverride": 5,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -359,7 +359,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 19,
+            "Radius": 18,
             "RollingResistance": null,
             "Start": "0,1,0",
             "Static": false,
@@ -389,6 +389,7 @@
                 "__guid": "85154a6b-a2e3-4d5b-b81f-5875e9171672",
                 "__enabled": true,
                 "Flags": 0,
+                "AnchorBody": null,
                 "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
@@ -427,7 +428,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-30,30",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 6,
+                "SuspensionHertz": 10,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -509,11 +510,11 @@
             "__guid": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0,
-            "EnableImpactDamage": true,
+            "AngularDamping": 1,
+            "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
-            "GravityScale": 1.5,
+            "GravityScale": 1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -525,7 +526,7 @@
               "Roll": false
             },
             "MassCenterOverride": "0,0,0",
-            "MassOverride": 10,
+            "MassOverride": 5,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -584,7 +585,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 19,
+            "Radius": 18,
             "RollingResistance": null,
             "Start": "0,1,0",
             "Static": false,
@@ -614,6 +615,7 @@
                 "__guid": "20c90ccc-1561-4869-8e82-0c44e6f0b4e8",
                 "__enabled": true,
                 "Flags": 0,
+                "AnchorBody": null,
                 "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
@@ -652,7 +654,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-30,30",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 6,
+                "SuspensionHertz": 10,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -734,11 +736,11 @@
             "__guid": "6ae014e0-d580-4320-9af1-4af454f6b9f0",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0,
-            "EnableImpactDamage": true,
+            "AngularDamping": 1,
+            "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
-            "GravityScale": 1.5,
+            "GravityScale": 1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -750,7 +752,7 @@
               "Roll": false
             },
             "MassCenterOverride": "0,0,0",
-            "MassOverride": 10,
+            "MassOverride": 5,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -809,7 +811,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 19,
+            "Radius": 18,
             "RollingResistance": null,
             "Start": "0,1,0",
             "Static": false,
@@ -839,6 +841,7 @@
                 "__guid": "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10",
                 "__enabled": true,
                 "Flags": 0,
+                "AnchorBody": null,
                 "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
@@ -877,7 +880,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 6,
+                "SuspensionHertz": 10,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -959,11 +962,11 @@
             "__guid": "00860c2c-a025-4f37-897e-01775ac42a5e",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0,
-            "EnableImpactDamage": true,
+            "AngularDamping": 1,
+            "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
-            "GravityScale": 1.5,
+            "GravityScale": 1,
             "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
@@ -975,7 +978,7 @@
               "Roll": false
             },
             "MassCenterOverride": "0,0,0",
-            "MassOverride": 10,
+            "MassOverride": 5,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -1034,7 +1037,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
-            "Radius": 19,
+            "Radius": 18,
             "RollingResistance": null,
             "Start": "0,1,0",
             "Static": false,
@@ -1064,6 +1067,7 @@
                 "__guid": "88ecb4da-91f6-40e6-b542-8e5149925945",
                 "__enabled": true,
                 "Flags": 0,
+                "AnchorBody": null,
                 "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
@@ -1102,7 +1106,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "0,0",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 6,
+                "SuspensionHertz": 10,
                 "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
@@ -1117,7 +1121,7 @@
         "Flags": 0,
         "Name": "CarBody",
         "Position": "0,0,0",
-        "Rotation": "0.000007717837,0.00001458128,-0.01610044,0.9998704",
+        "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -1159,7 +1163,7 @@
             "__guid": "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd",
             "__enabled": true,
             "Flags": 0,
-            "Center": "-4.723831,-0.3401871,107.4806",
+            "Center": "-4.723831,-0.3401871,104.4304",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -1175,7 +1179,7 @@
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
             "RollingResistance": null,
-            "Scale": "142.0849,90.53017,33.55746",
+            "Scale": "142.0849,90.53017,39.65791",
             "Static": false,
             "Surface": "surfaces/carbody.surface",
             "SurfaceVelocity": "0,0,0"
@@ -1185,7 +1189,7 @@
             "__guid": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 15,
+            "AngularDamping": 10,
             "EnableImpactDamage": true,
             "EnhancedCcd": false,
             "Gravity": true,
@@ -1477,7 +1481,8 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": ""
-      }
+      },
+      "GameObjectSystems": []
     },
     "__variables": []
   },
