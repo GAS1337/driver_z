@@ -101,14 +101,16 @@ public sealed class WheelController : Component
 		if ( Input.Down( "Left" ) ) 
 		{ 
 			FrontLeft.TargetSteeringAngle = SteeringAngle; FrontRight.TargetSteeringAngle = SteeringAngle;
-			CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.25f;
+			CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
+			CarBody.Velocity += CarBody.WorldRotation.Backward * 1f;
 			Rotation rot = Rotation.From(CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
 			// CarBody.SmoothRotate(rot, 1f, Time.Delta); 
 		}
 		else if ( Input.Down( "Right" ) ) 
 		{ 
 			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle;
-			CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.25f;
+			CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
+			CarBody.Velocity += (CarBody.WorldRotation.Backward) * 1f;
 			Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
 			// CarBody.SmoothRotate( rot, 1f, Time.Delta );
 		}

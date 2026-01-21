@@ -73,6 +73,8 @@
           "__guid": "d388fd52-d2b0-4fe3-aaa6-c9ac2a643c56",
           "__enabled": true,
           "Flags": 0,
+          "__version": 1,
+          "BakedTexture": null,
           "Bounds": {
             "Mins": "-8140.816,-4406.481,-512",
             "Maxs": "7100.177,6826.967,512"
@@ -81,6 +83,7 @@
           "Feathering": 0.02,
           "FrameInterval": 5,
           "MaxDistance": 512,
+          "Mode": "CustomTexture",
           "MultiBounce": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -88,8 +91,8 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "Priority": 0,
           "Projection": "Sphere",
-          "RenderDynamically": false,
           "Resolution": "Small",
           "Texture": "textures/cubemaps/default2.vtex",
           "TintColor": "0.01961,0.01176,0.01176,1",
@@ -122,7 +125,223 @@
               "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
             },
             "Property": "Position",
-            "Value": "790.427,-3666.064,139.6857"
+            "Value": "-2464,-5664,128"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b9f69343-c306-48c0-9511-9829a6afe904"
+            },
+            "Property": "AngularDamping",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b9f69343-c306-48c0-9511-9829a6afe904"
+            },
+            "Property": "EnableImpactDamage",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b9f69343-c306-48c0-9511-9829a6afe904"
+            },
+            "Property": "GravityScale",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b9f69343-c306-48c0-9511-9829a6afe904"
+            },
+            "Property": "MassOverride",
+            "Value": 5
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117"
+            },
+            "Property": "Radius",
+            "Value": 18
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "85154a6b-a2e3-4d5b-b81f-5875e9171672"
+            },
+            "Property": "SuspensionHertz",
+            "Value": 10
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8"
+            },
+            "Property": "AngularDamping",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8"
+            },
+            "Property": "EnableImpactDamage",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8"
+            },
+            "Property": "GravityScale",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8"
+            },
+            "Property": "MassOverride",
+            "Value": 5
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc"
+            },
+            "Property": "Radius",
+            "Value": 18
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "20c90ccc-1561-4869-8e82-0c44e6f0b4e8"
+            },
+            "Property": "SuspensionHertz",
+            "Value": 10
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "6ae014e0-d580-4320-9af1-4af454f6b9f0"
+            },
+            "Property": "AngularDamping",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "6ae014e0-d580-4320-9af1-4af454f6b9f0"
+            },
+            "Property": "EnableImpactDamage",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "6ae014e0-d580-4320-9af1-4af454f6b9f0"
+            },
+            "Property": "GravityScale",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "6ae014e0-d580-4320-9af1-4af454f6b9f0"
+            },
+            "Property": "MassOverride",
+            "Value": 5
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "41165a34-001c-4e78-a9a7-37b76425435f"
+            },
+            "Property": "Radius",
+            "Value": 18
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10"
+            },
+            "Property": "SuspensionHertz",
+            "Value": 10
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00860c2c-a025-4f37-897e-01775ac42a5e"
+            },
+            "Property": "AngularDamping",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00860c2c-a025-4f37-897e-01775ac42a5e"
+            },
+            "Property": "EnableImpactDamage",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00860c2c-a025-4f37-897e-01775ac42a5e"
+            },
+            "Property": "GravityScale",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00860c2c-a025-4f37-897e-01775ac42a5e"
+            },
+            "Property": "MassOverride",
+            "Value": 5
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "e1cb6b0a-b5ed-4939-a2a2-0ddf195bb67a"
+            },
+            "Property": "Radius",
+            "Value": 18
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "88ecb4da-91f6-40e6-b542-8e5149925945"
+            },
+            "Property": "SuspensionHertz",
+            "Value": 10
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "e1512333-4284-45fd-bd4c-0654de2d4cd7"
+            },
+            "Property": "AngularDamping",
+            "Value": 10
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "e1512333-4284-45fd-bd4c-0654de2d4cd7"
+            },
+            "Property": "MassOverride",
+            "Value": 50
           }
         ],
         "MovedObjects": []
@@ -920,7 +1139,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Block",
-      "Position": "2176,3520,128",
+      "Position": "-768,2688,128",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -945,22 +1164,22 @@
           "IsTrigger": false,
           "Mesh": {
             "Topology": "H4sIAAAAAAAACk2MCQoAIQzE4qqr//9wJdiCA6WQOQawgcbVBwzgT+bJXi0gIkLeM68q69fXm7n1bsv1a6skN2tH394B6DpJeKAAAAA=",
-            "Position": "2176,3520,128",
+            "Position": "-768,2688,128",
             "Rotation": "0,0,0,1",
             "Positions": [
-              "-10368,-11712,0",
+              "-14816,-11712,0",
               "6016,-11712,0",
               "6016,4672,0",
-              "-10368,4672,0"
+              "-14816,4672,0"
             ],
             "TextureCoord": [
               "64,64",
               "0,0",
               "64,-64",
               "0,0",
-              "-64,-64",
+              "-98.75,-64",
               "0,0",
-              "-64,64",
+              "-98.75,64",
               "0,0"
             ],
             "TextureUAxis": [
@@ -973,7 +1192,7 @@
               "0.25,0.25"
             ],
             "TextureOffset": [
-              "0,0"
+              "0,256"
             ],
             "MaterialIndex": [
               0
@@ -1002,7 +1221,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
-          "RenderType": "On",
+          "RenderType": "Off",
           "RollingResistance": null,
           "SmoothingAngle": 40,
           "Static": true,
@@ -1011,6 +1230,260 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "f5782958-ee60-45e6-b885-19fb56ee6527",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-high.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Name",
+            "Value": "road-slant-high (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Position",
+            "Value": "-3733.345,2731.662,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.9914449,-0.130526"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Scale",
+            "Value": "10.25,20.5,10.25"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "34b80913-912d-4e77-8bdc-5917851b4046": "f5782958-ee60-45e6-b885-19fb56ee6527",
+        "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "f8a6f429-b4fa-4729-bafa-71d256ba6b7f",
+        "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "e562fd5a-c545-49ae-8510-9e8c996a7943"
+      }
+    },
+    {
+      "__guid": "5c4f58dd-0fb1-4147-a1a0-6f7c2693c741",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-high.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Position",
+            "Value": "-4528.437,-235.662,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.1305262,0.9914448"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "34b80913-912d-4e77-8bdc-5917851b4046"
+            },
+            "Property": "Scale",
+            "Value": "10.25,20.5,10.25"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430"
+            },
+            "Property": "Static",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "34b80913-912d-4e77-8bdc-5917851b4046": "5c4f58dd-0fb1-4147-a1a0-6f7c2693c741",
+        "c4667b3c-09d6-49dc-ae2c-4040df0b2ac9": "3d36a7f3-c6f4-4f26-9809-028b46df764b",
+        "0c58cc1b-8a31-46c0-bd7c-bfb7ae0fd430": "28929c0b-6cb3-4ade-9f0c-7cb1e5e31f3c"
+      }
+    },
+    {
+      "__guid": "f49734d5-c860-4dda-9c7e-719663e505c1",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-flat-curve (flying).prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Name",
+            "Value": "road-slant-flat-curve (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Position",
+            "Value": "-2647.23,850.4548,1152"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7933533,0.6087615"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "15520ff8-41db-4c0e-b57b-f3b8252f31b7": "f49734d5-c860-4dda-9c7e-719663e505c1",
+        "6c958d9b-2062-4921-99b3-cd5c11ded673": "796fa63c-4bf3-414a-92af-6d5164baab0a",
+        "ec46b1f2-b611-4442-bc89-12b4131be05b": "425bd9bd-7961-4e6b-a834-e1372e375218"
+      }
+    },
+    {
+      "__guid": "9cf647aa-c43a-466e-9dff-14f40ea96f81",
+      "__version": 2,
+      "__Prefab": "prefabs/road-bridge.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "167f1134-0a3b-4fc8-956b-69bc96dc7ec2"
+            },
+            "Property": "Position",
+            "Value": "-4130.891,1248,640"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "167f1134-0a3b-4fc8-956b-69bc96dc7ec2"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.1305262,0.9914448"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "167f1134-0a3b-4fc8-956b-69bc96dc7ec2": "9cf647aa-c43a-466e-9dff-14f40ea96f81",
+        "1a24a99e-390d-49ba-ba43-cbfda8d01374": "b807c320-da7d-41b4-ada6-ac07014e1565",
+        "5475b7f7-6a03-4f1f-bfcb-ae9439c7d22c": "d45ba674-b182-4d06-8515-0742f5dbd522"
+      }
+    },
+    {
+      "__guid": "ed594e51-d97d-4038-b030-ad3daea5a438",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-flat-curve (flying).prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Name",
+            "Value": "road-slant-flat-curve"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Position",
+            "Value": "-5614.555,1645.547,640"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "15520ff8-41db-4c0e-b57b-f3b8252f31b7"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7933533,0.6087615"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "15520ff8-41db-4c0e-b57b-f3b8252f31b7": "ed594e51-d97d-4038-b030-ad3daea5a438",
+        "6c958d9b-2062-4921-99b3-cd5c11ded673": "a63511cc-9020-459b-b22e-c6efe32a2f58",
+        "ec46b1f2-b611-4442-bc89-12b4131be05b": "347e7d51-620e-4043-84f2-0d34676b9a87"
+      }
+    },
+    {
+      "__guid": "1558b553-eb0a-4db7-b874-74b7eb361877",
+      "__version": 2,
+      "__Prefab": "prefabs/road-slant-flat-curve.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0ee4e60f-e1c3-4287-98bb-bcf663ccb103"
+            },
+            "Property": "Name",
+            "Value": "road-slant-curve (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0ee4e60f-e1c3-4287-98bb-bcf663ccb103"
+            },
+            "Property": "Position",
+            "Value": "-7592.77,2175.609,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0ee4e60f-e1c3-4287-98bb-bcf663ccb103"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7933533,0.6087615"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "0ee4e60f-e1c3-4287-98bb-bcf663ccb103": "1558b553-eb0a-4db7-b874-74b7eb361877",
+        "85f115d1-4c1a-4d48-a8eb-f7c923f3738f": "1ec73854-9eee-42ca-a1d4-b514c55e8ace",
+        "661eb4a1-fb5c-4eea-8d7f-3d74a359c63f": "3ae162e5-bae6-4507-a4d8-6023d0bc47d8"
+      }
     }
   ],
   "SceneProperties": {
@@ -1029,7 +1502,8 @@
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": ""
-    }
+    },
+    "GameObjectSystems": []
   },
   "ResourceVersion": 3,
   "Title": null,

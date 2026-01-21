@@ -22,7 +22,7 @@ public sealed class OrbitalCameraController : Component
 		Angles mouseMove = Input.AnalogLook;
 		Pitch = (Pitch + mouseMove.pitch).Clamp( 1, 85 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
-		Rotation rotation = Rotation.From( Pitch, Yaw, Player.WorldRotation.Roll() / 15 );
+		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 
 		SceneTraceResult checkingSightline = Scene.Trace
 			.Ray( MainCamera.WorldPosition, Player.WorldPosition + Vector3.Up * 32 )
