@@ -1,0 +1,3748 @@
+{
+  "RootObject": {
+    "__guid": "0eddd68e-ddc4-4145-a63b-b7ee45ccc6dc",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "Shitty lake",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "5.125,5.125,1.5",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "a014d8dd-af01-456d-b368-c2e14cfaaa73",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "53d0bc85-4ade-43a6-baf5-9d9937a91656",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "99a397f7-d2c5-4620-9c8e-782be3ab17e0",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (32)",
+        "Position": "199.8049,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ead064ee-53ac-4dc2-8b3d-518a501ab748",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "5ab6d68d-e5e2-4220-a7e9-d62216895f4e",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (31)",
+        "Position": "99.90244,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "43732d4a-264d-490e-b83b-06a44c04beff",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "e3dfb3f6-9476-4d33-9508-1105613aaa25",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (30)",
+        "Position": "99.90244,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "63db5a33-5fb5-4711-9228-6d9f20fe7425",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "6d33a74c-e8af-4f91-b66a-0ba7a8388d2f",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (29)",
+        "Position": "199.8049,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "940c659d-9dbf-49e6-91b1-e89f16f19155",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "f80ee2b9-6581-4b83-8ce7-c9dba6723173",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (28)",
+        "Position": "199.8049,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ce6a1d01-a894-4dec-8803-6c19c3a63ae0",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "439be2ab-a25b-4d0b-a9a1-8697f511bdef",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (27)",
+        "Position": "99.90244,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "27d57f14-a0bd-4748-836f-49cc15f052c6",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "5af642c8-8540-4e71-bfa4-edc97fd7e73d",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (26)",
+        "Position": "99.90244,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "67839808-13cf-45bc-bfff-d318c5e38178",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "538b8560-860d-4141-bc54-16692128fc25",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (25)",
+        "Position": "199.8049,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5c230718-22bd-4047-9fd5-1dd91348c5cf",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "8316de13-68c6-459b-b253-d44caed3680a",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (24)",
+        "Position": "199.8049,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "48c9004c-b27b-4900-a2de-8d7bfb14decc",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "64244874-3dcc-46bc-a85d-bd741b80813b",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (23)",
+        "Position": "99.90244,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8b932621-3975-418e-905f-c8101d8ccb49",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "7f14cacc-d5d0-4438-aa58-e96e9e751f0a",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (22)",
+        "Position": "99.90244,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "4ca46085-6d31-4233-9c73-a2ebb7a36321",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "685c16ef-b4ec-4292-931f-7a125aae122f",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (21)",
+        "Position": "199.8049,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "da8bf7a4-c2a1-4cd5-9158-e4c85037c160",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "5a1be02a-0950-4849-aad7-d9e03b11d0b9",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (44)",
+        "Position": "399.6097,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5330d5a3-9457-4428-9b18-6b047337e01b",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "be79185e-f76c-4856-91ba-c2a29c8d253a",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (43)",
+        "Position": "299.7073,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5728fb0c-9132-4d9d-a6af-aeb9a0733d51",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "1f039077-33fc-4014-9c34-a5cd59db2776",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (42)",
+        "Position": "299.7073,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "df5c138f-6a12-4a23-8c21-b89001b8c670",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "971f0212-24b9-42da-9736-d93f094eba1c",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (41)",
+        "Position": "399.6097,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "17768fb4-2dd2-49aa-a396-d81d08f41fde",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "81c4e945-88c5-4c6c-9d90-d0c400f9d0ce",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (40)",
+        "Position": "399.6097,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d914b073-e22e-49b0-9469-459d932a1a0b",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "ae736e55-4f41-4e95-a66b-893a0050d1ea",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (39)",
+        "Position": "299.7073,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ca60f5bc-cc6b-4708-9062-5d7788212e88",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "bb0ab6ff-b697-4027-8241-2ad69ee0e1b5",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (38)",
+        "Position": "299.7073,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2dd39876-374f-495d-9104-d3d2afde71e2",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "f6bfbfaf-313b-427b-a275-810fc456db90",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (37)",
+        "Position": "399.6097,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "278c3c2f-540a-4871-821c-d6c6434d06e6",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "8db8b25d-1efa-4341-a316-20b4c28fb8c9",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (36)",
+        "Position": "399.6097,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "beb3ce28-822d-40c1-9849-46214784f218",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "0fa4b540-87e3-4639-9683-5fd4e4a3d394",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (35)",
+        "Position": "299.7073,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "9fe605a9-49d2-4238-ad67-004d11594217",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "897f1c8b-1ca3-444d-8743-8da3bec7a0a4",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (34)",
+        "Position": "299.7073,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "f37b72bd-4094-4c95-97d3-4e4154238544",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "72639629-a9e7-4133-a08d-4e8c6d45976e",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (33)",
+        "Position": "399.6097,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8af9328e-84eb-46fa-840f-f8703f58817c",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "e16eecb8-72e7-4f9e-bdbf-c9aa244b675d",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (56)",
+        "Position": "599.4146,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "6509ac2e-2d93-44b7-80a5-587ce6aea95e",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "57ca381a-e02f-4f62-96fe-845517bba7bd",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (55)",
+        "Position": "499.5122,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "e844b0dc-ee21-4490-8d3c-c7f55f01d7ca",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "23ad5721-31ed-4cf0-a447-b3ee659e850e",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (54)",
+        "Position": "499.5122,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "78706c20-2ac7-4204-ace9-46b3d008c0d3",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "abde5ff3-20b8-4e15-a4d5-18ee2fc21103",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (53)",
+        "Position": "599.4146,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5ecab5b8-c46e-4c1c-a4ea-46d62e6d7d3e",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "e6018f62-1c04-446a-92aa-32da332e42e8",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (52)",
+        "Position": "599.4146,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "46b0c93b-1538-426c-b8cf-027ae0689350",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "8dfedd53-b98f-4875-a69d-e8ee7a843e5b",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (51)",
+        "Position": "499.5122,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "6c8a7471-baae-48eb-ad82-04ae74d2d01b",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "09466607-ec3f-4a1b-98a9-261a0dbd1f63",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (50)",
+        "Position": "499.5122,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "7014d16e-1e64-4427-b2bb-777b2467cb4c",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "ecf665fc-f723-4a11-a1dc-e98dda3fd5b5",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (49)",
+        "Position": "599.4146,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "32a4ed1c-60ff-4a95-a755-829cd92270fb",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "74d80d5e-6764-4e08-b4b8-4956d256ab9b",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (48)",
+        "Position": "599.4146,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "a8d2dca5-6c01-4ff4-bb01-5e83e449be62",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "ca70adaf-dfe3-4e93-ad6c-0058d3fddf93",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (47)",
+        "Position": "499.5122,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2e0854ac-4722-412c-ac66-3b5b113b6d74",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "4cac3438-39b7-4c08-a943-38812783cd7e",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (46)",
+        "Position": "499.5122,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "40531168-b40c-4990-82d4-d2b30c921922",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "fefe18b1-99ae-48f1-903e-2e41c5954e39",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (45)",
+        "Position": "599.4146,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8c35e8b5-3940-4a17-b12c-f9342d5a29cc",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "8731242f-e118-4c05-9460-15ace35e8f69",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (16)",
+        "Position": "-99.90244,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "4a3fac80-7e47-47ec-a698-05ea0cc4c310",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "95000807-1e99-4383-89ad-7a61d384fb66",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (15)",
+        "Position": "-99.90244,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2d389bbc-7e27-45f3-86b6-47e53b278d21",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "1b69450b-4597-424c-a692-62e2db65da84",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (14)",
+        "Position": "0,-299.7073,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "349730bd-7360-4a69-91a3-1971e8da0776",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "9d8f8ed6-27bc-433b-9c87-ce149d446f0f",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (13)",
+        "Position": "0,-199.8049,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "b57d4f48-464b-4639-9145-60642030cdf0",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "ec29d2d9-429f-4c17-90b5-c50f6985c31c",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (20)",
+        "Position": "-99.90244,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d71fb17b-1a15-4146-9e2c-2f57f9558276",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "68d3dbae-800c-490c-a383-6d1486f9b5b6",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (19)",
+        "Position": "-99.90244,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "01955177-1bf9-45c9-9946-ff9a577e2f84",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "679eaae6-fa6a-4297-87b1-fd7841589c3e",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (18)",
+        "Position": "0,-499.5122,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5d9f5996-f3a3-41ad-aba4-ac9dac23baf9",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "cd6c69dd-cfec-4722-b81f-c685c8ec906c",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (17)",
+        "Position": "0,-399.6097,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "067da8e3-2bcc-48ce-a36a-248ca977f80f",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "a9480813-e6bd-469e-ad0e-2defdd9bc0d5",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (11)",
+        "Position": "-99.90244,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "854237b5-36c4-401c-9451-3f62d63823f9",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "f510d72e-22e1-4051-b2d2-202beb9cdcc8",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (10)",
+        "Position": "-99.90244,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "3fa256bd-f509-41e1-b7ad-e83d6ac93913",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "474bdbf5-5354-4eb5-8c94-6b63a6ededb6",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "water (12)",
+        "Position": "0,-99.90244,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "1128baa6-8ee8-4329-87c4-b04460b11072",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/retro medieval kit/water.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "a3c83c60-a0f5-484f-836d-1f82a21180bd",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "199.8049,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "a3c83c60-a0f5-484f-836d-1f82a21180bd",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "75de0857-673b-4edd-af73-dc6b2d52df1e",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "730a56ae-271f-4beb-9401-58196f62dff5"
+        }
+      },
+      {
+        "__guid": "7deaf24d-0119-4d1c-8f32-239c1e45b38e",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "0,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "7deaf24d-0119-4d1c-8f32-239c1e45b38e",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "0f09d8f0-5b31-4b39-b21a-d5d6b237212a",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "8a35326e-0893-48b7-951d-9d7370a46b64"
+        }
+      },
+      {
+        "__guid": "ed41e552-2879-485e-96ae-db7fe83d42bc",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (14)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "0,-49.95122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "ed41e552-2879-485e-96ae-db7fe83d42bc",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "be6c5d50-20c1-4368-b48b-621c9540518f",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "71b18895-e8e6-4bf4-ac03-3ac11e5b0091"
+        }
+      },
+      {
+        "__guid": "707cd49c-60d0-444d-8f87-74b60e28fd4d",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (22)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-49.95122,-99.90244,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "707cd49c-60d0-444d-8f87-74b60e28fd4d",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "c3a7f125-a44b-4593-8f9c-663f7c0a17cf",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "af40d401-8625-48b9-b9f7-570b373211bc"
+        }
+      },
+      {
+        "__guid": "07cd4576-c81e-48fe-aa66-351c266e8a2f",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (23)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-49.95122,-299.7073,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "07cd4576-c81e-48fe-aa66-351c266e8a2f",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "6da129b4-5008-47ca-ac30-753a3e761872",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "ccd610d1-a2c0-45d9-8f95-1fef1aac6c7e"
+        }
+      },
+      {
+        "__guid": "71019cda-17a8-4db7-9aca-e388d0c69fac",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (24)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-49.95122,-499.5122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "71019cda-17a8-4db7-9aca-e388d0c69fac",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "91016d25-4c32-4ffe-973e-e56aa86b176b",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "2a1589c1-132a-4234-8c93-c2cf0e7bfde6"
+        }
+      },
+      {
+        "__guid": "62efb636-7813-48ba-b001-6ce91777e924",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (27)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "649.3658,-299.7073,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "62efb636-7813-48ba-b001-6ce91777e924",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "a1a96f8d-a163-40de-86d2-c3c8d428a909",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "903667d9-d065-465a-863d-b23941c151c1"
+        }
+      },
+      {
+        "__guid": "092be596-f0d1-43fa-bb65-c8b4cb5d0a47",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (26)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "649.3658,-499.5122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "092be596-f0d1-43fa-bb65-c8b4cb5d0a47",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "398d1aae-004b-4f0c-8a0d-d67e0387a120",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "c86b5729-ea98-4b48-8914-c9de518c54b8"
+        }
+      },
+      {
+        "__guid": "e83bc40a-b964-4076-bf0b-fdd282776f6a",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (25)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "649.3658,-99.90244,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "e83bc40a-b964-4076-bf0b-fdd282776f6a",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "f8ea3e21-f409-4363-b881-3df88235ee44",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "2c08d117-5c88-4753-87dc-0d62cc7bec6c"
+        }
+      },
+      {
+        "__guid": "a624096b-ffc5-4c48-a888-ba792ecd9c3c",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (15)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "199.8049,-49.95122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "a624096b-ffc5-4c48-a888-ba792ecd9c3c",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "abb31649-4030-4f82-8541-2aef0cfe1a0e",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "4704b1d6-b4ad-42c1-8e8c-a76a57334bb9"
+        }
+      },
+      {
+        "__guid": "61f0abf4-8842-4cab-8bfd-e9659de8d003",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (16)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "399.6097,-49.95122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "61f0abf4-8842-4cab-8bfd-e9659de8d003",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "f9c0e992-9f35-440d-b923-40d9d1846996",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "1f42056f-3af4-4b47-a009-fc97954daa81"
+        }
+      },
+      {
+        "__guid": "7ec0f7a1-20f6-46af-8b5b-37e9cacb75c1",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (17)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "599.4146,-49.95122,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "7ec0f7a1-20f6-46af-8b5b-37e9cacb75c1",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "8b60b5a5-9cc9-42e7-a07f-1ccbd7d252dc",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "b9c85807-41c7-4697-9d5c-63f9ba055c44"
+        }
+      },
+      {
+        "__guid": "cc132252-55fb-4353-9bad-35b3de374959",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (21)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "599.4146,-549.4615,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071069,-0.7071065"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "cc132252-55fb-4353-9bad-35b3de374959",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "c802e5ff-27b6-4dcf-b972-68b45c8451ff",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "8a9e9dd6-d6aa-44b4-b328-50b57c619302"
+        }
+      },
+      {
+        "__guid": "c4f39b21-0deb-4b5a-8967-437f09ab0e3d",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (20)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "399.6097,-549.4615,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071069,-0.7071065"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "c4f39b21-0deb-4b5a-8967-437f09ab0e3d",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "85639375-a3f9-4166-b6fb-8bdcbb88094f",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "f65be2fb-d57c-4e41-9898-e98380185f20"
+        }
+      },
+      {
+        "__guid": "bfe23355-da52-4cd4-9da8-161f51ee4540",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (19)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "199.8049,-549.4615,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071069,-0.7071065"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "bfe23355-da52-4cd4-9da8-161f51ee4540",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "f47b5a10-020a-4d62-9042-d3b77146809d",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "f9b448af-a60d-4853-b8e9-0e5f5fccd698"
+        }
+      },
+      {
+        "__guid": "d67977dc-56ab-404d-b178-74a78374e403",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (18)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "0,-549.4615,-36.66667"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071069,-0.7071065"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "1,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "d67977dc-56ab-404d-b178-74a78374e403",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "8a94296a-0689-49f9-a1c0-aa81a12bc16e",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "bb3b2ae5-d7ff-4a71-ae6b-9c026d4843f8"
+        }
+      },
+      {
+        "__guid": "a66436b4-68fe-4ea1-9d89-dcea9eb53af9",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (13)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "0,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "a66436b4-68fe-4ea1-9d89-dcea9eb53af9",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "955f150b-ae17-4d89-ab66-6e645e515488",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "f6418454-80fb-4011-b765-aeed687ebbb1"
+        }
+      },
+      {
+        "__guid": "71b73531-ee92-45cd-8ba0-f12dd2fbbfac",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (12)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "199.8049,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "71b73531-ee92-45cd-8ba0-f12dd2fbbfac",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "01c7c713-9b51-4d3f-8bf5-b6a6b620876b",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "1a7c28e4-03d7-4a67-8c06-eb791fd15b94"
+        }
+      },
+      {
+        "__guid": "7048eef8-30f5-4fff-a698-78808fff8e4c",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (11)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "399.6097,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "7048eef8-30f5-4fff-a698-78808fff8e4c",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "ea758da5-2041-4d71-ad28-b5a3fad834b0",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "e28a0f2c-98f5-487f-a547-444186d8e8a5"
+        }
+      },
+      {
+        "__guid": "10e53577-aa3b-4f85-99ba-642ba5f1bedd",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (10)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "599.4146,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071066,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "10e53577-aa3b-4f85-99ba-642ba5f1bedd",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "70cfc76e-3136-48de-ad98-6b0d85c170e4",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "fe5ed9a3-60f8-4a59-99f6-3efa5fc6ecfd"
+        }
+      },
+      {
+        "__guid": "cc527b9a-58aa-43aa-b753-e4f0518ce361",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (2)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "399.6097,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "cc527b9a-58aa-43aa-b753-e4f0518ce361",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "e5a5f3d3-9212-4711-9d07-b8b7ab6d1d92",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "6885bdde-caf7-4847-92cf-80c557b3ff4b"
+        }
+      },
+      {
+        "__guid": "ed87c072-b908-47c5-a847-691286764177",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (3)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "599.4146,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "ed87c072-b908-47c5-a847-691286764177",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "ed8dc115-22a9-4d6a-9a85-c474c17a8449",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "bf0caa91-892b-4d14-846a-1ed1c08a6b97"
+        }
+      },
+      {
+        "__guid": "44f5fbfa-671e-4f22-9033-259cf3736045",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (4)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "799.2195,-99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "44f5fbfa-671e-4f22-9033-259cf3736045",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "59f8aaf3-686d-483c-9c86-6b16c40de4af",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "37c01ea6-3512-4623-a840-9ef85b117205"
+        }
+      },
+      {
+        "__guid": "e0ae1d87-a8cf-4053-a356-69765928ee6f",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (7)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-199.8049,-99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "e0ae1d87-a8cf-4053-a356-69765928ee6f",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "85e9fccd-b7b5-49fc-98c8-77eea81f7953",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "217e3cca-c53f-4821-a7aa-0ed314335dd5"
+        }
+      },
+      {
+        "__guid": "9e615feb-7b9e-45e8-b2a7-adbd6d63204d",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (8)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-199.8049,-299.7073,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "9e615feb-7b9e-45e8-b2a7-adbd6d63204d",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "c45d6eb1-badd-4398-81b6-e93c80353d6b",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "c26fff37-ec6b-4c99-bf5d-6c455a9fb56d"
+        }
+      },
+      {
+        "__guid": "fb9f9b9f-d034-4ed3-8653-5069088ad6fc",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (9)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "-199.8049,-499.5122,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,1,0.0000001947072"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "fb9f9b9f-d034-4ed3-8653-5069088ad6fc",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "700ca877-39f0-4b50-aeda-9a46edbb2d56",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "5478c729-2391-4124-b3d3-863b7ddaeee3"
+        }
+      },
+      {
+        "__guid": "951de785-b358-484a-ad1e-04213e8c92ba",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (5)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "799.2195,-299.7073,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "951de785-b358-484a-ad1e-04213e8c92ba",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "3e049136-ecd1-4c6d-a5a4-5085657ffadc",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "6910fb9d-3158-4f8a-b2f4-78b9649e0c99"
+        }
+      },
+      {
+        "__guid": "0ec40964-654f-43a2-a252-31cc59ee1aa5",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-slope.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Name",
+              "Value": "tile-slope (6)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Position",
+              "Value": "799.2195,-499.5122,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0b8906b5-20a8-48d8-b801-e836977538fe"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0b8906b5-20a8-48d8-b801-e836977538fe": "0ec40964-654f-43a2-a252-31cc59ee1aa5",
+          "40a88933-3fe0-4fc2-bd93-f9094127d96a": "76cc5dba-8ee1-4f7d-b866-b918b781bb5d",
+          "471b6450-fd04-4c2f-962f-bd5277a9754c": "b7418ecc-db1e-46f5-a343-000e776ec32b"
+        }
+      },
+      {
+        "__guid": "9e3a2147-3779-4655-8d5d-3c1b54b5e172",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-corner-outer.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Position",
+              "Value": "799.2195,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "470434e5-850d-4f4f-82fd-82f424f4173c": "9e3a2147-3779-4655-8d5d-3c1b54b5e172",
+          "9b00f2a3-efc4-457f-b894-927b5e636f91": "a4634c89-c89d-4b42-a922-66449b285a6e",
+          "1006d957-19f5-4c15-b5b2-f923a7753465": "e6bc357d-c0c4-4db0-b87f-54d74c4d976a"
+        }
+      },
+      {
+        "__guid": "5f6ced21-16ae-4097-994c-0880b180803c",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-corner-outer.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Name",
+              "Value": "tile-corner-outer (1)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Position",
+              "Value": "799.2195,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,0,1"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "470434e5-850d-4f4f-82fd-82f424f4173c": "5f6ced21-16ae-4097-994c-0880b180803c",
+          "9b00f2a3-efc4-457f-b894-927b5e636f91": "4def3def-46bf-4d45-a436-6cb47ec48517",
+          "1006d957-19f5-4c15-b5b2-f923a7753465": "d8d1586a-d499-45e0-a948-65248e983cb4"
+        }
+      },
+      {
+        "__guid": "374716b3-5f6e-4598-b01c-4919c98dbb52",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-corner-outer.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Name",
+              "Value": "tile-corner-outer (2)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Position",
+              "Value": "-199.8049,-699.3171,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.7071067,0.7071068"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "470434e5-850d-4f4f-82fd-82f424f4173c": "374716b3-5f6e-4598-b01c-4919c98dbb52",
+          "9b00f2a3-efc4-457f-b894-927b5e636f91": "f583d32e-7bf2-4f52-811f-520c383f245d",
+          "1006d957-19f5-4c15-b5b2-f923a7753465": "19f519e5-6a5c-484d-84eb-15fc5f978783"
+        }
+      },
+      {
+        "__guid": "afa87d4b-ae77-42a2-8dbe-370ea9dcdc6b",
+        "__version": 2,
+        "__Prefab": "prefabs/tile-corner-outer.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Name",
+              "Value": "tile-corner-outer (3)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Position",
+              "Value": "-199.8049,99.90244,-30"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-0.9999999,0.0000001490116"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "470434e5-850d-4f4f-82fd-82f424f4173c"
+              },
+              "Property": "Scale",
+              "Value": "2,2,1"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "470434e5-850d-4f4f-82fd-82f424f4173c": "afa87d4b-ae77-42a2-8dbe-370ea9dcdc6b",
+          "9b00f2a3-efc4-457f-b894-927b5e636f91": "df60f30b-b342-4142-b464-643fa2d72b91",
+          "1006d957-19f5-4c15-b5b2-f923a7753465": "14aed70a-071d-47ff-a5cf-8f8d922acbd3"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
