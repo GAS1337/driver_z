@@ -19,15 +19,15 @@ public sealed class RotationControl : Component
 			if ( Input.Down( "Left" ) )
 			{
 				Log.Info(CarBody.Velocity.Length);
-				CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.15f;
-				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 5000, 0, 50);
+				CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
+				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 5000, 0, 40 );
 				Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate(rot, 1f, Time.Delta); 
 			}
 			else if ( Input.Down( "Right" ) )
 			{
-				CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.15f;
-				CarBody.Velocity += (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 50 );
+				CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
+				CarBody.Velocity += (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 40 );
 				Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate( rot, 1f, Time.Delta );
 			}
