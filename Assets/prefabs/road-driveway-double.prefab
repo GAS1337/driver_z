@@ -1,7 +1,7 @@
 {
   "RootObject": {
     "__guid": "5ba7e261-51ae-4474-a2c7-bb0ae448fa65",
-    "__version": 1,
+    "__version": 2,
     "Flags": 0,
     "Name": "road-driveway-double",
     "Position": "0,0,0",
@@ -10,7 +10,7 @@
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
-    "NetworkInterpolation": true,
+    "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
     "OwnerTransfer": 1,
@@ -19,6 +19,7 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "925c032b-7c5c-4cd7-b513-132d9762af61",
         "__enabled": true,
+        "Flags": 0,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
         "LodOverride": null,
@@ -40,9 +41,53 @@
         },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "07545077-15d1-49e4-b908-3ae07eaa27b5",
+        "__enabled": true,
+        "Flags": 0,
+        "ColliderFlags": 0,
+        "Elasticity": null,
+        "Friction": null,
+        "IsTrigger": false,
+        "Model": "models/city roads kit/road-driveway-double.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Static": true,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": []
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
