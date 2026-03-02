@@ -41,6 +41,7 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
         },
         "TargetDistanceToPlayer": 800,
+        "VerticalOffset": 64,
         "ZoomStrength": 200
       },
       {
@@ -1474,15 +1475,14 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": ""
-      },
-      "GameObjectSystems": []
+      }
     },
     "__variables": []
   },
