@@ -956,6 +956,26 @@
               "6016,4672,0",
               "-14816,4672,0"
             ],
+            "Blends": [
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0"
+            ],
+            "Colors": [
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0",
+              "0,0,0,0"
+            ],
             "TextureCoord": [
               "64,64",
               "0,0",
@@ -1285,9 +1305,12 @@
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
-      "IncludedBodies": ""
-    },
-    "GameObjectSystems": []
+      "IncludedBodies": "",
+      "BakedDataPath": {
+        "$reference_type": "filereference",
+        "path": "scenes/testbed_scene_data/navmesh/baked.navdata"
+      }
+    }
   },
   "ResourceVersion": 3,
   "Title": null,
