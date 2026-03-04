@@ -41,7 +41,7 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
         },
         "TargetDistanceToPlayer": 800,
-        "VerticalOffset": 64,
+        "VerticalOffset": 256,
         "ZoomStrength": 200
       },
       {
@@ -108,6 +108,36 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null
+      },
+      {
+        "__type": "GunControl",
+        "__guid": "44e855eb-347f-4d49-9f15-0da429d51db0",
+        "__enabled": true,
+        "Flags": 0,
+        "MainCamera": {
+          "_type": "component",
+          "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
+          "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
+          "component_type": "CameraComponent"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "ShootEffect": {
+          "_type": "component",
+          "component_id": "35b76d20-37bf-4bfe-bdfc-5981261f73fb",
+          "go": "af7e5a52-dc31-438b-86c1-24ae152ea470",
+          "component_type": "BeamEffect"
+        },
+        "TurretRenderer": {
+          "_type": "component",
+          "component_id": "ae4d4ab2-3acd-4413-b8ae-547d63c8b7f3",
+          "go": "20bf578f-cb8d-4008-aa27-1b1c6815ab34",
+          "component_type": "SkinnedModelRenderer"
+        }
       }
     ],
     "Children": [
@@ -1424,7 +1454,7 @@
                 "BodyGroups": 18446744073709551615,
                 "BoneMergeTarget": null,
                 "CreateAttachments": false,
-                "CreateBoneObjects": false,
+                "CreateBoneObjects": true,
                 "LodOverride": null,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -1461,7 +1491,114 @@
                 "UseAnimGraph": true
               }
             ],
-            "Children": []
+            "Children": [
+              {
+                "__guid": "04e8357b-e197-4fb2-9998-91d96f865928",
+                "__version": 2,
+                "Flags": 4,
+                "Name": "Bone",
+                "Position": "0,0,0",
+                "Rotation": "0,0,0,1",
+                "Scale": "1,1,1",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [],
+                "Children": [
+                  {
+                    "__guid": "af7e5a52-dc31-438b-86c1-24ae152ea470",
+                    "__version": 2,
+                    "Flags": 1028,
+                    "Name": "Bone_001",
+                    "Position": "0.000008169742,12.46241,-21.72178",
+                    "Rotation": "-0.7071064,-0.00000006181715,0.0000002936247,0.7071072",
+                    "Scale": "1,1,1",
+                    "Tags": "",
+                    "Enabled": true,
+                    "NetworkMode": 2,
+                    "NetworkFlags": 0,
+                    "NetworkOrphaned": 0,
+                    "NetworkTransmit": true,
+                    "OwnerTransfer": 1,
+                    "Components": [
+                      {
+                        "__type": "Sandbox.BeamEffect",
+                        "__guid": "35b76d20-37bf-4bfe-bdfc-5981261f73fb",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "Additive": false,
+                        "Alpha": 1,
+                        "BeamColor": {
+                          "Type": "Constant",
+                          "Evaluation": "Life",
+                          "GradientA": {
+                            "blend": "Linear",
+                            "color": [
+                              {
+                                "t": 0.5,
+                                "c": "1,1,1,1"
+                              }
+                            ],
+                            "alpha": []
+                          },
+                          "GradientB": {
+                            "blend": "Linear",
+                            "color": [
+                              {
+                                "t": 0.5,
+                                "c": "1,1,1,1"
+                              }
+                            ],
+                            "alpha": []
+                          },
+                          "ConstantA": "1,0.53333,0,1",
+                          "ConstantB": "1,1,1,1"
+                        },
+                        "BeamLifetime": 0.1,
+                        "BeamsPerSecond": 3,
+                        "Brightness": 1,
+                        "DepthFeather": 0,
+                        "FilterMode": "Anisotropic",
+                        "FollowPoints": true,
+                        "InitialBurst": 1,
+                        "Lighting": false,
+                        "Looped": false,
+                        "Material": null,
+                        "MaxBeams": 1,
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "Opaque": false,
+                        "Scale": 16,
+                        "Shadows": false,
+                        "TargetGameObject": null,
+                        "TargetPosition": "0,0,0",
+                        "TargetRandom": "0,0,0",
+                        "Texture": null,
+                        "TextureOffset": 1,
+                        "TextureScale": 128,
+                        "TextureScroll": 0,
+                        "TextureScrollSpeed": 0,
+                        "TravelBetweenPoints": false,
+                        "TravelLerp": {
+                          "Type": "Range",
+                          "Evaluation": "Life",
+                          "Constants": "0,1,0,0"
+                        }
+                      }
+                    ],
+                    "Children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
