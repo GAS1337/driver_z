@@ -1,13 +1,16 @@
 {
   "UI": false,
-  "Volume": "0.039999984",
-  "Pitch": "1",
+  "Volume": "0.5",
+  "Pitch": "0.9 1.1",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/lantern.vsnd",
-    "sounds/empty_town.vsnd",
-    "sounds/quiet_autumn.vsnd"
+    "sounds/impacts/bullets/bullet-ricochet-1.vsnd",
+    "sounds/impacts/bullets/bullet-ricochet-2.vsnd",
+    "sounds/impacts/bullets/bullet-ricochet-3.vsnd",
+    "sounds/impacts/bullets/bullet-ricochet-4.vsnd",
+    "sounds/impacts/bullets/bullet-ricochet-5.vsnd",
+    "sounds/impacts/bullets/bullet-ricochet-6.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
@@ -49,10 +52,6 @@
     "Name": "unknown",
     "Id": "00000000-0000-0000-0000-000000000000"
   },
-  "__references": [
-    "deltarune.empty_town#112066",
-    "deltarune.lantern#112076",
-    "deltarune.quiet_autumn#112081"
-  ],
+  "__references": [],
   "__version": 1
 }

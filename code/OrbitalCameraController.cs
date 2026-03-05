@@ -21,7 +21,7 @@ public sealed class OrbitalCameraController : Component
 	{
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
-		Pitch = (Pitch + mouseMove.pitch).Clamp( -10, 85 ); // Up&Down clamped in degrees
+		Pitch = (Pitch + mouseMove.pitch).Clamp( -25, 85 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 
@@ -34,7 +34,7 @@ public sealed class OrbitalCameraController : Component
 
 		// Checks for objects around cam to avoid stuttering
 		SceneTraceResult checkingBehind = Scene.Trace
-			.Sphere( AutoZoomStrength, MainCamera.WorldPosition, MainCamera.WorldPosition )
+			.Sphere( AutoZoomStrength * 1.5f, MainCamera.WorldPosition, MainCamera.WorldPosition )
 			.IgnoreGameObjectHierarchy( GameObject ) // Ignores itself. Use tags depending on your setup
 			.Run();
 		// DebugOverlay.Trace( checkingBehind );

@@ -1,20 +1,18 @@
 {
   "UI": false,
-  "Volume": "0.039999984",
-  "Pitch": "1",
+  "Volume": "1",
+  "Pitch": "0.75000024 1",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/lantern.vsnd",
-    "sounds/empty_town.vsnd",
-    "sounds/quiet_autumn.vsnd"
+    "sounds/mediumexplosion.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
-  "Distance": 15000,
+  "Distance": 28000,
   "Falloff": [
     {
       "x": 0,
@@ -49,10 +47,6 @@
     "Name": "unknown",
     "Id": "00000000-0000-0000-0000-000000000000"
   },
-  "__references": [
-    "deltarune.empty_town#112066",
-    "deltarune.lantern#112076",
-    "deltarune.quiet_autumn#112081"
-  ],
+  "__references": [],
   "__version": 1
 }
