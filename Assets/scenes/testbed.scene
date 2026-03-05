@@ -126,81 +126,6 @@
             },
             "Property": "Position",
             "Value": "-2464,-5664,128"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
-            },
-            "Property": "Tags",
-            "Value": "player"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
-            },
-            "Property": "Rocket",
-            "Value": {
-              "_type": "gameobject",
-              "prefab": "prefabs/rocket.prefab"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
-            },
-            "Property": "RocketSpeed",
-            "Value": 3000
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
-            },
-            "Property": "ShootCooldown",
-            "Value": 0.2
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "35b76d20-37bf-4bfe-bdfc-5981261f73fb"
-            },
-            "Property": "BeamLifetime",
-            "Value": 0.02
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "35b76d20-37bf-4bfe-bdfc-5981261f73fb"
-            },
-            "Property": "BeamsPerSecond",
-            "Value": 0
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "35b76d20-37bf-4bfe-bdfc-5981261f73fb"
-            },
-            "Property": "InitialBurst",
-            "Value": 0
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "35b76d20-37bf-4bfe-bdfc-5981261f73fb"
-            },
-            "Property": "MaxBeams",
-            "Value": 5
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "35b76d20-37bf-4bfe-bdfc-5981261f73fb"
-            },
-            "Property": "Scale",
-            "Value": 4
           }
         ],
         "MovedObjects": []
@@ -1393,7 +1318,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "f8eb7aa6-e12b-4eb7-aa56-a282a8ce1c44"
+          "$blob": "dbae00eb-c836-4200-8473-9e2ab932bb29"
         }
       }
     }
