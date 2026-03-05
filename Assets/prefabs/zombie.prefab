@@ -130,7 +130,7 @@
             "AutoTraverseLinks": true,
             "ForbiddenAreas": [],
             "Height": 64,
-            "MaxSpeed": 120,
+            "MaxSpeed": 240,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -138,7 +138,7 @@
             "OnComponentStart": null,
             "OnComponentUpdate": null,
             "Radius": 16,
-            "Separation": 0.25,
+            "Separation": 0.22994652,
             "UpdatePosition": true,
             "UpdateRotation": false
           }
@@ -246,7 +246,7 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
