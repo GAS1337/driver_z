@@ -34,7 +34,7 @@ public sealed class OrbitalCameraController : Component
 
 		// Checks for objects around cam to avoid stuttering
 		SceneTraceResult checkingBehind = Scene.Trace
-			.Sphere( AutoZoomStrength * 1.5f, MainCamera.WorldPosition, MainCamera.WorldPosition )
+			.Sphere( AutoZoomStrength, MainCamera.WorldPosition, MainCamera.WorldPosition )
 			.IgnoreGameObjectHierarchy( GameObject ) // Ignores itself. Use tags depending on your setup
 			.Run();
 		// DebugOverlay.Trace( checkingBehind );

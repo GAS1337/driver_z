@@ -1,0 +1,212 @@
+{
+  "__guid": "9b3ebbe0-c62e-4d9c-9193-4f6aac5f686c",
+  "GameObjects": [
+    {
+      "__guid": "88742da8-337b-4f73-a2bd-660575f42388",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Terrain",
+      "Position": "-440.612,-587.2767,807.9885",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Terrain",
+          "__guid": "04b0d28b-e5a8-459f-a7c2-21876bd3edcc",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 1,
+          "ClipMapLodExtentTexels": 256,
+          "ClipMapLodLevels": 6,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "EnableCollision": true,
+          "Friction": null,
+          "IsTrigger": false,
+          "MaterialOverride": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RenderType": "Off",
+          "RollingResistance": null,
+          "Static": true,
+          "Storage": "test.terrain",
+          "SubdivisionFactor": 1,
+          "SubdivisionLodCount": 3,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0",
+          "TerrainHeight": 10000,
+          "TerrainSize": 19968
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "9dd4e287-d43d-4ab7-a297-aab9f7390af3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "-1658.102,-2396.525,2139.737",
+      "Rotation": "0.4142783,0.4199931,-0.5166823,0.6204989",
+      "Scale": "1,1,1",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "6c49bb23-9a1c-4922-a6f3-dd1b93b82ca3",
+          "__enabled": true,
+          "Flags": 0,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "71cc1505-340d-4e0a-ada3-d252709dde97",
+      "__version": 2,
+      "__Prefab": "prefabs/newcar.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
+            },
+            "Property": "Position",
+            "Value": "8855.322,5148.949,1200"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.7071066,0.7071068"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "7e60c9af-5288-40f9-bedb-c6dcf35abd30": "71cc1505-340d-4e0a-ada3-d252709dde97",
+        "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20": "294f6b68-2ce5-48d1-aede-aea21cb0962d",
+        "c86ccdc8-e5b2-45ad-b244-1303668782a4": "bc643a81-3774-4146-a9ba-b6e134fa7cb6",
+        "68d3e1d8-4f5a-453e-8b52-7c38cc29a320": "e3c7edc0-1f2c-4089-8d4a-44133062ddc7",
+        "44e855eb-347f-4d49-9f15-0da429d51db0": "3476dc67-83b2-41f6-9d60-96c8990fb9fb",
+        "b96d3897-f570-433d-ba9b-47fca7b01d3e": "f7e36dd2-267a-4b24-b960-7eba5423c189",
+        "781863f3-a639-41e1-8c9e-d406498701f2": "2c6320a2-c643-46b8-b73c-feef190ccfaa",
+        "95da7616-5ca5-40b7-8b9b-1251089d669b": "ca45d1c9-1ceb-49c4-b4bd-a1bf913bd975",
+        "edf84b48-dce5-47f5-b9f8-8761da9892ed": "68486d9e-83a1-4760-9fea-9f6c1090cac5",
+        "a402bf15-1063-4786-9efa-7a6194b98bee": "9497eaa8-d546-4cd8-abd6-b5985c97c053",
+        "d5ffd47e-e53c-45ea-95b4-f343c7e18d67": "0df03d65-6dd2-49fd-aad8-1186e272cd99",
+        "beef20d2-106c-4186-92a1-5e48e4301a5a": "138fadc1-bc17-431e-973a-39cfd4a5dcc4",
+        "42c04990-bcd5-4bf6-890d-974266b9f6df": "eea2a589-8b42-4d4d-b4eb-9874cd28ea33",
+        "b9f69343-c306-48c0-9511-9829a6afe904": "2e953bf2-8443-451a-a94c-328c3a428a24",
+        "7622f584-ed3b-4362-a158-07f16b253031": "ffb8f1be-32d2-4b2f-9ad1-4c47c24c33de",
+        "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117": "7d39c25b-2c12-4eea-b791-fbab5a6c0e67",
+        "afa7d1b7-eb90-464b-b8fa-aaa4e6efc218": "86197aa4-ce6b-429f-acfd-faf83e8531fd",
+        "85154a6b-a2e3-4d5b-b81f-5875e9171672": "742016b3-e8ee-453c-a04c-a2e9bda7695d",
+        "078362a0-74db-4fa5-aea5-c4cdc7c1dae9": "b0c17ede-8f5b-422c-8e1b-c9005ebbf01b",
+        "da432f46-dd4f-4e9f-b8f6-201f1f5e8e2d": "24df33c3-05ed-4f7b-8cce-bdaff3559300",
+        "7f27d9a4-01f4-47b8-bad4-11db1f35e66e": "c5eee86b-2ac1-489f-b97b-b82d8497ebef",
+        "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8": "a590c60f-4c92-400b-becf-dd2c7ad00322",
+        "24ad97a3-0bcb-4840-93b8-f7703945a2f4": "9b801e6f-a1ab-4582-8529-af714ed261df",
+        "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc": "7e501b64-bc43-4e9e-8ef0-1a700cf79e67",
+        "d8365ba3-14ff-41e4-a06e-bfe09956c02f": "645e68f0-3c0d-45cf-bdfe-960a46245a3b",
+        "20c90ccc-1561-4869-8e82-0c44e6f0b4e8": "d738684d-ad4a-431a-be6f-6c4e13e0cbbe",
+        "c2caf4bd-c568-4c3d-ab75-2f4a4c37da7b": "d2c31ec3-3713-4f29-bfbe-759ec3ee0ae5",
+        "8de8d552-47d7-4fb4-8d51-21945bdf02c3": "d91907d4-be3b-4970-9ecd-3991528070ff",
+        "225fd5e0-806d-4db8-b01f-048ef5adf417": "8192b413-60a6-46fc-b5d6-c5a872b3d2c9",
+        "6ae014e0-d580-4320-9af1-4af454f6b9f0": "638c80b5-b23c-407f-8832-2ed95b856727",
+        "86657988-a1af-4c05-b46c-48504b5e2e2d": "d8821171-af32-4239-8b86-502f1e80afc4",
+        "41165a34-001c-4e78-a9a7-37b76425435f": "769f35bc-6fe1-41c4-8c48-7fc8eb230f8e",
+        "19b6b70c-b3c8-4fb0-95b4-5659812cf6d3": "35e4b9e8-bd87-4d6a-b7ba-70d9134a955b",
+        "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10": "294bf28e-0d16-4119-a8ae-b86cbd64b4dd",
+        "2ced886c-7734-4831-8108-e1ff4f3fbe25": "84119324-e5df-4720-bae6-93097495059b",
+        "bdbf4cb1-14f7-4318-ba44-be59a303907a": "375523c0-6a57-4b3f-8c0d-066eb8e129b9",
+        "278d3278-c4e8-4f58-9386-72b343945887": "248244cd-99e0-40da-be10-27d59047a91d",
+        "00860c2c-a025-4f37-897e-01775ac42a5e": "fe3ae3ee-64e8-419a-80b1-6f229d65fdbd",
+        "a1e711e5-10ff-4322-bcac-08739c6ded1f": "6cdca75d-ccaa-4f92-a3b0-e1b9cdd73ecd",
+        "e1cb6b0a-b5ed-4939-a2a2-0ddf195bb67a": "d2946f25-75cf-4c8f-9e79-423174f6772e",
+        "cb6f5880-5192-4ddf-b2b8-f0373e929cac": "98b217d5-80dd-4f12-b09e-9f102bac7614",
+        "88ecb4da-91f6-40e6-b542-8e5149925945": "2bd88e49-f375-4b35-b6d6-8f04a96df46f",
+        "04875a1e-ce23-4f83-871e-ae2ac363593f": "621867e4-e2a5-4e79-8a43-41839e4d3206",
+        "8135a1d5-3abe-4fb0-875a-7e6476d7687b": "0609f4b1-ad2a-472d-a1c9-5f912c407af8",
+        "cb7a5d1f-e76b-4d2f-80b9-7bbe8d2da4fd": "aee7762f-389f-44f0-94a2-35378eb597be",
+        "e1512333-4284-45fd-bd4c-0654de2d4cd7": "ed41ca8e-bd73-454d-a437-1f53f1934a84",
+        "77e24753-b230-4a46-a335-aea5ec610fe0": "038f7f5d-b1c8-4913-986e-a74d95bda89f",
+        "e3fef6f5-e97b-4818-aabb-f321911e9a6e": "049db42d-6676-4632-a9c5-42cf4ab99b4f",
+        "3a37987b-f1ff-4b0c-9e79-b7d6acc1dea2": "86a2bd22-486b-4858-adfa-0cfa8daba89c",
+        "18295f08-01b7-4bcf-8ff1-068094858306": "a3d89171-ace3-4bda-888b-0e871b462c75",
+        "c301cc71-91e8-41fc-a08c-04534b67042d": "d362780b-f207-4ccb-a7f2-21a7024772dd",
+        "dab8fdab-6880-4623-b8d7-4112df3d86fc": "155128eb-fb1f-4015-bad8-9e844822fcc0",
+        "20bf578f-cb8d-4008-aa27-1b1c6815ab34": "b391602b-b997-41f9-a024-0d20c5cdb47f",
+        "ae4d4ab2-3acd-4413-b8ae-547d63c8b7f3": "9488d588-e83e-4e27-a650-71fba2c95d1e",
+        "04e8357b-e197-4fb2-9998-91d96f865928": "cc51760d-1760-425b-bcdf-ea19a67f66de",
+        "af7e5a52-dc31-438b-86c1-24ae152ea470": "a89908fd-1fbb-41fb-b5ea-a02a442e46a5",
+        "35b76d20-37bf-4bfe-bdfc-5981261f73fb": "b7045998-ea42-4602-81ca-4f18b984061c"
+      }
+    }
+  ],
+  "SceneProperties": {
+    "NetworkInterpolation": true,
+    "TimeScale": 1,
+    "WantsSystemScene": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": false,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    },
+    "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "71933c4d-1638-4961-96b9-826e109a7d74"
+        }
+      }
+    }
+  },
+  "ResourceVersion": 3,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 3
+}
