@@ -5,6 +5,8 @@ public sealed class GunControl : Component
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
 	[Property] BeamEffect ShootEffect;
+	[Property] GameObject BulletHole;
+	[Property] GameObject BulletSpark;
 	[Property] float ShootCooldown = 0.33f;
 	TimeUntil NextShot;
 
@@ -31,14 +33,19 @@ public sealed class GunControl : Component
 			Log.Info( "Shooting" );
 			Sound.Play( "sounds/bullet-ricochet.sound", TurretRenderer.GetBoneObject( 1 ).WorldPosition );
 
-			// Wenn Maus1 dann BeamSpawnen und  TargetPos setzen 
-			ShootEffect.SpawnBeam();
-			if ( ShootTrace.Hit ) { ShootEffect.TargetPosition = ShootTrace.HitPosition; }
+			// Wenn Maus1 dann TargetPos setzen und Beam Spawnen 
+			if ( ShootTrace.Hit ) 
+			{ 
+				ShootEffect.TargetPosition = ShootTrace.HitPosition;
+				GameObject newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+				GameObject newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+			}
 			else 
 			{ 
 				//ShootEffect.TargetPosition = TurretRenderer.GetBoneObject( 1 ).WorldPosition + TurretRenderer.GetBoneObject( 1 ).WorldRotation.Left * 10000f; 
 				ShootEffect.TargetPosition = ShootTrace.EndPosition;
 			}
+			ShootEffect.SpawnBeam();
 
 			NextShot = ShootCooldown;
 		}

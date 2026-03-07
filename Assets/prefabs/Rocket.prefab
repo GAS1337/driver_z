@@ -240,7 +240,7 @@
                 "ApplyRotation": false,
                 "ApplyShape": true,
                 "Bounce": 1,
-                "Brightness": 1,
+                "Brightness": 10,
                 "Bumpiness": 0,
                 "Collision": false,
                 "CollisionIgnore": null,
@@ -408,7 +408,7 @@
                   "AfterUILayer": false
                 },
                 "RotationOffset": 0,
-                "Scale": 2,
+                "Scale": 5,
                 "Shadows": false,
                 "SortMode": "Unsorted",
                 "Sprite": {

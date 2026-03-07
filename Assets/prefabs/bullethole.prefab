@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "__guid": "7038ff5b-51d7-45d8-b97f-2abf1fba1fb1",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "bullethole",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.Decal",
+        "__guid": "63c7cfe4-e786-42b0-a0b8-a832ad7be612",
+        "__enabled": true,
+        "Flags": 0,
+        "__version": 3,
+        "AttenuationAngle": 0,
+        "ColorMix": 1,
+        "ColorTint": {
+          "Type": "Constant",
+          "Evaluation": "Life",
+          "GradientA": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "GradientB": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "ConstantA": "1,1,1,1",
+          "ConstantB": "1,1,1,1"
+        },
+        "Decals": [
+          "decals/bullethole.decal"
+        ],
+        "Depth": 8,
+        "LifeTime": 0,
+        "Looped": false,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Parallax": 1,
+        "Rotation": {
+          "Type": "Range",
+          "Evaluation": "Seed",
+          "Constants": "0,360,0,0"
+        },
+        "Scale": 1,
+        "SequenceId": 0,
+        "SheetSequence": false,
+        "Size": "1,1",
+        "SortLayer": 0,
+        "Transient": true
+      },
+      {
+        "__type": "TemporaryEffect",
+        "__guid": "afc38f87-2122-4ca3-aa6c-32618a7ab51d",
+        "__enabled": true,
+        "Flags": 0,
+        "BecomeOrphan": false,
+        "DestroyAfterSeconds": 5,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "WaitForChildEffects": false
+      }
+    ],
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
