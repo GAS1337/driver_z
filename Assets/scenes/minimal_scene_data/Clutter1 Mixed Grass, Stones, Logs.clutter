@@ -1,0 +1,143 @@
+{
+  "Entries": [
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_a_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_a_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_b_color1.vmdl",
+      "Weight": 0.57,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_b_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_c_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_c_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_d_color1.vmdl",
+      "Weight": 0.69,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_d_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_e_color1.vmdl",
+      "Weight": 0.47,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_e_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_f_color1.vmdl",
+      "Weight": 0.39,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_f_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_3_o_color1.vmdl",
+      "Weight": 0.1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/rock_3_o_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/survival kit/grass-large.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/survival kit/grass-large.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/survival kit/grass.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/survival kit/grass.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/platformer kit/grass.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/platformer kit/grass.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_singlesided_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_singlesided_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_b_singlesided_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_b_singlesided_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_singlesided_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_singlesided_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_1_d_singlesided_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_1_d_singlesided_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_1_c_singlesided_color1.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_1_c_singlesided_color1.vmdl"
+    },
+    {
+      "Prefab": null,
+      "Model": "models/kaykit_resourcebits_1.0_free/wood_log_a.vmdl",
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "models/kaykit_resourcebits_1.0_free/wood_log_a.vmdl"
+    }
+  ],
+  "IsEmpty": false,
+  "TileSizeEnum": "Size512",
+  "TileRadius": 4,
+  "Scatterer": {
+    "Type": "SimpleScatterer",
+    "Scale": "1 1.2",
+    "Density": 0.5,
+    "PlaceOnGround": true,
+    "HeightOffset": 0,
+    "AlignToNormal": false
+  },
+  "__references": [],
+  "__version": 0
+}
