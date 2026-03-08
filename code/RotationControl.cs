@@ -10,7 +10,7 @@ public sealed class RotationControl : Component
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
-		// DebugOverlay.Trace( groundCheck );
+		DebugOverlay.Trace( groundCheck );
 
 		if ( groundCheck.Hit )
 		{

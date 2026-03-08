@@ -1,4 +1,5 @@
 using Sandbox;
+using System;
 using System.Runtime.CompilerServices;
 
 public sealed class WheelController : Component
@@ -16,8 +17,11 @@ public sealed class WheelController : Component
 	[Property] int FullSpeedAdd = 2000;
 	[Property] int Torque = 300;
 	[Property] int SteeringAngle = 50;
+	[Property] double JumpPower = 0.5f;
+	[Property] int JumpMax = 100000;
 
 	int originalTorque = 0;
+	double JumpCharge;
 
 	protected override void OnEnabled()
 	{
@@ -95,8 +99,12 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Jump" ) ) 
 		{
-			Brake();
-		} 
+			Jump();
+		}
+		if ( Input.Released( "Jump" ) ) 
+		{
+			JumpCharge = 0;
+		}
 
 		if ( Input.Down( "Left" ) ) 
 		{ 
@@ -122,5 +130,15 @@ public sealed class WheelController : Component
 		FrontLeft.SpinMotorSpeed = 0f; FrontRight.SpinMotorSpeed = 0f;
 
 
+	}
+
+	void Jump() 
+	{
+		// downward impulse to use suspension for jump
+		Log.Info( "Jump" );
+		JumpCharge = JumpCharge * 1.15f + JumpPower;
+		JumpCharge = Math.Min(JumpCharge, JumpMax);
+
+		CarBody.ApplyImpulse(CarBody.WorldRotation.Down * (float)JumpCharge);
 	}
 }
