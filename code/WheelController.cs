@@ -106,15 +106,18 @@ public sealed class WheelController : Component
 			JumpCharge = 0;
 		}
 
-		if ( Input.Down( "Left" ) ) 
-		{ 
+		if ( Input.Down( "Left" ) )
+		{
 			FrontLeft.TargetSteeringAngle = SteeringAngle; FrontRight.TargetSteeringAngle = SteeringAngle;
+			RearLeft.TargetSteeringAngle = -SteeringAngle; RearRight.TargetSteeringAngle = -SteeringAngle;
 		}
 		else if ( Input.Down( "Right" ) ) 
-		{ 
+		{
 			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle;
+			RearLeft.TargetSteeringAngle = SteeringAngle; RearRight.TargetSteeringAngle = SteeringAngle;
+
 		}
-		else { FrontLeft.TargetSteeringAngle = 0f; FrontRight.TargetSteeringAngle = 0f; }
+		else { FrontLeft.TargetSteeringAngle = 0f; FrontRight.TargetSteeringAngle = 0f; RearLeft.TargetSteeringAngle = 0f; RearRight.TargetSteeringAngle = 0f; }
 
 
 	}
