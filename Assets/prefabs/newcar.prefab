@@ -3,7 +3,7 @@
     "__guid": "7e60c9af-5288-40f9-bedb-c6dcf35abd30",
     "__version": 2,
     "Flags": 0,
-    "Name": "newcar",
+    "Name": "NewCar",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -263,7 +263,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFL",
-        "Position": "60.99988,60.99987,27",
+        "Position": "61,60.99988,27",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "2,2,2",
         "Tags": "",
@@ -461,7 +461,7 @@
                   "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 2000000,
+                "MaxSteeringTorque": 4000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -475,7 +475,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-20,20",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 7,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-50,50",
                 "TargetSteeringAngle": 0
               }
@@ -535,7 +535,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFR",
-        "Position": "-59.00013,61.00013,27",
+        "Position": "-59.00024,61.00012,27",
         "Rotation": "0,0,0.7071069,0.7071067",
         "Scale": "2,2,2",
         "Tags": "",
@@ -733,7 +733,7 @@
                   "Rotation": "-0.5,0.4999998,-0.5,-0.4999998"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 2000000,
+                "MaxSteeringTorque": 4000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -747,7 +747,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-20,20",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 7,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-50,50",
                 "TargetSteeringAngle": 0
               }
@@ -807,7 +807,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRL",
-        "Position": "60.99989,-61.00013,27",
+        "Position": "61,-61.00012,27",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "2,2,2",
         "Tags": "",
@@ -1005,7 +1005,7 @@
                   "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 2000000,
+                "MaxSteeringTorque": 4000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -1019,7 +1019,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-10,10",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 7,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-50,50",
                 "TargetSteeringAngle": 0
               }
@@ -1079,7 +1079,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRR",
-        "Position": "-59.00013,-60.99987,27",
+        "Position": "-59.00024,-60.99988,27",
         "Rotation": "0,0,0.7071069,0.7071067",
         "Scale": "2,2,2",
         "Tags": "",
@@ -1277,7 +1277,7 @@
                   "Rotation": "-0.5,0.4999999,-0.5,-0.4999999"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 2000000,
+                "MaxSteeringTorque": 4000000,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -1291,7 +1291,7 @@
                 "SteeringHertz": 10,
                 "SteeringLimits": "-10,10",
                 "SuspensionDampingRatio": 1,
-                "SuspensionHertz": 7,
+                "SuspensionHertz": 6,
                 "SuspensionLimits": "-50,50",
                 "TargetSteeringAngle": 0
               }
@@ -1351,7 +1351,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "CarBody",
-        "Position": "0.9998779,0.999878,0",
+        "Position": "1,0.9998779,0",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "1,1,1",
         "Tags": "",
@@ -1420,7 +1420,7 @@
             "__guid": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 5,
+            "AngularDamping": 0.5,
             "EnableImpactDamage": true,
             "EnhancedCcd": false,
             "Gravity": true,
@@ -1435,7 +1435,7 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,40",
+            "MassCenterOverride": "0,0,65",
             "MassOverride": 100,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
