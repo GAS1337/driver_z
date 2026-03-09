@@ -4,10 +4,17 @@ public sealed class RotationControl : Component
 {
 	[Property] Rigidbody CarBody;
 
+	TimeUntil LogSpeed;
+
 	protected override void OnFixedUpdate()
 	{
-		Line VelLine = new Line(CarBody.WorldPosition + Vector3.Up * 100, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 100);
+		Line VelLine = new Line(CarBody.WorldPosition + Vector3.Up * 200, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 200);
 		DebugOverlay.Line( VelLine );
+		if ( LogSpeed )
+		{
+			Log.Info( "Speed/4: " + VelLine.Delta.Length );
+			LogSpeed =+ 1;
+		}
 
 		SceneTraceResult groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 20)
 			.Radius( 1 )
@@ -21,7 +28,7 @@ public sealed class RotationControl : Component
 
 			if ( Input.Down( "Left" ) )
 			{
-				Log.Info(CarBody.Velocity.Length);
+				// Log.Info(CarBody.Velocity.Length);
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
 				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 5000, 0, 40 );
 				Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
