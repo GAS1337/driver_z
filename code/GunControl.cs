@@ -1,4 +1,5 @@
 using Sandbox;
+using System;
 
 public sealed class GunControl : Component
 {
@@ -14,6 +15,9 @@ public sealed class GunControl : Component
 	[Property] float RocketSpeed = 10000f;
 
 	SceneTraceResult ShootTrace;
+
+	GameObject newBulletHole;
+	GameObject newBulletSpark;
 
 	protected override void OnUpdate()
 	{
@@ -33,18 +37,23 @@ public sealed class GunControl : Component
 			Log.Info( "Shooting" );
 			Sound.Play( "sounds/bullet-ricochet.sound", TurretRenderer.GetBoneObject( 1 ).WorldPosition );
 
-			// Wenn Maus1 dann TargetPos setzen und Beam Spawnen 
-			if ( ShootTrace.Hit ) 
-			{ 
+			if ( ShootTrace.Hit )
+			{
 				ShootEffect.TargetPosition = ShootTrace.HitPosition;
-				GameObject newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
-				GameObject newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+
+				newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+				newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+
+				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
+				{
+					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
+				}
 			}
 			else 
 			{ 
-				//ShootEffect.TargetPosition = TurretRenderer.GetBoneObject( 1 ).WorldPosition + TurretRenderer.GetBoneObject( 1 ).WorldRotation.Left * 10000f; 
-				ShootEffect.TargetPosition = ShootTrace.EndPosition;
+				ShootEffect.TargetPosition = ShootTrace.EndPosition; 
 			}
+
 			ShootEffect.SpawnBeam();
 
 			NextShot = ShootCooldown;
@@ -54,7 +63,7 @@ public sealed class GunControl : Component
 		{
 			Log.Info( "Rocket" );
 
-			// 
+			// Rocket
 			LaunchRocket();
 		}
 	}
