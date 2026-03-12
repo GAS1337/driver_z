@@ -129,7 +129,7 @@
               "_type": "gameobject",
               "go": "e4250082-d33a-4de1-9cbd-0ac855f218df"
             },
-            "KnockbackPower": 100000,
+            "KnockbackPower": 40000,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -459,7 +459,7 @@
                                     "TargetColor": "0,1,0,1",
                                     "CacheToDisk": true
                                   },
-                                  "compiled": null
+                                  "compiled": "textures/generated/imagefile/56288c705ab951cc.vtex"
                                 },
                                 "BroadcastMessages": []
                               }

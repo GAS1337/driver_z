@@ -108,37 +108,7 @@
       "__version": 2,
       "__Prefab": "prefabs/newcar.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "a0e3a99f-f154-4e23-9853-784f89e6c693"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
-            },
-            "PreviousElement": {
-              "Type": "Component",
-              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
-            },
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "HealthSystem",
-              "__guid": "a0e3a99f-f154-4e23-9853-784f89e6c693",
-              "__enabled": true,
-              "Flags": 0,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "SetHealth": 1000
-            }
-          }
-        ],
+        "AddedObjects": [],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
@@ -159,6 +129,22 @@
           },
           {
             "Target": {
+              "Type": "Component",
+              "IdValue": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20"
+            },
+            "Property": "MaxDistanceToPlayer",
+            "Value": 1000
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20"
+            },
+            "Property": "ZoomStrength",
+            "Value": 100
+          },
+          {
+            "Target": {
               "Type": "GameObject",
               "IdValue": "d5ffd47e-e53c-45ea-95b4-f343c7e18d67"
             },
@@ -171,7 +157,7 @@
               "IdValue": "078362a0-74db-4fa5-aea5-c4cdc7c1dae9"
             },
             "Property": "Position",
-            "Value": "-59,61,27"
+            "Value": "-59.00024,61,27"
           },
           {
             "Target": {
@@ -187,7 +173,7 @@
               "IdValue": "2ced886c-7734-4831-8108-e1ff4f3fbe25"
             },
             "Property": "Position",
-            "Value": "-59,-61,27"
+            "Value": "-59.00024,-61,27"
           },
           {
             "Target": {
@@ -479,7 +465,7 @@
               "IdValue": "82f7e0b6-6409-44a8-8455-2a667acd7dff"
             },
             "Property": "Position",
-            "Value": "288,-4928,128"
+            "Value": "320,-5824,128"
           },
           {
             "Target": {
@@ -5195,6 +5181,169 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "99451133-9b92-4a84-b5ad-aeea6bd633ef",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "anvil",
+      "Position": "-703.9999,3136,128",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0fed3cad-76a1-43b4-9997-e7b8b62907cd",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/anvil.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "377e69c0-5ec7-4ff4-b324-8e2ac788ffbe",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/anvil.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "6a95b8eb-b08d-4b9b-a1c2-6383f1b514d5",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "rock_1_m_color1",
+      "Position": "5045.795,-8847.383,-319.9999",
+      "Rotation": "0,0,-0.9974844,0.07088242",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d6f491fd-81bd-43a0-9aec-e2d38fbb8f5d",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_1_m_color1.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "b488c494-3507-4843-88c2-e92bd4a5b7ee",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "rock_1_m_color1 (1)",
+      "Position": "6192.542,-9806.783,-319.9997",
+      "Rotation": "0,0,-0.25396,-0.9672142",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "911a93b9-d218-46fc-b4a1-8c0b7fe2b5da",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_forest_nature_pack_1.0_free/rock_1_m_color1.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -5222,7 +5371,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "be20ea9d-1bfd-4dda-9325-c5bf2f3344b5"
+          "$blob": "2b1e8294-4059-4f92-9fd4-146c6d9bcd66"
         }
       }
     }

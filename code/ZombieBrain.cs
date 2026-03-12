@@ -85,7 +85,12 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				Agent.UpdatePosition = false;
 				Agent.SetAgentPosition( Agent.WorldPosition );
 
-				if (KnockBack) 
+				SceneTraceResult groundCheck = Scene.Trace.Ray( Body.WorldPosition + Body.WorldRotation.Up * 10, Body.WorldPosition + Body.WorldRotation.Down * 20 )
+					.Radius( 1 )
+					.IgnoreGameObjectHierarchy( GameObject )
+					.Run();
+
+				if (KnockBack && groundCheck.Hit) 
 				{
 
 					Agent.UpdatePosition = true;

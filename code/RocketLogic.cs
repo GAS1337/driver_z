@@ -24,7 +24,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 			hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 
 			Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
-			Vector3 targetDir = hitBody.WorldPosition - GameObject.WorldPosition;
+			Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
 			hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
 
 			DebugOverlay.Trace( hit );
