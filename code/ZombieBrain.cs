@@ -1,7 +1,7 @@
 using Sandbox;
 using static HealthSystem;
 
-public enum ZombieState { Idle, Approach, Leap }
+public enum ZombieState { Idle, Approach, Leap, Staggered }
 
 public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 {
@@ -13,9 +13,10 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	float DistanceToPlayer;
 
-	ZombieState CurrentState;
+	public ZombieState CurrentState;
 
 	TimeUntil NextFollow;
+	TimeUntil KnockBack;
 
 	protected override void OnStart()
 	{
@@ -33,12 +34,16 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		DistanceToPlayer = (Player.WorldPosition - WorldPosition).Length;
 
 		switch ( CurrentState ) 
-		{ 
+		{
+			default:
+				Agent.Stop();
+				break;
 			case ZombieState.Idle:
 				StateDebugText.Text = "Idle";
 
 				Agent.Stop();
 				if ( DistanceToPlayer < 5000 ) { CurrentState = ZombieState.Approach; }
+				KnockBack = 1f;
 				break;
 
 			case ZombieState.Approach:
@@ -59,6 +64,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 				if ( DistanceToPlayer > 5000 ) { CurrentState = ZombieState.Idle; }
 				if ( DistanceToPlayer < 1000 ) { CurrentState = ZombieState.Leap; }
+				KnockBack = 1f;
 				break;
 
 			case ZombieState.Leap:
@@ -71,6 +77,21 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				Agent.MoveTo( Player.WorldPosition );
 				if ( DistanceToPlayer > 1000 ) { CurrentState = ZombieState.Approach; }
 				NextFollow = FollowCooldown;
+				KnockBack = 1f;
+				break;
+
+			case ZombieState.Staggered:
+				Agent.Stop();
+				Agent.UpdatePosition = false;
+				Agent.SetAgentPosition( Agent.WorldPosition );
+
+				if (KnockBack) 
+				{
+
+					Agent.UpdatePosition = true;
+					CurrentState = ZombieState.Idle;
+				}
+
 				break;
 		}
 

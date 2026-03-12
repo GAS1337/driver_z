@@ -3,7 +3,7 @@
     "__guid": "7e60c9af-5288-40f9-bedb-c6dcf35abd30",
     "__version": 2,
     "Flags": 0,
-    "Name": "NewCar",
+    "Name": "newcar",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -199,7 +199,7 @@
             "RenderTexture": null,
             "TargetEye": "None",
             "Viewport": "0,0,1,1",
-            "ZFar": 30000,
+            "ZFar": 21000,
             "ZNear": 10
           },
           {
@@ -1732,32 +1732,7 @@
                         "Flags": 0,
                         "Additive": false,
                         "Alpha": 1,
-                        "BeamColor": {
-                          "Type": "Constant",
-                          "Evaluation": "Life",
-                          "GradientA": {
-                            "blend": "Linear",
-                            "color": [
-                              {
-                                "t": 0.5,
-                                "c": "1,1,1,1"
-                              }
-                            ],
-                            "alpha": []
-                          },
-                          "GradientB": {
-                            "blend": "Linear",
-                            "color": [
-                              {
-                                "t": 0.5,
-                                "c": "1,1,1,1"
-                              }
-                            ],
-                            "alpha": []
-                          },
-                          "ConstantA": "1,0.53333,0,1",
-                          "ConstantB": "0.93333,1,0,0.4"
-                        },
+                        "BeamColor": "1,0.53333,0,1",
                         "BeamLifetime": 0.02,
                         "BeamsPerSecond": 0,
                         "Brightness": 1,
@@ -1818,7 +1793,8 @@
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "CustomBounds": false
       }
     },
     "__variables": []

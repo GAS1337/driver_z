@@ -61,7 +61,7 @@ public sealed class GunControl : Component
 
 		if ( Input.Pressed( "attack2" ) ) 
 		{
-			Log.Info( "Rocket" );
+			// Log.Info( "Rocket" );
 
 			// Rocket
 			LaunchRocket();

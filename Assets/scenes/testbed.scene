@@ -282,7 +282,7 @@
               "IdValue": "c9b21e74-4814-48fd-814a-26c32a66584a"
             },
             "Property": "Position",
-            "Value": "-4810.08,-2521.142,127.9996"
+            "Value": "-7544.728,-2127.68,127.9996"
           },
           {
             "Target": {
@@ -323,7 +323,7 @@
               "IdValue": "c9b21e74-4814-48fd-814a-26c32a66584a"
             },
             "Property": "Position",
-            "Value": "-3808.91,-5372.575,127.9945"
+            "Value": "-4368.483,-6687.462,127.9945"
           },
           {
             "Target": {
@@ -413,7 +413,7 @@
               "IdValue": "c9b21e74-4814-48fd-814a-26c32a66584a"
             },
             "Property": "Position",
-            "Value": "-2371.539,-1188.884,128.0006"
+            "Value": "-2624,-2368,128"
           },
           {
             "Target": {
@@ -446,7 +446,7 @@
               "IdValue": "a49a30ae-770a-43b5-a2d8-8ba3685c0c33"
             },
             "Property": "Position",
-            "Value": "-42.03229,1528.508,127.9999"
+            "Value": "287.9998,1528.508,127.9999"
           },
           {
             "Target": {
@@ -479,7 +479,7 @@
               "IdValue": "82f7e0b6-6409-44a8-8455-2a667acd7dff"
             },
             "Property": "Position",
-            "Value": "-1650.856,-4408.85,127.9995"
+            "Value": "288,-4928,128"
           },
           {
             "Target": {
@@ -553,7 +553,7 @@
               "IdValue": "7321c877-98de-48a0-a9c8-6e96164caa3d"
             },
             "Property": "Position",
-            "Value": "16.24231,-1992.022,128.0003"
+            "Value": "2424.121,-270.325,128.0003"
           }
         ],
         "MovedObjects": []
@@ -586,7 +586,7 @@
               "IdValue": "7321c877-98de-48a0-a9c8-6e96164caa3d"
             },
             "Property": "Position",
-            "Value": "16.24231,-627.3939,128.0003"
+            "Value": "2424.121,1094.303,128.0003"
           }
         ],
         "MovedObjects": []
@@ -693,7 +693,7 @@
               "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
             },
             "Property": "Position",
-            "Value": "1184,-2368,-32"
+            "Value": "3591.879,-646.303,-32"
           },
           {
             "Target": {
@@ -742,7 +742,7 @@
               "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
             },
             "Property": "Position",
-            "Value": "832,-2368,96"
+            "Value": "3239.879,-646.303,96"
           },
           {
             "Target": {
@@ -791,7 +791,7 @@
               "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
             },
             "Property": "Position",
-            "Value": "544,-2368,288"
+            "Value": "2951.879,-646.303,288"
           },
           {
             "Target": {
@@ -840,7 +840,7 @@
               "IdValue": "3f642ce8-3361-4c6d-8ab5-e7b0c2f11cb3"
             },
             "Property": "Position",
-            "Value": "320,-2368,544"
+            "Value": "2727.879,-646.303,544"
           },
           {
             "Target": {
@@ -881,7 +881,7 @@
               "IdValue": "5cdff1fc-1e96-4a91-8fd2-655a498ad5ef"
             },
             "Property": "Position",
-            "Value": "-3608.625,-3001.78,113.9842"
+            "Value": "-6343.272,-2608.318,113.9842"
           },
           {
             "Target": {
@@ -930,7 +930,7 @@
               "IdValue": "5cdff1fc-1e96-4a91-8fd2-655a498ad5ef"
             },
             "Property": "Position",
-            "Value": "-4948.918,-5120.448,113.984"
+            "Value": "-5508.492,-6435.335,113.984"
           },
           {
             "Target": {
@@ -5213,6 +5213,7 @@
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": "",
+      "CustomBounds": false,
       "BakedDataPath": {
         "$reference_type": "filereference",
         "path": "scenes/testbed_scene_data/navmesh/baked.navdata"
@@ -5221,7 +5222,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "b6523606-6c8e-45c7-b62d-b6365abf3a7d"
+          "$blob": "be20ea9d-1bfd-4dda-9325-c5bf2f3344b5"
         }
       }
     }
