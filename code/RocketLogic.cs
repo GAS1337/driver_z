@@ -15,24 +15,35 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 
 		var ExplosionTrace = Scene.Trace.Sphere( 400, GameObject.WorldPosition, GameObject.WorldPosition )
 			.IgnoreGameObjectHierarchy( this.GameObject )
-			.IgnoreGameObject( this.GameObject )
 			.WithoutTags("ignoreplayer")
-			.WithTag("enemy")	
+			.WithAnyTags("enemy", "carbody")	
 			.RunAll();
 
-		foreach (SceneTraceResult hit in ExplosionTrace)
+		foreach ( SceneTraceResult hit in ExplosionTrace )
 		{
-			hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+			if (hit.GameObject.Tags.Has( "enemy" ))
+			{ 
+				hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 
-			Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
-			Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
-			hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
+				DebugOverlay.Trace( hit );
+				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
+				hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
 
-			DebugOverlay.Trace( hit );
-			Log.Info( hit.GameObject.Name +" - "+ hit.GameObject.Tags.Has( "enemy" ) );
-			hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
+				Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
+				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
+				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
 
-			hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
+				hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
+			}
+			else if ( hit.GameObject.Tags.Has( "carbody" ) )
+			{
+				Rigidbody hitBody = hit.GameObject.GetComponent<Rigidbody>();
+				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
+				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
+
+				hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 75f );
+			}
+
 		}
 
 		GameObject.GetComponent<Rigidbody>().Enabled = false;

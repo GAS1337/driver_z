@@ -1002,91 +1002,10 @@
               "Type": "Component",
               "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
             },
-            "Property": "LeapCooldown",
-            "Value": 3
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
-            },
-            "Property": "LeapFlightTime",
-            "Value": 0.5
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
-            },
             "Property": "Player",
             "Value": {
               "_type": "gameobject",
               "go": "2ef8db7c-1e99-4175-9615-b69051c54679"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
-            },
-            "Property": "Sprite",
-            "Value": {
-              "$compiler": "embed",
-              "$source": null,
-              "data": {
-                "Animations": [
-                  {
-                    "Name": "Default",
-                    "FrameRate": 15,
-                    "Origin": "0.5,0.5",
-                    "LoopMode": "Loop",
-                    "Frames": [
-                      {
-                        "Texture": {
-                          "$compiler": "texture",
-                          "$source": "imagefile",
-                          "data": {
-                            "FilePath": "textures/shapes/circle1.png",
-                            "MaxSize": 4096,
-                            "ConvertHeightToNormals": false,
-                            "NormalScale": 1,
-                            "Rotate": 0,
-                            "FlipVertical": false,
-                            "FlipHorizontal": false,
-                            "Cropping": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "Padding": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "InvertColor": false,
-                            "Tint": "1,1,1,1",
-                            "Blur": 0,
-                            "Sharpen": 0,
-                            "Brightness": 1,
-                            "Contrast": 1,
-                            "Saturation": 1,
-                            "Hue": 0,
-                            "Colorize": false,
-                            "TargetColor": "0,1,0,1",
-                            "CacheToDisk": true
-                          },
-                          "compiled": null
-                        },
-                        "BroadcastMessages": []
-                      }
-                    ]
-                  }
-                ],
-                "__references": null
-              },
-              "compiled": null
             }
           }
         ],
@@ -1139,99 +1058,10 @@
               "Type": "Component",
               "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
             },
-            "Property": "LeapCooldown",
-            "Value": 3
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
-            },
-            "Property": "LeapFlightTime",
-            "Value": 1
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
-            },
-            "Property": "LeapMaxHeightOffset",
-            "Value": 1500
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
-            },
             "Property": "Player",
             "Value": {
               "_type": "gameobject",
               "go": "2ef8db7c-1e99-4175-9615-b69051c54679"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
-            },
-            "Property": "Sprite",
-            "Value": {
-              "$compiler": "embed",
-              "$source": null,
-              "data": {
-                "Animations": [
-                  {
-                    "Name": "Default",
-                    "FrameRate": 15,
-                    "Origin": "0.5,0.5",
-                    "LoopMode": "Loop",
-                    "Frames": [
-                      {
-                        "Texture": {
-                          "$compiler": "texture",
-                          "$source": "imagefile",
-                          "data": {
-                            "FilePath": "textures/shapes/circle1.png",
-                            "MaxSize": 4096,
-                            "ConvertHeightToNormals": false,
-                            "NormalScale": 1,
-                            "Rotate": 0,
-                            "FlipVertical": false,
-                            "FlipHorizontal": false,
-                            "Cropping": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "Padding": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "InvertColor": false,
-                            "Tint": "1,1,1,1",
-                            "Blur": 0,
-                            "Sharpen": 0,
-                            "Brightness": 1,
-                            "Contrast": 1,
-                            "Saturation": 1,
-                            "Hue": 0,
-                            "Colorize": false,
-                            "TargetColor": "0,1,0,1",
-                            "CacheToDisk": true
-                          },
-                          "compiled": null
-                        },
-                        "BroadcastMessages": []
-                      }
-                    ]
-                  }
-                ],
-                "__references": null
-              },
-              "compiled": null
             }
           }
         ],
@@ -5578,7 +5408,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "d95ab286-36f2-4002-b421-c23d030f7de3"
+          "$blob": "674d4979-c1c0-4345-8b42-ae0e1bc1f17d"
         }
       }
     }

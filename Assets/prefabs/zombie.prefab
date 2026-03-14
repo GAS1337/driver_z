@@ -70,7 +70,7 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "65.05404,161.6359,271.5735",
+        "Scale": "100,100,270",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
@@ -94,7 +94,7 @@
         "OnComponentStart": null,
         "OnComponentUpdate": null,
         "Radius": 16,
-        "Separation": 1,
+        "Separation": 0.2,
         "UpdatePosition": true,
         "UpdateRotation": false
       },
@@ -153,8 +153,8 @@
           "go": "b655254f-7b15-4a6d-95de-9498d581256a",
           "component_type": "Rigidbody"
         },
-        "LeapCooldown": 5,
-        "LeapFlightTime": 1.5,
+        "LeapCooldown": 3,
+        "LeapFlightTime": 2,
         "LeapMaxHeightOffset": 800,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -571,7 +571,7 @@
                             "TargetColor": "0,1,0,1",
                             "CacheToDisk": true
                           },
-                          "compiled": null
+                          "compiled": "textures/generated/imagefile/a7827c23328ae86d.vtex"
                         },
                         "BroadcastMessages": []
                       }
