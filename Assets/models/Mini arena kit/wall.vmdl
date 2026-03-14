@@ -46,6 +46,18 @@
 					},
 				]
 			},
+					{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsMeshFromRender"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
@@ -57,4 +69,5 @@
 
 =======
 >>>>>>> 77c8d70b80ae3e33bf1fe0534a013b8e04eb0874
+
 
