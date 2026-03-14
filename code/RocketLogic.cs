@@ -1,4 +1,5 @@
 using Sandbox;
+using System;
 using static ZombieBrain;
 
 public sealed class RocketLogic : Component, Component.ITriggerListener
@@ -29,7 +30,9 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 
 			DebugOverlay.Trace( hit );
 			Log.Info( hit.GameObject.Name +" - "+ hit.GameObject.Tags.Has( "enemy" ) );
-			hit.GameObject.GetComponent<HealthSystem>().Damage(75f);
+			hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
+
+			hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
 		}
 
 		GameObject.GetComponent<Rigidbody>().Enabled = false;

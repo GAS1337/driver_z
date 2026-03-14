@@ -108,7 +108,37 @@
       "__version": 2,
       "__Prefab": "prefabs/newcar.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "04614358-5d90-4c6f-acbe-be4817163e04"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "HealthSystem",
+              "__guid": "04614358-5d90-4c6f-acbe-be4817163e04",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "SetHealth": 2500
+            }
+          }
+        ],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
@@ -133,7 +163,7 @@
               "IdValue": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20"
             },
             "Property": "MaxDistanceToPlayer",
-            "Value": 1000
+            "Value": 8000
           },
           {
             "Target": {
@@ -182,6 +212,14 @@
             },
             "Property": "Position",
             "Value": "1,1,0"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+            },
+            "Property": "Tags",
+            "Value": "carbody"
           }
         ],
         "MovedObjects": []
@@ -949,14 +987,7 @@
       "__Prefab": "prefabs/zombie.prefab",
       "__PrefabInstancePatch": {
         "AddedObjects": [],
-        "RemovedObjects": [
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "250fe245-f7d6-47ab-8712-4318d6b5f908"
-            }
-          }
-        ],
+        "RemovedObjects": [],
         "PropertyOverrides": [
           {
             "Target": {
@@ -964,7 +995,23 @@
               "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
             },
             "Property": "Position",
-            "Value": "-932.673,-3509.614,127.9999"
+            "Value": "-1186.337,-6794.807,127.9999"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "LeapCooldown",
+            "Value": 3
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "LeapFlightTime",
+            "Value": 0.5
           },
           {
             "Target": {
@@ -975,6 +1022,71 @@
             "Value": {
               "_type": "gameobject",
               "go": "2ef8db7c-1e99-4175-9615-b69051c54679"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
+            },
+            "Property": "Sprite",
+            "Value": {
+              "$compiler": "embed",
+              "$source": null,
+              "data": {
+                "Animations": [
+                  {
+                    "Name": "Default",
+                    "FrameRate": 15,
+                    "Origin": "0.5,0.5",
+                    "LoopMode": "Loop",
+                    "Frames": [
+                      {
+                        "Texture": {
+                          "$compiler": "texture",
+                          "$source": "imagefile",
+                          "data": {
+                            "FilePath": "textures/shapes/circle1.png",
+                            "MaxSize": 4096,
+                            "ConvertHeightToNormals": false,
+                            "NormalScale": 1,
+                            "Rotate": 0,
+                            "FlipVertical": false,
+                            "FlipHorizontal": false,
+                            "Cropping": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "Padding": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "InvertColor": false,
+                            "Tint": "1,1,1,1",
+                            "Blur": 0,
+                            "Sharpen": 0,
+                            "Brightness": 1,
+                            "Contrast": 1,
+                            "Saturation": 1,
+                            "Hue": 0,
+                            "Colorize": false,
+                            "TargetColor": "0,1,0,1",
+                            "CacheToDisk": true
+                          },
+                          "compiled": null
+                        },
+                        "BroadcastMessages": []
+                      }
+                    ]
+                  }
+                ],
+                "__references": null
+              },
+              "compiled": null
             }
           }
         ],
@@ -990,9 +1102,12 @@
         "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b": "58043c7c-4272-4371-9ab0-b481e6e6da04",
         "7fc595b5-924a-476f-9449-61e853d1565a": "6b94fd88-89ad-4574-868e-914dc171db76",
         "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa": "0a386d64-42e7-45aa-8b7f-0d0fb1506e6f",
-        "250fe245-f7d6-47ab-8712-4318d6b5f908": "bd015f56-b270-48f8-a82d-caa05f62e78f",
         "48fa4b4a-275d-4270-ab43-cbc7f58a8548": "4e154100-b82e-4132-b565-b2b7706bc3f6",
-        "06704ae1-ff97-4b4e-b87c-47b278914bec": "449aa530-ebd4-4079-a31f-4db6ee134a33"
+        "06704ae1-ff97-4b4e-b87c-47b278914bec": "449aa530-ebd4-4079-a31f-4db6ee134a33",
+        "cc9c3fa5-72e9-4856-a4e0-5807541117f6": "a873f240-2bbd-4ae1-bc71-6e20cd79e889",
+        "bff630d6-06ce-47e7-ba0b-b00481e1537d": "b8ea387a-a9de-4e4b-9cbe-181523d97c9f",
+        "fc9f88c0-1c56-4a16-8045-11795d11f140": "b5b67c12-1dfc-4726-9fef-a31fe4b710fa",
+        "2d4f2f06-b84a-4f40-ac0a-2a071a55cd83": "bfc4b0a9-8e88-4517-9e82-800242e3b28e"
       }
     },
     {
@@ -1017,7 +1132,31 @@
               "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
             },
             "Property": "Position",
-            "Value": "-1632,-3680,128"
+            "Value": "-1885.664,-6965.193,128"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "LeapCooldown",
+            "Value": 3
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "LeapFlightTime",
+            "Value": 1
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "LeapMaxHeightOffset",
+            "Value": 1500
           },
           {
             "Target": {
@@ -1028,6 +1167,71 @@
             "Value": {
               "_type": "gameobject",
               "go": "2ef8db7c-1e99-4175-9615-b69051c54679"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
+            },
+            "Property": "Sprite",
+            "Value": {
+              "$compiler": "embed",
+              "$source": null,
+              "data": {
+                "Animations": [
+                  {
+                    "Name": "Default",
+                    "FrameRate": 15,
+                    "Origin": "0.5,0.5",
+                    "LoopMode": "Loop",
+                    "Frames": [
+                      {
+                        "Texture": {
+                          "$compiler": "texture",
+                          "$source": "imagefile",
+                          "data": {
+                            "FilePath": "textures/shapes/circle1.png",
+                            "MaxSize": 4096,
+                            "ConvertHeightToNormals": false,
+                            "NormalScale": 1,
+                            "Rotate": 0,
+                            "FlipVertical": false,
+                            "FlipHorizontal": false,
+                            "Cropping": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "Padding": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "InvertColor": false,
+                            "Tint": "1,1,1,1",
+                            "Blur": 0,
+                            "Sharpen": 0,
+                            "Brightness": 1,
+                            "Contrast": 1,
+                            "Saturation": 1,
+                            "Hue": 0,
+                            "Colorize": false,
+                            "TargetColor": "0,1,0,1",
+                            "CacheToDisk": true
+                          },
+                          "compiled": null
+                        },
+                        "BroadcastMessages": []
+                      }
+                    ]
+                  }
+                ],
+                "__references": null
+              },
+              "compiled": null
             }
           }
         ],
@@ -1043,9 +1247,12 @@
         "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b": "e665c22e-4247-4d0b-a331-31551c8dfb45",
         "7fc595b5-924a-476f-9449-61e853d1565a": "57ebe0fa-a5f5-4b85-aeaa-2fb452dafbd9",
         "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa": "c876c81a-97ff-42e8-8236-011a3ef08f9f",
-        "250fe245-f7d6-47ab-8712-4318d6b5f908": "f512962e-cde3-4868-a802-956082a7bdf8",
         "48fa4b4a-275d-4270-ab43-cbc7f58a8548": "cc21395e-bf30-4a0c-98a8-7c93b749ca12",
-        "06704ae1-ff97-4b4e-b87c-47b278914bec": "f1a52e34-f8f1-4081-9a35-80de8df1c248"
+        "06704ae1-ff97-4b4e-b87c-47b278914bec": "f1a52e34-f8f1-4081-9a35-80de8df1c248",
+        "cc9c3fa5-72e9-4856-a4e0-5807541117f6": "9515bd94-6057-4c32-8aad-32a5eb7862f3",
+        "bff630d6-06ce-47e7-ba0b-b00481e1537d": "b2dbbb37-bdfa-4019-b9c7-3b7517edc2a7",
+        "fc9f88c0-1c56-4a16-8045-11795d11f140": "6803906f-2411-4578-b85f-0e383be7fc47",
+        "2d4f2f06-b84a-4f40-ac0a-2a071a55cd83": "1b2244a4-da6a-4d9d-b715-89b9eaf684d8"
       }
     },
     {
@@ -5371,7 +5578,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "2b1e8294-4059-4f92-9fd4-146c6d9bcd66"
+          "$blob": "d95ab286-36f2-4002-b421-c23d030f7de3"
         }
       }
     }

@@ -1,7 +1,8 @@
 using Sandbox;
 using System;
+using static HealthSystem;
 
-public sealed class GunControl : Component
+public sealed class GunControl : Component, HealthSystem.IHealthEvent
 {
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
@@ -18,6 +19,11 @@ public sealed class GunControl : Component
 
 	GameObject newBulletHole;
 	GameObject newBulletSpark;
+
+	void IHealthEvent.OnDeath()
+	{
+		Log.Error( "PLAYER DIED" );
+	}
 
 	protected override void OnUpdate()
 	{
@@ -46,6 +52,8 @@ public sealed class GunControl : Component
 
 				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
 				{
+					ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+					ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 				}
 			}

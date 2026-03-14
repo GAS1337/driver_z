@@ -29,6 +29,7 @@ public sealed class OrbitalCameraController : Component
 			.Ray( MainCamera.WorldPosition, Player.WorldPosition + Vector3.Up * VerticalOffset )
 			.Radius(1)
 			.IgnoreGameObjectHierarchy(GameObject) // Ignores itself. Use tags depending on your setup
+			.WithoutTags("enemy")
 			.Run();
 		// DebugOverlay.Trace( checkingSightline );
 
