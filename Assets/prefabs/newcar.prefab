@@ -28,7 +28,7 @@
           "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
           "component_type": "CameraComponent"
         },
-        "MaxDistanceToPlayer": 1600,
+        "MaxDistanceToPlayer": 8000,
         "MinDistanceToPlayer": 400,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -42,7 +42,7 @@
         },
         "TargetDistanceToPlayer": 800,
         "VerticalOffset": 256,
-        "ZoomStrength": 200
+        "ZoomStrength": 100
       },
       {
         "__type": "WheelController",
@@ -154,6 +154,19 @@
           "go": "20bf578f-cb8d-4008-aa27-1b1c6815ab34",
           "component_type": "SkinnedModelRenderer"
         }
+      },
+      {
+        "__type": "HealthSystem",
+        "__guid": "4dc9a492-d691-4b50-903c-a2d1b2800a5c",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "SetHealth": 2500
       }
     ],
     "Children": [
@@ -263,7 +276,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFL",
-        "Position": "61,60.99988,27",
+        "Position": "61,61,27",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "2,2,2",
         "Tags": "",
@@ -535,7 +548,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFR",
-        "Position": "-59.00024,61.00012,27",
+        "Position": "-59.00024,61,27",
         "Rotation": "0,0,0.7071069,0.7071067",
         "Scale": "2,2,2",
         "Tags": "",
@@ -807,7 +820,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRL",
-        "Position": "61,-61.00012,27",
+        "Position": "61,-61,27",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "2,2,2",
         "Tags": "",
@@ -1079,7 +1092,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRR",
-        "Position": "-59.00024,-60.99988,27",
+        "Position": "-59.00024,-61,27",
         "Rotation": "0,0,0.7071069,0.7071067",
         "Scale": "2,2,2",
         "Tags": "",
@@ -1351,10 +1364,10 @@
         "__version": 2,
         "Flags": 0,
         "Name": "CarBody",
-        "Position": "1,0.9998779,0",
+        "Position": "1,1,0",
         "Rotation": "0,0,-0.7071068,0.7071068",
         "Scale": "1,1,1",
-        "Tags": "",
+        "Tags": "carbody",
         "Enabled": true,
         "NetworkMode": 2,
         "NetworkFlags": 0,

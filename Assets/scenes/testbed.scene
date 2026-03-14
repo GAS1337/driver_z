@@ -108,37 +108,7 @@
       "__version": 2,
       "__Prefab": "prefabs/newcar.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "04614358-5d90-4c6f-acbe-be4817163e04"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "7e60c9af-5288-40f9-bedb-c6dcf35abd30"
-            },
-            "PreviousElement": {
-              "Type": "Component",
-              "IdValue": "44e855eb-347f-4d49-9f15-0da429d51db0"
-            },
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "HealthSystem",
-              "__guid": "04614358-5d90-4c6f-acbe-be4817163e04",
-              "__enabled": true,
-              "Flags": 0,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "SetHealth": 2500
-            }
-          }
-        ],
+        "AddedObjects": [],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
@@ -156,70 +126,6 @@
             },
             "Property": "Position",
             "Value": "1472,-9376,192"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20"
-            },
-            "Property": "MaxDistanceToPlayer",
-            "Value": 8000
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20"
-            },
-            "Property": "ZoomStrength",
-            "Value": 100
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d5ffd47e-e53c-45ea-95b4-f343c7e18d67"
-            },
-            "Property": "Position",
-            "Value": "61,61,27"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "078362a0-74db-4fa5-aea5-c4cdc7c1dae9"
-            },
-            "Property": "Position",
-            "Value": "-59.00024,61,27"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "c2caf4bd-c568-4c3d-ab75-2f4a4c37da7b"
-            },
-            "Property": "Position",
-            "Value": "61,-61,27"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "2ced886c-7734-4831-8108-e1ff4f3fbe25"
-            },
-            "Property": "Position",
-            "Value": "-59.00024,-61,27"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-            },
-            "Property": "Position",
-            "Value": "1,1,0"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-            },
-            "Property": "Tags",
-            "Value": "carbody"
           }
         ],
         "MovedObjects": []
@@ -289,7 +195,8 @@
         "e5ee36c8-dd42-42cb-995c-b240545d1be0": "b982e2f2-26f6-48fa-8b03-1a8a24bac470",
         "82cf9a29-ae85-49f9-b4ba-b3c548b5ab29": "c6586e98-9ded-454f-b7a2-a019f927121a",
         "93c80d59-0f4c-455e-82a2-3f34159687de": "b7ed65b4-8655-4afa-8625-18c02323fd65",
-        "cbd4cf96-1339-428c-a57b-d11ec528647d": "aa57aa8a-d457-4c0e-8ea6-7123c5def34b"
+        "cbd4cf96-1339-428c-a57b-d11ec528647d": "aa57aa8a-d457-4c0e-8ea6-7123c5def34b",
+        "4dc9a492-d691-4b50-903c-a2d1b2800a5c": "04614358-5d90-4c6f-acbe-be4817163e04"
       }
     },
     {
@@ -5408,7 +5315,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "674d4979-c1c0-4345-8b42-ae0e1bc1f17d"
+          "$blob": "f1a8b218-4277-4c36-896b-81f7292cf0b0"
         }
       }
     }
