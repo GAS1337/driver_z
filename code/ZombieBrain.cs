@@ -113,7 +113,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				else
 				{
 					Body.SmoothRotate( Rotation.LookAt( Body.WorldPosition + Body.WorldRotation.Forward * 10, Vector3.Up ), 0.5f, 0.01f );
-					DebugOverlay.Sphere(new Sphere(TargetPos, 500 ), Color.Orange );
+					DebugOverlay.Sphere(new Sphere(TargetPos, 300 ), Color.Orange );
 				}
 
 
@@ -158,7 +158,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	}
 	void DoAttack()
 	{
-		var attackTrace = Scene.Trace.Sphere( 500, WorldPosition, WorldPosition )
+		var attackTrace = Scene.Trace.Sphere( 300, WorldPosition, WorldPosition )
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithAllTags( "player", "carbody" )
 						.Run();
