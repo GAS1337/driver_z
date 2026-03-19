@@ -26,11 +26,11 @@ public sealed class WheelController : Component
 	protected override void OnEnabled()
 	{
 		originalTorque = Torque;
-
+		
 		FrontLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
-		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
+		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true; 
 
 	}
 

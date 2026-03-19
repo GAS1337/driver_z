@@ -1,4 +1,5 @@
 using Sandbox;
+using System;
 
 public sealed class RotationControl : Component
 {
@@ -12,15 +13,15 @@ public sealed class RotationControl : Component
 		DebugOverlay.Line( VelLine );
 		if ( LogSpeed )
 		{
-			// Log.Info( "Speed/4: " + VelLine.Delta.Length );
+			Log.Info( "Speed/4: " + VelLine.Delta.Length );
 			LogSpeed =+ 1;
 		}
 
-		SceneTraceResult groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 20)
+		SceneTraceResult groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 35)
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
-		// DebugOverlay.Trace( groundCheck );
+		DebugOverlay.Trace( groundCheck );
 
 		if ( groundCheck.Hit )
 		{
@@ -30,25 +31,29 @@ public sealed class RotationControl : Component
 			{
 				// Log.Info(CarBody.Velocity.Length);
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 5000, 0, 40 );
-				Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
+				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 50 );
+				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate(rot, 1f, Time.Delta); 
 			}
 			else if ( Input.Down( "Right" ) )
 			{
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 40 );
-				Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
+				CarBody.Velocity += (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 50 );
+				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate( rot, 1f, Time.Delta );
 			}
 		}
-		else 
+		else
 		{
-			// CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.01f );
+			if ( CarBody.AngularVelocity.WithFriction( 0.0003f ).Length > 3 )
+			{
+				CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.001f );
+			}
+			else { CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.0003f ); }
 
 			if ( Input.Down( "Forward" ) )
 			{
-				CarBody.AngularVelocity += CarBody.WorldRotation.Right * CarBody.Velocity.Length.Remap( 0, 5000, 0f, 0.3f );
+				// CarBody.AngularVelocity += CarBody.WorldRotation.Right * CarBody.Velocity.Length.Remap( 0, 5000, 0f, 0.3f );
 			}
 
 		}

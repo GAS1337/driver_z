@@ -1,4 +1,4 @@
-﻿<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
 {
 	rootNode = 
 	{
@@ -11,9 +11,15 @@
 				[
 					{
 						_class = "DefaultMaterialGroup"
-						remaps = [  ]
+						remaps = 
+						[
+							{
+								from = "dark.vmat"
+								to = "materials/resource_bits_texture.vmat"
+							},
+						]
 						use_global_default = true
-						global_default_material = "materials/Space kit colormap.vmat"
+						global_default_material = "materials/dev/sculpting_phong1.vmat"
 					},
 				]
 			},
@@ -33,27 +39,9 @@
 						parent_bone = ""
 						import_filter = 
 						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"turret_single",
-								"turret",
-								"Group",
-								"Group1",
-							]
+							exclude_by_default = false
+							exception_list = [  ]
 						}
-					},
-				]
-			},
-					{
-				_class = "PhysicsShapeList"
-				children = 
-				[
-					{
-						_class = "PhysicsMeshFromRender"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
 					},
 				]
 			},
@@ -64,4 +52,3 @@
 		base_model_name = ""
 	}
 }
-
