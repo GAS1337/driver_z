@@ -14,6 +14,8 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description( "Units one step zooms" )] int ZoomStrength = 200;
 	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 25;
 
+	[Property] SpriteRenderer CrosshairSprite;
+
 	float Pitch = 30;
 	float Yaw = 90;
 
@@ -62,6 +64,9 @@ public sealed class OrbitalCameraController : Component
 		// Apply Position and Rotation
 		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * VerticalOffset - rotation.Forward * DistanceToPlayer; 
 		MainCamera.WorldRotation = rotation;
+
+		// 1000 is distance of crosshair to player, VerticalOffset/2
+		CrosshairSprite.WorldPosition = Player.WorldPosition + Vector3.Up * VerticalOffset/2 + new Vector3(rotation.Forward.x, rotation.Forward.y, 0 ).Normal * 2000; 
 		
 	}
 }

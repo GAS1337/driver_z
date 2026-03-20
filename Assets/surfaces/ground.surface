@@ -2,7 +2,7 @@
   "BaseSurface": "surfaces/default.surface",
   "AudioSurface": "Leather",
   "Description": "",
-  "Friction": 1,
+  "Friction": 0.7994792,
   "Elasticity": 0,
   "Density": 715,
   "RollingResistance": 0.2,

@@ -6,6 +6,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 {
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
+	[Property] SpriteRenderer CrosshairSprite;
 	[Property] BeamEffect ShootEffect;
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
@@ -28,12 +29,12 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	protected override void OnUpdate()
 	{
 		// Wo man hinaimed
-		Ray CameraRay = Scene.Camera.ScreenPixelToRay( new Vector2( Screen.Width * 0.5f, Screen.Height * 0.5f ) );
+		Ray CameraRay = new Ray(TurretRenderer.WorldPosition, CrosshairSprite.WorldPosition - TurretRenderer.WorldPosition );
 		ShootTrace = Scene.Trace.Ray( CameraRay, 10000f )
 			.Radius( 8 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
-		DebugOverlay.Trace( ShootTrace );
+		// DebugOverlay.Trace( ShootTrace );
 
 		// Turret Yaw mit Camera Yaw mitdrehen
 		TurretRenderer.GetBoneObject( 1 ).WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Right, Vector3.Up );
