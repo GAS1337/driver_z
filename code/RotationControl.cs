@@ -5,6 +5,11 @@ public sealed class RotationControl : Component
 {
 	[Property] Rigidbody CarBody;
 
+	[Property] WheelJoint FrontLeft;
+	[Property] WheelJoint FrontRight;
+	[Property] WheelJoint RearLeft;
+	[Property] WheelJoint RearRight;
+
 	TimeUntil LogSpeed;
 
 	protected override void OnFixedUpdate()
@@ -31,23 +36,23 @@ public sealed class RotationControl : Component
 			{
 				// Log.Info(CarBody.Velocity.Length);
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 50 );
+				CarBody.Velocity += (CarBody.WorldRotation.Right) * RearLeft.SpinSpeed.Remap( 0, 6000, 0, 50 );
 				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate(rot, 1f, Time.Delta); 
 			}
 			else if ( Input.Down( "Right" ) )
 			{
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 5000, 0, 50 );
+				CarBody.Velocity += (CarBody.WorldRotation.Left) * RearRight.SpinSpeed.Remap( 0, 6000, 0, 50 );
 				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate( rot, 1f, Time.Delta );
 			}
 		}
 		else
 		{
-			if ( CarBody.AngularVelocity.WithFriction( 0.0003f ).Length > 3 )
+			if ( CarBody.AngularVelocity.WithFriction( 0.0003f ).Length > 2 )
 			{
-				CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.001f );
+				CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.0015f );
 			}
 			else { CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.0003f ); }
 

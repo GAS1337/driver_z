@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Audio;
 using System;
 using System.Runtime.CompilerServices;
 
@@ -6,11 +7,10 @@ public sealed class WheelController : Component
 {
 	[Property] Rigidbody CarBody;
 
-	[Property] WheelJoint FrontLeft;
-	[Property] WheelJoint FrontRight;
-	[Property] WheelJoint RearLeft;
-	[Property] WheelJoint RearRight;
-
+	[Property] public WheelJoint FrontLeft;
+	[Property] public WheelJoint FrontRight;
+	[Property] public WheelJoint RearLeft;
+	[Property] public WheelJoint RearRight;
 
 	[Property] bool FourWheelDrive = true;
 	[Property] int Speed = 2000;
@@ -27,10 +27,12 @@ public sealed class WheelController : Component
 	{
 		originalTorque = Torque;
 		
+		// CarBody.EnhancedCcd = true;
+
 		FrontLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
-		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true; 
+		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 
 	}
 
@@ -42,36 +44,30 @@ public sealed class WheelController : Component
 		FrontRight.MaxSpinTorque = originalTorque;
 
 		int slowingfactor = 500;
-
-		if ( Input.Down( "Forward" ) )
+		if ( Input.Down( "Forward" ) && Input.Down( "Run" ) )
 		{
-			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp(0, Speed);
+			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
+			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
+
+			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
+			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
+		}
+		else if ( Input.Down( "Forward" ) )
+		{
+			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
 			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-			if ( Input.Down( "Run" ) ) 
-			{
-				RearLeft.SpinMotorSpeed += FullSpeedAdd;
-				RearRight.SpinMotorSpeed += FullSpeedAdd;
-			}
-			if ( !FourWheelDrive ) return;
 
 			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
 			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-			if ( Input.Down( "Run" ) )
-			{
-				FrontLeft.SpinMotorSpeed += FullSpeedAdd;
-				FrontRight.SpinMotorSpeed += FullSpeedAdd;
-			}
-			
 		}
 		else if ( Input.Down( "Backward" ) )
 		{
 			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
 			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-			if ( FourWheelDrive )
-			{
-				FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-				FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-			}
+
+			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
+			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
+
 		}
 		else {
 
@@ -108,12 +104,12 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Left" ) )
 		{
-			FrontLeft.TargetSteeringAngle = SteeringAngle; FrontRight.TargetSteeringAngle = SteeringAngle;
+			FrontLeft.TargetSteeringAngle = SteeringAngle + 4; FrontRight.TargetSteeringAngle = SteeringAngle;
 			RearLeft.TargetSteeringAngle = -SteeringAngle; RearRight.TargetSteeringAngle = -SteeringAngle;
 		}
 		else if ( Input.Down( "Right" ) ) 
 		{
-			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle;
+			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle - 4;
 			RearLeft.TargetSteeringAngle = SteeringAngle; RearRight.TargetSteeringAngle = SteeringAngle;
 
 		}
