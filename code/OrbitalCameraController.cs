@@ -14,16 +14,18 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description( "Units one step zooms" )] int ZoomStrength = 200;
 	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 25;
 
-	[Property] SpriteRenderer CrosshairSprite;
+	[Property] Decal CrosshairSprite;
 
+	float crosshairPitch = 0;
 	float Pitch = 30;
-	float Yaw = 90;
+	float Yaw = 180;
 
 	protected override void OnUpdate()
 	{
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
-		Pitch = (Pitch + mouseMove.pitch).Clamp( -25, 85 ); // Up&Down clamped in degrees
+		Pitch = (Pitch + mouseMove.pitch).Clamp( 15, 15 );
+		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 10, -15 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 
@@ -66,7 +68,13 @@ public sealed class OrbitalCameraController : Component
 		MainCamera.WorldRotation = rotation;
 
 		// 1000 is distance of crosshair to player, VerticalOffset/2
-		CrosshairSprite.WorldPosition = Player.WorldPosition + Vector3.Up * VerticalOffset/2 + new Vector3(rotation.Forward.x, rotation.Forward.y, 0 ).Normal * 2000; 
-		
+		Rotation rot = rotation.Angles().WithPitch( crosshairPitch );
+		Vector3 crosshairDir = Player.WorldPosition + Vector3.Up * VerticalOffset/2 + new Vector3(rot.Forward.x, rot.Forward.y, rot.Forward.z ).Normal * 18000;
+		SceneTraceResult crosshairCheck = Scene.Trace
+			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset / 2,  crosshairDir )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+		CrosshairSprite.WorldPosition = crosshairCheck.EndPosition;
+		CrosshairSprite.WorldRotation = Rotation.LookAt( crosshairCheck.Normal, Vector3.Up );
 	}
 }
