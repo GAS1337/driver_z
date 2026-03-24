@@ -65,8 +65,8 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "SkyIndirectLighting": true,
-          "SkyMaterial": "materials/skybox/skybox_sunrise_01.vmat",
-          "Tint": "0.33482,0.93488,0.83487,1"
+          "SkyMaterial": "materials/skybox/nightskyskybox.vmat",
+          "Tint": "0.4178,0.54884,0.40844,1"
         },
         {
           "__type": "Sandbox.EnvmapProbe",
@@ -74,7 +74,7 @@
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "BakedTexture": null,
+          "BakedTexture": "scenes/lobby_scene_data/envmap/bake_0e6e105b-cd09-49d4-aab0-09131716d71c.vtex",
           "Bounds": {
             "Mins": "-42673.62,-27774.79,-512",
             "Maxs": "26016.42,26518.43,5235.865"
@@ -83,7 +83,7 @@
           "Feathering": 0.02,
           "FrameInterval": 5,
           "MaxDistance": 512,
-          "Mode": "CustomTexture",
+          "Mode": "Baked",
           "MultiBounce": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -92,7 +92,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Priority": 0,
-          "Projection": "Sphere",
+          "Projection": "Box",
           "Resolution": "Small",
           "Texture": "textures/cubemaps/default2.vtex",
           "TintColor": "1,1,1,1",
@@ -135,9 +135,9 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "Sky": "materials/skybox/skybox_sunrise_01.vmat",
+              "Sky": "materials/skybox/nightskyskybox.vmat",
               "StartDistance": 0,
-              "Tint": "0.88837,0.88837,0.88837,1"
+              "Tint": "0.37209,0.37209,0.37209,1"
             }
           ],
           "Children": []
@@ -174,7 +174,7 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "Strength": 0.01
+              "Strength": 0.15
             }
           ],
           "Children": []
@@ -196,28 +196,14 @@
             },
             "Property": "Position",
             "Value": "-3744,416,160"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "003c4b3e-6884-43a6-afb4-bc92f479632d"
-            },
-            "Property": "Scale",
-            "Value": "34,1,1"
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
         "7e60c9af-5288-40f9-bedb-c6dcf35abd30": "2300dcc6-82ac-4241-943a-e3e0adb966d1",
-        "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20": "fd119cb0-f9bb-4218-b30f-e1b73264aef8",
         "c86ccdc8-e5b2-45ad-b244-1303668782a4": "51d68d38-abf5-416e-9cb0-e4e1779c8eb4",
         "68d3e1d8-4f5a-453e-8b52-7c38cc29a320": "e88d5337-f7bd-453f-88a3-ca809d62c64a",
-        "b96d3897-f570-433d-ba9b-47fca7b01d3e": "9eb0996d-3830-47c9-9f05-18834f772ea5",
-        "781863f3-a639-41e1-8c9e-d406498701f2": "14f4ef9f-0f30-42ca-b42d-17f7e16c581f",
-        "95da7616-5ca5-40b7-8b9b-1251089d669b": "e5caf2c5-0279-4ba6-b91d-13a32bdf222b",
-        "edf84b48-dce5-47f5-b9f8-8761da9892ed": "9a2bbfa6-9829-4907-93d4-b76a1b7152ef",
-        "a402bf15-1063-4786-9efa-7a6194b98bee": "85152611-c2bb-4b38-bb5b-d9ac545360c8",
         "d5ffd47e-e53c-45ea-95b4-f343c7e18d67": "d83de34a-ce83-49e6-adfa-cbdaf950f10b",
         "b9f69343-c306-48c0-9511-9829a6afe904": "93b1d8a1-42ff-4eff-8c3d-a3e56d2fad77",
         "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117": "df777b0d-b2fa-4063-b38f-81622fb11867",
@@ -264,7 +250,16 @@
         "93c80d59-0f4c-455e-82a2-3f34159687de": "ac501814-0bb3-4a11-9b71-43baeeef3b49",
         "cbd4cf96-1339-428c-a57b-d11ec528647d": "25875445-3819-466f-ad41-c5435b75d9ad",
         "4dc9a492-d691-4b50-903c-a2d1b2800a5c": "927fbfa7-c9ef-4d51-9556-ba6caae1fd03",
-        "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927": "69f8fd6d-48bf-42ab-8c7e-a683a98fe6e2"
+        "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927": "69f8fd6d-48bf-42ab-8c7e-a683a98fe6e2",
+        "3d2b4f42-39de-4a22-891d-2d35f74fd202": "e70a1559-6d3d-46a6-8c8c-07a9bcc5dc9b",
+        "b1df2d54-9a3e-43da-9db9-ca17189eb6cd": "546c1dbc-ab05-45d2-841d-9441a64236ca",
+        "23d4cf70-a2a0-4333-b62b-d29218488362": "9eb0996d-3830-47c9-9f05-18834f772ea5",
+        "fa5350ed-5ff6-4820-8eec-132353bdb525": "2f268941-7d59-4281-afbe-3b715d003e92",
+        "053cb736-d66b-4018-86f7-d48df51a857f": "d6867147-76a5-49ef-8491-664089db2876",
+        "0228bab7-3855-4e03-9885-0f2e8b9f1604": "14f4ef9f-0f30-42ca-b42d-17f7e16c581f",
+        "6c6f6733-fc7e-41ea-8997-b0edd0451d36": "e5caf2c5-0279-4ba6-b91d-13a32bdf222b",
+        "0f8df567-efaa-4065-afb8-d8081121384e": "9a2bbfa6-9829-4907-93d4-b76a1b7152ef",
+        "6bcecf9c-58df-4f93-baef-b003e8869afa": "85152611-c2bb-4b38-bb5b-d9ac545360c8"
       }
     },
     {
@@ -762,7 +757,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -833,7 +828,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -904,7 +899,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -975,7 +970,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1046,7 +1041,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1117,7 +1112,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1188,7 +1183,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1259,7 +1254,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1330,7 +1325,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1401,7 +1396,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1472,7 +1467,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1543,7 +1538,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1614,7 +1609,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1685,7 +1680,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1756,7 +1751,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1827,7 +1822,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1898,7 +1893,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -1969,7 +1964,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2040,7 +2035,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2111,7 +2106,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2182,7 +2177,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2253,7 +2248,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2324,7 +2319,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2395,7 +2390,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2466,7 +2461,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2537,7 +2532,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2608,7 +2603,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2679,11 +2674,224 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "928c2be0-7079-4e24-8110-24c6c2fe1449",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "ColliderFlags": 0,
+                  "Elasticity": null,
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "RollingResistance": null,
+                  "Static": true,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "89947c05-3e6b-4d00-ae3c-bb2758ec65c0",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "cliff_half_rock",
+              "Position": "-51.84,3.136077,11.776",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2411b68f-adfa-4830-a568-729efefa4cf9",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Materials": null,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.57209,0.57209,0.57209,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "9356b97a-861b-4ef7-8ec4-5de1a0a5bf7e",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "ColliderFlags": 0,
+                  "Elasticity": null,
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "RollingResistance": null,
+                  "Static": true,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "1ff7dfcb-0f0d-4623-a90f-4a0030094f6a",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "cliff_half_rock",
+              "Position": "-53.44001,-7.487924,11.584",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4d6ce38a-ec78-43a4-bfae-d2c4404b9896",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Materials": null,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.57209,0.57209,0.57209,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "a9de3175-6a5e-4ff7-b6f7-a53538f1c0e1",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "ColliderFlags": 0,
+                  "Elasticity": null,
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "RollingResistance": null,
+                  "Static": true,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "2f0b71ce-c944-4c7d-881e-6fd19ba4fd7d",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "cliff_half_rock",
+              "Position": "-51.96799,-17.98394,11.84",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ca1a3027-c58a-4a75-bb65-49854628bc4e",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Materials": null,
+                  "Model": "models/nature kit/cliff_half_rock.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "0.57209,0.57209,0.57209,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "c05d9685-e0e9-457c-925b-cbfc6d373d81",
                   "__enabled": true,
                   "Flags": 0,
                   "ColliderFlags": 0,
@@ -2750,7 +2958,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2821,7 +3029,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2892,7 +3100,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2963,7 +3171,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3034,7 +3242,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3105,7 +3313,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3176,7 +3384,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3247,7 +3455,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3318,7 +3526,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3344,144 +3552,6 @@
                   "Static": true,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
-                }
-              ],
-              "Children": []
-            },
-            {
-              "__guid": "88189406-39cb-45b2-bc19-816f3ed97527",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "wall",
-              "Position": "-55.872,-7.36,11.2",
-              "Rotation": "0,0,0,1",
-              "Scale": "0.1,0.12,0.1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "4c9b9aff-fe20-49aa-92e1-67075f886912",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "BodyGroups": 18446744073709551615,
-                  "CreateAttachments": false,
-                  "LodOverride": null,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Materials": null,
-                  "Model": "models/mini arena kit/wall.vmdl",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ],
-              "Children": []
-            },
-            {
-              "__guid": "89ed07d2-6b73-440a-8bfd-a18374ae665f",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "wall",
-              "Position": "-55.872,-17.98419,11.2",
-              "Rotation": "0,0,1.000001,-0.000001505017",
-              "Scale": "0.1,0.1,0.1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "1e6bb46c-1be9-4175-90ae-2b7b753f9d27",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "BodyGroups": 18446744073709551615,
-                  "CreateAttachments": false,
-                  "LodOverride": null,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Materials": null,
-                  "Model": "models/mini arena kit/wall.vmdl",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ],
-              "Children": []
-            },
-            {
-              "__guid": "fef3a27d-e001-47c9-9a59-5900373ded02",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "wall",
-              "Position": "-55.87207,3.647859,11.2",
-              "Rotation": "0,0,1.000001,-0.000001505017",
-              "Scale": "0.1,0.1,0.1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "25723f4c-15a9-476f-a9c2-2f3911d89ef9",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "BodyGroups": 18446744073709551615,
-                  "CreateAttachments": false,
-                  "LodOverride": null,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Materials": null,
-                  "Model": "models/mini arena kit/wall.vmdl",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
                 }
               ],
               "Children": []
@@ -3527,7 +3597,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3598,7 +3668,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3669,7 +3739,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3740,7 +3810,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3811,7 +3881,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3882,7 +3952,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3953,7 +4023,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -4024,7 +4094,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -4095,7 +4165,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -4166,7 +4236,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -4237,7 +4307,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "0.22349,0.43256,0,1"
+                  "Tint": "0.57209,0.57209,0.57209,1"
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -10506,7 +10576,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "b3e518c9-9c8c-45f0-b0c1-b3d6b80014ae"
+          "$blob": "94ce1f82-0f04-4491-8a8a-c97873d6691e"
         }
       }
     }

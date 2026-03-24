@@ -4,6 +4,7 @@ using System;
 public sealed class OrbitalCameraController : Component
 {
 	[Property, Description("Camera to control")] CameraComponent MainCamera;
+	[Property] GameObject CameraSocket;
 	[Property, Description("Player to follow")] GameObject Player;
 
 	[Property, Description( "Starting distance" )] int TargetDistanceToPlayer = 2000;
@@ -24,8 +25,8 @@ public sealed class OrbitalCameraController : Component
 	{
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
-		Pitch = (Pitch + mouseMove.pitch).Clamp( 15, 15 );
-		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 10, -15 ); // Up&Down clamped in degrees
+		Pitch = (Pitch + mouseMove.pitch).Clamp( 5, 5 );
+		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 3, -5 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 
@@ -64,8 +65,9 @@ public sealed class OrbitalCameraController : Component
 		}
 
 		// Apply Position and Rotation
-		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * VerticalOffset - rotation.Forward * DistanceToPlayer; 
+		MainCamera.WorldPosition = Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * 80 - rotation.Forward * DistanceToPlayer; 
 		MainCamera.WorldRotation = rotation;
+		
 
 		// 1000 is distance of crosshair to player, VerticalOffset/2
 		Rotation rot = rotation.Angles().WithPitch( crosshairPitch );

@@ -16,41 +16,6 @@
     "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "OrbitalCameraController",
-        "__guid": "aee2c23f-aa9b-4222-82a0-1b3b0bf73d20",
-        "__enabled": true,
-        "Flags": 0,
-        "AutoZoomStrength": 25,
-        "CrosshairSprite": {
-          "_type": "component",
-          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "Decal"
-        },
-        "DistanceToPlayer": 2000,
-        "MainCamera": {
-          "_type": "component",
-          "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
-          "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
-          "component_type": "CameraComponent"
-        },
-        "MaxDistanceToPlayer": 2000,
-        "MinDistanceToPlayer": 1500,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "Player": {
-          "_type": "gameobject",
-          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-        },
-        "TargetDistanceToPlayer": 2000,
-        "VerticalOffset": 256,
-        "ZoomStrength": 100
-      },
-      {
         "__type": "WheelController",
         "__guid": "c86ccdc8-e5b2-45ad-b244-1303668782a4",
         "__enabled": true,
@@ -162,8 +127,8 @@
         },
         "MainCamera": {
           "_type": "component",
-          "component_id": "781863f3-a639-41e1-8c9e-d406498701f2",
-          "go": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
+          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
+          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
           "component_type": "CameraComponent"
         },
         "OnComponentDestroy": null,
@@ -225,16 +190,55 @@
         "OnComponentUpdate": null,
         "ReifenSound": "sounds/reifen.sound",
         "VollGasSound": "sounds/engine 2.sound"
+      },
+      {
+        "__type": "OrbitalCameraController",
+        "__guid": "053cb736-d66b-4018-86f7-d48df51a857f",
+        "__enabled": true,
+        "Flags": 0,
+        "AutoZoomStrength": 25,
+        "CameraSocket": {
+          "_type": "gameobject",
+          "go": "fa5350ed-5ff6-4820-8eec-132353bdb525"
+        },
+        "CrosshairSprite": {
+          "_type": "component",
+          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
+          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
+          "component_type": "Decal"
+        },
+        "DistanceToPlayer": 400,
+        "MainCamera": {
+          "_type": "component",
+          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
+          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
+          "component_type": "CameraComponent"
+        },
+        "MaxDistanceToPlayer": 450,
+        "MinDistanceToPlayer": 100,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Player": {
+          "_type": "gameobject",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+        },
+        "TargetDistanceToPlayer": 400,
+        "VerticalOffset": 170,
+        "ZoomStrength": 0
       }
     ],
     "Children": [
       {
-        "__guid": "b96d3897-f570-433d-ba9b-47fca7b01d3e",
+        "__guid": "23d4cf70-a2a0-4333-b62b-d29218488362",
         "__version": 2,
         "Flags": 0,
         "Name": "Camera",
-        "Position": "-1005.714,0,365.7141",
-        "Rotation": "0,0,0,1",
+        "Position": "1823.999,0.0006408691,528.0001",
+        "Rotation": "0,0,-1,0.0000003129244",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -246,7 +250,7 @@
         "Components": [
           {
             "__type": "Sandbox.CameraComponent",
-            "__guid": "781863f3-a639-41e1-8c9e-d406498701f2",
+            "__guid": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
             "__enabled": true,
             "Flags": 0,
             "BackgroundColor": "0.33333,0.46275,0.52157,1",
@@ -275,7 +279,7 @@
           },
           {
             "__type": "Sandbox.Bloom",
-            "__guid": "95da7616-5ca5-40b7-8b9b-1251089d669b",
+            "__guid": "6c6f6733-fc7e-41ea-8997-b0edd0451d36",
             "__enabled": true,
             "Flags": 0,
             "__version": 1,
@@ -294,7 +298,7 @@
           },
           {
             "__type": "Sandbox.Tonemapping",
-            "__guid": "edf84b48-dce5-47f5-b9f8-8761da9892ed",
+            "__guid": "0f8df567-efaa-4065-afb8-d8081121384e",
             "__enabled": true,
             "Flags": 0,
             "__version": 3,
@@ -314,7 +318,7 @@
           },
           {
             "__type": "Sandbox.Sharpen",
-            "__guid": "a402bf15-1063-4786-9efa-7a6194b98bee",
+            "__guid": "6bcecf9c-58df-4f93-baef-b003e8869afa",
             "__enabled": true,
             "Flags": 0,
             "OnComponentDestroy": null,
@@ -1479,6 +1483,24 @@
                 ]
               }
             ]
+          },
+          {
+            "__guid": "fa5350ed-5ff6-4820-8eec-132353bdb525",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "CameraSocket",
+            "Position": "1823.999,0.0006408691,528.0001",
+            "Rotation": "0,0,-1,0.0000003129244",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
           }
         ]
       },
@@ -1489,7 +1511,7 @@
         "Name": "Crosshair",
         "Position": "2102.856,0,0",
         "Rotation": "0,0,0,1",
-        "Scale": "20,1,1",
+        "Scale": "34,1,1",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -1586,7 +1608,7 @@
               "Evaluation": "Seed",
               "Constants": "0,360,0,0"
             },
-            "Scale": 10,
+            "Scale": 3,
             "SequenceId": 0,
             "SheetSequence": false,
             "Size": "1,1",
@@ -1693,7 +1715,7 @@
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
                 "Opaque": false,
-                "Scale": 3,
+                "Scale": 0.5,
                 "Shadows": false,
                 "TargetGameObject": {
                   "_type": "gameobject",

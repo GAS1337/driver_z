@@ -14,7 +14,7 @@ public sealed class RotationControl : Component
 
 	protected override void OnFixedUpdate()
 	{
-		Line VelLine = new Line(CarBody.WorldPosition + Vector3.Up * 200, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 200);
+		Line VelLine = new Line(CarBody.WorldPosition + Vector3.Up * 100, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 100);
 		DebugOverlay.Line( VelLine );
 		if ( LogSpeed )
 		{

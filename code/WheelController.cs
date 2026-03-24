@@ -95,7 +95,7 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Jump" ) ) 
 		{
-			Jump();
+			Brake();
 		}
 		if ( Input.Released( "Jump" ) ) 
 		{
