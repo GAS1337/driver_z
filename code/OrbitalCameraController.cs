@@ -34,7 +34,7 @@ public sealed class OrbitalCameraController : Component
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
 		Pitch = (Pitch + mouseMove.pitch).Clamp( 5, 5 );
-		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 3, -5 ); // Up&Down clamped in degrees
+		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 8, -8 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 

@@ -1,18 +1,21 @@
 {
   "UI": false,
-  "Volume": "1",
-  "Pitch": "0.75000024 1",
+  "Volume": "1.5 2",
+  "Pitch": "0.8 1",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/mediumexplosion.vsnd"
+    "sounds/impacts/bullets/bullet-impact-clothflesh-1.vsnd",
+    "sounds/impacts/bullets/bullet-impact-clothflesh-2.vsnd",
+    "sounds/impacts/bullets/bullet-impact-clothflesh-3.vsnd",
+    "sounds/impacts/bullets/bullet-impact-clothflesh-4.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
-  "Distance": 28000,
+  "Distance": 27109,
   "Falloff": [
     {
       "x": 0,

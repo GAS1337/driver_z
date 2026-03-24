@@ -39,7 +39,7 @@ public sealed class RotationControl : Component
 				// Log.Info(CarBody.Velocity.Length);
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
 				cheatSteering = (CarBody.WorldRotation.Right) * RearLeft.SpinSpeed.Remap( 0, 6000, 0, 40 );
-				if ( RearLeft.SpinSpeed > 180 )
+				if ( RearLeft.SpinSpeed > 360 )
 				{
 					cheatSteering = (CarBody.WorldRotation.Right) * (RearLeft.SpinSpeed.Remap( 0, 6000, 0, 40 ) + FrontLeft.TargetSteeringAngle);
 				}
@@ -51,7 +51,7 @@ public sealed class RotationControl : Component
 			{
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
 				cheatSteering = (CarBody.WorldRotation.Left) * RearRight.SpinSpeed.Remap( 0, 6000, 0, 40 );
-				if (RearRight.SpinSpeed > 180 ) 
+				if (RearRight.SpinSpeed > 360 ) 
 				{
 					cheatSteering = (CarBody.WorldRotation.Left) * (RearRight.SpinSpeed.Remap( 0, 6000, 0, 40 ) + -FrontRight.TargetSteeringAngle);
 				}

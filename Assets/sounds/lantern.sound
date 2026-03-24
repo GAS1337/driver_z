@@ -39,8 +39,8 @@
     }
   ],
   "DefaultMixer": {
-    "Name": "unknown",
-    "Id": "00000000-0000-0000-0000-000000000000"
+    "Name": "music",
+    "Id": "3c57e209-22ab-4e72-a196-b495979ffc69"
   },
   "__references": [
     "deltarune.empty_town#112066",
