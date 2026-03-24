@@ -10,6 +10,8 @@ public sealed class RotationControl : Component
 	[Property] WheelJoint RearLeft;
 	[Property] WheelJoint RearRight;
 
+	public SceneTraceResult groundCheck;
+
 	TimeUntil LogSpeed;
 
 	protected override void OnFixedUpdate()
@@ -22,7 +24,7 @@ public sealed class RotationControl : Component
 			LogSpeed =+ 1;
 		}
 
-		SceneTraceResult groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 35)
+		groundCheck = Scene.Trace.Ray( CarBody.WorldPosition + CarBody.WorldRotation.Up * 10, CarBody.WorldPosition + CarBody.WorldRotation.Down * 35)
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
@@ -31,19 +33,29 @@ public sealed class RotationControl : Component
 		if ( groundCheck.Hit )
 		{
 			// CarBody.WorldRotation = CarBody.WorldRotation.Angles().WithRoll( CarBody.WorldRotation.Roll() / 1.5f );
-
+			Vector3 cheatSteering;
 			if ( Input.Down( "Left" ) )
 			{
 				// Log.Info(CarBody.Velocity.Length);
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Up * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Right) * RearLeft.SpinSpeed.Remap( 0, 6000, 0, 65 );
+				cheatSteering = (CarBody.WorldRotation.Right) * RearLeft.SpinSpeed.Remap( 0, 6000, 0, 40 );
+				if ( RearLeft.SpinSpeed > 180 )
+				{
+					cheatSteering = (CarBody.WorldRotation.Right) * (RearLeft.SpinSpeed.Remap( 0, 6000, 0, 40 ) + FrontLeft.TargetSteeringAngle);
+				}
+				CarBody.Velocity += cheatSteering;
 				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() + 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate(rot, 1f, Time.Delta); 
 			}
 			else if ( Input.Down( "Right" ) )
 			{
 				// CarBody.AngularVelocity += CarBody.WorldRotation.Down * 0.1f;
-				CarBody.Velocity += (CarBody.WorldRotation.Left) * RearRight.SpinSpeed.Remap( 0, 6000, 0, 65 );
+				cheatSteering = (CarBody.WorldRotation.Left) * RearRight.SpinSpeed.Remap( 0, 6000, 0, 40 );
+				if (RearRight.SpinSpeed > 180 ) 
+				{
+					cheatSteering = (CarBody.WorldRotation.Left) * (RearRight.SpinSpeed.Remap( 0, 6000, 0, 40 ) + -FrontRight.TargetSteeringAngle);
+				}
+				CarBody.Velocity += cheatSteering;
 				// Rotation rot = Rotation.From( CarBody.WorldRotation.Pitch(), CarBody.WorldRotation.Yaw() - 170, CarBody.WorldRotation.Roll() );
 				// CarBody.SmoothRotate( rot, 1f, Time.Delta );
 			}

@@ -104,16 +104,23 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Left" ) )
 		{
-			FrontLeft.TargetSteeringAngle = SteeringAngle + 4; FrontRight.TargetSteeringAngle = SteeringAngle;
+			FrontLeft.TargetSteeringAngle = Math.Min(SteeringAngle + 4, FrontLeft.TargetSteeringAngle + 0.3f); FrontRight.TargetSteeringAngle = Math.Min(SteeringAngle, FrontRight.TargetSteeringAngle + 0.3f);
 			RearLeft.TargetSteeringAngle = -SteeringAngle; RearRight.TargetSteeringAngle = -SteeringAngle;
 		}
 		else if ( Input.Down( "Right" ) ) 
 		{
-			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle = -SteeringAngle - 4;
+			FrontLeft.TargetSteeringAngle = Math.Max(-SteeringAngle, FrontLeft.TargetSteeringAngle - 0.3f); FrontRight.TargetSteeringAngle = Math.Max(-SteeringAngle - 4, FrontRight.TargetSteeringAngle - 0.3f);
 			RearLeft.TargetSteeringAngle = SteeringAngle; RearRight.TargetSteeringAngle = SteeringAngle;
 
 		}
-		else { FrontLeft.TargetSteeringAngle = 0f; FrontRight.TargetSteeringAngle = 0f; RearLeft.TargetSteeringAngle = 0f; RearRight.TargetSteeringAngle = 0f; }
+		else 
+		{ 
+			FrontLeft.TargetSteeringAngle = FrontLeft.TargetSteeringAngle.Approach(0, 0.3f); 
+			FrontRight.TargetSteeringAngle = FrontRight.TargetSteeringAngle.Approach( 0, 0.3f ); 
+			
+			RearLeft.TargetSteeringAngle = RearLeft.TargetSteeringAngle.Approach( 0, 0.3f ); 
+			RearRight.TargetSteeringAngle = RearRight.TargetSteeringAngle.Approach( 0, 0.3f ); 
+		}
 
 
 	}

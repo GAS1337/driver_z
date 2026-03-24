@@ -16,6 +16,42 @@
     "OwnerTransfer": 1,
     "Components": [
       {
+        "__type": "OrbitalCameraController",
+        "__guid": "546034dc-5954-4403-86da-b2b6147c73c4",
+        "__enabled": true,
+        "Flags": 0,
+        "AutoZoomStrength": 2,
+        "CrosshairSprite": {
+          "_type": "component",
+          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
+          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
+          "component_type": "Decal"
+        },
+        "DistanceToPlayer": 300,
+        "HorizontalOffset": 60,
+        "MainCamera": {
+          "_type": "component",
+          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
+          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
+          "component_type": "CameraComponent"
+        },
+        "MaxDistanceToPlayer": 600,
+        "MinDistanceToPlayer": 200,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Player": {
+          "_type": "gameobject",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+        },
+        "TargetDistanceToPlayer": 300,
+        "VerticalOffset": 170,
+        "ZoomStrength": 0
+      },
+      {
         "__type": "WheelController",
         "__guid": "c86ccdc8-e5b2-45ad-b244-1303668782a4",
         "__enabled": true,
@@ -63,48 +99,6 @@
         "Speed": 3000,
         "SteeringAngle": 18,
         "Torque": 25000
-      },
-      {
-        "__type": "RotationControl",
-        "__guid": "68d3e1d8-4f5a-453e-8b52-7c38cc29a320",
-        "__enabled": true,
-        "Flags": 0,
-        "CarBody": {
-          "_type": "component",
-          "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
-          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
-          "component_type": "Rigidbody"
-        },
-        "FrontLeft": {
-          "_type": "component",
-          "component_id": "85154a6b-a2e3-4d5b-b81f-5875e9171672",
-          "go": "afa7d1b7-eb90-464b-b8fa-aaa4e6efc218",
-          "component_type": "WheelJoint"
-        },
-        "FrontRight": {
-          "_type": "component",
-          "component_id": "20c90ccc-1561-4869-8e82-0c44e6f0b4e8",
-          "go": "d8365ba3-14ff-41e4-a06e-bfe09956c02f",
-          "component_type": "WheelJoint"
-        },
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "RearLeft": {
-          "_type": "component",
-          "component_id": "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10",
-          "go": "19b6b70c-b3c8-4fb0-95b4-5659812cf6d3",
-          "component_type": "WheelJoint"
-        },
-        "RearRight": {
-          "_type": "component",
-          "component_id": "88ecb4da-91f6-40e6-b542-8e5149925945",
-          "go": "cb6f5880-5192-4ddf-b2b8-f0373e929cac",
-          "component_type": "WheelJoint"
-        }
       },
       {
         "__type": "GunControl",
@@ -157,6 +151,48 @@
         }
       },
       {
+        "__type": "RotationControl",
+        "__guid": "df2bd1a6-75b3-4b95-8501-c3a1b27aa072",
+        "__enabled": true,
+        "Flags": 0,
+        "CarBody": {
+          "_type": "component",
+          "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
+          "component_type": "Rigidbody"
+        },
+        "FrontLeft": {
+          "_type": "component",
+          "component_id": "85154a6b-a2e3-4d5b-b81f-5875e9171672",
+          "go": "afa7d1b7-eb90-464b-b8fa-aaa4e6efc218",
+          "component_type": "WheelJoint"
+        },
+        "FrontRight": {
+          "_type": "component",
+          "component_id": "20c90ccc-1561-4869-8e82-0c44e6f0b4e8",
+          "go": "d8365ba3-14ff-41e4-a06e-bfe09956c02f",
+          "component_type": "WheelJoint"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RearLeft": {
+          "_type": "component",
+          "component_id": "597a4002-ac1f-4f1e-8a6c-1fcc3bca1b10",
+          "go": "19b6b70c-b3c8-4fb0-95b4-5659812cf6d3",
+          "component_type": "WheelJoint"
+        },
+        "RearRight": {
+          "_type": "component",
+          "component_id": "88ecb4da-91f6-40e6-b542-8e5149925945",
+          "go": "cb6f5880-5192-4ddf-b2b8-f0373e929cac",
+          "component_type": "WheelJoint"
+        }
+      },
+      {
         "__type": "HealthSystem",
         "__guid": "4dc9a492-d691-4b50-903c-a2d1b2800a5c",
         "__enabled": true,
@@ -190,45 +226,6 @@
         "OnComponentUpdate": null,
         "ReifenSound": "sounds/reifen.sound",
         "VollGasSound": "sounds/engine 2.sound"
-      },
-      {
-        "__type": "OrbitalCameraController",
-        "__guid": "053cb736-d66b-4018-86f7-d48df51a857f",
-        "__enabled": true,
-        "Flags": 0,
-        "AutoZoomStrength": 25,
-        "CameraSocket": {
-          "_type": "gameobject",
-          "go": "fa5350ed-5ff6-4820-8eec-132353bdb525"
-        },
-        "CrosshairSprite": {
-          "_type": "component",
-          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "Decal"
-        },
-        "DistanceToPlayer": 400,
-        "MainCamera": {
-          "_type": "component",
-          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
-          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
-          "component_type": "CameraComponent"
-        },
-        "MaxDistanceToPlayer": 450,
-        "MinDistanceToPlayer": 100,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "Player": {
-          "_type": "gameobject",
-          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-        },
-        "TargetDistanceToPlayer": 400,
-        "VerticalOffset": 170,
-        "ZoomStrength": 0
       }
     ],
     "Children": [
