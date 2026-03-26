@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 public sealed class WheelController : Component
 {
 	[Property] Rigidbody CarBody;
+	RotationControl RotationControl;
 
 	[Property] public WheelJoint FrontLeft;
 	[Property] public WheelJoint FrontRight;
@@ -28,6 +29,7 @@ public sealed class WheelController : Component
 		originalTorque = Torque;
 		
 		// CarBody.EnhancedCcd = true;
+		RotationControl = GameObject.GetComponent<RotationControl>();
 
 		FrontLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
@@ -125,17 +127,18 @@ public sealed class WheelController : Component
 
 	}
 
-	void Brake() 
+	void Brake()
 	{
-		// no idea
-		Log.Info( "Brake" );
-		RearLeft.MaxSpinTorque = Torque * 4; RearRight.MaxSpinTorque = Torque * 4;
-		FrontLeft.MaxSpinTorque = Torque * 4; FrontRight.MaxSpinTorque = Torque * 4;
+		if ( RotationControl.groundCheck.Hit )
+		{
+			Log.Info( "Brake" );
+			RearLeft.MaxSpinTorque = Torque * 4; RearRight.MaxSpinTorque = Torque * 4;
+			FrontLeft.MaxSpinTorque = Torque * 4; FrontRight.MaxSpinTorque = Torque * 4;
 
-		RearLeft.SpinMotorSpeed = 0f; RearRight.SpinMotorSpeed = 0f;
-		FrontLeft.SpinMotorSpeed = 0f; FrontRight.SpinMotorSpeed = 0f;
-
-
+			RearLeft.SpinMotorSpeed = 0f; RearRight.SpinMotorSpeed = 0f;
+			FrontLeft.SpinMotorSpeed = 0f; FrontRight.SpinMotorSpeed = 0f;
+		}
+		else { CarBody.SmoothRotate( Rotation.From( 0, CarBody.WorldRotation.Yaw(), 0 ), 1f, Time.Delta ); }
 	}
 
 	void Jump() 

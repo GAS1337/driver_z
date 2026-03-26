@@ -39,7 +39,7 @@ public sealed class OrbitalCameraController : Component
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 
 		SceneTraceResult checkingSightline = Scene.Trace
-			.Ray( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 10, Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * HorizontalOffset )
+			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * HorizontalOffset, MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 10 )
 			.Radius(1)
 			.IgnoreGameObjectHierarchy(GameObject) // Ignores itself. Use tags depending on your setup
 			.WithoutTags("enemy")
@@ -84,7 +84,7 @@ public sealed class OrbitalCameraController : Component
 		} 
 		if ( checkingSightline.Hit ) // If sightline is blocked change distance to be in front of hit collider
 		{
-			DistanceToPlayer = Math.Max( (int)(checkingSightline.HitPosition - Player.WorldPosition).Length - AutoZoomStrength, MinDistanceToPlayer ); // -AutoZoomStrength cheats it infront
+			DistanceToPlayer = (int)(checkingSightline.HitPosition - (Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * HorizontalOffset)).Length; // -AutoZoomStrength cheats it infront
 		}
 
 		// Apply Position and Rotation

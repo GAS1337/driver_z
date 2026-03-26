@@ -168,8 +168,12 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 		if ( attackTrace.Hit )
 		{
+			if ( !attackTrace.GameObject.IsValid ) return;
+
 			Log.Info( $"[LEAP] Attack hit: {attackTrace.GameObject.Name}" );
 			attackTrace.GameObject.GetComponentInParent<HealthSystem>().Damage( 500 );
+
+			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
 			attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 100000 );
 		}
 

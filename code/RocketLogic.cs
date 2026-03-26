@@ -6,6 +6,12 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 {
 	[Property] GameObject BurstParticle;
 	[Property] int KnockbackPower;
+	Rigidbody RocketBody;
+
+	protected override void OnStart()
+	{
+		RocketBody = GetComponent<Rigidbody>();
+	}
 
 
 	public void OnTriggerEnter( Collider other )
@@ -37,16 +43,17 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 			}
 			else if ( hit.GameObject.Tags.Has( "carbody" ) )
 			{
+				if ( !hit.GameObject.IsValid ) return;
+
 				Rigidbody hitBody = hit.GameObject.GetComponent<Rigidbody>();
 				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
 				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * (KnockbackPower / 2) );
-
 				hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 75f );
 			}
 
 		}
 
-		GameObject.GetComponent<Rigidbody>().Enabled = false;
+		RocketBody.Enabled = false;
 		GameObject.GetComponentInChildren<ModelRenderer>().Enabled = false;
 		foreach ( CapsuleCollider collider in GameObject.GetComponents<CapsuleCollider>() ) 
 		{

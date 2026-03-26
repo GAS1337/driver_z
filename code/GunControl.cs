@@ -4,6 +4,8 @@ using static HealthSystem;
 
 public sealed class GunControl : Component, HealthSystem.IHealthEvent
 {
+	SceneLoader SceneLoader;
+
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
 	[Property] SpriteRenderer CrosshairSprite;
@@ -24,6 +26,13 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	void IHealthEvent.OnDeath()
 	{
 		Log.Error( "PLAYER DIED" );
+		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
+		SceneLoader.StartCountdown( 0, 1);
+	}
+
+	protected override void OnStart()
+	{
+		SceneLoader = Scene.Get<SceneLoader>();
 	}
 
 	protected override void OnUpdate()
