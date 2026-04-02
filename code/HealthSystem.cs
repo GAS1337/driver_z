@@ -1,10 +1,12 @@
 using Sandbox;
 using System.Numerics;
 
-public sealed class HealthSystem : Component
+public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 {
 	[Property] float SetHealth;
 	[Property] SpriteRenderer HealthbarRenderer;
+
+	HighscoreManager HighscoreManager;
 
 	public float CurrentHealth;
 
@@ -13,8 +15,14 @@ public sealed class HealthSystem : Component
 		void OnDeath();
 	}
 
+	void IHealthEvent.OnDeath() 
+	{ 
+		HighscoreManager.WriteToLeaderboard();
+	}
+
 	protected override void OnStart()
 	{
+		HighscoreManager = Scene.Get<HighscoreManager>();
 		CurrentHealth = SetHealth;
 	}
 
@@ -30,8 +38,10 @@ public sealed class HealthSystem : Component
 
 		if ( CurrentHealth <= 0 ) 
 		{
-			HealthbarRenderer.Color = HealthbarRenderer.Color.WithAlpha( 0 );
-			Log.Info( "Killed "+GameObject.Name );
+			if (HealthbarRenderer != null) HealthbarRenderer.Color = HealthbarRenderer.Color.WithAlpha( 0 );
+			Log.Info( "Killed " + GameObject.Name );
+			if (GameObject.Tags.Has("enemy")) HighscoreManager.IncreaseScore(SetHealth);
+			if (GameObject.Tags.Has("player")) HighscoreManager.ResetScore();
 			IHealthEvent.PostToGameObject( this.GameObject, x => x.OnDeath() );
 		}
 	}

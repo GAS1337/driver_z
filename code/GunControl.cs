@@ -62,8 +62,11 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
 				{
-					ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
-					ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
+					if ( ShootTrace.GameObject.GetComponent<ZombieBrain>() != null )
+					{
+						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
+					}
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					Sound.Play( "sounds/bullet-impact-flesh.sound", ShootTrace.HitPosition );

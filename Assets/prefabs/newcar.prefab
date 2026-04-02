@@ -202,7 +202,7 @@
         "__guid": "794e653f-ecb0-4e2a-a11e-6e4085ae9236",
         "__enabled": true,
         "Flags": 0,
-        "AutoZoomStrength": 1,
+        "AutoZoomStrength": 2,
         "CrosshairSprite": {
           "_type": "component",
           "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",

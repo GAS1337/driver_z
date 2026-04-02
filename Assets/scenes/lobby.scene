@@ -10504,7 +10504,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (2)",
-          "Position": "-20621.72,8118.19,909.5749",
+          "Position": "-20621.72,8118.189,909.5749",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -12066,7 +12066,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-damaged (2)",
-          "Position": "-6700.126,7295.067,2503.576",
+          "Position": "-6700.126,7295.066,2503.576",
           "Rotation": "0.2588189,0.9659257,0.0000004790831,0.0000001033769",
           "Scale": "10,20,30",
           "Tags": "",
@@ -13578,6 +13578,242 @@
       "Components": [],
       "Children": [
         {
+          "__guid": "b7be204a-fe99-41ba-81e7-4324bb8822b9",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Ghost",
+          "Position": "-6570.667,8960,-8",
+          "Rotation": "0,0,0,1",
+          "Scale": "3.333333,3.333333,3.333333",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.NavMeshAgent",
+              "__guid": "eae51b3f-9ae0-48df-9e96-f27dd39456a1",
+              "__enabled": true,
+              "Flags": 0,
+              "Acceleration": 120,
+              "AllowDefaultArea": true,
+              "AllowedAreas": [],
+              "AutoTraverseLinks": true,
+              "ForbiddenAreas": [],
+              "Height": 64,
+              "MaxSpeed": 120,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "575d4e13-1f76-4dbc-9b4c-5474ce4d171d",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "GhostObject",
+              "Position": "0,0,150",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "023e0f6f-f445-45df-8a7e-56c24ca7b6b8",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Materials": null,
+                  "Model": "models/graveyard kit/character-ghost.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "2c60cd25-7ac0-423c-a22c-f4aba96d6a02",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "ColliderFlags": 0,
+                  "Elasticity": null,
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Model": "models/graveyard kit/character-ghost.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "RollingResistance": null,
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "HealthSystem",
+                  "__guid": "5f44c5b4-a832-440e-9078-bf4594023b74",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "HealthbarRenderer": null,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "SetHealth": 250
+                },
+                {
+                  "__type": "GhostBrain",
+                  "__guid": "e4c817b6-aed2-49e9-b606-58d855b1910b",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "Agent": {
+                    "_type": "component",
+                    "component_id": "eae51b3f-9ae0-48df-9e96-f27dd39456a1",
+                    "go": "b7be204a-fe99-41ba-81e7-4324bb8822b9",
+                    "component_type": "NavMeshAgent"
+                  },
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Player": {
+                    "_type": "gameobject",
+                    "go": "a8c8eff5-d334-433c-9ee1-fbf36bf9ec23"
+                  },
+                  "StateDebugText": {
+                    "_type": "component",
+                    "component_id": "92a5629e-a064-4b45-9f47-adbd94c7036d",
+                    "go": "9d06f96c-4f89-4e64-a135-929d578ac0a9",
+                    "component_type": "TextRenderer"
+                  }
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "9d06f96c-4f89-4e64-a135-929d578ac0a9",
+                  "__version": 2,
+                  "Flags": 0,
+                  "Name": "StateDebug",
+                  "Position": "0,0,0",
+                  "Rotation": "0,0,1,0.00000008940697",
+                  "Scale": "1,1,1",
+                  "Tags": "",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkFlags": 0,
+                  "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
+                  "OwnerTransfer": 1,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.TextRenderer",
+                      "__guid": "92a5629e-a064-4b45-9f47-adbd94c7036d",
+                      "__enabled": true,
+                      "Flags": 0,
+                      "__version": 2,
+                      "BlendMode": "Normal",
+                      "FogStrength": 0.1,
+                      "HorizontalAlignment": "Center",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "Scale": 0.3,
+                      "TextScope": {
+                        "Text": "Hello! ❤",
+                        "TextColor": "0.79269,0.82483,0.91628,1",
+                        "FontName": "Poppins",
+                        "FontSize": 64,
+                        "FontWeight": 800,
+                        "FontItalic": false,
+                        "FontVariantNumeric": "Normal",
+                        "LineHeight": 1,
+                        "LetterSpacing": 0,
+                        "WordSpacing": 0,
+                        "FilterMode": "Bilinear",
+                        "FontSmooth": "Auto",
+                        "Outline": {
+                          "Enabled": false,
+                          "Size": 4,
+                          "Color": "0,0,1,1"
+                        },
+                        "Shadow": {
+                          "Enabled": false,
+                          "Size": 4,
+                          "Color": "0,0,0,1",
+                          "Offset": "4,4"
+                        },
+                        "OutlineUnder": {
+                          "Enabled": false,
+                          "Size": 4,
+                          "Color": "0,1,0,1"
+                        },
+                        "ShadowUnder": {
+                          "Enabled": false,
+                          "Size": 4,
+                          "Color": "0,0,0,1",
+                          "Offset": "4,4"
+                        }
+                      },
+                      "VerticalAlignment": "Center"
+                    }
+                  ],
+                  "Children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "__guid": "bf86d375-1260-4266-8da4-6bbd0f3a9c95",
           "__version": 2,
           "__Prefab": "prefabs/zombie.prefab",
@@ -13596,20 +13832,77 @@
               {
                 "Target": {
                   "Type": "Component",
-                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
-                },
-                "Property": "HealthbarRenderer",
-                "Value": null
-              },
-              {
-                "Target": {
-                  "Type": "Component",
                   "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
                 },
                 "Property": "Player",
                 "Value": {
                   "_type": "gameobject",
                   "go": "a8c8eff5-d334-433c-9ee1-fbf36bf9ec23"
+                }
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
+                },
+                "Property": "Sprite",
+                "Value": {
+                  "$compiler": "embed",
+                  "$source": null,
+                  "data": {
+                    "Animations": [
+                      {
+                        "Name": "Default",
+                        "FrameRate": 15,
+                        "Origin": "0.5,0.5",
+                        "LoopMode": "Loop",
+                        "Frames": [
+                          {
+                            "Texture": {
+                              "$compiler": "texture",
+                              "$source": "imagefile",
+                              "data": {
+                                "FilePath": "textures/shapes/circle1.png",
+                                "MaxSize": 4096,
+                                "ConvertHeightToNormals": false,
+                                "NormalScale": 1,
+                                "Rotate": 0,
+                                "FlipVertical": false,
+                                "FlipHorizontal": false,
+                                "Cropping": {
+                                  "Left": 0,
+                                  "Top": 0,
+                                  "Right": 0,
+                                  "Bottom": 0
+                                },
+                                "Padding": {
+                                  "Left": 0,
+                                  "Top": 0,
+                                  "Right": 0,
+                                  "Bottom": 0
+                                },
+                                "InvertColor": false,
+                                "Tint": "1,1,1,1",
+                                "Blur": 0,
+                                "Sharpen": 0,
+                                "Brightness": 1,
+                                "Contrast": 1,
+                                "Saturation": 1,
+                                "Hue": 0,
+                                "Colorize": false,
+                                "TargetColor": "0,1,0,1",
+                                "CacheToDisk": true
+                              },
+                              "compiled": null
+                            },
+                            "BroadcastMessages": []
+                          }
+                        ]
+                      }
+                    ],
+                    "__references": null
+                  },
+                  "compiled": null
                 }
               }
             ],
@@ -13664,14 +13957,6 @@
                 },
                 "Property": "Scale",
                 "Value": "1,1,1"
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
-                },
-                "Property": "HealthbarRenderer",
-                "Value": null
               },
               {
                 "Target": {
@@ -13736,14 +14021,6 @@
                 },
                 "Property": "Scale",
                 "Value": "1,1,1"
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
-                },
-                "Property": "HealthbarRenderer",
-                "Value": null
               },
               {
                 "Target": {
@@ -13865,6 +14142,134 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "eba94292-c9ae-4056-a15a-38e9a984fe4d",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "GameManager",
+      "Position": "-2711.202,3404.711,10003.78",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "HighscoreManager",
+          "__guid": "b398f9e9-91cd-407d-a393-e9d1f6100c80",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "dbea6f21-7475-4b04-a803-efc1d5988cff",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Leaderboard",
+      "Position": "-26107.17,16477.08,3808.001",
+      "Rotation": "0,0,-0.9659261,-0.2588189",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "4b2e1732-1fa0-4b03-aad9-c1e08013f2d3",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Leaderboard\n\nLOADING...",
+            "TextColor": "0,0,0,1",
+            "FontName": "Poppins",
+            "FontSize": 256,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,1,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        },
+        {
+          "__type": "LeaderboardDisplay",
+          "__guid": "e1574cfa-ad7f-4535-b4a8-609dcb5c40ec",
+          "__enabled": true,
+          "Flags": 0,
+          "boardText": {
+            "_type": "component",
+            "component_id": "4b2e1732-1fa0-4b03-aad9-c1e08013f2d3",
+            "go": "dbea6f21-7475-4b04-a803-efc1d5988cff",
+            "component_type": "TextRenderer"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -13879,7 +14284,7 @@
       "EditorAutoUpdate": false,
       "AgentHeight": 64,
       "AgentRadius": 16,
-      "AgentStepSize": 18,
+      "AgentStepSize": 36,
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": "",
@@ -13890,13 +14295,13 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "3564b1f2-74b6-430d-b35b-b82e0b063d81"
+          "$blob": "78b60d34-0836-4477-85b6-1f59a6a63a9b"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },

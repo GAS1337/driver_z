@@ -48,7 +48,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 				Rigidbody hitBody = hit.GameObject.GetComponent<Rigidbody>();
 				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
 				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * (KnockbackPower / 2) );
-				hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 75f );
+				hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 0f );
 			}
 
 		}

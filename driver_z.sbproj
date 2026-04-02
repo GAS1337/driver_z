@@ -1,7 +1,7 @@
 {
   "Title": "Driver Z",
   "Type": "game",
-  "Org": "local",
+  "Org": "straightgas",
   "Ident": "driver_z",
   "Schema": 1,
   "IncludeSourceFiles": false,
@@ -23,6 +23,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene"
+    "StartupScene": "scenes/lobby.scene",
+    "LaunchMode": "Normal"
   }
 }
