@@ -1,0 +1,34 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="vitals">
+		<p>@($"")</p>
+	</div>
+	<div class="score">
+		<p>@($"{HighscoreManager.CurrentScore}")</p>
+	</div>
+		<div class="meins">
+		<p>@($"")</p>
+	</div>
+</root>
+
+@code
+{
+	HighscoreManager HighscoreManager{get; set; }
+
+	protected override void OnStart()
+	{
+		HighscoreManager = Scene.Get<HighscoreManager>();	
+
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+
+	protected override int BuildHash() => System.HashCode.Combine( HighscoreManager.CurrentScore  );
+
+}

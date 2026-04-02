@@ -17,7 +17,6 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath() 
 	{ 
-		HighscoreManager.WriteToLeaderboard();
 	}
 
 	protected override void OnStart()

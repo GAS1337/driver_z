@@ -2,7 +2,7 @@ using Sandbox;
 
 public sealed class HighscoreManager : Component
 {
-	float CurrentScore;
+	public float CurrentScore;
 	float LatestScore;
 	float LastGainedScore;
 

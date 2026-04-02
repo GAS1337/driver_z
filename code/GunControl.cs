@@ -5,6 +5,7 @@ using static HealthSystem;
 public sealed class GunControl : Component, HealthSystem.IHealthEvent
 {
 	SceneLoader SceneLoader;
+	HighscoreManager HighscoreManager;
 
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
@@ -26,6 +27,9 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	void IHealthEvent.OnDeath()
 	{
 		Log.Error( "PLAYER DIED" );
+
+		HighscoreManager.WriteToLeaderboard();
+
 		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
 		SceneLoader.StartCountdown( 0, 1);
 	}
@@ -33,6 +37,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	protected override void OnStart()
 	{
 		SceneLoader = Scene.Get<SceneLoader>();
+		HighscoreManager = Scene.Get<HighscoreManager>();
 	}
 
 	protected override void OnUpdate()

@@ -1,0 +1,45 @@
+HUD {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: Poppins;
+	font-size: 24px;
+	text-stroke: 10px black;
+
+	> .vitals {
+		position: absolute;
+		bottom: 32px;
+		right: 32px;
+		left: auto;
+		font-size: 36px;
+		flex-direction: column;
+		align-items: flex-end;
+		font-weight: bold;
+		color: grey;
+	}
+
+	> .meins {
+		position: absolute;
+		bottom: 32px;
+		right: auto;
+		left: 32px;
+		font-size: 48px;
+		flex-direction: column;
+		align-items: flex-end;
+		font-weight: bold;
+		color: darkred;
+	}
+
+	> .score {
+		position: absolute;
+		bottom: 10%;
+		left: 10%;
+		font-size: 100px;
+		flex-direction: column;
+		align-items: flex-start;
+		font-weight: bold;
+		color: white;
+	}
+}
