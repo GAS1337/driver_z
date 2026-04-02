@@ -31,8 +31,13 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "ShadowBias": 0.0005,
+          "ShadowCascadeCount": 4,
+          "ShadowCascadeSplitRatio": 0.91,
+          "ShadowHardness": 0,
           "Shadows": true,
-          "SkyColor": "0.66354,0.66977,0.48286,1"
+          "SkyColor": "0.66354,0.66977,0.48286,1",
+          "Visualizer": {}
         }
       ],
       "Children": []
@@ -259,7 +264,9 @@
         "0f8df567-efaa-4065-afb8-d8081121384e": "9a2bbfa6-9829-4907-93d4-b76a1b7152ef",
         "6bcecf9c-58df-4f93-baef-b003e8869afa": "85152611-c2bb-4b38-bb5b-d9ac545360c8",
         "df2bd1a6-75b3-4b95-8501-c3a1b27aa072": "9ad692f3-bf5b-43ca-818c-3b0eb66e5973",
-        "546034dc-5954-4403-86da-b2b6147c73c4": "4ce7361e-ffe5-4c86-8536-edd71ee12e18"
+        "794e653f-ecb0-4e2a-a11e-6e4085ae9236": "daff9dca-a2c4-4b1f-bb41-580baa9f8473",
+        "d20d5493-feb8-440f-98af-87aa4815c1f4": "6252711f-4dfe-4b66-9f0d-f4d22132c333",
+        "5b5c1ab7-3919-4c67-a24a-efc20dd4a556": "a3d7fb8c-1477-4828-9d5f-8d3bb2f3e4ea"
       }
     },
     {
@@ -9957,7 +9964,7 @@
               "IsTrigger": false,
               "Mesh": {
                 "Topology": "H4sIAAAAAAAACl2QCQ7CMAwEp4Qj3NBy/f+laMRGsohUVbFn1+t04ANs+Z0VsM69AwfgBFyAKZ9MPXdgk3qLnsI+Um/h/me9i2ZXfFvYOazafTJN0XRgKZmPyWtfXvYVL73PZRd52WdYPa7xtC8veys7u6t17/7t6Tn0ZtFjvIXZR895zjKjPWf4NiOrGt+ivpXZ3XnozaOndVn9vvVkkTjEAQAA",
-                "Position": "-18704.67,14586.57,61.99823",
+                "Position": "-18704.67,14586.57,61.9982",
                 "Rotation": "0,0,-0.2588192,0.9659259",
                 "Positions": [
                   "-9216,-7376,64",
@@ -10072,12 +10079,12 @@
                   "0.25,0.25"
                 ],
                 "TextureOffset": [
-                  "784.0156,831.9961",
-                  "784.0156,831.9883",
-                  "831.9883,1015.993",
-                  "192.0039,1015.993",
-                  "239.9922,1015.993",
-                  "784.0117,1015.993"
+                  "784.0234,831.9727",
+                  "784.0156,831.9727",
+                  "831.9727,1015.993",
+                  "192.0273,1015.993",
+                  "239.9844,1015.993",
+                  "784.0195,1015.993"
                 ],
                 "MaterialIndex": [
                   0,
@@ -10426,7 +10433,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (1)",
-          "Position": "-18266.13,6758.192,909.5749",
+          "Position": "-18266.13,6758.188,909.5749",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -10497,7 +10504,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (2)",
-          "Position": "-20621.72,8118.194,909.5749",
+          "Position": "-20621.72,8118.19,909.5749",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -10639,7 +10646,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (4)",
-          "Position": "-11150.22,14603.27,909.577",
+          "Position": "-11150.22,14603.27,909.5771",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -10710,7 +10717,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (3)",
-          "Position": "-13505.81,15963.28,909.577",
+          "Position": "-13505.81,15963.28,909.5771",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -11207,7 +11214,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-column",
-          "Position": "-6893.217,3600.644,-300.285",
+          "Position": "-6893.216,3600.644,-300.285",
           "Rotation": "0,0,-0.2588184,0.9659259",
           "Scale": "30,25,50",
           "Tags": "",
@@ -11349,7 +11356,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-column (3)",
-          "Position": "-23725.92,7157.522,-300.2851",
+          "Position": "-23725.92,7157.521,-300.2851",
           "Rotation": "0,0,-0.8660251,0.5000003",
           "Scale": "50,50,50",
           "Tags": "",
@@ -11562,7 +11569,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-column (1)",
-          "Position": "-4622.217,7534.135,-300.285",
+          "Position": "-4622.216,7534.135,-300.285",
           "Rotation": "0,0,-0.2588184,0.9659259",
           "Scale": "30,25,50",
           "Tags": "",
@@ -11846,7 +11853,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-curve (2)",
-          "Position": "-5817.877,10405.43,-321.2849",
+          "Position": "-5817.876,10405.43,-321.2849",
           "Rotation": "0,0,0.8660263,-0.4999984",
           "Scale": "30,30,50",
           "Tags": "",
@@ -12059,7 +12066,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-damaged (2)",
-          "Position": "-6700.127,7295.071,2503.576",
+          "Position": "-6700.126,7295.067,2503.576",
           "Rotation": "0.2588189,0.9659257,0.0000004790831,0.0000001033769",
           "Scale": "10,20,30",
           "Tags": "",
@@ -12343,7 +12350,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "altar-stone",
-          "Position": "-6845.467,6187.339,2493.574",
+          "Position": "-6845.466,6187.339,2493.574",
           "Rotation": "0,0,-0.258819,0.9659258",
           "Scale": "10,22,30",
           "Tags": "",
@@ -12696,12 +12703,12 @@
                   "0.25,0.25"
                 ],
                 "TextureOffset": [
+                  "0.0078125,0",
+                  "0.0078125,0",
                   "0,0",
                   "0,0",
-                  "0,0",
-                  "0,0",
-                  "0,0",
-                  "0,0"
+                  "1023.992,0",
+                  "0.0078125,0"
                 ],
                 "MaterialIndex": [
                   0,
@@ -13589,6 +13596,14 @@
               {
                 "Target": {
                   "Type": "Component",
+                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
+                },
+                "Property": "HealthbarRenderer",
+                "Value": null
+              },
+              {
+                "Target": {
+                  "Type": "Component",
                   "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
                 },
                 "Property": "Player",
@@ -13653,6 +13668,14 @@
               {
                 "Target": {
                   "Type": "Component",
+                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
+                },
+                "Property": "HealthbarRenderer",
+                "Value": null
+              },
+              {
+                "Target": {
+                  "Type": "Component",
                   "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
                 },
                 "Property": "Player",
@@ -13713,6 +13736,14 @@
                 },
                 "Property": "Scale",
                 "Value": "1,1,1"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
+                },
+                "Property": "HealthbarRenderer",
+                "Value": null
               },
               {
                 "Target": {
@@ -13859,9 +13890,12 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "bb14f60c-0eb4-4179-b7a0-eab23875aa42"
+          "$blob": "3564b1f2-74b6-430d-b35b-b82e0b063d81"
         }
       }
     }

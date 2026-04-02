@@ -8,11 +8,11 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description("Player to follow")] GameObject Player;
 
 
-	[Property, Description( "Starting distance" )] int TargetDistanceToPlayer = 300;
-	[Property, Description("Starting distance")] int DistanceToPlayer = 300;
-	[Property, Description( "Vertical Offset" )] int VerticalOffset = 128;
+	[Property, Description( "Starting distance" )] int TargetDistanceToPlayer = 200;
+	[Property, Description("Starting distance")] int DistanceToPlayer = 200;
+	[Property, Description( "Vertical Offset" )] int VerticalOffset = 170;
 	[Property] float HorizontalOffset = 80;
-	[Property, Description( "Minimal distance to player" )] int MinDistanceToPlayer = 300;
+	[Property, Description( "Minimal distance to player" )] int MinDistanceToPlayer = 200;
 	[Property, Description( "Maximal distance to player" )] int MaxDistanceToPlayer = 500;
 	[Property, Description( "Units one step zooms" )] int ZoomStrength = 0;
 	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 1;
@@ -33,8 +33,8 @@ public sealed class OrbitalCameraController : Component
 	{
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
-		Pitch = (Pitch + mouseMove.pitch).Clamp( 5, 5 );
-		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 8, -8 ); // Up&Down clamped in degrees
+		Pitch = (Pitch + mouseMove.pitch  ).Clamp( 5, 5 );
+		crosshairPitch = (crosshairPitch + mouseMove.pitch / 2).Clamp( 20, -20 ); // Up&Down clamped in degrees
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 

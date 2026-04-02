@@ -16,42 +16,6 @@
     "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "OrbitalCameraController",
-        "__guid": "546034dc-5954-4403-86da-b2b6147c73c4",
-        "__enabled": true,
-        "Flags": 0,
-        "AutoZoomStrength": 2,
-        "CrosshairSprite": {
-          "_type": "component",
-          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "Decal"
-        },
-        "DistanceToPlayer": 300,
-        "HorizontalOffset": 60,
-        "MainCamera": {
-          "_type": "component",
-          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
-          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
-          "component_type": "CameraComponent"
-        },
-        "MaxDistanceToPlayer": 600,
-        "MinDistanceToPlayer": 200,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "Player": {
-          "_type": "gameobject",
-          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-        },
-        "TargetDistanceToPlayer": 300,
-        "VerticalOffset": 170,
-        "ZoomStrength": 0
-      },
-      {
         "__type": "WheelController",
         "__guid": "c86ccdc8-e5b2-45ad-b244-1303668782a4",
         "__enabled": true,
@@ -197,6 +161,12 @@
         "__guid": "4dc9a492-d691-4b50-903c-a2d1b2800a5c",
         "__enabled": true,
         "Flags": 0,
+        "HealthbarRenderer": {
+          "_type": "component",
+          "component_id": "5b5c1ab7-3919-4c67-a24a-efc20dd4a556",
+          "go": "d20d5493-feb8-440f-98af-87aa4815c1f4",
+          "component_type": "SpriteRenderer"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -226,6 +196,42 @@
         "OnComponentUpdate": null,
         "ReifenSound": "sounds/reifen.sound",
         "VollGasSound": "sounds/engine 2.sound"
+      },
+      {
+        "__type": "OrbitalCameraController",
+        "__guid": "794e653f-ecb0-4e2a-a11e-6e4085ae9236",
+        "__enabled": true,
+        "Flags": 0,
+        "AutoZoomStrength": 1,
+        "CrosshairSprite": {
+          "_type": "component",
+          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
+          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
+          "component_type": "Decal"
+        },
+        "DistanceToPlayer": 200,
+        "HorizontalOffset": 80,
+        "MainCamera": {
+          "_type": "component",
+          "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
+          "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
+          "component_type": "CameraComponent"
+        },
+        "MaxDistanceToPlayer": 500,
+        "MinDistanceToPlayer": 200,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Player": {
+          "_type": "gameobject",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
+        },
+        "TargetDistanceToPlayer": 200,
+        "VerticalOffset": 170,
+        "ZoomStrength": 0
       }
     ],
     "Children": [
@@ -1497,6 +1503,86 @@
             "NetworkTransmit": true,
             "OwnerTransfer": 1,
             "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "d20d5493-feb8-440f-98af-87aa4815c1f4",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Healthbar",
+            "Position": "0,0,16",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.SpriteRenderer",
+                "__guid": "5b5c1ab7-3919-4c67-a24a-efc20dd4a556",
+                "__enabled": true,
+                "Flags": 0,
+                "__version": 2,
+                "Additive": false,
+                "AlphaCutoff": 0.5,
+                "Billboard": "YOnly",
+                "Color": "0,1,0,1",
+                "DepthFeather": 0,
+                "FlipHorizontal": false,
+                "FlipVertical": false,
+                "FogStrength": 0.2,
+                "IsSorted": false,
+                "Lighting": false,
+                "OnAnimationEnd": null,
+                "OnAnimationStart": null,
+                "OnBroadcastMessage": null,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Opaque": false,
+                "OverlayColor": "1,1,1,1",
+                "PlaybackSpeed": 1,
+                "RenderOptions": {
+                  "GameLayer": false,
+                  "OverlayLayer": true,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "Shadows": false,
+                "Size": "200,30",
+                "Sprite": {
+                  "$compiler": "embed",
+                  "$source": null,
+                  "data": {
+                    "Animations": [
+                      {
+                        "Name": "Default",
+                        "FrameRate": 15,
+                        "Origin": "0.5,0.5",
+                        "LoopMode": "Loop",
+                        "Frames": [
+                          {
+                            "Texture": null,
+                            "BroadcastMessages": []
+                          }
+                        ]
+                      }
+                    ],
+                    "__references": null
+                  },
+                  "compiled": null
+                },
+                "StartingAnimationName": "Default",
+                "TextureFilter": "Bilinear"
+              }
+            ],
             "Children": []
           }
         ]
