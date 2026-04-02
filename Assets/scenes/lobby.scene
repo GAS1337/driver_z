@@ -201,6 +201,14 @@
             },
             "Property": "Position",
             "Value": "-3744,416,160"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d20d5493-feb8-440f-98af-87aa4815c1f4"
+            },
+            "Property": "Enabled",
+            "Value": true
           }
         ],
         "MovedObjects": []
@@ -266,7 +274,15 @@
         "df2bd1a6-75b3-4b95-8501-c3a1b27aa072": "9ad692f3-bf5b-43ca-818c-3b0eb66e5973",
         "794e653f-ecb0-4e2a-a11e-6e4085ae9236": "daff9dca-a2c4-4b1f-bb41-580baa9f8473",
         "d20d5493-feb8-440f-98af-87aa4815c1f4": "6252711f-4dfe-4b66-9f0d-f4d22132c333",
-        "5b5c1ab7-3919-4c67-a24a-efc20dd4a556": "a3d7fb8c-1477-4828-9d5f-8d3bb2f3e4ea"
+        "5b5c1ab7-3919-4c67-a24a-efc20dd4a556": "a3d7fb8c-1477-4828-9d5f-8d3bb2f3e4ea",
+        "c365209d-8b37-469a-88a0-7da04418d244": "b42e3667-1bf0-417d-85c2-48bb6e4fa6cf",
+        "d99c5624-654f-4b0e-9fb7-b6a36f410f0d": "6d30acec-d6bc-4e80-b942-647b594c4ae4",
+        "f17ce882-9639-4677-b7eb-013015d7e7a0": "b57c2b4c-a5f9-48c4-bd9c-5be00fa8596b",
+        "70fcb6ea-607e-4f08-b361-918478dc2f77": "022b0298-537a-42ea-b95a-f5c2b61ec72a",
+        "b8b1bdca-f16f-4ac3-aaac-c08cb1cb3d5d": "d6e58051-08c2-4b88-9cad-dcf692f6a6b7",
+        "45f4b2fc-b85b-40f6-80b2-db64a13fadb1": "c17da877-cc40-4744-9cbd-e6ae8374c7f9",
+        "49d9b100-7d9e-45a9-a19d-7a5f36cc8132": "3c948aa9-8034-4c61-a222-19825b15d889",
+        "c64ca4af-a7b8-4c0d-801c-b7fbd66888ea": "ad76f246-173a-4fa0-a821-dd017b243191"
       }
     },
     {
@@ -10504,7 +10520,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "crypt-door (2)",
-          "Position": "-20621.72,8118.189,909.5749",
+          "Position": "-20621.72,8118.188,909.5749",
           "Rotation": "0,0,0.4999993,0.8660259",
           "Scale": "20,20,20",
           "Tags": "",
@@ -12066,7 +12082,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "stone-wall-damaged (2)",
-          "Position": "-6700.126,7295.066,2503.576",
+          "Position": "-6700.126,7295.065,2503.576",
           "Rotation": "0.2588189,0.9659257,0.0000004790831,0.0000001033769",
           "Scale": "10,20,30",
           "Tags": "",
@@ -13839,71 +13855,6 @@
                   "_type": "gameobject",
                   "go": "a8c8eff5-d334-433c-9ee1-fbf36bf9ec23"
                 }
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "fc9f88c0-1c56-4a16-8045-11795d11f140"
-                },
-                "Property": "Sprite",
-                "Value": {
-                  "$compiler": "embed",
-                  "$source": null,
-                  "data": {
-                    "Animations": [
-                      {
-                        "Name": "Default",
-                        "FrameRate": 15,
-                        "Origin": "0.5,0.5",
-                        "LoopMode": "Loop",
-                        "Frames": [
-                          {
-                            "Texture": {
-                              "$compiler": "texture",
-                              "$source": "imagefile",
-                              "data": {
-                                "FilePath": "textures/shapes/circle1.png",
-                                "MaxSize": 4096,
-                                "ConvertHeightToNormals": false,
-                                "NormalScale": 1,
-                                "Rotate": 0,
-                                "FlipVertical": false,
-                                "FlipHorizontal": false,
-                                "Cropping": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "Padding": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "InvertColor": false,
-                                "Tint": "1,1,1,1",
-                                "Blur": 0,
-                                "Sharpen": 0,
-                                "Brightness": 1,
-                                "Contrast": 1,
-                                "Saturation": 1,
-                                "Hue": 0,
-                                "Colorize": false,
-                                "TargetColor": "0,1,0,1",
-                                "CacheToDisk": true
-                              },
-                              "compiled": null
-                            },
-                            "BroadcastMessages": []
-                          }
-                        ]
-                      }
-                    ],
-                    "__references": null
-                  },
-                  "compiled": null
-                }
               }
             ],
             "MovedObjects": []
@@ -14297,7 +14248,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "78b60d34-0836-4477-85b6-1f59a6a63a9b"
+          "$blob": "c2687ff3-d1ec-4761-bf21-34ec810ce9d0"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
