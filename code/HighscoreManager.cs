@@ -8,7 +8,7 @@ public sealed class HighscoreManager : Component
 
 	protected override void OnUpdate()
 	{
-		// Log.Info( "Currenbt Score: " + CurrentScore + " Last score: " + LatestScore );
+		// Log.Info( "Current Score: " + CurrentScore + " Last score: " + LatestScore );
 
 	}
 

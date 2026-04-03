@@ -6,7 +6,7 @@ using static HealthSystem;
 
 public enum ZombieState { Idle, Approach, Leap, Staggered }
 
-public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
+public sealed class ZombieBrain : Component
 {
 	[Property] NavMeshAgent Agent;
 	[Property] GameObject Player;
@@ -38,11 +38,6 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	protected override void OnStart()
 	{
 		CurrentState = ZombieState.Idle;
-	}
-
-	void HealthSystem.IHealthEvent.OnDeath() 
-	{
-		GameObject.Destroy();
 	}
 
 	protected override void OnFixedUpdate()

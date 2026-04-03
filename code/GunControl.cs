@@ -7,22 +7,28 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	SceneLoader SceneLoader;
 	HighscoreManager HighscoreManager;
 
+	[Property] Rigidbody CarBody;
 	[Property] SkinnedModelRenderer TurretRenderer;
 	[Property] CameraComponent MainCamera;
-	[Property] SpriteRenderer CrosshairSprite;
+	[Property] Decal CrosshairDecal;
 	[Property] BeamEffect ShootEffect;
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
-	[Property] float ShootCooldown = 0.33f;
+	[Property] float ShootCooldown = 0.2f;
+	[Property] float Inaccuracy = 0.015f;
 	TimeUntil NextShot;
 
 	[Property] GameObject Rocket;
 	[Property] float RocketSpeed = 10000f;
+	[Property] public float StartRockets = 15;
+	public float CurrentRockets;
 
 	SceneTraceResult ShootTrace;
 
 	GameObject newBulletHole;
 	GameObject newBulletSpark;
+
+	Random random = new Random();
 
 	void IHealthEvent.OnDeath()
 	{
@@ -38,12 +44,16 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	{
 		SceneLoader = Scene.Get<SceneLoader>();
 		HighscoreManager = Scene.Get<HighscoreManager>();
+
+		CurrentRockets = StartRockets;
 	}
 
 	protected override void OnUpdate()
 	{
+		// Ramming();
+
 		// Wo man hinaimed
-		Ray CameraRay = new Ray(TurretRenderer.WorldPosition, CrosshairSprite.WorldPosition - TurretRenderer.WorldPosition );
+		Ray CameraRay = new Ray(TurretRenderer.WorldPosition, (CrosshairDecal.WorldPosition - TurretRenderer.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
 		ShootTrace = Scene.Trace.Ray( CameraRay, 10000f )
 			.Radius( 8 )
 			.IgnoreGameObjectHierarchy( GameObject )
@@ -98,9 +108,37 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	void LaunchRocket() 
 	{
+		if ( CurrentRockets <= 0 ) return; // Sound
 		Sound.Play( "sounds/grenadelauncher.sound", TurretRenderer.GetBoneObject( 1 ).WorldPosition );
 
 		GameObject newRocket = Rocket.Clone( TurretRenderer.GetBoneObject( 1 ).WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
 		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (ShootTrace.EndPosition - TurretRenderer.GetBoneObject( 1 ).WorldPosition).Normal * RocketSpeed;
+	
+		CurrentRockets--;
+	}
+
+	void Ramming() 
+	{ 
+		if (CarBody.Velocity.WithZ(0).Length > 500) 
+		{
+			Capsule ramCapsule = new Capsule( CarBody.WorldPosition + CarBody.WorldRotation.Up * 40 + ( CarBody.WorldRotation.Backward + CarBody.WorldRotation.Left) * 80, 
+				CarBody.WorldPosition + CarBody.WorldRotation.Up * 40 + ( CarBody.WorldRotation.Backward + CarBody.WorldRotation.Right ) * 80, 50);
+			DebugOverlay.Capsule( ramCapsule, Color.Red );
+
+			var ramTrace = Scene.Trace.Capsule( ramCapsule )
+				.IgnoreGameObjectHierarchy( GameObject )
+				.WithTag( "enemy" )
+				.RunAll();
+
+			foreach ( var hit in ramTrace ) 
+			{
+				if ( hit.GameObject.GetComponent<HealthSystem>() != null ) 
+				{
+					hit.GameObject.GetComponent<HealthSystem>().Damage( 10 );
+
+					Sound.Play( "sounds/bullet-impact-flesh.sound", hit.HitPosition );
+				}
+			}
+		}
 	}
 }

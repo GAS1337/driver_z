@@ -1,0 +1,19 @@
+{
+  "MasterVolume": "1",
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/ambience/plains-wind-loop.vsnd",
+      "Volume": "0.8000002 1"
+    }
+  ],
+  "StingSounds": [
+    {
+      "SoundFile": "sounds/ambience/stings/sting-frog.sound",
+      "InstanceCount": 2,
+      "RepeatTime": "5 7",
+      "Distance": "50 100"
+    }
+  ],
+  "__references": [],
+  "__version": 0
+}

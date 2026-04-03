@@ -112,32 +112,7 @@
             "ForceScale": 1,
             "ForceSpace": "World",
             "Friction": 1,
-            "Gradient": {
-              "Type": "Constant",
-              "Evaluation": "Particle",
-              "GradientA": {
-                "blend": "Linear",
-                "color": [
-                  {
-                    "t": 0.5,
-                    "c": "1,1,1,1"
-                  }
-                ],
-                "alpha": []
-              },
-              "GradientB": {
-                "blend": "Linear",
-                "color": [
-                  {
-                    "t": 0.5,
-                    "c": "1,1,1,1"
-                  }
-                ],
-                "alpha": []
-              },
-              "ConstantA": "1,1,1,1",
-              "ConstantB": "1,1,1,1"
-            },
+            "Gradient": "1,1,1,1",
             "InitialVelocity": {
               "X": 0,
               "Y": 0,
@@ -252,7 +227,7 @@
               "AfterUILayer": false
             },
             "RotationOffset": 0,
-            "Scale": 15,
+            "Scale": 25,
             "Shadows": false,
             "SortMode": "Unsorted",
             "Sprite": {
@@ -357,7 +332,8 @@
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "CustomBounds": false
       }
     },
     "__variables": []

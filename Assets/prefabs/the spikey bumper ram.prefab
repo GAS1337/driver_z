@@ -3,7 +3,7 @@
     "__guid": "2a057090-fb3e-4494-b73b-dbd486a68496",
     "__version": 2,
     "Flags": 0,
-    "Name": "THE SPIKEY BUMPER RAM",
+    "Name": "the spikey bumper ram",
     "Position": "0,0,0",
     "Rotation": "-0.434261,-0.5175321,0.5647872,0.4739127",
     "Scale": "0.7,0.6,0.32",
@@ -21,8 +21,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "myisolatedknifeblade (8)",
-        "Position": "0,-0.00000002483527,0",
-        "Rotation": "0,-0.00000001490116,0,1",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -56,7 +56,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -102,7 +102,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -148,7 +148,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -194,7 +194,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -240,7 +240,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -286,7 +286,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -332,7 +332,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -378,7 +378,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82326,0.82326,0.82326,1"
           }
         ],
@@ -424,7 +424,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -470,7 +470,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -516,7 +516,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -528,7 +528,7 @@
         "Flags": 0,
         "Name": "myisolatedknifeblade (11)",
         "Position": "-163.1968,2.926133,62.70715",
-        "Rotation": "0,-0.00000001490116,0,1",
+        "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -562,7 +562,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -608,7 +608,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "1,1,1,1"
           },
           {
@@ -679,7 +679,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -725,7 +725,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -771,7 +771,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.69767,0.69767,0.69767,1"
           },
           {
@@ -842,7 +842,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "1,1,1,1"
           },
           {
@@ -913,7 +913,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.82353,0.82353,0.82353,1"
           }
         ],
@@ -963,7 +963,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.28372,0.28372,0.28372,1"
           }
         ],
@@ -1013,13 +1013,33 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "0.28235,0.28235,0.28235,1"
           }
         ],
         "Children": []
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,

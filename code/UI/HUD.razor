@@ -5,30 +5,35 @@
 
 <root>
 	<div class="vitals">
-		<p>@($"")</p>
+		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
 	</div>
 	<div class="score">
 		<p>@($"{HighscoreManager.CurrentScore}")</p>
 	</div>
-		<div class="meins">
-		<p>@($"")</p>
+	<div class="meins">
+		<p>@("HEALTH")</p> <div class="health-bar-bg">
+		<div class="health-bar-fill" style="width: @(PlayerHealth.CurrentHealth / PlayerHealth.SetHealth * 100f)%;"></div>
 	</div>
+</div>
 </root>
 
 @code
 {
-	HighscoreManager HighscoreManager{get; set; }
+	HighscoreManager HighscoreManager {get; set; }
+	HealthSystem PlayerHealth { get; set; }
+	GunControl PlayerGun { get; set; }
 
 	protected override void OnStart()
 	{
-		HighscoreManager = Scene.Get<HighscoreManager>();	
-
+		HighscoreManager = Scene.Get<HighscoreManager>();
+		PlayerHealth =	Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
+		PlayerGun = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<GunControl>();
 	}
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
 
-	protected override int BuildHash() => System.HashCode.Combine( HighscoreManager.CurrentScore  );
+	protected override int BuildHash() => System.HashCode.Combine( HighscoreManager.CurrentScore, PlayerHealth.CurrentHealth, PlayerGun.CurrentRockets  );
 
 }

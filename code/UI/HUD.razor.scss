@@ -10,10 +10,10 @@ HUD {
 
 	> .vitals {
 		position: absolute;
-		bottom: 32px;
-		right: 32px;
-		left: auto;
-		font-size: 36px;
+		bottom: 10%;
+		right: auto;
+		left: 10%;
+		font-size: 64px;
 		flex-direction: column;
 		align-items: flex-end;
 		font-weight: bold;
@@ -22,20 +22,35 @@ HUD {
 
 	> .meins {
 		position: absolute;
-		bottom: 32px;
-		right: auto;
-		left: 32px;
+		bottom: 10%;
+		right: 10%;
+		left: auto;
 		font-size: 48px;
 		flex-direction: column;
-		align-items: flex-end;
+		align-items: center;
 		font-weight: bold;
 		color: darkred;
+
+		// Der äußere Rahmen/Hintergrund
+		.health-bar-bg {
+			width: 400px;
+			height: 40px;
+			background-color: rgba(0, 0, 0, 0.6);
+			border: 6px solid #220000;
+			overflow: hidden; // Wichtig, damit der Fill nicht übersteht
+		}
+		// Der eigentliche rote Balken
+		.health-bar-fill {
+			height: 100%;
+			background-color: darkred;
+			transition: width 0.3s ease-out;
+		}
 	}
 
 	> .score {
 		position: absolute;
-		bottom: 10%;
-		left: 10%;
+		top: 10%;
+		right: 10%;
 		font-size: 100px;
 		flex-direction: column;
 		align-items: flex-start;
