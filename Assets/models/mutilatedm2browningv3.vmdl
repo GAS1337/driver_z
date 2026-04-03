@@ -1,0 +1,167 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/mutilatedm2browningv3.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Object_4_559",
+								"Object_9_001",
+								"Object_9_002",
+								"Object_9_003",
+								"Object_9_004",
+								"Object_9_005",
+								"Object_9_006",
+								"Object_9_007",
+								"Object_9_008",
+								"Object_9_009",
+								"Object_9_010",
+								"Object_9_011",
+								"Object_9_012",
+								"Object_9_013",
+								"Object_9_014",
+								"Object_9_015",
+								"Object_9_016",
+								"Object_9_017",
+								"Object_9_018",
+								"Object_9_019",
+								"Object_9_020",
+								"Object_9_021",
+								"Object_9_022",
+								"Object_9_023",
+								"Object_9_024",
+								"Object_9_025",
+								"Object_9_026",
+								"Object_9_027",
+								"Object_9_028",
+								"Object_9_029",
+								"Object_9_030",
+								"Object_9_031",
+								"Object_9_032",
+								"Object_9_033",
+								"Object_9_034",
+								"Object_9_035",
+								"Object_9_036",
+								"Object_9_037",
+								"Object_9_038",
+								"Object_9_039",
+								"Object_9_045",
+								"Object_9_046",
+								"Object_9_047",
+								"Object_9_048",
+								"Object_9_049",
+								"Object_9_050",
+								"Object_9_051",
+								"Object_9_052",
+								"Object_9_053",
+								"Object_9_054",
+								"Object_9_055",
+								"Object_9_056",
+								"Object_9_057",
+								"Object_9_058",
+								"Object_9_059",
+								"Object_9_060",
+								"Object_9_061",
+								"Object_9_062",
+								"Object_9_063",
+								"Object_9_064",
+								"Object_9_065",
+								"Object_9_066",
+								"Object_9_067",
+								"Object_9_068",
+								"Object_9_069",
+								"Object_9_070",
+								"Object_9_071",
+								"Object_9_072",
+								"Object_9_089",
+								"Object_9_090",
+								"Object_9_091",
+								"Object_9_092",
+								"Object_9_093",
+								"Object_9_094",
+								"Object_9_095",
+								"Object_9_096",
+								"Object_9_097",
+								"Object_9_098",
+								"Object_9_099",
+								"Object_9_100",
+								"Object_9_101",
+								"Object_9_102",
+								"Object_9_103",
+								"Object_9_104",
+								"Object_9_105",
+								"Object_9_106",
+								"Object_9_107",
+								"Object_9_119",
+								"Object_9_120",
+								"Object_9_121",
+								"Object_9_122",
+								"Object_9_133",
+								"Object_9_134",
+								"Object_9_145",
+								"Object_9_146",
+								"Object_9_147",
+								"Object_9_148",
+								"Object_9_149",
+								"Object_9_150",
+								"Object_9_151",
+								"Object_9_152",
+								"Object_9_153",
+								"Object_9_154",
+								"Object_9_155",
+								"Object_9_156",
+								"Object_9_157",
+								"Object_9_158",
+								"Object_9_159",
+								"Object_9_160",
+								"Object_9_161",
+								"Object_9_256",
+								"Object_9_257",
+								"Object_9_418",
+								"Object_9_427",
+								"Object_9_428",
+								"Object_9_429",
+								"Object_9",
+							]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
