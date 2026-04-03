@@ -320,13 +320,10 @@
         "6d8c68ce-f83f-4b03-af17-2410e8ca06f7": "846759d0-40ff-42af-9bfc-0e3d6a32e620",
         "d8d9c33f-fad5-4d77-9f33-413679ec309e": "6cd2b0f5-2707-4f24-8a6a-756a9831821a",
         "c9c00b0c-787c-45a2-8434-1b5d776717fc": "9f902479-cbf8-4c83-b394-db18e62c9962",
-        "7195f3cc-1a44-4b63-b73a-c0e265ccb6e8": "c5a01c81-bdd8-41ed-a85c-065f14f62f0c",
         "01a9abdc-0465-4e98-bd5d-a83b0de18637": "d6e75ec0-18cd-4bab-b54d-761c362f591e",
         "58192d1f-ac31-4a77-8759-98182a74b8ea": "9540a5c8-fd75-46f1-8387-13a4baf785b8",
         "c838c8b6-c66e-414b-acf3-72888fdcf6e5": "b735881b-0c7d-4467-aac5-9d3331cba4c5",
-        "c1cd5cdc-5aa6-4e84-92f5-156b1ada3bfc": "7a125ce5-da39-4469-b720-ded4cd7b103a",
         "b066705c-edce-4351-93ec-4cee7252127c": "8f2e96de-15f2-419a-91fe-094a2620bb75",
-        "2bdcf0df-39c6-4611-b22e-5c8d7e1096ec": "3ea3d86e-ae21-4705-8760-6898fb5164c3",
         "3b9b8ed7-6738-4cfa-b229-59d2128be40d": "b77348ef-fc31-47ed-aa9d-b639fb0dfad0",
         "5d168718-1c8f-4d79-ad12-8d4d87122559": "5653fbb4-1b7b-4ab6-8eca-46d7e2e57942",
         "97932eab-5206-4d69-b057-d50f9f40e456": "c5f0aff8-28f6-4404-b32d-901e7ffdac5b"
@@ -15985,7 +15982,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "2155294b-a397-4a21-89d1-2e4320a6a4a1"
+          "$blob": "a28665c8-bb22-4759-a3f7-58f993b8c471"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
