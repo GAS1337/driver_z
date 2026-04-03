@@ -1,16 +1,11 @@
 {
   "UI": false,
-  "Volume": "0.5",
-  "Pitch": "0.9 1.1",
+  "Volume": "0.35",
+  "Pitch": "0.95 1.15",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/impacts/bullets/bullet-ricochet-1.vsnd",
-    "sounds/impacts/bullets/bullet-ricochet-2.vsnd",
-    "sounds/impacts/bullets/bullet-ricochet-3.vsnd",
-    "sounds/impacts/bullets/bullet-ricochet-4.vsnd",
-    "sounds/impacts/bullets/bullet-ricochet-5.vsnd",
-    "sounds/impacts/bullets/bullet-ricochet-6.vsnd"
+    "sounds/slowfiringweaponheavymgversion4.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
@@ -50,7 +45,7 @@
   ],
   "DefaultMixer": {
     "Name": "game",
-    "Id": "181466f8-8fac-4f9a-83f4-1f030aa8e4e2"
+    "Id": "9aaefee8-2e62-4dee-962b-691c6f6ce29c"
   },
   "__references": [],
   "__version": 1
