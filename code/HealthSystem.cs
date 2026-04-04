@@ -27,7 +27,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 			if ( Random.Int( 1, 10 ) > 7 )
 			{
 				Log.Info( "Dropping loot" );
-				LootList[Random.Int(0,1)].Clone( WorldPosition + Vector3.Up * 200 );
+				LootList[Random.Int(0,2)].Clone( WorldPosition + Vector3.Up * 200 );
 			}
 			Log.Info( "Enemy " + GameObject.Name + " died." );
 			GameObject.Destroy();
@@ -46,6 +46,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		LootList = new List<GameObject>();
 		LootList.Add( GameObject.GetPrefab( "prefabs/medikit.prefab" ) );
 		LootList.Add( GameObject.GetPrefab( "prefabs/ammokit.prefab" ) );
+		LootList.Add( GameObject.GetPrefab( "prefabs/pointkit.prefab" ) );
 
 	}
 
