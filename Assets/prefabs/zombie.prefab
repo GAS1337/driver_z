@@ -3,7 +3,7 @@
     "__guid": "b655254f-7b15-4a6d-95de-9498d581256a",
     "__version": 2,
     "Flags": 0,
-    "Name": "zombie (1)",
+    "Name": "zombie",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1.5,1.5,1.5",
@@ -103,6 +103,7 @@
         "__guid": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b",
         "__enabled": true,
         "Flags": 0,
+        "HealthbarRenderer": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -152,6 +153,10 @@
           "component_id": "17ff12ae-afb1-4a66-b6ad-353a2d610f8b",
           "go": "b655254f-7b15-4a6d-95de-9498d581256a",
           "component_type": "Rigidbody"
+        },
+        "DeadZombie": {
+          "_type": "gameobject",
+          "prefab": "prefabs/deadzombie.prefab"
         },
         "LeapCooldown": 4,
         "LeapFlightTime": 2,
@@ -281,6 +286,7 @@
               "FontSize": 64,
               "FontWeight": 800,
               "FontItalic": false,
+              "FontVariantNumeric": "Normal",
               "LineHeight": 1,
               "LetterSpacing": 0,
               "WordSpacing": 0,

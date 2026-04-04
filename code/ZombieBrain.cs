@@ -6,11 +6,12 @@ using static HealthSystem;
 
 public enum ZombieState { Idle, Approach, Leap, Staggered }
 
-public sealed class ZombieBrain : Component
+public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 {
 	[Property] NavMeshAgent Agent;
 	[Property] GameObject Player;
 	[Property] Rigidbody Body;
+	[Property] GameObject DeadZombie;
 	[Property] TextRenderer StateDebugText;
 	[Property] ParticleRingEmitter AttackParticle;
 	[Property] ParticleEffect AttackEffect;
@@ -38,6 +39,16 @@ public sealed class ZombieBrain : Component
 	protected override void OnStart()
 	{
 		CurrentState = ZombieState.Idle;
+	}
+
+	void IHealthEvent.OnDeath()
+	{
+		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, WorldScale );
+		foreach (GameObject child in _deadClone.Children ) 
+		{ 
+			child.GetComponent<Rigidbody>().ApplyImpulse( Body.Velocity + (child.WorldPosition - GameObject.WorldPosition).Normal * 1000);
+			// child.Enabled = random.NextDouble() >= 0.5;
+		}
 	}
 
 	protected override void OnFixedUpdate()
