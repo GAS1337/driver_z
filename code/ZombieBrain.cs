@@ -171,6 +171,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 		AttackParticle.WorldTransform = new Transform(Body.WorldPosition, Rotation.FromPitch(0));
 		AttackParticle.ResetEmitter();
+		Sound.Play( "sounds/falling-game-character.sound", Body.WorldPosition );
 
 		if ( attackTrace.Hit )
 		{
@@ -181,14 +182,19 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
 			attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 100000 );
+
+			Sound.Play( "sounds/metal-hit-cartoon.sound", attackTrace.HitPosition );
 		}
 
 		NextAttack = LeapCooldown;
 
 	}
 
-		void DoLeap()
+	void DoLeap()
 	{
+
+		Sound.Play( "sounds/whaa.sound", Body.WorldPosition );
+
 		var playerRb = Player.GetComponent<Rigidbody>();
 
 		// find ground below player to get accurate target position and flight time
@@ -261,6 +267,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			Body.GravityScale = gravityScale;
 			Body.Velocity = fireVelocity;
 			NextLeap = LeapCooldown;
+
 		}
 	}
 }

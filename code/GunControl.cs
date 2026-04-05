@@ -14,6 +14,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] BeamEffect ShootEffect;
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
+	[Property] GameObject BulletSparkEnemy;
 	[Property] float ShootCooldown = 0.2f;
 	[Property] float Inaccuracy = 0.015f;
 	TimeUntil NextShot;
@@ -27,6 +28,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	GameObject newBulletHole;
 	GameObject newBulletSpark;
+	GameObject newBulletSparkEnemy;
 
 	Random random = new Random();
 
@@ -54,9 +56,10 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 		// Wo man hinaimed
 		Ray CameraRay = new Ray(TurretRenderer.WorldPosition, (CrosshairDecal.WorldPosition - TurretRenderer.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
-		ShootTrace = Scene.Trace.Ray( CameraRay, 10000f )
+		ShootTrace = Scene.Trace.Ray( CameraRay, 20000f )
 			.Radius( 8 )
 			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags("dead")
 			.Run();
 		// DebugOverlay.Trace( ShootTrace );
 
@@ -73,7 +76,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 				ShootEffect.TargetPosition = ShootTrace.HitPosition;
 
 				newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
-				newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 
 				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
 				{
@@ -82,9 +84,17 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
 					}
+
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
+					// Partikel und Sound
+					newBulletSparkEnemy = BulletSparkEnemy.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 					Sound.Play( "sounds/bullet-impact-flesh.sound", ShootTrace.HitPosition );
+				}
+				else 
+				{
+					// normaler Partikel
+					newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 				}
 			}
 			else 

@@ -22,7 +22,7 @@ public sealed class Pointkit : Component, Component.ITriggerListener
 			.Ray( WorldPosition, WorldPosition + Vector3.Down * 1000 )
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
-			.WithoutTags( "enemy", "player" )
+			.WithoutTags( "enemy", "player", "dead" )
 			.Run();
 
 		MittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;

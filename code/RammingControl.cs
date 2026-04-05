@@ -8,6 +8,7 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 	public void OnTriggerEnter( GameObject other )
 	{
 		if ( !other.Tags.Has( "enemy" ) ) return;
+		if (CarBody.Velocity.Length < 800) return;
 		Log.Info( $"Collided with {other.Name}" );
 
 		// Stagger and Knock Zombie
