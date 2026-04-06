@@ -34,7 +34,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
-		Log.Error( "PLAYER DIED" );
+		Log.Info( "PLAYER DIED" );
 
 		HighscoreManager.WriteToLeaderboard();
 

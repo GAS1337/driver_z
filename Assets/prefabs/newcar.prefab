@@ -230,7 +230,7 @@
           "prefab": "prefabs/rocket.prefab"
         },
         "RocketSpeed": 10000,
-        "ShootCooldown": 0.2,
+        "ShootCooldown": 0.15,
         "ShootEffect": {
           "_type": "component",
           "component_id": "35b76d20-37bf-4bfe-bdfc-5981261f73fb",
@@ -2388,71 +2388,1739 @@
                 "__version": 2,
                 "__Prefab": "prefabs/the spikey bumper ram.prefab",
                 "__PrefabInstancePatch": {
-                  "AddedObjects": [],
-                  "RemovedObjects": [],
-                  "PropertyOverrides": [
+                  "AddedObjects": [
                     {
-                      "Target": {
+                      "Id": {
                         "Type": "GameObject",
-                        "IdValue": "2a057090-fb3e-4494-b73b-dbd486a68496"
+                        "IdValue": "49abf8c0-a145-4493-a665-588a8da6d8c4"
                       },
-                      "Property": "Position",
-                      "Value": "-30,38,-32"
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "49abf8c0-a145-4493-a665-588a8da6d8c4",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (8)",
+                        "Position": "0,0,0",
+                        "Rotation": "0,0,0,1",
+                        "Scale": "1,1,1",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
                     },
                     {
-                      "Target": {
-                        "Type": "GameObject",
-                        "IdValue": "2a057090-fb3e-4494-b73b-dbd486a68496"
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "5e902a45-4d90-4bb2-9b46-40ebbbad1739"
                       },
-                      "Property": "Rotation",
-                      "Value": "-0.4092125,-0.4963682,0.5831914,0.4960355"
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "49abf8c0-a145-4493-a665-588a8da6d8c4"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "5e902a45-4d90-4bb2-9b46-40ebbbad1739",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "6dbf6c65-8cde-4c68-a4d6-311f3abcf62c"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "49abf8c0-a145-4493-a665-588a8da6d8c4"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "6dbf6c65-8cde-4c68-a4d6-311f3abcf62c",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (10)",
+                        "Position": "56.27467,-1.008817,-21.6242",
+                        "Rotation": "0,0.1729874,-0.01513442,0.9848077",
+                        "Scale": "1,1,1",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "66be5598-3428-47d4-a496-d6dd1f45c031"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "6dbf6c65-8cde-4c68-a4d6-311f3abcf62c"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "66be5598-3428-47d4-a496-d6dd1f45c031",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "5f09cdba-7640-45ea-baab-cd7b6f7c0d11"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "6dbf6c65-8cde-4c68-a4d6-311f3abcf62c"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "5f09cdba-7640-45ea-baab-cd7b6f7c0d11",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (5)",
+                        "Position": "46.16441,-95.94141,-59.69587",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "7443b67b-6674-486f-87b8-7f5b5af103b5"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "5f09cdba-7640-45ea-baab-cd7b6f7c0d11"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "7443b67b-6674-486f-87b8-7f5b5af103b5",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "d94a6972-b891-4c97-96a2-409bb9fa4a4a"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "5f09cdba-7640-45ea-baab-cd7b6f7c0d11"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "d94a6972-b891-4c97-96a2-409bb9fa4a4a",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (6)",
+                        "Position": "71.61208,-96.323,-67.88901",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "006e5aa7-fce2-4729-81be-229bd8b98456"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d94a6972-b891-4c97-96a2-409bb9fa4a4a"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "006e5aa7-fce2-4729-81be-229bd8b98456",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "582eb0cd-549d-4cc4-901b-abadacfabbbc"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "d94a6972-b891-4c97-96a2-409bb9fa4a4a"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "582eb0cd-549d-4cc4-901b-abadacfabbbc",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedaxehead",
+                        "Position": "24.24964,-115.4567,-22.29503",
+                        "Rotation": "0.704416,-0.06676519,-0.0560226,-0.704416",
+                        "Scale": "0.7142857,0.5,1.5625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "d0ea9368-b703-41c4-9a2d-8782925d66f6"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "582eb0cd-549d-4cc4-901b-abadacfabbbc"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "d0ea9368-b703-41c4-9a2d-8782925d66f6",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedaxehead.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "5d91eb9a-649e-4296-a9b3-ec065303ed1d"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "582eb0cd-549d-4cc4-901b-abadacfabbbc"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "5d91eb9a-649e-4296-a9b3-ec065303ed1d",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade",
+                        "Position": "-59.35054,-94.04961,-19.15202",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "c20b2004-a5ac-41e3-9160-4506aaeaddcc"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "5d91eb9a-649e-4296-a9b3-ec065303ed1d"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "c20b2004-a5ac-41e3-9160-4506aaeaddcc",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "f6792915-16a4-4ce6-8e23-ef464187ba03"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "5d91eb9a-649e-4296-a9b3-ec065303ed1d"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "f6792915-16a4-4ce6-8e23-ef464187ba03",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (4)",
+                        "Position": "1.144788,-95.13425,-42.3972",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "afdb1dc8-5751-4ad5-ada2-8330d0139b4b"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "f6792915-16a4-4ce6-8e23-ef464187ba03"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "afdb1dc8-5751-4ad5-ada2-8330d0139b4b",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "c3cd0ff0-90db-4c9b-8663-1c0b3619a8b3"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "f6792915-16a4-4ce6-8e23-ef464187ba03"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "c3cd0ff0-90db-4c9b-8663-1c0b3619a8b3",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade",
+                        "Position": "24.82921,11.19216,-53.9258",
+                        "Rotation": "0.00000002980232,-0.08682406,0.007596165,-0.9961947",
+                        "Scale": "1.428571,2.333333,1.875",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "764f65c7-5b2b-4d04-8543-37b9819a2199"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "c3cd0ff0-90db-4c9b-8663-1c0b3619a8b3"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "764f65c7-5b2b-4d04-8543-37b9819a2199",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82326,0.82326,0.82326,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "4d543651-7de0-4652-8f25-f0a7f453e4d5"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "c3cd0ff0-90db-4c9b-8663-1c0b3619a8b3"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "4d543651-7de0-4652-8f25-f0a7f453e4d5",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (9)",
+                        "Position": "-106.922,1.917171,41.08374",
+                        "Rotation": "0,0.1729874,-0.01513442,0.9848077",
+                        "Scale": "1,1,1",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "8ec95755-7bd1-4c01-85fa-ee196c587b41"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "4d543651-7de0-4652-8f25-f0a7f453e4d5"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "8ec95755-7bd1-4c01-85fa-ee196c587b41",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "1b3d43ca-6ec4-45e9-b7d8-02266921cb72"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "4d543651-7de0-4652-8f25-f0a7f453e4d5"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "1b3d43ca-6ec4-45e9-b7d8-02266921cb72",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (1)",
+                        "Position": "-118.439,-92.9902,3.552592",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "7b6a681e-c2c0-48ac-8a99-cf6f495fdf97"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "1b3d43ca-6ec4-45e9-b7d8-02266921cb72"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "7b6a681e-c2c0-48ac-8a99-cf6f495fdf97",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "c5b8ec46-7ddc-47f7-b1b5-2fc84a8bdb03"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "1b3d43ca-6ec4-45e9-b7d8-02266921cb72"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "c5b8ec46-7ddc-47f7-b1b5-2fc84a8bdb03",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (7)",
+                        "Position": "-138.4754,14.05647,7.446647",
+                        "Rotation": "0,-0.08682409,0.007596135,-0.9961947",
+                        "Scale": "1.428571,2.333333,1.875",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "539ab263-67d8-4040-8abc-09231f852bf8"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "c5b8ec46-7ddc-47f7-b1b5-2fc84a8bdb03"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "539ab263-67d8-4040-8abc-09231f852bf8",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "2a6a7435-b2cf-4856-b2dd-7a9be21ce1ae"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "c5b8ec46-7ddc-47f7-b1b5-2fc84a8bdb03"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "2a6a7435-b2cf-4856-b2dd-7a9be21ce1ae",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (11)",
+                        "Position": "-163.1968,2.926133,62.70715",
+                        "Rotation": "0,0,0,1",
+                        "Scale": "1,1,1",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "fce2be39-4cf7-43e4-8544-4db705b8955c"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "2a6a7435-b2cf-4856-b2dd-7a9be21ce1ae"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "fce2be39-4cf7-43e4-8544-4db705b8955c",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "bfc01014-ffc4-4bc8-8941-84fd1819168a"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "2a6a7435-b2cf-4856-b2dd-7a9be21ce1ae"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "bfc01014-ffc4-4bc8-8941-84fd1819168a",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "debris-bumper",
+                        "Position": "-56.16582,-40.91626,2.752119",
+                        "Rotation": "0.5453074,0.4508873,0.4584833,-0.5377113",
+                        "Scale": "0.5714286,2.416667,3.125",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "be804c86-13f0-4d70-9f3e-e535d34b9345"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "bfc01014-ffc4-4bc8-8941-84fd1819168a"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "be804c86-13f0-4d70-9f3e-e535d34b9345",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/car kit/debris-bumper.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "1,1,1,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "8bc5061e-ab44-4bb8-bb3f-fba6306d882c"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "bfc01014-ffc4-4bc8-8941-84fd1819168a"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "8bc5061e-ab44-4bb8-bb3f-fba6306d882c",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (2)",
+                        "Position": "-163.4583,-92.18304,20.85111",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "932379a7-43c9-481e-ae29-c8f003e37cd8"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "8bc5061e-ab44-4bb8-bb3f-fba6306d882c"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "932379a7-43c9-481e-ae29-c8f003e37cd8",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "72da7308-165c-48bb-b1de-7de0facf6b09"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "8bc5061e-ab44-4bb8-bb3f-fba6306d882c"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "72da7308-165c-48bb-b1de-7de0facf6b09",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedaxehead (1)",
+                        "Position": "-137.5394,-112.5564,39.87364",
+                        "Rotation": "0.704416,-0.06676519,-0.0560226,-0.704416",
+                        "Scale": "0.7142857,0.5,1.5625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "9a9bf373-93be-4422-aa18-d96d19869493"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "72da7308-165c-48bb-b1de-7de0facf6b09"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "9a9bf373-93be-4422-aa18-d96d19869493",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedaxehead.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "d29b7aa4-ee46-4150-bcad-110e38ba1830"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "72da7308-165c-48bb-b1de-7de0facf6b09"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "d29b7aa4-ee46-4150-bcad-110e38ba1830",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "template-wall-top",
+                        "Position": "-58.4516,-5.657068,-31.49291",
+                        "Rotation": "0.4584833,0.5377113,-0.5453075,0.4508872",
+                        "Scale": "0.4142857,0.7333333,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "41d1795f-b55f-4226-9fc8-93364fb72089"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d29b7aa4-ee46-4150-bcad-110e38ba1830"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "41d1795f-b55f-4226-9fc8-93364fb72089",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/modular dungeon kit/template-wall-top.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.69767,0.69767,0.69767,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "cd356858-307f-4bf8-8f30-ed6b0344e5db"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "d29b7aa4-ee46-4150-bcad-110e38ba1830"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "cd356858-307f-4bf8-8f30-ed6b0344e5db",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "debris-bumper (1)",
+                        "Position": "-57.26862,-124.0011,2.655679",
+                        "Rotation": "0.5453074,0.4508873,0.4584833,-0.5377113",
+                        "Scale": "0.5714286,2.416667,3.125",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "0b68a3bc-d515-482d-b5f7-6711d6e1f4d5"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "cd356858-307f-4bf8-8f30-ed6b0344e5db"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "0b68a3bc-d515-482d-b5f7-6711d6e1f4d5",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/car kit/debris-bumper.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "1,1,1,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "a96756b9-f691-4ab2-96f4-401893176c76"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "cd356858-307f-4bf8-8f30-ed6b0344e5db"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "a96756b9-f691-4ab2-96f4-401893176c76",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "myisolatedknifeblade (3)",
+                        "Position": "-188.7819,-91.72901,30.58167",
+                        "Rotation": "-0.05602267,0.704416,-0.704416,-0.06676513",
+                        "Scale": "0.5714286,0.5,0.625",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "f6a7f5b1-c185-4b99-8f11-df9fa86aa8f3"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "a96756b9-f691-4ab2-96f4-401893176c76"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "f6a7f5b1-c185-4b99-8f11-df9fa86aa8f3",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": null,
+                        "Model": "models/myisolatedknifeblade.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.82353,0.82353,0.82353,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "907b5c32-25df-4295-b85b-7942b9ec1c8e"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "a96756b9-f691-4ab2-96f4-401893176c76"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "907b5c32-25df-4295-b85b-7942b9ec1c8e",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "roadtile_001 (25)",
+                        "Position": "-117.5926,-43.38489,-301.148",
+                        "Rotation": "0.434261,0.5175321,-0.5647872,0.4739127",
+                        "Scale": "44.28571,6.666667,46.875",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "67d5f2f6-2297-411f-8184-42e855e57243"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "907b5c32-25df-4295-b85b-7942b9ec1c8e"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "67d5f2f6-2297-411f-8184-42e855e57243",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": {
+                          "indexed": {
+                            "0": "materials/shine.vmat"
+                          }
+                        },
+                        "Model": "models/3d road tiles kit/roadtile_001.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.28372,0.28372,0.28372,1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "a328e4c3-a410-495b-9b76-0058f4b2822a"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "d573fa0a-8494-469a-97a7-ea62c79a8472"
+                      },
+                      "PreviousElement": {
+                        "Type": "GameObject",
+                        "IdValue": "907b5c32-25df-4295-b85b-7942b9ec1c8e"
+                      },
+                      "ContainerProperty": "Children",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__guid": "a328e4c3-a410-495b-9b76-0058f4b2822a",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "roadtile_001",
+                        "Position": "-64.13165,-44.34361,-321.6903",
+                        "Rotation": "0.434261,0.5175321,-0.5647872,0.4739127",
+                        "Scale": "44.28571,6.666667,46.875",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [],
+                        "Children": []
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "8ea1fc92-79dc-4cee-9d49-eeeb30114814"
+                      },
+                      "Parent": {
+                        "Type": "GameObject",
+                        "IdValue": "a328e4c3-a410-495b-9b76-0058f4b2822a"
+                      },
+                      "PreviousElement": null,
+                      "ContainerProperty": "Components",
+                      "IsContainerArray": true,
+                      "Data": {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "8ea1fc92-79dc-4cee-9d49-eeeb30114814",
+                        "__enabled": true,
+                        "Flags": 0,
+                        "BodyGroups": 18446744073709551615,
+                        "CreateAttachments": false,
+                        "LodOverride": null,
+                        "MaterialGroup": null,
+                        "MaterialOverride": null,
+                        "Materials": {
+                          "indexed": {
+                            "0": "materials/shine.vmat"
+                          }
+                        },
+                        "Model": "models/3d road tiles kit/roadtile_001.vmdl",
+                        "OnComponentDestroy": null,
+                        "OnComponentDisabled": null,
+                        "OnComponentEnabled": null,
+                        "OnComponentFixedUpdate": null,
+                        "OnComponentStart": null,
+                        "OnComponentUpdate": null,
+                        "RenderOptions": {
+                          "GameLayer": true,
+                          "OverlayLayer": false,
+                          "BloomLayer": false,
+                          "AfterUILayer": false
+                        },
+                        "RenderType": "Off",
+                        "Tint": "0.28235,0.28235,0.28235,1"
+                      }
                     }
                   ],
+                  "RemovedObjects": [
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "c697e461-2551-4eaa-9523-7808b282f121"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "d4b5d580-e534-45e3-a434-2dbfb0e3eae3"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "a3e1d87e-3521-466c-af49-35e7f0f64eef"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "1aae9359-3f12-4d7a-a32f-0f8bc1c1bab5"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "3a2d7180-48ac-443e-861c-5b7fabf0569b"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "a6d5ec2f-c2e8-4b21-96f9-a63a33769cf1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "b7fde8af-e409-418f-aab9-ccd329b7f568"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "81c50e86-8311-4633-9bb9-c260cd3e8600"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "2649099f-c64f-45ae-9cf2-9351b4dfed16"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "92bf1a21-24d2-4736-8938-153284c782af"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "46cc927a-29ae-43f7-8da4-4e481a0017f6"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "ea9822b7-d063-4949-b4af-41854e7588c1"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "081cb30c-aab2-4a84-9794-fc0275c0e752"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "ca18ff00-789b-47c3-96ff-ee261b4abf04"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "252647cc-cb73-4640-b370-ab2b0c3c6315"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "040a8634-ce05-4775-9e99-c3f214577049"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "6dcfe2cc-4995-4a60-9edb-31e75e311851"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "3714ebe0-6c80-48a3-b6f2-64e0d76b4e8a"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "7d063e77-2754-4b7b-b40d-8eea66ee694a"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "3e0e407c-3218-491f-b238-7cdf1595b69f"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "ad622008-c7b9-4e93-9249-e3b043fc91d7"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "83711bb9-51c0-4e78-8f9e-d7ca595db477"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "7dccca8d-90cf-4968-93b0-800d8bdd4bb7"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "bb08bc45-9c21-4921-80d2-252b5168bc61"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "c9e462fd-b4a1-42e3-b3a0-d563a5a65a8c"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "541abcf1-863c-4bc1-9db5-ef8e954d8198"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "8857e50b-b0a6-4a16-94e1-b0f70a50eed6"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "e3295a3c-8344-4b0e-9cce-01d607541da7"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "372aed61-6c2f-4b6b-90a8-1813d29d969e"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "0e60d0e8-cbfe-4a92-ba6a-77b45e4bb203"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "783b7f16-80ca-406d-9f5c-9055a5f90973"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "46996e94-2360-4ad8-ae20-3977b5d9e967"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "48b6df4c-fb0f-4372-912a-0d9e6016cb05"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "bc8fd409-e095-4f37-9556-4138f2552f95"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "57329a2a-d3fe-4678-8d4d-e58d1460abe7"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "9d1bc2bc-e232-492c-8b5f-4066b7d69d00"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "9b028a58-d65e-421a-b643-e5b6d9f3b654"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "7df993c9-b29c-4881-ba92-f7820c3c2d41"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "GameObject",
+                        "IdValue": "3b74c4f8-dcc2-4773-a3ac-7ad84ac1e7c7"
+                      }
+                    },
+                    {
+                      "Id": {
+                        "Type": "Component",
+                        "IdValue": "83460378-14f7-4648-aa3e-78db618b990e"
+                      }
+                    }
+                  ],
+                  "PropertyOverrides": [],
                   "MovedObjects": []
                 },
-                "__PrefabIdToInstanceId": {
-                  "2a057090-fb3e-4494-b73b-dbd486a68496": "d573fa0a-8494-469a-97a7-ea62c79a8472",
-                  "c697e461-2551-4eaa-9523-7808b282f121": "49abf8c0-a145-4493-a665-588a8da6d8c4",
-                  "d4b5d580-e534-45e3-a434-2dbfb0e3eae3": "5e902a45-4d90-4bb2-9b46-40ebbbad1739",
-                  "a3e1d87e-3521-466c-af49-35e7f0f64eef": "6dbf6c65-8cde-4c68-a4d6-311f3abcf62c",
-                  "1aae9359-3f12-4d7a-a32f-0f8bc1c1bab5": "66be5598-3428-47d4-a496-d6dd1f45c031",
-                  "3a2d7180-48ac-443e-861c-5b7fabf0569b": "5f09cdba-7640-45ea-baab-cd7b6f7c0d11",
-                  "a6d5ec2f-c2e8-4b21-96f9-a63a33769cf1": "7443b67b-6674-486f-87b8-7f5b5af103b5",
-                  "b7fde8af-e409-418f-aab9-ccd329b7f568": "d94a6972-b891-4c97-96a2-409bb9fa4a4a",
-                  "81c50e86-8311-4633-9bb9-c260cd3e8600": "006e5aa7-fce2-4729-81be-229bd8b98456",
-                  "2649099f-c64f-45ae-9cf2-9351b4dfed16": "582eb0cd-549d-4cc4-901b-abadacfabbbc",
-                  "92bf1a21-24d2-4736-8938-153284c782af": "d0ea9368-b703-41c4-9a2d-8782925d66f6",
-                  "46cc927a-29ae-43f7-8da4-4e481a0017f6": "5d91eb9a-649e-4296-a9b3-ec065303ed1d",
-                  "ea9822b7-d063-4949-b4af-41854e7588c1": "c20b2004-a5ac-41e3-9160-4506aaeaddcc",
-                  "081cb30c-aab2-4a84-9794-fc0275c0e752": "f6792915-16a4-4ce6-8e23-ef464187ba03",
-                  "ca18ff00-789b-47c3-96ff-ee261b4abf04": "afdb1dc8-5751-4ad5-ada2-8330d0139b4b",
-                  "252647cc-cb73-4640-b370-ab2b0c3c6315": "c3cd0ff0-90db-4c9b-8663-1c0b3619a8b3",
-                  "040a8634-ce05-4775-9e99-c3f214577049": "764f65c7-5b2b-4d04-8543-37b9819a2199",
-                  "6dcfe2cc-4995-4a60-9edb-31e75e311851": "4d543651-7de0-4652-8f25-f0a7f453e4d5",
-                  "3714ebe0-6c80-48a3-b6f2-64e0d76b4e8a": "8ec95755-7bd1-4c01-85fa-ee196c587b41",
-                  "7d063e77-2754-4b7b-b40d-8eea66ee694a": "1b3d43ca-6ec4-45e9-b7d8-02266921cb72",
-                  "3e0e407c-3218-491f-b238-7cdf1595b69f": "7b6a681e-c2c0-48ac-8a99-cf6f495fdf97",
-                  "ad622008-c7b9-4e93-9249-e3b043fc91d7": "c5b8ec46-7ddc-47f7-b1b5-2fc84a8bdb03",
-                  "83711bb9-51c0-4e78-8f9e-d7ca595db477": "539ab263-67d8-4040-8abc-09231f852bf8",
-                  "7dccca8d-90cf-4968-93b0-800d8bdd4bb7": "2a6a7435-b2cf-4856-b2dd-7a9be21ce1ae",
-                  "bb08bc45-9c21-4921-80d2-252b5168bc61": "fce2be39-4cf7-43e4-8544-4db705b8955c",
-                  "c9e462fd-b4a1-42e3-b3a0-d563a5a65a8c": "bfc01014-ffc4-4bc8-8941-84fd1819168a",
-                  "541abcf1-863c-4bc1-9db5-ef8e954d8198": "be804c86-13f0-4d70-9f3e-e535d34b9345",
-                  "8857e50b-b0a6-4a16-94e1-b0f70a50eed6": "8bc5061e-ab44-4bb8-bb3f-fba6306d882c",
-                  "e3295a3c-8344-4b0e-9cce-01d607541da7": "932379a7-43c9-481e-ae29-c8f003e37cd8",
-                  "372aed61-6c2f-4b6b-90a8-1813d29d969e": "72da7308-165c-48bb-b1de-7de0facf6b09",
-                  "0e60d0e8-cbfe-4a92-ba6a-77b45e4bb203": "9a9bf373-93be-4422-aa18-d96d19869493",
-                  "783b7f16-80ca-406d-9f5c-9055a5f90973": "d29b7aa4-ee46-4150-bcad-110e38ba1830",
-                  "46996e94-2360-4ad8-ae20-3977b5d9e967": "41d1795f-b55f-4226-9fc8-93364fb72089",
-                  "48b6df4c-fb0f-4372-912a-0d9e6016cb05": "cd356858-307f-4bf8-8f30-ed6b0344e5db",
-                  "bc8fd409-e095-4f37-9556-4138f2552f95": "0b68a3bc-d515-482d-b5f7-6711d6e1f4d5",
-                  "57329a2a-d3fe-4678-8d4d-e58d1460abe7": "a96756b9-f691-4ab2-96f4-401893176c76",
-                  "9d1bc2bc-e232-492c-8b5f-4066b7d69d00": "f6a7f5b1-c185-4b99-8f11-df9fa86aa8f3",
-                  "9b028a58-d65e-421a-b643-e5b6d9f3b654": "907b5c32-25df-4295-b85b-7942b9ec1c8e",
-                  "7df993c9-b29c-4881-ba92-f7820c3c2d41": "67d5f2f6-2297-411f-8184-42e855e57243",
-                  "3b74c4f8-dcc2-4773-a3ac-7ad84ac1e7c7": "a328e4c3-a410-495b-9b76-0058f4b2822a",
-                  "83460378-14f7-4648-aa3e-78db618b990e": "8ea1fc92-79dc-4cee-9d49-eeeb30114814"
-                }
+                "__PrefabIdToInstanceId": {}
               }
             ]
           }

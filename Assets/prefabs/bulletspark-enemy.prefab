@@ -88,7 +88,7 @@
             "ApplyRotation": false,
             "ApplyShape": true,
             "Bounce": 1,
-            "Brightness": 15,
+            "Brightness": 10,
             "Bumpiness": 0,
             "Collision": false,
             "CollisionIgnore": null,
@@ -308,7 +308,7 @@
                             "TargetColor": "0,1,0,1",
                             "CacheToDisk": true
                           },
-                          "compiled": null
+                          "compiled": "textures/generated/imagefile/a7827c23328ae86d.vtex"
                         },
                         "BroadcastMessages": []
                       }

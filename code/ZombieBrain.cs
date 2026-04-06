@@ -1,6 +1,6 @@
 using Sandbox;
+using Sandbox.Navigation;
 using System;
-using System.Security.Cryptography;
 using static Ballistics;
 using static HealthSystem;
 
@@ -40,6 +40,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	Random random = new Random();
 
 	SceneTraceResult groundCheck;
+
+	NavMesh NavMesh;
 
 	protected override void OnStart()
 	{
@@ -87,6 +89,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 			case ZombieState.Approach: // STATE IS APPROACH
 				StateDebugText.Text = "Approach";
+
 				if ( !(Agent.AgentPosition - Body.WorldPosition).IsNearlyZero(50f) ) { Agent.SetAgentPosition( Body.WorldPosition ); }
 				Agent.UpdatePosition = true; Agent.UpdateRotation = false;
 				Agent.MaxSpeed = 800;
@@ -100,10 +103,10 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				}
 				LookAtPlayer();
 
-				// Got to wander if player is far
+				// Go to wander if player is far
 				if ( DistanceToPlayer > 7000 )
 				{
-					Agent.UpdateRotation = false;
+					Agent.UpdateRotation = true;
 					Agent.MaxSpeed = 240; 
 					CurrentState = ZombieState.Wander; 
 				}
@@ -112,7 +115,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				if ( DistanceToPlayer < (SlamRadius * 2) && NextSlam ) { CurrentState = ZombieState.Slam; }
 
 				// Go to Leap if NextMove, Distance und sightlineCheck 
-				if ( DistanceToPlayer < 3000 && DistanceToPlayer > 1000 && NextLeap && NextSlam ) 
+				if ( DistanceToPlayer < 2000 && DistanceToPlayer > 1000 && NextLeap && NextSlam ) 
 				{
 					SceneTraceResult checkSightline = Scene.Trace.Sphere( 64, Body.WorldPosition + Vector3.Up * 300, Player.WorldPosition + Vector3.Up * 300 )
 						.IgnoreGameObjectHierarchy( GameObject )
@@ -218,13 +221,13 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		{
 			Agent.MoveTo( possibleTargetPos );
 		}
-		else 
+		else
 		{
 			int tries = 0;
-			while ( wanderTrace.Hit && tries < 10 ) 
+			while ( wanderTrace.Hit && tries < 10 )
 			{
 				possibleTargetPos = Body.WorldPosition + (Vector3)random.VectorInCircle( 2000 );
-				
+
 				wanderTrace = Scene.Trace.Sphere( 300, possibleTargetPos, possibleTargetPos )
 					.Radius( 300 )
 					.IgnoreGameObjectHierarchy( GameObject )
@@ -232,11 +235,12 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 					.Run();
 				tries++;
 			}
-			Agent.MoveTo( possibleTargetPos );
+			if ( !wanderTrace.Hit )
+			{
+				Agent.MoveTo( possibleTargetPos );
+			}
 		}
-
-		DebugOverlay.Trace(wanderTrace);
-
+		// DebugOverlay.Trace(wanderTrace);
 	}
 	
 	void DoSlam()
@@ -263,8 +267,12 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			attackTrace.GameObject.GetComponentInParent<HealthSystem>().Damage( 500 );
 
 			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
-			attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 100000 );
-
+			if (Player.GetComponent<Rigidbody>().Velocity.z < 100 ) 
+			{ 
+				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 30000 );
+				attackTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity 
+					= attackTrace.GameObject.WorldRotation.Forward * 10 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
+			}
 			Sound.Play( "sounds/metal-hit-cartoon.sound", attackTrace.HitPosition );
 		}
 
