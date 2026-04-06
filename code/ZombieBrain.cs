@@ -4,32 +4,37 @@ using System.Security.Cryptography;
 using static Ballistics;
 using static HealthSystem;
 
-public enum ZombieState { Idle, Approach, Leap, Staggered }
+public enum ZombieState { Wander, Approach, Leap, Slam, Staggered }
 
 public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 {
 	[Property] NavMeshAgent Agent;
-	[Property] GameObject Player;
+	GameObject Player;
 	[Property] Rigidbody Body;
 	[Property] GameObject DeadZombie;
 	[Property] TextRenderer StateDebugText;
 	[Property] ParticleRingEmitter AttackParticle;
 	[Property] ParticleEffect AttackEffect;
-	[Property] float ApproachCooldown = 1f;
+	[Property] float MoveCooldown = 1f;
+	float WanderCooldown = 10f;
 	[Property] float LeapCooldown = 5f;
-	
+	[Property] float SlamCooldown = 3f;
+	[Property] float SlamRadius = 350f;
+
 	// --- Leap-Parameter zum Tunen ---
 	[Property] float LeapFlightTime = 1.5f;         // Konstante Flugzeit in Sekunden
 	[Property] float LeapMaxHeightOffset = 800f;    // Wie viel höher der Bogen gehen soll
 
 	float DistanceToPlayer;
 	Vector3 TargetPos;
+	int SlamCharge;
 
 	public ZombieState CurrentState;
 
-	TimeUntil NextApproach;
+	TimeUntil NextMove;
+	TimeUntil NextWander;
 	TimeUntil NextLeap;
-	TimeUntil NextAttack;
+	TimeUntil NextSlam;
 	public TimeUntil KnockBack;
 
 	Random random = new Random();
@@ -38,105 +43,134 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnStart()
 	{
-		CurrentState = ZombieState.Idle;
+		CurrentState = ZombieState.Wander;
+		Agent.MoveTo( Body.WorldPosition );
+		Player = Scene.FindAllWithTag("carbody").First<GameObject>();
+		Log.Info( $"[START] Player found: {Player.Name}" );
 	}
 
 	void IHealthEvent.OnDeath()
 	{
 		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, WorldScale );
 		foreach (GameObject child in _deadClone.Children ) 
-		{ 
-			child.GetComponent<Rigidbody>().ApplyImpulse( Body.Velocity + (child.WorldPosition - GameObject.WorldPosition).Normal * 1000);
+		{
+			child.GetComponent<Rigidbody>().ApplyImpulse( Body.Velocity + (child.WorldPosition - GameObject.WorldPosition).Normal * 1000 );
+			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
 	}
 
 	protected override void OnFixedUpdate()
 	{
+
+		DebugOverlay.Sphere( new Sphere( Body.WorldPosition, SlamRadius ), Color.Orange );
 		DistanceToPlayer = (Player.WorldPosition - WorldPosition).Length;
 
 		switch ( CurrentState ) 
 		{
 			default:
 				Agent.Stop();
+				StateDebugText.Text = "Default";
 				break;
-			case ZombieState.Idle: // STATE IS IDLE
-				StateDebugText.Text = "Idle";
-				Agent.Stop();
+
+			case ZombieState.Wander: // STATE IS WANDER
+				StateDebugText.Text = "Wander";
+
+				if ( NextWander && Agent.TargetPosition.HasValue && ((Vector3)Agent.TargetPosition - Body.WorldPosition).IsNearlyZero(300) )
+				{
+					DoWander();
+					NextWander = WanderCooldown + random.Float(0f, 0.1f);
+				}
+
 				if ( DistanceToPlayer < 7000 ) { CurrentState = ZombieState.Approach; }
 				break;
 
 			case ZombieState.Approach: // STATE IS APPROACH
 				StateDebugText.Text = "Approach";
-				Agent.SetAgentPosition( Agent.WorldPosition );
-				Agent.UpdatePosition = true;
-				// Walk to Player
-				Agent.MaxSpeed = 240;
+				if ( !(Agent.AgentPosition - Body.WorldPosition).IsNearlyZero(50f) ) { Agent.SetAgentPosition( Body.WorldPosition ); }
+				Agent.UpdatePosition = true; Agent.UpdateRotation = false;
+				Agent.MaxSpeed = 800;
+				Agent.Acceleration = 500;
 
-				if ( NextApproach )
+				// Walk to Player and rotate
+				if ( NextMove )
 				{
-					Agent.MoveTo( Player.WorldPosition );
-					NextApproach = ApproachCooldown;
+					Agent.MoveTo( Player.WorldPosition + (Body.WorldPosition - Player.WorldPosition).Normal * 200 );
+					NextMove = MoveCooldown + random.Float(0f, 0.1f);
 				}
-				if ( Body.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+				LookAtPlayer();
+
+				// Got to wander if player is far
+				if ( DistanceToPlayer > 7000 )
 				{
-					Body.SmoothRotate( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f, 0.01f );
+					Agent.UpdateRotation = false;
+					Agent.MaxSpeed = 240; 
+					CurrentState = ZombieState.Wander; 
 				}
 
-				if ( DistanceToPlayer > 7000 ) { CurrentState = ZombieState.Idle; }
-				if ( DistanceToPlayer < 3000 ) { CurrentState = ZombieState.Leap; }
+				// Go to slam if near and NextSlam
+				if ( DistanceToPlayer < (SlamRadius * 2) && NextSlam ) { CurrentState = ZombieState.Slam; }
+
+				// Go to Leap if NextMove, Distance und sightlineCheck 
+				if ( DistanceToPlayer < 3000 && DistanceToPlayer > 1000 && NextLeap && NextSlam ) 
+				{
+					SceneTraceResult checkSightline = Scene.Trace.Sphere( 64, Body.WorldPosition + Vector3.Up * 300, Player.WorldPosition + Vector3.Up * 300 )
+						.IgnoreGameObjectHierarchy( GameObject )
+						.WithoutTags( "enemy", "player", "world" )
+						.Run();
+					DebugOverlay.Trace( checkSightline );
+					if ( !checkSightline.Hit ) CurrentState = ZombieState.Leap; 
+				}
+
+				break;
+
+			case ZombieState.Slam: // STATE IS SLAM
+				StateDebugText.Text = "Slam";
+				Agent.Stop();
+				// Increase Charge to 100 then DoSlam()
+				if ( SlamCharge >= 100 ) { SlamCharge = 0; DoSlam(); }
+				else { SlamCharge++; }
+
+				if ( DistanceToPlayer < 7000 && SlamCharge == 0 ) { CurrentState = ZombieState.Approach; }
+
 				break;
 
 			case ZombieState.Leap: // STATE IS LEAP
 
-				groundCheck = Scene.Trace.Ray( WorldPosition + Vector3.Up * 10, WorldPosition + Vector3.Down * 35 )
-					.Radius( 48 )
+				StateDebugText.Text = "Leap";
+
+				Agent.Stop();
+				Agent.UpdatePosition = false; Agent.UpdateRotation = false;
+
+				groundCheck = Scene.Trace.Ray( WorldPosition + Vector3.Up * 10, WorldPosition + Vector3.Down * 5 )
+					.Radius( 100 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.WithoutTags( "enemy" )
 					.Run();
 				// DebugOverlay.Trace( groundCheck );
 
-				if ( DistanceToPlayer > 3000 )
+				if (groundCheck.Hit)
 				{
-					if (!groundCheck.Hit) 
-					{
-						break;
-					}
-					Body.GravityScale = 1f;
-					CurrentState = ZombieState.Approach;
-					break;
-				}
-
-				StateDebugText.Text = "Leap"; 
-
-				if (groundCheck.Hit) 
-				{
-					if ( Body.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
-					{
-						Body.SmoothRotate( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f, 0.01f );
-					}
+					LookAtPlayer();
 				}
 				else
 				{
 					Body.SmoothRotate( Rotation.LookAt( Body.WorldPosition + Body.WorldRotation.Forward * 10, Vector3.Up ), 0.5f, 0.01f );
-					DebugOverlay.Sphere(new Sphere(TargetPos, 300 ), Color.Orange );
 				}
 
-
-				Agent.SetAgentPosition( Agent.WorldPosition );
-				Agent.Stop();
-				Agent.UpdatePosition = false;
-
-
-
-				// === Leap-Berechnung ===
+				// Einmal am anfang leapen
 				if ( NextLeap ) 
 				{ 
 					DoLeap(); 
 				}
-				if ( NextAttack && groundCheck.Hit && !NextLeap && Body.Velocity.z < 10 )
+
+				// wenn er wieder aufkommt slammen und zu approach
+				if ( NextSlam && groundCheck.Hit && !NextLeap && Body.Velocity.z < 10 )
 				{
-					DoAttack();
+					DoSlam();
+
+					Body.GravityScale = 1f;
+					CurrentState = ZombieState.Approach;
 				}
 
 				break;
@@ -157,27 +191,75 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				if (KnockBack && groundCheck.Hit) 
 				{
 					Agent.UpdatePosition = true;
-					CurrentState = ZombieState.Idle;
+					CurrentState = ZombieState.Wander;
 				}
 				break;
 		}
 	}
-	void DoAttack()
+
+	private void LookAtPlayer()
 	{
-		var attackTrace = Scene.Trace.Sphere( 300, WorldPosition, WorldPosition )
+		if ( Body.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+		{
+			Body.SmoothRotate( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ).Angles().WithPitch(0), 0.5f, 0.01f );
+		}
+	}
+
+	void DoWander() 
+	{ 
+		Vector3 possibleTargetPos = Body.WorldPosition + (Vector3)random.VectorInCircle(1000);
+		SceneTraceResult wanderTrace = Scene.Trace.Sphere( 100, possibleTargetPos, possibleTargetPos )
+			.Radius( 100 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "player", "world" )
+			.Run();
+
+		if ( !wanderTrace.Hit )
+		{
+			Agent.MoveTo( possibleTargetPos );
+		}
+		else 
+		{
+			int tries = 0;
+			while ( wanderTrace.Hit && tries < 10 ) 
+			{
+				possibleTargetPos = Body.WorldPosition + (Vector3)random.VectorInCircle( 2000 );
+				
+				wanderTrace = Scene.Trace.Sphere( 300, possibleTargetPos, possibleTargetPos )
+					.Radius( 300 )
+					.IgnoreGameObjectHierarchy( GameObject )
+					.WithoutTags( "enemy", "player", "world" )
+					.Run();
+				tries++;
+			}
+			Agent.MoveTo( possibleTargetPos );
+		}
+
+		DebugOverlay.Trace(wanderTrace);
+
+	}
+	
+	void DoSlam()
+	{
+		Log.Info( $"{GameObject.Name} is slamming!" );
+		// Attack Trace
+		var attackTrace = Scene.Trace.Sphere( SlamRadius, Body.WorldPosition, Body.WorldPosition )
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithAllTags( "player", "carbody" )
 						.Run();
+		DebugOverlay.Trace(attackTrace);
 
+		// Partikel, Sound
 		AttackParticle.WorldTransform = new Transform(Body.WorldPosition, Rotation.FromPitch(0));
 		AttackParticle.ResetEmitter();
 		Sound.Play( "sounds/falling-game-character.sound", Body.WorldPosition );
 
+		// Wenn er den player trifft
 		if ( attackTrace.Hit )
 		{
 			if ( !attackTrace.GameObject.IsValid ) return;
 
-			Log.Info( $"[LEAP] Attack hit: {attackTrace.GameObject.Name}" );
+			Log.Info( $"Slam hit: {attackTrace.GameObject.Name}" );
 			attackTrace.GameObject.GetComponentInParent<HealthSystem>().Damage( 500 );
 
 			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
@@ -186,7 +268,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			Sound.Play( "sounds/metal-hit-cartoon.sound", attackTrace.HitPosition );
 		}
 
-		NextAttack = LeapCooldown;
+		NextSlam = SlamCooldown;
 
 	}
 
@@ -194,7 +276,6 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	{
 
 		Sound.Play( "sounds/whaa.sound", Body.WorldPosition );
-
 		var playerRb = Player.GetComponent<Rigidbody>();
 
 		// find ground below player to get accurate target position and flight time
@@ -203,16 +284,16 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player" )
 			.Run();
-		DebugOverlay.Sphere(new Sphere(findGround.HitPosition, 32), Color.Black, 3f );
+		// DebugOverlay.Sphere(new Sphere(findGround.HitPosition, 32), Color.Black, 3f );
 
-		Vector2 randomOffset = random.VectorInCircle(100);
+		Vector2 randomOffset = random.VectorInCircle() * random.Int(200, 300);
 		
 		// === Konvertiere s&box → Unity (X,Y,Z) → (X,Z,Y) ===
 		Vector3 zombieUnity = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
-		Vector3 playerUnity = new Vector3( playerRb.WorldPosition.x, findGround.HitPosition.z, playerRb.WorldPosition.y );
-		Vector3 playerVelUnity = new Vector3( playerRb.Velocity.x, playerRb.Velocity.z, playerRb.Velocity.y );
+		Vector3 playerUnity = new Vector3( playerRb.WorldPosition.x + randomOffset.x, findGround.HitPosition.z, playerRb.WorldPosition.y + randomOffset.y );
+		Vector3 playerVelUnity = new Vector3( playerRb.Velocity.x, 0, playerRb.Velocity.y );
 
-		DebugOverlay.Sphere( new Sphere( new Vector3( playerRb.WorldPosition.x, playerRb.WorldPosition.y, findGround.HitPosition.z  ), 32 ), Color.White, 3f );
+		// DebugOverlay.Sphere( new Sphere( new Vector3( playerRb.WorldPosition.x, playerRb.WorldPosition.y, findGround.HitPosition.z  ), 32 ), Color.White, 3f );
 
 		// === Berechne requiredLateralSpeed für feste Flugzeit ===
 		Vector3 directionXZ = new Vector3( playerUnity.x - zombieUnity.x, 0f, playerUnity.z - zombieUnity.z );
@@ -235,7 +316,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			Vector3 impactPoint = new Vector3( impactPointUnity.x, impactPointUnity.z, impactPointUnity.y );
 
 			float worldGravity = Scene.PhysicsWorld.Gravity.Length;
-			float gravityScale = Math.Max( 1f, gravityNeeded / worldGravity );
+			float gravityScale = Math.Max( 0.5f, gravityNeeded / worldGravity );
 
 			Log.Info( $"[LEAP] SUCCESS  gravityScale: {gravityScale:F2}" );
 
@@ -258,7 +339,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			Vector3 impactPoint = new Vector3( playerUnity.x, playerUnity.z, playerUnity.y );
 
 			float worldGravity = Scene.PhysicsWorld.Gravity.Length;
-			float gravityScale = Math.Max( 1f, gravityNeeded / worldGravity );
+			float gravityScale = Math.Max( 0.5f, gravityNeeded / worldGravity );
 
 			Log.Info( $"[LEAP] NO PREDICTION gravityScale: {gravityScale:F2}" );
 
@@ -270,4 +351,6 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 		}
 	}
+
+
 }
