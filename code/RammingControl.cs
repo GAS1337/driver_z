@@ -25,5 +25,11 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
 
 		Sound.Play( "sounds/bullet-impact-flesh.sound", WorldPosition);
+		if ( other.Tags.Has( "cow" ) ) 
+		{ 
+			SoundHandle screamHandle = Sound.Play( "sounds/cow/moo-scream.sound", other.WorldPosition );
+			screamHandle.Parent = other;
+			screamHandle.FollowParent = true;
+		}
 	}
 }
