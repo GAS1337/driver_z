@@ -131,7 +131,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				StateDebugText.Text = "Slam";
 				Agent.Stop();
 				// Increase Charge to 100 then DoSlam()
-				if ( SlamCharge >= 100 ) { SlamCharge = 0; DoSlam(); }
+				if ( SlamCharge >= 50 ) { SlamCharge = 0; DoSlam(); }
 				else { SlamCharge++; }
 
 				if ( DistanceToPlayer < 7000 && SlamCharge == 0 ) { CurrentState = ZombieState.Approach; }

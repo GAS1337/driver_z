@@ -1,0 +1,254 @@
+{
+  "RootObject": {
+    "__guid": "574225c4-6a62-4d22-8553-f63be84cd34a",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "ghost",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "0.6666667,0.6666667,0.6666667",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "c22ca121-5be9-49eb-aa16-0465ff860947",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Ghost",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "5,5,5",
+        "Tags": "enemy",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "HealthSystem",
+            "__guid": "142b927a-bce3-49eb-8473-110ba86cef3d",
+            "__enabled": true,
+            "Flags": 0,
+            "HealthbarRenderer": null,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "SetHealth": 750
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "6f1acfe3-ff1c-47a7-af73-56f8dcfe203f",
+            "__enabled": true,
+            "Flags": 0,
+            "ColliderFlags": 0,
+            "Elasticity": null,
+            "Friction": null,
+            "IsTrigger": false,
+            "Model": "models/graveyard kit/character-ghost.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnObjectTriggerEnter": null,
+            "OnObjectTriggerExit": null,
+            "OnTriggerEnter": null,
+            "OnTriggerExit": null,
+            "RollingResistance": null,
+            "Static": false,
+            "Surface": null,
+            "SurfaceVelocity": "0,0,0"
+          },
+          {
+            "__type": "GhostBrain",
+            "__guid": "f8e9f131-2e99-4591-9bba-05fd43e47e2f",
+            "__enabled": true,
+            "Flags": 0,
+            "GhostBall": {
+              "_type": "gameobject",
+              "prefab": "prefabs/ghost-ball.prefab"
+            },
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "StateDebugText": {
+              "_type": "component",
+              "component_id": "4ed29d26-25e1-47d9-838d-766dbf86a099",
+              "go": "60383843-d91f-4f2a-a26d-68bdcc534ba1",
+              "component_type": "TextRenderer"
+            }
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "60383843-d91f-4f2a-a26d-68bdcc534ba1",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "StateDebug",
+            "Position": "30.8,0,32.4",
+            "Rotation": "0,0,1,0.00000008940697",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.TextRenderer",
+                "__guid": "4ed29d26-25e1-47d9-838d-766dbf86a099",
+                "__enabled": true,
+                "Flags": 0,
+                "__version": 2,
+                "BlendMode": "Normal",
+                "FogStrength": 0.1,
+                "HorizontalAlignment": "Center",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "Scale": 0.3,
+                "TextScope": {
+                  "Text": "Hello! ❤",
+                  "TextColor": "0.79269,0.82483,0.91628,1",
+                  "FontName": "Poppins",
+                  "FontSize": 64,
+                  "FontWeight": 800,
+                  "FontItalic": false,
+                  "FontVariantNumeric": "Normal",
+                  "LineHeight": 1,
+                  "LetterSpacing": 0,
+                  "WordSpacing": 0,
+                  "FilterMode": "Bilinear",
+                  "FontSmooth": "Auto",
+                  "Outline": {
+                    "Enabled": false,
+                    "Size": 4,
+                    "Color": "0,0,1,1"
+                  },
+                  "Shadow": {
+                    "Enabled": false,
+                    "Size": 4,
+                    "Color": "0,0,0,1",
+                    "Offset": "4,4"
+                  },
+                  "OutlineUnder": {
+                    "Enabled": false,
+                    "Size": 4,
+                    "Color": "0,1,0,1"
+                  },
+                  "ShadowUnder": {
+                    "Enabled": false,
+                    "Size": 4,
+                    "Color": "0,0,0,1",
+                    "Offset": "4,4"
+                  }
+                },
+                "VerticalAlignment": "Center"
+              }
+            ],
+            "Children": []
+          },
+          {
+            "__guid": "bc413d08-c466-496a-bf2b-33af87f836ad",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Model",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "2160c155-4897-4f54-9463-56c18dd53027",
+                "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/graveyard kit/character-ghost.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

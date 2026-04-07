@@ -3,19 +3,30 @@ using System;
 using static Ballistics;
 using static HealthSystem;
 
-public enum GhostState { Wander, IsMoving, Approach, Attack, Staggered }
+public enum GhostState { Moving, Attack, Staggered }
 
 
 public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 {
-	[Property] NavMeshAgent Agent;
-	[Property] GameObject Player;
+	GameObject Player;
+	Rigidbody PlayerBody;
+	[Property] GameObject GhostBall;
 	[Property] TextRenderer StateDebugText;
 
 	public GhostState CurrentState;
 
-	Random Random;
+	SceneTraceResult GroundTrace;
 
+	Vector3 HorizontalOffset;
+	Vector3 TargetPosition;
+	Vector3 MittelPunkt;
+	float SchwebeDistance = 100;
+	float SchwebeFrequenz = 2f;
+
+	float AttackCharge = 0;
+
+	TimeUntil NextOffset;
+	Random random;
 
 	void IHealthEvent.OnDeath()
 	{
@@ -24,71 +35,114 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnStart()
 	{
-		Random = new Random();
+		random = new Random();
+		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
+		PlayerBody = Player.GetComponent<Rigidbody>();
+		Log.Info(Player.Name);
 
-		CurrentState = GhostState.Wander;
+		CurrentState = GhostState.Moving;
+
+		GroundTrace = Scene.Trace
+			.Ray( WorldPosition, WorldPosition + Vector3.Down * 3000 )
+			.Radius( 1 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "player", "dead" )
+			.Run();
+
+		HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
+		MittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;
+
+		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
+		GameObject.WorldPosition = MittelPunkt;
 	}
 
 	protected override void OnUpdate()
 	{
+		GroundTrace = Scene.Trace
+			.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
+			.Radius( 1 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "player", "dead" )
+			.Run();
+
+		Vector3 playerPosition = Player.WorldPosition;
+		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 500).WithY( 0 ).WithX( 0 );
+		TargetPosition = playerPosition + Player.WorldRotation.Backward.WithZ(0).Normal * 3000 + hoverHeight + HorizontalOffset;
+
 		switch ( CurrentState ) 
 		{
 			default: 
 				StateDebugText.Text = "DEFAULT";
-				Agent.Stop(); 
 				break;
 
 			// WANDER
-			case GhostState.Wander: 
+			case GhostState.Moving: 
 				StateDebugText.Text = "WANDER";
-				// Choose a random position to move to within a certain radius, reset move speed to default
-				Agent.MaxSpeed = 120;
-				Agent.MoveTo( Agent.WorldPosition + new Vector3 (Random.Int(-500, 500), Random.Int(-500, 500), 0) );
-				CurrentState = GhostState.IsMoving;
+				
+				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 1, 3));
+				// MittelPunkt = MittelPunkt + ( TargetPosition - MittelPunkt ) * 0.5f + Vector3.Left * (MathF.Sin( (TargetPosition - MittelPunkt).Length * SchwebeFrequenz ) * SchwebeDistance);
 
-				break;
+				if ( AttackCharge >= 4 ) { AttackCharge = 0; Attack(); }
+				else { AttackCharge += 1 * Time.Delta; }
 
-			case GhostState.IsMoving:
-				StateDebugText.Text = "IS MOVING";
-
-				// Choose new Pos if we are close to the current target
-				if ( Agent.TargetPosition.HasValue ) 
+				if ( AttackCharge == 0 )
 				{
-					if ( ((Vector3)Agent.TargetPosition - Agent.WorldPosition).IsNearlyZero( 10 ) ) { CurrentState = GhostState.Wander; }
+					HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
 				}
-
-				// Check for Distance to Player and switch to Approach if close enough
-				if ( (Agent.WorldPosition - Player.WorldPosition).Length < 7000 ) 
-				{ 
-					CurrentState = GhostState.Approach;
-				}
-
-				break;
-			// APPROACH
-			case GhostState.Approach:
-				// Go to wander if distance too far
-				if ( (Agent.WorldPosition - Player.WorldPosition).Length > 7000 )
-				{
-					CurrentState = GhostState.Wander;
-				}
-				Agent.MaxSpeed = 360;
-				Agent.MoveTo( Player.WorldPosition + Player.GetComponent<Rigidbody>().Velocity.Normal * 1000 );
-
+				// if ( (TargetPosition - MittelPunkt).IsNearlyZero(500) ) CurrentState = GhostState.Attack;
 				break;
 
 			// ATTACK
 			case GhostState.Attack:
+				StateDebugText.Text = "ATTACK";
 
 
 				break;
 
 			// STAGGERED
 			case GhostState.Staggered:
-
+				StateDebugText.Text = "STAGGERED";
 
 				break;
 		}
 
+		// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, dann mit Distanz multiplizieren und auf MittelPunkt addieren
+		GameObject.WorldPosition = MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+		LookAtPlayer();
+	}
+
+	private void LookAtPlayer()
+	{
+		if ( GameObject.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+		{
+			GameObject.WorldRotation = GameObject.WorldRotation.LerpTo( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f );
+		}
+	}
+
+	private void Attack()
+	{
+		GameObject newBall = GhostBall.Clone( WorldPosition );
+		Rigidbody newBody = newBall.GetComponent<Rigidbody>();
+		// newBody.Velocity = Vector3.Down * 100;
+
+		// Unity Conversion
+		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
+		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 50, Player.WorldPosition.y ) + random.VectorInSphere(200);
+		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
+
+		if ( Ballistics.solve_ballistic_arc( UnityProjPos, 
+			3000, 
+			UnityTargetPos, 
+			UnityTargetVel, 
+			Scene.PhysicsWorld.Gravity.Length * 0.001f,
+			out Vector3 s0, out Vector3 s1 ) > 0 ) 
+		{ 
+			// Convert back to S&box
+			Vector3 solutionVelocity = new Vector3(s0.x, s0.z, s0.y);
+			
+			//Apply Velocity
+			newBody.Velocity = solutionVelocity;
+		}
 	}
 
 

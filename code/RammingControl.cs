@@ -20,7 +20,7 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		}
 
 		// Apply Impulse and Damage to Enemy
-		other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 10000 ) );
+		if ( other.GetComponent<Rigidbody>().IsValid ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 10000 ) );
 		
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
 

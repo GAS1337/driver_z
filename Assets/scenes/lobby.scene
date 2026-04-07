@@ -195,7 +195,7 @@
           {
             "Id": {
               "Type": "GameObject",
-              "IdValue": "ad0bea9b-d42b-4394-a814-87de18c4d9f5"
+              "IdValue": "e56cef9f-2533-458a-85eb-92c6370e33fb"
             },
             "Parent": {
               "Type": "GameObject",
@@ -205,15 +205,15 @@
             "ContainerProperty": "Children",
             "IsContainerArray": true,
             "Data": {
-              "__guid": "ad0bea9b-d42b-4394-a814-87de18c4d9f5",
+              "__guid": "e56cef9f-2533-458a-85eb-92c6370e33fb",
               "__version": 2,
               "Flags": 0,
-              "Name": "the spikey bumper ram",
+              "Name": "GameObject",
               "Position": "0,0,0",
-              "Rotation": "-0.434261,-0.5175321,0.5647872,0.4739127",
-              "Scale": "0.7,0.6,0.32",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
               "Tags": "",
-              "Enabled": true,
+              "Enabled": false,
               "NetworkMode": 2,
               "NetworkFlags": 0,
               "NetworkOrphaned": 0,
@@ -225,14 +225,7 @@
             }
           }
         ],
-        "RemovedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "e29f4e5d-3be9-42c0-9ad1-7fc85cb6b99e"
-            }
-          }
-        ],
+        "RemovedObjects": [],
         "PropertyOverrides": [
           {
             "Target": {
@@ -251,7 +244,24 @@
             "Value": 100000
           }
         ],
-        "MovedObjects": []
+        "MovedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "e51d92a8-6fad-4c4c-8235-76bfbe07004b"
+            },
+            "NewParent": {
+              "Type": "GameObject",
+              "IdValue": "02f51b91-52f1-4dcb-bfa8-5383c225e9a7"
+            },
+            "NewContainerProperty": "Children",
+            "IsNewContainerArray": true,
+            "NewPreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "e56cef9f-2533-458a-85eb-92c6370e33fb"
+            }
+          }
+        ]
       },
       "__PrefabIdToInstanceId": {
         "7e60c9af-5288-40f9-bedb-c6dcf35abd30": "2300dcc6-82ac-4241-943a-e3e0adb966d1",
@@ -334,7 +344,7 @@
         "a8afc65e-a063-4430-b10a-0810abf2fe86": "90198ef2-1f2f-458b-b334-19387341708f",
         "b3a73fe3-d158-471b-89ec-cb2741b66679": "d030c252-9c76-4409-999c-055901265cdc",
         "f4c54636-0565-4e86-8d96-573b1333b5ae": "57d3abe0-8f87-4fe6-9ebe-1a2e910690ae",
-        "ad0bea9b-d42b-4394-a814-87de18c4d9f5": "2d705207-7246-4407-b4a8-32cf922c076a"
+        "e51d92a8-6fad-4c4c-8235-76bfbe07004b": "49882172-4ca6-4456-bf60-c8f795d92782"
       }
     },
     {
@@ -13842,7 +13852,7 @@
       "__guid": "fdc48045-b159-4aa0-a443-111ed7fac129",
       "__version": 2,
       "Flags": 0,
-      "Name": "Zombies",
+      "Name": "Monster",
       "Position": "-14880,-8480,144",
       "Rotation": "0,0,0,1",
       "Scale": "1.5,1.5,1.5",
@@ -13855,242 +13865,6 @@
       "OwnerTransfer": 1,
       "Components": [],
       "Children": [
-        {
-          "__guid": "b7be204a-fe99-41ba-81e7-4324bb8822b9",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "Ghost",
-          "Position": "-4245.333,12906.67,-10.66667",
-          "Rotation": "0,0,0,1",
-          "Scale": "3.333333,3.333333,3.333333",
-          "Tags": "enemy",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [
-            {
-              "__type": "Sandbox.NavMeshAgent",
-              "__guid": "eae51b3f-9ae0-48df-9e96-f27dd39456a1",
-              "__enabled": true,
-              "Flags": 0,
-              "Acceleration": 120,
-              "AllowDefaultArea": true,
-              "AllowedAreas": [],
-              "AutoTraverseLinks": true,
-              "ForbiddenAreas": [],
-              "Height": 64,
-              "MaxSpeed": 120,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 16,
-              "Separation": 0.25,
-              "UpdatePosition": true,
-              "UpdateRotation": true
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "575d4e13-1f76-4dbc-9b4c-5474ce4d171d",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "GhostObject",
-              "Position": "0,0,150",
-              "Rotation": "0,0,0,1",
-              "Scale": "1,1,1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "023e0f6f-f445-45df-8a7e-56c24ca7b6b8",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "BodyGroups": 18446744073709551615,
-                  "CreateAttachments": false,
-                  "LodOverride": null,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Materials": null,
-                  "Model": "models/graveyard kit/character-ghost.vmdl",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Sandbox.ModelCollider",
-                  "__guid": "2c60cd25-7ac0-423c-a22c-f4aba96d6a02",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "ColliderFlags": 0,
-                  "Elasticity": null,
-                  "Friction": null,
-                  "IsTrigger": false,
-                  "Model": "models/graveyard kit/character-ghost.vmdl",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "OnObjectTriggerEnter": null,
-                  "OnObjectTriggerExit": null,
-                  "OnTriggerEnter": null,
-                  "OnTriggerExit": null,
-                  "RollingResistance": null,
-                  "Static": false,
-                  "Surface": null,
-                  "SurfaceVelocity": "0,0,0"
-                },
-                {
-                  "__type": "HealthSystem",
-                  "__guid": "5f44c5b4-a832-440e-9078-bf4594023b74",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "HealthbarRenderer": null,
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "SetHealth": 250
-                },
-                {
-                  "__type": "GhostBrain",
-                  "__guid": "e4c817b6-aed2-49e9-b606-58d855b1910b",
-                  "__enabled": true,
-                  "Flags": 0,
-                  "Agent": {
-                    "_type": "component",
-                    "component_id": "eae51b3f-9ae0-48df-9e96-f27dd39456a1",
-                    "go": "b7be204a-fe99-41ba-81e7-4324bb8822b9",
-                    "component_type": "NavMeshAgent"
-                  },
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Player": {
-                    "_type": "gameobject",
-                    "go": "a8c8eff5-d334-433c-9ee1-fbf36bf9ec23"
-                  },
-                  "StateDebugText": {
-                    "_type": "component",
-                    "component_id": "92a5629e-a064-4b45-9f47-adbd94c7036d",
-                    "go": "9d06f96c-4f89-4e64-a135-929d578ac0a9",
-                    "component_type": "TextRenderer"
-                  }
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "9d06f96c-4f89-4e64-a135-929d578ac0a9",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "StateDebug",
-                  "Position": "0,0,0",
-                  "Rotation": "0,0,1,0.00000008940697",
-                  "Scale": "1,1,1",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.TextRenderer",
-                      "__guid": "92a5629e-a064-4b45-9f47-adbd94c7036d",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "__version": 2,
-                      "BlendMode": "Normal",
-                      "FogStrength": 0.1,
-                      "HorizontalAlignment": "Center",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "Scale": 0.3,
-                      "TextScope": {
-                        "Text": "Hello! ❤",
-                        "TextColor": "0.79269,0.82483,0.91628,1",
-                        "FontName": "Poppins",
-                        "FontSize": 64,
-                        "FontWeight": 800,
-                        "FontItalic": false,
-                        "FontVariantNumeric": "Normal",
-                        "LineHeight": 1,
-                        "LetterSpacing": 0,
-                        "WordSpacing": 0,
-                        "FilterMode": "Bilinear",
-                        "FontSmooth": "Auto",
-                        "Outline": {
-                          "Enabled": false,
-                          "Size": 4,
-                          "Color": "0,0,1,1"
-                        },
-                        "Shadow": {
-                          "Enabled": false,
-                          "Size": 4,
-                          "Color": "0,0,0,1",
-                          "Offset": "4,4"
-                        },
-                        "OutlineUnder": {
-                          "Enabled": false,
-                          "Size": 4,
-                          "Color": "0,1,0,1"
-                        },
-                        "ShadowUnder": {
-                          "Enabled": false,
-                          "Size": 4,
-                          "Color": "0,0,0,1",
-                          "Offset": "4,4"
-                        }
-                      },
-                      "VerticalAlignment": "Center"
-                    }
-                  ],
-                  "Children": []
-                }
-              ]
-            }
-          ]
-        },
         {
           "__guid": "11683d3c-8f34-4c16-9ac6-66a9ecab465e",
           "__version": 2,
@@ -14151,6 +13925,45 @@
             "fc9f88c0-1c56-4a16-8045-11795d11f140": "5eba5841-2923-4e30-ac4d-f10c010da95d",
             "2d4f2f06-b84a-4f40-ac0a-2a071a55cd83": "bbef7695-0030-4a5c-ae8e-e3424c0e57d4",
             "21d156e0-8713-46a6-b823-ac8576813805": "21bd10f1-78c4-4b24-a9d9-573a6da3dfbd"
+          }
+        },
+        {
+          "__guid": "35a4c746-9eb6-4d4b-8593-98982b3c48f0",
+          "__version": 2,
+          "__Prefab": "prefabs/ghost.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
+                },
+                "Property": "Position",
+                "Value": "3580.001,6328,192"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
+                },
+                "Property": "Scale",
+                "Value": "0.4444444,0.4444444,0.4444444"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "574225c4-6a62-4d22-8553-f63be84cd34a": "35a4c746-9eb6-4d4b-8593-98982b3c48f0",
+            "c22ca121-5be9-49eb-aa16-0465ff860947": "1c81dcda-b1ea-4f13-be51-153cc3b900b3",
+            "142b927a-bce3-49eb-8473-110ba86cef3d": "ee07e33a-8732-4590-9dad-6a54982b7047",
+            "6f1acfe3-ff1c-47a7-af73-56f8dcfe203f": "ba7c430b-79ad-4669-ac5a-dee7f4230425",
+            "f8e9f131-2e99-4591-9bba-05fd43e47e2f": "d26eb497-88e9-48e4-a29f-ca813262be5d",
+            "60383843-d91f-4f2a-a26d-68bdcc534ba1": "ed9758af-ba30-4128-807f-328905411a23",
+            "4ed29d26-25e1-47d9-838d-766dbf86a099": "87380eb2-5cfb-4259-8dec-15599ca8308c",
+            "bc413d08-c466-496a-bf2b-33af87f836ad": "100a440a-43e5-4fb2-bedc-960b6220e98b",
+            "2160c155-4897-4f54-9463-56c18dd53027": "61bd94c2-1eac-4bcc-ae12-887053e96dd9"
           }
         }
       ]
@@ -14672,13 +14485,13 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "e985c000-1b16-4715-80a9-332043b08297"
+          "$blob": "fe7a3828-899e-4067-bd94-58f78357ecdd"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },
