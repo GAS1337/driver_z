@@ -65,7 +65,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	protected override void OnFixedUpdate()
 	{
 
-		DebugOverlay.Sphere( new Sphere( Body.WorldPosition, SlamRadius ), Color.Orange );
+		// DebugOverlay.Sphere( new Sphere( Body.WorldPosition, SlamRadius ), Color.Orange );
 		DistanceToPlayer = (Player.WorldPosition - WorldPosition).Length;
 
 		switch ( CurrentState ) 

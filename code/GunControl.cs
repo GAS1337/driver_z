@@ -8,7 +8,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	HighscoreManager HighscoreManager;
 
 	[Property] Rigidbody CarBody;
-	[Property] SkinnedModelRenderer TurretRenderer;
+	[Property] GameObject Turret;
+	[Property] GameObject Muzzle;
 	[Property] CameraComponent MainCamera;
 	[Property] Decal CrosshairDecal;
 	[Property] BeamEffect ShootEffect;
@@ -55,7 +56,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// Ramming();
 
 		// Wo man hinaimed
-		Ray CameraRay = new Ray(TurretRenderer.WorldPosition, (CrosshairDecal.WorldPosition - TurretRenderer.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
+		Ray CameraRay = new Ray(Muzzle.WorldPosition, (CrosshairDecal.WorldPosition - Muzzle.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
 		ShootTrace = Scene.Trace.Ray( CameraRay, 20000f )
 			.Radius( 8 )
 			.IgnoreGameObjectHierarchy( GameObject )
@@ -64,12 +65,12 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// DebugOverlay.Trace( ShootTrace );
 
 		// Turret Yaw mit Camera Yaw mitdrehen
-		TurretRenderer.GetBoneObject( 1 ).WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Right, Vector3.Up );
+		Turret.WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Backward, Vector3.Up );
 
 		if ( Input.Down( "attack1" ) && NextShot )
 		{
 			Log.Info( "Shooting" );
-			Sound.Play( "sounds/bullet-ricochet.sound", TurretRenderer.GetBoneObject( 1 ).WorldPosition );
+			Sound.Play( "sounds/bullet-ricochet.sound", Turret.WorldPosition );
 
 			if ( ShootTrace.Hit )
 			{
@@ -119,10 +120,10 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	void LaunchRocket() 
 	{
 		if ( CurrentRockets <= 0 ) return; // Sound
-		Sound.Play( "sounds/grenadelauncher.sound", TurretRenderer.GetBoneObject( 1 ).WorldPosition );
+		Sound.Play( "sounds/grenadelauncher.sound", Turret.WorldPosition );
 
-		GameObject newRocket = Rocket.Clone( TurretRenderer.GetBoneObject( 1 ).WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
-		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (ShootTrace.EndPosition - TurretRenderer.GetBoneObject( 1 ).WorldPosition).Normal * RocketSpeed;
+		GameObject newRocket = Rocket.Clone( Muzzle.WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
+		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (ShootTrace.EndPosition - Muzzle.WorldPosition).Normal * RocketSpeed;
 	
 		CurrentRockets--;
 	}

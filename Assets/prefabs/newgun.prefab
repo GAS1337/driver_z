@@ -3,8 +3,8 @@
     "__guid": "f7f18fca-7650-4cc2-b5e1-f7709b713837",
     "__version": 2,
     "Flags": 0,
-    "Name": "NewGun",
-    "Position": "0,0,0",
+    "Name": "newgun",
+    "Position": "-19,0,58",
     "Rotation": "0,0,1,-0.00000004371139",
     "Scale": "0.5,0.9,1",
     "Tags": "",
@@ -43,7 +43,27 @@
         "Tint": "0.16279,0.15522,0.15522,1"
       }
     ],
-    "Children": []
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
