@@ -127,7 +127,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 		// Unity Conversion
 		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
-		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 50, Player.WorldPosition.y ) + random.VectorInSphere(200);
+		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 100, Player.WorldPosition.y ) + random.VectorInSphere(1);
 		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
 
 		if ( Ballistics.solve_ballistic_arc( UnityProjPos, 

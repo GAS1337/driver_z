@@ -21,13 +21,16 @@ public sealed class WheelController : Component
 	[Property] double JumpPower = 0.5f;
 	[Property] int JumpMax = 100000;
 
+	float TargetSpindSpeed;
+
 	int originalTorque = 0;
 	double JumpCharge;
 
 	protected override void OnEnabled()
 	{
 		originalTorque = Torque;
-		
+		TargetSpindSpeed = 0;
+
 		// CarBody.EnhancedCcd = true;
 		RotationControl = GameObject.GetComponent<RotationControl>();
 
@@ -38,7 +41,7 @@ public sealed class WheelController : Component
 
 	}
 
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
 		RearLeft.MaxSpinTorque = originalTorque;
 		RearRight.MaxSpinTorque = originalTorque;
@@ -106,22 +109,22 @@ public sealed class WheelController : Component
 
 		if ( Input.Down( "Left" ) )
 		{
-			FrontLeft.TargetSteeringAngle = Math.Min(SteeringAngle + 4, FrontLeft.TargetSteeringAngle + 0.3f); FrontRight.TargetSteeringAngle = Math.Min(SteeringAngle, FrontRight.TargetSteeringAngle + 0.3f);
+			FrontLeft.TargetSteeringAngle = Math.Min(SteeringAngle + 4, FrontLeft.TargetSteeringAngle + 1f); FrontRight.TargetSteeringAngle = Math.Min(SteeringAngle, FrontRight.TargetSteeringAngle + 1f);
 			RearLeft.TargetSteeringAngle = -SteeringAngle; RearRight.TargetSteeringAngle = -SteeringAngle;
 		}
 		else if ( Input.Down( "Right" ) ) 
 		{
-			FrontLeft.TargetSteeringAngle = Math.Max(-SteeringAngle, FrontLeft.TargetSteeringAngle - 0.3f); FrontRight.TargetSteeringAngle = Math.Max(-SteeringAngle - 4, FrontRight.TargetSteeringAngle - 0.3f);
+			FrontLeft.TargetSteeringAngle = Math.Max(-SteeringAngle, FrontLeft.TargetSteeringAngle - 1f); FrontRight.TargetSteeringAngle = Math.Max(-SteeringAngle - 4, FrontRight.TargetSteeringAngle - 1f);
 			RearLeft.TargetSteeringAngle = SteeringAngle; RearRight.TargetSteeringAngle = SteeringAngle;
 
 		}
 		else 
 		{ 
-			FrontLeft.TargetSteeringAngle = FrontLeft.TargetSteeringAngle.Approach(0, 0.3f); 
-			FrontRight.TargetSteeringAngle = FrontRight.TargetSteeringAngle.Approach( 0, 0.3f ); 
+			FrontLeft.TargetSteeringAngle = FrontLeft.TargetSteeringAngle.Approach(0, 1f); 
+			FrontRight.TargetSteeringAngle = FrontRight.TargetSteeringAngle.Approach( 0, 1f ); 
 			
-			RearLeft.TargetSteeringAngle = RearLeft.TargetSteeringAngle.Approach( 0, 0.3f ); 
-			RearRight.TargetSteeringAngle = RearRight.TargetSteeringAngle.Approach( 0, 0.3f ); 
+			RearLeft.TargetSteeringAngle = RearLeft.TargetSteeringAngle.Approach( 0, 1f ); 
+			RearRight.TargetSteeringAngle = RearRight.TargetSteeringAngle.Approach( 0, 1f ); 
 		}
 
 

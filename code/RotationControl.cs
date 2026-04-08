@@ -17,7 +17,7 @@ public sealed class RotationControl : Component
 	protected override void OnFixedUpdate()
 	{
 		Line VelLine = new Line(CarBody.WorldPosition + Vector3.Up * 100, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 100);
-		DebugOverlay.Line( VelLine );
+		// DebugOverlay.Line( VelLine );
 		if ( LogSpeed )
 		{
 			Log.Info( "Speed/4: " + VelLine.Delta.Length );
@@ -62,11 +62,7 @@ public sealed class RotationControl : Component
 		}
 		else
 		{
-			if ( CarBody.AngularVelocity.WithFriction( 0.0003f ).Length > 2 )
-			{
-				CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.0015f );
-			}
-			else { CarBody.AngularVelocity = CarBody.AngularVelocity.WithFriction( 0.0003f ); }
+			CarBody.AngularVelocity = CarBody.AngularVelocity.ClampLength(1);
 
 			if ( Input.Down( "Forward" ) )
 			{

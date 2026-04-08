@@ -201,14 +201,6 @@
             },
             "Property": "Position",
             "Value": "-3376,288,120"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "a19edc93-3da2-43e8-817b-f430a494eb49"
-            },
-            "Property": "Position",
-            "Value": "3.105901,0.000007644296,-11.59141"
           }
         ],
         "MovedObjects": []
@@ -13849,7 +13841,7 @@
       "Rotation": "0,0,0,1",
       "Scale": "1.5,1.5,1.5",
       "Tags": "",
-      "Enabled": false,
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
@@ -14510,7 +14502,7 @@
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "edc51050-b385-49f1-bf22-e0b8c6e147d4"
+          "$blob": "822c5a25-7e1e-44d1-a2e3-4da05101d08f"
         }
       }
     }

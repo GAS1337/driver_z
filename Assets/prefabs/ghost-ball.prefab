@@ -18,10 +18,10 @@
       {
         "__type": "TemporaryEffect",
         "__guid": "89a012ce-ffbe-4530-8e38-1b4bd29a048e",
-        "__enabled": true,
+        "__enabled": false,
         "Flags": 0,
         "BecomeOrphan": false,
-        "DestroyAfterSeconds": 5,
+        "DestroyAfterSeconds": 0.1,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -84,7 +84,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Radius": 64,
+        "Radius": 32,
         "RollingResistance": null,
         "Static": false,
         "Surface": null,
@@ -92,7 +92,7 @@
       },
       {
         "__type": "GhostBallLogic",
-        "__guid": "059f622d-85db-4b77-9aa7-5955c0168b98",
+        "__guid": "cca81e7f-270e-4d51-b6cc-17e5fcb38049",
         "__enabled": true,
         "Flags": 0,
         "ExplosionModel": {
@@ -106,7 +106,13 @@
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
-        "OnComponentUpdate": null
+        "OnComponentUpdate": null,
+        "temporaryEffect": {
+          "_type": "component",
+          "component_id": "89a012ce-ffbe-4530-8e38-1b4bd29a048e",
+          "go": "00839c35-63a9-48af-8cc4-388309162d83",
+          "component_type": "TemporaryEffect"
+        }
       }
     ],
     "Children": [
@@ -678,7 +684,7 @@
         "Name": "Explosion",
         "Position": "0,0,0",
         "Rotation": "0,0,0,1",
-        "Scale": "10,10,10",
+        "Scale": "1.5,1.5,1.5",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
