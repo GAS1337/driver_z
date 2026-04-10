@@ -1,0 +1,19 @@
+{
+  "MasterVolume": "1",
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/ambience/forest-night-loop.vsnd",
+      "Volume": "1"
+    }
+  ],
+  "StingSounds": [
+    {
+      "SoundFile": "sounds/ambience/stings/sting-crow.sound",
+      "InstanceCount": 1,
+      "RepeatTime": "2 4",
+      "Distance": "50 100"
+    }
+  ],
+  "__references": [],
+  "__version": 0
+}
