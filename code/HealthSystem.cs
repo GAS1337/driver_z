@@ -57,7 +57,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		if ( HealthbarRenderer != null ) 
 		{
 			HealthbarRenderer.Size += new Vector2(-amount.Remap( 0, SetHealth, 0, 200 ), 0);
-			Log.Info( -amount.Remap( 0, SetHealth, 0, 200 ) );
+			// Log.Info( -amount.Remap( 0, SetHealth, 0, 200 ) );
 			HealthbarRenderer.Color = HealthbarRenderer.Color.AdjustHue( -amount.Remap( 0, SetHealth, 0, 120 ) );
 		} 
 

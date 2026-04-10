@@ -12,6 +12,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	Rigidbody PlayerBody;
 	[Property] GameObject GhostBall;
 	[Property] TextRenderer StateDebugText;
+	[Property] bool DebugMode;
+
 
 	public GhostState CurrentState;
 
@@ -39,7 +41,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		random = new Random();
 		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
 		PlayerBody = Player.GetComponent<Rigidbody>();
-		Log.Info(Player.Name);
+		if ( !DebugMode ) { StateDebugText.Enabled = false; }
+		// Log.Info(Player.Name);
 
 		CurrentState = GhostState.Moving;
 

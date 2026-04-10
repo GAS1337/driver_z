@@ -6,22 +6,24 @@ using static HealthSystem;
 public enum VampireState { Moving, Attack, Staggered }
 
 
-public sealed class Vampire : Component, HealthSystem.IHealthEvent
+public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 {
 	GameObject Player;
 	Rigidbody PlayerBody;
-	[Property] GameObject GhostBall;
 	[Property] TextRenderer StateDebugText;
+	[Property] bool DebugMode;
+	[Property] GameObject ParticleObject;
+	ParticleEmitter BloodEmitter;
 
 	public VampireState CurrentState;
 
 	SceneTraceResult GroundTrace;
 
-	Vector3 HorizontalOffset;
+	Vector3 CircleOffset;
 	Vector3 TargetPosition;
 	Vector3 MittelPunkt;
-	float SchwebeDistance = 100;
-	float SchwebeFrequenz = 2f;
+	float SchwebeDistance = 25;
+	float SchwebeFrequenz = 4f;
 
 	float AttackCharge = 0;
 
@@ -36,9 +38,11 @@ public sealed class Vampire : Component, HealthSystem.IHealthEvent
 	protected override void OnStart()
 	{
 		random = new Random();
+		if ( !DebugMode ) { StateDebugText.Enabled = false; }
 		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
 		PlayerBody = Player.GetComponent<Rigidbody>();
-		Log.Info(Player.Name);
+		BloodEmitter = ParticleObject.GetComponent<ParticleEmitter>();
+		// Log.Info(Player.Name);
 
 		CurrentState = VampireState.Moving;
 
@@ -49,14 +53,15 @@ public sealed class Vampire : Component, HealthSystem.IHealthEvent
 			.WithoutTags( "enemy", "player", "dead" )
 			.Run();
 
-		HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
+		// HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
+		CircleOffset = new Vector3(  random.Float( -0.5f, 0.5f ), random.Float( -1, 1 ), 0 ).Normal;
 		MittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;
 
 		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
 		GameObject.WorldPosition = MittelPunkt;
 	}
 
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
 		GroundTrace = Scene.Trace
 			.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
@@ -66,8 +71,9 @@ public sealed class Vampire : Component, HealthSystem.IHealthEvent
 			.Run();
 
 		Vector3 playerPosition = Player.WorldPosition;
-		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 500).WithY( 0 ).WithX( 0 );
-		TargetPosition = playerPosition + Player.WorldRotation.Backward.WithZ(0).Normal * 3000 + hoverHeight + HorizontalOffset;
+		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 50).WithY( 0 ).WithX( 0 );
+		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 100; }
+		TargetPosition = playerPosition + CircleOffset * 1000 + hoverHeight;
 
 		switch ( CurrentState ) 
 		{
@@ -77,19 +83,12 @@ public sealed class Vampire : Component, HealthSystem.IHealthEvent
 
 			// WANDER
 			case VampireState.Moving: 
-				StateDebugText.Text = "WANDER";
-				
+				StateDebugText.Text = "MOVING";
+
+
 				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 1, 3));
-				// MittelPunkt = MittelPunkt + ( TargetPosition - MittelPunkt ) * 0.5f + Vector3.Left * (MathF.Sin( (TargetPosition - MittelPunkt).Length * SchwebeFrequenz ) * SchwebeDistance);
-
-				if ( AttackCharge >= 4 ) { AttackCharge = 0; Attack(); }
-				else { AttackCharge += 1 * Time.Delta; }
-
-				if ( AttackCharge == 0 )
-				{
-					HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
-				}
-				// if ( (TargetPosition - MittelPunkt).IsNearlyZero(500) ) CurrentState = GhostState.Attack;
+				if ( (playerPosition - WorldPosition).Length < 1300 ) { Attack(); }
+				else { BloodEmitter.Enabled = false; }
 				break;
 
 			// ATTACK
@@ -121,28 +120,10 @@ public sealed class Vampire : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
-		GameObject newBall = GhostBall.Clone( WorldPosition );
-		Rigidbody newBody = newBall.GetComponent<Rigidbody>();
-		// newBody.Velocity = Vector3.Down * 100;
-
-		// Unity Conversion
-		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
-		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 100, Player.WorldPosition.y ) + random.VectorInSphere(1);
-		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
-
-		if ( Ballistics.solve_ballistic_arc( UnityProjPos, 
-			3000, 
-			UnityTargetPos, 
-			UnityTargetVel, 
-			Scene.PhysicsWorld.Gravity.Length * 0.001f,
-			out Vector3 s0, out Vector3 s1 ) > 0 ) 
-		{ 
-			// Convert back to S&box
-			Vector3 solutionVelocity = new Vector3(s0.x, s0.z, s0.y);
-			
-			//Apply Velocity
-			newBody.Velocity = solutionVelocity;
-		}
+		Player.GetComponentInParent<HealthSystem>().Damage(1);
+		// Particle & Sound
+		BloodEmitter.Enabled = true;
+		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 100;
 	}
 
 

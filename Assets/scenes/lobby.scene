@@ -225,22 +225,6 @@
             },
             "Property": "Rotation",
             "Value": "-0.000000001258503,-0.1305262,-0.000000009559276,0.9914449"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "50a4937d-040d-488c-ae40-37a8f5776260"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,-0.00000002980232,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "cdf8264e-182b-41c7-8ea1-bb1cd0c3ede5"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,-0.00000002980232,1"
           }
         ],
         "MovedObjects": []
@@ -13891,132 +13875,6 @@
       ]
     },
     {
-      "__guid": "fdc48045-b159-4aa0-a443-111ed7fac129",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Monster",
-      "Position": "-14880,-8480,144",
-      "Rotation": "0,0,0,1",
-      "Scale": "1.5,1.5,1.5",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "11683d3c-8f34-4c16-9ac6-66a9ecab465e",
-          "__version": 2,
-          "__Prefab": "prefabs/zombie.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
-                },
-                "Property": "Name",
-                "Value": "zombie (2)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
-                },
-                "Property": "Position",
-                "Value": "3146.667,5130.667,5.333333"
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "a97474c9-a4d9-402d-9aad-4fcfef224888"
-                },
-                "Property": "Separation",
-                "Value": 10
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "7fc595b5-924a-476f-9449-61e853d1565a"
-                },
-                "Property": "__enabled",
-                "Value": false
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "b655254f-7b15-4a6d-95de-9498d581256a": "11683d3c-8f34-4c16-9ac6-66a9ecab465e",
-            "17ff12ae-afb1-4a66-b6ad-353a2d610f8b": "1949473e-a728-4c2e-a3aa-0800042513d3",
-            "cae25574-1711-41ac-801f-0392312233ee": "0a32109e-5bfd-446c-9335-362ad08919c8",
-            "a97474c9-a4d9-402d-9aad-4fcfef224888": "f69ae327-a7dc-4ec3-92de-d1915f32f401",
-            "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b": "e62cb244-7c5b-4020-b736-c1a306a04865",
-            "7fc595b5-924a-476f-9449-61e853d1565a": "e11f9c23-bb20-4bcd-8a8d-13e38a57587a",
-            "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa": "e78f00b6-2693-49bf-9299-111b3cb7349e",
-            "cbca859a-9981-4b45-a0da-f11917689619": "b300dc21-e01a-4eeb-a39e-f797c67239ee",
-            "0e26615d-16c7-4fbf-8ed4-85bd6db664dd": "53533081-c487-4fab-ac1d-6e6556a3da0c",
-            "48fa4b4a-275d-4270-ab43-cbc7f58a8548": "a694ca00-1f12-4d60-a6a0-143f02cd4c01",
-            "06704ae1-ff97-4b4e-b87c-47b278914bec": "e0066a84-f9d0-4177-bc90-138a25e1819b",
-            "cc9c3fa5-72e9-4856-a4e0-5807541117f6": "811e371f-b7d7-4890-99a5-8154f28b2618",
-            "bff630d6-06ce-47e7-ba0b-b00481e1537d": "920ecc23-45b0-4d77-9240-fb4fcfb1e0f2",
-            "fc9f88c0-1c56-4a16-8045-11795d11f140": "5eba5841-2923-4e30-ac4d-f10c010da95d",
-            "2d4f2f06-b84a-4f40-ac0a-2a071a55cd83": "bbef7695-0030-4a5c-ae8e-e3424c0e57d4",
-            "21d156e0-8713-46a6-b823-ac8576813805": "21bd10f1-78c4-4b24-a9d9-573a6da3dfbd"
-          }
-        },
-        {
-          "__guid": "35a4c746-9eb6-4d4b-8593-98982b3c48f0",
-          "__version": 2,
-          "__Prefab": "prefabs/ghost.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
-                },
-                "Property": "Position",
-                "Value": "3580.001,6328,192"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
-                },
-                "Property": "Scale",
-                "Value": "0.4444444,0.4444444,0.4444444"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "574225c4-6a62-4d22-8553-f63be84cd34a": "35a4c746-9eb6-4d4b-8593-98982b3c48f0",
-            "c22ca121-5be9-49eb-aa16-0465ff860947": "1c81dcda-b1ea-4f13-be51-153cc3b900b3",
-            "142b927a-bce3-49eb-8473-110ba86cef3d": "ee07e33a-8732-4590-9dad-6a54982b7047",
-            "6f1acfe3-ff1c-47a7-af73-56f8dcfe203f": "ba7c430b-79ad-4669-ac5a-dee7f4230425",
-            "f8e9f131-2e99-4591-9bba-05fd43e47e2f": "d26eb497-88e9-48e4-a29f-ca813262be5d",
-            "60383843-d91f-4f2a-a26d-68bdcc534ba1": "ed9758af-ba30-4128-807f-328905411a23",
-            "4ed29d26-25e1-47d9-838d-766dbf86a099": "87380eb2-5cfb-4259-8dec-15599ca8308c",
-            "bc413d08-c466-496a-bf2b-33af87f836ad": "100a440a-43e5-4fb2-bedc-960b6220e98b",
-            "2160c155-4897-4f54-9463-56c18dd53027": "61bd94c2-1eac-4bcc-ae12-887053e96dd9",
-            "ddf0825a-5dbd-4f40-8fb5-ea97955fd79d": "ea7b98b2-f1c0-4330-85c3-49249ed6c5ca",
-            "588f93bf-40ad-45f5-816e-6981279353e8": "751ee640-55ea-4c1b-a629-538948219ab4",
-            "1f1e4faf-712b-40c9-9868-97c67b900f65": "f49b8f57-e745-4ef1-a7cd-a13556975445",
-            "e9ed94d8-a488-4ef5-ae3c-d5e2f4b219ab": "4da425fd-603f-428e-b0dc-6367f14044e1",
-            "5892e757-6668-4b0a-b612-e2bb4d1a9c0d": "50c62be6-7b29-424a-82a8-ba481df63359",
-            "cd211ee8-9dd4-4b11-a6e5-07046adde3cd": "3ad319c4-8d92-49ab-9239-b3775cb5ac38"
-          }
-        }
-      ]
-    },
-    {
       "__guid": "db6c43ae-db6c-4a30-ba64-37c249317beb",
       "__version": 2,
       "Flags": 0,
@@ -14122,6 +13980,18 @@
         {
           "__type": "HighscoreManager",
           "__guid": "b398f9e9-91cd-407d-a393-e9d1f6100c80",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "MonsterManager",
+          "__guid": "bea72342-f3bf-4e6d-bc25-867dfb35c92b",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -14368,146 +14238,231 @@
       "Children": []
     },
     {
-      "__guid": "51bf699b-ff62-445d-884d-95899a751ac0",
+      "__guid": "1713abf1-905d-4baf-be26-8f77e01ec19b",
       "__version": 2,
-      "__Prefab": "prefabs/kit-spawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
-            },
-            "Property": "Position",
-            "Value": "-4751.999,1752,127.9999"
+      "Flags": 0,
+      "Name": "Spawner",
+      "Position": "-10472,-7847.999,128",
+      "Rotation": "0,0,0,1",
+      "Scale": "2,2,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "aded1902-0b93-46f9-8206-baa85498f9f6",
+          "__version": 2,
+          "__Prefab": "prefabs/ammo-kit-spawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
           },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "0e864116-bde5-4749-96da-a58232e5509c"
-            },
-            "Property": "SpawnCooldown",
-            "Value": 5
+          "__PrefabIdToInstanceId": {
+            "43b1850a-d115-416c-862d-66b50ed60cb4": "aded1902-0b93-46f9-8206-baa85498f9f6",
+            "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "1f5bacc3-c161-4d17-939b-bbc5a714b10a",
+            "22745980-52de-4ad4-840b-caa0a92c26e4": "b85ee2e9-139b-40a5-a65c-bb4e5d2044a2",
+            "0e864116-bde5-4749-96da-a58232e5509c": "6a9945fc-21da-42d2-bfa3-44fb040ff2b7"
           }
-        ],
-        "MovedObjects": [
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "0e864116-bde5-4749-96da-a58232e5509c"
-            },
-            "NewParent": {
-              "Type": "GameObject",
-              "IdValue": "2dcf37c3-fc44-4b21-b609-ea1580bc61e8"
-            },
-            "NewContainerProperty": "Components",
-            "IsNewContainerArray": true,
-            "NewPreviousElement": null
+        },
+        {
+          "__guid": "a00f6f48-2f25-42d2-a410-9b66d5eb4b5e",
+          "__version": 2,
+          "__Prefab": "prefabs/medi-kit-spawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Position",
+                "Value": "364.001,144,0"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
           },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "22745980-52de-4ad4-840b-caa0a92c26e4"
-            },
-            "NewParent": {
-              "Type": "GameObject",
-              "IdValue": "2dcf37c3-fc44-4b21-b609-ea1580bc61e8"
-            },
-            "NewContainerProperty": "Components",
-            "IsNewContainerArray": true,
-            "NewPreviousElement": {
-              "Type": "Component",
-              "IdValue": "0e864116-bde5-4749-96da-a58232e5509c"
-            }
+          "__PrefabIdToInstanceId": {
+            "43b1850a-d115-416c-862d-66b50ed60cb4": "a00f6f48-2f25-42d2-a410-9b66d5eb4b5e",
+            "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "67a89b8e-c333-4532-a768-d9b893d1dfcc",
+            "22745980-52de-4ad4-840b-caa0a92c26e4": "0346292a-306c-478a-bffd-7008bc57ad85",
+            "0e864116-bde5-4749-96da-a58232e5509c": "83bffb59-fc0f-4a67-8052-904d601722e9"
           }
-        ]
-      },
-      "__PrefabIdToInstanceId": {
-        "43b1850a-d115-416c-862d-66b50ed60cb4": "51bf699b-ff62-445d-884d-95899a751ac0",
-        "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "9538b6f7-f77c-49c4-83ef-300b34576f72",
-        "22745980-52de-4ad4-840b-caa0a92c26e4": "c3099d84-5b0c-4e42-8ab3-5e8f3b04aa58",
-        "0e864116-bde5-4749-96da-a58232e5509c": "a1e3f3c3-53fd-4b35-a760-9038ae347c2a"
-      }
-    },
-    {
-      "__guid": "aded1902-0b93-46f9-8206-baa85498f9f6",
-      "__version": 2,
-      "__Prefab": "prefabs/ammo-kit-spawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
-            },
-            "Property": "Position",
-            "Value": "-10472,-7847.999,128"
+        },
+        {
+          "__guid": "d8ab5b4b-1569-4066-b427-82a00bf7ed45",
+          "__version": 2,
+          "__Prefab": "prefabs/point-kit-spawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Position",
+                "Value": "696.001,320,0"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "43b1850a-d115-416c-862d-66b50ed60cb4": "d8ab5b4b-1569-4066-b427-82a00bf7ed45",
+            "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "a23b2771-9264-49d6-a1b6-aa3a1053782e",
+            "22745980-52de-4ad4-840b-caa0a92c26e4": "a8589ec2-e102-4c1e-b6c6-88c79dfdfc54",
+            "0e864116-bde5-4749-96da-a58232e5509c": "70d1ea89-504a-4157-869c-db673f21f92a"
           }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "43b1850a-d115-416c-862d-66b50ed60cb4": "aded1902-0b93-46f9-8206-baa85498f9f6",
-        "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "1f5bacc3-c161-4d17-939b-bbc5a714b10a",
-        "22745980-52de-4ad4-840b-caa0a92c26e4": "b85ee2e9-139b-40a5-a65c-bb4e5d2044a2",
-        "0e864116-bde5-4749-96da-a58232e5509c": "6a9945fc-21da-42d2-bfa3-44fb040ff2b7"
-      }
-    },
-    {
-      "__guid": "a00f6f48-2f25-42d2-a410-9b66d5eb4b5e",
-      "__version": 2,
-      "__Prefab": "prefabs/medi-kit-spawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
-            },
-            "Property": "Position",
-            "Value": "-9743.998,-7559.999,128"
+        },
+        {
+          "__guid": "28f96d7e-d748-4b5b-bfff-8005d6ead7c6",
+          "__version": 2,
+          "__Prefab": "prefabs/zombiespawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
+                },
+                "Property": "Position",
+                "Value": "-680.5,3623,24.99995"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85": "28f96d7e-d748-4b5b-bfff-8005d6ead7c6",
+            "d8d75a2e-601d-4742-95c9-0e9d30b34192": "53fb5c4f-63e0-40d3-a053-46c70c67f707",
+            "50a56e48-bb51-423c-a1d6-8e3e53e78bc8": "d5ca41ff-7477-4719-a1c0-e1ef4a0c6ffc",
+            "9af1809e-9a6b-4c57-a1ad-84080e21a2f9": "129a24ce-18fb-467e-9fc2-59dd4ac98085",
+            "1dabf14a-9054-43e2-bd7a-9551a7834df6": "18bd294a-ad07-4e78-a5a4-d460b42d9ce9",
+            "de105471-e163-4994-af35-96538bc17fe2": "d2271f62-c5d6-4322-a1dc-3fa7678d0f3e"
           }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "43b1850a-d115-416c-862d-66b50ed60cb4": "a00f6f48-2f25-42d2-a410-9b66d5eb4b5e",
-        "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "67a89b8e-c333-4532-a768-d9b893d1dfcc",
-        "22745980-52de-4ad4-840b-caa0a92c26e4": "0346292a-306c-478a-bffd-7008bc57ad85",
-        "0e864116-bde5-4749-96da-a58232e5509c": "83bffb59-fc0f-4a67-8052-904d601722e9"
-      }
-    },
-    {
-      "__guid": "d8ab5b4b-1569-4066-b427-82a00bf7ed45",
-      "__version": 2,
-      "__Prefab": "prefabs/point-kit-spawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
-            },
-            "Property": "Position",
-            "Value": "-9079.998,-7207.999,128"
+        },
+        {
+          "__guid": "24917a9e-4c09-493f-9bdc-900b1a581c8b",
+          "__version": 2,
+          "__Prefab": "prefabs/zombiespawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
+                },
+                "Property": "Position",
+                "Value": "-605,4304,25"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "ZombiePrefab",
+                "Value": {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/ghost.prefab"
+                }
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85": "24917a9e-4c09-493f-9bdc-900b1a581c8b",
+            "d8d75a2e-601d-4742-95c9-0e9d30b34192": "5c5830dc-bba2-4715-b30a-f5f504bb869c",
+            "50a56e48-bb51-423c-a1d6-8e3e53e78bc8": "36ce7a96-e12a-4362-ac17-48a64025f6f4",
+            "9af1809e-9a6b-4c57-a1ad-84080e21a2f9": "55819498-32db-4535-aa7e-2ba729ccc7f7",
+            "1dabf14a-9054-43e2-bd7a-9551a7834df6": "e66af6e3-8d98-475f-99f4-8d7750926ba7",
+            "de105471-e163-4994-af35-96538bc17fe2": "2a6cad2f-e728-4528-ad24-cbe1c426e716"
           }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "43b1850a-d115-416c-862d-66b50ed60cb4": "d8ab5b4b-1569-4066-b427-82a00bf7ed45",
-        "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "a23b2771-9264-49d6-a1b6-aa3a1053782e",
-        "22745980-52de-4ad4-840b-caa0a92c26e4": "a8589ec2-e102-4c1e-b6c6-88c79dfdfc54",
-        "0e864116-bde5-4749-96da-a58232e5509c": "70d1ea89-504a-4157-869c-db673f21f92a"
-      }
+        },
+        {
+          "__guid": "0512a964-c5e1-48a1-9f3d-6570e368515e",
+          "__version": 2,
+          "__Prefab": "prefabs/zombiespawner.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
+                },
+                "Property": "Position",
+                "Value": "-630.5,4944.5,25"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "ScaleFactor",
+                "Value": 1
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "ZombiePrefab",
+                "Value": {
+                  "_type": "gameobject",
+                  "prefab": "prefabs/vampire.prefab"
+                }
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85": "0512a964-c5e1-48a1-9f3d-6570e368515e",
+            "d8d75a2e-601d-4742-95c9-0e9d30b34192": "f6fbd12c-fecc-49ed-802f-cf72e59a7ec1",
+            "50a56e48-bb51-423c-a1d6-8e3e53e78bc8": "8150337f-5f81-4010-9321-61a5049700c3",
+            "9af1809e-9a6b-4c57-a1ad-84080e21a2f9": "3bc5476b-7869-4db5-b3fe-fcbab4f88aba",
+            "1dabf14a-9054-43e2-bd7a-9551a7834df6": "e12e77d2-4712-4e62-a0a1-a949b2d8f73b",
+            "de105471-e163-4994-af35-96538bc17fe2": "84ea648d-a558-466d-9a68-e4a17cb4d4f3"
+          }
+        }
+      ]
     },
     {
       "__guid": "d54ba2dd-fc2e-4566-bba8-5c03ec48491b",
@@ -14523,7 +14478,7 @@
               "IdValue": "4481d40e-4003-4d27-a783-80b851b6476a"
             },
             "Property": "Position",
-            "Value": "-4452,306,128"
+            "Value": "-9185,2954,128"
           }
         ],
         "MovedObjects": []
@@ -14633,13 +14588,13 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "fce20bc9-f52b-42a1-a239-f6dba34cab35"
-        }
-      },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "48a84510-f36c-403d-b922-b5e9deee17fc"
+        }
       }
     }
   },

@@ -3,7 +3,7 @@
     "__guid": "b655254f-7b15-4a6d-95de-9498d581256a",
     "__version": 2,
     "Flags": 0,
-    "Name": "zombie (2)",
+    "Name": "zombie",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -36,7 +36,7 @@
           "Roll": false
         },
         "MassCenterOverride": "0,0,100",
-        "MassOverride": 10,
+        "MassOverride": 100,
         "MinImpactDamageSpeed": 50,
         "MotionEnabled": true,
         "OnComponentDestroy": null,
@@ -46,7 +46,7 @@
         "OnComponentStart": null,
         "OnComponentUpdate": null,
         "OverrideMassCenter": true,
-        "RigidbodyFlags": 0,
+        "RigidbodyFlags": "DisableCollisionSounds",
         "StartAsleep": false
       },
       {

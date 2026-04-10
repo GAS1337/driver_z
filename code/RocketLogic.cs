@@ -27,13 +27,16 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 
 		foreach ( SceneTraceResult hit in ExplosionTrace )
 		{
-			if (hit.GameObject.Tags.Has( "enemy" ))
-			{ 
-				hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+			if ( hit.GameObject.Tags.Has( "enemy" ) )
+			{
+				if ( hit.GameObject.GetComponent<ZombieBrain>() != null ) 
+				{
+					hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+					hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
+				}
 
-				DebugOverlay.Trace( hit );
+				// DebugOverlay.Trace( hit );
 				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
-				hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
 
 				Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
 				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;

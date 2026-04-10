@@ -15,13 +15,13 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 	public void OnTriggerEnter( GameObject other ) 
 	{ 
 		if (!other.Tags.HasAny("player", "wheel")) return;
-		Explode();
+		if (GameObject.IsValid()) Explode();
 	}
 
 	void Explode() 
 	{
 		SceneTraceResult sceneTrace = Scene.Trace.Sphere( 64, WorldPosition, WorldPosition + GetComponent<Rigidbody>().Velocity )
-			.IgnoreGameObjectHierarchy(GameObject)
+			.IgnoreGameObjectHierarchy(this.GameObject)
 			.WithTag("carbody")
 			.Run();
 
@@ -34,9 +34,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 			// sceneTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse((WorldPosition - sceneTrace.GameObject.WorldPosition).Normal * 1000);
 			// sceneTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity += random.VectorInSphere( 10 );
 		}
-		GetComponent<Rigidbody>().Velocity = Vector3.Zero;
-		ExplosionModel.Enabled = true;
-		GameObject.Destroy();
+		GetComponent<TemporaryEffect>().DestroyAfterSeconds = 0.1f;
 	}
 
 }

@@ -4,7 +4,7 @@ using System;
 using static Ballistics;
 using static HealthSystem;
 
-public enum ZombieState { Wander, Approach, Leap, Slam, Staggered }
+public enum ZombieState { Wander, Approach, Leap, Slam, Staggered, Culled }
 
 public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 {
@@ -13,10 +13,11 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	[Property] Rigidbody Body;
 	[Property] GameObject DeadZombie;
 	[Property] TextRenderer StateDebugText;
+	[Property] bool DebugMode;
 	[Property] ParticleRingEmitter AttackParticle;
 	[Property] ParticleEffect AttackEffect;
 	[Property] float MoveCooldown = 1f;
-	float WanderCooldown = 10f;
+	float WanderCooldown = 5f;
 	[Property] float LeapCooldown = 5f;
 	[Property] float SlamCooldown = 3f;
 	[Property] float SlamRadius = 350f;
@@ -48,7 +49,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		CurrentState = ZombieState.Wander;
 		Agent.MoveTo( Body.WorldPosition );
 		Player = Scene.FindAllWithTag("carbody").First<GameObject>();
-		Log.Info( $"[START] Player found: {Player.Name}" );
+		if ( !DebugMode ) { StateDebugText.Enabled = false; }
+		// Log.Info( $"[START] Player found: {Player.Name}" );
 	}
 
 	void IHealthEvent.OnDeath()
@@ -75,14 +77,32 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				StateDebugText.Text = "Default";
 				break;
 
+			case ZombieState.Culled: // STATE IS CULLED
+				StateDebugText.Text = "Culled";
+				Agent.Stop();
+				Agent.Enabled = false;
+				// DebugOverlay.Sphere(new Sphere(WorldPosition, 15000));
+
+				if ( DistanceToPlayer < 15000 ) 
+				{
+					Agent.Enabled = true;
+					Agent.MoveTo( Body.WorldPosition );
+					CurrentState = ZombieState.Wander;
+				}
+				break;
+
 			case ZombieState.Wander: // STATE IS WANDER
 				StateDebugText.Text = "Wander";
+				Agent.MaxSpeed = 500;
+				Agent.Acceleration = 500;
 
 				if ( NextWander && Agent.TargetPosition.HasValue && ((Vector3)Agent.TargetPosition - Body.WorldPosition).IsNearlyZero(300) )
 				{
 					DoWander();
 					NextWander = WanderCooldown + random.Float(0f, 0.1f);
 				}
+
+				if ( DistanceToPlayer > 15000 ) { CurrentState = ZombieState.Culled; }
 
 				if ( DistanceToPlayer < 7000 ) { CurrentState = ZombieState.Approach; }
 				break;
@@ -121,7 +141,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithoutTags( "enemy", "player", "world" )
 						.Run();
-					DebugOverlay.Trace( checkSightline );
+					// DebugOverlay.Trace( checkSightline );
 					if ( !checkSightline.Hit ) CurrentState = ZombieState.Leap; 
 				}
 
@@ -226,7 +246,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			int tries = 0;
 			while ( wanderTrace.Hit && tries < 10 )
 			{
-				possibleTargetPos = Body.WorldPosition + (Vector3)random.VectorInCircle( 2000 );
+				possibleTargetPos = Body.WorldPosition + (Vector3)random.VectorInCircle( 1000 );
 
 				wanderTrace = Scene.Trace.Sphere( 300, possibleTargetPos, possibleTargetPos )
 					.Radius( 300 )
@@ -234,13 +254,15 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 					.WithoutTags( "enemy", "player", "world" )
 					.Run();
 				tries++;
+
+				DebugOverlay.Trace( wanderTrace );
 			}
 			if ( !wanderTrace.Hit )
 			{
 				Agent.MoveTo( possibleTargetPos );
 			}
 		}
-		// DebugOverlay.Trace(wanderTrace);
+		DebugOverlay.Trace(wanderTrace);
 	}
 	
 	void DoSlam()
@@ -251,7 +273,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithAllTags( "player", "carbody" )
 						.Run();
-		DebugOverlay.Trace(attackTrace);
+		// DebugOverlay.Trace(attackTrace);
 
 		// Partikel, Sound
 		AttackParticle.WorldTransform = new Transform(Body.WorldPosition, Rotation.FromPitch(0));
@@ -269,7 +291,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
 			if (Player.GetComponent<Rigidbody>().Velocity.z < 100 ) 
 			{ 
-				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 30000 );
+				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 300000 );
 				attackTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity 
 					= attackTrace.GameObject.WorldRotation.Forward * 10 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
 			}

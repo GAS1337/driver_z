@@ -131,7 +131,7 @@ public sealed class WheelController : Component
 	void Brake()
 	{
 		TurnMotorOn( true );
-		if ( RotationControl.groundCheck.Hit )
+		if ( RotationControl.IsGrounded )
 		{
 			// Log.Info( "Brake" );
 			RearLeft.MaxSpinTorque = Torque * 4; RearRight.MaxSpinTorque = Torque * 4;

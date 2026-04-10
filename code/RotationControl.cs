@@ -16,7 +16,7 @@ public sealed class RotationControl : Component
 	[Property] float Speed;
 	[Property] GameObject Trails;
 
-	bool IsGrounded;
+	public bool IsGrounded;
 	int GroundedWheels;
 	public SceneTraceResult groundCheck;
 
@@ -57,7 +57,7 @@ public sealed class RotationControl : Component
 					.Radius( 10 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
-				DebugOverlay.Trace( groundCheck );
+				// DebugOverlay.Trace( groundCheck );
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
@@ -74,7 +74,7 @@ public sealed class RotationControl : Component
 					.Radius( 10 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
-				DebugOverlay.Trace( groundCheck );
+				// DebugOverlay.Trace( groundCheck );
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
@@ -95,7 +95,7 @@ public sealed class RotationControl : Component
 					.Radius( 10 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
-				DebugOverlay.Trace( groundCheck );
+				// DebugOverlay.Trace( groundCheck );
 
 				if ( groundCheck.Hit )
 				{

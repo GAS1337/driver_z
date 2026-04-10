@@ -71,7 +71,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 		if ( Input.Down( "attack1" ) && NextShot )
 		{
-			Log.Info( "Shooting" );
+			// Log.Info( "Shooting" );
 			Sound.Play( "sounds/bullet-ricochet.sound", Turret.WorldPosition );
 			MuzzleFlashEmitter.Emit(MuzzleFlashEffect);
 

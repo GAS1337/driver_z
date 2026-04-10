@@ -14,7 +14,7 @@ public sealed class KitSpawner : Component
 		SpawnKit();
 	}
 
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
 		// Solange currentKit Valid ist bleibt der NextSpawn auf Cooldown
 		if (currentKit.IsValid() ) NextSpawn = SpawnCooldown;
