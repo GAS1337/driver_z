@@ -42,38 +42,20 @@ public sealed class WheelController : Component
 		WheelJointList.Add( RearLeft );
 		WheelJointList.Add( RearRight );
 
+		
 		FrontLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
+		
 
 	}
 
 	protected override void OnUpdate()
 	{
 		// Log.Info( $"{Math.Round( FrontLeft.SpinSpeed, 0 )}  {Math.Round( FrontRight.SpinSpeed, 0 )}  {Math.Round( RearLeft.SpinSpeed, 0 )} {Math.Round( RearRight.SpinSpeed, 0 )}" );
-
-
-		if ( Input.Down( "Forward" ) && Input.Down( "Run" ) ) 
-		{
-			TurnMotorOn( true );
-			TargetSpinSpeed = Speed + FullSpeedAdd;
-		}
-		else if ( Input.Down( "Forward" ) && !Input.Down( "Run" ) )
-		{
-			TurnMotorOn( true );
-			TargetSpinSpeed = Speed;
-		}
-		else if( Input.Down( "Backward" ) )
-		{
-			TurnMotorOn( true );
-			TargetSpinSpeed = -Speed;
-		}
-		else
-		{
-			TurnMotorOn( false );
-			TargetSpinSpeed = 0;
-		}
+		TurnMotorOn( false );
+		TargetSpinSpeed = 0;
 	}
 
 	protected override void OnFixedUpdate()
@@ -96,7 +78,7 @@ public sealed class WheelController : Component
 				wheel.SteeringLimits = new Vector2 ( -SteeringAngle - 7, SteeringAngle + 7);
 			}
 			FrontLeft.TargetSteeringAngle = SteeringAngle + 3; FrontRight.TargetSteeringAngle = SteeringAngle;
-			//RearLeft.TargetSteeringAngle = -SteeringAngle / 3; RearRight.TargetSteeringAngle = -SteeringAngle / 3;
+			RearLeft.TargetSteeringAngle = -SteeringAngle / 10; RearRight.TargetSteeringAngle = -SteeringAngle / 10;
 		}
 		else if ( Input.Down( "Right" ) )
 		{
@@ -105,7 +87,7 @@ public sealed class WheelController : Component
 				wheel.SteeringLimits = new Vector2( -SteeringAngle - 7, SteeringAngle + 7 );
 			}
 			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle =  -SteeringAngle - 3f;
-			//RearLeft.TargetSteeringAngle = SteeringAngle / 3; RearRight.TargetSteeringAngle = SteeringAngle / 3;
+			RearLeft.TargetSteeringAngle = SteeringAngle / 10; RearRight.TargetSteeringAngle = SteeringAngle / 10;
 		}
 		else
 		{
@@ -135,24 +117,10 @@ public sealed class WheelController : Component
 
 	void TurnMotorOn( bool status )
 	{
-		/*
-		if ( Input.Pressed( "Left" ) )
-		{
-			FrontRight.EnableSpinMotor = true;
-			RearRight.EnableSpinMotor = true;
-		}
-		else if ( Input.Pressed( "Right" ) )
-		{
-			FrontLeft.EnableSpinMotor = true;
-			RearLeft.EnableSpinMotor = true;
-		}
-		else 
-		{
-			} */
-		FrontRight.EnableSpinMotor = false;
-		RearRight.EnableSpinMotor = false;
-		FrontLeft.EnableSpinMotor = false;
-		RearLeft.EnableSpinMotor = false;
+		FrontRight.EnableSpinMotor = status;
+		RearRight.EnableSpinMotor = status;
+		FrontLeft.EnableSpinMotor = status;
+		RearLeft.EnableSpinMotor = status;
 
 	}
 
