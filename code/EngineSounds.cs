@@ -50,14 +50,14 @@ public sealed class EngineSounds : Component
 		// Reifen Speed Durchschitt
 		reifenSpeed = (WheelController.RearLeft.SpinSpeed + WheelController.RearRight.SpinSpeed + WheelController.FrontLeft.SpinSpeed + WheelController.FrontRight.SpinSpeed) * 0.25f;
 
-		idleHandle.Volume = reifenSpeed.Remap(0, 6000, 0.1f, 0.2f);
+		idleHandle.Volume = CarBody.Velocity.Length.Remap(0, 4500, 0.1f, 0.2f);
 		//gasHandle.Volume = reifenSpeed.Remap( 100, 3000, 0.1f, 1 );
-		vollGasHandle.Volume = reifenSpeed.Remap( 3500, 6000, 0, 0.5f );
-		reifenHandle.Volume = reifenSpeed.Remap( 100, 3000, 0, 0.2f );
+		vollGasHandle.Volume = CarBody.Velocity.Length.Remap( 2000, 4500, 0, 0.5f );
+		reifenHandle.Volume = CarBody.Velocity.Length.Remap( 100, 3000, 0, 0.2f );
 
-		idleHandle.Pitch = reifenSpeed.Remap( 1000, 6000, 0.8f, 1.6f );
+		idleHandle.Pitch = CarBody.Velocity.Length.Remap( 1000, 4500, 0.8f, 1.6f );
 		// gasHandle.Pitch = reifenSpeed.Remap( 100, 3000, 0.1f, 1 );
-		vollGasHandle.Pitch = reifenSpeed.Remap( 3500, 6000, 0.8f, 1.2f );
+		vollGasHandle.Pitch = CarBody.Velocity.Length.Remap( 2000, 4500, 0.8f, 1.2f );
 		// reifenHandle.Pitch = reifenSpeed.Remap( 100, 6000, 0, 1 );
 	}
 }

@@ -312,7 +312,7 @@ public class Ballistics
 		// Handling these cases is up to your project's coding standards
 		// Debug.Assert( proj_pos != target && proj_speed > 0 && gravity > 0, "fts.solve_ballistic_arc called with invalid data" );
 		// Guard: return no-solution instead of Debug.Assert
-		if ( proj_pos == target || proj_speed <= 0f || gravity <= 0f )
+		if ( proj_pos == target || proj_speed <= -1f || gravity <= 0f )
 		{
 			s0 = Vector3.Zero;
 			s1 = Vector3.Zero;

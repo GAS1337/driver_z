@@ -18,10 +18,10 @@
       {
         "__type": "TemporaryEffect",
         "__guid": "89a012ce-ffbe-4530-8e38-1b4bd29a048e",
-        "__enabled": false,
+        "__enabled": true,
         "Flags": 0,
         "BecomeOrphan": false,
-        "DestroyAfterSeconds": 0.1,
+        "DestroyAfterSeconds": 5,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -269,7 +269,7 @@
               "Evaluation": "Seed",
               "Constants": "1,2,0,0"
             },
-            "LocalSpace": 0,
+            "LocalSpace": 1,
             "MaxParticles": 5000,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,

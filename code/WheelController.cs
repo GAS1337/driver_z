@@ -77,7 +77,9 @@ public sealed class WheelController : Component
 			{
 				wheel.SteeringLimits = new Vector2 ( -SteeringAngle - 7, SteeringAngle + 7);
 			}
-			FrontLeft.TargetSteeringAngle = SteeringAngle + 3; FrontRight.TargetSteeringAngle = SteeringAngle;
+			FrontLeft.TargetSteeringAngle = SteeringAngle + 3; 
+			FrontRight.TargetSteeringAngle = SteeringAngle;
+
 			RearLeft.TargetSteeringAngle = -SteeringAngle / 10; RearRight.TargetSteeringAngle = -SteeringAngle / 10;
 		}
 		else if ( Input.Down( "Right" ) )
@@ -86,7 +88,9 @@ public sealed class WheelController : Component
 			{
 				wheel.SteeringLimits = new Vector2( -SteeringAngle - 7, SteeringAngle + 7 );
 			}
-			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle =  -SteeringAngle - 3f;
+			FrontLeft.TargetSteeringAngle = -SteeringAngle - 3;
+			FrontRight.TargetSteeringAngle = -SteeringAngle;
+
 			RearLeft.TargetSteeringAngle = SteeringAngle / 10; RearRight.TargetSteeringAngle = SteeringAngle / 10;
 		}
 		else

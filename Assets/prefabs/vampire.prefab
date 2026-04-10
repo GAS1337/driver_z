@@ -3,7 +3,7 @@
     "__guid": "574225c4-6a62-4d22-8553-f63be84cd34a",
     "__version": 2,
     "Flags": 0,
-    "Name": "ghost",
+    "Name": "vampire",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "0.6666667,0.6666667,0.6666667",
@@ -55,7 +55,7 @@
             "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
-            "Model": "models/graveyard kit/character-ghost.vmdl",
+            "Model": "models/graveyard kit/character-vampire.vmdl",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -201,7 +201,7 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/graveyard kit/character-ghost.vmdl",
+                "Model": "models/graveyard kit/character-vampire.vmdl",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -219,207 +219,6 @@
               }
             ],
             "Children": []
-          },
-          {
-            "__guid": "ddf0825a-5dbd-4f40-8fb5-ea97955fd79d",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Line",
-            "Position": "2.1,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.LineRenderer",
-                "__guid": "e9ed94d8-a488-4ef5-ae3c-d5e2f4b219ab",
-                "__enabled": true,
-                "Flags": 0,
-                "Additive": false,
-                "AutoCalculateNormals": true,
-                "CastShadows": false,
-                "Color": {
-                  "blend": "Linear",
-                  "color": [
-                    {
-                      "t": 0,
-                      "c": "0,7.5,15,1"
-                    },
-                    {
-                      "t": 1,
-                      "c": "0,7.5,15,1"
-                    }
-                  ],
-                  "alpha": [
-                    {
-                      "t": 0,
-                      "a": 1
-                    },
-                    {
-                      "t": 0.31512606,
-                      "a": 0
-                    },
-                    {
-                      "t": 0.70168066,
-                      "a": 0
-                    },
-                    {
-                      "t": 1,
-                      "a": 1
-                    }
-                  ]
-                },
-                "CylinderSegments": 12,
-                "DepthFeather": 0,
-                "EndCap": "Rounded",
-                "Face": "Camera",
-                "FogStrength": 0.5,
-                "Lighting": true,
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Opaque": false,
-                "Points": [
-                  {
-                    "_type": "gameobject",
-                    "go": "588f93bf-40ad-45f5-816e-6981279353e8"
-                  },
-                  {
-                    "_type": "gameobject",
-                    "go": "1f1e4faf-712b-40c9-9868-97c67b900f65"
-                  },
-                  {
-                    "_type": "gameobject",
-                    "go": "5892e757-6668-4b0a-b612-e2bb4d1a9c0d"
-                  },
-                  {
-                    "_type": "gameobject",
-                    "go": "cd211ee8-9dd4-4b11-a6e5-07046adde3cd"
-                  }
-                ],
-                "RenderOptions": {
-                  "GameLayer": true,
-                  "OverlayLayer": false,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "SplineBias": 0,
-                "SplineContinuity": 0,
-                "SplineInterpolation": 8,
-                "SplineTension": 0,
-                "StartCap": "Rounded",
-                "Texturing": {
-                  "Texture": null,
-                  "Material": null,
-                  "WorldSpace": true,
-                  "UnitsPerTexture": 10,
-                  "Scale": 1,
-                  "Offset": 0,
-                  "Scroll": 0,
-                  "FilterMode": "Anisotropic",
-                  "TextureAddressMode": "Mirror",
-                  "Clamp": false
-                },
-                "UseVectorPoints": false,
-                "VectorPoints": [],
-                "Width": {
-                  "rangey": "0,15",
-                  "frames": [
-                    {
-                      "x": 0,
-                      "y": 1,
-                      "in": 0,
-                      "out": 0,
-                      "mode": "Mirrored"
-                    }
-                  ]
-                },
-                "Wireframe": false
-              }
-            ],
-            "Children": [
-              {
-                "__guid": "588f93bf-40ad-45f5-816e-6981279353e8",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Point 1",
-                "Position": "19.2,-7.8,58.5",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [],
-                "Children": []
-              },
-              {
-                "__guid": "1f1e4faf-712b-40c9-9868-97c67b900f65",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Point 2",
-                "Position": "20.4,-2.4,58.2",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [],
-                "Children": []
-              },
-              {
-                "__guid": "5892e757-6668-4b0a-b612-e2bb4d1a9c0d",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Point 2",
-                "Position": "20.4,2.860892,58.5",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [],
-                "Children": []
-              },
-              {
-                "__guid": "cd211ee8-9dd4-4b11-a6e5-07046adde3cd",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Point 2",
-                "Position": "19.2,7.2,58.5",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [],
-                "Children": []
-              }
-            ]
           }
         ]
       }

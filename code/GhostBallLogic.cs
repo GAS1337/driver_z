@@ -14,7 +14,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 	}
 	public void OnTriggerEnter( GameObject other ) 
 	{ 
-		if (other.Tags.HasAny("enemy", "wheel" )) return;
+		if (!other.Tags.HasAny("player", "wheel")) return;
 		Explode();
 	}
 
@@ -36,7 +36,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 		}
 		GetComponent<Rigidbody>().Velocity = Vector3.Zero;
 		ExplosionModel.Enabled = true;
-		temporaryEffect.Enabled = true;
+		GameObject.Destroy();
 	}
 
 }

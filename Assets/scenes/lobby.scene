@@ -225,6 +225,22 @@
             },
             "Property": "Rotation",
             "Value": "-0.000000001258503,-0.1305262,-0.000000009559276,0.9914449"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "50a4937d-040d-488c-ae40-37a8f5776260"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.00000002980232,1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "cdf8264e-182b-41c7-8ea1-bb1cd0c3ede5"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.00000002980232,1"
           }
         ],
         "MovedObjects": []
@@ -365,7 +381,12 @@
         "5630efc9-60d7-40cd-904a-d97285249032": "dd3884ee-3ae0-4f26-a13e-52a4d6fb1e51",
         "d5e08e19-3fc4-4688-a476-f1526dbbaf5d": "c1c298a1-6c8d-4214-baf0-1c4cd9230d75",
         "b252eb74-df6a-43b2-8fd8-ea9dc8b173f3": "b1e7b66a-bb23-4b33-95dd-05701795e7a6",
-        "c9398add-07ab-4511-a979-6be653aa03dc": "e5e2cf13-6ea1-4453-a84b-e8f7287c12ad"
+        "c9398add-07ab-4511-a979-6be653aa03dc": "e5e2cf13-6ea1-4453-a84b-e8f7287c12ad",
+        "b20ca5d4-bd5f-40f1-97b0-643ccdf70c84": "b5b2d8ef-85b7-4a02-af8b-49c0fd9ac4be",
+        "37fe3098-1a7f-47c9-a1e7-d1c3876eae1f": "449f007d-aecb-49a2-902e-cfedbfbcfe48",
+        "0095deb0-7dec-4cd2-be4b-2280bcc33459": "36ae23c1-b4d5-42ea-8ca2-bd345686f955",
+        "38336227-6ec3-48fe-a995-3e586acd3986": "49fa077b-a250-45a6-b001-6900bd3aacb2",
+        "7cf6304b-b4ba-4f5e-9cb2-a67fed9f0b2e": "8a0a3c72-7c8a-4b66-9de1-a3003e99faf1"
       }
     },
     {
@@ -13878,7 +13899,7 @@
       "Rotation": "0,0,0,1",
       "Scale": "1.5,1.5,1.5",
       "Tags": "",
-      "Enabled": false,
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
@@ -13984,7 +14005,13 @@
             "60383843-d91f-4f2a-a26d-68bdcc534ba1": "ed9758af-ba30-4128-807f-328905411a23",
             "4ed29d26-25e1-47d9-838d-766dbf86a099": "87380eb2-5cfb-4259-8dec-15599ca8308c",
             "bc413d08-c466-496a-bf2b-33af87f836ad": "100a440a-43e5-4fb2-bedc-960b6220e98b",
-            "2160c155-4897-4f54-9463-56c18dd53027": "61bd94c2-1eac-4bcc-ae12-887053e96dd9"
+            "2160c155-4897-4f54-9463-56c18dd53027": "61bd94c2-1eac-4bcc-ae12-887053e96dd9",
+            "ddf0825a-5dbd-4f40-8fb5-ea97955fd79d": "ea7b98b2-f1c0-4330-85c3-49249ed6c5ca",
+            "588f93bf-40ad-45f5-816e-6981279353e8": "751ee640-55ea-4c1b-a629-538948219ab4",
+            "1f1e4faf-712b-40c9-9868-97c67b900f65": "f49b8f57-e745-4ef1-a7cd-a13556975445",
+            "e9ed94d8-a488-4ef5-ae3c-d5e2f4b219ab": "4da425fd-603f-428e-b0dc-6367f14044e1",
+            "5892e757-6668-4b0a-b612-e2bb4d1a9c0d": "50c62be6-7b29-424a-82a8-ba481df63359",
+            "cd211ee8-9dd4-4b11-a6e5-07046adde3cd": "3ad319c4-8d92-49ab-9239-b3775cb5ac38"
           }
         }
       ]
@@ -14608,7 +14635,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "0875d8e1-79fa-4e06-b4c5-f4a3aa4fa95b"
+          "$blob": "fce20bc9-f52b-42a1-a239-f6dba34cab35"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {

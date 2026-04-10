@@ -14,6 +14,7 @@ public sealed class RotationControl : Component
 	List<WheelJoint> RightWheelJoints;
 
 	[Property] float Speed;
+	[Property] GameObject Trails;
 
 	bool IsGrounded;
 	int GroundedWheels;
@@ -77,9 +78,13 @@ public sealed class RotationControl : Component
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
+
 					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed );
 				}
-				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
+				else 
+				{ 
+					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; 
+				}
 			}
 		}
 		else if ( Input.Down( "Backward" ) )
@@ -108,12 +113,13 @@ public sealed class RotationControl : Component
 
 		if ( IsGrounded )
 		{
+			Trails.Enabled = true;
 			Vector3 cheatSteering = Vector3.Zero;
 			if ( Input.Down( "Left" ) )
 			{
 				if ( CarBody.Velocity.Length > 360 )
 				{
-					cheatSteering = (CarBody.WorldRotation.Right) * CarBody.Velocity.Length / 50;
+					cheatSteering = (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 4000, 0, 40 );
 				}
 				CarBody.Velocity += cheatSteering;
 			}
@@ -121,13 +127,14 @@ public sealed class RotationControl : Component
 			{
 				if ( CarBody.Velocity.Length > 360 )
 				{
-					cheatSteering = (CarBody.WorldRotation.Left) * CarBody.Velocity.Length / 50;
+					cheatSteering = (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 4000, 0, 40 );
 				}
 				CarBody.Velocity += cheatSteering;
 			}
 		}
 		else
 		{
+			Trails.Enabled = false;
 			// Air Control
 		}
 	}

@@ -3,17 +3,17 @@ using System;
 using static Ballistics;
 using static HealthSystem;
 
-public enum GhostState { Moving, Attack, Staggered }
+public enum VampireState { Moving, Attack, Staggered }
 
 
-public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
+public sealed class Vampire : Component, HealthSystem.IHealthEvent
 {
 	GameObject Player;
 	Rigidbody PlayerBody;
 	[Property] GameObject GhostBall;
 	[Property] TextRenderer StateDebugText;
 
-	public GhostState CurrentState;
+	public VampireState CurrentState;
 
 	SceneTraceResult GroundTrace;
 
@@ -23,7 +23,6 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	float SchwebeDistance = 100;
 	float SchwebeFrequenz = 2f;
 
-	TimeSince timeSinceLastAttack;
 	float AttackCharge = 0;
 
 	TimeUntil NextOffset;
@@ -41,7 +40,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		PlayerBody = Player.GetComponent<Rigidbody>();
 		Log.Info(Player.Name);
 
-		CurrentState = GhostState.Moving;
+		CurrentState = VampireState.Moving;
 
 		GroundTrace = Scene.Trace
 			.Ray( WorldPosition, WorldPosition + Vector3.Down * 3000 )
@@ -50,14 +49,14 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			.WithoutTags( "enemy", "player", "dead" )
 			.Run();
 
-		HorizontalOffset = (Vector3)random.VectorInCircle(1000);
+		HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
 		MittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;
 
 		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
 		GameObject.WorldPosition = MittelPunkt;
 	}
 
-	protected override void OnFixedUpdate()
+	protected override void OnUpdate()
 	{
 		GroundTrace = Scene.Trace
 			.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
@@ -67,9 +66,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			.Run();
 
 		Vector3 playerPosition = Player.WorldPosition;
-		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 1000).WithY( 0 ).WithX( 0 );
-		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 1000; }
-		TargetPosition = playerPosition.WithZ(0) + (WorldPosition.WithZ( 0 ) - playerPosition.WithZ(0) ).Normal * 5500 + hoverHeight + HorizontalOffset;
+		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 500).WithY( 0 ).WithX( 0 );
+		TargetPosition = playerPosition + Player.WorldRotation.Backward.WithZ(0).Normal * 3000 + hoverHeight + HorizontalOffset;
 
 		switch ( CurrentState ) 
 		{
@@ -78,31 +76,31 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 				break;
 
 			// WANDER
-			case GhostState.Moving: 
+			case VampireState.Moving: 
 				StateDebugText.Text = "WANDER";
 				
-				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 0.2f, 0.5f));
+				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 1, 3));
 				// MittelPunkt = MittelPunkt + ( TargetPosition - MittelPunkt ) * 0.5f + Vector3.Left * (MathF.Sin( (TargetPosition - MittelPunkt).Length * SchwebeFrequenz ) * SchwebeDistance);
 
-				if ( timeSinceLastAttack > 4 && playerPosition.Distance(WorldPosition) < 7000 && playerPosition.Distance( WorldPosition ) > 2000 ) 
-				{ timeSinceLastAttack = random.Float(-0.1f, 0.1f); Attack(); }
-				else {  }
-				if ( timeSinceLastAttack < 0.01f )
+				if ( AttackCharge >= 4 ) { AttackCharge = 0; Attack(); }
+				else { AttackCharge += 1 * Time.Delta; }
+
+				if ( AttackCharge == 0 )
 				{
-					// HorizontalOffset = Player.WorldRotation.Left * random.Int( 1, 3 ) * random.Int( -1, 1 );
+					HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
 				}
 				// if ( (TargetPosition - MittelPunkt).IsNearlyZero(500) ) CurrentState = GhostState.Attack;
 				break;
 
 			// ATTACK
-			case GhostState.Attack:
+			case VampireState.Attack:
 				StateDebugText.Text = "ATTACK";
 
 
 				break;
 
 			// STAGGERED
-			case GhostState.Staggered:
+			case VampireState.Staggered:
 				StateDebugText.Text = "STAGGERED";
 
 				break;
@@ -133,7 +131,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
 
 		if ( Ballistics.solve_ballistic_arc( UnityProjPos, 
-			6000, 
+			3000, 
 			UnityTargetPos, 
 			UnityTargetVel, 
 			Scene.PhysicsWorld.Gravity.Length * 0.001f,
