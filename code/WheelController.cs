@@ -1,6 +1,7 @@
 using Sandbox;
 using Sandbox.Audio;
 using System;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 
 public sealed class WheelController : Component
@@ -12,27 +13,34 @@ public sealed class WheelController : Component
 	[Property] public WheelJoint FrontRight;
 	[Property] public WheelJoint RearLeft;
 	[Property] public WheelJoint RearRight;
+	List<WheelJoint> WheelJointList;
 
-	[Property] bool FourWheelDrive = true;
-	[Property] int Speed = 2000;
-	[Property] int FullSpeedAdd = 2000;
-	[Property] int Torque = 300;
-	[Property] int SteeringAngle = 50;
+	[Property] float Speed = 2000;
+	[Property] float FullSpeedAdd = 2000;
+	[Property] float Torque = 300;
+	[Property] float SteeringAngle = 50;
 	[Property] double JumpPower = 0.5f;
 	[Property] int JumpMax = 100000;
 
-	float TargetSpindSpeed;
+	float TargetSpinSpeed;
 
-	int originalTorque = 0;
+	float originalTorque = 0;
 	double JumpCharge;
 
 	protected override void OnEnabled()
 	{
 		originalTorque = Torque;
-		TargetSpindSpeed = 0;
-
+		TargetSpinSpeed = 0;
+		// Scene.TimeScale = 0.3f;
+		//CarBody.InertiaTensor = 1000;
 		// CarBody.EnhancedCcd = true;
 		RotationControl = GameObject.GetComponent<RotationControl>();
+
+		WheelJointList = new List<WheelJoint>();
+		WheelJointList.Add( FrontLeft );
+		WheelJointList.Add( FrontRight );
+		WheelJointList.Add( RearLeft );
+		WheelJointList.Add( RearRight );
 
 		FrontLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
@@ -41,97 +49,116 @@ public sealed class WheelController : Component
 
 	}
 
+	protected override void OnUpdate()
+	{
+		// Log.Info( $"{Math.Round( FrontLeft.SpinSpeed, 0 )}  {Math.Round( FrontRight.SpinSpeed, 0 )}  {Math.Round( RearLeft.SpinSpeed, 0 )} {Math.Round( RearRight.SpinSpeed, 0 )}" );
+
+
+		if ( Input.Down( "Forward" ) && Input.Down( "Run" ) ) 
+		{
+			TurnMotorOn( true );
+			TargetSpinSpeed = Speed + FullSpeedAdd;
+		}
+		else if ( Input.Down( "Forward" ) && !Input.Down( "Run" ) )
+		{
+			TurnMotorOn( true );
+			TargetSpinSpeed = Speed;
+		}
+		else if( Input.Down( "Backward" ) )
+		{
+			TurnMotorOn( true );
+			TargetSpinSpeed = -Speed;
+		}
+		else
+		{
+			TurnMotorOn( false );
+			TargetSpinSpeed = 0;
+		}
+	}
+
 	protected override void OnFixedUpdate()
 	{
-		RearLeft.MaxSpinTorque = originalTorque;
-		RearRight.MaxSpinTorque = originalTorque;
-		FrontLeft.MaxSpinTorque = originalTorque;
-		FrontRight.MaxSpinTorque = originalTorque;
+		SetSpeedAndTorque( TargetSpinSpeed );
 
-		int slowingfactor = 500;
-		if ( Input.Down( "Forward" ) && Input.Down( "Run" ) )
-		{
-			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
-			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
-
-			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
-			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, (Speed + FullSpeedAdd) );
-		}
-		else if ( Input.Down( "Forward" ) )
-		{
-			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-
-			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed + (Speed / slowingfactor)).Clamp( 0, Speed );
-		}
-		else if ( Input.Down( "Backward" ) )
-		{
-			RearLeft.SpinMotorSpeed = (RearLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-			RearRight.SpinMotorSpeed = (RearRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-
-			FrontLeft.SpinMotorSpeed = (FrontLeft.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-			FrontRight.SpinMotorSpeed = (FrontRight.SpinMotorSpeed - (Speed / slowingfactor)).Clamp( -Speed, 0 );
-
-		}
-		else {
-
-			int factor = 1;
-			if ( RearLeft.SpinMotorSpeed > 0 ) 
-			{
-				
-				RearLeft.SpinMotorSpeed -= factor; 
-				RearRight.SpinMotorSpeed -= factor; 
-				FrontLeft.SpinMotorSpeed -= factor; 
-				FrontRight.SpinMotorSpeed -= factor;
-			
-			}
-			else if ( RearLeft.SpinMotorSpeed < 0 )
-			{
-
-				RearLeft.SpinMotorSpeed += factor;
-				RearRight.SpinMotorSpeed += factor;
-				FrontLeft.SpinMotorSpeed += factor;
-				FrontRight.SpinMotorSpeed += factor;
-
-			}
-
-		}
-
-		if ( Input.Down( "Jump" ) ) 
+		if ( Input.Down( "Jump" ) )
 		{
 			Brake();
 		}
-		if ( Input.Released( "Jump" ) ) 
+		if ( Input.Released( "Jump" ) )
 		{
 			JumpCharge = 0;
 		}
 
 		if ( Input.Down( "Left" ) )
 		{
-			FrontLeft.TargetSteeringAngle = Math.Min(SteeringAngle + 4, FrontLeft.TargetSteeringAngle + 1f); FrontRight.TargetSteeringAngle = Math.Min(SteeringAngle, FrontRight.TargetSteeringAngle + 1f);
-			RearLeft.TargetSteeringAngle = -SteeringAngle; RearRight.TargetSteeringAngle = -SteeringAngle;
+			foreach ( WheelJoint wheel in WheelJointList )
+			{
+				wheel.SteeringLimits = new Vector2 ( -SteeringAngle - 7, SteeringAngle + 7);
+			}
+			FrontLeft.TargetSteeringAngle = SteeringAngle + 3; FrontRight.TargetSteeringAngle = SteeringAngle;
+			//RearLeft.TargetSteeringAngle = -SteeringAngle / 3; RearRight.TargetSteeringAngle = -SteeringAngle / 3;
 		}
-		else if ( Input.Down( "Right" ) ) 
+		else if ( Input.Down( "Right" ) )
 		{
-			FrontLeft.TargetSteeringAngle = Math.Max(-SteeringAngle, FrontLeft.TargetSteeringAngle - 1f); FrontRight.TargetSteeringAngle = Math.Max(-SteeringAngle - 4, FrontRight.TargetSteeringAngle - 1f);
-			RearLeft.TargetSteeringAngle = SteeringAngle; RearRight.TargetSteeringAngle = SteeringAngle;
-
+			foreach ( WheelJoint wheel in WheelJointList )
+			{
+				wheel.SteeringLimits = new Vector2( -SteeringAngle - 7, SteeringAngle + 7 );
+			}
+			FrontLeft.TargetSteeringAngle = -SteeringAngle; FrontRight.TargetSteeringAngle =  -SteeringAngle - 3f;
+			//RearLeft.TargetSteeringAngle = SteeringAngle / 3; RearRight.TargetSteeringAngle = SteeringAngle / 3;
 		}
-		else 
-		{ 
-			FrontLeft.TargetSteeringAngle = FrontLeft.TargetSteeringAngle.Approach(0, 1f); 
-			FrontRight.TargetSteeringAngle = FrontRight.TargetSteeringAngle.Approach( 0, 1f ); 
-			
-			RearLeft.TargetSteeringAngle = RearLeft.TargetSteeringAngle.Approach( 0, 1f ); 
-			RearRight.TargetSteeringAngle = RearRight.TargetSteeringAngle.Approach( 0, 1f ); 
+		else
+		{
+			foreach ( WheelJoint wheel in WheelJointList )
+			{
+				wheel.TargetSteeringAngle = 0;
+				wheel.SteeringLimits = new Vector2( 0, 0 );
+				//wheel.EnableSteeringLimit = false;
+			}
 		}
 
 
 	}
 
+	private void SetSpeedAndTorque( float target)
+	{
+		FrontLeft.SpinMotorSpeed = FrontLeft.SpinMotorSpeed.LerpTo(target, 0.005f);
+		FrontRight.SpinMotorSpeed = FrontRight.SpinMotorSpeed.LerpTo( target, 0.005f );
+		RearLeft.SpinMotorSpeed = RearLeft.SpinMotorSpeed.LerpTo( target, 0.005f );
+		RearRight.SpinMotorSpeed = RearRight.SpinMotorSpeed.LerpTo( target, 0.005f );
+
+		FrontLeft.MaxSpinTorque = float.Clamp(originalTorque.LerpTo(originalTorque / (FrontLeft.SpinSpeed * 0.001f + 1), 1f), originalTorque / 2, originalTorque) ;
+		FrontRight.MaxSpinTorque = float.Clamp( originalTorque.LerpTo( originalTorque / (FrontLeft.SpinSpeed * 0.001f + 1), 1f ), originalTorque / 2, originalTorque );
+		RearLeft.MaxSpinTorque = float.Clamp( originalTorque.LerpTo(originalTorque / (FrontLeft.SpinSpeed * 0.001f + 1), 1f), originalTorque / 2, originalTorque );
+		RearRight.MaxSpinTorque = float.Clamp( originalTorque.LerpTo(originalTorque / (FrontLeft.SpinSpeed * 0.001f + 1), 1f), originalTorque / 2, originalTorque );
+	}
+
+	void TurnMotorOn( bool status )
+	{
+		/*
+		if ( Input.Pressed( "Left" ) )
+		{
+			FrontRight.EnableSpinMotor = true;
+			RearRight.EnableSpinMotor = true;
+		}
+		else if ( Input.Pressed( "Right" ) )
+		{
+			FrontLeft.EnableSpinMotor = true;
+			RearLeft.EnableSpinMotor = true;
+		}
+		else 
+		{
+			} */
+		FrontRight.EnableSpinMotor = false;
+		RearRight.EnableSpinMotor = false;
+		FrontLeft.EnableSpinMotor = false;
+		RearLeft.EnableSpinMotor = false;
+
+	}
+
 	void Brake()
 	{
+		TurnMotorOn( true );
 		if ( RotationControl.groundCheck.Hit )
 		{
 			// Log.Info( "Brake" );
@@ -153,4 +180,8 @@ public sealed class WheelController : Component
 
 		CarBody.ApplyImpulse(CarBody.WorldRotation.Down * (float)JumpCharge);
 	}
+
+
+
+
 }

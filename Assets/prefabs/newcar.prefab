@@ -26,7 +26,6 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
           "component_type": "Rigidbody"
         },
-        "FourWheelDrive": true,
         "FrontLeft": {
           "_type": "component",
           "component_id": "85154a6b-a2e3-4d5b-b81f-5875e9171672",
@@ -39,7 +38,7 @@
           "go": "d8365ba3-14ff-41e4-a06e-bfe09956c02f",
           "component_type": "WheelJoint"
         },
-        "FullSpeedAdd": 3000,
+        "FullSpeedAdd": 1500,
         "JumpMax": 100000,
         "JumpPower": 0.5,
         "OnComponentDestroy": null,
@@ -60,9 +59,9 @@
           "go": "cb6f5880-5192-4ddf-b2b8-f0373e929cac",
           "component_type": "WheelJoint"
         },
-        "Speed": 3000,
-        "SteeringAngle": 18,
-        "Torque": 25000
+        "Speed": 2500,
+        "SteeringAngle": 15,
+        "Torque": 15000000
       },
       {
         "__type": "RotationControl",
@@ -223,6 +222,18 @@
           "_type": "gameobject",
           "go": "fccd3e2c-e519-40b8-8c28-3cba0709db3d"
         },
+        "MuzzleFlashEffect": {
+          "_type": "component",
+          "component_id": "01b7b703-0aaa-4e4c-af63-2e849c22e62d",
+          "go": "840e9190-af50-4c06-aeee-15fa9aeb0382",
+          "component_type": "ParticleEffect"
+        },
+        "MuzzleFlashEmitter": {
+          "_type": "component",
+          "component_id": "45e8088c-2708-4de8-8730-1234a6d43064",
+          "go": "840e9190-af50-4c06-aeee-15fa9aeb0382",
+          "component_type": "ParticleSphereEmitter"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -234,13 +245,13 @@
           "prefab": "prefabs/rocket.prefab"
         },
         "RocketSpeed": 10000,
-        "ShootCooldown": 0.15,
-        "ShootEffect": {
+        "ShootBeam": {
           "_type": "component",
           "component_id": "1186ee3b-6c21-4ebb-be4d-b2dc4d4cd88f",
           "go": "fccd3e2c-e519-40b8-8c28-3cba0709db3d",
           "component_type": "BeamEffect"
         },
+        "ShootCooldown": 0.15,
         "StartRockets": 15,
         "Turret": {
           "_type": "gameobject",
@@ -355,8 +366,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFL",
-        "Position": "-76,-72,60.00014",
-        "Rotation": "0,0.1305265,0,0.9914449",
+        "Position": "-75.83569,-76.82306,60.61349",
+        "Rotation": "-0.0000000001887757,0.1305265,0.000000001433891,0.9914448",
         "Scale": "1,1,1",
         "Tags": "wheel",
         "Enabled": true,
@@ -371,13 +382,13 @@
             "__guid": "b9f69343-c306-48c0-9511-9829a6afe904",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0.5,
+            "AngularDamping": 1,
             "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
-            "LinearDamping": 0,
+            "LinearDamping": 1,
             "Locking": {
               "X": false,
               "Y": false,
@@ -386,8 +397,8 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 1,
+            "MassCenterOverride": "0,20,0",
+            "MassOverride": 10,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -403,7 +414,7 @@
           {
             "__type": "Sandbox.CapsuleCollider",
             "__guid": "0649cf5a-106b-4a2c-8ed8-98bdbd1b6117",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
@@ -475,7 +486,7 @@
                   "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 40000000,
+                "MaxSteeringTorque": 1E+11,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -485,12 +496,12 @@
                 "OnComponentUpdate": null,
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
-                "SteeringDampingRatio": 2,
+                "SteeringDampingRatio": 1,
                 "SteeringHertz": 30,
-                "SteeringLimits": "-20,20",
+                "SteeringLimits": "-45,45",
                 "SuspensionDampingRatio": 2,
-                "SuspensionHertz": 8,
-                "SuspensionLimits": "-40,40",
+                "SuspensionHertz": 17,
+                "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
             ],
@@ -541,6 +552,57 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "c128180f-1c7c-45b7-a263-f88614954ee8",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Collider",
+            "Position": "0,0,0",
+            "Rotation": "0.7071068,-0.0000000159064,-0.00000000100524,0.7071069",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.HullCollider",
+                "__guid": "8c7e37ee-038d-4a66-b679-3a424660a277",
+                "__enabled": true,
+                "Flags": 0,
+                "BoxSize": "50,50,50",
+                "Center": "0,0,0",
+                "ColliderFlags": 0,
+                "Elasticity": null,
+                "Friction": null,
+                "Height": 40,
+                "IsTrigger": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "OnObjectTriggerEnter": null,
+                "OnObjectTriggerExit": null,
+                "OnTriggerEnter": null,
+                "OnTriggerExit": null,
+                "Points": [],
+                "Radius": 48,
+                "Radius2": 0,
+                "RollingResistance": null,
+                "Slices": 32,
+                "Static": false,
+                "Surface": "surfaces/myrubber.surface",
+                "SurfaceVelocity": "0,0,0",
+                "Type": "Cylinder"
+              }
+            ],
+            "Children": []
           }
         ]
       },
@@ -549,8 +611,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelFR",
-        "Position": "-76,72,60.00014",
-        "Rotation": "0.1305265,-0.000000005705497,0.9914449,-0.00000004333743",
+        "Position": "-75.83569,76.82306,60.61349",
+        "Rotation": "-0.1305265,0.000000005705494,-0.9914448,-0.00000004333743",
         "Scale": "1,1,1",
         "Tags": "wheel",
         "Enabled": true,
@@ -565,13 +627,13 @@
             "__guid": "51abc1fc-de6d-4cfe-bb84-16bd2496d7e8",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0.5,
+            "AngularDamping": 1,
             "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
-            "LinearDamping": 0,
+            "LinearDamping": 1,
             "Locking": {
               "X": false,
               "Y": false,
@@ -580,8 +642,8 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 1,
+            "MassCenterOverride": "0,20,0",
+            "MassOverride": 10,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -597,7 +659,7 @@
           {
             "__type": "Sandbox.CapsuleCollider",
             "__guid": "96c4d587-e22e-4d90-b2ff-2ab6b1d418fc",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
@@ -669,7 +731,7 @@
                   "Rotation": "-0.5,0.4999998,-0.5,-0.4999998"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 40000000,
+                "MaxSteeringTorque": 1E+11,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -679,12 +741,12 @@
                 "OnComponentUpdate": null,
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
-                "SteeringDampingRatio": 2,
+                "SteeringDampingRatio": 1,
                 "SteeringHertz": 30,
-                "SteeringLimits": "-20,20",
+                "SteeringLimits": "-45,45",
                 "SuspensionDampingRatio": 2,
-                "SuspensionHertz": 8,
-                "SuspensionLimits": "-40,40",
+                "SuspensionHertz": 17,
+                "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
             ],
@@ -735,6 +797,57 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "0796aa47-dc46-466e-a04e-7190feffc9f9",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Collider",
+            "Position": "0,0,0",
+            "Rotation": "0.7071068,0.00000001490116,0,0.7071069",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.HullCollider",
+                "__guid": "5630efc9-60d7-40cd-904a-d97285249032",
+                "__enabled": true,
+                "Flags": 0,
+                "BoxSize": "50,50,50",
+                "Center": "0,0,0",
+                "ColliderFlags": 0,
+                "Elasticity": null,
+                "Friction": null,
+                "Height": 40,
+                "IsTrigger": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "OnObjectTriggerEnter": null,
+                "OnObjectTriggerExit": null,
+                "OnTriggerEnter": null,
+                "OnTriggerExit": null,
+                "Points": [],
+                "Radius": 48,
+                "Radius2": 0,
+                "RollingResistance": null,
+                "Slices": 32,
+                "Static": false,
+                "Surface": "surfaces/myrubber.surface",
+                "SurfaceVelocity": "0,0,0",
+                "Type": "Cylinder"
+              }
+            ],
+            "Children": []
           }
         ]
       },
@@ -743,8 +856,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRL",
-        "Position": "68,-72,59.99986",
-        "Rotation": "0,0,0,1",
+        "Position": "67.83569,-67.17694,59.38651",
+        "Rotation": "0,-0.1305262,0,0.9914449",
         "Scale": "1,1,1",
         "Tags": "wheel",
         "Enabled": true,
@@ -759,13 +872,13 @@
             "__guid": "6ae014e0-d580-4320-9af1-4af454f6b9f0",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0.5,
+            "AngularDamping": 1,
             "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
-            "LinearDamping": 0,
+            "LinearDamping": 1,
             "Locking": {
               "X": false,
               "Y": false,
@@ -774,8 +887,8 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 1,
+            "MassCenterOverride": "0,20,0",
+            "MassOverride": 10,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -791,7 +904,7 @@
           {
             "__type": "Sandbox.CapsuleCollider",
             "__guid": "41165a34-001c-4e78-a9a7-37b76425435f",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
@@ -863,7 +976,7 @@
                   "Rotation": "-0.4999999,0.5000001,-0.4999999,-0.5000001"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 40000000,
+                "MaxSteeringTorque": 1E+11,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -873,12 +986,12 @@
                 "OnComponentUpdate": null,
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
-                "SteeringDampingRatio": 2,
+                "SteeringDampingRatio": 1,
                 "SteeringHertz": 30,
-                "SteeringLimits": "-2,2",
+                "SteeringLimits": "-45,45",
                 "SuspensionDampingRatio": 2,
-                "SuspensionHertz": 8,
-                "SuspensionLimits": "-40,40",
+                "SuspensionHertz": 17,
+                "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
             ],
@@ -929,6 +1042,57 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "06ec9baa-6ead-4352-b222-784bdb72196b",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Collider",
+            "Position": "0,0,0",
+            "Rotation": "0.7071066,0,0,0.7071068",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.HullCollider",
+                "__guid": "d5e08e19-3fc4-4688-a476-f1526dbbaf5d",
+                "__enabled": true,
+                "Flags": 0,
+                "BoxSize": "50,50,50",
+                "Center": "0,0,0",
+                "ColliderFlags": 0,
+                "Elasticity": null,
+                "Friction": null,
+                "Height": 40,
+                "IsTrigger": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "OnObjectTriggerEnter": null,
+                "OnObjectTriggerExit": null,
+                "OnTriggerEnter": null,
+                "OnTriggerExit": null,
+                "Points": [],
+                "Radius": 48,
+                "Radius2": 0,
+                "RollingResistance": null,
+                "Slices": 32,
+                "Static": false,
+                "Surface": "surfaces/myrubber.surface",
+                "SurfaceVelocity": "0,0,0",
+                "Type": "Cylinder"
+              }
+            ],
+            "Children": []
           }
         ]
       },
@@ -937,8 +1101,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "wheelRR",
-        "Position": "68,72,59.99986",
-        "Rotation": "0,0,1,-0.00000004371139",
+        "Position": "67.83569,67.17694,59.38651",
+        "Rotation": "-0.1305265,-0.000000005705494,0.9914448,-0.00000004333743",
         "Scale": "1,1,1",
         "Tags": "wheel",
         "Enabled": true,
@@ -953,13 +1117,13 @@
             "__guid": "00860c2c-a025-4f37-897e-01775ac42a5e",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0.5,
+            "AngularDamping": 1,
             "EnableImpactDamage": false,
             "EnhancedCcd": true,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
-            "LinearDamping": 0,
+            "LinearDamping": 1,
             "Locking": {
               "X": false,
               "Y": false,
@@ -968,8 +1132,8 @@
               "Yaw": false,
               "Roll": false
             },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 1,
+            "MassCenterOverride": "0,20,0",
+            "MassOverride": 10,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -985,7 +1149,7 @@
           {
             "__type": "Sandbox.CapsuleCollider",
             "__guid": "e1cb6b0a-b5ed-4939-a2a2-0ddf195bb67a",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "ColliderFlags": 0,
             "Elasticity": null,
@@ -1057,7 +1221,7 @@
                   "Rotation": "-0.5,0.4999999,-0.5,-0.4999999"
                 },
                 "MaxSpinTorque": 15000,
-                "MaxSteeringTorque": 40000000,
+                "MaxSteeringTorque": 1E+11,
                 "OnBreak": null,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -1067,12 +1231,12 @@
                 "OnComponentUpdate": null,
                 "SpinMotorSpeed": 0,
                 "StartBroken": false,
-                "SteeringDampingRatio": 2,
+                "SteeringDampingRatio": 1,
                 "SteeringHertz": 30,
-                "SteeringLimits": "-2,2",
+                "SteeringLimits": "-45,45",
                 "SuspensionDampingRatio": 2,
-                "SuspensionHertz": 8,
-                "SuspensionLimits": "-40,40",
+                "SuspensionHertz": 17,
+                "SuspensionLimits": "-25,25",
                 "TargetSteeringAngle": 0
               }
             ],
@@ -1120,6 +1284,57 @@
                 },
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
+          },
+          {
+            "__guid": "72c4b9aa-1513-4e52-ab20-36980c8dd905",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Collider",
+            "Position": "0,0,0",
+            "Rotation": "0.7071067,0,0,0.7071068",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.HullCollider",
+                "__guid": "b252eb74-df6a-43b2-8fd8-ea9dc8b173f3",
+                "__enabled": true,
+                "Flags": 0,
+                "BoxSize": "50,50,50",
+                "Center": "0,0,0",
+                "ColliderFlags": 0,
+                "Elasticity": null,
+                "Friction": null,
+                "Height": 40,
+                "IsTrigger": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "OnObjectTriggerEnter": null,
+                "OnObjectTriggerExit": null,
+                "OnTriggerEnter": null,
+                "OnTriggerExit": null,
+                "Points": [],
+                "Radius": 48,
+                "Radius2": 0,
+                "RollingResistance": null,
+                "Slices": 32,
+                "Static": false,
+                "Surface": "surfaces/myrubber.surface",
+                "SurfaceVelocity": "0,0,0",
+                "Type": "Cylinder"
               }
             ],
             "Children": []
@@ -1173,13 +1388,13 @@
             "__guid": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
             "__enabled": true,
             "Flags": 0,
-            "AngularDamping": 0.5,
+            "AngularDamping": 1,
             "EnableImpactDamage": true,
             "EnhancedCcd": false,
             "Gravity": true,
             "GravityScale": 1.5,
             "ImpactDamage": 0,
-            "LinearDamping": 0,
+            "LinearDamping": 1,
             "Locking": {
               "X": false,
               "Y": false,
@@ -1189,7 +1404,7 @@
               "Roll": false
             },
             "MassCenterOverride": "0,0,40",
-            "MassOverride": 100,
+            "MassOverride": 4000,
             "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
@@ -1408,7 +1623,268 @@
                         }
                       }
                     ],
-                    "Children": []
+                    "Children": [
+                      {
+                        "__guid": "840e9190-af50-4c06-aeee-15fa9aeb0382",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "MuzzleFlashParticle",
+                        "Position": "0,0,0",
+                        "Rotation": "0,0,0,1",
+                        "Scale": "1,1,1",
+                        "Tags": "particles",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [
+                          {
+                            "__type": "Sandbox.ParticleEffect",
+                            "__guid": "01b7b703-0aaa-4e4c-af63-2e849c22e62d",
+                            "__enabled": true,
+                            "Flags": 0,
+                            "__version": 3,
+                            "Alpha": {
+                              "Type": "Curve",
+                              "Evaluation": "Life",
+                              "CurveA": [
+                                {
+                                  "x": 0,
+                                  "y": 1,
+                                  "in": 0,
+                                  "out": 0,
+                                  "mode": "Mirrored"
+                                },
+                                {
+                                  "x": 1,
+                                  "y": 0,
+                                  "in": 0,
+                                  "out": 0,
+                                  "mode": "Mirrored"
+                                }
+                              ],
+                              "CurveB": [
+                                {
+                                  "x": 0.5,
+                                  "y": 0.5,
+                                  "in": 0,
+                                  "out": 0,
+                                  "mode": "Mirrored"
+                                }
+                              ]
+                            },
+                            "ApplyAlpha": false,
+                            "ApplyColor": true,
+                            "ApplyRotation": false,
+                            "ApplyShape": true,
+                            "Bounce": 1,
+                            "Brightness": 25,
+                            "Bumpiness": 0,
+                            "Collision": false,
+                            "CollisionIgnore": null,
+                            "CollisionPrefab": null,
+                            "CollisionPrefabAlign": false,
+                            "CollisionPrefabChance": 1,
+                            "CollisionPrefabRotation": 0,
+                            "CollisionRadius": 1,
+                            "ConstantMovement": {
+                              "X": 0,
+                              "Y": 0,
+                              "Z": 0
+                            },
+                            "Damping": 0,
+                            "DieOnCollisionChance": 0,
+                            "FollowerPrefab": null,
+                            "FollowerPrefabChance": 1,
+                            "FollowerPrefabKill": true,
+                            "Force": false,
+                            "ForceDirection": "0,0,-800",
+                            "ForceScale": 1,
+                            "ForceSpace": "World",
+                            "Friction": 1,
+                            "Gradient": {
+                              "Type": "Range",
+                              "Evaluation": "Life",
+                              "ConstantA": "1,1,0,1",
+                              "ConstantB": "0.46512,0.46512,0,1"
+                            },
+                            "InitialVelocity": {
+                              "X": -1,
+                              "Y": 0,
+                              "Z": 0
+                            },
+                            "Lifetime": {
+                              "Type": "Range",
+                              "Evaluation": "Seed",
+                              "Constants": "0.1,0.15,0,0"
+                            },
+                            "LocalSpace": 0,
+                            "MaxParticles": 5000,
+                            "OnComponentDestroy": null,
+                            "OnComponentDisabled": null,
+                            "OnComponentEnabled": null,
+                            "OnComponentFixedUpdate": null,
+                            "OnComponentStart": null,
+                            "OnComponentUpdate": null,
+                            "OnParticleCreated": null,
+                            "OnParticleDestroyed": null,
+                            "OrbitalForce": {
+                              "X": 0,
+                              "Y": 0,
+                              "Z": 0
+                            },
+                            "OrbitalPull": 0,
+                            "PerParticleTimeScale": 1,
+                            "Pitch": 0,
+                            "PreWarm": 0,
+                            "PushStrength": 0,
+                            "Roll": 0,
+                            "Scale": {
+                              "Type": "Curve",
+                              "Evaluation": "Life",
+                              "CurveA": [
+                                {
+                                  "x": 0,
+                                  "y": 0,
+                                  "in": -9.333329,
+                                  "out": 9.333329,
+                                  "mode": "Mirrored"
+                                },
+                                {
+                                  "x": 0.03325123,
+                                  "y": 1,
+                                  "in": -0.056075174,
+                                  "out": 0.056075174,
+                                  "mode": "Mirrored"
+                                },
+                                {
+                                  "x": 1,
+                                  "y": 0,
+                                  "in": 2.9152544,
+                                  "out": -2.9152544,
+                                  "mode": "Mirrored"
+                                }
+                              ],
+                              "CurveB": [
+                                {
+                                  "x": 0.5,
+                                  "y": 0.5,
+                                  "in": 0,
+                                  "out": 0,
+                                  "mode": "Mirrored"
+                                }
+                              ]
+                            },
+                            "SequenceId": 0,
+                            "SequenceSpeed": 1,
+                            "SequenceTime": 1,
+                            "SheetSequence": false,
+                            "SnapToFrame": false,
+                            "StartDelay": 0,
+                            "StartVelocity": {
+                              "Type": "Range",
+                              "Evaluation": "Seed",
+                              "Constants": "0,0,0,0"
+                            },
+                            "Stretch": 0,
+                            "TimeScale": 1,
+                            "Timing": "GameTime",
+                            "Tint": "1,1,1,1",
+                            "UsePrefabFeature": false,
+                            "Yaw": {
+                              "Type": "Range",
+                              "Evaluation": "Seed",
+                              "Constants": "0,360,0,0"
+                            }
+                          },
+                          {
+                            "__type": "Sandbox.ParticleSpriteRenderer",
+                            "__guid": "dc3f4879-86e4-4511-b2a5-8166c9cd4644",
+                            "__enabled": true,
+                            "Flags": 0,
+                            "__version": 2,
+                            "Additive": false,
+                            "Alignment": "LookAtCamera",
+                            "BlurAmount": 0.5,
+                            "BlurOpacity": 0.91,
+                            "BlurSpacing": 0.73,
+                            "DepthFeather": 0,
+                            "FaceVelocity": false,
+                            "FogStrength": 1,
+                            "LeadingTrail": true,
+                            "Lighting": false,
+                            "MotionBlur": false,
+                            "OnComponentDestroy": null,
+                            "OnComponentDisabled": null,
+                            "OnComponentEnabled": null,
+                            "OnComponentFixedUpdate": null,
+                            "OnComponentStart": null,
+                            "OnComponentUpdate": null,
+                            "Opaque": false,
+                            "PlaybackSpeed": 1,
+                            "RenderOptions": {
+                              "GameLayer": true,
+                              "OverlayLayer": false,
+                              "BloomLayer": false,
+                              "AfterUILayer": false
+                            },
+                            "RotationOffset": 0,
+                            "Scale": 10,
+                            "Shadows": false,
+                            "SortMode": "Unsorted",
+                            "Sprite": {
+                              "$compiler": "embed",
+                              "$source": null,
+                              "data": {
+                                "Animations": [
+                                  {
+                                    "Name": "Default",
+                                    "FrameRate": 15,
+                                    "Origin": "0.5,0.5",
+                                    "LoopMode": "Loop",
+                                    "Frames": [
+                                      {
+                                        "Texture": "textures/shapes/splotch1.vtex",
+                                        "BroadcastMessages": []
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "__references": null
+                              },
+                              "compiled": null
+                            },
+                            "StartingAnimationName": "Default",
+                            "TextureFilter": "Bilinear"
+                          },
+                          {
+                            "__type": "Sandbox.ParticleSphereEmitter",
+                            "__guid": "45e8088c-2708-4de8-8730-1234a6d43064",
+                            "__enabled": true,
+                            "Flags": 0,
+                            "Burst": 5,
+                            "Delay": 0,
+                            "DestroyOnEnd": false,
+                            "Duration": 0,
+                            "Loop": false,
+                            "OnComponentDestroy": null,
+                            "OnComponentDisabled": null,
+                            "OnComponentEnabled": null,
+                            "OnComponentFixedUpdate": null,
+                            "OnComponentStart": null,
+                            "OnComponentUpdate": null,
+                            "OnEdge": false,
+                            "Radius": 1,
+                            "Rate": 0,
+                            "RateOverDistance": 0,
+                            "Velocity": 0
+                          }
+                        ],
+                        "Children": []
+                      }
+                    ]
                   }
                 ]
               }

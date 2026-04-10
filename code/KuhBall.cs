@@ -22,7 +22,7 @@ public sealed class KuhBall : Component
 			.IgnoreGameObjectHierarchy(GameObject)
 			.WithoutTags("enemy", "player")
 			.Run();
-		DebugOverlay.Trace(GroundCheck);
+		// DebugOverlay.Trace(GroundCheck);
 
 		if ( GroundCheck.Hit ) 
 		{
@@ -43,7 +43,7 @@ public sealed class KuhBall : Component
 		}
 		else if (Body.Velocity.Length < 10)
 		{
-			Log.Info("Trying rotate");
+			// Log.Info("Trying rotate");
 			Body.SmoothRotate( targetRot.Angles().WithYaw(WorldRotation.Yaw()), 0.4f, Time.Delta );
 
 		}

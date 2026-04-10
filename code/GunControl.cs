@@ -12,10 +12,12 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] GameObject Muzzle;
 	[Property] CameraComponent MainCamera;
 	[Property] Decal CrosshairDecal;
-	[Property] BeamEffect ShootEffect;
+	[Property] BeamEffect ShootBeam;
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
 	[Property] GameObject BulletSparkEnemy;
+	[Property] ParticleEffect MuzzleFlashEffect;
+	[Property] ParticleSphereEmitter MuzzleFlashEmitter;
 	[Property] float ShootCooldown = 0.2f;
 	[Property] float Inaccuracy = 0.015f;
 	TimeUntil NextShot;
@@ -71,10 +73,11 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		{
 			Log.Info( "Shooting" );
 			Sound.Play( "sounds/bullet-ricochet.sound", Turret.WorldPosition );
+			MuzzleFlashEmitter.Emit(MuzzleFlashEffect);
 
 			if ( ShootTrace.Hit )
 			{
-				ShootEffect.TargetPosition = ShootTrace.HitPosition;
+				ShootBeam.TargetPosition = ShootTrace.HitPosition;
 
 				newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 
@@ -100,10 +103,10 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			}
 			else 
 			{ 
-				ShootEffect.TargetPosition = ShootTrace.EndPosition; 
+				ShootBeam.TargetPosition = ShootTrace.EndPosition; 
 			}
 
-			ShootEffect.SpawnBeam();
+			ShootBeam.SpawnBeam();
 
 			NextShot = ShootCooldown;
 		}
