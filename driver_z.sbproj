@@ -1,8 +1,8 @@
 {
-  "Title": "Driver Z",
+  "Title": "Graveyard Gunners",
   "Type": "game",
   "Org": "straightgas",
-  "Ident": "driver_z",
+  "Ident": "graveyard_gunners",
   "Schema": 1,
   "IncludeSourceFiles": false,
   "Resources": null,

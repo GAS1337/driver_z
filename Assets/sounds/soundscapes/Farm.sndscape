@@ -1,0 +1,12 @@
+{
+  "MasterVolume": "1",
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/sounds 11.4.26/forfarmfreesound_community-ambience-cowntryside-day_crickets_atlantic-forest-brazil-59531.vsnd",
+      "Volume": "1"
+    }
+  ],
+  "StingSounds": [],
+  "__references": [],
+  "__version": 0
+}

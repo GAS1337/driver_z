@@ -1,0 +1,29 @@
+{
+  "MasterVolume": "1",
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/sounds 11.4.26/mavopix-dark-graveyard-159968.vsnd",
+      "Volume": "1"
+    },
+    {
+      "SoundFile": "sounds/sounds 11.4.26/freesound_community-scary-night-ambience-75274.vsnd",
+      "Volume": "1"
+    }
+  ],
+  "StingSounds": [
+    {
+      "SoundFile": "sounds/ambience/stings/sting-crow.sound",
+      "InstanceCount": 1,
+      "RepeatTime": "2 4",
+      "Distance": "50 100"
+    },
+    {
+      "SoundFile": "sounds/ambience/stings/sting-coyote-sting.sound",
+      "InstanceCount": 1,
+      "RepeatTime": "2 25",
+      "Distance": "50 100"
+    }
+  ],
+  "__references": [],
+  "__version": 0
+}
