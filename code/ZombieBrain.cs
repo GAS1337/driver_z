@@ -255,14 +255,13 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 					.Run();
 				tries++;
 
-				DebugOverlay.Trace( wanderTrace );
+				// DebugOverlay.Trace( wanderTrace );
 			}
 			if ( !wanderTrace.Hit )
 			{
 				Agent.MoveTo( possibleTargetPos );
 			}
 		}
-		DebugOverlay.Trace(wanderTrace);
 	}
 	
 	void DoSlam()

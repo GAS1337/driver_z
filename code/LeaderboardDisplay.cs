@@ -18,7 +18,7 @@ public sealed class LeaderboardDisplay : Component
 
 	public async Task DisplayLeaderboard()
 	{
-		var board = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.driver_z", "LeaderboardTest" );
+		var board = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.graveyard_gunners", "LeaderboardTest" );
 		board.SetAggregationMax();
 		board.SetSortDescending();
 		board.MaxEntries = 15;

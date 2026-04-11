@@ -14191,7 +14191,7 @@
             "Id": "07511482-d6a7-469a-953d-516a41c454dd"
           },
           "Type": "Sphere",
-          "Volume": 0.5
+          "Volume": 0.25000012
         }
       ],
       "Children": []
@@ -14478,7 +14478,7 @@
               "IdValue": "4481d40e-4003-4d27-a783-80b851b6476a"
             },
             "Property": "Position",
-            "Value": "-9185,2954,128"
+            "Value": "-9237.5,3290,127.5"
           }
         ],
         "MovedObjects": []
@@ -14490,6 +14490,34 @@
         "aff4f614-6990-41ef-93b9-0060613b88bc": "5ed55205-e06c-438d-ab6e-c562822d97fd",
         "02fc8239-61bd-414f-8b54-1db9a98bc94f": "c5cb8435-50e3-4f74-8fb4-5ba37de792cd",
         "bca607ea-c273-44ab-937f-d9935b178a95": "d02fc3f6-2831-47fc-b859-df5ed18e09dc"
+      }
+    },
+    {
+      "__guid": "0efea0e2-4ec1-4ee4-9217-2819d16afe1a",
+      "__version": 2,
+      "__Prefab": "prefabs/chicken-ball.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6c996d5c-d4e2-45d5-8ca5-e1a3e7ef1e1b"
+            },
+            "Property": "Position",
+            "Value": "-10198,3443,209.9999"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6c996d5c-d4e2-45d5-8ca5-e1a3e7ef1e1b": "0efea0e2-4ec1-4ee4-9217-2819d16afe1a",
+        "44bef191-0b20-4694-9a49-d5fd8da2bf35": "00188b46-8a28-4569-88c8-fea8558edc86",
+        "6046068b-581f-4ce3-b6f8-9d645abdad99": "e6c9b51f-c0e4-4fc3-a5a0-7bbe37372bf6",
+        "03e29a44-8803-4464-90ee-21d315cb9043": "39cc3c96-31b3-4df5-bdc6-aca003108d84",
+        "d1d8b4c9-60e0-40fd-b54d-ff19944d608e": "f474535c-ef4d-4e4c-a495-943fcfb0a009",
+        "85b36d66-e2e3-41f0-bce6-12cfc944e978": "e3b2d6c5-8d8d-42fd-8978-2b20e7b56ed0"
       }
     },
     {
@@ -14593,7 +14621,7 @@
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "48a84510-f36c-403d-b922-b5e9deee17fc"
+          "$blob": "b2e3d37f-90c5-456c-92ed-063650172b27"
         }
       }
     }

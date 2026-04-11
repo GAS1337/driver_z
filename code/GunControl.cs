@@ -40,6 +40,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		Log.Info( "PLAYER DIED" );
 
 		HighscoreManager.WriteToLeaderboard();
+		// HighscoreManager.ResetScore();
 
 		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
 		SceneLoader.StartCountdown( 0, 1);

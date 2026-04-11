@@ -52,6 +52,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 
 	public void Damage( float amount ) 
 	{
+		if ( CurrentHealth <= 0 ) return;
 		CurrentHealth = (CurrentHealth - amount).Clamp( 0, SetHealth );
 
 		if ( HealthbarRenderer != null ) 
@@ -66,7 +67,6 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 			if (HealthbarRenderer != null) HealthbarRenderer.Color = HealthbarRenderer.Color.WithAlpha( 0 );
 			// Log.Info( "Killed " + GameObject.Name );
 			if (GameObject.Tags.Has("enemy")) HighscoreManager.IncreaseScore(SetHealth);
-			if (GameObject.Tags.Has("player")) HighscoreManager.ResetScore();
 			IHealthEvent.PostToGameObject( this.GameObject, x => x.OnDeath() );
 		}
 	}

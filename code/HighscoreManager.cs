@@ -19,6 +19,7 @@ public sealed class HighscoreManager : Component
 		Log.Info("Score increased by " + amount + ". Current score: " + CurrentScore + " Last Gained Score: " + LastGainedScore);
 	}
 
+	[Button]
 	public void ResetScore()
 	{
 		LatestScore = CurrentScore;
@@ -27,9 +28,12 @@ public sealed class HighscoreManager : Component
 		LastGainedScore = 0;
 	}
 
+
+	[Button]
 	public void WriteToLeaderboard() 
 	{
 		// add score to leaderboard
 		Sandbox.Services.Stats.SetValue("LeaderboardTest", CurrentScore );
+		ResetScore();
 	}
 }

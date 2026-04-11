@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 
 public sealed class KuhBall : Component
 {
+	[Property] SoundEvent IdleSound;
+	[Property] public SoundEvent DamageSound;
 	Rigidbody Body;
 	Rotation targetRot;
 	float TurnCooldown = 4f;
@@ -32,7 +34,7 @@ public sealed class KuhBall : Component
 				NextTurn = TurnCooldown;
 				if ( random.Int( 1, 10 ) > 5 )
 				{
-					SoundHandle mooHandle = Sound.Play( "sounds/cow/cow-moo.sound", WorldPosition );
+					SoundHandle mooHandle = Sound.Play( IdleSound, WorldPosition );
 					mooHandle.Parent = GameObject;
 					mooHandle.FollowParent = true;
 				}

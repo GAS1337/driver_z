@@ -1,15 +1,13 @@
 {
   "UI": false,
-  "Volume": "0.15",
+  "Volume": "0.15000059",
   "Pitch": "1",
   "Decibels": 70,
   "SelectionMode": "RandomExclusive",
   "Sounds": [
-    "sounds/cow/cow-breath-multiple-3.vsnd",
-    "sounds/cow/cow-moo-sound.vsnd",
-    "sounds/cow/ribhavagrawal-cow-mooing-type-02-293304.vsnd",
-    "sounds/cow/ribhavagrawal-cow-mooing-type-04-293297.vsnd",
-    "sounds/cow/233143__jarredgibb__cow-breath-multiple-3-96khz.vsnd"
+    "sounds/chicken/alex_jauk-short-chicken-noise-230901.vsnd",
+    "sounds/chicken/the-vampires-monster-chicken-cluck-very-short-342014.vsnd",
+    "sounds/chicken/nikin-short-chick-sound-171389.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
@@ -48,8 +46,8 @@
     }
   ],
   "DefaultMixer": {
-    "Name": "unknown",
-    "Id": "00000000-0000-0000-0000-000000000000"
+    "Name": "game",
+    "Id": "5479fc5f-e165-4303-9996-33d46623e57f"
   },
   "__references": [],
   "__version": 1

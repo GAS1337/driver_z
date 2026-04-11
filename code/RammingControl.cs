@@ -20,14 +20,14 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		}
 
 		// Apply Impulse and Damage to Enemy
-		if ( other.GetComponent<Rigidbody>().IsValid ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 10000 ) );
+		if ( other.GetComponent<Rigidbody>().IsValid ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 100000 ) );
 		
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
 
 		Sound.Play( "sounds/bullet-impact-flesh.sound", WorldPosition);
 		if ( other.Tags.Has( "cow" ) ) 
 		{ 
-			SoundHandle screamHandle = Sound.Play( "sounds/cow/moo-scream.sound", other.WorldPosition );
+			SoundHandle screamHandle = Sound.Play( other.GetComponent<KuhBall>().DamageSound, other.WorldPosition );
 			screamHandle.Parent = other;
 			screamHandle.FollowParent = true;
 		}
