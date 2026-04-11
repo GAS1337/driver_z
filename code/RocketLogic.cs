@@ -29,20 +29,25 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		{
 			if ( hit.GameObject.Tags.Has( "enemy" ) )
 			{
+				// DebugOverlay.Trace( hit );
+				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
+
+				// Damage
+				hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
+
+				// Zombie Stagger
 				if ( hit.GameObject.GetComponent<ZombieBrain>() != null ) 
 				{
 					hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 					hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
 				}
-
-				// DebugOverlay.Trace( hit );
-				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
-
-				Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
-				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
-				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
-
-				hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
+				// Rigidbody Impulse
+				if ( hit.GameObject.GetComponent<Rigidbody>() != null )
+				{
+					Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
+					Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
+					hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
+				}
 			}
 			else if ( hit.GameObject.Tags.Has( "carbody" ) )
 			{

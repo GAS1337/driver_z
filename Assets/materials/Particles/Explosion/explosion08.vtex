@@ -1,0 +1,82 @@
+{
+  "Images": null,
+  "Sequences": [
+    {
+      "Source": "materials/particles/explosion/explosion04.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion08.png",
+      "IsLooping": true,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion00.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion02.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion01.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion06.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion03.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion05.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    },
+    {
+      "Source": "materials/particles/explosion/explosion07.png",
+      "IsLooping": false,
+      "FlipBook": false,
+      "Columns": 0,
+      "Rows": 0,
+      "Frames": 64
+    }
+  ],
+  "InputColorSpace": "Linear",
+  "OutputFormat": "DXT5",
+  "OutputColorSpace": "Linear",
+  "OutputMipAlgorithm": "None",
+  "OutputTypeString": "2D"
+}

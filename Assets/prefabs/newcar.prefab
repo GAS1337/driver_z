@@ -3881,7 +3881,7 @@
               {
                 "__type": "Sandbox.SoundPointComponent",
                 "__guid": "dab8fdab-6880-4623-b8d7-4112df3d86fc",
-                "__enabled": false,
+                "__enabled": true,
                 "Flags": 0,
                 "Distance": 7000,
                 "DistanceAttenuation": false,

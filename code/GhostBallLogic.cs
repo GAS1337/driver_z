@@ -6,11 +6,16 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 	[Property] ModelRenderer ExplosionModel;
 	[Property] TemporaryEffect temporaryEffect;
 
+	public SoundHandle attackSoundHandle;
+
 	Random random;
 
 	protected override void OnStart()
 	{
 		random = new Random();
+
+		attackSoundHandle.Parent = GameObject; 
+		attackSoundHandle.FollowParent = true;
 	}
 	public void OnTriggerEnter( GameObject other ) 
 	{ 
@@ -34,6 +39,9 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 			// sceneTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse((WorldPosition - sceneTrace.GameObject.WorldPosition).Normal * 1000);
 			// sceneTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity += random.VectorInSphere( 10 );
 		}
+
+		attackSoundHandle.Volume = 0;
+
 		GetComponent<TemporaryEffect>().DestroyAfterSeconds = 0.1f;
 	}
 

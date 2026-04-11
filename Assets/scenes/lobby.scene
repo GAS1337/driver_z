@@ -14524,7 +14524,7 @@
       "__guid": "4a1d171b-797c-4a7c-8488-44b9aad66b8d",
       "__version": 2,
       "Flags": 0,
-      "Name": "Cube",
+      "Name": "WagenHeber",
       "Position": "-3381,288,188",
       "Rotation": "0,0,0,1",
       "Scale": "3,0.3,3",
@@ -14621,7 +14621,7 @@
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "b2e3d37f-90c5-456c-92ed-063650172b27"
+          "$blob": "d721b554-c03b-4ed8-b700-42addb724391"
         }
       }
     }

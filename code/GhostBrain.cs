@@ -13,7 +13,9 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	[Property] GameObject GhostBall;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
-
+	[Property] SoundEvent AttackSound;
+	[Property] SoundEvent IdleSound;
+	[Property] SoundEvent DeathSound;
 
 	public GhostState CurrentState;
 
@@ -33,16 +35,18 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
+		Sound.Play(DeathSound, WorldPosition);
 		GameObject.Parent.Destroy();
 	}
 
 	protected override void OnStart()
 	{
 		random = new Random();
+
 		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
 		PlayerBody = Player.GetComponent<Rigidbody>();
+
 		if ( !DebugMode ) { StateDebugText.Enabled = false; }
-		// Log.Info(Player.Name);
 
 		CurrentState = GhostState.Moving;
 
@@ -126,9 +130,13 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
+
 		GameObject newBall = GhostBall.Clone( WorldPosition );
 		Rigidbody newBody = newBall.GetComponent<Rigidbody>();
 		// newBody.Velocity = Vector3.Down * 100;
+
+		// Sound
+		newBall.GetComponent<GhostBallLogic>().attackSoundHandle = Sound.Play( AttackSound, newBall.WorldPosition );
 
 		// Unity Conversion
 		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
