@@ -19,7 +19,7 @@ public sealed class Pointkit : Component, Component.ITriggerListener
 
 		// Checkt ground und setzt Mittelpunkt
 		GroundTrace = Scene.Trace
-			.Ray( WorldPosition, WorldPosition + Vector3.Down * 1000 )
+			.Ray( WorldPosition, WorldPosition + Vector3.Down * 10000 )
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player", "dead" )

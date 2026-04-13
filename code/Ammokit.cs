@@ -14,7 +14,7 @@ public sealed class Ammokit : Component, Component.ITriggerListener
 	protected override void OnStart()
 	{
 		GroundTrace = Scene.Trace
-			.Ray( WorldPosition, WorldPosition + Vector3.Down * 1000 )
+			.Ray( WorldPosition, WorldPosition + Vector3.Down * 10000 )
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player", "dead" )

@@ -4,6 +4,7 @@ using System;
 public sealed class ZombieSpawner : Component
 {
 	[Property] GameObject ZombiePrefab;
+	[Property] float SpawnDelay;
 	[Property] float SpawnCooldown;
 	[Property] float ScaleFactor;
 
@@ -16,7 +17,9 @@ public sealed class ZombieSpawner : Component
 	{
 		random = new Random();
 
-		SpawnZombie();
+		currentZombie = null;
+
+		NextSpawn = SpawnDelay;
 	}
 
 	protected override void OnFixedUpdate()
@@ -26,7 +29,7 @@ public sealed class ZombieSpawner : Component
 		// GhostKit?
 
 		// Wenn NextSpawn abgelaufen ist und es kein gültiges Kit gibt, spawne ein neues
-		if ( NextSpawn && !currentZombie.IsValid )
+		if ( NextSpawn && (!currentZombie.IsValid() || currentZombie == null) )
 		{
 			SpawnZombie();
 		}

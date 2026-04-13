@@ -46,11 +46,11 @@
             "RocketAmount": 5
           },
           {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "bc2479b9-96f7-4c9c-b25c-bc46b09ee381",
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "ed3f3321-84e5-4a22-be07-65e0a9e87da0",
             "__enabled": true,
             "Flags": 0,
-            "Center": "0,0,12",
+            "Center": "0,0,10",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -65,8 +65,8 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
+            "Radius": 100,
             "RollingResistance": null,
-            "Scale": "50,82.00001,74",
             "Static": false,
             "Surface": null,
             "SurfaceVelocity": "0,0,0"

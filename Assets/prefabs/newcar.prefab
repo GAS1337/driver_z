@@ -256,7 +256,7 @@
           "go": "fccd3e2c-e519-40b8-8c28-3cba0709db3d",
           "component_type": "BeamEffect"
         },
-        "ShootCooldown": 0.15,
+        "ShootCooldown": 0.12,
         "StartRockets": 15,
         "Turret": {
           "_type": "gameobject",
@@ -3881,7 +3881,7 @@
               {
                 "__type": "Sandbox.SoundPointComponent",
                 "__guid": "dab8fdab-6880-4623-b8d7-4112df3d86fc",
-                "__enabled": true,
+                "__enabled": false,
                 "Flags": 0,
                 "Distance": 7000,
                 "DistanceAttenuation": false,

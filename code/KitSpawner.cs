@@ -30,6 +30,6 @@ public sealed class KitSpawner : Component
 	void SpawnKit()
 	{
 		// Particle Effekt, Sound?
-		currentKit = KitPrefab.Clone( WorldPosition );
+		currentKit = KitPrefab.Clone( WorldPosition + Vector3.Up * 500 );
 	}
 }

@@ -33,11 +33,24 @@
         "OwnerTransfer": 1,
         "Components": [
           {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "bc2479b9-96f7-4c9c-b25c-bc46b09ee381",
+            "__type": "Pointkit",
+            "__guid": "899260d9-2ed9-442d-87c3-361f905a350d",
             "__enabled": true,
             "Flags": 0,
-            "Center": "0,-16,32.00006",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PointAmount": 500
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "1a6027a7-08da-4182-ae96-a118116d184a",
+            "__enabled": true,
+            "Flags": 0,
+            "Center": "0,0,30",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
@@ -52,24 +65,11 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
+            "Radius": 100,
             "RollingResistance": null,
-            "Scale": "194,50.00001,98.00015",
             "Static": false,
             "Surface": null,
             "SurfaceVelocity": "0,0,0"
-          },
-          {
-            "__type": "Pointkit",
-            "__guid": "899260d9-2ed9-442d-87c3-361f905a350d",
-            "__enabled": true,
-            "Flags": 0,
-            "OnComponentDestroy": null,
-            "OnComponentDisabled": null,
-            "OnComponentEnabled": null,
-            "OnComponentFixedUpdate": null,
-            "OnComponentStart": null,
-            "OnComponentUpdate": null,
-            "PointAmount": 500
           }
         ],
         "Children": [

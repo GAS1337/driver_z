@@ -14277,7 +14277,13 @@
             "43b1850a-d115-416c-862d-66b50ed60cb4": "aded1902-0b93-46f9-8206-baa85498f9f6",
             "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "1f5bacc3-c161-4d17-939b-bbc5a714b10a",
             "22745980-52de-4ad4-840b-caa0a92c26e4": "b85ee2e9-139b-40a5-a65c-bb4e5d2044a2",
-            "0e864116-bde5-4749-96da-a58232e5509c": "6a9945fc-21da-42d2-bfa3-44fb040ff2b7"
+            "0e864116-bde5-4749-96da-a58232e5509c": "6a9945fc-21da-42d2-bfa3-44fb040ff2b7",
+            "d7a60672-1eb4-48fd-80a5-3c99e17cb7ab": "c2ac1291-3b13-4483-aed8-faf4a1bdd0f9",
+            "82b671f6-81f6-48d2-be67-161646dcf662": "9044f746-39cd-4c14-8880-908dfba673b7",
+            "d853c3ba-37ab-4373-8650-75347c77d090": "a2748534-1e38-4327-b810-4d2c40a6b160",
+            "2ba6823f-845f-486e-9dbc-169149d85de8": "17d45b44-7362-4066-a8d9-fd43ff26941c",
+            "a3b8273e-9578-49a5-8df9-dec487945b49": "7733d397-a967-49c0-a33f-e02849951ee1",
+            "0b474b25-a6e5-46a9-84c6-8538472aeea2": "0e153e87-baee-4128-83c1-a858123074f6"
           }
         },
         {
@@ -14311,7 +14317,13 @@
             "43b1850a-d115-416c-862d-66b50ed60cb4": "a00f6f48-2f25-42d2-a410-9b66d5eb4b5e",
             "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "67a89b8e-c333-4532-a768-d9b893d1dfcc",
             "22745980-52de-4ad4-840b-caa0a92c26e4": "0346292a-306c-478a-bffd-7008bc57ad85",
-            "0e864116-bde5-4749-96da-a58232e5509c": "83bffb59-fc0f-4a67-8052-904d601722e9"
+            "0e864116-bde5-4749-96da-a58232e5509c": "83bffb59-fc0f-4a67-8052-904d601722e9",
+            "4835982d-0dcb-446f-9c1c-611e3c1cb865": "45d58948-263b-4efa-9a95-e6446ff6bf91",
+            "b2227e82-303d-4d09-8d70-8d76ae81e353": "547193db-047c-4035-a89a-5fc6a006e6c4",
+            "2f3d8ccb-f72b-486d-9c66-d83a94d91ecb": "7f83f30f-be1d-4cf3-8246-3323581ac4e7",
+            "09e0a188-3d3b-4f5b-b80c-943f322fa638": "9e462ba7-d6db-40fa-a5a1-511be080346b",
+            "cffa9da9-155a-42e4-9302-18639e998fed": "9963bc87-d27e-47bd-ab12-76fa0be3278a",
+            "20a48945-528e-440e-8c08-c1151def91be": "7983ebe7-ddb6-4d78-b3d4-f85f2d5d19ff"
           }
         },
         {
@@ -14345,7 +14357,13 @@
             "43b1850a-d115-416c-862d-66b50ed60cb4": "d8ab5b4b-1569-4066-b427-82a00bf7ed45",
             "2dcf37c3-fc44-4b21-b609-ea1580bc61e8": "a23b2771-9264-49d6-a1b6-aa3a1053782e",
             "22745980-52de-4ad4-840b-caa0a92c26e4": "a8589ec2-e102-4c1e-b6c6-88c79dfdfc54",
-            "0e864116-bde5-4749-96da-a58232e5509c": "70d1ea89-504a-4157-869c-db673f21f92a"
+            "0e864116-bde5-4749-96da-a58232e5509c": "70d1ea89-504a-4157-869c-db673f21f92a",
+            "6516d92f-9507-44e2-877e-f2dc1f1b6243": "198df294-7343-4925-8cbf-32d5b7cd7248",
+            "a98422a8-5ed9-40c1-9003-eeaa58241dcc": "c4ec3a91-e39f-45c0-844c-c0406326aac9",
+            "7fb15b75-277f-457e-abda-5c338c84c98d": "0674edbb-b7d3-4e96-be27-88538355b6bb",
+            "b9a94b67-9201-4c1c-9c14-89572ac415aa": "16e4deaf-ee13-43dc-8e9e-62842de123f6",
+            "38e5af81-19bf-4056-af5f-9f7e8b2e6bbc": "a944225a-510a-40be-a91c-55a4c1d787d6",
+            "d05284af-fb23-485d-8e5f-381e0209cfbc": "8f047c41-10b1-40e3-94b4-de0977a1bacd"
           }
         },
         {
@@ -14363,6 +14381,14 @@
                 },
                 "Property": "Position",
                 "Value": "-680.5,3623,24.99995"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "SpawnDelay",
+                "Value": 5
               }
             ],
             "MovedObjects": []
@@ -14391,6 +14417,14 @@
                 },
                 "Property": "Position",
                 "Value": "-605,4304,25"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "SpawnDelay",
+                "Value": 5
               },
               {
                 "Target": {
@@ -14438,6 +14472,14 @@
                 },
                 "Property": "ScaleFactor",
                 "Value": 1
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "de105471-e163-4994-af35-96538bc17fe2"
+                },
+                "Property": "SpawnDelay",
+                "Value": 5
               },
               {
                 "Target": {
@@ -14618,11 +14660,6 @@
     "GameObjectSystems": {
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
-      },
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "d721b554-c03b-4ed8-b700-42addb724391"
-        }
       }
     }
   },
