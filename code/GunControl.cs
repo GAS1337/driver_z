@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Modals;
 using System;
 using static HealthSystem;
 
@@ -33,17 +34,21 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	GameObject newBulletSpark;
 	GameObject newBulletSparkEnemy;
 
+
+	Game.Overlay overlay = new Game.Overlay();
 	Random random = new Random();
 
 	void IHealthEvent.OnDeath()
 	{
 		Log.Info( "PLAYER DIED" );
+		Sound.Play( "sounds/player-dead-8bit.sound", CarBody.WorldPosition );
 
 		HighscoreManager.WriteToLeaderboard();
 		// HighscoreManager.ResetScore();
 
+		Scene.TimeScale = 0.3f;
 		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
-		SceneLoader.StartCountdown( 0, 1);
+		SceneLoader.StartCountdown( 0, 3);
 	}
 
 	protected override void OnStart()
@@ -119,6 +124,16 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			// Rocket
 			LaunchRocket();
 		}
+
+		if ( overlay.IsOpen )
+		{
+			Scene.TimeScale = 0;
+		}
+		else if ( GetComponent<HealthSystem>().CurrentHealth > 0 ) 
+		{ 
+			Scene.TimeScale = 1;
+		}
+
 	}
 
 	void LaunchRocket() 

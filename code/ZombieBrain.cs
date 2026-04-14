@@ -62,6 +62,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
+		Sound.Play( "sounds/zombie-dies.sound", _deadClone.WorldPosition );
 	}
 
 	protected override void OnFixedUpdate()
@@ -292,9 +293,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			{ 
 				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 300000 );
 				attackTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity 
-					= attackTrace.GameObject.WorldRotation.Forward * 10 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
+					= attackTrace.GameObject.WorldRotation.Forward * 300 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
 			}
-			Sound.Play( "sounds/metal-hit-cartoon.sound", attackTrace.HitPosition );
 		}
 
 		NextSlam = SlamCooldown;

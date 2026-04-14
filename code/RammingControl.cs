@@ -9,7 +9,7 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 	{
 		if ( !other.Tags.Has( "enemy" ) ) return;
 		if (CarBody.Velocity.Length < 800) return;
-		Log.Info( $"Collided with {other.Name}" );
+		Log.Info( $"Rammed {other.Name}" );
 
 		// Stagger and Knock Zombie
 		if ( other.GetComponent<ZombieBrain>() != null )
@@ -20,7 +20,7 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		}
 
 		// Apply Impulse and Damage to Enemy
-		if ( other.GetComponent<Rigidbody>().IsValid ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 100000 ) );
+		if ( other.GetComponent<Rigidbody>() != null ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 100000 ) );
 		
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
 

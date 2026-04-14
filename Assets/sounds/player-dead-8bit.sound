@@ -5,15 +5,13 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/ambience/stings/sting-owl-1.vsnd",
-    "sounds/ambience/stings/sting-owl-2.vsnd",
-    "sounds/ambience/stings/sting-owl-3.vsnd"
+    "sounds/dead-8bit.vsnd"
   ],
-  "Occlusion": true,
+  "Occlusion": false,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
-  "DistanceAttenuation": true,
+  "DistanceAttenuation": false,
   "Distance": 15000,
   "Falloff": [
     {

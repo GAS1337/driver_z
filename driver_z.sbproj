@@ -24,6 +24,11 @@
     "LeaderboardType": "None",
     "CsProjName": "",
     "StartupScene": "scenes/lobby.scene",
-    "LaunchMode": "Normal"
+    "LaunchMode": "Normal",
+    "ControlModes": {
+      "Keyboard": false,
+      "VR": false,
+      "Gamepad": false
+    }
   }
 }

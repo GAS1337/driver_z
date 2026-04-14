@@ -6,6 +6,7 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description("Camera to control")] CameraComponent MainCamera;
 	RotationControl RotationControl;
 	[Property, Description("Player to follow")] GameObject Player;
+	[Property] Rigidbody CarBody;
 
 
 	[Property, Description( "Starting distance" )] int TargetDistanceToPlayer = 200;
@@ -27,6 +28,7 @@ public sealed class OrbitalCameraController : Component
 	protected override void OnStart() 
 	{ 
 		RotationControl = GameObject.GetComponent<RotationControl>();
+		MainCamera.FieldOfView = 90;
 	}
 
 	protected override void OnUpdate()
@@ -59,7 +61,7 @@ public sealed class OrbitalCameraController : Component
 		if ( Input.MouseWheel.y > 0 ) { TargetDistanceToPlayer = Math.Max( TargetDistanceToPlayer - ZoomStrength, MinDistanceToPlayer); }
 
 		// Zoom out when GroundCheck fails
-		if ( !RotationControl.groundCheck.Hit ) 
+		if ( !RotationControl.IsGrounded ) 
 		{ 
 			TargetDistanceToPlayer = MaxDistanceToPlayer;
 			VerticalOffset = Math.Max( VerticalOffset - AutoZoomStrength, 64 ); ;
@@ -67,7 +69,8 @@ public sealed class OrbitalCameraController : Component
 		// When on ground zoom depending on speed
 		else 
 		{
-			TargetDistanceToPlayer = (int)Player.GetComponent<Rigidbody>().Velocity.Length.Remap( 0, 4000, MinDistanceToPlayer, MaxDistanceToPlayer ); ; 
+			TargetDistanceToPlayer = (int)CarBody.Velocity.Length.Remap( 0, 4000, MinDistanceToPlayer, MaxDistanceToPlayer );
+			MainCamera.FieldOfView = 90 + (CarBody.Velocity.Length.Remap( 0, 4000, 0, 20 ) );
 			VerticalOffset = Math.Min(VerticalOffset + AutoZoomStrength, 170); 
 		}
 		

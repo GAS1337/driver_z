@@ -2,12 +2,12 @@
   "__guid": "1f6d6efa-17e1-4cee-b9a1-1092eb3090e1",
   "GameObjects": [
     {
-      "__guid": "9ec94ae4-3121-4e23-a883-a4dc7710a13b",
+      "__guid": "6f2c23cc-d29d-423e-9500-6d07887a9599",
       "__version": 2,
       "Flags": 0,
       "Name": "Sun",
-      "Position": "-215.9854,-103.4865,2180",
-      "Rotation": "0.2121381,-0.2278917,-0.8110951,-0.4951639",
+      "Position": "-450.7754,5044.248,948.111",
+      "Rotation": "0.3580892,-0.07286707,-0.9306715,-0.01767206",
       "Scale": "1,1,1",
       "Tags": "light_directional,light",
       "Enabled": true,
@@ -19,12 +19,12 @@
       "Components": [
         {
           "__type": "Sandbox.DirectionalLight",
-          "__guid": "3bc58ab2-3191-46a9-a43d-5d9d0c2aa970",
+          "__guid": "68aec37c-2af5-49ad-94b9-c159f03d863d",
           "__enabled": true,
           "Flags": 0,
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "0.67907,0.67907,0.42008,1",
+          "LightColor": "0.43613,0.65116,0.4433,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -36,19 +36,19 @@
           "ShadowCascadeSplitRatio": 0.91,
           "ShadowHardness": 0,
           "Shadows": true,
-          "SkyColor": "0.66354,0.66977,0.48286,1",
+          "SkyColor": "0.11961,0.45116,0.19697,1",
           "Visualizer": {}
         }
       ],
       "Children": []
     },
     {
-      "__guid": "73d52053-4d8d-472e-b087-6e0130587f05",
+      "__guid": "a845d700-b984-4ca6-ba25-c20963176ffb",
       "__version": 2,
       "Flags": 0,
       "Name": "2D Skybox",
       "Position": "0,0,0",
-      "Rotation": "0,0,-0.9914449,-0.1305253",
+      "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "skybox",
       "Enabled": true,
@@ -60,7 +60,7 @@
       "Components": [
         {
           "__type": "Sandbox.SkyBox2D",
-          "__guid": "d3e159bb-49a7-4e30-9081-d9782c8354a5",
+          "__guid": "08ae53fd-06ad-43aa-bb98-1aa00fcc3aad",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -71,15 +71,15 @@
           "OnComponentUpdate": null,
           "SkyIndirectLighting": true,
           "SkyMaterial": "materials/skybox/nightskyskybox.vmat",
-          "Tint": "0.4178,0.54884,0.40844,1"
+          "Tint": "0.31567,0.53023,0.32283,1"
         },
         {
           "__type": "Sandbox.EnvmapProbe",
-          "__guid": "0e6e105b-cd09-49d4-aab0-09131716d71c",
+          "__guid": "c96bd31c-eed6-46ad-a3cb-b71f66efbbc6",
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "BakedTexture": "scenes/lobby_scene_data/envmap/bake_0e6e105b-cd09-49d4-aab0-09131716d71c.vtex",
+          "BakedTexture": "scenes/lobby_scene_data/envmap/bake_c96bd31c-eed6-46ad-a3cb-b71f66efbbc6.vtex",
           "Bounds": {
             "Mins": "-42673.62,-27774.79,-512",
             "Maxs": "26016.42,26518.43,5235.865"
@@ -108,7 +108,7 @@
       ],
       "Children": [
         {
-          "__guid": "f4ca4f92-97c5-45e5-915c-f918a5dacf35",
+          "__guid": "7543b422-da8b-4f3f-97a9-8a268dc63c39",
           "__version": 2,
           "Flags": 0,
           "Name": "Cubemap Fog",
@@ -125,7 +125,7 @@
           "Components": [
             {
               "__type": "Sandbox.CubemapFog",
-              "__guid": "7ee64c6f-81e6-4628-92f4-da07d2bfd77c",
+              "__guid": "2d571923-775e-4fc0-847e-28092c3324f9",
               "__enabled": true,
               "Flags": 0,
               "Blur": 0.6532663,
@@ -142,17 +142,17 @@
               "OnComponentUpdate": null,
               "Sky": "materials/skybox/nightskyskybox.vmat",
               "StartDistance": 0,
-              "Tint": "0.37209,0.37209,0.37209,1"
+              "Tint": "0.17251,0.57209,0.11974,1"
             }
           ],
           "Children": []
         },
         {
-          "__guid": "89acdc01-e18c-415b-9d10-a2929d012f9c",
+          "__guid": "e304c089-6d5e-4f81-b12b-43f53ac9ef9e",
           "__version": 2,
           "Flags": 0,
           "Name": "Volumetric Fog",
-          "Position": "-336,-0.00002288818,0",
+          "Position": "-1056.749,707.7422,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -165,7 +165,7 @@
           "Components": [
             {
               "__type": "Sandbox.VolumetricFogVolume",
-              "__guid": "6e54feb3-33e6-421d-8aa3-9592e48c731d",
+              "__guid": "17b019c0-41e4-41d6-abe6-8a3e12ee6ab1",
               "__enabled": true,
               "Flags": 0,
               "Bounds": {
@@ -370,7 +370,9 @@
         "37fe3098-1a7f-47c9-a1e7-d1c3876eae1f": "449f007d-aecb-49a2-902e-cfedbfbcfe48",
         "0095deb0-7dec-4cd2-be4b-2280bcc33459": "36ae23c1-b4d5-42ea-8ca2-bd345686f955",
         "38336227-6ec3-48fe-a995-3e586acd3986": "49fa077b-a250-45a6-b001-6900bd3aacb2",
-        "7cf6304b-b4ba-4f5e-9cb2-a67fed9f0b2e": "8a0a3c72-7c8a-4b66-9de1-a3003e99faf1"
+        "7cf6304b-b4ba-4f5e-9cb2-a67fed9f0b2e": "8a0a3c72-7c8a-4b66-9de1-a3003e99faf1",
+        "bfd2a291-314f-46d8-891a-75ef365fd6c7": "24300fdb-90ff-4058-87f1-62c76ad3a68c",
+        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "de4c08a9-d213-4fc6-9e89-46f83c534a6c"
       }
     },
     {
@@ -14660,6 +14662,11 @@
     "GameObjectSystems": {
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "cd4b54ec-73e0-4748-b507-2418a321f4a2"
+        }
       }
     }
   },

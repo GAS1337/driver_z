@@ -1,11 +1,15 @@
 using Sandbox;
 using System;
+using System.Diagnostics;
 using System.Numerics;
+using System.Threading.Tasks;
 
 public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 {
 	[Property] public float SetHealth;
 	[Property] SpriteRenderer HealthbarRenderer;
+	IEnumerable<ModelRenderer> ModelRendererList;
+	Color originalTint;
 
 	List<GameObject> LootList;
 
@@ -13,6 +17,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 
 	public float CurrentHealth;
 
+	TimeSince TimeSinceLastDamage;
 	Random Random;
 
 	public interface IHealthEvent : ISceneEvent<IHealthEvent>
@@ -37,6 +42,9 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	protected override void OnStart()
 	{
 		HighscoreManager = Scene.Get<HighscoreManager>();
+		ModelRendererList = GetComponentsInChildren<ModelRenderer>();
+		originalTint = ModelRendererList.First<ModelRenderer>().Tint;
+
 		CurrentHealth = SetHealth;
 
 		// LootList wird nur für Gegner erstellt, da Spieler keine Lootdrops haben
@@ -50,10 +58,12 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 
 	}
 
-	public void Damage( float amount ) 
+	public void Damage( float amount, bool enableSound = true )
 	{
 		if ( CurrentHealth <= 0 ) return;
+
 		CurrentHealth = (CurrentHealth - amount).Clamp( 0, SetHealth );
+		ApplyDamageTint();
 
 		if ( HealthbarRenderer != null ) 
 		{
@@ -68,6 +78,30 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 			// Log.Info( "Killed " + GameObject.Name );
 			if (GameObject.Tags.Has("enemy")) HighscoreManager.IncreaseScore(SetHealth);
 			IHealthEvent.PostToGameObject( this.GameObject, x => x.OnDeath() );
+		}
+		if ( GameObject.Tags.Has( "player" ) && enableSound == true )
+		{
+			Sound.Play( "sounds/metal-hit-cartoon.sound", Scene.FindAllWithTag("carbody").First<GameObject>().WorldPosition );
+		}
+	}
+
+	[Button]
+	async Task ApplyDamageTint() 
+	{
+		foreach ( var renderer in ModelRendererList )
+		{
+			renderer.Tint = Color.Average(new Color[] { Color.Red, Color.White }) ;
+		}
+
+		TimeSinceLastDamage = 0;
+		await Task.DelaySeconds( 0.2f );
+		
+		if (!this.IsValid) return;
+		if (TimeSinceLastDamage < 0.2f) return;
+
+		foreach ( var renderer in ModelRendererList )
+		{
+			renderer.Tint = originalTint;
 		}
 	}
 

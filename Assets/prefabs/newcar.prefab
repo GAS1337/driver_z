@@ -157,6 +157,12 @@
         "__enabled": true,
         "Flags": 0,
         "AutoZoomStrength": 2,
+        "CarBody": {
+          "_type": "component",
+          "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
+          "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
+          "component_type": "Rigidbody"
+        },
         "CrosshairSprite": {
           "_type": "component",
           "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
@@ -171,7 +177,7 @@
           "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
           "component_type": "CameraComponent"
         },
-        "MaxDistanceToPlayer": 500,
+        "MaxDistanceToPlayer": 400,
         "MinDistanceToPlayer": 200,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -271,7 +277,7 @@
         "Flags": 0,
         "Name": "Camera",
         "Position": "1823.999,0.0006408691,528.0001",
-        "Rotation": "0,0,-1,0.0000003129244",
+        "Rotation": "0.02997145,0.0101986,0.9462181,-0.3219765",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -362,6 +368,36 @@
             "OnComponentUpdate": null,
             "Scale": 0.2,
             "TexelSize": 1
+          },
+          {
+            "__type": "Sandbox.Vignette",
+            "__guid": "bfd2a291-314f-46d8-891a-75ef365fd6c7",
+            "__enabled": true,
+            "Flags": 0,
+            "Center": "0.5,0.5",
+            "Color": "0,0,0,1",
+            "Intensity": 0.6,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Roundness": 0,
+            "Smoothness": 1
+          },
+          {
+            "__type": "Sandbox.MotionBlur",
+            "__guid": "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467",
+            "__enabled": true,
+            "Flags": 0,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Scale": 0.049999956
           }
         ],
         "Children": []

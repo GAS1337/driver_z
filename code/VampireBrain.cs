@@ -120,7 +120,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
-		Player.GetComponentInParent<HealthSystem>().Damage(1);
+		Player.GetComponentInParent<HealthSystem>().Damage(1, false);
 		// Particle & Sound
 		BloodEmitter.Enabled = true;
 		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 100;

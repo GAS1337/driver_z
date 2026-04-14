@@ -47,8 +47,8 @@
     }
   ],
   "DefaultMixer": {
-    "Name": "unknown",
-    "Id": "00000000-0000-0000-0000-000000000000"
+    "Name": "game",
+    "Id": "66789b80-2045-4714-b683-18a2de02e965"
   },
   "__references": [],
   "__version": 1
