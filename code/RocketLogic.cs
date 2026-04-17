@@ -6,6 +6,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 {
 	[Property] GameObject BurstParticle;
 	[Property] int KnockbackPower;
+	[Property] float Damage = 250f;
 	Rigidbody RocketBody;
 
 	protected override void OnStart()
@@ -33,7 +34,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
 
 				// Damage
-				hit.GameObject.GetComponent<HealthSystem>().Damage( 75f );
+				hit.GameObject.GetComponent<HealthSystem>().Damage( Damage );
 
 				// Zombie Stagger
 				if ( hit.GameObject.GetComponent<ZombieBrain>() != null ) 
@@ -45,8 +46,8 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 				if ( hit.GameObject.GetComponent<Rigidbody>() != null )
 				{
 					Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
-					Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
-					hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower );
+					Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 400 - GameObject.WorldPosition;
+					hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * KnockbackPower * hitBody.Mass );
 				}
 			}
 			else if ( hit.GameObject.Tags.Has( "carbody" ) )
@@ -55,7 +56,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 
 				Rigidbody hitBody = hit.GameObject.GetComponent<Rigidbody>();
 				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
-				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * (KnockbackPower * 200) );
+				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * (KnockbackPower * hitBody.Mass * 0.5f) );
 				hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 0f );
 			}
 

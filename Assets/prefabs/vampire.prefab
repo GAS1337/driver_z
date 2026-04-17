@@ -6,7 +6,7 @@
     "Name": "vampire",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "0.6666667,0.6666667,0.6666667",
+    "Scale": "0.666666687,0.666666687,0.666666687",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -44,7 +44,7 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "SetHealth": 500
+            "SetHealth": 750
           },
           {
             "__type": "Sandbox.ModelCollider",
@@ -76,6 +76,10 @@
             "__guid": "147b1e0b-cd17-46a0-8f95-c9f3263fcca7",
             "__enabled": true,
             "Flags": 0,
+            "DeathParticle": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dead-vampire.prefab"
+            },
             "DebugMode": false,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -101,8 +105,8 @@
             "__version": 2,
             "Flags": 0,
             "Name": "StateDebug",
-            "Position": "30.8,0,32.4",
-            "Rotation": "0,0,1,0.00000008940697",
+            "Position": "30.7999992,0,32.4000015",
+            "Rotation": "0,0,1,8.94069672E-08",
             "Scale": "1,1,1",
             "Tags": "",
             "Enabled": true,
@@ -226,8 +230,8 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Spray",
-            "Position": "237.5999,-0.0001579821,26.99999",
-            "Rotation": "0,0,0.9999999,0.0000004470348",
+            "Position": "237.599899,-0.000157982096,26.9999905",
+            "Rotation": "0,0,0.999999881,4.47034807E-07",
             "Scale": "1,1,1",
             "Tags": "particles",
             "Enabled": true,
@@ -322,7 +326,7 @@
                 "Lifetime": {
                   "Type": "Range",
                   "Evaluation": "Seed",
-                  "Constants": "0.02,0.1,0,0"
+                  "Constants": "0.0199999996,0.100000001,0,0"
                 },
                 "LocalSpace": 0,
                 "MaxParticles": 5000,
@@ -349,8 +353,8 @@
                   "Type": "Curve",
                   "Evaluation": "Life",
                   "CurveA": {
-                    "rangex": "0.03325123,0.9999999",
-                    "rangey": "0.4749999,5",
+                    "rangex": "0.0332512297,0.999999881",
+                    "rangey": "0.474999905,5",
                     "frames": [
                       {
                         "x": 0,
@@ -503,6 +507,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

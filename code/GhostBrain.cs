@@ -92,7 +92,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 				// MittelPunkt = MittelPunkt + ( TargetPosition - MittelPunkt ) * 0.5f + Vector3.Left * (MathF.Sin( (TargetPosition - MittelPunkt).Length * SchwebeFrequenz ) * SchwebeDistance);
 
 				if ( timeSinceLastAttack > 4 && playerPosition.Distance(WorldPosition) < 7000 && playerPosition.Distance( WorldPosition ) > 2000 ) 
-				{ timeSinceLastAttack = random.Float(-0.1f, 0.1f); Attack(); }
+				{ timeSinceLastAttack = random.Float(0f, 0.2f); Attack(); }
 				else {  }
 				if ( timeSinceLastAttack < 0.01f )
 				{
@@ -130,6 +130,18 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
+		SceneTraceResult sightlineCheck = Scene.Trace
+			.Sphere( 32, WorldPosition, PlayerBody.WorldPosition )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "player", "world" )
+			.Run();
+
+		if ( sightlineCheck.Hit ) 
+		{
+			Log.Info( "No line of sight to player, skipping attack" );
+			HorizontalOffset = (Vector3)random.VectorInCircle( 1000 );
+			return; 
+		}
 
 		GameObject newBall = GhostBall.Clone( WorldPosition );
 		Rigidbody newBody = newBall.GetComponent<Rigidbody>();
@@ -142,9 +154,10 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
 		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 100, Player.WorldPosition.y ) + random.VectorInSphere(1);
 		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
+		if ( UnityTargetVel.Length < 1 ) { UnityTargetVel = Vector3.Forward; }
 
 		if ( Ballistics.solve_ballistic_arc( UnityProjPos, 
-			6000, 
+			5000, 
 			UnityTargetPos, 
 			UnityTargetVel, 
 			Scene.PhysicsWorld.Gravity.Length * 0.001f,

@@ -6,7 +6,7 @@
     "Name": "ghost-ball",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "1,1,1",
+    "Scale": "2,2,2",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -84,7 +84,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Radius": 32,
+        "Radius": 8,
         "RollingResistance": null,
         "Static": false,
         "Surface": null,
@@ -548,8 +548,8 @@
               "Type": "Curve",
               "Evaluation": "Life",
               "CurveA": {
-                "rangex": "0.4252063,1",
-                "rangey": "2.273773,6",
+                "rangex": "0.425206304,1",
+                "rangey": "2.27377295,6",
                 "frames": [
                   {
                     "x": 0.6696123,
@@ -740,6 +740,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

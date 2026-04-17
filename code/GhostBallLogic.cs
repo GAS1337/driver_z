@@ -19,7 +19,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 	}
 	public void OnTriggerEnter( GameObject other ) 
 	{ 
-		if (!other.Tags.HasAny("player", "wheel")) return;
+		if ( other.Tags.HasAny( "enemy" ) ) return;
 		if (GameObject.IsValid()) Explode();
 	}
 

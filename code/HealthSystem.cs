@@ -90,7 +90,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	{
 		foreach ( var renderer in ModelRendererList )
 		{
-			renderer.Tint = Color.Average(new Color[] { Color.Red, Color.White }) ;
+			renderer.Tint = Color.Average(new Color[] { Color.Red, Color.White } ) ;
 		}
 
 		TimeSinceLastDamage = 0;
