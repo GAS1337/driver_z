@@ -131,7 +131,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	private void Attack()
 	{
 		SceneTraceResult sightlineCheck = Scene.Trace
-			.Sphere( 32, WorldPosition, PlayerBody.WorldPosition )
+			.Sphere( 16, WorldPosition, PlayerBody.WorldPosition + Vector3.Up * 100 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player", "world" )
 			.Run();

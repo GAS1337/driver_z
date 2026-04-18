@@ -9571,8 +9571,8 @@
               "__version": 2,
               "Flags": 0,
               "Name": "iron-fence (1)",
-              "Position": "179.200104,-23.4664097,0",
-              "Rotation": "0,0,-0.258819789,0.965925574",
+              "Position": "251.493881,94.0578156,2.54313159E-06",
+              "Rotation": "0,0,0.258818686,0.96592617",
               "Scale": "1,1,0.500000477",
               "Tags": "",
               "Enabled": true,
@@ -13449,9 +13449,9 @@
       "__version": 2,
       "Flags": 0,
       "Name": "SceneLoader",
-      "Position": "-16576,576,704",
+      "Position": "-15782,576,131",
       "Rotation": "0,0,0,1",
-      "Scale": "50,50,25",
+      "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -13461,38 +13461,11 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "46fd6900-aec4-44ca-acf0-ea944d6adf46",
-          "__enabled": false,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/dev/box.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,0.33"
-        },
-        {
           "__type": "Sandbox.BoxCollider",
           "__guid": "3cb9e6c1-1168-4f53-b7da-c19e8956f7e8",
           "__enabled": true,
           "Flags": 0,
-          "Center": "0,0,0",
+          "Center": "4,0,327.999969",
           "ColliderFlags": 0,
           "Elasticity": null,
           "Friction": null,
@@ -13508,7 +13481,7 @@
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
           "RollingResistance": null,
-          "Scale": "50,50,50",
+          "Scale": "3192,3200,706.000061",
           "Static": true,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
@@ -13518,6 +13491,12 @@
           "__guid": "6bdf1332-3bed-475a-b581-8cfe58bc45d3",
           "__enabled": true,
           "Flags": 0,
+          "CountdownText": {
+            "_type": "component",
+            "component_id": "2135fa70-d10d-430e-83ab-4e35eaa6964a",
+            "go": "13b18123-9dfd-4b68-b8ab-d309b1565594",
+            "component_type": "TextRenderer"
+          },
           "LobbyScene": "scenes/lobby.scene",
           "MainScene": "scenes/minimal.scene",
           "OnComponentDestroy": null,
@@ -13526,10 +13505,136 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Timer": 1
+          "Timer": 2
         }
       ],
-      "Children": []
+      "Children": [
+        {
+          "__guid": "13b18123-9dfd-4b68-b8ab-d309b1565594",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Countdown",
+          "Position": "-1586,-0.000427246094,301",
+          "Rotation": "0,0,-1,1.49011612E-07",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "2135fa70-d10d-430e-83ab-4e35eaa6964a",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "BlendMode": "Normal",
+              "FogStrength": 1,
+              "HorizontalAlignment": "Center",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 4,
+              "TextScope": {
+                "Text": "Countdown",
+                "TextColor": "0.45103,0.47149,0.5297,1",
+                "FontName": "Poppins",
+                "FontSize": 64,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "FontVariantNumeric": "Normal",
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "FilterMode": "Bilinear",
+                "FontSmooth": "Auto",
+                "Outline": {
+                  "Enabled": true,
+                  "Size": 8,
+                  "Color": "0.46512,0,0,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                }
+              },
+              "VerticalAlignment": "Center"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "850b04d5-fc37-4d89-a453-1d8f0ead63c8",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Model",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "40,40,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "d8ef882e-16c9-48cd-8788-7bf7e7710378",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/prototype kit/indicator-square-a.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ],
+          "Children": []
+        }
+      ]
     },
     {
       "__guid": "eba94292-c9ae-4056-a15a-38e9a984fe4d",
@@ -13837,6 +13942,22 @@
                   "Type": "GameObject",
                   "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
                 },
+                "Property": "Position",
+                "Value": "-1116.00439,3391.51758,3.05175781E-05"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.707107902,0.707105875"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
                 "Property": "Scale",
                 "Value": "1,1,1"
               }
@@ -13870,7 +13991,15 @@
                   "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
                 },
                 "Property": "Position",
-                "Value": "364.001007,144,0"
+                "Value": "-972.004883,3027.51709,3.05175781E-05"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.707107902,0.707105875"
               },
               {
                 "Target": {
@@ -13910,7 +14039,15 @@
                   "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
                 },
                 "Property": "Position",
-                "Value": "696.000977,320,0"
+                "Value": "-796.004395,2695.51709,3.05175781E-05"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "43b1850a-d115-416c-862d-66b50ed60cb4"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.707107902,0.707105875"
               },
               {
                 "Target": {
@@ -13950,15 +14087,7 @@
                   "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
                 },
                 "Property": "Position",
-                "Value": "-680.5,3623,24.9999504"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
-                },
-                "Property": "Enabled",
-                "Value": false
+                "Value": "429.5,2921.49951,24.9999695"
               },
               {
                 "Target": {
@@ -13995,6 +14124,14 @@
                 },
                 "Property": "Position",
                 "Value": "-605,4304,25"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
+                },
+                "Property": "Enabled",
+                "Value": false
               },
               {
                 "Target": {
@@ -14042,6 +14179,14 @@
                 },
                 "Property": "Position",
                 "Value": "-630.5,4944.5,25"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "6ebec9b7-5b40-4cf3-bec0-fe9b09c88c85"
+                },
+                "Property": "Enabled",
+                "Value": false
               },
               {
                 "Target": {
@@ -14226,7 +14371,15 @@
               "IdValue": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5"
             },
             "Property": "Position",
-            "Value": "-4598.99902,-525.001709,127.999893"
+            "Value": "-4975.99902,-880.001831,127.999969"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.999999881,2.08616257E-07"
           }
         ],
         "MovedObjects": []
@@ -14237,6 +14390,49 @@
         "90a12f99-2466-466d-b75b-eb75fc4a05e9": "02721824-c7da-4bc6-9d4e-8603a6f1a1cf",
         "3778c1e5-f28f-4283-ac6f-2cbc39687afe": "0db6bd4a-2d43-45a4-bd25-bd9dc3943e7a",
         "fdab2a37-0463-4595-9aa6-546f2147e748": "e8223015-43e6-421b-8923-c414a458e1bd"
+      }
+    },
+    {
+      "__guid": "b642866f-6f76-482b-80dc-69f8cb047298",
+      "__version": 2,
+      "__Prefab": "prefabs/streetlight.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5"
+            },
+            "Property": "Name",
+            "Value": "streetlight (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5"
+            },
+            "Property": "Position",
+            "Value": "-4976,1791.99719,127.999969"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1.78813934E-07,-1"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5": "b642866f-6f76-482b-80dc-69f8cb047298",
+        "ebcfa3bd-300b-45f6-9fba-8d41b3241c28": "c1c00193-0edb-4c0b-92d8-e2ff451ab95c",
+        "90a12f99-2466-466d-b75b-eb75fc4a05e9": "6ddf9cc7-ff9f-422e-afef-736b4a5fa3a6",
+        "3778c1e5-f28f-4283-ac6f-2cbc39687afe": "fb9cc777-6dd4-4578-a7f3-a581e819206c",
+        "fdab2a37-0463-4595-9aa6-546f2147e748": "58478166-ca5c-475c-96a6-89255e0d3905"
       }
     }
   ],
@@ -14264,13 +14460,13 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "62d7a82b-b6b0-40ae-8ea3-2917ea60dbbe"
         }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
       }
     }
   },
