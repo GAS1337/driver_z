@@ -129,7 +129,8 @@
               "_type": "gameobject",
               "go": "e4250082-d33a-4de1-9cbd-0ac855f218df"
             },
-            "KnockbackPower": 16000,
+            "Damage": 250,
+            "KnockbackPower": 800,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -228,7 +229,7 @@
                       "Type": "Curve",
                       "Evaluation": "Life",
                       "CurveA": {
-                        "rangey": "0,0.5083333",
+                        "rangey": "0,0.508333325",
                         "frames": [
                           {
                             "x": 0,
@@ -326,8 +327,8 @@
                       "Type": "Curve",
                       "Evaluation": "Life",
                       "CurveA": {
-                        "rangex": "0,0.9999999",
-                        "rangey": "0.3000001,1",
+                        "rangex": "0,0.999999881",
+                        "rangey": "0.300000101,1",
                         "frames": [
                           {
                             "x": 0,
@@ -599,7 +600,7 @@
                     "Lifetime": {
                       "Type": "Range",
                       "Evaluation": "Seed",
-                      "Constants": "0.8,1.2,0,0"
+                      "Constants": "0.800000012,1.20000005,0,0"
                     },
                     "LocalSpace": 0,
                     "MaxParticles": 10000,
@@ -752,7 +753,7 @@
                       "Type": "Curve",
                       "Evaluation": "Life",
                       "CurveA": {
-                        "rangey": "-0.0000001192093,1",
+                        "rangey": "-1.19209304E-07,1",
                         "frames": [
                           {
                             "x": 0,
@@ -837,7 +838,7 @@
                     "Lifetime": {
                       "Type": "Range",
                       "Evaluation": "Seed",
-                      "Constants": "0.2,0.3,0,0"
+                      "Constants": "0.200000003,0.300000012,0,0"
                     },
                     "LocalSpace": 0,
                     "MaxParticles": 5000,
@@ -1045,6 +1046,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

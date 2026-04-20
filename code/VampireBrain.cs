@@ -14,6 +14,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	[Property] bool DebugMode;
 	[Property] GameObject ParticleObject;
 	ParticleEmitter BloodEmitter;
+	[Property] GameObject DeathParticle;
 
 	public VampireState CurrentState;
 
@@ -32,6 +33,8 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
+		Sound.Play( "sounds/vampire/vampire-death.sound", GameObject.WorldPosition );
+		DeathParticle.Clone( GameObject.WorldPosition + Vector3.Up * 150, WorldRotation, WorldScale * 1.5f );
 		GameObject.Parent.Destroy();
 	}
 

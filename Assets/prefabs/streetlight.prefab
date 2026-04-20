@@ -5,7 +5,7 @@
     "Flags": 0,
     "Name": "streetlight",
     "Position": "0,0,0",
-    "Rotation": "0,0,-1,0.0000001947072",
+    "Rotation": "0,0,0,1",
     "Scale": "6,6,6",
     "Tags": "light_spot,light",
     "Enabled": true,
@@ -41,6 +41,31 @@
         },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "fdab2a37-0463-4595-9aa6-546f2147e748",
+        "__enabled": true,
+        "Flags": 0,
+        "ColliderFlags": 0,
+        "Elasticity": null,
+        "Friction": null,
+        "IsTrigger": false,
+        "Model": "models/kaykit_city_builder_bits_1.0_free/streetlight.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Static": true,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
       }
     ],
     "Children": [
@@ -49,9 +74,9 @@
         "__version": 2,
         "Flags": 0,
         "Name": "Spot Light",
-        "Position": "0.000005072339,-19.62773,88.74002",
-        "Rotation": "0.4545195,0.4545193,-0.5416753,0.5416753",
-        "Scale": "1,1,1.3",
+        "Position": "5.07233881E-06,-19.6277294,88.7400208",
+        "Rotation": "0.45451951,0.454519302,-0.541675329,0.541675329",
+        "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -71,7 +96,7 @@
             "Cookie": null,
             "FogMode": "Enabled",
             "FogStrength": 1,
-            "LightColor": "244.7674,250,187.2093,1",
+            "LightColor": "187.2093,250,187.2093,1",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -79,6 +104,8 @@
             "OnComponentStart": null,
             "OnComponentUpdate": null,
             "Radius": 2000,
+            "ShadowBias": 0.0005,
+            "ShadowHardness": 0,
             "Shadows": true
           }
         ],
@@ -100,7 +127,9 @@
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []
