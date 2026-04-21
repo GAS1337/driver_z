@@ -29,6 +29,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	float AttackCharge = 0;
 
 	TimeUntil NextOffset;
+	TimeUntil UntilNextIdleSound;
 	Random random;
 
 	void IHealthEvent.OnDeath()
@@ -87,11 +88,18 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 			// WANDER
 			case VampireState.Moving: 
 				StateDebugText.Text = "MOVING";
-
+				
+				if (UntilNextIdleSound) 
+				{
+					Sound.Play("sounds/vampire/vampire-idle.sound", WorldPosition);
+					UntilNextIdleSound = random.Float(6, 10);
+				}
 
 				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 1, 3));
+				
 				if ( (playerPosition - WorldPosition).Length < 1300 ) { Attack(); }
 				else { BloodEmitter.Enabled = false; }
+				
 				break;
 
 			// ATTACK
