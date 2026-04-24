@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 public sealed class MonsterManager : Component
 {
-    [Property] GameObject MonsterSpawner;
+    [Property] GameObject MonsterSpawnerPrefab;
     [Property] GameObject ZombiePrefab;
     [Property] GameObject GhostPrefab;
     [Property] GameObject VampirePrefab;
@@ -99,7 +99,7 @@ public sealed class MonsterManager : Component
 
 
 
-        GameObject newSpawner = MonsterSpawner.Clone();
+        GameObject newSpawner = MonsterSpawnerPrefab.Clone();
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
 
         switch (indexCase)

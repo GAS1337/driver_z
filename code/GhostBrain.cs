@@ -3,7 +3,7 @@ using System;
 using static Ballistics;
 using static HealthSystem;
 
-public enum GhostState { Moving, Attack, Staggered }
+public enum GhostState { Idle, Moving, Attack, Staggered }
 
 
 public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
@@ -26,6 +26,10 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	Vector3 MittelPunkt;
 	float SchwebeDistance = 100;
 	float SchwebeFrequenz = 2f;
+
+	Vector3 IdleKreisPunkt;
+	float IdleKreisRadius = 500f;
+	float IdleKreisAngle = 0f;
 
 	TimeSince timeSinceLastAttack;
 	float AttackCharge = 0;
@@ -62,6 +66,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
 		GameObject.WorldPosition = MittelPunkt;
+
+		IdleKreisPunkt = WorldPosition;
 	}
 
 	protected override void OnFixedUpdate()
@@ -76,7 +82,6 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		Vector3 playerPosition = Player.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 1000).WithY( 0 ).WithX( 0 );
 		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 1000; }
-		TargetPosition = playerPosition.WithZ(0) + (WorldPosition.WithZ( 0 ) - playerPosition.WithZ(0) ).Normal * 5500 + hoverHeight + HorizontalOffset;
 
 		switch ( CurrentState ) 
 		{
@@ -84,13 +89,47 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 				StateDebugText.Text = "DEFAULT";
 				break;
 
-			// WANDER
+			case GhostState.Idle:
+				StateDebugText.Text = "IDLE";
+
+				// Wenn Ghost weiter als der Radius * 1.5f vom Punkt entfernt ist soll er einen neuen zufälligen finden
+				if ((WorldPosition - IdleKreisPunkt).Length > IdleKreisRadius * 1.5f)
+				{
+					IdleKreisPunkt = WorldPosition.WithZ(0) + (Vector3)random.VectorInCircle(1).Normal * random.Int(100, 300);
+				}
+
+				// Winkel un damit Koordinaten vom aufm Kreis berechnen
+				IdleKreisAngle += Time.Delta; // * Speed
+				float x = MathF.Cos(IdleKreisAngle);
+				float y = MathF.Sin(IdleKreisAngle);
+
+				// TargetPosition aus IdleKreisPunkt, Koordinaten und height berechnen, SchwebeMittelPunkt zu TargetPos LERPen
+				TargetPosition = IdleKreisPunkt + new Vector3(x, y, 0).Normal * IdleKreisRadius + hoverHeight;
+				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap(0, 5000, 0.5, 1));
+
+				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
+				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
+				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+
+				GameObject.WorldRotation = Rotation.LookAt( TargetPosition - GameObject.WorldPosition, Vector3.Up );
+
+				if ( (playerPosition - WorldPosition).Length < 10000 ) { CurrentState = GhostState.Moving; }	
+
+				break;
+
+			// MOVING&SHOOTING
 			case GhostState.Moving: 
 				StateDebugText.Text = "WANDER";
 				
+				TargetPosition = playerPosition.WithZ(0) + (WorldPosition.WithZ( 0 ) - playerPosition.WithZ(0) ).Normal * 5500 + hoverHeight + HorizontalOffset;
 				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 0.2f, 0.5f));
 				// MittelPunkt = MittelPunkt + ( TargetPosition - MittelPunkt ) * 0.5f + Vector3.Left * (MathF.Sin( (TargetPosition - MittelPunkt).Length * SchwebeFrequenz ) * SchwebeDistance);
-
+				
+				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, dann mit Distanz multiplizieren und auf MittelPunkt addieren
+				GameObject.WorldPosition = MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+				
+				LookAtPlayer();
+				
 				if ( timeSinceLastAttack > 4 && playerPosition.Distance(WorldPosition) < 7000 && playerPosition.Distance( WorldPosition ) > 2000 ) 
 				{ timeSinceLastAttack = random.Float(0f, 0.2f); Attack(); }
 				else {  }
@@ -99,6 +138,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 					// HorizontalOffset = Player.WorldRotation.Left * random.Int( 1, 3 ) * random.Int( -1, 1 );
 				}
 				// if ( (TargetPosition - MittelPunkt).IsNearlyZero(500) ) CurrentState = GhostState.Attack;
+				
+				if ( (playerPosition - WorldPosition).Length > 10000 ) { CurrentState = GhostState.Idle; }	
 				break;
 
 			// ATTACK
@@ -115,9 +156,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 				break;
 		}
 
-		// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, dann mit Distanz multiplizieren und auf MittelPunkt addieren
-		GameObject.WorldPosition = MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
-		LookAtPlayer();
+
 	}
 
 	private void LookAtPlayer()

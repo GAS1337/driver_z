@@ -3,7 +3,7 @@ using System;
 using static Ballistics;
 using static HealthSystem;
 
-public enum VampireState { Moving, Attack, Staggered }
+public enum VampireState { Idle, Moving, Attack, Staggered }
 
 
 public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
@@ -22,9 +22,13 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	Vector3 CircleOffset;
 	Vector3 TargetPosition;
-	Vector3 MittelPunkt;
+	Vector3 SchwebeMittelPunkt;
 	float SchwebeDistance = 25;
 	float SchwebeFrequenz = 4f;
+
+	Vector3 IdleKreisPunkt;
+	float IdleKreisRadius = 500f;
+	float IdleKreisAngle = 0f;
 
 	float AttackCharge = 0;
 
@@ -59,10 +63,12 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 		// HorizontalOffset = Player.WorldRotation.Left * random.Int( 1000, 3000 ) * random.Int( -1, 1 );
 		CircleOffset = new Vector3(  random.Float( -0.5f, 0.5f ), random.Float( -1, 1 ), 0 ).Normal;
-		MittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;
+		SchwebeMittelPunkt = GroundTrace.EndPosition + Vector3.Up * 80;
 
 		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
-		GameObject.WorldPosition = MittelPunkt;
+		GameObject.WorldPosition = SchwebeMittelPunkt;
+
+		IdleKreisPunkt = WorldPosition;
 	}
 
 	protected override void OnFixedUpdate()
@@ -77,13 +83,47 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 		Vector3 playerPosition = Player.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 50).WithY( 0 ).WithX( 0 );
 		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 100; }
-		TargetPosition = playerPosition + CircleOffset * 1000 + hoverHeight;
 
 		switch ( CurrentState ) 
 		{
 			default: 
 				StateDebugText.Text = "DEFAULT";
 				break;
+
+			// IDLE
+			case VampireState.Idle:
+				StateDebugText.Text = "IDLE";
+				
+				if (UntilNextIdleSound) 
+				{
+					Sound.Play("sounds/vampire/vampire-idle.sound", WorldPosition);
+					UntilNextIdleSound = random.Float(6, 10);
+				}
+
+				// Wenn Vampir weiter als der Radius * 1.5f vom Punkt entfernt ist soll er einen neuen zufälligen finden
+				if ((WorldPosition - IdleKreisPunkt).Length > IdleKreisRadius * 1.5f)
+				{
+					IdleKreisPunkt = WorldPosition.WithZ(0) + (Vector3)random.VectorInCircle(1).Normal * random.Int(100, 300);
+				}
+
+				// Winkel un damit Koordinaten vom aufm Kreis berechnen
+				IdleKreisAngle += Time.Delta;
+				float x = MathF.Cos(IdleKreisAngle);
+				float y = MathF.Sin(IdleKreisAngle);
+
+				// TargetPosition aus IdleKreisPunkt, Koordinaten und height berechnen, SchwebeMittelPunkt zu TargetPos LERPen
+				TargetPosition = IdleKreisPunkt + new Vector3(x, y, 0).Normal * IdleKreisRadius + hoverHeight;
+				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap(0, 5000, 1, 3));
+
+				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
+				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
+				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+
+				GameObject.WorldRotation = Rotation.LookAt( TargetPosition - GameObject.WorldPosition, Vector3.Up );
+
+				if ( (playerPosition - WorldPosition).Length < 10000 ) { CurrentState = VampireState.Moving; }				
+				break;
+
 
 			// WANDER
 			case VampireState.Moving: 
@@ -95,11 +135,19 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 					UntilNextIdleSound = random.Float(6, 10);
 				}
 
-				MittelPunkt = MittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - MittelPunkt).Length.Remap(0, 5000, 1, 3));
-				
+				// TargetPosition bestimmen und MittePunkt hinLERPen
+				TargetPosition = playerPosition + CircleOffset * 1000 + hoverHeight;
+				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap(0, 5000, 1, 3));
+				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
+				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
+				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+
+				LookAtPlayer();
+
 				if ( (playerPosition - WorldPosition).Length < 1300 ) { Attack(); }
 				else { BloodEmitter.Enabled = false; }
 				
+				if ( (playerPosition - WorldPosition).Length > 10000 ) { CurrentState = VampireState.Idle; }
 				break;
 
 			// ATTACK
@@ -116,9 +164,6 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 				break;
 		}
 
-		// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, dann mit Distanz multiplizieren und auf MittelPunkt addieren
-		GameObject.WorldPosition = MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
-		LookAtPlayer();
 	}
 
 	private void LookAtPlayer()

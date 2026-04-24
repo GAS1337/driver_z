@@ -5,12 +5,11 @@ using System.ComponentModel;
 public sealed class MonsterSpawner : Component
 {
 	[Property] public GameObject MonsterPrefab; // Wird von MonsterManager gepassed
-	public float MonsterSpawnDelay = 1f;
+	public float MonsterSpawnStartDelay = 1f;
 	public float MonsterSpawnCooldown = 1f;
 	public float MonsterScaleFactor = 1f;
-	public int MaxMonsterSpawns = 3;
+	public int MaxMonsterSpawns = 1;
 
-	GameObject currentMonster;
 	List<GameObject> SpawnedMonsters;
 
 
@@ -23,29 +22,31 @@ public sealed class MonsterSpawner : Component
 
 		random = new Random();
 
-		UntilNextSpawn = SpawnDelay;
+		UntilNextSpawn = MonsterSpawnStartDelay;
 	}
 
 	protected override void OnFixedUpdate()
 	{
-		// Solange currentMonster Valid ist bleibt der NextSpawn auf Cooldown
-		if ( currentMonster.IsValid() ) UntilNextSpawn = SpawnCooldown;
+		// Solange Max Monsters gespawned sind ist bleibt der NextSpawn auf Cooldown
+		if ( SpawnedMonsters.Count >= MaxMonsterSpawns ) UntilNextSpawn = MonsterSpawnCooldown;
 
-		if (UntilNextSpawn)
+		if (true)
 		{
 		    SpawnedMonsters.RemoveAll( x => !x.IsValid );	
 		}
 
-        // Wenn NextSpawn abgelaufen ist und es kein gültiges Monster gibt, spawne ein neues
-		if ( UntilNextSpawn && (!currentMonster.IsValid() || currentMonster == null) )
+        // Wenn NextSpawn abgelaufen ist
+		if ( UntilNextSpawn )
 		{
 			SpawnMonster();
+			UntilNextSpawn = MonsterSpawnCooldown;
 		}
 	}
 
 	void SpawnMonster()
 	{
 		// Particle Effekt, Sound?
-		currentMonster = MonsterPrefab.Clone( WorldPosition, WorldRotation, Vector3.One * ScaleFactor * random.Float(0.9f, 1.1f) );
+		GameObject currentMonster = MonsterPrefab.Clone( WorldPosition, WorldRotation, Vector3.One * MonsterScaleFactor * random.Float(0.9f, 1.1f) );
+		SpawnedMonsters.Add(currentMonster);
 	}
 }
