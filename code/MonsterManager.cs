@@ -128,7 +128,8 @@ public sealed class MonsterManager : Component
 
 		GameObject newSpawner = MonsterSpawnerPrefab.Clone(actualSpawnPosition, WorldRotation.Angles().WithYaw(random.Int(0, 359)), Vector3.One);
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
-
+		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = 5;
+		newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(2, 4);
 
 		Log.Info( "Cloning spawner for prefab: " + prefab.Name + " at " + newSpawner.WorldPosition );
 
@@ -139,15 +140,18 @@ public sealed class MonsterManager : Component
                 break;
 
             case 0: // Zombie
-                ActiveZombieSpawner.Add(newSpawner);
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Green * 15;
+				ActiveZombieSpawner.Add(newSpawner);
                 break;
 
             case 1: // Ghost
-                ActiveGhostSpawner.Add(newSpawner);
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Blue * 15;
+				ActiveGhostSpawner.Add(newSpawner);
                 break;
 
             case 2: // Vampire
-                ActiveVampireSpawner.Add(newSpawner);
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Red * 15;
+				ActiveVampireSpawner.Add(newSpawner);
                 break;
         }
     }

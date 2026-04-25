@@ -43,9 +43,9 @@ VS
 		
         // --- PARAMETER FÜR SANFTES BIEGEN (STAMM/HAUPT-SWAY) ---
         float3 windDirection = float3( 1.0f, 0.5f, 0.0f ); 
-        float windSpeed = 0.05f;        
+        float windSpeed = 0.1f;        
         float windFrequency = 0.00008f;  
-        float swayAmplitude = 100.0f;   
+        float swayAmplitude = 250.0f;   
 
         // 2. Welt-Sway Logik
         float worldSample = dot( i.vPositionWs.xy, windDirection.xy ) * windFrequency;
@@ -58,7 +58,7 @@ VS
         // --- PARAMETER FÜR DYNAMISCHEN DETAIL-WIGGLE ---
         // Wir koppeln die Stärke und Geschwindigkeit an windGust
         // 0.8f ist das "Grund-Zittern", das bei Windstille bleibt
-        float dynamicStrength = (1.8f + windGust * 0.8f) * 2.5f; 
+        float dynamicStrength = (4.5f + windGust * 0.8f) * 2.5f; 
         float dynamicSpeed = (0.3f + windGust * 0.0005f); // Wird bei Böen bis zu 2x schneller
 
         float detailFrequency = 1.0f; 

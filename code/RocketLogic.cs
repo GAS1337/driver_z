@@ -42,6 +42,22 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 					hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 					hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
 				}
+				else if ( hit.GameObject.GetComponent<VampireBrain>() != null )
+				{
+					hit.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
+					hit.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 1f, hit.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 1f );
+
+					hit.GameObject.GetComponent<VampireBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
+					// Rotation?
+				}
+				else if ( hit.GameObject.GetComponent<GhostBrain>() != null )
+				{
+					hit.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
+					hit.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 1f, hit.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 1f );
+
+					hit.GameObject.GetComponent<GhostBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
+					// Rotation?
+				}
 				// Rigidbody Impulse
 				if ( hit.GameObject.GetComponent<Rigidbody>() != null )
 				{

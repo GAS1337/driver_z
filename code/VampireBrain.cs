@@ -21,7 +21,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	SceneTraceResult GroundTrace;
 
 	Vector3 CircleOffset;
-	Vector3 TargetPosition;
+	public Vector3 TargetPosition;
 	Vector3 SchwebeMittelPunkt;
 	float SchwebeDistance = 25;
 	float SchwebeFrequenz = 4f;
@@ -32,6 +32,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	float AttackCharge = 0;
 
+	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	TimeUntil UntilNextIdleSound;
 	Random random;
@@ -166,7 +167,13 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 			// STAGGERED
 			case VampireState.Staggered:
 				StateDebugText.Text = "STAGGERED";
+				
+				BloodEmitter.Enabled = false;
 
+				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo( TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap( 0, 5000, 1, 3 ) );
+				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+
+				if (UntilKnockBack) { CurrentState = VampireState.Moving; }
 				break;
 		}
 

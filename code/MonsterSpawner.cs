@@ -1,8 +1,10 @@
 using Sandbox;
 using System;
+using static HealthSystem;
 
-public sealed class MonsterSpawner : Component
+public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 {
+	[Property] public LineRenderer LineRenderer; 
 	[Property] public GameObject MonsterPrefab; // Wird von MonsterManager gepassed
 	public float MonsterSpawnStartDelay = 1f;
 	public float MonsterSpawnCooldown = 1f;
@@ -11,9 +13,21 @@ public sealed class MonsterSpawner : Component
 
 	List<GameObject> SpawnedMonsters;
 
-
 	TimeUntil UntilNextSpawn;
 	Random random;
+
+	void IHealthEvent.OnDeath()
+	{
+		SpawnedMonsters.RemoveAll( x => !x.IsValid );
+		foreach (var monster in SpawnedMonsters)
+		{
+			if ( monster == null ) { return; }
+			// HealthSystem holen, wenn nicht da aus Children holen und damagen
+			HealthSystem healthSystem = monster.GetComponent<HealthSystem>();
+			if ( healthSystem != null ) healthSystem.Damage( 500 );
+			else { monster.GetComponentInChildren<HealthSystem>().Damage( 500 ); }
+		}
+	}
 
 	protected override void OnStart()
 	{

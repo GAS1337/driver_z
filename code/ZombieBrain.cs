@@ -56,9 +56,10 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	void IHealthEvent.OnDeath()
 	{
 		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, WorldScale );
-		foreach (GameObject child in _deadClone.Children ) 
+		foreach (GameObject child in _deadClone.Children )
 		{
-			child.GetComponent<Rigidbody>().ApplyImpulse( Body.Velocity + (child.WorldPosition - GameObject.WorldPosition).Normal * 1000 );
+			child.GetComponent<Rigidbody>().Velocity = Body.Velocity;
+			child.GetComponent<Rigidbody>().ApplyImpulse( (child.WorldPosition - GameObject.WorldPosition).Normal * 1000 );
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
@@ -293,7 +294,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			{ 
 				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 300000 );
 				attackTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity 
-					= attackTrace.GameObject.WorldRotation.Forward * 300 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
+					= attackTrace.GameObject.WorldRotation.Forward * attackTrace.GameObject.GetComponent<Rigidbody>().Mass * 5 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
 			}
 		}
 

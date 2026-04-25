@@ -24,6 +24,8 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		
 		// Damage
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
+		// Damage MonsterSpawner
+		if ( other.GetComponent<MonsterSpawner>() != null ) other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 5000) );
 
 		Sound.Play( "sounds/bullet-impact-flesh.sound", WorldPosition);
 		if ( other.Tags.Has( "cow" ) ) 

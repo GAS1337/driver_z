@@ -6,7 +6,7 @@
     "Name": "bullethole",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "1,1,1",
+    "Scale": "2,2,2",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -23,32 +23,7 @@
         "__version": 3,
         "AttenuationAngle": 0,
         "ColorMix": 1,
-        "ColorTint": {
-          "Type": "Constant",
-          "Evaluation": "Life",
-          "GradientA": {
-            "blend": "Linear",
-            "color": [
-              {
-                "t": 0.5,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "GradientB": {
-            "blend": "Linear",
-            "color": [
-              {
-                "t": 0.5,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "ConstantA": "1,1,1,1",
-          "ConstantB": "1,1,1,1"
-        },
+        "ColorTint": "0,0,0,1",
         "Decals": [
           "decals/bullethole.decal"
         ],
@@ -77,7 +52,7 @@
       {
         "__type": "TemporaryEffect",
         "__guid": "afc38f87-2122-4ca3-aa6c-32618a7ab51d",
-        "__enabled": true,
+        "__enabled": false,
         "Flags": 0,
         "BecomeOrphan": false,
         "DestroyAfterSeconds": 5,
@@ -87,7 +62,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "WaitForChildEffects": false
+        "WaitForChildEffects": true
       }
     ],
     "Children": [],
@@ -106,7 +81,9 @@
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []

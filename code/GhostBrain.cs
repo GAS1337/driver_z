@@ -22,7 +22,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	SceneTraceResult GroundTrace;
 
 	Vector3 HorizontalOffset;
-	Vector3 TargetPosition;
+	public Vector3 TargetPosition;
 	Vector3 SchwebeMittelPunkt;
 	float SchwebeDistance = 100;
 	float SchwebeFrequenz = 2f;
@@ -34,6 +34,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	TimeSince timeSinceLastAttack;
 	float AttackCharge = 0;
 
+	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	Random random;
 
@@ -158,6 +159,11 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			// STAGGERED
 			case GhostState.Staggered:
 				StateDebugText.Text = "STAGGERED";
+
+				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo( TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap( 0, 5000, 1, 3 ) );
+				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+
+				if ( UntilKnockBack ) { CurrentState = GhostState.Moving; }
 
 				break;
 		}

@@ -20,6 +20,12 @@
         "__guid": "9c60fded-5a65-4d82-8787-3d7eae97769f",
         "__enabled": true,
         "Flags": 0,
+        "LineRenderer": {
+          "_type": "component",
+          "component_id": "a336f4c6-87ef-476f-b08a-093bf344f53f",
+          "go": "41cc3270-ffca-4c3e-9a83-058eb4014968",
+          "component_type": "LineRenderer"
+        },
         "MonsterPrefab": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -40,7 +46,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "SetHealth": 100
+        "SetHealth": 2500
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -346,31 +352,22 @@
         "__PrefabInstancePatch": {
           "AddedObjects": [],
           "RemovedObjects": [],
-          "PropertyOverrides": [
-            {
-              "Target": {
-                "Type": "Component",
-                "IdValue": "4c88c4cb-51ec-4419-a68d-046f9eeccf3a"
-              },
-              "Property": "DestroyAfterSeconds",
-              "Value": 0.5
-            }
-          ],
+          "PropertyOverrides": [],
           "MovedObjects": []
         },
         "__PrefabIdToInstanceId": {
           "7463dcb4-7f57-4f88-8fa4-c4f1265d7a46": "164b213e-618b-4f75-ba46-0b02bfa7b1d9",
-          "4c88c4cb-51ec-4419-a68d-046f9eeccf3a": "a2062085-5e7f-4807-bc28-36b0f0c8871e",
-          "3144dffc-b8f7-4dc8-84fd-2953278ad9b7": "0fad0c8d-c58d-4cb1-810e-18757d998697",
-          "03bed987-7334-4f06-a746-a97e4eb74945": "e1cb3d53-80b9-4884-9450-b1d8237cae49",
-          "5def2f40-79bb-484e-864a-418f2b31a645": "3046abc6-a4d7-4fb6-9bca-32fc83de4557",
-          "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9": "06ae2bf8-740b-46e7-b797-ed45df6cdc2a",
-          "6f968944-5a99-43b1-9435-f3a6bc64122e": "ec6d4245-a7fa-4019-acfe-28a0a02d8fc9",
-          "ce989443-a9ed-4512-8716-3a178c3e5e8c": "4bf4d7f1-995c-4154-9a13-899f482b58f8",
-          "b7982f19-bf2d-4155-a088-15d48cdd8d27": "88e12663-5653-4000-ab5e-9129466ce068",
-          "76103080-c275-4df5-b348-70dfd367bac4": "47364929-cb2f-4aba-9e45-21953f341bae",
-          "e45b4fe2-36c2-4b9e-9c0c-73dcf073e4ee": "6e3d470a-ce29-4c5f-9779-f58a7210398e",
-          "db2463af-0dc1-448a-bc57-482ae26ea015": "10a2c273-86df-4d94-96a6-dcd0b045625e"
+          "4c88c4cb-51ec-4419-a68d-046f9eeccf3a": "21581105-778a-4ebd-b8fc-3f95d2dc3198",
+          "3144dffc-b8f7-4dc8-84fd-2953278ad9b7": "e04743f0-b0f5-4643-abc8-1b4a2fa888bf",
+          "03bed987-7334-4f06-a746-a97e4eb74945": "a59c46e7-e3b9-4f66-88bc-f90523c875ef",
+          "5def2f40-79bb-484e-864a-418f2b31a645": "05a7082c-89f4-46cb-807a-a7cc33e7d398",
+          "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9": "2e811a4d-e533-49dd-bd1d-7500fb618f09",
+          "6f968944-5a99-43b1-9435-f3a6bc64122e": "35b1dd05-ea0d-4a16-aa8d-60f5fc1f20e5",
+          "ce989443-a9ed-4512-8716-3a178c3e5e8c": "460a8cd2-21db-452b-bd84-e93f1b29aa5a",
+          "b7982f19-bf2d-4155-a088-15d48cdd8d27": "286ad85a-fdb8-47f7-a04a-919446023899",
+          "76103080-c275-4df5-b348-70dfd367bac4": "bab20414-4f9c-42fe-b3c5-fdb73b0f148e",
+          "e45b4fe2-36c2-4b9e-9c0c-73dcf073e4ee": "b0e0d70b-ff08-44af-8be5-e514c170aa0e",
+          "db2463af-0dc1-448a-bc57-482ae26ea015": "c5d3ffdd-387f-4a8b-9c66-43743751cd38"
         }
       }
     ],
