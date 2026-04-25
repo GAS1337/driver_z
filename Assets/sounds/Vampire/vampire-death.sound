@@ -5,7 +5,9 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/vampire/827665__qubodup__strange-ability-echo.vsnd"
+    "sounds/vampire/flutter2megamixchirping.vsnd",
+    "sounds/vampire/flutter2megamixdoublesqueak.vsnd",
+    "sounds/vampire/flutter2megamixsolosqueak.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
