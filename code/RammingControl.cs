@@ -22,6 +22,7 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		// Apply Impulse and Damage to Enemy
 		if ( other.GetComponent<Rigidbody>() != null ) other.GetComponent<Rigidbody>().ApplyImpulse(Vector3.Up * CarBody.Velocity.Length.Remap( 0, 4000, 0, 100000 ) );
 		
+		// Damage
 		other.GetComponent<HealthSystem>().Damage( CarBody.Velocity.Length.Remap(0, 4000, 0, 250) );
 
 		Sound.Play( "sounds/bullet-impact-flesh.sound", WorldPosition);

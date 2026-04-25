@@ -1,0 +1,372 @@
+{
+  "RootObject": {
+    "__guid": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "monsterspawner",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "5,5,5",
+    "Tags": "enemy",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "MonsterSpawner",
+        "__guid": "9c60fded-5a65-4d82-8787-3d7eae97769f",
+        "__enabled": true,
+        "Flags": 0,
+        "MonsterPrefab": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
+        "__type": "HealthSystem",
+        "__guid": "e0df7224-062f-4712-bd11-e8fe7b58ae53",
+        "__enabled": true,
+        "Flags": 0,
+        "HealthbarRenderer": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "SetHealth": 100
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "be0f85d9-3854-415e-b919-d60ddd6814ed",
+        "__enabled": true,
+        "Flags": 0,
+        "ColliderFlags": 0,
+        "Elasticity": null,
+        "Friction": null,
+        "IsTrigger": false,
+        "Model": "models/graveyard kit/gravestone-roof.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Static": true,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "8e15c5d5-7490-4338-b3ea-8aa591723a5f",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Model",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "48374d5f-c6af-4e79-92e4-6f4cf7cc73be",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": "shader/scanner.vmat",
+            "Materials": null,
+            "Model": "models/graveyard kit/gravestone-roof.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "100,100,100,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "41cc3270-ffca-4c3e-9a83-058eb4014968",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Line",
+        "Position": "1.60000002,-0.160135478,35.2000046",
+        "Rotation": "8.04662704E-07,0,0,1.00000012",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.LineRenderer",
+            "__guid": "a336f4c6-87ef-476f-b08a-093bf344f53f",
+            "__enabled": false,
+            "Flags": 0,
+            "Additive": false,
+            "AutoCalculateNormals": true,
+            "CastShadows": true,
+            "Color": {
+              "blend": "Linear",
+              "color": [
+                {
+                  "t": 0.44537815,
+                  "c": "2.16667,0,10,1"
+                }
+              ],
+              "alpha": []
+            },
+            "CylinderSegments": 12,
+            "DepthFeather": 0,
+            "EndCap": "Rounded",
+            "Face": "Camera",
+            "FogStrength": 0,
+            "Lighting": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Opaque": true,
+            "Points": [
+              {
+                "_type": "gameobject",
+                "go": "d0721b92-a63f-4ba7-aaa4-190628c3d289"
+              },
+              {
+                "_type": "gameobject",
+                "go": "ee212a72-44be-4509-b323-11ac1435c2c2"
+              },
+              {
+                "_type": "gameobject",
+                "go": "c582d33a-7e65-4f03-a7f3-be7efdc8cb53"
+              },
+              {
+                "_type": "gameobject",
+                "go": "c8eaa04b-6c94-479b-9e0f-8152ca024069"
+              },
+              {
+                "_type": "gameobject",
+                "go": "ac1c1466-bd16-44dc-950f-148b34fe9717"
+              },
+              {
+                "_type": "gameobject",
+                "go": "0b1cc28d-8dd8-46ee-9974-751811cb7940"
+              }
+            ],
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "SplineBias": 0,
+            "SplineContinuity": 0,
+            "SplineInterpolation": 32,
+            "SplineTension": 0,
+            "StartCap": "Rounded",
+            "Texturing": {
+              "Texture": null,
+              "Material": null,
+              "WorldSpace": true,
+              "UnitsPerTexture": 10,
+              "Scale": 1,
+              "Offset": 0,
+              "Scroll": 0,
+              "FilterMode": "Anisotropic",
+              "TextureAddressMode": "Wrap",
+              "Clamp": false
+            },
+            "UseVectorPoints": false,
+            "VectorPoints": [],
+            "Width": {
+              "rangey": "0,10",
+              "frames": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ]
+            },
+            "Wireframe": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "d0721b92-a63f-4ba7-aaa4-190628c3d289",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 1",
+            "Position": "11.1999998,0,36.7999992",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "ee212a72-44be-4509-b323-11ac1435c2c2",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 2",
+            "Position": "8,-19.2000008,36.7999992",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "c582d33a-7e65-4f03-a7f3-be7efdc8cb53",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 3",
+            "Position": "-11.1999998,-17.6000004,36.7999992",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "c8eaa04b-6c94-479b-9e0f-8152ca024069",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 4",
+            "Position": "-12.8000002,17.6000004,36.8000031",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "ac1c1466-bd16-44dc-950f-148b34fe9717",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 5",
+            "Position": "8,20.7999992,36.7999992",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "0b1cc28d-8dd8-46ee-9974-751811cb7940",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 6",
+            "Position": "11.1999998,0,36.7999992",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

@@ -1,0 +1,81 @@
+{
+  "IsSubgraph": false,
+  "Path": "shader/scannergraph.shdrgrph",
+  "Model": null,
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "348,-72",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/graveyard kit colormap.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": null,
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "1",
+      "Position": "-120,-168",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "2",
+      "Position": "-348,-144",
+      "HandleOffsets": {}
+    }
+  ]
+}

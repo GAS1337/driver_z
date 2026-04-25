@@ -1,6 +1,5 @@
 using Sandbox;
 using System;
-using System.ComponentModel;
 
 public sealed class MonsterSpawner : Component
 {
@@ -46,7 +45,7 @@ public sealed class MonsterSpawner : Component
 	void SpawnMonster()
 	{
 		// Particle Effekt, Sound?
-		GameObject currentMonster = MonsterPrefab.Clone( WorldPosition, WorldRotation, Vector3.One * MonsterScaleFactor * random.Float(0.9f, 1.1f) );
+		GameObject currentMonster = MonsterPrefab.Clone( WorldPosition + (Vector3)random.VectorInCircle() * random.Int(200, 500), WorldRotation, Vector3.One * MonsterScaleFactor * random.Float(0.9f, 1.1f) );
 		SpawnedMonsters.Add(currentMonster);
 	}
 }

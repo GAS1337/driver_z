@@ -487,6 +487,95 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "3eec6e02-1576-4632-9f76-d412c0c63709",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Trail",
+            "Position": "-14.3999996,0,19.1999989",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.TrailRenderer",
+                "__guid": "a67916a5-907e-45da-b988-5c2f0c9fc4f5",
+                "__enabled": true,
+                "Flags": 0,
+                "BlendMode": "Normal",
+                "CastShadows": false,
+                "Color": {
+                  "blend": "Linear",
+                  "color": [
+                    {
+                      "t": 0.5273109,
+                      "c": "1,0,0,1"
+                    }
+                  ],
+                  "alpha": [
+                    {
+                      "t": 0,
+                      "a": 1
+                    },
+                    {
+                      "t": 1,
+                      "a": 0
+                    }
+                  ]
+                },
+                "Emitting": true,
+                "Face": "Normal",
+                "LifeTime": 0.5,
+                "MaxPoints": 64,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Opaque": false,
+                "PointDistance": 2,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "Texturing": {
+                  "Texture": null,
+                  "Material": null,
+                  "WorldSpace": true,
+                  "UnitsPerTexture": 10,
+                  "Scale": 1,
+                  "Offset": 0,
+                  "Scroll": 0,
+                  "FilterMode": "Anisotropic",
+                  "TextureAddressMode": "Wrap",
+                  "Clamp": false
+                },
+                "Width": {
+                  "rangey": "0,25",
+                  "frames": [
+                    {
+                      "x": 0.5,
+                      "y": 5,
+                      "in": 0,
+                      "out": 0,
+                      "mode": "Mirrored"
+                    }
+                  ]
+                },
+                "Wireframe": false
+              }
+            ],
+            "Children": []
           }
         ]
       }

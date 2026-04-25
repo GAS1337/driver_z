@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shader/scanner.shader"
+
+	//---- Albedo ----
+	ColorTexture "materials/graveyard kit colormap.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

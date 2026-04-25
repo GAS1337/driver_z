@@ -27,7 +27,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	float SchwebeFrequenz = 4f;
 
 	Vector3 IdleKreisPunkt;
-	float IdleKreisRadius = 500f;
+	float IdleKreisRadius = 1000f;
 	float IdleKreisAngle = 0f;
 
 	float AttackCharge = 0;
@@ -68,7 +68,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 		SchwebeFrequenz += random.Float( -0.1f, 0.1f );
 		GameObject.WorldPosition = SchwebeMittelPunkt;
 
-		IdleKreisPunkt = WorldPosition;
+		IdleKreisPunkt = WorldPosition.WithZ( GroundTrace.EndPosition.z ) + (Vector3)random.VectorInCircle( 1 ).Normal * random.Int( 300, 500 );
 	}
 
 	protected override void OnFixedUpdate()
@@ -101,20 +101,26 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 				}
 
 				// Wenn Vampir weiter als der Radius * 1.5f vom Punkt entfernt ist soll er einen neuen zufälligen finden
-				if ((WorldPosition - IdleKreisPunkt).Length > IdleKreisRadius * 1.5f)
+				if ((WorldPosition.WithZ( 0 ) - IdleKreisPunkt.WithZ( 0 )).Length > IdleKreisRadius * 1.5f )
 				{
-					IdleKreisPunkt = WorldPosition.WithZ(0) + (Vector3)random.VectorInCircle(1).Normal * random.Int(100, 300);
+					IdleKreisPunkt = WorldPosition.WithZ(GroundTrace.EndPosition.z) + (Vector3)random.VectorInCircle(1).Normal * random.Int(300, 500);
 				}
 
 				// Winkel un damit Koordinaten vom aufm Kreis berechnen
-				IdleKreisAngle += Time.Delta;
+				IdleKreisAngle += Time.Delta * 0.5f; // * speed
 				float x = MathF.Cos(IdleKreisAngle);
 				float y = MathF.Sin(IdleKreisAngle);
 
 				// TargetPosition aus IdleKreisPunkt, Koordinaten und height berechnen, SchwebeMittelPunkt zu TargetPos LERPen
 				TargetPosition = IdleKreisPunkt + new Vector3(x, y, 0).Normal * IdleKreisRadius + hoverHeight;
 				SchwebeMittelPunkt = SchwebeMittelPunkt.LerpTo(TargetPosition, Time.Delta * (TargetPosition - SchwebeMittelPunkt).Length.Remap(0, 5000, 1, 3));
-
+				
+				if ( DebugMode )
+				{
+					DebugOverlay.Sphere( new Sphere( TargetPosition, 16 ), Color.Red );
+					DebugOverlay.Sphere( new Sphere( IdleKreisPunkt.WithZ( GroundTrace.EndPosition.z ), 16 ), Color.Blue );
+				}
+				
 				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
 				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
 				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);

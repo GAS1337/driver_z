@@ -1,7 +1,6 @@
 using Sandbox;
 using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 public sealed class MonsterManager : Component
 {
@@ -10,9 +9,11 @@ public sealed class MonsterManager : Component
     [Property] GameObject GhostPrefab;
     [Property] GameObject VampirePrefab;
 
-    Curve ZombieCurve;
-    Curve GhostCurve;
-    Curve VampireCurve;
+	[Property] BBox SpawnArea;
+
+	[Property] Curve ZombieCurve;
+    [Property] Curve GhostCurve;
+    [Property] Curve VampireCurve;
     float TotalSpawnerLimit;
 
     List<GameObject> ActiveZombieSpawner;
@@ -39,13 +40,13 @@ public sealed class MonsterManager : Component
 
     protected override void OnFixedUpdate()
     {
-        // Listen aufräumen bevor neue Spawner gecloned werden
-        if (UntilNextClone)
-        {
-            ActiveZombieSpawner.RemoveAll( x => !x.IsValid );
-            ActiveGhostSpawner.RemoveAll( x => !x.IsValid );
-            ActiveVampireSpawner.RemoveAll( x => !x.IsValid );
-        }
+		DebugOverlay.Box( SpawnArea, Color.Green );
+		// Listen aufräumen bevor neue Spawner gecloned werden
+
+		ActiveZombieSpawner.RemoveAll( x => !x.IsValid );
+        ActiveGhostSpawner.RemoveAll( x => !x.IsValid );
+        ActiveVampireSpawner.RemoveAll( x => !x.IsValid );
+
 
         int GesamtzahlAktiveSpawner = ActiveZombieSpawner.Count 
             + ActiveGhostSpawner.Count 
@@ -54,7 +55,9 @@ public sealed class MonsterManager : Component
         TotalSpawnerLimit = ZombieCurve.Evaluate(SinceGameStart / 60) 
             + GhostCurve.Evaluate(SinceGameStart / 60) 
             + VampireCurve.Evaluate(SinceGameStart / 60);
-        
+
+		if (GesamtzahlAktiveSpawner >= TotalSpawnerLimit) { UntilNextClone = CloneFrequenz; }
+
         // Wenn das Limit nicht auschgeschöpft ist und UntilNextClone, dann im Verhältnis niedrigsten vorhandenen Spawner clonen
         if ((float)GesamtzahlAktiveSpawner < TotalSpawnerLimit && UntilNextClone)
         {
@@ -95,14 +98,41 @@ public sealed class MonsterManager : Component
 
     void CloneSpawner(GameObject prefab, int indexCase)
     {
-        // Scale? Spawnfreq? Spawnanzahl?
+		// Scale? Spawnfreq? Spawnanzahl?
 
+		// Valid Spawnpos check
+		Vector3 possibleSpawnPosition = SpawnArea.RandomPointInside;
 
+		SceneTraceResult spawnPosTrace = Scene.Trace.Sphere(300, possibleSpawnPosition, possibleSpawnPosition + Vector3.Down * 1000)
+			.WithoutTags("world", "enemy")
+			.Run();
 
-        GameObject newSpawner = MonsterSpawnerPrefab.Clone();
+		while ( spawnPosTrace.Hit ) 
+		{
+			possibleSpawnPosition = SpawnArea.RandomPointInside;
+
+			spawnPosTrace = Scene.Trace.Sphere( 300, possibleSpawnPosition, possibleSpawnPosition + Vector3.Down * 1000 )
+				.IgnoreGameObjectHierarchy( GameObject )
+				.WithoutTags( "World", "enemy" )
+				.Run();
+			
+			DebugOverlay.Trace(spawnPosTrace);
+			Log.Info( "Spawnpos trace hit, trying new position");
+		}
+
+		spawnPosTrace = Scene.Trace.Ray( possibleSpawnPosition, possibleSpawnPosition + Vector3.Down * 1000 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithTag( "World" )
+			.Run();
+		Vector3 actualSpawnPosition = possibleSpawnPosition.WithZ(spawnPosTrace.EndPosition.z);
+
+		GameObject newSpawner = MonsterSpawnerPrefab.Clone(actualSpawnPosition, WorldRotation.Angles().WithYaw(random.Int(0, 359)), Vector3.One);
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
 
-        switch (indexCase)
+
+		Log.Info( "Cloning spawner for prefab: " + prefab.Name + " at " + newSpawner.WorldPosition );
+
+		switch (indexCase)
         {
             default:
                 Log.Error("Monster Manager: CloneSpawner() DEFAULT");

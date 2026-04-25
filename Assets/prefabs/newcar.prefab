@@ -389,7 +389,7 @@
           {
             "__type": "Sandbox.MotionBlur",
             "__guid": "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
