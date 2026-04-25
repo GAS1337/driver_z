@@ -54,7 +54,7 @@
         "__guid": "cae25574-1711-41ac-801f-0392312233ee",
         "__enabled": false,
         "Flags": 0,
-        "Center": "2.273502,-0.01997375,173.9372",
+        "Center": "2.27350211,-0.0199737493,173.937195",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
@@ -157,6 +157,7 @@
           "_type": "gameobject",
           "prefab": "prefabs/deadzombie.prefab"
         },
+        "DebugMode": false,
         "LeapCooldown": 8,
         "LeapFlightTime": 2,
         "LeapMaxHeightOffset": 400,
@@ -274,8 +275,8 @@
         "__version": 2,
         "Flags": 0,
         "Name": "StateDebug",
-        "Position": "60,0,126.6667",
-        "Rotation": "0,0,1,0.0000002682209",
+        "Position": "60,0,126.666702",
+        "Rotation": "0,0,1,2.68220901E-07",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -353,7 +354,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "Burst",
-        "Position": "85.33334,0,0",
+        "Position": "85.3333435,0,0",
         "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "particles",
@@ -647,6 +648,207 @@
           }
         ],
         "Children": []
+      },
+      {
+        "__guid": "fe1a61db-7cde-474d-b035-f9cbb21676dd",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Line",
+        "Position": "44,-22,203",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.LineRenderer",
+            "__guid": "ce5b0d5c-6447-4360-8139-1663a788cb72",
+            "__enabled": true,
+            "Flags": 0,
+            "Additive": false,
+            "AutoCalculateNormals": true,
+            "CastShadows": true,
+            "Color": {
+              "blend": "Linear",
+              "color": [
+                {
+                  "t": 0,
+                  "c": "0,15,0,1"
+                },
+                {
+                  "t": 1,
+                  "c": "0,15,0,1"
+                }
+              ],
+              "alpha": [
+                {
+                  "t": 0,
+                  "a": 1
+                },
+                {
+                  "t": 0.31932774,
+                  "a": 0
+                },
+                {
+                  "t": 0.6680672,
+                  "a": 0
+                },
+                {
+                  "t": 1,
+                  "a": 1
+                }
+              ]
+            },
+            "CylinderSegments": 12,
+            "DepthFeather": 0,
+            "EndCap": "Rounded",
+            "Face": "Camera",
+            "FogStrength": 1,
+            "Lighting": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Opaque": false,
+            "Points": [
+              {
+                "_type": "gameobject",
+                "go": "f6468f09-9775-4cf9-a5f8-e6eabd7a0cad"
+              },
+              {
+                "_type": "gameobject",
+                "go": "978f9949-de87-4a92-bf31-1a347f35adfa"
+              },
+              {
+                "_type": "gameobject",
+                "go": "1149416b-a6a8-4d67-83b6-7e94493dd744"
+              },
+              {
+                "_type": "gameobject",
+                "go": "c6418662-079e-4cd6-b016-3784379cddbf"
+              }
+            ],
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "SplineBias": 0,
+            "SplineContinuity": 0,
+            "SplineInterpolation": 8,
+            "SplineTension": 0,
+            "StartCap": "Rounded",
+            "Texturing": {
+              "Texture": null,
+              "Material": null,
+              "WorldSpace": true,
+              "UnitsPerTexture": 10,
+              "Scale": 1,
+              "Offset": 0,
+              "Scroll": 0,
+              "FilterMode": "Anisotropic",
+              "TextureAddressMode": "Wrap",
+              "Clamp": false
+            },
+            "UseVectorPoints": false,
+            "VectorPoints": [],
+            "Width": {
+              "rangey": "0,7",
+              "frames": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ]
+            },
+            "Wireframe": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "f6468f09-9775-4cf9-a5f8-e6eabd7a0cad",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 1",
+            "Position": "1,-2,26",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "978f9949-de87-4a92-bf31-1a347f35adfa",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 2",
+            "Position": "-1,17,26",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "1149416b-a6a8-4d67-83b6-7e94493dd744",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 3",
+            "Position": "5,19,26",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          },
+          {
+            "__guid": "c6418662-079e-4cd6-b016-3784379cddbf",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Point 4",
+            "Position": "1,45,26",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [],
+            "Children": []
+          }
+        ]
       }
     ],
     "__properties": {
@@ -665,6 +867,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },
