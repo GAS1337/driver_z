@@ -191,7 +191,70 @@
       "__version": 2,
       "__Prefab": "prefabs/newcar.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "aaa474c2-e5c3-41b5-beb3-8bd441ed52df"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "23d4cf70-a2a0-4333-b62b-d29218488362"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Voxelizer",
+              "__guid": "aaa474c2-e5c3-41b5-beb3-8bd441ed52df",
+              "__enabled": false,
+              "Flags": 0,
+              "EdgeDarkening": 0.5,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "VoxelSize": 100
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "0f93f4ba-b73f-45c9-8408-0ae5e492c5cd"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "23d4cf70-a2a0-4333-b62b-d29218488362"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "aaa474c2-e5c3-41b5-beb3-8bd441ed52df"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.BlitOverlay",
+              "__guid": "0f93f4ba-b73f-45c9-8408-0ae5e492c5cd",
+              "__enabled": false,
+              "Flags": 0,
+              "Blend": 0.1,
+              "BlendMode": "Normal",
+              "Material": "shader/pp_voxel.vmat",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Order": 0
+            }
+          }
+        ],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
@@ -201,6 +264,14 @@
             },
             "Property": "Position",
             "Value": "-3376,288,248"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "23d4cf70-a2a0-4333-b62b-d29218488362"
+            },
+            "Property": "Rotation",
+            "Value": "-0.0134478407,0.000482106814,0.999267519,0.0358238667"
           }
         ],
         "MovedObjects": []
@@ -14565,6 +14636,24 @@
         "3778c1e5-f28f-4283-ac6f-2cbc39687afe": "fb9cc777-6dd4-4578-a7f3-a581e819206c",
         "fdab2a37-0463-4595-9aa6-546f2147e748": "58478166-ca5c-475c-96a6-89255e0d3905"
       }
+    },
+    {
+      "__guid": "1aea1160-45cd-456f-9a82-e99be3c5d2fd",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-2289.92798,1246.95203,1063.93225",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
     }
   ],
   "SceneProperties": {

@@ -80,8 +80,9 @@ PS
 
 		
 		float l_0 = Depth::Get( i.vPositionSs.xy );
+		float l_1 = Depth::GetLinear( i.vPositionSs.xy );
 		
 
-		return float4( float3( l_0, l_0, l_0 ), 1 );
+		return float4( float3( l_0, l_0, l_0 ), l_1 );
 	}
 }
