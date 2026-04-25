@@ -98,7 +98,7 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": null,
+                "MaterialOverride": "shader/scanner-pulse-ressource-bits.vmat",
                 "Materials": null,
                 "Model": "models/kaykit_resourcebits_1.0_free/parts_pile_medium.vmdl",
                 "OnComponentDestroy": null,
@@ -138,6 +138,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

@@ -85,7 +85,7 @@
         "Flags": 0,
         "Name": "Spot Light",
         "Position": "0,0,1000",
-        "Rotation": "0,0.7071068,0,0.7071068",
+        "Rotation": "0,0.707106829,0,0.707106829",
         "Scale": "2,2,2",
         "Tags": "light_spot,light",
         "Enabled": false,
@@ -127,7 +127,7 @@
         "Flags": 0,
         "Name": "Spray",
         "Position": "0,0,15",
-        "Rotation": "0,-0.7071068,0,0.7071068",
+        "Rotation": "0,-0.707106829,0,0.707106829",
         "Scale": "1,1,1",
         "Tags": "particles",
         "Enabled": true,
@@ -211,8 +211,8 @@
             "Gradient": {
               "Type": "Range",
               "Evaluation": "Particle",
-              "ConstantA": "1,0,0,1",
-              "ConstantB": "0,1,0,1"
+              "ConstantA": "1,0.66667,0,1",
+              "ConstantB": "0.66667,1,0,1"
             },
             "InitialVelocity": {
               "X": 0,
@@ -414,6 +414,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

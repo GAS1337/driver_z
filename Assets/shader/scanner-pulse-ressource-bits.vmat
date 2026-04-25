@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shader/scanner-pulse.shader"
+
+	//---- Albedo ----
+	ColorTexture "materials/resource_bits_texture.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

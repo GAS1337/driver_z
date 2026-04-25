@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Audio;
 using Sandbox.Modals;
 using System;
 using static HealthSystem;
@@ -128,10 +129,12 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		if ( overlay.IsOpen )
 		{
 			Scene.TimeScale = 0;
+			Mixer.Master.Volume = 0f;
 		}
 		else if ( GetComponent<HealthSystem>().CurrentHealth > 0 ) 
 		{ 
 			Scene.TimeScale = 1;
+			Mixer.Master.Volume = 1.0f;
 		}
 
 	}

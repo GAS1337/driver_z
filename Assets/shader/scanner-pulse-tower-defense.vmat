@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shader/scanner-pulse.shader"
+
+	//---- Albedo ----
+	ColorTexture "materials/tower defense kit colormap.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

@@ -1,7 +1,7 @@
 {
   "RootObject": {
     "__guid": "301a90a6-c6ae-4981-bd09-fb7a16dd8ce0",
-    "__version": 1,
+    "__version": 2,
     "Flags": 0,
     "Name": "tree-large",
     "Position": "0,0,0",
@@ -10,7 +10,7 @@
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
-    "NetworkInterpolation": true,
+    "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
     "OwnerTransfer": 1,
@@ -19,11 +19,12 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "fcfbc2cf-553e-40c4-b1f4-6942d98f3b84",
         "__enabled": true,
+        "Flags": 0,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
         "LodOverride": null,
         "MaterialGroup": null,
-        "MaterialOverride": null,
+        "MaterialOverride": "shader/windy-trees/windy-tree-city-suburban.vmat",
         "Materials": null,
         "Model": "models/city kit suburban/tree-large.vmdl",
         "OnComponentDestroy": null,
@@ -45,7 +46,8 @@
         "__type": "Sandbox.BoxCollider",
         "__guid": "7c97833d-1381-4fe4-9ef3-fca7267027c8",
         "__enabled": true,
-        "Center": "-0.000001430511,0.0000007152557,36.99998",
+        "Flags": 0,
+        "Center": "-1.43051102E-06,7.1525568E-07,36.9999809",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
@@ -61,7 +63,7 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "5.999997,5.999999,76.00002",
+        "Scale": "5.99999714,5.99999905,76.0000229",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
@@ -77,13 +79,15 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []
