@@ -134,7 +134,7 @@
           {
             "__type": "Sandbox.LineRenderer",
             "__guid": "a336f4c6-87ef-476f-b08a-093bf344f53f",
-            "__enabled": false,
+            "__enabled": true,
             "Flags": 0,
             "Additive": false,
             "AutoCalculateNormals": true,
@@ -234,7 +234,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 1",
-            "Position": "11.1999998,0,36.7999992",
+            "Position": "11.1999998,-4.63992167,12.8000031",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -252,7 +252,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 2",
-            "Position": "8,-19.2000008,36.7999992",
+            "Position": "7.99999762,-17.4399204,1.60000014",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -270,7 +270,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 3",
-            "Position": "-11.1999998,-17.6000004,36.7999992",
+            "Position": "-11.1999998,-17.5999985,-2.19345088E-06",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -288,7 +288,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 4",
-            "Position": "-12.8000002,17.6000004,36.8000031",
+            "Position": "-12.8000002,17.5999947,-11.1999989",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -306,7 +306,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 5",
-            "Position": "8,20.7999992,36.7999992",
+            "Position": "7.99999762,20.7999973,-12.7999973",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -324,7 +324,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 6",
-            "Position": "11.1999998,0,36.7999992",
+            "Position": "11.1999998,-1.19209291E-08,-20.7999973",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -338,6 +338,40 @@
             "Children": []
           }
         ]
+      },
+      {
+        "__guid": "164b213e-618b-4f75-ba46-0b02bfa7b1d9",
+        "__version": 2,
+        "__Prefab": "prefabs/blitz.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "Component",
+                "IdValue": "4c88c4cb-51ec-4419-a68d-046f9eeccf3a"
+              },
+              "Property": "DestroyAfterSeconds",
+              "Value": 0.5
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "7463dcb4-7f57-4f88-8fa4-c4f1265d7a46": "164b213e-618b-4f75-ba46-0b02bfa7b1d9",
+          "4c88c4cb-51ec-4419-a68d-046f9eeccf3a": "a2062085-5e7f-4807-bc28-36b0f0c8871e",
+          "3144dffc-b8f7-4dc8-84fd-2953278ad9b7": "0fad0c8d-c58d-4cb1-810e-18757d998697",
+          "03bed987-7334-4f06-a746-a97e4eb74945": "e1cb3d53-80b9-4884-9450-b1d8237cae49",
+          "5def2f40-79bb-484e-864a-418f2b31a645": "3046abc6-a4d7-4fb6-9bca-32fc83de4557",
+          "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9": "06ae2bf8-740b-46e7-b797-ed45df6cdc2a",
+          "6f968944-5a99-43b1-9435-f3a6bc64122e": "ec6d4245-a7fa-4019-acfe-28a0a02d8fc9",
+          "ce989443-a9ed-4512-8716-3a178c3e5e8c": "4bf4d7f1-995c-4154-9a13-899f482b58f8",
+          "b7982f19-bf2d-4155-a088-15d48cdd8d27": "88e12663-5653-4000-ab5e-9129466ce068",
+          "76103080-c275-4df5-b348-70dfd367bac4": "47364929-cb2f-4aba-9e45-21953f341bae",
+          "e45b4fe2-36c2-4b9e-9c0c-73dcf073e4ee": "6e3d470a-ce29-4c5f-9779-f58a7210398e",
+          "db2463af-0dc1-448a-bc57-482ae26ea015": "10a2c273-86df-4d94-96a6-dcd0b045625e"
+        }
       }
     ],
     "__properties": {

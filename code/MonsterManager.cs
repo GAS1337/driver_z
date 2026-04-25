@@ -40,7 +40,7 @@ public sealed class MonsterManager : Component
 
     protected override void OnFixedUpdate()
     {
-		DebugOverlay.Box( SpawnArea, Color.Green );
+		// DebugOverlay.Box( SpawnArea, Color.Green );
 		// Listen aufräumen bevor neue Spawner gecloned werden
 
 		ActiveZombieSpawner.RemoveAll( x => !x.IsValid );
