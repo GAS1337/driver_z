@@ -3,10 +3,10 @@
     "__guid": "6c0be312-0e85-47a9-ad9a-8acd22c3f5cf",
     "__version": 2,
     "Flags": 0,
-    "Name": "tree creepier",
+    "Name": "tree creepier (8)",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "0.585365772,0.585365772,0.585365772",
+    "Scale": "5,5,5",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -64,7 +64,7 @@
         "OnTriggerExit": null,
         "RollingResistance": null,
         "Scale": "26,26,186",
-        "Static": false,
+        "Static": true,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
       }

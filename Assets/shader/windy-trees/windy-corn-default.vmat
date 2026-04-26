@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shader/windy-corn.shader"
+
+	//---- Albedo ----
+	ColorTexture "[0.164706 0.474510 0.235294 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

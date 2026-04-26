@@ -2,7 +2,7 @@
 
 Layer0
 {
-	shader "shader/windy-tree.shader"
+	shader "shader/windy-tree-no-noise.shader"
 
 	//---- Albedo ----
 	ColorTexture "materials/graveyard kit colormap.png"

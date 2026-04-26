@@ -3,10 +3,10 @@
     "__guid": "6d8dd960-be67-48c1-b226-733a9bb97f2a",
     "__version": 2,
     "Flags": 0,
-    "Name": "tree-large rounded",
+    "Name": "tree-large rounded (1)",
     "Position": "0,0,0",
-    "Rotation": "0,0,0,1",
-    "Scale": "0.5,0.5,0.5",
+    "Rotation": "-0.0334143899,0.0280380007,0.765315413,0.642175913",
+    "Scale": "3,3,3",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -40,18 +40,18 @@
           "AfterUILayer": false
         },
         "RenderType": "On",
-        "Tint": "1,1,1,1"
+        "Tint": "0.67442,0.67442,0.67442,1"
       },
       {
-        "__type": "Sandbox.BoxCollider",
-        "__guid": "8d858ede-4dcd-4017-88b7-b7d14fc16269",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "38966661-cb42-49a0-b5fd-37d3f6ad15f9",
         "__enabled": true,
         "Flags": 0,
-        "Center": "0,2.00000095,94",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
+        "Model": "models/coaster kit/tree-large.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -63,8 +63,7 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "22,22,202",
-        "Static": false,
+        "Static": true,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
       }

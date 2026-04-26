@@ -43,7 +43,7 @@ VS
 		
         // --- PARAMETER FÜR SANFTES BIEGEN (STAMM/HAUPT-SWAY) ---
         float3 windDirection = float3( 1.0f, 0.5f, 0.0f ); 
-        float windSpeed = 0.1f;        
+        float windSpeed = 0.15f;        
         float windFrequency = 0.00008f;  
         float swayAmplitude = 250.0f;   
 
