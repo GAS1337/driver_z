@@ -104,7 +104,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						ShootTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
 						ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.2f, ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.2f );
 
-						ShootTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += ShootTrace.Direction * 300;
+						ShootTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
 					}
 					else if ( ShootTrace.GameObject.GetComponent<GhostBrain>() != null )
@@ -112,7 +112,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						ShootTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
 						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0.2f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0.2f );
 
-						ShootTrace.GameObject.GetComponent<GhostBrain>().TargetPosition += ShootTrace.Direction * 300;
+						ShootTrace.GameObject.GetComponent<GhostBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
 					}
 
@@ -126,7 +126,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					// Partikel und Sound und bullethole für Gegner
-					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red; newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX(4);
+					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * 5; newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX(4);
 					newBulletSparkEnemy = BulletSparkEnemy.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 
 					Sound.Play( "sounds/bullet-impact-flesh.sound", ShootTrace.HitPosition );

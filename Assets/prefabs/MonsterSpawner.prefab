@@ -20,6 +20,10 @@
         "__guid": "9c60fded-5a65-4d82-8787-3d7eae97769f",
         "__enabled": true,
         "Flags": 0,
+        "DeadMonsterSpawner": {
+          "_type": "gameobject",
+          "prefab": "prefabs/dead-monsterspawner.prefab"
+        },
         "LineRenderer": {
           "_type": "component",
           "component_id": "a336f4c6-87ef-476f-b08a-093bf344f53f",

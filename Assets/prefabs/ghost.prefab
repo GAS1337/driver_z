@@ -77,6 +77,10 @@
             "__enabled": true,
             "Flags": 0,
             "AttackSound": "sounds/ghost/ghost-attack.sound",
+            "DeadGhost": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dead-ghost.prefab"
+            },
             "DeathSound": "sounds/ghost/ghost-death.sound",
             "DebugMode": false,
             "GhostBall": {

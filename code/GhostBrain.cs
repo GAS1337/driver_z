@@ -11,6 +11,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	GameObject Player;
 	Rigidbody PlayerBody;
 	[Property] GameObject GhostBall;
+	[Property] GameObject DeadGhost;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
 	[Property] SoundEvent AttackSound;
@@ -41,6 +42,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	void IHealthEvent.OnDeath()
 	{
 		Sound.Play(DeathSound, WorldPosition);
+		DeadGhost.Clone( WorldPosition + Vector3.Up * 100, GameObject.WorldRotation, GameObject.WorldScale );
 		GameObject.Parent.Destroy();
 	}
 

@@ -1,9 +1,11 @@
 using Sandbox;
 using System;
 using static HealthSystem;
+using static Sandbox.ModelPhysics;
 
 public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 {
+	[Property] GameObject DeadMonsterSpawner;
 	[Property] public LineRenderer LineRenderer; 
 	[Property] public GameObject MonsterPrefab; // Wird von MonsterManager gepassed
 	public float MonsterSpawnStartDelay = 1f;
@@ -26,6 +28,12 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 			HealthSystem healthSystem = monster.GetComponent<HealthSystem>();
 			if ( healthSystem != null ) healthSystem.Damage( 500 );
 			else { monster.GetComponentInChildren<HealthSystem>().Damage( 500 ); }
+		}
+		GameObject newDeadMonsterSpawner = DeadMonsterSpawner.Clone(WorldPosition + Vector3.Up, WorldRotation, WorldScale);
+		foreach ( GameObject child in newDeadMonsterSpawner.Children ) 
+		{
+			child.GetComponent<Rigidbody>().ApplyImpulse( (child.WorldPosition - GameObject.WorldPosition).Normal * 10 * child.GetComponent<Rigidbody>().Mass );
+			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5 ) );
 		}
 	}
 
