@@ -21,6 +21,7 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 	void IHealthEvent.OnDeath()
 	{
 		SpawnedMonsters.RemoveAll( x => !x.IsValid );
+		/* AUSGESCHALTET!!!! --------------
 		foreach (var monster in SpawnedMonsters)
 		{
 			if ( monster == null ) { return; }
@@ -28,11 +29,11 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 			HealthSystem healthSystem = monster.GetComponent<HealthSystem>();
 			if ( healthSystem != null ) healthSystem.Damage( 500 );
 			else { monster.GetComponentInChildren<HealthSystem>().Damage( 500 ); }
-		}
+		} */
 		GameObject newDeadMonsterSpawner = DeadMonsterSpawner.Clone(WorldPosition + Vector3.Up, WorldRotation, WorldScale);
 		foreach ( GameObject child in newDeadMonsterSpawner.Children ) 
 		{
-			child.GetComponent<Rigidbody>().ApplyImpulse( (child.WorldPosition - GameObject.WorldPosition).Normal * 10 * child.GetComponent<Rigidbody>().Mass );
+			child.GetComponent<Rigidbody>().ApplyImpulse( (child.WorldPosition - GameObject.WorldPosition).Normal * 3 * child.GetComponent<Rigidbody>().Mass );
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5 ) );
 		}
 	}

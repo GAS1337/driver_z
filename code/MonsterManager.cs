@@ -128,8 +128,8 @@ public sealed class MonsterManager : Component
 
 		GameObject newSpawner = MonsterSpawnerPrefab.Clone(actualSpawnPosition, WorldRotation.Angles().WithYaw(random.Int(0, 359)), Vector3.One);
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
-		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = 5;
-		newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(2, 4);
+		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = 15;
+		newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = 50;
 
 		Log.Info( "Cloning spawner for prefab: " + prefab.Name + " at " + newSpawner.WorldPosition );
 
