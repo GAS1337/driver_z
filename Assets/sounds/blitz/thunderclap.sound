@@ -1,0 +1,52 @@
+{
+  "UI": false,
+  "Volume": "1",
+  "Pitch": "1",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/kenney/ui/close_003.vsnd"
+  ],
+  "Occlusion": true,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "Distance": 27050,
+  "Falloff": [
+    {
+      "x": 0,
+      "y": 1,
+      "in": 0,
+      "out": -1.8,
+      "mode": "Mirrored"
+    },
+    {
+      "x": 0.253125,
+      "y": 0.43666673,
+      "in": 1.5687505,
+      "out": -1.5687505,
+      "mode": "Mirrored"
+    },
+    {
+      "x": 0.6015625,
+      "y": 0.22055554,
+      "in": 0.16,
+      "out": -0.16,
+      "mode": "Mirrored"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "in": 0,
+      "out": 0,
+      "mode": "Mirrored"
+    }
+  ],
+  "DefaultMixer": {
+    "Name": "game",
+    "Id": "db78c4e1-fd7c-4397-8205-7a223483f1c4"
+  },
+  "__references": [],
+  "__version": 1
+}

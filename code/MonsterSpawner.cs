@@ -18,6 +18,11 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 	TimeUntil UntilNextSpawn;
 	Random random;
 
+	public interface IMonsterSpawnerEvent : ISceneEvent<IMonsterSpawnerEvent>
+	{
+		void OnMonsterSpawn();
+	}
+
 	void IHealthEvent.OnDeath()
 	{
 		SpawnedMonsters.RemoveAll( x => !x.IsValid );
@@ -70,5 +75,6 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 		// Particle Effekt, Sound?
 		GameObject currentMonster = MonsterPrefab.Clone( WorldPosition + (Vector3)random.VectorInCircle() * random.Int(200, 500), WorldRotation, Vector3.One * MonsterScaleFactor * random.Float(0.9f, 1.1f) );
 		SpawnedMonsters.Add(currentMonster);
+		IMonsterSpawnerEvent.PostToGameObject( this.GameObject, x => x.OnMonsterSpawn() );
 	}
 }

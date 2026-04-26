@@ -41,6 +41,7 @@
           "go": "3144dffc-b8f7-4dc8-84fd-2953278ad9b7",
           "component_type": "LineRenderer"
         },
+        "MonsterSpawner": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -106,22 +107,10 @@
                 "_type": "gameobject",
                 "go": "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9"
               },
-              {
-                "_type": "gameobject",
-                "go": "6f968944-5a99-43b1-9435-f3a6bc64122e"
-              },
-              {
-                "_type": "gameobject",
-                "go": "ce989443-a9ed-4512-8716-3a178c3e5e8c"
-              },
-              {
-                "_type": "gameobject",
-                "go": "b7982f19-bf2d-4155-a088-15d48cdd8d27"
-              },
-              {
-                "_type": "gameobject",
-                "go": "76103080-c275-4df5-b348-70dfd367bac4"
-              }
+              null,
+              null,
+              null,
+              null
             ],
             "RenderOptions": {
               "GameLayer": true,
@@ -187,79 +176,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Point 2",
-            "Position": "-64,128,128",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [],
-            "Children": []
-          },
-          {
-            "__guid": "6f968944-5a99-43b1-9435-f3a6bc64122e",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Point 3",
-            "Position": "128,0,512",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [],
-            "Children": []
-          },
-          {
-            "__guid": "ce989443-a9ed-4512-8716-3a178c3e5e8c",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Point 4",
-            "Position": "-128,128,768",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [],
-            "Children": []
-          },
-          {
-            "__guid": "b7982f19-bf2d-4155-a088-15d48cdd8d27",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Point 5",
-            "Position": "128,0,1024",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [],
-            "Children": []
-          },
-          {
-            "__guid": "76103080-c275-4df5-b348-70dfd367bac4",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Point 6",
-            "Position": "-128,128,1280",
+            "Position": "0,0,1152",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
             "Tags": "",
@@ -279,7 +196,7 @@
         "__version": 2,
         "Flags": 0,
         "Name": "Smoke",
-        "Position": "-128,128,1536",
+        "Position": "0,0,1536",
         "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "particles",
@@ -303,13 +220,13 @@
                 {
                   "x": 0,
                   "y": 0,
-                  "in": -4.0000024,
-                  "out": 4.0000024,
+                  "in": -0.0405407,
+                  "out": 0.0405407,
                   "mode": "Mirrored"
                 },
                 {
-                  "x": 0.20812808,
-                  "y": 0.475,
+                  "x": 0.5,
+                  "y": 1,
                   "in": 0,
                   "out": 0,
                   "mode": "Mirrored"
@@ -356,7 +273,7 @@
             "FollowerPrefab": null,
             "FollowerPrefabChance": 1,
             "FollowerPrefabKill": true,
-            "Force": true,
+            "Force": false,
             "ForceDirection": "0,0,100",
             "ForceScale": 1,
             "ForceSpace": "World",
@@ -378,7 +295,7 @@
               "Constants": "5,8,0,0"
             },
             "LocalSpace": 0,
-            "MaxParticles": 5000,
+            "MaxParticles": 500,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -503,7 +420,7 @@
             "OnComponentUpdate": null,
             "OnEdge": false,
             "Radius": 100,
-            "Rate": 10,
+            "Rate": 2,
             "RateOverDistance": 0,
             "Velocity": 0
           }

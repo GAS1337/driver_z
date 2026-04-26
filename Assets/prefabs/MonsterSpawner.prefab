@@ -356,7 +356,21 @@
         "__PrefabInstancePatch": {
           "AddedObjects": [],
           "RemovedObjects": [],
-          "PropertyOverrides": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "Component",
+                "IdValue": "9508ecb6-b175-4052-8554-791ae8b65b03"
+              },
+              "Property": "MonsterSpawner",
+              "Value": {
+                "_type": "component",
+                "component_id": "9c60fded-5a65-4d82-8787-3d7eae97769f",
+                "go": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3",
+                "component_type": "MonsterSpawner"
+              }
+            }
+          ],
           "MovedObjects": []
         },
         "__PrefabIdToInstanceId": {
@@ -366,10 +380,6 @@
           "03bed987-7334-4f06-a746-a97e4eb74945": "a59c46e7-e3b9-4f66-88bc-f90523c875ef",
           "5def2f40-79bb-484e-864a-418f2b31a645": "05a7082c-89f4-46cb-807a-a7cc33e7d398",
           "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9": "2e811a4d-e533-49dd-bd1d-7500fb618f09",
-          "6f968944-5a99-43b1-9435-f3a6bc64122e": "35b1dd05-ea0d-4a16-aa8d-60f5fc1f20e5",
-          "ce989443-a9ed-4512-8716-3a178c3e5e8c": "460a8cd2-21db-452b-bd84-e93f1b29aa5a",
-          "b7982f19-bf2d-4155-a088-15d48cdd8d27": "286ad85a-fdb8-47f7-a04a-919446023899",
-          "76103080-c275-4df5-b348-70dfd367bac4": "bab20414-4f9c-42fe-b3c5-fdb73b0f148e",
           "9508ecb6-b175-4052-8554-791ae8b65b03": "d124dbac-496c-4af7-bd52-cb608b750c0a",
           "66ee8f6c-1295-45c8-9a7c-3be00124f9c7": "d20dfce7-3373-4c0a-bded-47ef8dae4f91",
           "386b92b5-0e0d-48e8-a56f-a9d2bf7da052": "8b1cd678-57ed-4637-905d-dcdc75e280c1",
