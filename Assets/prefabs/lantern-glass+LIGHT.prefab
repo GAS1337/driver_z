@@ -90,8 +90,8 @@
             "__guid": "24cc328c-ae05-4390-a4ec-75ff2c06f345",
             "__enabled": true,
             "Flags": 0,
-            "Attenuation": 4,
-            "FogMode": "Enabled",
+            "Attenuation": 1,
+            "FogMode": "WithoutShadows",
             "FogStrength": 1,
             "LightColor": "4.90078,5,2.02325,2",
             "OnComponentDestroy": null,
@@ -100,10 +100,10 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Radius": 2600,
+            "Radius": 800,
             "ShadowBias": 0.0005,
             "ShadowHardness": 1,
-            "Shadows": true
+            "Shadows": false
           }
         ],
         "Children": []

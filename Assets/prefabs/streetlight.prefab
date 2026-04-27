@@ -94,19 +94,19 @@
             "ConeInner": 15,
             "ConeOuter": 40,
             "Cookie": null,
-            "FogMode": "Enabled",
+            "FogMode": "WithoutShadows",
             "FogStrength": 1,
-            "LightColor": "91.373,98.039,100,1",
+            "LightColor": "456.865,490.195,500,1",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Radius": 6000,
+            "Radius": 800,
             "ShadowBias": 0.0005,
             "ShadowHardness": 0,
-            "Shadows": true
+            "Shadows": false
           }
         ],
         "Children": []

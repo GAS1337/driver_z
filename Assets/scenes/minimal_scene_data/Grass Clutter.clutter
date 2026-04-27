@@ -2,24 +2,10 @@
   "Entries": [
     {
       "Prefab": null,
-      "Model": "models/coaster kit/grass.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/coaster kit/grass.vmdl"
-    },
-    {
-      "Prefab": null,
       "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_1_c_singlesided_color1.vmdl",
       "Weight": 1,
       "HasAsset": true,
       "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_1_c_singlesided_color1.vmdl"
-    },
-    {
-      "Prefab": null,
-      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_1_d_color1.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_1_d_color1.vmdl"
     },
     {
       "Prefab": null,
@@ -30,13 +16,6 @@
     },
     {
       "Prefab": null,
-      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_a_color1.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_a_color1.vmdl"
-    },
-    {
-      "Prefab": null,
       "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_a_singlesided_color1.vmdl",
       "Weight": 1,
       "HasAsset": true,
@@ -44,24 +23,10 @@
     },
     {
       "Prefab": null,
-      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_b_color1.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_b_color1.vmdl"
-    },
-    {
-      "Prefab": null,
       "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_singlesided_color1.vmdl",
       "Weight": 1,
       "HasAsset": true,
       "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_singlesided_color1.vmdl"
-    },
-    {
-      "Prefab": null,
-      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_color1.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_c_color1.vmdl"
     },
     {
       "Prefab": null,
@@ -76,35 +41,14 @@
       "Weight": 1,
       "HasAsset": true,
       "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_singlesided_color1.vmdl"
-    },
-    {
-      "Prefab": null,
-      "Model": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_color1.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/kaykit_forest_nature_pack_1.0_free/grass_2_d_color1.vmdl"
-    },
-    {
-      "Prefab": null,
-      "Model": "models/survival kit/grass-large.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/survival kit/grass-large.vmdl"
-    },
-    {
-      "Prefab": null,
-      "Model": "models/survival kit/grass.vmdl",
-      "Weight": 1,
-      "HasAsset": true,
-      "AssetName": "models/survival kit/grass.vmdl"
     }
   ],
   "IsEmpty": false,
   "TileSizeEnum": "Size512",
-  "TileRadius": 4,
+  "TileRadius": 2,
   "Scatterer": {
     "Type": "SimpleScatterer",
-    "Scale": "0.8 1.2",
+    "Scale": "0.800000012 1.20000005",
     "Density": 0.69214356,
     "PlaceOnGround": true,
     "HeightOffset": 0,

@@ -4,6 +4,9 @@ Layer0
 {
 	shader "shader/windy-grass.shader"
 
+	//---- Rendering ----
+	F_DO_NOT_CAST_SHADOWS 1
+
 	//---- Albedo ----
 	ColorTexture "materials/forest_texture.png"
 
