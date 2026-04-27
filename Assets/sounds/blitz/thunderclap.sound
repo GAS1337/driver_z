@@ -5,7 +5,11 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/kenney/ui/close_003.vsnd"
+    "sounds/blitz/naturalthunder1.vsnd",
+    "sounds/blitz/naturalthunder2.vsnd",
+    "sounds/blitz/naturalthunder3short.vsnd",
+    "sounds/blitz/naturalthunder3+4+reverbmix.vsnd",
+    "sounds/blitz/naturallightning4.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,

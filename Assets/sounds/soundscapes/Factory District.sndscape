@@ -2,12 +2,8 @@
   "MasterVolume": "1",
   "LoopedSounds": [
     {
-      "SoundFile": "sounds/ambience/electric_loop.vsnd",
-      "Volume": "1"
-    },
-    {
       "SoundFile": "sounds/sounds 11.4.26/alex_jauk-industrial-ambience-223058.vsnd",
-      "Volume": "0.3"
+      "Volume": "0.300000012"
     }
   ],
   "StingSounds": [],

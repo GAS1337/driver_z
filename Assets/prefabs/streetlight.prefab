@@ -1,11 +1,11 @@
 {
   "RootObject": {
-    "__guid": "8a0c777e-e63e-47c1-8eb0-92c54a2f71a5",
+    "__guid": "6419ceca-1912-4ab2-b844-909ea252a951",
     "__version": 2,
     "Flags": 0,
     "Name": "streetlight",
     "Position": "0,0,0",
-    "Rotation": "0,0,0,1",
+    "Rotation": "0,0,-1,1.94707198E-07",
     "Scale": "6,6,6",
     "Tags": "light_spot,light",
     "Enabled": true,
@@ -17,7 +17,7 @@
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
-        "__guid": "ebcfa3bd-300b-45f6-9fba-8d41b3241c28",
+        "__guid": "3a23b4ae-c86c-4c63-ba2d-f948a9f31b87",
         "__enabled": true,
         "Flags": 0,
         "BodyGroups": 18446744073709551615,
@@ -44,7 +44,7 @@
       },
       {
         "__type": "Sandbox.ModelCollider",
-        "__guid": "fdab2a37-0463-4595-9aa6-546f2147e748",
+        "__guid": "5fdcbddb-28be-4a7d-9c8b-3b0c8c9d1135",
         "__enabled": true,
         "Flags": 0,
         "ColliderFlags": 0,
@@ -70,12 +70,12 @@
     ],
     "Children": [
       {
-        "__guid": "90a12f99-2466-466d-b75b-eb75fc4a05e9",
+        "__guid": "1e1c6e2d-878b-4993-9930-44b62544719a",
         "__version": 2,
         "Flags": 0,
         "Name": "Spot Light",
-        "Position": "5.07233881E-06,-19.6277294,88.7400208",
-        "Rotation": "0.45451951,0.454519302,-0.541675329,0.541675329",
+        "Position": "-6.06329819E-13,-19,89.1666641",
+        "Rotation": "0.390381515,0.390381515,-0.589578032,0.589578032",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -87,23 +87,23 @@
         "Components": [
           {
             "__type": "Sandbox.SpotLight",
-            "__guid": "3778c1e5-f28f-4283-ac6f-2cbc39687afe",
+            "__guid": "24ffc8c1-dbfc-4ffa-8635-ccf11d481ce6",
             "__enabled": true,
             "Flags": 0,
-            "Attenuation": 0.6,
-            "ConeInner": 10,
-            "ConeOuter": 50,
+            "Attenuation": 1,
+            "ConeInner": 15,
+            "ConeOuter": 40,
             "Cookie": null,
             "FogMode": "Enabled",
             "FogStrength": 1,
-            "LightColor": "187.2093,250,187.2093,1",
+            "LightColor": "91.373,98.039,100,1",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Radius": 2000,
+            "Radius": 6000,
             "ShadowBias": 0.0005,
             "ShadowHardness": 0,
             "Shadows": true
