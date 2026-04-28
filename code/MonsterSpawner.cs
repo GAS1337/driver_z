@@ -11,7 +11,7 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 	public float MonsterSpawnStartDelay = 1f;
 	public float MonsterSpawnCooldown = 1f;
 	public float MonsterScaleFactor = 1f;
-	public int MaxMonsterSpawns = 1;
+	[Property] public int MaxMonsterSpawns = 1;
 
 	List<GameObject> SpawnedMonsters;
 
