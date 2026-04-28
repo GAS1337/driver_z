@@ -68,7 +68,47 @@
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "a9a755b2-cdac-4b02-ba34-5c038c909fc2",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "103.333328,1.66666663,203.333328",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "80b813ae-cc86-441a-b133-6a686e2c64fd",
+            "__enabled": true,
+            "Flags": 0,
+            "Attenuation": 1,
+            "FogMode": "WithoutShadows",
+            "FogStrength": 1,
+            "LightColor": "5,3.13954,0.34884,2",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Radius": 800,
+            "ShadowBias": 0.0005,
+            "ShadowHardness": 1,
+            "Shadows": false
+          }
+        ],
+        "Children": []
+      }
+    ],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,

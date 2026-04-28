@@ -1,12 +1,12 @@
 {
   "RootObject": {
-    "__guid": "cbd9e8cf-d8e0-4074-9bed-9d2f92ae2c8b",
+    "__guid": "78c08b6d-1fc6-453a-8c53-f7704678343e",
     "__version": 2,
     "Flags": 0,
-    "Name": "lantern_standing+light",
+    "Name": "homemadeinvisiblewall",
     "Position": "0,0,0",
-    "Rotation": "0,0,0,1",
-    "Scale": "1,1,1",
+    "Rotation": "0,0,-0.608761191,0.793353736",
+    "Scale": "0.100000001,0.100000001,0.100000001",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -17,7 +17,7 @@
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
-        "__guid": "c9104f07-3c3b-411a-8587-1eeb6e3d5f18",
+        "__guid": "1aeecc8c-f749-4d67-9596-874a1a78f330",
         "__enabled": true,
         "Flags": 0,
         "BodyGroups": 18446744073709551615,
@@ -26,7 +26,7 @@
         "MaterialGroup": null,
         "MaterialOverride": null,
         "Materials": null,
-        "Model": "models/kaykit_halloweenbits_1.0_free/lantern_standing.vmdl",
+        "Model": "models/kaykit_halloweenbits_1.0_free/fence.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -43,15 +43,15 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Sandbox.ModelCollider",
-        "__guid": "34d7b22f-df09-4820-a058-772ba17ed610",
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "dc12a421-5022-48cf-85e1-86d3f286e15c",
         "__enabled": true,
         "Flags": 0,
+        "Center": "1252,-8281,24124.5",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/kaykit_halloweenbits_1.0_free/lantern_standing.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -63,52 +63,13 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
+        "Scale": "3004,137084,48749",
         "Static": true,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": [
-      {
-        "__guid": "6d554603-5456-42f8-b59c-128d887b45fe",
-        "__version": 2,
-        "Flags": 0,
-        "Name": "Point Light",
-        "Position": "0,0,30.0000019",
-        "Rotation": "0,0,0,1",
-        "Scale": "1,1,1",
-        "Tags": "light_point,light",
-        "Enabled": true,
-        "NetworkMode": 2,
-        "NetworkFlags": 0,
-        "NetworkOrphaned": 0,
-        "NetworkTransmit": true,
-        "OwnerTransfer": 1,
-        "Components": [
-          {
-            "__type": "Sandbox.PointLight",
-            "__guid": "dc29f29a-a823-4572-af1d-26bcddc1c23e",
-            "__enabled": true,
-            "Flags": 0,
-            "Attenuation": 4,
-            "FogMode": "WithoutShadows",
-            "FogStrength": 1,
-            "LightColor": "4.97674,4.17236,1.75922,2",
-            "OnComponentDestroy": null,
-            "OnComponentDisabled": null,
-            "OnComponentEnabled": null,
-            "OnComponentFixedUpdate": null,
-            "OnComponentStart": null,
-            "OnComponentUpdate": null,
-            "Radius": 2600,
-            "ShadowBias": 0.0005,
-            "ShadowHardness": 1,
-            "Shadows": false
-          }
-        ],
-        "Children": []
-      }
-    ],
+    "Children": [],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
