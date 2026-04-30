@@ -1,22 +1,39 @@
 using Sandbox;
+using System;
 
 public sealed class HighscoreManager : Component
 {
+	[Property] Rigidbody CarBody;
+	[Property] RotationControl RotationControl;
+
 	public float CurrentScore;
 	float LatestScore;
-	float LastGainedScore;
+	public float LastGainedScore;
 
 	protected override void OnUpdate()
 	{
 		// Log.Info( "Current Score: " + CurrentScore + " Last score: " + LatestScore );
-
+		Log.Info(CalculateMultiplier());
 	}
 
 	public void IncreaseScore(float amount)
 	{
+		amount *= CalculateMultiplier();
+		amount = (float)Math.Round(amount, 0);
 		CurrentScore += amount;
 		LastGainedScore = amount;
 		Log.Info("Score increased by " + amount + ". Current score: " + CurrentScore + " Last Gained Score: " + LastGainedScore);
+	}
+
+	public float CalculateMultiplier()
+	{
+		float multiplier = 1f;
+
+		multiplier += CarBody.Velocity.Length.Remap( 1500, 5000, 0, 0.5f );
+		if (!RotationControl.IsGrounded) { multiplier += 0.5f; }
+		multiplier = (float)Math.Round(multiplier, 2);
+
+		return multiplier;
 	}
 
 	[Button]

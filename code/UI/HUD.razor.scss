@@ -1,60 +1,75 @@
 HUD {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	font-family: Poppins;
-	font-size: 24px;
-	text-stroke: 10px black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Poppins;
+    font-size: 24px;
+    text-stroke: 10px black;
 
-	> .vitals {
-		position: absolute;
-		bottom: 10%;
-		right: auto;
-		left: 10%;
-		font-size: 64px;
-		flex-direction: column;
-		align-items: flex-end;
-		font-weight: bold;
-		color: grey;
-	}
+    > .vitals {
+        position: absolute;
+        bottom: 10%;
+        right: auto;
+        left: 10%;
+        font-size: 64px;
+        flex-direction: column;
+        align-items: flex-end;
+        font-weight: bold;
+        color: grey;
+    }
 
-	> .meins {
-		position: absolute;
-		bottom: 10%;
-		right: 10%;
-		left: auto;
-		font-size: 48px;
-		flex-direction: column;
-		align-items: center;
-		font-weight: bold;
-		color: darkred;
+    > .meins {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        left: auto;
+        font-size: 48px;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        color: darkred;
+        // Der äußere Rahmen/Hintergrund
+        .health-bar-bg {
+            width: 400px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 6px solid #220000;
+            overflow: hidden; // Wichtig, damit der Fill nicht übersteht
+        }
+        // Der eigentliche rote Balken
+        .health-bar-fill {
+            height: 100%;
+            background-color: darkred;
+            transition: width 0.3s ease-out;
+        }
+    }
 
-		// Der äußere Rahmen/Hintergrund
-		.health-bar-bg {
-			width: 400px;
-			height: 40px;
-			background-color: rgba(0, 0, 0, 0.6);
-			border: 6px solid #220000;
-			overflow: hidden; // Wichtig, damit der Fill nicht übersteht
-		}
-		// Der eigentliche rote Balken
-		.health-bar-fill {
-			height: 100%;
-			background-color: darkred;
-			transition: width 0.3s ease-out;
-		}
-	}
+    > .score {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-weight: bold;
+        color: white;
 
-	> .score {
-		position: absolute;
-		top: 10%;
-		right: 10%;
-		font-size: 100px;
-		flex-direction: column;
-		align-items: flex-start;
-		font-weight: bold;
-		color: white;
-	}
+        .gained-score {
+            font-size: 40px;
+            opacity: 0.8;
+            margin-bottom: -45px;
+        }
+
+        .current-score {
+            font-size: 100px;
+        }
+
+        .multiplier {
+            font-size: 70px;
+            font-style: italic;
+            transition: color 0.1s linear;
+        }
+    }
 }

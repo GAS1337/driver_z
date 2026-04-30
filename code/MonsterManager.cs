@@ -140,17 +140,17 @@ public sealed class MonsterManager : Component
                 break;
 
             case 0: // Zombie
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Green * 15;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Green, Color.Green, Color.Green, Color.White } ) * 4;
 				ActiveZombieSpawner.Add(newSpawner);
                 break;
 
             case 1: // Ghost
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Blue * 15;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Blue, Color.Blue, Color.Blue, Color.White } ) * 4;
 				ActiveGhostSpawner.Add(newSpawner);
                 break;
 
             case 2: // Vampire
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Red * 15;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Red, Color.Red, Color.Red, Color.White } )  * 4;
 				ActiveVampireSpawner.Add(newSpawner);
                 break;
         }

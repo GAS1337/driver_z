@@ -1,14 +1,56 @@
 ﻿@using Sandbox;
 @using Sandbox.UI;
+@using System;
 @inherits PanelComponent
 @namespace Sandbox
+
+@{
+	var multiplier = HighscoreManager.CalculateMultiplier();
+	float m = Math.Clamp(multiplier, 1f, 2f);
+    
+	int r = 255; // Rot ist in allen Ziel-Farben (Weiß, Gelb, Orange, Rot) auf Maximum
+	int g = 255;
+	int b = 255;
+
+	if (m < 1.3f)
+	{
+		// Phase: Weiß -> Gelb (1.0 bis 1.3)
+		// Blau sinkt von 255 auf 0
+		float ratio = (m - 1.0f) / 0.3f;
+		b = (int)(255 * (1f - ratio));
+		g = 255;
+	}
+	else if (m < 1.65f)
+	{
+		// Phase: Gelb -> Orange (1.3 bis 1.65)
+		// Blau bleibt 0, Grün sinkt von 255 auf 128 (Orange-Wert)
+		float ratio = (m - 1.3f) / 0.35f;
+		b = 0;
+		g = (int)(255 - (127 * ratio));
+	}
+	else
+	{
+		// Phase: Orange -> Rot (1.65 bis 2.0)
+		// Blau bleibt 0, Grün sinkt von 128 auf 0
+		float ratio = (m - 1.65f) / 0.35f;
+		b = 0;
+		g = (int)(128 * (1f - ratio));
+	}
+
+	string colorHex = $"rgb({r}, {g}, {b})";
+}
 
 <root>
 	<div class="vitals">
 		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
 	</div>
 	<div class="score">
-		<p>@($"{HighscoreManager.CurrentScore}")</p>
+		@if (HighscoreManager.LastGainedScore > 0)
+		{
+			<p class="gained-score">@($"+{HighscoreManager.LastGainedScore}")</p>
+		}
+		<p class="current-score">@($"{HighscoreManager.CurrentScore - HighscoreManager.LastGainedScore}")</p>
+		<p class="multiplier" style="color: @colorHex">@($"{multiplier}x")</p>
 	</div>
 	<div class="meins">
 		<p>@("HEALTH")</p> <div class="health-bar-bg">
@@ -34,6 +76,6 @@
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
 
-	protected override int BuildHash() => System.HashCode.Combine( HighscoreManager.CurrentScore, PlayerHealth.CurrentHealth, PlayerGun.CurrentRockets  );
+	protected override int BuildHash() => System.HashCode.Combine(HighscoreManager.CurrentScore, HighscoreManager.LastGainedScore, HighscoreManager.CalculateMultiplier(), PlayerHealth.CurrentHealth, PlayerGun.CurrentRockets);
 
 }

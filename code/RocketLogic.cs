@@ -9,6 +9,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 	[Property] float Damage = 250f;
 	Rigidbody RocketBody;
 
+	Random random = new Random();
 	protected override void OnStart()
 	{
 		RocketBody = GetComponent<Rigidbody>();
@@ -47,7 +48,8 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 					hit.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
 					hit.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 1f, hit.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 1f );
 
-					hit.GameObject.GetComponent<VampireBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
+					hit.GameObject.WorldRotation = hit.GameObject.WorldRotation.Angles().WithYaw( hit.GameObject.WorldRotation.Yaw() + random.Float( -90, 90 ) );
+					// hit.GameObject.GetComponent<VampireBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
 					// Rotation?
 				}
 				else if ( hit.GameObject.GetComponent<GhostBrain>() != null )

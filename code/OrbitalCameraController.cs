@@ -28,6 +28,7 @@ public sealed class OrbitalCameraController : Component
 	protected override void OnStart() 
 	{ 
 		RotationControl = GameObject.GetComponent<RotationControl>();
+		Yaw = -CarBody.WorldRotation.Yaw();
 		MainCamera.FieldOfView = 90;
 	}
 

@@ -11006,12 +11006,24 @@
           "__guid": "b398f9e9-91cd-407d-a393-e9d1f6100c80",
           "__enabled": true,
           "Flags": 0,
+          "CarBody": {
+            "_type": "component",
+            "component_id": "271e77b6-990b-443f-bd7b-97351b986299",
+            "go": "a8c8eff5-d334-433c-9ee1-fbf36bf9ec23",
+            "component_type": "Rigidbody"
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null
+          "OnComponentUpdate": null,
+          "RotationControl": {
+            "_type": "component",
+            "component_id": "9ad692f3-bf5b-43ca-818c-3b0eb66e5973",
+            "go": "2300dcc6-82ac-4241-943a-e3e0adb966d1",
+            "component_type": "RotationControl"
+          }
         },
         {
           "__type": "MonsterManager",
@@ -16183,7 +16195,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (3)",
-      "Position": "-30805.8711,-21120.6816,2903.99951",
+      "Position": "-31146.2031,-21317.1738,2903.99951",
       "Rotation": "-2.33799611E-08,1.34984646E-08,-0.866026103,-0.499998689",
       "Scale": "1,1,1",
       "Tags": "",
@@ -16217,7 +16229,7 @@
           },
           "Scale": 4,
           "TextScope": {
-            "Text": "ROCKETJUMP!\n\uD83D\uDE80\uD83D\uDCA5⏫\uD83D\uDE97",
+            "Text": "ROCKETJUMP!\n⏫\uD83D\uDE97⏫ \n\uD83D\uDCA5\uD83D\uDCA5\n",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -16420,8 +16432,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (4)",
-      "Position": "-11764.8203,-15835.5244,305.999634",
-      "Rotation": "1.50350914E-08,2.24227019E-08,-0.556917667,0.830567658",
+      "Position": "-11157.6396,-14024.9395,255.999573",
+      "Rotation": "2.03262065E-08,1.77672952E-08,-0.322974324,0.946407676",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -16454,7 +16466,7 @@
           },
           "Scale": 4,
           "TextScope": {
-            "Text": "RAM!       \uD83D\uDCA5",
+            "Text": "RAM!",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -25692,304 +25704,6 @@
       }
     },
     {
-      "__guid": "80415cc3-833a-4f6c-a1ab-fea92e882dd8",
-      "__version": 2,
-      "__Prefab": "prefabs/monsterspawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "164b213e-618b-4f75-ba46-0b02bfa7b1d9"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "21581105-778a-4ebd-b8fc-3f95d2dc3198"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "d124dbac-496c-4af7-bd52-cb608b750c0a"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "e04743f0-b0f5-4643-abc8-1b4a2fa888bf"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "a59c46e7-e3b9-4f66-88bc-f90523c875ef"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "05a7082c-89f4-46cb-807a-a7cc33e7d398"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "2e811a4d-e533-49dd-bd1d-7500fb618f09"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "d20dfce7-3373-4c0a-bded-47ef8dae4f91"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "8b1cd678-57ed-4637-905d-dcdc75e280c1"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "13836ac8-6110-4cfe-84bf-a1b088e8720c"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "6bb94346-ccc2-49dc-8226-464bc7b262cd"
-            }
-          }
-        ],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Position",
-            "Value": "-11914,-15924,130"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.830569088,0.556916237"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
-            },
-            "Property": "MaxMonsterSpawns",
-            "Value": 0
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
-            },
-            "Property": "MonsterPrefab",
-            "Value": {
-              "_type": "gameobject",
-              "prefab": "prefabs/zombie.prefab"
-            }
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0,1"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "80415cc3-833a-4f6c-a1ab-fea92e882dd8",
-        "9c60fded-5a65-4d82-8787-3d7eae97769f": "5d1a0f88-a738-4e32-90d3-bbb4a0458645",
-        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "50807959-1372-4632-8467-cf295878fa16",
-        "be0f85d9-3854-415e-b919-d60ddd6814ed": "0c029580-c59e-4782-b4ca-d1ac691094ea",
-        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "e734bea4-1692-4591-b399-e18067b12364",
-        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "a4d7e8ea-abea-4658-978e-f10deff1d773",
-        "41cc3270-ffca-4c3e-9a83-058eb4014968": "6e0be3e5-8c1a-4ec9-baa5-e6b116ad4270",
-        "a336f4c6-87ef-476f-b08a-093bf344f53f": "2824a56d-f62f-49b5-b685-d7287560ac36",
-        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "88b0d985-d019-43a6-84cc-8c8a89e47ee5",
-        "ee212a72-44be-4509-b323-11ac1435c2c2": "14715de7-8e45-4599-b417-464648def6cc",
-        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "4e1c2828-f085-4e97-893a-5be7d459b7ed",
-        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "571feb40-4927-4390-af24-9587971e32f7",
-        "ac1c1466-bd16-44dc-950f-148b34fe9717": "6adeac31-c27d-4006-926c-b744a2f87bc7",
-        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "9beaccc5-45b9-416d-ba1c-d8fba203e0db",
-        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "64bdd7ea-3635-41ca-bf44-96e2438003d3",
-        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "2f51308f-975d-480e-acfe-8dccc560b465",
-        "d124dbac-496c-4af7-bd52-cb608b750c0a": "149ccbbd-8da4-463d-8271-ff0875bd167e",
-        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "1966ffe9-de1c-42fb-8cf7-e6c006b83a73",
-        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "99191f6c-4985-4d27-a2ce-01e9bc4bdbad",
-        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "bed98c05-23c1-469e-84e9-76db471eec9b",
-        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "f9f7f805-9233-440e-b134-80538aefa4e9",
-        "d20dfce7-3373-4c0a-bded-47ef8dae4f91": "cd3ea802-5737-4606-bf93-e05c4e0c0670",
-        "8b1cd678-57ed-4637-905d-dcdc75e280c1": "ae7a66b3-134a-44ef-b72c-96cd53d47961",
-        "13836ac8-6110-4cfe-84bf-a1b088e8720c": "8d96d32b-f3c6-417c-8446-855e57d394f1",
-        "6bb94346-ccc2-49dc-8226-464bc7b262cd": "790c44dc-173b-401f-97fe-f80e32a40b35"
-      }
-    },
-    {
-      "__guid": "eee0c94e-c6a4-4c17-9d3e-5838fa329526",
-      "__version": 2,
-      "__Prefab": "prefabs/monsterspawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "164b213e-618b-4f75-ba46-0b02bfa7b1d9"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "21581105-778a-4ebd-b8fc-3f95d2dc3198"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "d124dbac-496c-4af7-bd52-cb608b750c0a"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "e04743f0-b0f5-4643-abc8-1b4a2fa888bf"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "a59c46e7-e3b9-4f66-88bc-f90523c875ef"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "05a7082c-89f4-46cb-807a-a7cc33e7d398"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "2e811a4d-e533-49dd-bd1d-7500fb618f09"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "d20dfce7-3373-4c0a-bded-47ef8dae4f91"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "8b1cd678-57ed-4637-905d-dcdc75e280c1"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "13836ac8-6110-4cfe-84bf-a1b088e8720c"
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "6bb94346-ccc2-49dc-8226-464bc7b262cd"
-            }
-          }
-        ],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Name",
-            "Value": "monsterspawner (1)"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Position",
-            "Value": "-28221.5625,-25971.2969,130.500336"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.866027355,0.499997288"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
-            },
-            "Property": "MonsterPrefab",
-            "Value": {
-              "_type": "gameobject",
-              "prefab": "prefabs/zombie.prefab"
-            }
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0,1"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "eee0c94e-c6a4-4c17-9d3e-5838fa329526",
-        "9c60fded-5a65-4d82-8787-3d7eae97769f": "ef83767f-fd5c-4a92-b94d-ccf33507675a",
-        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "d1e92398-f428-43ab-855e-6f4182c0ca73",
-        "be0f85d9-3854-415e-b919-d60ddd6814ed": "2afbbfe3-ed0a-4baa-b0d2-872621ac0654",
-        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "f5308458-7c9c-46a5-a2e2-ccec25e80033",
-        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "d4c06aad-cfc4-47ee-936e-c22c9f3dae4d",
-        "41cc3270-ffca-4c3e-9a83-058eb4014968": "e1622a38-75b6-4d26-806a-765d179792a1",
-        "a336f4c6-87ef-476f-b08a-093bf344f53f": "ff1efc79-6479-4de1-9e40-c3b34445041f",
-        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "63f88060-2f9a-4a24-986c-3fbe13de2ce7",
-        "ee212a72-44be-4509-b323-11ac1435c2c2": "bb44937d-6acb-4de7-b379-d3c496001e74",
-        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "a637b02d-54df-43e7-8886-27c2c11a6e8c",
-        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "068fba76-2933-400a-bcf5-1e9a9d6e32a3",
-        "ac1c1466-bd16-44dc-950f-148b34fe9717": "8b6db6e8-687c-4fef-9d20-ace76afdd4b6",
-        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "369fd2b8-c5f2-4886-9725-8f29b4821622",
-        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "e9f72d4a-c9a5-4049-acc5-085673dd0707",
-        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "dd9a720c-03de-420e-a01f-bbeff6ac10b5",
-        "d124dbac-496c-4af7-bd52-cb608b750c0a": "f5dfc73e-628b-486c-9172-ef3a71081c3a",
-        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "a102325d-5e03-4a7f-b88e-106011e9bd33",
-        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "2470aa7a-2ff9-4039-b0fe-9a55c359dcc2",
-        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "c8473fa5-5866-4dc2-95d0-25e4f836d692",
-        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "32c3854d-184a-436b-a504-d8fb5027f44c",
-        "d20dfce7-3373-4c0a-bded-47ef8dae4f91": "f3209275-4430-43a0-921b-7344da06b737",
-        "8b1cd678-57ed-4637-905d-dcdc75e280c1": "a34d988e-3d18-40f4-a24f-ca9891e93dd4",
-        "13836ac8-6110-4cfe-84bf-a1b088e8720c": "36ea15d4-0392-4439-a9f7-8b055cb415a2",
-        "6bb94346-ccc2-49dc-8226-464bc7b262cd": "422137a2-f241-478c-966a-963062dadd93"
-      }
-    },
-    {
       "__guid": "c4a94775-cf27-4a6c-b669-daf9555194ae",
       "__version": 2,
       "__Prefab": "prefabs/zombie.prefab",
@@ -26488,39 +26202,6 @@
         }
       ],
       "Children": []
-    },
-    {
-      "__guid": "ef9c1fa8-f391-4bbf-954a-af08514a2ba5",
-      "__version": 2,
-      "__Prefab": "prefabs/blitz.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "7463dcb4-7f57-4f88-8fa4-c4f1265d7a46"
-            },
-            "Property": "Position",
-            "Value": "-28193,-25975,498"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "7463dcb4-7f57-4f88-8fa4-c4f1265d7a46": "ef9c1fa8-f391-4bbf-954a-af08514a2ba5",
-        "4c88c4cb-51ec-4419-a68d-046f9eeccf3a": "c67ae48f-c5b3-43ba-9ea4-dc8cb73b985e",
-        "9508ecb6-b175-4052-8554-791ae8b65b03": "a5cacdbd-dfae-4ba7-9b52-cb2358eade8b",
-        "3144dffc-b8f7-4dc8-84fd-2953278ad9b7": "123cb8d5-1f8b-4371-b29e-fbb82027d782",
-        "03bed987-7334-4f06-a746-a97e4eb74945": "f941065b-86c2-4df1-94c0-e60a730b9f31",
-        "5def2f40-79bb-484e-864a-418f2b31a645": "e4b2f2c7-ca81-4526-82a5-e870390ff48b",
-        "fe5a74fc-1987-4148-b88a-2fe3d0ca1fe9": "ca5b90b5-3a17-4eda-bfb4-d14e6b9ff406",
-        "66ee8f6c-1295-45c8-9a7c-3be00124f9c7": "be09f1eb-097d-42fa-8095-57fa1e87fb1c",
-        "386b92b5-0e0d-48e8-a56f-a9d2bf7da052": "ab375434-d43a-42cf-8c5b-523086f2cf8d",
-        "a084ec63-5cc5-4fbf-8959-da965812527e": "ca630a6c-9768-4427-bc7f-5709f43526c1",
-        "ebf00bb6-3209-4d96-b4e5-f8fbda6c1097": "93c16900-2272-4c19-82d9-59a8613aeb73"
-      }
     },
     {
       "__guid": "2faad598-d907-408d-a599-c901eecd9f82",
@@ -29117,7 +28798,7 @@
       "Children": []
     },
     {
-      "__guid": "018e1520-36c1-41c2-b055-7b584832767c",
+      "__guid": "837e2a00-9263-45a0-8b21-830be91c33b7",
       "__version": 2,
       "__Prefab": "prefabs/bookshelf 1.0.prefab",
       "__PrefabInstancePatch": {
@@ -29136,7 +28817,19 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "a3e8e70f-5c68-4152-bb10-6cc9c43e86c0": "1036ddb6-0ee9-4c3f-99f7-e8243e9dc69e"
+        "156333e7-4573-49db-b5eb-a646b02b1d71": "837e2a00-9263-45a0-8b21-830be91c33b7",
+        "522f3bde-3048-4776-9e69-9301acf3d292": "b625dcab-8a88-43f2-828e-4a9d7b36525c",
+        "047c0375-a280-43c8-af12-599eb3ffdef6": "c58fb668-ee7c-4994-bb88-0652c434a24f",
+        "5748326a-5c19-450d-a54c-6139ff724416": "ab196f80-c335-409f-9899-76b82abc69a7",
+        "01547101-d56c-45a1-899d-be401f5f882a": "e0211029-86eb-4cc9-9f36-8430afdd6316",
+        "407e143c-8537-4f83-9c20-05c03224f35c": "dacd728e-d4af-4495-8e86-a7f792e32e95",
+        "45f96474-dfa6-4dba-8c21-4705f23dc33b": "f9945125-fa88-4d47-9148-70696437f83b",
+        "d2390e70-c3eb-4646-9dc6-4278548ddf39": "1fa508b6-1ebe-4f7d-8d30-adc28cd46c48",
+        "4138af8a-2437-47e8-884d-46e95f9ebf7d": "5f44b6a1-e923-4d95-a37c-48ad6d3a882b",
+        "ff10c9ca-502c-4568-bcf6-05c949740fc6": "babcf472-9b82-4f5c-a0c4-c8acdc545092",
+        "b1cb9bcf-c3f6-4331-9a9d-41243045e277": "d15290f3-1318-4e34-8628-c89a75f2f495",
+        "a39bbb34-d91b-4094-ba3b-31b18b5e7e29": "a3f8c04f-3471-4195-81c6-cb77a8161601",
+        "55eb2eb5-e1e3-41fb-9566-49e3f3e1b730": "b64ae9b4-f810-453b-be3e-ab49607433ff"
       }
     },
     {
@@ -67919,6 +67612,526 @@
         "9370eb02-8580-4ba8-b00b-d4676c3dbdf4": "5f7ca60c-1450-48b8-9f34-9d2741a4c8e5",
         "0aaf0464-4356-4fc4-8266-2c5379b3171a": "bc477f8f-6927-4694-a9ce-8e3af3371a9b"
       }
+    },
+    {
+      "__guid": "ec10ee46-cf15-4856-ab50-8c924896efa6",
+      "__version": 2,
+      "__Prefab": "prefabs/monsterspawner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "ec857f60-86fe-453c-b471-9da1569546e6"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "164b213e-618b-4f75-ba46-0b02bfa7b1d9"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "ec857f60-86fe-453c-b471-9da1569546e6",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Sprite",
+              "Position": "0,0,0",
+              "Rotation": "0,0,-0.793353319,0.608761489",
+              "Scale": "30,30,30",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "efe0f7cc-3743-4d3c-a23d-347667aa5028"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "ec857f60-86fe-453c-b471-9da1569546e6"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "efe0f7cc-3743-4d3c-a23d-347667aa5028",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.5,
+              "Billboard": "YOnly",
+              "Color": "1,0,0,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "Frames": [
+                        {
+                          "Texture": "textures/shapes/ring1.vtex",
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": null
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Bilinear"
+            }
+          }
+        ],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Position",
+            "Value": "-11008,-17280,128.000015"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.793353319,0.608761489"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MaxMonsterSpawns",
+            "Value": 0
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MonsterPrefab",
+            "Value": {
+              "_type": "gameobject",
+              "prefab": "prefabs/zombie.prefab"
+            }
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          }
+        ],
+        "MovedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "38c925f4-ee12-4c64-ade6-7df03447ef4d"
+            },
+            "NewParent": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "NewContainerProperty": "Children",
+            "IsNewContainerArray": true,
+            "NewPreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "ec857f60-86fe-453c-b471-9da1569546e6"
+            }
+          }
+        ]
+      },
+      "__PrefabIdToInstanceId": {
+        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "ec10ee46-cf15-4856-ab50-8c924896efa6",
+        "9c60fded-5a65-4d82-8787-3d7eae97769f": "90f6c4f2-d554-4552-8a49-d1d915fca33b",
+        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "8d34e087-70ee-438f-8c06-bbae01b5d018",
+        "be0f85d9-3854-415e-b919-d60ddd6814ed": "ade13eec-db51-48e1-8570-de09dc8626c4",
+        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "c3991e28-5992-495f-a265-4a9a6dcdc869",
+        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "d67cb253-72d9-4015-bb5b-dc0a5c87e94c",
+        "41cc3270-ffca-4c3e-9a83-058eb4014968": "f56ab74f-5360-46b1-92bb-3bc04b146ba4",
+        "a336f4c6-87ef-476f-b08a-093bf344f53f": "c2acc9e3-c398-4e9d-971a-e35d12c2d174",
+        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "0c0973db-e973-4711-ba53-bc5165ffc3c7",
+        "ee212a72-44be-4509-b323-11ac1435c2c2": "8179473f-3fc1-48b3-927c-056d085ec2dd",
+        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "5141f2de-d2f8-4b50-88a3-838627e4d6ca",
+        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "691ede3e-3b19-4b69-986f-b49952bef316",
+        "ac1c1466-bd16-44dc-950f-148b34fe9717": "86f9e3c1-be06-4785-bd8c-4ec2d56730f6",
+        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "d78eae67-27ae-4f8f-8b8b-fbcbc50bb562",
+        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "094e15c8-2162-4296-a4ca-6af3f2de94d5",
+        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "262c36df-c501-46a1-9149-d759716250c7",
+        "d124dbac-496c-4af7-bd52-cb608b750c0a": "20fbfe1e-8530-4491-9d4b-e20fb326e921",
+        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "0ebb172c-3546-4834-b3a9-03a58dda8d32",
+        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "ebe6144c-0c31-4406-bd3a-f1a0b5162ef9",
+        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "4fb45762-bf69-42f8-a40f-ed2dc2c7a930",
+        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "cc4ebd83-35cb-4ca6-91c7-8e51c84eae8c",
+        "f7a0801f-d5df-4c2a-9d5b-5e975867e685": "4d910fd4-609a-4a7f-95ab-e180adf47309",
+        "513443e1-8023-4af6-a175-56d089e875c5": "26ab58e9-efbc-48f3-88c5-8c93bc9c880d",
+        "38c925f4-ee12-4c64-ade6-7df03447ef4d": "c08b4fb9-4840-4ac9-a539-b070228e9371",
+        "7425fe36-7425-403c-ab11-951511228238": "0e7894a6-2363-44f8-ae77-1f8ea6a5ff51",
+        "ce5b28f7-756f-495b-a156-dbbf634d16b6": "f595a980-3509-481f-a93d-99ffc463eadb",
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "59aa9219-3916-4364-b66c-63d8e306f2a4"
+      }
+    },
+    {
+      "__guid": "84688d5e-b35e-4107-a530-35417c1c048d",
+      "__version": 2,
+      "__Prefab": "prefabs/monsterspawner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "6c3adc03-631a-42b5-938a-3ea77c4e7fda"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "164b213e-618b-4f75-ba46-0b02bfa7b1d9"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "6c3adc03-631a-42b5-938a-3ea77c4e7fda",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Sprite (1)",
+              "Position": "0,0,0",
+              "Rotation": "0,0,-0.793353319,0.608761489",
+              "Scale": "30,30,30",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "afa31a7b-5842-4e96-bd73-f971ae933f55"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "6c3adc03-631a-42b5-938a-3ea77c4e7fda"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "afa31a7b-5842-4e96-bd73-f971ae933f55",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.5,
+              "Billboard": "YOnly",
+              "Color": "1,0,0,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "Frames": [
+                        {
+                          "Texture": "textures/shapes/ring1.vtex",
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": null
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Bilinear"
+            }
+          }
+        ],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Name",
+            "Value": "monsterspawner (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Position",
+            "Value": "-11776,-15488,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.793353319,0.608761489"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MaxMonsterSpawns",
+            "Value": 0
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MonsterPrefab",
+            "Value": {
+              "_type": "gameobject",
+              "prefab": "prefabs/zombie.prefab"
+            }
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          }
+        ],
+        "MovedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "38c925f4-ee12-4c64-ade6-7df03447ef4d"
+            },
+            "NewParent": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "NewContainerProperty": "Children",
+            "IsNewContainerArray": true,
+            "NewPreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "6c3adc03-631a-42b5-938a-3ea77c4e7fda"
+            }
+          }
+        ]
+      },
+      "__PrefabIdToInstanceId": {
+        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "84688d5e-b35e-4107-a530-35417c1c048d",
+        "9c60fded-5a65-4d82-8787-3d7eae97769f": "cee8903d-f5ea-4676-9d90-c66c1bd58012",
+        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "66cc6fb5-461c-4cbc-83d0-1a6658347e21",
+        "be0f85d9-3854-415e-b919-d60ddd6814ed": "9618cca4-9c6c-4cb7-b09f-bc196b470433",
+        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "21571d77-8e95-456e-8ce3-962139903ecb",
+        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "6973fb56-b4f4-4a4f-8f88-6708399572a1",
+        "41cc3270-ffca-4c3e-9a83-058eb4014968": "0b0ac395-02e5-43fb-ae99-527c56e73748",
+        "a336f4c6-87ef-476f-b08a-093bf344f53f": "3c5a3626-f309-4da0-851e-381b75312afd",
+        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "94e9cedf-113e-496e-85b5-52fc50778133",
+        "ee212a72-44be-4509-b323-11ac1435c2c2": "1c12949c-c668-473b-9472-25ca10d70a97",
+        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "5458081b-55a2-4284-ae9c-f8f8a7bbe815",
+        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "aa43abac-0e17-4a38-b3b4-ec61f7e76a29",
+        "ac1c1466-bd16-44dc-950f-148b34fe9717": "5ed7314f-1b20-4196-8baf-64da83202957",
+        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "e78ac960-4fb1-48ff-be21-c7c6e3b3d665",
+        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "e272bc3f-bd87-419f-9fa7-1c0da60f5eff",
+        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "58a51d4c-06a6-472d-87dd-854fb52b7552",
+        "d124dbac-496c-4af7-bd52-cb608b750c0a": "9e978c97-7bf1-4872-bb20-896f2080d5fa",
+        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "0d641eac-685d-4da1-b9fe-87a5d222b237",
+        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "0c986ab6-2b3a-4ae4-b95e-23cce5f358f9",
+        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "8a7ced73-fee2-465c-8b4d-3b01a6b23457",
+        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "5bfc4499-fadb-41cb-b701-67cb33b7ea01",
+        "f7a0801f-d5df-4c2a-9d5b-5e975867e685": "8b80a802-3847-4e23-8e2a-1845fb96ca77",
+        "513443e1-8023-4af6-a175-56d089e875c5": "5d011bc8-adc2-4eed-9f0a-22db920e652d",
+        "38c925f4-ee12-4c64-ade6-7df03447ef4d": "a1e3b44d-f327-404c-a5f4-bdde1380526a",
+        "7425fe36-7425-403c-ab11-951511228238": "4617a1d7-398d-44ae-88b7-126491462217",
+        "ce5b28f7-756f-495b-a156-dbbf634d16b6": "70d5813b-89af-4d02-95b4-704fabb92036",
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "3e78e64c-1f6f-4da2-b5c8-7397d92ec44d"
+      }
+    },
+    {
+      "__guid": "048ef2ba-512f-4189-82df-81a9ea8cb94e",
+      "__version": 2,
+      "__Prefab": "prefabs/monsterspawner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Name",
+            "Value": "monsterspawner (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Position",
+            "Value": "-27770.6309,-26920.873,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.5,0.866025448"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MaxMonsterSpawns",
+            "Value": 0
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MonsterPrefab",
+            "Value": {
+              "_type": "gameobject",
+              "prefab": "prefabs/zombie.prefab"
+            }
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "048ef2ba-512f-4189-82df-81a9ea8cb94e",
+        "9c60fded-5a65-4d82-8787-3d7eae97769f": "01bb5e2e-14af-4745-8a17-b32f519da6da",
+        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "92b26aca-6955-4524-a30c-7360f6be6f82",
+        "be0f85d9-3854-415e-b919-d60ddd6814ed": "8bb15607-3098-478f-a564-3ca4e49e1fe6",
+        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "1aa98786-2d6c-4ee7-9a73-1b2dec555f90",
+        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "7bb030a5-8588-4d6c-a7e9-63fd18a3ac59",
+        "41cc3270-ffca-4c3e-9a83-058eb4014968": "5b766ca4-4435-494d-a98d-d312938e6524",
+        "a336f4c6-87ef-476f-b08a-093bf344f53f": "54a1eca8-ed64-4eb1-8ad1-826978c5ac36",
+        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "665f9273-89c4-4929-99d8-148055fb08f4",
+        "ee212a72-44be-4509-b323-11ac1435c2c2": "c778bff9-76a9-4a68-88dd-a91ad2f960c5",
+        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "2b574990-793e-4379-974d-b9fb35b7febe",
+        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "2a60c905-985f-4ab4-a8fd-9fdf14702b44",
+        "ac1c1466-bd16-44dc-950f-148b34fe9717": "404ecf1b-95ce-447b-a0bc-e0a152192aa0",
+        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "7c0c66e9-d108-4fb9-8f09-bcd55be71d63",
+        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "5ee3bd3c-a76d-4612-8520-8683a2a2058a",
+        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "ceebf94d-18e3-4c54-af9b-d3c101cc0cf7",
+        "d124dbac-496c-4af7-bd52-cb608b750c0a": "a3b67b97-ce47-4f39-9a44-6a70bdc3fbe9",
+        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "dd92fc44-e8c5-4614-84cb-b145e4d2739d",
+        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "05d26597-3f43-4568-95e3-325e02993418",
+        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "e6ceeae6-022c-4d76-903f-bfc29570f5bc",
+        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "3ede9d12-3b43-4f9f-9d7a-c4479d85911b",
+        "f7a0801f-d5df-4c2a-9d5b-5e975867e685": "ba04da93-61c0-4d9a-8bba-d40427ce4204",
+        "513443e1-8023-4af6-a175-56d089e875c5": "bf13be9d-cfc2-4214-89f4-ec8bb62ec1d4",
+        "38c925f4-ee12-4c64-ade6-7df03447ef4d": "fa05e64b-ef4c-41c2-a3c9-1e62e805db24",
+        "7425fe36-7425-403c-ab11-951511228238": "80833b70-e4be-4217-a563-cb97d13e200c",
+        "ce5b28f7-756f-495b-a156-dbbf634d16b6": "932d4eda-6719-424d-9631-fd922f0de99c",
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "01cbc8e4-c10f-4c18-aaa9-2b21268231f1"
+      }
     }
   ],
   "SceneProperties": {
@@ -67945,6 +68158,11 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "ff1a0fe8-8fc7-44bb-8c94-7e0766cf3717"
+        }
+      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
