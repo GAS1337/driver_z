@@ -129,7 +129,6 @@ public sealed class MonsterManager : Component
 		GameObject newSpawner = MonsterSpawnerPrefab.Clone(actualSpawnPosition, WorldRotation.Angles().WithYaw(random.Int(0, 359)), Vector3.One);
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
 		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = 15;
-		newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = 50;
 
 		Log.Info( "Cloning spawner for prefab: " + prefab.Name + " at " + newSpawner.WorldPosition );
 
@@ -140,18 +139,24 @@ public sealed class MonsterManager : Component
                 break;
 
             case 0: // Zombie
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Green, Color.Green, Color.Green, Color.White } ) * 4;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Green * 3, Color.White * .1f } ) * 8;
 				ActiveZombieSpawner.Add(newSpawner);
-                break;
+
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(8, 12);
+
+				break;
 
             case 1: // Ghost
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Blue, Color.Blue, Color.Blue, Color.White } ) * 4;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Blue * 3, Color.White * .1f } ) * 8;
 				ActiveGhostSpawner.Add(newSpawner);
-                break;
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(5, 8);
+
+				break;
 
             case 2: // Vampire
-				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Red, Color.Red, Color.Red, Color.White } )  * 4;
+				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Red * 3, Color.White * .1f } )  * 8;
 				ActiveVampireSpawner.Add(newSpawner);
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(3, 5);
                 break;
         }
     }

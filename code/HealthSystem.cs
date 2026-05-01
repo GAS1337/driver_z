@@ -90,18 +90,21 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	{
 		foreach ( var renderer in ModelRendererList )
 		{
-			renderer.Tint = Color.Average(new Color[] { Color.Red, Color.White } ) ;
+			renderer.Tint = Color.Average(new Color[] { Color.White, Color.Black, Color.Black} );
+			Material dmgMaterial = Material.Load( "materials/primary_white_emissive.vmat" );
+			renderer.MaterialOverride = dmgMaterial;
 		}
 
 		TimeSinceLastDamage = 0;
-		await Task.DelaySeconds( 0.2f );
+		await Task.DelaySeconds( 0.02f );
 		
 		if (!this.IsValid) return;
-		if (TimeSinceLastDamage < 0.2f) return;
+		if (TimeSinceLastDamage < 0.019f) return;
 
 		foreach ( var renderer in ModelRendererList )
 		{
 			renderer.Tint = originalTint;
+			renderer.MaterialOverride = null;
 		}
 	}
 

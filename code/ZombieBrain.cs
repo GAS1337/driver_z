@@ -1,6 +1,7 @@
 using Sandbox;
 using Sandbox.Navigation;
 using System;
+using System.Threading.Tasks;
 using static Ballistics;
 using static HealthSystem;
 
@@ -37,6 +38,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	TimeUntil NextLeap;
 	TimeUntil NextSlam;
 	public TimeUntil KnockBack;
+
+	TimeSince SinceSlamAnimationStart;
 
 	Random random = new Random();
 
@@ -270,6 +273,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	{
 		Log.Info( $"{GameObject.Name} is slamming!" );
 		// Attack Trace
+		// AnimateSlam();
 		var attackTrace = Scene.Trace.Sphere( SlamRadius, Body.WorldPosition, Body.WorldPosition )
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithAllTags( "player", "carbody" )
@@ -382,5 +386,14 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		}
 	}
 
+	async Task AnimateSlam() 
+	{
+		SinceSlamAnimationStart = 0;
+		while (SinceSlamAnimationStart < 2) 
+		{ 
+			WorldScale = WorldScale * SinceSlamAnimationStart;
+		}
+	
+	}
 
 }

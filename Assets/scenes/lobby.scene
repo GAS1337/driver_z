@@ -67672,9 +67672,9 @@
               "Flags": 0,
               "__version": 2,
               "Additive": false,
-              "AlphaCutoff": 0.5,
+              "AlphaCutoff": 0.1,
               "Billboard": "YOnly",
-              "Color": "1,0,0,1",
+              "Color": "0.61395,0,0,0.53",
               "DepthFeather": 0,
               "FlipHorizontal": false,
               "FlipVertical": false,
@@ -67690,7 +67690,7 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "Opaque": true,
+              "Opaque": false,
               "OverlayColor": "1,1,1,0",
               "PlaybackSpeed": 1,
               "RenderOptions": {
@@ -67820,7 +67820,17 @@
         "38c925f4-ee12-4c64-ade6-7df03447ef4d": "c08b4fb9-4840-4ac9-a539-b070228e9371",
         "7425fe36-7425-403c-ab11-951511228238": "0e7894a6-2363-44f8-ae77-1f8ea6a5ff51",
         "ce5b28f7-756f-495b-a156-dbbf634d16b6": "f595a980-3509-481f-a93d-99ffc463eadb",
-        "00865528-5a9d-49e3-98a4-d9229237fc0e": "59aa9219-3916-4364-b66c-63d8e306f2a4"
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "59aa9219-3916-4364-b66c-63d8e306f2a4",
+        "aa8cb107-ea3b-4989-b37e-4a51350c926c": "b8a3d492-e365-46ac-a233-356ca92f68b4",
+        "3191d0d3-d74d-4104-ba19-e8876d9e3fcb": "1903505a-a63e-4b41-8362-1ef144044af8",
+        "0e40485b-52d6-4156-8139-85ad1d8bc4b6": "8f967f31-04fb-40c2-8ae0-57c83cb1df90",
+        "02ff6917-9b37-4ca9-8098-03116cb98e87": "0770914d-378a-49ff-8884-c0bd63769a35",
+        "24204ca3-33b2-4f81-8a63-1e3fec19e850": "4ede31e4-914d-4d73-891f-544e2c3f63d2",
+        "ffc3a8d8-5904-4ff5-ade5-9c10981c9ee9": "fa5d1661-fde8-4070-9b75-6bb3b423f66a",
+        "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef": "52e8e196-a4b3-43ac-94ae-4793b8bc9eec",
+        "d195629a-2b5b-4d28-aa35-adfb05f51187": "ce7149c2-6f51-472e-b5ba-7f6f907d296d",
+        "1fe56367-4312-4e19-9951-b654dc847e4b": "e75496de-84f9-4a91-8779-09ab3ad4f59c",
+        "3f249a1b-3920-4c64-8e08-88126c0fdc4d": "63b3c8ac-5ff8-45c4-8df3-61a496ff58d0"
       }
     },
     {
@@ -67882,9 +67892,9 @@
               "Flags": 0,
               "__version": 2,
               "Additive": false,
-              "AlphaCutoff": 0.5,
+              "AlphaCutoff": 0.1,
               "Billboard": "YOnly",
-              "Color": "1,0,0,1",
+              "Color": "0.61569,0,0,0.52941",
               "DepthFeather": 0,
               "FlipHorizontal": false,
               "FlipVertical": false,
@@ -68038,7 +68048,17 @@
         "38c925f4-ee12-4c64-ade6-7df03447ef4d": "a1e3b44d-f327-404c-a5f4-bdde1380526a",
         "7425fe36-7425-403c-ab11-951511228238": "4617a1d7-398d-44ae-88b7-126491462217",
         "ce5b28f7-756f-495b-a156-dbbf634d16b6": "70d5813b-89af-4d02-95b4-704fabb92036",
-        "00865528-5a9d-49e3-98a4-d9229237fc0e": "3e78e64c-1f6f-4da2-b5c8-7397d92ec44d"
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "3e78e64c-1f6f-4da2-b5c8-7397d92ec44d",
+        "aa8cb107-ea3b-4989-b37e-4a51350c926c": "5df5df13-f244-4d8f-82c5-e40453b768b7",
+        "3191d0d3-d74d-4104-ba19-e8876d9e3fcb": "8bfe1004-83e3-47f2-a85f-b452284149f8",
+        "0e40485b-52d6-4156-8139-85ad1d8bc4b6": "3b203b25-ec80-41c9-bb35-0acf0c1fbed4",
+        "02ff6917-9b37-4ca9-8098-03116cb98e87": "c07dda5f-5975-4c0c-ba6c-c662733097b1",
+        "24204ca3-33b2-4f81-8a63-1e3fec19e850": "4635f12f-70d5-48d8-9084-5bdc98cd2cad",
+        "ffc3a8d8-5904-4ff5-ade5-9c10981c9ee9": "4d94f4c1-6126-4bcf-b69d-0e384354a28c",
+        "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef": "afb8e2b4-2457-43bc-956a-9c5958b1c2ff",
+        "d195629a-2b5b-4d28-aa35-adfb05f51187": "16abad33-9213-4853-b681-f433e0545067",
+        "1fe56367-4312-4e19-9951-b654dc847e4b": "fa8ece49-1f46-45a1-a695-e7f3eefc60fc",
+        "3f249a1b-3920-4c64-8e08-88126c0fdc4d": "cbb7e352-84d5-4b27-a565-d574cadf17b5"
       }
     },
     {
@@ -68130,7 +68150,17 @@
         "38c925f4-ee12-4c64-ade6-7df03447ef4d": "fa05e64b-ef4c-41c2-a3c9-1e62e805db24",
         "7425fe36-7425-403c-ab11-951511228238": "80833b70-e4be-4217-a563-cb97d13e200c",
         "ce5b28f7-756f-495b-a156-dbbf634d16b6": "932d4eda-6719-424d-9631-fd922f0de99c",
-        "00865528-5a9d-49e3-98a4-d9229237fc0e": "01cbc8e4-c10f-4c18-aaa9-2b21268231f1"
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "01cbc8e4-c10f-4c18-aaa9-2b21268231f1",
+        "aa8cb107-ea3b-4989-b37e-4a51350c926c": "469a6e5c-4f9c-451d-87c6-c3be614b88c7",
+        "3191d0d3-d74d-4104-ba19-e8876d9e3fcb": "f061bf76-da5e-4322-b918-ce5e50636fd3",
+        "0e40485b-52d6-4156-8139-85ad1d8bc4b6": "4ba89fe6-01b9-49b0-863b-0ce1018dc1b9",
+        "02ff6917-9b37-4ca9-8098-03116cb98e87": "db9b48d4-0e25-493d-8260-b6c675bbade9",
+        "24204ca3-33b2-4f81-8a63-1e3fec19e850": "ce9c9b45-242c-4069-91d7-0968c92e4463",
+        "ffc3a8d8-5904-4ff5-ade5-9c10981c9ee9": "915c71fc-e95c-4da3-a85c-d6bdeb2cffc2",
+        "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef": "4b2902b4-6dec-41bd-9f60-0b0fe0c5a537",
+        "d195629a-2b5b-4d28-aa35-adfb05f51187": "9b79ceed-1a51-4f76-bb4a-3836a59fcb5b",
+        "1fe56367-4312-4e19-9951-b654dc847e4b": "1f7a51d3-bdd6-480f-8441-7381a6b7494c",
+        "3f249a1b-3920-4c64-8e08-88126c0fdc4d": "767c5bf9-6542-43f6-bf55-7d79d71d016c"
       }
     }
   ],
@@ -68158,11 +68188,6 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "ff1a0fe8-8fc7-44bb-8c94-7e0766cf3717"
-        }
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
@@ -68170,6 +68195,11 @@
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "ff1a0fe8-8fc7-44bb-8c94-7e0766cf3717"
+        }
       }
     }
   },

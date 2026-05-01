@@ -21,8 +21,8 @@ public sealed class Blitz : Component, MonsterSpawner.IMonsterSpawnerEvent
 
 	protected override void OnStart()
 	{
-		BlitzLine.Color = MonsterSpawner.LineRenderer.Color;
-		LightningStrike();
+		Color MonsterLineColor = MonsterSpawner.LineRenderer.Color.Evaluate( 0.5f );
+		BlitzLine.Color = Color.Average( new Color[] { MonsterLineColor * 2, Color.White * 4 } );
 	}
 
 	protected override void OnFixedUpdate()

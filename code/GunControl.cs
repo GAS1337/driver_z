@@ -97,14 +97,14 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					if ( ShootTrace.GameObject.GetComponent<ZombieBrain>() != null )
 					{
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
-						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.2f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.2f );
+						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
 					}
 					else if ( ShootTrace.GameObject.GetComponent<VampireBrain>() != null ) 
 					{	
 						ShootTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
-						ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.2f, ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.2f );
+						ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.1f );
 
-						ShootTrace.GameObject.WorldRotation = ShootTrace.GameObject.WorldRotation.Angles().WithYaw( ShootTrace.GameObject.WorldRotation.Yaw() + random.Float( -90, 90 ) );
+						ShootTrace.GameObject.WorldRotation = ShootTrace.GameObject.WorldRotation.Angles().WithYaw( ShootTrace.GameObject.WorldRotation.Yaw() + random.Float( -10, 10 ) );
 						ShootTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
 					}
@@ -123,9 +123,9 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						Rigidbody rb = ShootTrace.GameObject.GetComponent<Rigidbody>();
 
 						rb.GravityScale = 1;
-						rb.SmoothRotate( rb.WorldRotation.Angles().WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] {-90, 90} ) ), 0.001f, 0.1f );
+						rb.SmoothRotate( rb.WorldRotation.Angles().WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] {-10, 10} ) ), 0.001f, 0.1f );
 						// ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyTorque( ShootTrace.GameObject.WorldRotation.Up * 100000 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
-						// ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( ShootTrace.Direction * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
+						ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( ShootTrace.Direction * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
 					}
 
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );

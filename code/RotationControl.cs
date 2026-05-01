@@ -54,7 +54,7 @@ public sealed class RotationControl : Component
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
 				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 10 )
+					.Radius( 6 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
 				// DebugOverlay.Trace( groundCheck );
@@ -71,7 +71,7 @@ public sealed class RotationControl : Component
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
 				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 10 )
+					.Radius( 6 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
 				// DebugOverlay.Trace( groundCheck );
@@ -92,7 +92,7 @@ public sealed class RotationControl : Component
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
 				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 10 )
+					.Radius( 6 )
 					.IgnoreGameObjectHierarchy( GameObject )
 					.Run();
 				// DebugOverlay.Trace( groundCheck );
