@@ -7,7 +7,7 @@
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "2,2,2",
-    "Tags": "",
+    "Tags": "dead",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -97,7 +97,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           },
           {
@@ -202,7 +202,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           },
           {
@@ -307,7 +307,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           },
           {
@@ -412,7 +412,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           },
           {
@@ -551,7 +551,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           }
         ],
@@ -656,7 +656,7 @@
             "OnTriggerExit": null,
             "RollingResistance": null,
             "Static": false,
-            "Surface": null,
+            "Surface": "surfaces/bone.surface",
             "SurfaceVelocity": "0,0,0"
           }
         ],

@@ -28,7 +28,7 @@ public sealed class OrbitalCameraController : Component
 	protected override void OnStart() 
 	{ 
 		RotationControl = GameObject.GetComponent<RotationControl>();
-		Yaw = -CarBody.WorldRotation.Yaw();
+		Yaw = Rotation.LookAt(CarBody.WorldRotation.Backward, Vector3.Up).Yaw();
 		MainCamera.FieldOfView = 90;
 	}
 
@@ -37,8 +37,8 @@ public sealed class OrbitalCameraController : Component
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
 		// Pitch = (Pitch + mouseMove.pitch ).Clamp( 20, -20 );
-		crosshairPitch = (crosshairPitch + mouseMove.pitch ).Clamp( 40, -30 ); // Up&Down clamped in degrees
-		Pitch = (crosshairPitch / 2) + 5;
+		crosshairPitch = (crosshairPitch + mouseMove.pitch ).Clamp( 40, -45 ); // Up&Down clamped in degrees
+		Pitch = (crosshairPitch / 3) + 10;
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 		 
@@ -65,14 +65,14 @@ public sealed class OrbitalCameraController : Component
 		if ( !RotationControl.IsGrounded ) 
 		{ 
 			TargetDistanceToPlayer = MaxDistanceToPlayer;
-			VerticalOffset = Math.Max( VerticalOffset - AutoZoomStrength, 64 ); ;
+			VerticalOffset = Math.Max( VerticalOffset - AutoZoomStrength, 100 ); ;
 		}
 		// When on ground zoom depending on speed
 		else 
 		{
 			TargetDistanceToPlayer = (int)CarBody.Velocity.Length.Remap( 0, 4000, MinDistanceToPlayer, MaxDistanceToPlayer );
 			MainCamera.FieldOfView = 90 + (CarBody.Velocity.Length.Remap( 0, 4000, 0, 20 ) );
-			VerticalOffset = Math.Min(VerticalOffset + AutoZoomStrength, 170); 
+			VerticalOffset = Math.Min(VerticalOffset + AutoZoomStrength, 200); 
 		}
 		
 
@@ -99,7 +99,7 @@ public sealed class OrbitalCameraController : Component
 
 		// 1000 is distance of crosshair to player, VerticalOffset/2
 		Rotation rot = rotation.Angles().WithPitch( crosshairPitch );
-		Vector3 crosshairDir = Player.WorldPosition + Vector3.Up * VerticalOffset/2 + new Vector3(rot.Forward.x, rot.Forward.y, rot.Forward.z ).Normal * 18000;
+		Vector3 crosshairDir = Player.WorldPosition + Vector3.Up * VerticalOffset/2 + new Vector3(rot.Forward.x, rot.Forward.y, rot.Forward.z ).Normal * 1500;
 		SceneTraceResult crosshairCheck = Scene.Trace
 			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset / 2,  crosshairDir )
 			.IgnoreGameObjectHierarchy( GameObject )

@@ -40,7 +40,7 @@ public sealed class Medikit : Component, Component.ITriggerListener
 		
 		if ( other.GetComponentInParent<HealthSystem>().CurrentHealth < other.GetComponentInParent<HealthSystem>().SetHealth )
 		{
-			other.GetComponentInParent<HealthSystem>().Damage( -HealAmount );
+			other.GetComponentInParent<HealthSystem>().Damage( -HealAmount, false );
 			Sound.Play( "sounds/medikitsound.sound", WorldPosition );
 
 			GameObject.Parent.Destroy();

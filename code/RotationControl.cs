@@ -105,6 +105,23 @@ public sealed class RotationControl : Component
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
 		}
+		else
+		{
+			foreach ( WheelJoint wheel in WheelJoints )
+			{
+				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
+					.Radius( 6 )
+					.IgnoreGameObjectHierarchy( GameObject )
+					.Run();
+				// DebugOverlay.Trace( groundCheck );
+
+				if ( groundCheck.Hit )
+				{
+					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
+				}
+				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
+			}
+		}
 
 		if ( GroundedWheels > 2 ) { IsGrounded = true;
 									}

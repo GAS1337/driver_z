@@ -1,0 +1,65 @@
+{
+  "BaseSurface": "surfaces/default.surface",
+  "AudioSurface": "Generic",
+  "Description": "boney",
+  "Friction": 0.8,
+  "Elasticity": 0.05,
+  "Density": 2000,
+  "RollingResistance": 0,
+  "BounceThreshold": 35,
+  "FluidLinearDrag": 0.1,
+  "FluidAngularDrag": 0.1,
+  "Dampening": 0,
+  "ImpactEffects": {
+    "Regular": null,
+    "Bullet": null,
+    "BulletDecal": null,
+    "SoftParticles": null,
+    "SoftDecal": null,
+    "HardParticles": null,
+    "HardDecal": null
+  },
+  "ScrapeEffects": {
+    "RoughnessFactor": 0,
+    "RoughThreshold": 0,
+    "SmoothParticles": null,
+    "RoughParticles": null,
+    "SmoothDecal": null,
+    "RoughDecal": null
+  },
+  "Sounds": {
+    "FootLeft": null,
+    "FootRight": null,
+    "FootLaunch": null,
+    "FootLand": null,
+    "Bullet": null,
+    "ImpactHard": null,
+    "ImpactSoft": null,
+    "ScrapeRough": null,
+    "ScrapeSmooth": null
+  },
+  "PrefabCollection": {
+    "BulletImpact": {
+      "_type": "gameobject",
+      "prefab": "prefabs/surface/default-bullet.prefab"
+    },
+    "BluntImpact": null
+  },
+  "SoundCollection": {
+    "FootLeft": "sounds/footsteps/footstep-concrete.sound",
+    "FootRight": "sounds/footsteps/footstep-concrete.sound",
+    "FootLaunch": "sounds/footsteps/footstep-concrete-jump.sound",
+    "FootLand": "sounds/footsteps/footstep-concrete-land.sound",
+    "Bullet": "sounds/impacts/bullets/impact-bullet-generic.sound",
+    "ImpactHard": "sounds/spawner-dies.sound",
+    "ImpactSoft": "sounds/spawner-dies.sound",
+    "ScrapeRough": null,
+    "ScrapeSmooth": null,
+    "Break": null
+  },
+  "Tags": null,
+  "__references": [
+    "duccsoft.forest_ground_tmat#60683"
+  ],
+  "__version": 0
+}

@@ -32,11 +32,18 @@ HUD {
         color: darkred;
         // Der äußere Rahmen/Hintergrund
         .health-bar-bg {
+            transform-origin: center;
             width: 400px;
-            height: 40px;
+            height: 60px;
             background-color: rgba(0, 0, 0, 0.6);
             border: 6px solid #220000;
+            border-radius: 20px;
             overflow: hidden; // Wichtig, damit der Fill nicht übersteht
+            // Wenn diese Klasse aktiv ist, wird die Animation ausgeführt
+            &.damaged {
+                animation: shake-animation 0.2s ease-in-out;
+                border-color: white; // Optional: Kurzes Aufblitzen des Rahmens
+            }
         }
         // Der eigentliche rote Balken
         .health-bar-fill {
@@ -57,9 +64,14 @@ HUD {
         color: white;
 
         .gained-score {
+            position: absolute;
             font-size: 40px;
-            opacity: 0.8;
-            margin-bottom: -45px;
+            color: #4cff00; // Optional: Grün für gewonnene Punkte
+            pointer-events: none; // Damit es nicht mit der Maus interagiert
+            z-index: 2;
+            // Die Animation: 0.6 Sekunden lang, wird am Ende langsamer (ease-out)
+            // 'both' sorgt dafür, dass das Element am Ende unsichtbar bleibt und die Animation von Anfang an angewendet wird
+            animation: score-fall 1s ease-out forwards;
         }
 
         .current-score {
@@ -67,9 +79,52 @@ HUD {
         }
 
         .multiplier {
+            transform-origin: right;
             font-size: 70px;
             font-style: italic;
-            transition: color 0.1s linear;
+            transition: transform 0.1s ease-out, color 0.1s linear;
+            margin-top: -45px;
         }
+    }
+    // Definition der Fall-Animation
+}
+
+@keyframes score-fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0)  scale(0.5f);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.5f);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(120px) scale(0.8f) rotate(10deg); // Fällt nach unten
+    }
+}
+
+// Globale Keyframes für das Wackeln
+@keyframes shake-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg); // Leichte Drehung nach links
+    }
+
+    50% {
+        transform: rotate(5deg); // Leichte Drehung nach rechts
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }

@@ -35,6 +35,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	TimeUntil UntilNextIdleSound;
+	TimeSince SinceAttack;
 	Random random;
 
 	void IHealthEvent.OnDeath()
@@ -151,7 +152,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 				LookAtPlayer();
 
-				if ( (playerPosition - WorldPosition).Length < 1300 ) { Attack(); }
+				if ( (playerPosition - WorldPosition).Length < 1300 && SinceAttack > 0.2f ) { Attack(); SinceAttack = 0; }
 				else { BloodEmitter.Enabled = false; }
 				
 				if ( (playerPosition - WorldPosition).Length > 10000 ) { CurrentState = VampireState.Idle; }
@@ -189,7 +190,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
-		Player.GetComponentInParent<HealthSystem>().Damage(1, false);
+		Player.GetComponentInParent<HealthSystem>().Damage(15, false);
 		// Particle & Sound
 		BloodEmitter.Enabled = true;
 		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 100;

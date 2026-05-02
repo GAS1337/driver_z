@@ -13,7 +13,6 @@ public sealed class HighscoreManager : Component
 	protected override void OnUpdate()
 	{
 		// Log.Info( "Current Score: " + CurrentScore + " Last score: " + LatestScore );
-		Log.Info(CalculateMultiplier());
 	}
 
 	public void IncreaseScore(float amount)

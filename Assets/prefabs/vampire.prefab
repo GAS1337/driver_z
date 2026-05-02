@@ -319,14 +319,14 @@
                   "ConstantB": "0.46512,0,0,1"
                 },
                 "InitialVelocity": {
-                  "X": 10000,
+                  "X": 3000,
                   "Y": 0,
                   "Z": 0
                 },
                 "Lifetime": {
                   "Type": "Range",
                   "Evaluation": "Seed",
-                  "Constants": "0.0199999996,0.100000001,0,0"
+                  "Constants": "0.100000001,0.200000003,0,0"
                 },
                 "LocalSpace": 0,
                 "MaxParticles": 5000,
@@ -480,7 +480,7 @@
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
                 "OnEdge": false,
-                "Rate": 500,
+                "Rate": 1000,
                 "RateOverDistance": 0,
                 "VelocityMultiplier": 1,
                 "VelocityRandom": 0

@@ -121,7 +121,7 @@
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
-              "Constants": "0.2,0.5,0,0"
+              "Constants": "0.200000003,0.5,0,0"
             },
             "LocalSpace": 0,
             "MaxParticles": 5000,
@@ -147,22 +147,25 @@
             "Scale": {
               "Type": "Curve",
               "Evaluation": "Life",
-              "CurveA": [
-                {
-                  "x": 0.03325123,
-                  "y": 1,
-                  "in": -0.056075174,
-                  "out": 0.056075174,
-                  "mode": "Mirrored"
-                },
-                {
-                  "x": 1,
-                  "y": 0,
-                  "in": 2.9152544,
-                  "out": -2.9152544,
-                  "mode": "Mirrored"
-                }
-              ],
+              "CurveA": {
+                "rangey": "0.0861111283,1",
+                "frames": [
+                  {
+                    "x": 0,
+                    "y": 1,
+                    "in": 0.2719998,
+                    "out": -0.2719998,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 1,
+                    "y": 0,
+                    "in": 2.2285717,
+                    "out": -2.2285717,
+                    "mode": "Mirrored"
+                  }
+                ]
+              },
               "CurveB": [
                 {
                   "x": 0.5,
@@ -296,7 +299,7 @@
             "__guid": "cd3f40ce-0a09-4d99-a791-27fbc0811c68",
             "__enabled": true,
             "Flags": 0,
-            "Burst": 10,
+            "Burst": 30,
             "Delay": 0,
             "DestroyOnEnd": true,
             "Duration": 2,
@@ -333,6 +336,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

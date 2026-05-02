@@ -7,75 +7,152 @@
 @{
 	var multiplier = HighscoreManager.CalculateMultiplier();
 	float m = Math.Clamp(multiplier, 1f, 2f);
-    
-	int r = 255; // Rot ist in allen Ziel-Farben (Weiß, Gelb, Orange, Rot) auf Maximum
+
+	int r = 255;
 	int g = 255;
 	int b = 255;
 
 	if (m < 1.3f)
 	{
-		// Phase: Weiß -> Gelb (1.0 bis 1.3)
-		// Blau sinkt von 255 auf 0
 		float ratio = (m - 1.0f) / 0.3f;
 		b = (int)(255 * (1f - ratio));
 		g = 255;
 	}
 	else if (m < 1.65f)
 	{
-		// Phase: Gelb -> Orange (1.3 bis 1.65)
-		// Blau bleibt 0, Grün sinkt von 255 auf 128 (Orange-Wert)
 		float ratio = (m - 1.3f) / 0.35f;
 		b = 0;
 		g = (int)(255 - (127 * ratio));
 	}
 	else
 	{
-		// Phase: Orange -> Rot (1.65 bis 2.0)
-		// Blau bleibt 0, Grün sinkt von 128 auf 0
 		float ratio = (m - 1.65f) / 0.35f;
 		b = 0;
 		g = (int)(128 * (1f - ratio));
 	}
 
 	string colorHex = $"rgb({r}, {g}, {b})";
+	float currentScale = m - 0.2f;
 }
-
 <root>
 	<div class="vitals">
 		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
 	</div>
 	<div class="score">
-		@if (HighscoreManager.LastGainedScore > 0)
+		@foreach (var popup in activePopups)
 		{
-			<p class="gained-score">@($"+{HighscoreManager.LastGainedScore}")</p>
+			<p class="gained-score"
+				   @key="@popup.Id"
+				   style="left: @(popup.RandomOffset)px;">
+				@($"+{popup.Value}")
+			</p>
 		}
-		<p class="current-score">@($"{HighscoreManager.CurrentScore - HighscoreManager.LastGainedScore}")</p>
-		<p class="multiplier" style="color: @colorHex">@($"{multiplier}x")</p>
+		<!-- Wir zeigen hier nun displayedScore an, gerundet auf eine Ganzzahl -->
+		<p class="current-score">@displayedScore.ToString("N0")</p>
+
+		<p class="multiplier" style="@($"color: {colorHex}; transform: scale({currentScale});")">
+		@($"{multiplier}x")
+	</p>
 	</div>
 	<div class="meins">
-		<p>@("HEALTH")</p> <div class="health-bar-bg">
-		<div class="health-bar-fill" style="width: @(PlayerHealth.CurrentHealth / PlayerHealth.SetHealth * 100f)%;"></div>
+		<p>@("HEALTH")</p>
+		<div class="health-bar-bg @(isDamaged ? "damaged" : "")">
+			<div class="health-bar-fill" style="width: @($"{PlayerHealth.CurrentHealth / PlayerHealth.SetHealth * 100f}%")"></div>
+		</div>
 	</div>
-</div>
 </root>
 
 @code
 {
-	HighscoreManager HighscoreManager {get; set; }
+	public class ScorePopup
+	{
+		public Guid Id { get; set; } = Guid.NewGuid();
+		public int Value { get; set; }
+		public DateTime SpawnTime { get; set; }
+		public float RandomOffset { get; set; } // Für horizontale Streuung
+	}
+
+	[Property] HighscoreManager HighscoreManager { get; set; }
 	HealthSystem PlayerHealth { get; set; }
 	GunControl PlayerGun { get; set; }
+
+	private float lastHealth;
+	private bool isDamaged;
+	private TimeSince SinceDamage;
+
+	
+	private List<ScorePopup> activePopups = new();
+	private float scoreProcessed;
+	private float displayedScore = 0f; // Der Wert, der momentan angezeigt wird
 
 	protected override void OnStart()
 	{
 		HighscoreManager = Scene.Get<HighscoreManager>();
-		PlayerHealth =	Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
+		PlayerHealth = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
 		PlayerGun = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<GunControl>();
+        
+		lastHealth = PlayerHealth.CurrentHealth;
+		// Initialisierung, damit der Score nicht bei 0 startet, wenn man einsteigt
+		displayedScore = HighscoreManager.CurrentScore;
 	}
 
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
+	protected override void OnUpdate()
+	{
+		// Wir nähern displayedScore dem echten Score an.
+		// 5f ist die Geschwindigkeit. Höhere Werte = schnelleres Hochzählen.
+		displayedScore = MathX.Lerp(displayedScore, HighscoreManager.CurrentScore, Time.Delta * 5f);
+        
+		// Kleiner Fix: Wenn die Differenz winzig ist, hart setzen, um Flackern zu vermeiden
+		if (Math.Abs(displayedScore - HighscoreManager.CurrentScore) < 0.5f)
+		{
+			displayedScore = HighscoreManager.CurrentScore;
+		}
+		
+		// 2. Neue Punkte erkennen und Popup hinzufügen
+		if (HighscoreManager.CurrentScore > scoreProcessed)
+		{
+			int diff = (int)(HighscoreManager.CurrentScore - scoreProcessed);
+			if (diff > 0)
+			{
+				activePopups.Add(new ScorePopup
+				{
+					Value = (int)diff,
+					SpawnTime = DateTime.Now,
+					// Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
+					RandomOffset = Random.Shared.Float(-200, 200)
+				});
+			}
+			
+			scoreProcessed = HighscoreManager.CurrentScore;
+		}
 
-	protected override int BuildHash() => System.HashCode.Combine(HighscoreManager.CurrentScore, HighscoreManager.LastGainedScore, HighscoreManager.CalculateMultiplier(), PlayerHealth.CurrentHealth, PlayerGun.CurrentRockets);
+		// 3. Alte Popups entfernen (nach 0.6 Sekunden, passend zur CSS Animation)
+		activePopups.RemoveAll(p => (DateTime.Now - p.SpawnTime).TotalSeconds > 1);
 
+		// Schadens-Check
+		if (PlayerHealth.CurrentHealth < lastHealth)
+		{
+			// Schaden wurde erkannt!
+			isDamaged = true;
+			SinceDamage = 0; // Dauer der Animation in Sekunden
+		}
+
+		lastHealth = PlayerHealth.CurrentHealth;
+
+		// Timer herunterzählen, um die Klasse wieder zu entfernen
+		if (SinceDamage > 0.2f)
+		{
+			isDamaged = false;
+		}
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine(
+		displayedScore, // Wichtig: Damit das UI bei jeder Änderung von displayedScore aktualisiert wird
+		HighscoreManager.LastGainedScore,
+		activePopups.Count,
+		HighscoreManager.CalculateMultiplier(),
+		PlayerHealth.CurrentHealth,
+		isDamaged,
+		PlayerGun.CurrentRockets
+	);
 }

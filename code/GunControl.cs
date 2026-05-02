@@ -4,6 +4,7 @@ using Sandbox.Modals;
 using System;
 using System.Diagnostics;
 using System.Numerics;
+using System.Threading.Tasks;
 using static HealthSystem;
 using static Sandbox.ModelPhysics;
 
@@ -21,6 +22,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
 	[Property] GameObject BulletSparkEnemy;
+	[Property] SpriteRenderer MuzzleFlashSprite;
 	[Property] ParticleEffect MuzzleFlashEffect;
 	[Property] ParticleSphereEmitter MuzzleFlashEmitter;
 	[Property] float ShootCooldown = 0.2f;
@@ -50,15 +52,20 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		HighscoreManager.WriteToLeaderboard();
 		// HighscoreManager.ResetScore();
 
+		DeathVignette();
+
 		Scene.TimeScale = 0.3f;
 		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
-		SceneLoader.StartCountdown( 0, 3);
+		SceneLoader.StartCountdown( 0, 3 );
 	}
+
 
 	protected override void OnStart()
 	{
 		SceneLoader = Scene.Get<SceneLoader>();
 		HighscoreManager = Scene.Get<HighscoreManager>();
+
+		MuzzleFlashSprite.Enabled = false;
 
 		CurrentRockets = StartRockets;
 	}
@@ -68,7 +75,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// Ramming();
 
 		// Wo man hinaimed
-		Ray CameraRay = new Ray(Muzzle.WorldPosition, (CrosshairDecal.WorldPosition - Muzzle.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
+		Ray CameraRay = new Ray(MainCamera.WorldPosition, (CrosshairDecal.WorldPosition - MainCamera.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
 		ShootTrace = Scene.Trace.Ray( CameraRay, 20000f )
 			.Radius( 8 )
 			.IgnoreGameObjectHierarchy( GameObject )
@@ -77,13 +84,14 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// DebugOverlay.Trace( ShootTrace );
 
 		// Turret Yaw mit Camera Yaw mitdrehen
-		Turret.WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Backward, Vector3.Up );
+		Turret.WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Backward, CarBody.WorldRotation.Up );
 
 		if ( Input.Down( "attack1" ) && NextShot )
 		{
 			// Log.Info( "Shooting" );
-			Sound.Play( "sounds/bullet-ricochet.sound", Turret.WorldPosition );
-			MuzzleFlashEmitter.Emit(MuzzleFlashEffect);
+			Sound.Play( "sounds/bullet-ricochet.sound", Muzzle.WorldPosition );
+			MuzzleFlashEmitter.Emit( MuzzleFlashEffect );
+			FlashMuzzleSprite( 0.05f );
 
 			if ( ShootTrace.Hit )
 			{
@@ -99,8 +107,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
 					}
-					else if ( ShootTrace.GameObject.GetComponent<VampireBrain>() != null ) 
-					{	
+					else if ( ShootTrace.GameObject.GetComponent<VampireBrain>() != null )
+					{
 						ShootTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
 						ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.1f );
 
@@ -111,7 +119,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					else if ( ShootTrace.GameObject.GetComponent<GhostBrain>() != null )
 					{
 						ShootTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
-						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0.2f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0.2f );
+						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0.02f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0.02f );
 
 						// ShootTrace.GameObject.GetComponent<GhostBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
@@ -123,7 +131,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						Rigidbody rb = ShootTrace.GameObject.GetComponent<Rigidbody>();
 
 						rb.GravityScale = 1;
-						rb.SmoothRotate( rb.WorldRotation.Angles().WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] {-10, 10} ) ), 0.001f, 0.1f );
+						rb.SmoothRotate( rb.WorldRotation.Angles().WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] { -10, 10 } ) ), 0.001f, 0.1f );
 						// ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyTorque( ShootTrace.GameObject.WorldRotation.Up * 100000 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
 						ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( ShootTrace.Direction * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
 					}
@@ -131,20 +139,20 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					// Partikel und Sound und bullethole für Gegner
-					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * 5; newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX(4);
+					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * random.Float(3, 5); newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX( 4 );
 					newBulletSparkEnemy = BulletSparkEnemy.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 
 					Sound.Play( "sounds/bullet-impact-flesh.sound", ShootTrace.HitPosition );
 				}
-				else 
+				else
 				{
 					// normaler Partikel
 					newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 				}
 			}
-			else 
-			{ 
-				ShootBeam.TargetPosition = ShootTrace.EndPosition; 
+			else
+			{
+				ShootBeam.TargetPosition = ShootTrace.EndPosition;
 			}
 
 			ShootBeam.SpawnBeam();
@@ -173,10 +181,27 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	}
 
+	async Task FlashMuzzleSprite(float time)
+	{
+		MuzzleFlashSprite.WorldRotation = MuzzleFlashSprite.WorldRotation.Angles().WithRoll( random.Int(-10, 15) );
+		MuzzleFlashSprite.Enabled = true;
+		await Task.DelayRealtimeSeconds( time );
+		MuzzleFlashSprite.Enabled = false;
+	}
+
+	async Task DeathVignette()
+	{
+		while ( MainCamera.GetComponent<Vignette>().Intensity < 2f )
+		{
+			MainCamera.GetComponent<Vignette>().Intensity += Time.Delta * 3f;
+			await Task.FrameEnd();
+		}
+	}
+
 	void LaunchRocket() 
 	{
 		if ( CurrentRockets <= 0 ) return; // Sound
-		Sound.Play( "sounds/grenadelauncher.sound", Turret.WorldPosition );
+		Sound.Play( "sounds/grenadelauncher.sound", Muzzle.WorldPosition );
 
 		GameObject newRocket = Rocket.Clone( Muzzle.WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
 		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (ShootTrace.EndPosition - Muzzle.WorldPosition).Normal * RocketSpeed;

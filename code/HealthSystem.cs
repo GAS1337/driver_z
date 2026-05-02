@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 {
+	CameraComponent MainCamera;
 	[Property] public float SetHealth;
 	[Property] SpriteRenderer HealthbarRenderer;
 	IEnumerable<ModelRenderer> ModelRendererList;
@@ -42,6 +43,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	protected override void OnStart()
 	{
 		HighscoreManager = Scene.Get<HighscoreManager>();
+		MainCamera = Scene.GetComponentInChildren<CameraComponent>();
 		ModelRendererList = GetComponentsInChildren<ModelRenderer>();
 		originalTint = ModelRendererList.First<ModelRenderer>().Tint;
 
@@ -61,9 +63,12 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	public void Damage( float amount, bool enableSound = true )
 	{
 		if ( CurrentHealth <= 0 ) return;
+		if ( amount <= 0 ) return;
 
 		CurrentHealth = (CurrentHealth - amount).Clamp( 0, SetHealth );
+		
 		ApplyDamageTint();
+
 
 		if ( HealthbarRenderer != null ) 
 		{
@@ -88,11 +93,18 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	[Button]
 	async Task ApplyDamageTint() 
 	{
+
 		foreach ( var renderer in ModelRendererList )
 		{
 			renderer.Tint = Color.Average(new Color[] { Color.White, Color.Black, Color.Black} );
 			Material dmgMaterial = Material.Load( "materials/primary_white_emissive.vmat" );
 			renderer.MaterialOverride = dmgMaterial;
+		}
+
+		if ( GameObject.Tags.Has( "player" ) )
+		{
+			MainCamera.GetComponent<Vignette>().Color = Color.Red;
+			// MainCamera.GetComponent<Vignette>().Intensity = 1;
 		}
 
 		TimeSinceLastDamage = 0;
@@ -106,6 +118,13 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 			renderer.Tint = originalTint;
 			renderer.MaterialOverride = null;
 		}
+
+		if ( GameObject.Tags.Has( "player" ) )
+		{
+			MainCamera.GetComponent<Vignette>().Color = Color.Black;
+			// MainCamera.GetComponent<Vignette>().Intensity = 0.6f;
+		}
+
 	}
 
 	[Button]

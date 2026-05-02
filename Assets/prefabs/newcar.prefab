@@ -245,6 +245,12 @@
           "go": "840e9190-af50-4c06-aeee-15fa9aeb0382",
           "component_type": "ParticleSphereEmitter"
         },
+        "MuzzleFlashSprite": {
+          "_type": "component",
+          "component_id": "e6abb013-6e62-4574-8ad8-37fc3a85fd46",
+          "go": "d5e2eec6-f331-4fc0-94de-5553cdc5aebe",
+          "component_type": "SpriteRenderer"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -1618,44 +1624,8 @@
                         "Flags": 0,
                         "Additive": false,
                         "Alpha": 1,
-                        "BeamColor": {
-                          "Type": "Gradient",
-                          "Evaluation": "Life",
-                          "GradientA": {
-                            "blend": "Linear",
-                            "color": [
-                              {
-                                "t": 0,
-                                "c": "1,1,0,1"
-                              },
-                              {
-                                "t": 1,
-                                "c": "1,0.5,0,1"
-                              }
-                            ],
-                            "alpha": [
-                              {
-                                "t": 0,
-                                "a": 0
-                              },
-                              {
-                                "t": 1,
-                                "a": 1
-                              }
-                            ]
-                          },
-                          "GradientB": {
-                            "blend": "Linear",
-                            "color": [
-                              {
-                                "t": 0.5,
-                                "c": "1,1,1,1"
-                              }
-                            ],
-                            "alpha": []
-                          }
-                        },
-                        "BeamLifetime": 0.02,
+                        "BeamColor": "1,1,1,1",
+                        "BeamLifetime": 0.1,
                         "BeamsPerSecond": 0,
                         "Brightness": 1,
                         "DepthFeather": 0,
@@ -1672,8 +1642,8 @@
                         "OnComponentFixedUpdate": null,
                         "OnComponentStart": null,
                         "OnComponentUpdate": null,
-                        "Opaque": false,
-                        "Scale": 1,
+                        "Opaque": true,
+                        "Scale": 0,
                         "Shadows": false,
                         "TargetGameObject": null,
                         "TargetPosition": "16982850,10155660,469541.5",
@@ -1683,7 +1653,7 @@
                         "TextureScale": 128,
                         "TextureScroll": 0,
                         "TextureScrollSpeed": 0,
-                        "TravelBetweenPoints": false,
+                        "TravelBetweenPoints": true,
                         "TravelLerp": {
                           "Type": "Range",
                           "Evaluation": "Life",
@@ -1748,7 +1718,7 @@
                             "ApplyRotation": false,
                             "ApplyShape": true,
                             "Bounce": 1,
-                            "Brightness": 25,
+                            "Brightness": 250,
                             "Bumpiness": 0,
                             "Collision": false,
                             "CollisionIgnore": null,
@@ -1775,7 +1745,7 @@
                             "Gradient": {
                               "Type": "Range",
                               "Evaluation": "Life",
-                              "ConstantA": "1,0.5,0,1",
+                              "ConstantA": "200,100,0,1",
                               "ConstantB": "0.46512,0.23256,0,1"
                             },
                             "InitialVelocity": {
@@ -1786,7 +1756,7 @@
                             "Lifetime": {
                               "Type": "Range",
                               "Evaluation": "Seed",
-                              "Constants": "0.100000001,0.150000006,0,0"
+                              "Constants": "0.0700000003,0.0700000003,0,0"
                             },
                             "LocalSpace": 1,
                             "MaxParticles": 5000,
@@ -1812,29 +1782,32 @@
                             "Scale": {
                               "Type": "Curve",
                               "Evaluation": "Life",
-                              "CurveA": [
-                                {
-                                  "x": 0,
-                                  "y": 0,
-                                  "in": -9.333329,
-                                  "out": 9.333329,
-                                  "mode": "Mirrored"
-                                },
-                                {
-                                  "x": 0.03325123,
-                                  "y": 1,
-                                  "in": -0.056075174,
-                                  "out": 0.056075174,
-                                  "mode": "Mirrored"
-                                },
-                                {
-                                  "x": 1,
-                                  "y": 0,
-                                  "in": 2.9152544,
-                                  "out": -2.9152544,
-                                  "mode": "Mirrored"
-                                }
-                              ],
+                              "CurveA": {
+                                "rangey": "0,2",
+                                "frames": [
+                                  {
+                                    "x": 0,
+                                    "y": 0,
+                                    "in": -9.333329,
+                                    "out": 9.333329,
+                                    "mode": "Mirrored"
+                                  },
+                                  {
+                                    "x": 0.03325123,
+                                    "y": 1,
+                                    "in": -0.056075174,
+                                    "out": 0.056075174,
+                                    "mode": "Mirrored"
+                                  },
+                                  {
+                                    "x": 1,
+                                    "y": 0,
+                                    "in": 2.9152544,
+                                    "out": -2.9152544,
+                                    "mode": "Mirrored"
+                                  }
+                                ]
+                              },
                               "CurveB": [
                                 {
                                   "x": 0.5,
@@ -1948,6 +1921,122 @@
                             "Rate": 0,
                             "RateOverDistance": 0,
                             "Velocity": 0
+                          }
+                        ],
+                        "Children": []
+                      },
+                      {
+                        "__guid": "d5e2eec6-f331-4fc0-94de-5553cdc5aebe",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "FlashSprite",
+                        "Position": "0,3.83501244,0.650222778",
+                        "Rotation": "0,0,0,1",
+                        "Scale": "5,5,5",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [
+                          {
+                            "__type": "Sandbox.SpriteRenderer",
+                            "__guid": "e6abb013-6e62-4574-8ad8-37fc3a85fd46",
+                            "__enabled": true,
+                            "Flags": 0,
+                            "__version": 2,
+                            "Additive": false,
+                            "AlphaCutoff": 0.1,
+                            "Billboard": "Particle",
+                            "Color": "100,100,100,1",
+                            "DepthFeather": 0,
+                            "FlipHorizontal": false,
+                            "FlipVertical": false,
+                            "FogStrength": 1,
+                            "IsSorted": false,
+                            "Lighting": false,
+                            "OnAnimationEnd": null,
+                            "OnAnimationStart": null,
+                            "OnBroadcastMessage": null,
+                            "OnComponentDestroy": null,
+                            "OnComponentDisabled": null,
+                            "OnComponentEnabled": null,
+                            "OnComponentFixedUpdate": null,
+                            "OnComponentStart": null,
+                            "OnComponentUpdate": null,
+                            "Opaque": false,
+                            "OverlayColor": "1,1,1,0",
+                            "PlaybackSpeed": 1,
+                            "RenderOptions": {
+                              "GameLayer": true,
+                              "OverlayLayer": false,
+                              "BloomLayer": false,
+                              "AfterUILayer": false
+                            },
+                            "Shadows": false,
+                            "Size": "25,25",
+                            "Sprite": {
+                              "$compiler": "embed",
+                              "$source": null,
+                              "data": {
+                                "Animations": [
+                                  {
+                                    "Name": "Default",
+                                    "FrameRate": 15,
+                                    "Origin": "0.5,0.5",
+                                    "LoopMode": "Loop",
+                                    "Frames": [
+                                      {
+                                        "Texture": {
+                                          "$compiler": "texture",
+                                          "$source": "imagefile",
+                                          "data": {
+                                            "FilePath": "materials/particles/muzzleflash.png",
+                                            "MaxSize": 4096,
+                                            "ConvertHeightToNormals": false,
+                                            "NormalScale": 1,
+                                            "Rotate": 0,
+                                            "FlipVertical": false,
+                                            "FlipHorizontal": false,
+                                            "Cropping": {
+                                              "Left": 0,
+                                              "Top": 0,
+                                              "Right": 0,
+                                              "Bottom": 0
+                                            },
+                                            "Padding": {
+                                              "Left": 0,
+                                              "Top": 0,
+                                              "Right": 0,
+                                              "Bottom": 0
+                                            },
+                                            "InvertColor": false,
+                                            "Tint": "1,1,1,1",
+                                            "Blur": 0,
+                                            "Sharpen": 0,
+                                            "Brightness": 1,
+                                            "Contrast": 1,
+                                            "Saturation": 1,
+                                            "Hue": 0,
+                                            "Colorize": false,
+                                            "TargetColor": "1,1,1,1",
+                                            "CacheToDisk": true
+                                          },
+                                          "compiled": "textures/generated/imagefile/e0b2571aea727c97.vtex"
+                                        },
+                                        "BroadcastMessages": []
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "__references": null
+                              },
+                              "compiled": null
+                            },
+                            "StartingAnimationName": "Default",
+                            "TextureFilter": "Bilinear"
                           }
                         ],
                         "Children": []
@@ -3986,7 +4075,7 @@
         "Name": "Crosshair",
         "Position": "2102.85596,0,0",
         "Rotation": "0,0,0,1",
-        "Scale": "34,1,1",
+        "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
@@ -3998,13 +4087,13 @@
           {
             "__type": "Sandbox.SpriteRenderer",
             "__guid": "0c78e7a4-23ce-4983-9223-965dc7f8e352",
-            "__enabled": false,
+            "__enabled": true,
             "Flags": 0,
             "__version": 2,
             "Additive": false,
-            "AlphaCutoff": 0.5,
-            "Billboard": "YOnly",
-            "Color": "10,0.1,0.1,1",
+            "AlphaCutoff": 0.1,
+            "Billboard": "Always",
+            "Color": "1,1,1,1",
             "DepthFeather": 0,
             "FlipHorizontal": false,
             "FlipVertical": false,
@@ -4030,7 +4119,7 @@
               "AfterUILayer": false
             },
             "Shadows": true,
-            "Size": "50,50",
+            "Size": "75,75",
             "Sprite": {
               "$compiler": "embed",
               "$source": null,
@@ -4059,7 +4148,7 @@
           {
             "__type": "Sandbox.Decal",
             "__guid": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "__version": 3,
             "AttenuationAngle": 0.1,

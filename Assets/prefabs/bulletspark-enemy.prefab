@@ -152,7 +152,7 @@
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
-              "Constants": "0.2,0.5,0,0"
+              "Constants": "0.0799999982,0.800000012,0,0"
             },
             "LocalSpace": 0,
             "MaxParticles": 5000,
@@ -176,7 +176,7 @@
             "PushStrength": 0,
             "Roll": 0,
             "Scale": {
-              "Type": "Curve",
+              "Type": "CurveRange",
               "Evaluation": "Life",
               "CurveA": [
                 {
@@ -196,10 +196,17 @@
               ],
               "CurveB": [
                 {
-                  "x": 0.5,
+                  "x": 0,
                   "y": 0.5,
                   "in": 0,
                   "out": 0,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 1.6216217,
+                  "out": -1.6216217,
                   "mode": "Mirrored"
                 }
               ]
@@ -308,7 +315,7 @@
                             "TargetColor": "0,1,0,1",
                             "CacheToDisk": true
                           },
-                          "compiled": "textures/generated/imagefile/a7827c23328ae86d.vtex"
+                          "compiled": null
                         },
                         "BroadcastMessages": []
                       }
@@ -327,7 +334,7 @@
             "__guid": "cd3f40ce-0a09-4d99-a791-27fbc0811c68",
             "__enabled": true,
             "Flags": 0,
-            "Burst": 20,
+            "Burst": 40,
             "Delay": 0,
             "DestroyOnEnd": true,
             "Duration": 2,
@@ -364,6 +371,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

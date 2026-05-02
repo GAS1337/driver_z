@@ -79,7 +79,7 @@
         "OnTriggerExit": null,
         "RollingResistance": null,
         "Static": true,
-        "Surface": null,
+        "Surface": "surfaces/bone.surface",
         "SurfaceVelocity": "0,0,0"
       }
     ],

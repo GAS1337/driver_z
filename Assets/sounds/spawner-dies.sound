@@ -1,11 +1,14 @@
 {
   "UI": false,
-  "Volume": "0.150000036",
-  "Pitch": "0.949999988 1.14999998",
+  "Volume": "1.5",
+  "Pitch": "0.800000191 1",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/autocannonv1.vsnd"
+    "sounds/physics/phys-impact-bone-001.vsnd",
+    "sounds/physics/phys-impact-bone-002.vsnd",
+    "sounds/physics/phys-impact-bone-003.vsnd",
+    "sounds/physics/phys-impact-bone-004.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
@@ -22,8 +25,15 @@
       "mode": "Mirrored"
     },
     {
-      "x": 0.6640625,
-      "y": 0.065,
+      "x": 0.05,
+      "y": 0.22,
+      "in": 3.5,
+      "out": -3.5,
+      "mode": "Mirrored"
+    },
+    {
+      "x": 0.2,
+      "y": 0.04,
       "in": 0.16,
       "out": -0.16,
       "mode": "Mirrored"
@@ -37,8 +47,8 @@
     }
   ],
   "DefaultMixer": {
-    "Name": "game",
-    "Id": "9aaefee8-2e62-4dee-962b-691c6f6ce29c"
+    "Name": "unknown",
+    "Id": "00000000-0000-0000-0000-000000000000"
   },
   "__references": [],
   "__version": 1
