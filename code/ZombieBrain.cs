@@ -13,6 +13,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	GameObject Player;
 	[Property] Rigidbody Body;
 	[Property] GameObject DeadZombie;
+	[Property] GameObject BloodDecal;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
 	[Property] ParticleRingEmitter AttackParticle;
@@ -39,7 +40,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	TimeUntil NextSlam;
 	public TimeUntil KnockBack;
 
-	TimeSince SinceSlamAnimationStart;
+	TimeSince SinceHitAnimationStart;
+	Vector3 originalScale;
 
 	Random random = new Random();
 
@@ -52,6 +54,9 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		CurrentState = ZombieState.Wander;
 		Agent.MoveTo( Body.WorldPosition );
 		Player = Scene.FindAllWithTag("carbody").First<GameObject>();
+
+		originalScale = WorldScale;
+
 		if ( !DebugMode ) { StateDebugText.Enabled = false; }
 		// Log.Info( $"[START] Player found: {Player.Name}" );
 	}
@@ -66,6 +71,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
+		GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ) );
 		Sound.Play( "sounds/zombie-dies.sound", _deadClone.WorldPosition );
 	}
 
@@ -271,6 +277,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	
 	void DoSlam()
 	{
+		AnimateHit();
 		Log.Info( $"{GameObject.Name} is slamming!" );
 		// Attack Trace
 		// AnimateSlam();
@@ -386,14 +393,23 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		}
 	}
 
-	async Task AnimateSlam() 
+
+	// Nur für ModelRenderer muss noch gemacht werden
+	public async Task AnimateHit() 
 	{
-		SinceSlamAnimationStart = 0;
-		while (SinceSlamAnimationStart < 2) 
+		float duration = 0.1f;
+		SinceHitAnimationStart = 0;
+
+		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.3f) );
+
+		while (SinceHitAnimationStart < duration) 
 		{ 
-			WorldScale = WorldScale * SinceSlamAnimationStart;
+			WorldScale = WorldScale.WithZ(WorldScale.z.LerpTo(originalScale.z, 0.1f));
+			await Task.FrameEnd();
 		}
-	
+
+		if ( !this.IsValid() ) return;
+		WorldScale = originalScale;
 	}
 
 }

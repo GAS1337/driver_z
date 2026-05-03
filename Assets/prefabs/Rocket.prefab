@@ -972,7 +972,7 @@
                       "AfterUILayer": false
                     },
                     "RotationOffset": 0,
-                    "Scale": 1,
+                    "Scale": 2,
                     "Shadows": false,
                     "SortMode": "Unsorted",
                     "Sprite": {

@@ -40,6 +40,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	GameObject newBulletSpark;
 	GameObject newBulletSparkEnemy;
 
+	TimeSince SinceGunAnimationStart;
+	Vector3 originalGunScale;
 
 	Game.Overlay overlay = new Game.Overlay();
 	Random random = new Random();
@@ -65,6 +67,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		SceneLoader = Scene.Get<SceneLoader>();
 		HighscoreManager = Scene.Get<HighscoreManager>();
 
+		originalGunScale = Turret.WorldScale;
 		MuzzleFlashSprite.Enabled = false;
 
 		CurrentRockets = StartRockets;
@@ -77,7 +80,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// Wo man hinaimed
 		Ray CameraRay = new Ray(MainCamera.WorldPosition, (CrosshairDecal.WorldPosition - MainCamera.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
 		ShootTrace = Scene.Trace.Ray( CameraRay, 20000f )
-			.Radius( 8 )
+			.Radius( 16 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags("dead")
 			.Run();
@@ -92,20 +95,24 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			Sound.Play( "sounds/bullet-ricochet.sound", Muzzle.WorldPosition );
 			MuzzleFlashEmitter.Emit( MuzzleFlashEffect );
 			FlashMuzzleSprite( 0.05f );
+			AnimateGun( 0.1f);
 
 			if ( ShootTrace.Hit )
 			{
-				ShootBeam.TargetPosition = ShootTrace.HitPosition;
 
 				newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 				newBulletHole.SetParent( ShootTrace.GameObject );
 
 				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
 				{
+					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
+
 					if ( ShootTrace.GameObject.GetComponent<ZombieBrain>() != null )
 					{
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
+						ShootTrace.GameObject.GetComponent<ZombieBrain>().AnimateHit();
+
 					}
 					else if ( ShootTrace.GameObject.GetComponent<VampireBrain>() != null )
 					{
@@ -114,13 +121,15 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 						ShootTrace.GameObject.WorldRotation = ShootTrace.GameObject.WorldRotation.Angles().WithYaw( ShootTrace.GameObject.WorldRotation.Yaw() + random.Float( -10, 10 ) );
 						ShootTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += ShootTrace.Direction * 200;
+						ShootTrace.GameObject.GetComponent<VampireBrain>().AnimateHit();
 						// Rotation?
 					}
 					else if ( ShootTrace.GameObject.GetComponent<GhostBrain>() != null )
 					{
 						ShootTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
-						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0.02f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0.02f );
+						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0f ); // 0f = disabled
 
+						ShootTrace.GameObject.GetComponent<GhostBrain>().AnimateHit();
 						// ShootTrace.GameObject.GetComponent<GhostBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
 					}
@@ -131,12 +140,12 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 						Rigidbody rb = ShootTrace.GameObject.GetComponent<Rigidbody>();
 
 						rb.GravityScale = 1;
-						rb.SmoothRotate( rb.WorldRotation.Angles().WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] { -10, 10 } ) ), 0.001f, 0.1f );
+						rb.SmoothRotate( rb.WorldRotation.Angles().WithPitch( random.FromArray<int>( new int[] { -10, -15 } ) )
+							.WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] { -15, 15 } ) ), 0.001f, 1f );
 						// ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyTorque( ShootTrace.GameObject.WorldRotation.Up * 100000 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
-						ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( ShootTrace.Direction * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
+						ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( (ShootTrace.Direction + Vector3.Up) * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
 					}
 
-					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					// Partikel und Sound und bullethole für Gegner
 					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * random.Float(3, 5); newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX( 4 );
@@ -150,11 +159,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
 				}
 			}
-			else
-			{
-				ShootBeam.TargetPosition = ShootTrace.EndPosition;
-			}
 
+			ShootBeam.TargetPosition = ShootTrace.EndPosition;
 			ShootBeam.SpawnBeam();
 
 			NextShot = ShootCooldown;
@@ -163,7 +169,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		if ( Input.Pressed( "attack2" ) ) 
 		{
 			// Log.Info( "Rocket" );
-
 			// Rocket
 			LaunchRocket();
 		}
@@ -173,7 +178,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			Scene.TimeScale = 0;
 			Mixer.Master.Volume = 0f;
 		}
-		else if ( GetComponent<HealthSystem>().CurrentHealth > 0 ) 
+		else if ( GetComponent<HealthSystem>().CurrentHealth > 0 && Scene.TimeScale == 0 ) 
 		{ 
 			Scene.TimeScale = 1;
 			Mixer.Master.Volume = 1.0f;
@@ -201,6 +206,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	void LaunchRocket() 
 	{
 		if ( CurrentRockets <= 0 ) return; // Sound
+		AnimateGun( 0.3f );
 		Sound.Play( "sounds/grenadelauncher.sound", Muzzle.WorldPosition );
 
 		GameObject newRocket = Rocket.Clone( Muzzle.WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
@@ -209,6 +215,24 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		CurrentRockets--;
 	}
 
+	public async Task AnimateGun(float strength)
+	{
+		float duration = 0.1f;
+		SinceGunAnimationStart = 0;
+
+		Turret.WorldScale = originalGunScale.z * (1f + strength);
+
+		while ( SinceGunAnimationStart < duration )
+		{
+			Turret.WorldScale = Turret.WorldScale.z.LerpTo( originalGunScale.z, 0.1f );
+			await Task.FrameEnd();
+		}
+
+		if ( !this.IsValid() ) return;
+		Turret.WorldScale = originalGunScale;
+	}
+
+	/*
 	void Ramming() 
 	{ 
 		if (CarBody.Velocity.WithZ(0).Length > 500) 
@@ -232,5 +256,5 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 				}
 			}
 		}
-	}
+	}*/
 }

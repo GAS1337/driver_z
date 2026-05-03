@@ -68,7 +68,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		CurrentHealth = (CurrentHealth - amount).Clamp( 0, SetHealth );
 		
 		ApplyDamageTint();
-
+		// PauseGameFor( 1 );
 
 		if ( HealthbarRenderer != null ) 
 		{
@@ -125,6 +125,15 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 			// MainCamera.GetComponent<Vignette>().Intensity = 0.6f;
 		}
 
+	}
+
+	async Task PauseGameFor(int milliseconds) 
+	{ 
+		Scene.TimeScale = 0.1f;
+		await Task.Delay( milliseconds );
+		if (!this.IsValid) Scene.TimeScale = 1;
+
+		Scene.TimeScale = 1;
 	}
 
 	[Button]

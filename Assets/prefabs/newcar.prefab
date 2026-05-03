@@ -4006,11 +4006,11 @@
               {
                 "__type": "Sandbox.SoundPointComponent",
                 "__guid": "dab8fdab-6880-4623-b8d7-4112df3d86fc",
-                "__enabled": false,
+                "__enabled": true,
                 "Flags": 0,
                 "Distance": 7000,
                 "DistanceAttenuation": false,
-                "DistanceAttenuationOverride": true,
+                "DistanceAttenuationOverride": false,
                 "Falloff": {
                   "rangey": "0.204999998,0.597500026",
                   "frames": [
@@ -4054,12 +4054,12 @@
                 "ReflectionOverride": false,
                 "Reflections": false,
                 "Repeat": false,
-                "SoundEvent": "sounds/lantern.sound",
+                "SoundEvent": "sounds/musik/nikossongv05.sound",
                 "SoundOverride": false,
                 "StopOnNew": false,
                 "TargetMixer": {
-                  "Name": "unknown",
-                  "Id": "00000000-0000-0000-0000-000000000000"
+                  "Name": "music",
+                  "Id": "d9c09918-7dee-4bae-9a85-27fdc0899d57"
                 },
                 "Volume": 1
               }

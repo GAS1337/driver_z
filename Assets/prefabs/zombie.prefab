@@ -84,7 +84,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "SetHealth": 500
+        "SetHealth": 300
       },
       {
         "__type": "AttackSystem",
@@ -120,6 +120,10 @@
           "component_id": "2d4f2f06-b84a-4f40-ac0a-2a071a55cd83",
           "go": "cc9c3fa5-72e9-4856-a4e0-5807541117f6",
           "component_type": "ParticleRingEmitter"
+        },
+        "BloodDecal": {
+          "_type": "gameobject",
+          "prefab": "prefabs/blood-decal.prefab"
         },
         "Body": {
           "_type": "component",

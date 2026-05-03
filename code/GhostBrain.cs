@@ -1,5 +1,6 @@
 using Sandbox;
 using System;
+using System.Threading.Tasks;
 using static Ballistics;
 using static HealthSystem;
 
@@ -35,6 +36,9 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	TimeSince timeSinceLastAttack;
 	float AttackCharge = 0;
 
+	TimeSince SinceHitAnimationStart;
+	Vector3 originalScale;
+
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	Random random;
@@ -52,6 +56,8 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
 		PlayerBody = Player.GetComponent<Rigidbody>();
+
+		originalScale = WorldScale;
 
 		if ( !DebugMode ) { StateDebugText.Enabled = false; }
 
@@ -224,5 +230,21 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		}
 	}
 
+	public async Task AnimateHit()
+	{
+		float duration = 0.1f;
+		SinceHitAnimationStart = 0;
+
+		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.3f) );
+
+		while ( SinceHitAnimationStart < duration )
+		{
+			WorldScale = WorldScale.WithZ( WorldScale.z.LerpTo( originalScale.z, 0.1f ) );
+			await Task.FrameEnd();
+		}
+
+		if ( !this.IsValid() ) return;
+		WorldScale = originalScale;
+	}
 
 }

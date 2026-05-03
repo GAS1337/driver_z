@@ -37,8 +37,8 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 
 			// HealthSystem holen, wenn nicht da aus Children holen und damagen
 			HealthSystem healthSystem = monster.GetComponent<HealthSystem>();
-			if ( healthSystem != null ) healthSystem.Damage( healthSystem.CurrentHealth * 0.7f );
-			else { monster.GetComponentInChildren<HealthSystem>().Damage( monster.GetComponentInChildren<HealthSystem>().CurrentHealth * 0.7f ); }
+			if ( healthSystem != null ) healthSystem.Damage( healthSystem.CurrentHealth * 0.8f );
+			else { monster.GetComponentInChildren<HealthSystem>().Damage( monster.GetComponentInChildren<HealthSystem>().CurrentHealth * 0.8f ); }
 		}
 		GameObject newDeadMonsterSpawner = DeadMonsterSpawner.Clone(WorldPosition + Vector3.Up, WorldRotation, WorldScale);
 		foreach ( GameObject child in newDeadMonsterSpawner.Children ) 
