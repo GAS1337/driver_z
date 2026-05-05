@@ -11646,7 +11646,7 @@
       "__guid": "0e1547b7-b03f-460e-8c33-8f1a489ced48",
       "__version": 2,
       "Flags": 0,
-      "Name": "Nikos Song Blasting on whole Tutorial Soundscape",
+      "Name": "Whole Tutorial Soundscape",
       "Position": "-32584,-6970,1120",
       "Rotation": "0,0,0,1",
       "Scale": "3,3,3",
@@ -69309,6 +69309,11 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
+        }
+      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
@@ -69316,11 +69321,6 @@
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
-      },
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
-        }
       }
     }
   },

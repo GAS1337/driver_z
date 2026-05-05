@@ -2,8 +2,8 @@
   "MasterVolume": "1",
   "LoopedSounds": [
     {
-      "SoundFile": "sounds/musik/nikossongv05.vsnd",
-      "Volume": "0.800000191 1"
+      "SoundFile": "sounds/ambience/plains-wind-loop.vsnd",
+      "Volume": "1"
     }
   ],
   "StingSounds": [
