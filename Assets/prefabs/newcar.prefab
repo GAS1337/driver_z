@@ -61,6 +61,7 @@
         },
         "Speed": 2500,
         "SteeringAngle": 20,
+        "SteeringBoost": 20,
         "Torque": 15000000
       },
       {
@@ -2024,7 +2025,7 @@
                                             "TargetColor": "1,1,1,1",
                                             "CacheToDisk": true
                                           },
-                                          "compiled": "textures/generated/imagefile/e0b2571aea727c97.vtex"
+                                          "compiled": null
                                         },
                                         "BroadcastMessages": []
                                       }
@@ -3143,7 +3144,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Headlight",
-            "Position": "-139,32.0015297,64",
+            "Position": "-144,58.0187759,64",
             "Rotation": "-0.130526498,2.54144492E-08,0.991444886,1.93041402E-07",
             "Scale": "1,1,1",
             "Tags": "light_spot,light",
@@ -3165,7 +3166,7 @@
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "44.97674,50,12.32558,1",
+                "LightColor": "150,133.0465,36.97674,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -3184,11 +3185,11 @@
                 "__version": 2,
                 "Flags": 0,
                 "Name": "Licht",
-                "Position": "0.208195195,1.00149798,-12.3678398",
-                "Rotation": "-0.0922959596,0.0922959596,0.701057374,-0.701057374",
-                "Scale": "0.5,0.5,0.5",
+                "Position": "-11.7703056,-7.21216202E-06,10.1231289",
+                "Rotation": "0.701057374,0.701057374,0.0922961012,0.092295818",
+                "Scale": "1.5,1,0.750000238",
                 "Tags": "",
-                "Enabled": false,
+                "Enabled": true,
                 "NetworkMode": 2,
                 "NetworkFlags": 0,
                 "NetworkOrphaned": 0,
@@ -3206,7 +3207,7 @@
                     "MaterialGroup": null,
                     "MaterialOverride": null,
                     "Materials": null,
-                    "Model": "models/prototype kit/target-a-round.vmdl",
+                    "Model": "models/graveyard kit/lantern-glass.vmdl",
                     "OnComponentDestroy": null,
                     "OnComponentDisabled": null,
                     "OnComponentEnabled": null,
@@ -3232,7 +3233,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Headlight",
-            "Position": "-139,-31.9984398,64",
+            "Position": "-144,-58.2357368,64",
             "Rotation": "-0.130526498,2.54144492E-08,0.991444886,1.93041402E-07",
             "Scale": "1,1,1",
             "Tags": "light_spot,light",
@@ -3254,7 +3255,7 @@
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "44.97674,50,12.32558,1",
+                "LightColor": "150,133.0465,36.97674,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -3273,11 +3274,11 @@
                 "__version": 2,
                 "Flags": 0,
                 "Name": "Licht",
-                "Position": "3.105901,7.64429569E-06,-11.5914097",
-                "Rotation": "-0.0922959596,0.0922959596,0.701057374,-0.701057374",
-                "Scale": "0.5,0.5,0.5",
+                "Position": "-11.7299213,-0.466582805,10.0202904",
+                "Rotation": "0.701057374,0.701057374,0.0922961012,0.092295818",
+                "Scale": "1.5,1,0.750000238",
                 "Tags": "",
-                "Enabled": false,
+                "Enabled": true,
                 "NetworkMode": 2,
                 "NetworkFlags": 0,
                 "NetworkOrphaned": 0,
@@ -3295,7 +3296,7 @@
                     "MaterialGroup": null,
                     "MaterialOverride": null,
                     "Materials": null,
-                    "Model": "models/prototype kit/target-a-round.vmdl",
+                    "Model": "models/graveyard kit/lantern-glass.vmdl",
                     "OnComponentDestroy": null,
                     "OnComponentDisabled": null,
                     "OnComponentEnabled": null,
@@ -4065,6 +4066,52 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "1a7f3078-f6aa-477d-8471-e716a04830dc",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "lantern_hanging",
+            "Position": "58.2305527,0,108.181763",
+            "Rotation": "0,-0.0436194167,0,0.999048233",
+            "Scale": "0.300000012,0.299999982,0.299999982",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "a2d40d94-0e20-4d45-bc78-34396d86187f",
+                "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/kaykit_halloweenbits_1.0_free/lantern_hanging.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
           }
         ]
       },
@@ -4118,7 +4165,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "Shadows": true,
+            "Shadows": false,
             "Size": "75,75",
             "Sprite": {
               "$compiler": "embed",
@@ -4143,7 +4190,7 @@
               "compiled": null
             },
             "StartingAnimationName": "Default",
-            "TextureFilter": "Trilinear"
+            "TextureFilter": "Anisotropic"
           },
           {
             "__type": "Sandbox.Decal",

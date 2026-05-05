@@ -45,7 +45,7 @@ public sealed class RotationControl : Component
 		// DebugOverlay.Line( VelLine );
 		if ( LogSpeed )
 		{
-			// Log.Info( "Speed/4: " + VelLine.Delta.Length );
+			Log.Info( "Speed/4: " + VelLine.Delta.Length );
 			LogSpeed = +1;
 		}
 
@@ -61,7 +61,7 @@ public sealed class RotationControl : Component
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
-					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed * 1.5f );
+					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed * 1.3f );
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}

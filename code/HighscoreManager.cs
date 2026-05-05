@@ -28,7 +28,7 @@ public sealed class HighscoreManager : Component
 	{
 		float multiplier = 1f;
 
-		multiplier += CarBody.Velocity.Length.Remap( 1500, 5000, 0, 0.5f );
+		multiplier += CarBody.Velocity.Length.Remap( 1000, 3500, 0, 0.5f );
 		if (!RotationControl.IsGrounded) { multiplier += 0.5f; }
 		multiplier = (float)Math.Round(multiplier, 2);
 

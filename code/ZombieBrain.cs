@@ -71,7 +71,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
-		GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ) );
+		// GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ) );
 		Sound.Play( "sounds/zombie-dies.sound", _deadClone.WorldPosition );
 	}
 

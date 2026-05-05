@@ -1,7 +1,6 @@
 using Sandbox;
 using System;
 using static HealthSystem;
-using static Sandbox.ModelPhysics;
 
 public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 {
@@ -26,7 +25,7 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
-		// Sound.Play( "sounds/spawner-dies.sound", WorldPosition);
+		Sound.Play( "sounds/spawner-dies.sound", WorldPosition);
 
 		SpawnedMonsters.RemoveAll( x => !x.IsValid );
 

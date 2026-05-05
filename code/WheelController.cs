@@ -19,10 +19,12 @@ public sealed class WheelController : Component
 	[Property] float FullSpeedAdd = 2000;
 	[Property] float Torque = 300;
 	[Property] float SteeringAngle = 50;
+	[Property] float SteeringBoost = 20;
 	[Property] double JumpPower = 0.5f;
 	[Property] int JumpMax = 100000;
 
 	float TargetSpinSpeed;
+	float originalSteeringAngle;
 
 	float originalTorque = 0;
 	double JumpCharge;
@@ -47,8 +49,6 @@ public sealed class WheelController : Component
 		FrontRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearLeft.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
 		RearRight.GetComponentInParent<Rigidbody>().EnhancedCcd = true;
-		
-
 	}
 
 	protected override void OnUpdate()
@@ -61,6 +61,7 @@ public sealed class WheelController : Component
 	protected override void OnFixedUpdate()
 	{
 		SetSpeedAndTorque( TargetSpinSpeed );
+		SteeringBoost = CarBody.Velocity.Length.Remap(0, 2500, 25, 0);
 
 		if ( Input.Down( "Jump" ) )
 		{
@@ -77,8 +78,8 @@ public sealed class WheelController : Component
 			{
 				wheel.SteeringLimits = new Vector2 ( -SteeringAngle - 7, SteeringAngle + 7);
 			}
-			FrontLeft.TargetSteeringAngle = SteeringAngle + 3; 
-			FrontRight.TargetSteeringAngle = SteeringAngle;
+			FrontLeft.TargetSteeringAngle = SteeringAngle + SteeringBoost + 3; 
+			FrontRight.TargetSteeringAngle = SteeringAngle + SteeringBoost;
 
 			RearLeft.TargetSteeringAngle = -SteeringAngle / 10; RearRight.TargetSteeringAngle = -SteeringAngle / 10;
 		}
@@ -88,8 +89,8 @@ public sealed class WheelController : Component
 			{
 				wheel.SteeringLimits = new Vector2( -SteeringAngle - 7, SteeringAngle + 7 );
 			}
-			FrontLeft.TargetSteeringAngle = -SteeringAngle - 3;
-			FrontRight.TargetSteeringAngle = -SteeringAngle;
+			FrontLeft.TargetSteeringAngle = -SteeringAngle - SteeringBoost - 3;
+			FrontRight.TargetSteeringAngle = -SteeringAngle - SteeringBoost;
 
 			RearLeft.TargetSteeringAngle = SteeringAngle / 10; RearRight.TargetSteeringAngle = SteeringAngle / 10;
 		}
@@ -139,6 +140,8 @@ public sealed class WheelController : Component
 
 			RearLeft.SpinMotorSpeed = 0f; RearRight.SpinMotorSpeed = 0f;
 			FrontLeft.SpinMotorSpeed = 0f; FrontRight.SpinMotorSpeed = 0f;
+
+			CarBody.Velocity = CarBody.Velocity.WithFriction(0.01f);
 		}
 		else { CarBody.SmoothRotate( Rotation.From( 0, CarBody.WorldRotation.Yaw(), 0 ), 1f, Time.Delta ); }
 	}
