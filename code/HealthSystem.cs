@@ -63,7 +63,6 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	public void Damage( float amount, bool enableSound = true )
 	{
 		if ( CurrentHealth <= 0 ) return;
-		if ( amount <= 0 ) return;
 
 		CurrentHealth = (CurrentHealth - amount).Clamp( 0, SetHealth );
 		

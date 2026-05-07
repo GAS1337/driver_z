@@ -235,7 +235,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		float duration = 0.1f;
 		SinceHitAnimationStart = 0;
 
-		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.3f) );
+		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.15f) );
 
 		while ( SinceHitAnimationStart < duration )
 		{

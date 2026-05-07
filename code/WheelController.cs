@@ -61,7 +61,7 @@ public sealed class WheelController : Component
 	protected override void OnFixedUpdate()
 	{
 		SetSpeedAndTorque( TargetSpinSpeed );
-		SteeringBoost = CarBody.Velocity.Length.Remap(0, 2500, 25, 0);
+		SteeringBoost = CarBody.Velocity.Length.Remap(0, 1500, 35, 0);
 
 		if ( Input.Down( "Jump" ) )
 		{

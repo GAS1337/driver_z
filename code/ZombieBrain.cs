@@ -161,6 +161,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			case ZombieState.Slam: // STATE IS SLAM
 				StateDebugText.Text = "Slam";
 				Agent.Stop();
+				LookAtPlayer();
 				// Increase Charge to 100 then DoSlam()
 				if ( SlamCharge >= 50 ) { SlamCharge = 0; DoSlam(); }
 				else { SlamCharge++; }
@@ -400,7 +401,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		float duration = 0.1f;
 		SinceHitAnimationStart = 0;
 
-		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.3f) );
+		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.15f) );
 
 		while (SinceHitAnimationStart < duration) 
 		{ 

@@ -95,7 +95,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			Sound.Play( "sounds/bullet-ricochet.sound", Muzzle.WorldPosition );
 			MuzzleFlashEmitter.Emit( MuzzleFlashEffect );
 			FlashMuzzleSprite( 0.05f );
-			AnimateGun( 0.1f);
+			AnimateGun( 0.03f);
 
 			if ( ShootTrace.Hit )
 			{
