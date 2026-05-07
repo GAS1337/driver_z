@@ -1,0 +1,25 @@
+{
+  "MasterVolume": "1",
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/ambience/plains-wind-loop.vsnd",
+      "Volume": "1"
+    }
+  ],
+  "StingSounds": [
+    {
+      "SoundFile": "sounds/military jets sting.sound",
+      "InstanceCount": 1,
+      "RepeatTime": "3 7",
+      "Distance": "50 100"
+    },
+    {
+      "SoundFile": "sounds/ambience/stings/sting-coyote-sting.sound",
+      "InstanceCount": 1,
+      "RepeatTime": "1 2",
+      "Distance": "50 100"
+    }
+  ],
+  "__references": [],
+  "__version": 0
+}

@@ -5,7 +5,7 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/rubblecrash1.vsnd"
+    "sounds/rubblecrashimpact1.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
