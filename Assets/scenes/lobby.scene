@@ -16490,7 +16490,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (4)",
-      "Position": "-11360,-13968,304",
+      "Position": "-11028,-13968,304",
       "Rotation": "8.71935946E-09,2.5550035E-08,-0.322974384,0.946407616",
       "Scale": "1,1,1",
       "Tags": "",
@@ -25112,7 +25112,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 1",
-          "Position": "2208,3200,0",
+          "Position": "2208,3200,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25130,7 +25130,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 2",
-          "Position": "704,-192,0",
+          "Position": "704,-192,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25148,7 +25148,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 3",
-          "Position": "1104,-2640,0",
+          "Position": "1104,-2640,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25295,7 +25295,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 1",
-          "Position": "5680,-288,0",
+          "Position": "5680,-288,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25313,7 +25313,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 2",
-          "Position": "1744,-1232,0",
+          "Position": "1744,-1232,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25331,7 +25331,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 3",
-          "Position": "-2784,3520,0",
+          "Position": "-2784,3520,-5",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25349,7 +25349,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 4",
-          "Position": "-4416,6832,48",
+          "Position": "-4416,6832,84",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25367,7 +25367,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 5",
-          "Position": "-4352,9184,880",
+          "Position": "-4352,9184,744",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25403,7 +25403,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 7",
-          "Position": "-7472,14480,3936",
+          "Position": "-7964,14480,3336",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25538,7 +25538,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 1",
-          "Position": "0,4896,0",
+          "Position": "0,4896,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25556,7 +25556,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 2",
-          "Position": "-320,1840,0",
+          "Position": "-320,1840,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25574,7 +25574,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 3",
-          "Position": "1984,-1200,0",
+          "Position": "1984,-1200,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -25592,7 +25592,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 4",
-          "Position": "-960,-3808,0",
+          "Position": "-960,-3808,-27",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -68619,225 +68619,6 @@
       }
     },
     {
-      "__guid": "ea7cb503-d387-40b6-938f-e8a03f2592fc",
-      "__version": 2,
-      "__Prefab": "prefabs/monsterspawner.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "a458d6ba-089c-48d4-8ee0-e34f5f7484e9"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "PreviousElement": {
-              "Type": "GameObject",
-              "IdValue": "38c925f4-ee12-4c64-ade6-7df03447ef4d"
-            },
-            "ContainerProperty": "Children",
-            "IsContainerArray": true,
-            "Data": {
-              "__guid": "a458d6ba-089c-48d4-8ee0-e34f5f7484e9",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "Sprite",
-              "Position": "0,0,0",
-              "Rotation": "0,0,0,1",
-              "Scale": "3.40000105,3.40000105,3.40000105",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": []
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "735aec10-a6fe-48c3-b3ca-ff4baa487d73"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "a458d6ba-089c-48d4-8ee0-e34f5f7484e9"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "Sandbox.SpriteRenderer",
-              "__guid": "735aec10-a6fe-48c3-b3ca-ff4baa487d73",
-              "__enabled": true,
-              "Flags": 0,
-              "__version": 2,
-              "Additive": false,
-              "AlphaCutoff": 0.1,
-              "Billboard": "YOnly",
-              "Color": "1,0,0,0.76",
-              "DepthFeather": 0,
-              "FlipHorizontal": false,
-              "FlipVertical": false,
-              "FogStrength": 1,
-              "IsSorted": false,
-              "Lighting": false,
-              "OnAnimationEnd": null,
-              "OnAnimationStart": null,
-              "OnBroadcastMessage": null,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Opaque": false,
-              "OverlayColor": "1,1,1,0",
-              "PlaybackSpeed": 1,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "Shadows": false,
-              "Size": "80,80",
-              "Sprite": {
-                "$compiler": "embed",
-                "$source": null,
-                "data": {
-                  "Animations": [
-                    {
-                      "Name": "Default",
-                      "FrameRate": 15,
-                      "Origin": "0.5,0.5",
-                      "LoopMode": "Loop",
-                      "Frames": [
-                        {
-                          "Texture": "textures/shapes/ring1.vtex",
-                          "BroadcastMessages": []
-                        }
-                      ]
-                    }
-                  ],
-                  "__references": null
-                },
-                "compiled": null
-              },
-              "StartingAnimationName": "Default",
-              "TextureFilter": "Bilinear"
-            }
-          }
-        ],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Name",
-            "Value": "monsterspawner (2)"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Position",
-            "Value": "-11360,-16608,128"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.866025805,0.499999523"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
-            },
-            "Property": "MaxMonsterSpawns",
-            "Value": 0
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
-            },
-            "Property": "MonsterPrefab",
-            "Value": {
-              "_type": "gameobject",
-              "prefab": "prefabs/zombie.prefab"
-            }
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0,1"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "ea7cb503-d387-40b6-938f-e8a03f2592fc",
-        "9c60fded-5a65-4d82-8787-3d7eae97769f": "b86b4dd5-2542-40d4-993b-dead11667dc8",
-        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "32f7ef1e-d829-4b57-8b68-3a38c6480da0",
-        "be0f85d9-3854-415e-b919-d60ddd6814ed": "f0134de0-b689-4a00-ad13-924316f8e3cc",
-        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "95858005-d7eb-4d51-aa37-70dbf05ee5f8",
-        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "56972001-42e9-416f-9cd9-1d69af09d9a4",
-        "aa8cb107-ea3b-4989-b37e-4a51350c926c": "41faaf6e-438d-4c07-9ec7-b4899301304b",
-        "3191d0d3-d74d-4104-ba19-e8876d9e3fcb": "2853b405-67f4-4fb9-ba1d-628df4764c32",
-        "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef": "d333aa1e-fb79-4010-bac5-9acc1004c8c3",
-        "d195629a-2b5b-4d28-aa35-adfb05f51187": "cad18f2b-e1dc-4405-afe4-9195372e87f6",
-        "0e40485b-52d6-4156-8139-85ad1d8bc4b6": "b8e2f659-c410-4106-b086-3075db6e59db",
-        "02ff6917-9b37-4ca9-8098-03116cb98e87": "b96ea1d4-3dae-47db-8a19-65df45230d66",
-        "24204ca3-33b2-4f81-8a63-1e3fec19e850": "2233258e-1214-40b3-a964-0810f31d232f",
-        "ffc3a8d8-5904-4ff5-ade5-9c10981c9ee9": "fff6f96b-7d49-427e-b22f-c00a89a4bbe9",
-        "1fe56367-4312-4e19-9951-b654dc847e4b": "c7746f3a-e3c1-4e47-b430-45ddb856e93b",
-        "3f249a1b-3920-4c64-8e08-88126c0fdc4d": "a6e0bdf5-33e3-4fa3-b920-4f3cbd721e2e",
-        "41cc3270-ffca-4c3e-9a83-058eb4014968": "56305078-c454-4f91-9a65-7a454869fc37",
-        "a336f4c6-87ef-476f-b08a-093bf344f53f": "09b5d318-ec84-4c43-b781-bb997f4a7445",
-        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "45dab8fe-d0e1-4926-8f01-a70ae00aebd7",
-        "ee212a72-44be-4509-b323-11ac1435c2c2": "6e961b5c-130a-4cff-bf13-cb0617522011",
-        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "1747eb50-6435-4bf4-aaf0-dd73de9172ed",
-        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "78f18ad6-0c2a-45d9-a1e6-53df95feb7fe",
-        "ac1c1466-bd16-44dc-950f-148b34fe9717": "8648c919-4d46-41e4-8168-1c4bc4123d40",
-        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "65684643-1203-446f-8d7b-5dd18a31611b",
-        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "a5d3b52d-4803-41ff-a693-de4ae1819c83",
-        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "f05f70a1-e720-49a3-b15e-4050f99d8b12",
-        "d124dbac-496c-4af7-bd52-cb608b750c0a": "c323d8fb-66bd-4885-9be7-aede8dea145b",
-        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "1427bb8a-a695-4ad3-84c2-41b048e2e7a0",
-        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "53e28b98-c8fc-4a98-b706-2e93c4932b85",
-        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "96475366-f5c8-4233-97bb-1268a6a1c079",
-        "f7a0801f-d5df-4c2a-9d5b-5e975867e685": "72bf1221-0fcc-4cbb-9cf9-f66babe0b275",
-        "513443e1-8023-4af6-a175-56d089e875c5": "d4ef28f9-02e0-467b-8bda-23e6cc6073d7",
-        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "b282b302-466e-42b6-a748-2dcd6a00803d",
-        "38c925f4-ee12-4c64-ade6-7df03447ef4d": "3f8e8b9d-5651-4f68-a986-a99790c44bb7",
-        "00865528-5a9d-49e3-98a4-d9229237fc0e": "50812c3a-aac1-4974-ad21-f518aae46b2e",
-        "7425fe36-7425-403c-ab11-951511228238": "25fd0fd9-6ef6-42de-9b6f-096f9212a6e2",
-        "ce5b28f7-756f-495b-a156-dbbf634d16b6": "b4247a84-ff7c-4342-884d-9a42062d2980"
-      }
-    },
-    {
       "__guid": "60d21d0c-f3bc-444f-8a86-269d10d23643",
       "__version": 2,
       "__Prefab": "prefabs/monsterspawner.prefab",
@@ -69435,13 +69216,13 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "a4096386-b39e-468d-ad73-955d72848141"
         }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
       },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
