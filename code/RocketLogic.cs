@@ -21,7 +21,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		// Wenn Player disable model und body
 		if ( other.GameObject.Tags.Has( "player" ) ) { return; }
 
-		var ExplosionTrace = Scene.Trace.Sphere( 400, GameObject.WorldPosition, GameObject.WorldPosition )
+		var ExplosionTrace = Scene.Trace.Sphere( 600, GameObject.WorldPosition, GameObject.WorldPosition )
 			.IgnoreGameObjectHierarchy( this.GameObject )
 			.WithoutTags("ignoreplayer")
 			.WithAnyTags("enemy", "carbody")	
@@ -60,6 +60,8 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 					hit.GameObject.GetComponent<GhostBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
 					// Rotation?
 				}
+				else if ( hit.GameObject.GetComponent<MonsterSpawner>() != null ) other.GetComponent<HealthSystem>().Damage( Damage * 4 );
+
 				// Rigidbody Impulse
 				if ( hit.GameObject.GetComponent<Rigidbody>() != null )
 				{

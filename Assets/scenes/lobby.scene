@@ -216,7 +216,7 @@
               "IdValue": "a35bf09b-bcb4-47e8-9eea-bfde12f1366c"
             },
             "Property": "Position",
-            "Value": "-2.18749051E-06,0.220243648,7.74860354E-08"
+            "Value": "-2.19643107E-06,0.220243648,8.34465013E-08"
           },
           {
             "Target": {
@@ -224,7 +224,7 @@
               "IdValue": "ec0b2d73-84d0-406f-9407-c7d08a0ccca7"
             },
             "Property": "Position",
-            "Value": "1.59740443E-06,0.146429345,4.76837165E-08"
+            "Value": "1.59144406E-06,0.14642933,4.76837165E-08"
           },
           {
             "Target": {
@@ -232,7 +232,7 @@
               "IdValue": "ba443489-3d49-47d3-9252-e30695e567ee"
             },
             "Property": "Position",
-            "Value": "-1.34110451E-06,0.162826568,6.55651107E-08"
+            "Value": "-1.34408469E-06,0.162826583,6.55651107E-08"
           }
         ],
         "MovedObjects": []
@@ -10532,27 +10532,6 @@
           "OwnerTransfer": 1,
           "Components": [
             {
-              "__type": "Sandbox.Prop",
-              "__guid": "e09bccb2-8a2a-4d3d-98d1-262a3311032b",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "MaterialGroup": null,
-              "Model": "models/platformer kit/arrows.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnPropBreak": null,
-              "OnPropTakeDamage": null,
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            },
-            {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "e58b5b7d-0743-46a8-b6c9-140bb58e1f8d",
               "__enabled": true,
@@ -10600,43 +10579,9 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "RollingResistance": null,
-              "Static": false,
+              "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "a7757884-73e4-41d0-8c59-8d3889972504",
-              "__enabled": true,
-              "Flags": 0,
-              "AngularDamping": 0,
-              "EnableImpactDamage": true,
-              "EnhancedCcd": false,
-              "Gravity": true,
-              "GravityScale": 1,
-              "ImpactDamage": 0,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": false,
-                "Y": false,
-                "Z": false,
-                "Pitch": false,
-                "Yaw": false,
-                "Roll": false
-              },
-              "MassCenterOverride": "0,0,0",
-              "MassOverride": 0,
-              "MinImpactDamageSpeed": 500,
-              "MotionEnabled": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OverrideMassCenter": false,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
             }
           ],
           "Children": [
@@ -10663,7 +10608,7 @@
                   "Flags": 0,
                   "__version": 2,
                   "BlendMode": "Normal",
-                  "FogStrength": 0.1,
+                  "FogStrength": 0,
                   "HorizontalAlignment": "Center",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -10742,7 +10687,7 @@
                   "Flags": 0,
                   "__version": 2,
                   "BlendMode": "Normal",
-                  "FogStrength": 0.1,
+                  "FogStrength": 0,
                   "HorizontalAlignment": "Center",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -10817,27 +10762,6 @@
           "OwnerTransfer": 1,
           "Components": [
             {
-              "__type": "Sandbox.Prop",
-              "__guid": "de23c2b7-9117-44e3-90f6-15b5ad34bcb3",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "MaterialGroup": null,
-              "Model": "models/platformer kit/arrows.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnPropBreak": null,
-              "OnPropTakeDamage": null,
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            },
-            {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "0acf95ef-d191-46e7-9131-47fd4a17fcab",
               "__enabled": true,
@@ -10885,43 +10809,9 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "RollingResistance": null,
-              "Static": false,
+              "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "f4ff8d41-4ae5-4fdf-a172-2921a9f6c3a3",
-              "__enabled": true,
-              "Flags": 0,
-              "AngularDamping": 0,
-              "EnableImpactDamage": true,
-              "EnhancedCcd": false,
-              "Gravity": true,
-              "GravityScale": 1,
-              "ImpactDamage": 0,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": false,
-                "Y": false,
-                "Z": false,
-                "Pitch": false,
-                "Yaw": false,
-                "Roll": false
-              },
-              "MassCenterOverride": "0,0,0",
-              "MassOverride": 0,
-              "MinImpactDamageSpeed": 500,
-              "MotionEnabled": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OverrideMassCenter": false,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
             }
           ],
           "Children": [
@@ -10948,7 +10838,7 @@
                   "Flags": 0,
                   "__version": 2,
                   "BlendMode": "Normal",
-                  "FogStrength": 0.1,
+                  "FogStrength": 0,
                   "HorizontalAlignment": "Center",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -11027,7 +10917,7 @@
                   "Flags": 0,
                   "__version": 2,
                   "BlendMode": "Normal",
-                  "FogStrength": 0.1,
+                  "FogStrength": 0,
                   "HorizontalAlignment": "Center",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -15997,7 +15887,43 @@
                       "LoopMode": "Loop",
                       "Frames": [
                         {
-                          "Texture": "sprites/input-promtps-kenney/mouse_left.png",
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_right.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -16077,7 +16003,43 @@
                       "LoopMode": "Loop",
                       "Frames": [
                         {
-                          "Texture": "sprites/input-promtps-kenney/mouse_left.png",
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_left.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -24572,7 +24534,7 @@
               "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
             },
             "Property": "Position",
-            "Value": "-12130.7012,-28395.625,127.999954"
+            "Value": "-12921.333,-28063.373,127.999931"
           },
           {
             "Target": {
@@ -25907,153 +25869,6 @@
           "Flags": 0,
           "Name": "Point 2",
           "Position": "-3574.16797,-1520.7373,-272",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [],
-          "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "e12722f5-84cc-46ba-b51d-27e107438b1c",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Line (2)",
-      "Position": "-23296,-17316,864",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.LineRenderer",
-          "__guid": "e261311c-9e39-4bb1-b3f8-2a2f31fc6e35",
-          "__enabled": true,
-          "Flags": 0,
-          "Additive": false,
-          "AutoCalculateNormals": true,
-          "CastShadows": true,
-          "Color": {
-            "blend": "Linear",
-            "color": [
-              {
-                "t": 0.5,
-                "c": "2,1.68627,0,1"
-              }
-            ],
-            "alpha": [
-              {
-                "t": 0,
-                "a": 1
-              },
-              {
-                "t": 1,
-                "a": 1
-              }
-            ]
-          },
-          "CylinderSegments": 12,
-          "DepthFeather": 0,
-          "EndCap": "None",
-          "Face": "Camera",
-          "FogStrength": 1,
-          "Lighting": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": false,
-          "Points": [
-            {
-              "_type": "gameobject",
-              "go": "3bdd30ae-6805-4536-8be8-13a981064faa"
-            },
-            {
-              "_type": "gameobject",
-              "go": "f78afc06-ff3a-4aa8-8a71-79fef42af3ce"
-            },
-            null,
-            null
-          ],
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "SplineBias": 0,
-          "SplineContinuity": 0,
-          "SplineInterpolation": 8,
-          "SplineTension": 0,
-          "StartCap": "Arrow",
-          "Texturing": {
-            "Texture": null,
-            "Material": null,
-            "WorldSpace": true,
-            "UnitsPerTexture": 10,
-            "Scale": 1,
-            "Offset": 0,
-            "Scroll": 0,
-            "FilterMode": "Anisotropic",
-            "TextureAddressMode": "Wrap",
-            "Clamp": false
-          },
-          "UseVectorPoints": false,
-          "VectorPoints": [],
-          "Width": {
-            "rangey": "0,70",
-            "frames": [
-              {
-                "x": 0,
-                "y": 1,
-                "in": 0,
-                "out": 0,
-                "mode": "Mirrored"
-              }
-            ]
-          },
-          "Wireframe": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "3bdd30ae-6805-4536-8be8-13a981064faa",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "Point 1",
-          "Position": "188,0,192",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f78afc06-ff3a-4aa8-8a71-79fef42af3ce",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "Point 2",
-          "Position": "92,312.839844,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -30385,7 +30200,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/438a6651b91adbd1.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -30501,7 +30316,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/438a6651b91adbd1.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -30617,7 +30432,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/438a6651b91adbd1.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69396,7 +69211,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -69476,7 +69327,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -69556,7 +69443,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -69636,7 +69559,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/keyboard_s_outline.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -69716,7 +69675,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -69796,7 +69791,43 @@
                   "LoopMode": "Loop",
                   "Frames": [
                     {
-                      "Texture": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                      "Texture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Cropping": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "Padding": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "InvertColor": false,
+                          "Tint": "1,1,1,1",
+                          "Blur": 0,
+                          "Sharpen": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "1,1,1,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
                       "BroadcastMessages": []
                     }
                   ]
@@ -70072,7 +70103,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "pillar-obelisk (1)",
-      "Position": "-10768,-31584,127.999901",
+      "Position": "-10368,-31824,127.999901",
       "Rotation": "0,0,0,1",
       "Scale": "4,4,4",
       "Tags": "",
@@ -71828,7 +71859,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence_broken",
-      "Position": "-11672.4756,-28234.4258,128",
+      "Position": "-12911.5508,-28286.668,127.999977",
       "Rotation": "0,0,0.382683545,0.923879445",
       "Scale": "1,1,1",
       "Tags": "",
@@ -71899,7 +71930,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence_broken (2)",
-      "Position": "-10356.8623,-30383.9961,128",
+      "Position": "-11034.9824,-31278.6094,128.000015",
       "Rotation": "0,0,-1.78813934E-07,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -71970,7 +72001,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence_broken (1)",
-      "Position": "-12195.3838,-27641.2109,128",
+      "Position": "-13434.459,-27693.4531,127.999977",
       "Rotation": "0,0,-0.965925694,0.258819342",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72041,7 +72072,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence",
-      "Position": "-10453.2803,-30022.3965,128.000015",
+      "Position": "-11131.4004,-30917.0098,128.000031",
       "Rotation": "0,0,0.258818805,0.965925813",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72112,7 +72143,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence (1)",
-      "Position": "-10653.6992,-29675.2578,128.000015",
+      "Position": "-11331.8193,-30569.8711,128.000031",
       "Rotation": "0,0,0.258818805,0.965925813",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72183,7 +72214,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence (2)",
-      "Position": "-10851.1904,-29333.1934,128.000015",
+      "Position": "-11529.3105,-30227.8066,128.000031",
       "Rotation": "0,0,0.258818805,0.965925813",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72254,7 +72285,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence (3)",
-      "Position": "-11957.1328,-27949.7852,128.000031",
+      "Position": "-13196.208,-28002.0273,128",
       "Rotation": "0,0,0.382683247,0.923879504",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72325,7 +72356,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence (4)",
-      "Position": "-12391.3115,-27301.9082,128.000015",
+      "Position": "-13630.3867,-27354.1504,127.999992",
       "Rotation": "0,0,0.258818835,0.965925932",
       "Scale": "1,1,1",
       "Tags": "",
@@ -72373,77 +72404,6 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": "models/kaykit_halloweenbits_1.0_free/fence.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "eb906b2f-2530-42e5-afe4-980e57bd371a",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "fence_pillar",
-      "Position": "-10832,-27808,128",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "ac69332b-1cb6-4916-a9a1-fd571ee18699",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/kaykit_halloweenbits_1.0_free/fence_pillar.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "128f95ec-7ebf-4df5-a64d-cf708e78d5d6",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/kaykit_halloweenbits_1.0_free/fence_pillar.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -74451,17 +74411,17 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
+        }
+      },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
       },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
-        }
-      },
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
         }
       }
     }

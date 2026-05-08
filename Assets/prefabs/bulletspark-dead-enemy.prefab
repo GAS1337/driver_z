@@ -3,7 +3,7 @@
     "__guid": "c8350aca-932a-4f63-99c4-ea477478529c",
     "__version": 2,
     "Flags": 0,
-    "Name": "bulletspark-enemy",
+    "Name": "bulletspark-dead-enemy",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -152,7 +152,7 @@
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
-              "Constants": "0.4,0.69,0,0"
+              "Constants": "0.400000006,1.20000005,0,0"
             },
             "LocalSpace": 0,
             "MaxParticles": 5000,
@@ -364,6 +364,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },
