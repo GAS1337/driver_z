@@ -213,10 +213,26 @@
           {
             "Target": {
               "Type": "GameObject",
+              "IdValue": "74e3ed9c-e7f8-4575-80e2-b7f0fe295c02"
+            },
+            "Property": "Rotation",
+            "Value": "-1.78813934E-07,0.707106888,-0.70710665,1.1920929E-07"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
               "IdValue": "a35bf09b-bcb4-47e8-9eea-bfde12f1366c"
             },
             "Property": "Position",
             "Value": "-2.19643107E-06,0.220243648,8.34465013E-08"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "a35bf09b-bcb4-47e8-9eea-bfde12f1366c"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1.49011612E-08,1"
           },
           {
             "Target": {
@@ -229,10 +245,26 @@
           {
             "Target": {
               "Type": "GameObject",
+              "IdValue": "ec0b2d73-84d0-406f-9407-c7d08a0ccca7"
+            },
+            "Property": "Rotation",
+            "Value": "-2.98023224E-08,5.96046448E-08,7.4505806E-08,0.99999994"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
               "IdValue": "ba443489-3d49-47d3-9252-e30695e567ee"
             },
             "Property": "Position",
             "Value": "-1.34408469E-06,0.162826583,6.55651107E-08"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ba443489-3d49-47d3-9252-e30695e567ee"
+            },
+            "Property": "Rotation",
+            "Value": "-5.96046448E-08,4.47034836E-08,0,0.999999881"
           }
         ],
         "MovedObjects": []
@@ -12165,6 +12197,262 @@
       "Children": []
     },
     {
+      "__guid": "90bf39df-814d-4aeb-9d15-67274d63865e",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "post_skull (3)",
+      "Position": "-36456,-4678,107",
+      "Rotation": "0,-0,-0.559482157,0.828842402",
+      "Scale": "3,3,3",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "58116d46-4add-486b-b494-396c3d06a988",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "5c48529f-4b75-4f87-9e8a-87c00f582f52",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "f1dc7c88-96a1-4330-b101-a7cc6d9155a5",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "f6bf2c3e-3523-4796-babc-5df99d80dc93",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "PreciseContacts": false,
+          "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "eb715dc2-228f-416b-9cb0-33acef5f8300",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "post_skull (2)",
+      "Position": "-30213,-2602.38281,96",
+      "Rotation": "0,-0,-0.65612483,0.754652381",
+      "Scale": "3,3,3",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "bd512b7b-0216-480e-927a-12d535b43081",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7fc594ab-0afc-48d9-a9a0-b25127f4d383",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "bb21f29a-ddb1-42df-bc60-02581f53ae34",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "5e011dc3-f0b1-467b-9d88-17957de61bcf",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "PreciseContacts": false,
+          "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "e13c3fd0-2ef4-438a-b8ce-e3eec69eb342",
       "__version": 2,
       "Flags": 0,
@@ -15922,7 +16210,7 @@
                               "TargetColor": "1,1,1,1",
                               "CacheToDisk": true
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/d4f7b040865262f5.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -16038,7 +16326,7 @@
                               "TargetColor": "1,1,1,1",
                               "CacheToDisk": true
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/d8c318648662b690.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -19757,7 +20045,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -19883,7 +20173,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20009,7 +20301,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20135,7 +20429,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20389,7 +20685,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20515,7 +20813,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20641,7 +20941,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -20767,7 +21069,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -24514,7 +24818,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -24666,57 +24972,6 @@
       }
     },
     {
-      "__guid": "87529e51-1f1b-41aa-a878-22f4be3a161d",
-      "__version": 2,
-      "__Prefab": "prefabs/post_lantern+light.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
-            },
-            "Property": "Name",
-            "Value": "post_lantern+light (1)"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
-            },
-            "Property": "Position",
-            "Value": "-11893.4072,-5384.02246,120.000053"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,0.258818924,0.965926111"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
-            },
-            "Property": "Scale",
-            "Value": "4,4,4"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "d2a9b172-78a9-4748-a832-e901aeb753c7": "87529e51-1f1b-41aa-a878-22f4be3a161d",
-        "3245c6fe-74f3-4baf-8102-eac336659ede": "86cfc752-d595-45d8-bf5c-d1faee203d6d",
-        "b7161427-68f9-4ae0-87eb-3dc4444a93cc": "39446211-3d89-4ea1-9217-632c43ce11f6",
-        "a9a755b2-cdac-4b02-ba34-5c038c909fc2": "de60f317-bcd7-4fd7-b035-ee007715f040",
-        "80b813ae-cc86-441a-b133-6a686e2c64fd": "3513553f-3cb9-476b-8453-8232ecfa7167"
-      }
-    },
-    {
       "__guid": "5eaba5d5-88d7-41c1-bf00-24d7b01fe753",
       "__version": 2,
       "__Prefab": "prefabs/post_lantern+light.prefab",
@@ -24766,6 +25021,134 @@
         "a9a755b2-cdac-4b02-ba34-5c038c909fc2": "6bf82e09-6001-40dc-998e-7de7b7440752",
         "80b813ae-cc86-441a-b133-6a686e2c64fd": "71e6a14d-9edc-4e12-bdfd-30981ff368f8"
       }
+    },
+    {
+      "__guid": "f1da6965-60c2-4618-9f84-6364c5c3d137",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "post_skull (1)",
+      "Position": "-11805,-5507,102",
+      "Rotation": "0,0,0,1",
+      "Scale": "3,3,3",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "3815036b-d2f8-41c3-982d-2068c98323c2",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b82e9080-58f7-46a5-8cf4-4af0fcea7704",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "c6d9cf7b-50a2-4eb8-89a0-0efc80583813",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "047ca99c-bd51-447d-9f91-7a0adceb0bdb",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "PreciseContacts": false,
+          "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
     },
     {
       "__guid": "ba139291-0bd5-4605-9e2b-2bd6d6e09884",
@@ -26508,7 +26891,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -26634,7 +27019,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -26760,7 +27147,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -26886,7 +27275,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -27012,7 +27403,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -27521,7 +27914,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -29233,7 +29628,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -68218,7 +68615,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -68486,7 +68885,9 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
+          "PreciseContacts": false,
           "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
@@ -69246,7 +69647,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/567eb33fb1b1bc36.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69362,7 +69763,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/119cd797c247e03.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69478,7 +69879,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/2735e50a83dfbee1.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69594,7 +69995,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/a2615cebd699fd37.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69710,7 +70111,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/8f117c824f05021f.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -69826,7 +70227,7 @@
                           "TargetColor": "1,1,1,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/60a36aa9cc8685d2.vtex"
                       },
                       "BroadcastMessages": []
                     }
@@ -74385,6 +74786,134 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "952f88ea-7bf1-4222-866a-b54d1cd19d43",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "post_skull",
+      "Position": "-39247.9922,-10294.998,128.000122",
+      "Rotation": "0,0,0,1",
+      "Scale": "3,3,3",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "67def444-68e0-4052-9890-9e2f5305755d",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "85b03e81-1f7d-4573-940b-bbe4a47c13f6",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "ca801e79-aad4-4c83-b024-7843d12122e1",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_halloweenbits_1.0_free/post_skull.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "9db43a81-1414-4c8a-a8c3-a295fcdcff08",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "PreciseContacts": false,
+          "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -74411,6 +74940,11 @@
       }
     },
     "GameObjectSystems": {
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
+        }
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "a4096386-b39e-468d-ad73-955d72848141"
@@ -74418,11 +74952,6 @@
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
-      },
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
-        }
       }
     }
   },
