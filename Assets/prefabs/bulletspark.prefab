@@ -112,7 +112,7 @@
             "ForceScale": 1,
             "ForceSpace": "World",
             "Friction": 1,
-            "Gradient": "1,1,1,1",
+            "Gradient": "0.70698,0.70698,0.70698,1",
             "InitialVelocity": {
               "X": 0,
               "Y": 0,
@@ -190,7 +190,7 @@
             "Stretch": 0,
             "TimeScale": 1,
             "Timing": "GameTime",
-            "Tint": "0.93333,1,0,1",
+            "Tint": "0.13891,0.14884,0,1",
             "UsePrefabFeature": false,
             "Yaw": {
               "Type": "Range",

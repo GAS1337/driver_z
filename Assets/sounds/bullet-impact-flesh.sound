@@ -1,14 +1,18 @@
 {
   "UI": false,
-  "Volume": "0.45 0.6",
-  "Pitch": "0.8 1",
+  "Volume": "0.600000024 0.699999988",
+  "Pitch": "0.949999988 1.04999995",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/impacts/bullets/bullet-impact-clothflesh-1.vsnd",
-    "sounds/impacts/bullets/bullet-impact-clothflesh-2.vsnd",
-    "sounds/impacts/bullets/bullet-impact-clothflesh-3.vsnd",
-    "sounds/impacts/bullets/bullet-impact-clothflesh-4.vsnd"
+    "sounds/bulletimpacts/supermutantbullethitflesh.vsnd",
+    "sounds/bulletimpacts/megamutantfusionbulletfleshhit.vsnd",
+    "sounds/bulletimpacts/7freesound_community-086555_bullet-39740.vsnd",
+    "sounds/bulletimpacts/6freesound_community-086553_bullet-hit-39853.vsnd",
+    "sounds/bulletimpacts/5freesound_community-080998_bullet-hit-39870.vsnd",
+    "sounds/bulletimpacts/4freesound_community-080976_bullet-39806.vsnd",
+    "sounds/bulletimpacts/3freesound_community-080891_bullet-hit-39871.vsnd",
+    "sounds/bulletimpacts/2freesound_community-080884_bullet-hit-39872.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
@@ -17,7 +21,7 @@
   "DistanceAttenuation": false,
   "Distance": 15000,
   "Falloff": {
-    "rangey": "0.1861111,1",
+    "rangey": "0.186111093,1",
     "frames": [
       {
         "x": 0,
