@@ -201,70 +201,6 @@
             },
             "Property": "Position",
             "Value": "-3376,288,137"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "74e3ed9c-e7f8-4575-80e2-b7f0fe295c02"
-            },
-            "Property": "Position",
-            "Value": "2.14576721E-06,0,0.0996634737"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "74e3ed9c-e7f8-4575-80e2-b7f0fe295c02"
-            },
-            "Property": "Rotation",
-            "Value": "-1.78813934E-07,0.707106888,-0.70710665,1.1920929E-07"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "a35bf09b-bcb4-47e8-9eea-bfde12f1366c"
-            },
-            "Property": "Position",
-            "Value": "-2.19643107E-06,0.220243648,8.34465013E-08"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "a35bf09b-bcb4-47e8-9eea-bfde12f1366c"
-            },
-            "Property": "Rotation",
-            "Value": "0,0,-1.49011612E-08,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "ec0b2d73-84d0-406f-9407-c7d08a0ccca7"
-            },
-            "Property": "Position",
-            "Value": "1.59144406E-06,0.14642933,4.76837165E-08"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "ec0b2d73-84d0-406f-9407-c7d08a0ccca7"
-            },
-            "Property": "Rotation",
-            "Value": "-2.98023224E-08,5.96046448E-08,7.4505806E-08,0.99999994"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "ba443489-3d49-47d3-9252-e30695e567ee"
-            },
-            "Property": "Position",
-            "Value": "-1.34408469E-06,0.162826583,6.55651107E-08"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "ba443489-3d49-47d3-9252-e30695e567ee"
-            },
-            "Property": "Rotation",
-            "Value": "-5.96046448E-08,4.47034836E-08,0,0.999999881"
           }
         ],
         "MovedObjects": []
@@ -414,28 +350,7 @@
         "bfd2a291-314f-46d8-891a-75ef365fd6c7": "24300fdb-90ff-4058-87f1-62c76ad3a68c",
         "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "de4c08a9-d213-4fc6-9e89-46f83c534a6c",
         "d5e2eec6-f331-4fc0-94de-5553cdc5aebe": "247d530e-cb3e-4b95-9ccc-f901638b8d08",
-        "e6abb013-6e62-4574-8ad8-37fc3a85fd46": "7ec3277c-3da3-4790-bbf7-087f8826120c",
-        "74e3ed9c-e7f8-4575-80e2-b7f0fe295c02": "7c8ebbb2-8119-41ba-8c2a-10d8522d28be",
-        "42658057-91ed-4481-a960-62fe9a78a9f0": "40485c76-5114-4986-be3f-ec2a11666090",
-        "a35bf09b-bcb4-47e8-9eea-bfde12f1366c": "3d553a81-1f80-44a0-9ef7-b51529fac0f1",
-        "ec0b2d73-84d0-406f-9407-c7d08a0ccca7": "6b1f51a4-535c-4d16-b872-0cadd0b95b1f",
-        "ba443489-3d49-47d3-9252-e30695e567ee": "7d1328f6-6d32-4c57-afba-d0404fc98938",
-        "caaefeb3-7a6e-48f9-ba52-7b699560b691": "c43edaae-ac8d-4a94-a237-15951cb3cb88",
-        "e75ed746-1e7c-43b6-8b05-7ef9cebc4717": "9add82fb-31e8-4a07-8928-49b5ad5c433b",
-        "953400ca-b055-4b56-843a-657ccfe4acc0": "6094cfac-dcb1-4c40-8a76-2707c38405bf",
-        "3d8a1741-33eb-4cf8-bdd6-44dfd15bfb63": "7c5849fd-7675-4460-be43-584cc4f14b38",
-        "edb61f05-32fc-49e1-84ba-10dd4d367d2e": "ed7e87c9-2465-4cc5-9b34-31eee7763c25",
-        "e02399ef-f2ec-4637-b9cd-cfa71f292343": "6677dfa1-bd68-453d-9eff-8a9100e3a3cb",
-        "2872c480-8a50-4537-943d-0b8b873ffa1c": "506033d8-9b1d-4a80-a03d-b753a3d8e711",
-        "05178164-1651-425d-9b27-af80b6b7f509": "d784ac3a-d367-429b-993b-9ea46df8dc95",
-        "ea23e2d8-0095-4a0f-bf97-08e0a90ebc8b": "555241ca-fca9-425e-b74d-5a2f4bfb30d2",
-        "ab40f8ba-e65e-42f5-b8d2-4d2ba1e3073e": "63347bc0-e731-4ec3-ac26-7c1948d196ff",
-        "1823e63b-dddd-491e-9d52-d8ce7519993e": "83d5714e-6f51-49d8-ab53-6521b5a14e05",
-        "b9cfef62-9a1d-45a9-a0aa-b1d944b1c027": "ff02042a-b1bc-45e0-aec4-ae35129cf301",
-        "7993cfbc-7aed-41d0-87d3-42f8a3eec397": "ef151cde-67ad-4e4b-9f33-66547c49ccab",
-        "571166c2-6824-4d85-92c5-79a0dc045798": "493c8cfe-63b1-498d-a462-129611f324f3",
-        "60a60c72-4d59-4224-8f97-26fdc576875e": "5c3bb7d7-bf9e-4e9a-a55e-f89ddd29d895",
-        "94427b97-e177-422c-86bd-e3dbf98ef484": "907b3890-1cf4-420e-94b1-9fb622a782dd"
+        "e6abb013-6e62-4574-8ad8-37fc3a85fd46": "7ec3277c-3da3-4790-bbf7-087f8826120c"
       }
     },
     {
@@ -12316,7 +12231,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -12444,7 +12358,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20045,7 +19958,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20173,7 +20085,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20301,7 +20212,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20429,7 +20339,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20685,7 +20594,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20813,7 +20721,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -20941,7 +20848,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -21069,7 +20975,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -24818,7 +24723,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -25142,7 +25046,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -26891,7 +26794,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -27019,7 +26921,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -27147,7 +27048,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -27275,7 +27175,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -27403,7 +27302,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -27914,7 +27812,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -29628,7 +29525,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -68615,7 +68511,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -68885,7 +68780,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -74907,7 +74801,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -74945,13 +74838,13 @@
           "SelectionSets": []
         }
       },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "a4096386-b39e-468d-ad73-955d72848141"
         }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
       }
     }
   },

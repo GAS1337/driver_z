@@ -43,18 +43,6 @@
 				]
 			},
 			{
-				_class = "PhysicsShapeList"
-				children = 
-				[
-					{
-						_class = "PhysicsMeshFromRender"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
-					},
-				]
-			},
-			{
 				_class = "LODGroupList"
 				children = 
 				[

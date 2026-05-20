@@ -123,8 +123,7 @@ public sealed class RotationControl : Component
 			}
 		}
 
-		if ( GroundedWheels > 2 ) { IsGrounded = true;
-									}
+		if ( GroundedWheels > 2 ) { IsGrounded = true; }
 		else { IsGrounded = false; }
 		// Log.Info($"{GroundedWheels} {IsGrounded}");
 
