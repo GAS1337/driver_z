@@ -21,6 +21,7 @@ public sealed class MonsterManager : Component
     List<GameObject> ActiveVampireSpawner;
 
     [Property] float CloneFrequenz;
+	[Property] Curve SpawnCooldownCurve;
 
     TimeSince SinceGameStart;
     TimeUntil UntilNextClone;
@@ -128,7 +129,7 @@ public sealed class MonsterManager : Component
 
 		GameObject newSpawner = MonsterSpawnerPrefab.Clone(actualSpawnPosition, WorldRotation.Angles().WithYaw(random.Int(0, 359)), Vector3.One);
         newSpawner.GetComponent<MonsterSpawner>().MonsterPrefab = prefab;
-		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = 15;
+		newSpawner.GetComponent<MonsterSpawner>().MonsterSpawnCooldown = SpawnCooldownCurve.Evaluate(SinceGameStart / 60);
 
 		Log.Info( "Cloning spawner for prefab: " + prefab.Name + " at " + newSpawner.WorldPosition );
 
@@ -142,21 +143,21 @@ public sealed class MonsterManager : Component
 				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Green * 3, Color.White * .1f } ) * 8;
 				ActiveZombieSpawner.Add(newSpawner);
 
-				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(8, 12);
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(7, 10);
 
 				break;
 
             case 1: // Ghost
 				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Blue * 3, Color.White * .1f } ) * 8;
 				ActiveGhostSpawner.Add(newSpawner);
-				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(5, 8);
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(4, 7);
 
 				break;
 
             case 2: // Vampire
 				newSpawner.GetComponent<MonsterSpawner>().LineRenderer.Color = Color.Average( new Color[] { Color.Red * 3, Color.White * .1f } )  * 8;
 				ActiveVampireSpawner.Add(newSpawner);
-				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(3, 5);
+				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(2, 4);
                 break;
         }
     }
