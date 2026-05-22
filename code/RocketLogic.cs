@@ -13,6 +13,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 	protected override void OnStart()
 	{
 		RocketBody = GetComponent<Rigidbody>();
+		RocketBody.EnhancedCcd = true;
 	}
 
 
