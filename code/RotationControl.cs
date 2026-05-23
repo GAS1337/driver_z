@@ -19,6 +19,7 @@ public sealed class RotationControl : Component
 	public bool IsGrounded;
 	int GroundedWheels;
 	public SceneTraceResult groundCheck;
+	SceneTraceResult groundNormal;
 
 	TimeUntil LogSpeed;
 
@@ -146,18 +147,18 @@ public sealed class RotationControl : Component
 		Vector3 forcePosition = wheel.WorldPosition;
 		if ( wheel.Tags.Has( "rear_wheel" ) && GroundedWheels < 4 ) 
 		{ 
-			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z) + wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * -50;
-			DebugOverlay.Sphere(new Sphere(forcePosition, 20));
-			Log.Info(wheel.GameObject.Name);
+			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z) + wheel.WorldRotation.Forward.Cross( groundNormal.Normal ) * -50;
+			//DebugOverlay.Sphere(new Sphere(forcePosition, 20));
+			//Log.Info(wheel.GameObject.Name);
 		}
 		else if ( wheel.Tags.Has( "front_wheel" ) && GroundedWheels < 4 )
 		{
-			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z ) + wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * 50;
-			DebugOverlay.Sphere( new Sphere( forcePosition, 20 ) );
-			Log.Info(wheel.GameObject.Name);
+			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z ) + wheel.WorldRotation.Forward.Cross( groundNormal.Normal ) * 50;
+			//DebugOverlay.Sphere( new Sphere( forcePosition, 20 ) );
+			//Log.Info(wheel.GameObject.Name);
 		}
-		CarBody.ApplyForceAt( forcePosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed * factor);
-		DebugOverlay.Line( new Line( forcePosition, forcePosition + (groundCheck.Normal ) * 500 ) );
+		CarBody.ApplyForceAt( forcePosition, wheel.WorldRotation.Forward.Cross( groundNormal.Normal ) * Speed * factor);
+		// DebugOverlay.Line( new Line( forcePosition, forcePosition + (groundCheck.Normal ) * 500 ) );
 	}
 
 	private SceneTraceResult CheckGroundForWheel( WheelJoint wheel )
@@ -170,6 +171,15 @@ public sealed class RotationControl : Component
 			.Rotated(traceRotation)
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
+
+		if (groundCheck.Hit)
+		{
+			groundNormal = Scene.Trace.Sphere( 5, wheel.WorldPosition, wheel.WorldPosition + Vector3.Down * 55 ) // 48 is radius
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+			// DebugOverlay.Line( new Line( wheel.WorldPosition, wheel.WorldPosition + groundNormal.Normal * 100 ) );
+		}
+
 		// DebugOverlay.Trace( groundCheck );
 		return groundCheck;
 	}
