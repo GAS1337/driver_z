@@ -11214,6 +11214,10 @@
             "Mins": "1000,1000,300",
             "Maxs": "-1000,-1000,200"
           },
+          "SpawnCooldownCurve": {
+            "rangex": "0,0",
+            "rangey": "0,0"
+          },
           "VampireCurve": {
             "rangex": "0,60",
             "rangey": "0,49.9999962",

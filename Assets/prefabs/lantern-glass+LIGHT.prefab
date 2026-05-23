@@ -40,7 +40,7 @@
           "AfterUILayer": false
         },
         "RenderType": "On",
-        "Tint": "10,10,10,1"
+        "Tint": "8.65116,8.65116,8.65116,1"
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -93,14 +93,14 @@
             "Attenuation": 1,
             "FogMode": "WithoutShadows",
             "FogStrength": 1,
-            "LightColor": "4.90078,5,2.02325,2",
+            "LightColor": "3,2.03302,0.85116,2",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Radius": 800,
+            "Radius": 750,
             "ShadowBias": 0.0005,
             "ShadowHardness": 1,
             "Shadows": false
