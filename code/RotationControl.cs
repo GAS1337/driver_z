@@ -53,15 +53,12 @@ public sealed class RotationControl : Component
 		{
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
-				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 6 )
-					.IgnoreGameObjectHierarchy( GameObject )
-					.Run();
-				// DebugOverlay.Trace( groundCheck );
+				groundCheck = CheckGroundForWheel( wheel );
+
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
-					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed * 1.3f );
+					ApplyForceToWheel( wheel, 1.3f );
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
@@ -70,16 +67,12 @@ public sealed class RotationControl : Component
 		{
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
-				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 6 )
-					.IgnoreGameObjectHierarchy( GameObject )
-					.Run();
-				// DebugOverlay.Trace( groundCheck );
+				groundCheck = CheckGroundForWheel( wheel );
+
 				if ( groundCheck.Hit )
 				{
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
-
-					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed );
+					ApplyForceToWheel( wheel, 1f );
 				}
 				else 
 				{ 
@@ -91,16 +84,13 @@ public sealed class RotationControl : Component
 		{
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
-				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 6 )
-					.IgnoreGameObjectHierarchy( GameObject )
-					.Run();
-				// DebugOverlay.Trace( groundCheck );
+				groundCheck = CheckGroundForWheel( wheel );
+
 
 				if ( groundCheck.Hit )
 				{
-					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1;
-					CarBody.ApplyForceAt( wheel.WorldPosition, wheel.WorldRotation.Backward.Cross( groundCheck.Normal ) * Speed );
+					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) + 1; 
+					ApplyForceToWheel( wheel, -1f );
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
@@ -109,11 +99,7 @@ public sealed class RotationControl : Component
 		{
 			foreach ( WheelJoint wheel in WheelJoints )
 			{
-				groundCheck = Scene.Trace.Ray( wheel.WorldPosition + CarBody.WorldRotation.Up * 10, wheel.WorldPosition + CarBody.WorldRotation.Down * 48 ) // 48 is radius
-					.Radius( 6 )
-					.IgnoreGameObjectHierarchy( GameObject )
-					.Run();
-				// DebugOverlay.Trace( groundCheck );
+				groundCheck = CheckGroundForWheel( wheel );
 
 				if ( groundCheck.Hit )
 				{
@@ -135,7 +121,7 @@ public sealed class RotationControl : Component
 			{
 				if ( CarBody.Velocity.Length > 360 )
 				{
-					cheatSteering = (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 4000, 0, 40 );
+					cheatSteering = (CarBody.WorldRotation.Right) * CarBody.Velocity.Length.Remap(0, 3000, 0, 40 );
 				}
 				CarBody.Velocity += cheatSteering;
 			}
@@ -143,7 +129,7 @@ public sealed class RotationControl : Component
 			{
 				if ( CarBody.Velocity.Length > 360 )
 				{
-					cheatSteering = (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 4000, 0, 40 );
+					cheatSteering = (CarBody.WorldRotation.Left) * CarBody.Velocity.Length.Remap( 0, 3000, 0, 40 );
 				}
 				CarBody.Velocity += cheatSteering;
 			}
@@ -153,5 +139,38 @@ public sealed class RotationControl : Component
 			Trails.Enabled = false;
 			// Air Control
 		}
+	}
+
+	private void ApplyForceToWheel( WheelJoint wheel, float factor )
+	{
+		Vector3 forcePosition = wheel.WorldPosition;
+		if ( wheel.Tags.Has( "rear_wheel" ) && GroundedWheels < 4 ) 
+		{ 
+			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z) + wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * -50;
+			DebugOverlay.Sphere(new Sphere(forcePosition, 20));
+			Log.Info(wheel.GameObject.Name);
+		}
+		else if ( wheel.Tags.Has( "front_wheel" ) && GroundedWheels < 4 )
+		{
+			forcePosition = CarBody.WorldPosition.WithZ( wheel.WorldPosition.z ) + wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * 50;
+			DebugOverlay.Sphere( new Sphere( forcePosition, 20 ) );
+			Log.Info(wheel.GameObject.Name);
+		}
+		CarBody.ApplyForceAt( forcePosition, wheel.WorldRotation.Forward.Cross( groundCheck.Normal ) * Speed * factor);
+		DebugOverlay.Line( new Line( forcePosition, forcePosition + (groundCheck.Normal ) * 500 ) );
+	}
+
+	private SceneTraceResult CheckGroundForWheel( WheelJoint wheel )
+	{
+		// Erstellt eine lokale Drehung um 90 Grad (hier um Pitch/X, falls nötig auf Roll/Y ändern)
+		Rotation localCorrection = Rotation.FromPitch( 90 );
+		Rotation traceRotation = wheel.WorldRotation * localCorrection;
+
+		groundCheck = Scene.Trace.Cylinder( 55, 55, wheel.WorldPosition, wheel.WorldPosition + Vector3.Down ) // 48 is radius
+			.Rotated(traceRotation)
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+		// DebugOverlay.Trace( groundCheck );
+		return groundCheck;
 	}
 }

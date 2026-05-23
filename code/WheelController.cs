@@ -61,7 +61,7 @@ public sealed class WheelController : Component
 	protected override void OnFixedUpdate()
 	{
 		SetSpeedAndTorque( TargetSpinSpeed );
-		SteeringBoost = CarBody.Velocity.Length.Remap(0, 1500, 35, 0);
+		SteeringBoost = CarBody.Velocity.Length.Remap(0, 2000, 20, 0);
 
 		if ( Input.Down( "Jump" ) )
 		{
@@ -81,7 +81,7 @@ public sealed class WheelController : Component
 			FrontLeft.TargetSteeringAngle = SteeringAngle + SteeringBoost + 3; 
 			FrontRight.TargetSteeringAngle = SteeringAngle + SteeringBoost;
 
-			RearLeft.TargetSteeringAngle = -SteeringAngle / 10; RearRight.TargetSteeringAngle = -SteeringAngle / 10;
+			RearLeft.TargetSteeringAngle = -SteeringAngle / 5; RearRight.TargetSteeringAngle = -SteeringAngle / 5;
 		}
 		else if ( Input.Down( "Right" ) )
 		{
@@ -92,7 +92,7 @@ public sealed class WheelController : Component
 			FrontLeft.TargetSteeringAngle = -SteeringAngle - SteeringBoost - 3;
 			FrontRight.TargetSteeringAngle = -SteeringAngle - SteeringBoost;
 
-			RearLeft.TargetSteeringAngle = SteeringAngle / 10; RearRight.TargetSteeringAngle = SteeringAngle / 10;
+			RearLeft.TargetSteeringAngle = SteeringAngle / 5; RearRight.TargetSteeringAngle = SteeringAngle / 5;
 		}
 		else
 		{
