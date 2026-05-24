@@ -79,7 +79,7 @@
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "BakedTexture": "scenes/lobby_scene_data/envmap/bake_c96bd31c-eed6-46ad-a3cb-b71f66efbbc6.vtex",
+          "BakedTexture": null,
           "Bounds": {
             "Mins": "-42673.6211,-27774.7891,-512",
             "Maxs": "26016.4199,26518.4297,5235.86523"
@@ -10929,9 +10929,9 @@
       "__version": 2,
       "Flags": 0,
       "Name": "SceneLoader",
-      "Position": "-21416.4785,-1082.89075,131",
+      "Position": "-18862,-654,132",
       "Rotation": "0,0,0.1305262,0.991444886",
-      "Scale": "2.5,2.5,2.5",
+      "Scale": "1.5,1.5,1.5",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -16132,7 +16132,7 @@
                               "TargetColor": "1,1,1,1",
                               "CacheToDisk": true
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/d8c318648662b690.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -16156,7 +16156,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (16)",
-      "Position": "-13926.0264,-34706.0508,1376.00049",
+      "Position": "-13926.0264,-34706.0508,1105",
       "Rotation": "0,0,-0.819152355,0.573576391",
       "Scale": "1,1,1",
       "Tags": "",
@@ -16328,7 +16328,7 @@
                               "TargetColor": "1,1,1,1",
                               "CacheToDisk": true
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/d4f7b040865262f5.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -24884,7 +24884,7 @@
               "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
             },
             "Property": "Position",
-            "Value": "-14196.1875,-35504.2305,1695.99963"
+            "Value": "-14196.1875,-35504.2305,1500.00134"
           },
           {
             "Target": {
@@ -69558,7 +69558,7 @@
               "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
             },
             "Property": "Position",
-            "Value": "-14924.377,-34927.418,1728"
+            "Value": "-14924.377,-34927.418,1532.00171"
           },
           {
             "Target": {
@@ -70356,7 +70356,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "pumpkin-carved (1)",
-      "Position": "-13309.8857,-31829.3906,128.000092",
+      "Position": "-13309.8857,-32140.7266,128.000092",
       "Rotation": "0,0,0.49999997,0.866025448",
       "Scale": "2,2,2",
       "Tags": "",
@@ -70402,7 +70402,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "pumpkin-tall-carved (1)",
-      "Position": "-13392.2373,-31828.0312,128.000092",
+      "Position": "-13392.2373,-32139.3672,128.000092",
       "Rotation": "0,0,0.49999997,0.866025448",
       "Scale": "2,2,2",
       "Tags": "",
@@ -72947,7 +72947,7 @@
               "IdValue": "664391f5-f0c3-4881-89be-2a02e72a535f"
             },
             "Property": "Position",
-            "Value": "-13647.9531,-32159.2969,159.999954"
+            "Value": "-13647.9531,-32470.6328,159.999954"
           },
           {
             "Target": {
@@ -74849,7 +74849,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "rock_1_c_color1",
-      "Position": "-14399.9551,-35423.9844,127.999878",
+      "Position": "-14399.9551,-35423.9844,-67.9984131",
       "Rotation": "0,0,4.47034836E-07,0.999999523",
       "Scale": "30,30,30",
       "Tags": "",
@@ -74920,7 +74920,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "rock_1_c_color1 (1)",
-      "Position": "-15648,-34880,128",
+      "Position": "-15648,-34880,-67.998291",
       "Rotation": "0,0,0.707106769,0.707106769",
       "Scale": "30,30,30",
       "Tags": "",
@@ -74991,7 +74991,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "gravestone-cross-large",
-      "Position": "-14879.999,-35519.9922,1748.80396",
+      "Position": "-14879.999,-35519.9922,1552.80566",
       "Rotation": "-5.46815215E-08,2.9612174E-08,0.707106709,-0.707106709",
       "Scale": "7,7,7",
       "Tags": "",
@@ -75062,7 +75062,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "gravestone-cross-large (1)",
-      "Position": "-15828.5645,-34856.1094,1759.9967",
+      "Position": "-15828.5645,-34856.1094,1563.99841",
       "Rotation": "-6.21616536E-08,-1.69586301E-09,0.965925694,-0.258818984",
       "Scale": "7,7,7",
       "Tags": "",
@@ -75169,7 +75169,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.82326,0.82326,0.82326,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -75224,14 +75224,14 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
-        }
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "a4096386-b39e-468d-ad73-955d72848141"
+        }
+      },
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }
