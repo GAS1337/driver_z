@@ -23,13 +23,17 @@ HUD {
     > .meins {
         position: absolute;
         bottom: 10%;
-        right: 10%;
-        left: auto;
+        right: auto;
+        left: 5%;
         font-size: 48px;
         flex-direction: column;
         align-items: center;
         font-weight: bold;
         color: darkred;
+        .ammocount {
+            font-size: 64px;
+            color: orange;
+        }
         // Der äußere Rahmen/Hintergrund
         .health-bar-bg {
             transform-origin: center;
@@ -62,7 +66,6 @@ HUD {
         align-items: flex-end;
         font-weight: bold;
         color: white;
-
         .gained-score {
             position: absolute;
             font-size: 40px;
@@ -85,6 +88,17 @@ HUD {
             transition: transform 0.1s ease-out, color 0.1s linear;
             margin-top: -45px;
         }
+    }
+    > .timer {
+            position: absolute;
+            right: 10%;
+            bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-weight: bold;
+            color: white;
+            font-size: 70px;
     }
     // Definition der Fall-Animation
 }

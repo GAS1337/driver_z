@@ -36,7 +36,9 @@
 }
 <root>
 	<div class="vitals">
-		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
+	</div>
+	<div class="timer"> 
+		<p>@($"{(int)HighscoreManager.TimeSpanSinceGameStart.TotalMinutes:00}:{HighscoreManager.TimeSpanSinceGameStart.Seconds:00}")</p>
 	</div>
 	<div class="score">
 		@foreach (var popup in activePopups)
@@ -51,10 +53,13 @@
 		<p class="current-score">@displayedScore.ToString("N0")</p>
 
 		<p class="multiplier" style="@($"color: {colorHex}; transform: scale({currentScale});")">
-		@($"{multiplier}x")
-	</p>
+		@($"{multiplier}x")</p>
+
 	</div>
 	<div class="meins">
+	<div class="ammocount">
+		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
+		</div>
 		<p>@("HEALTH")</p>
 		<div class="health-bar-bg @(isDamaged ? "damaged" : "")">
 			<div class="health-bar-fill" style="width: @($"{PlayerHealth.CurrentHealth / PlayerHealth.SetHealth * 100f}%")"></div>
@@ -149,6 +154,7 @@
 	protected override int BuildHash() => System.HashCode.Combine(
 		displayedScore, // Wichtig: Damit das UI bei jeder Änderung von displayedScore aktualisiert wird
 		HighscoreManager.LastGainedScore,
+		HighscoreManager.TimeSpanSinceGameStart.Seconds,
 		activePopups.Count,
 		HighscoreManager.CalculateMultiplier(),
 		PlayerHealth.CurrentHealth,

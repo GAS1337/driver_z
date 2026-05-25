@@ -10,9 +10,19 @@ public sealed class HighscoreManager : Component
 	float LatestScore;
 	public float LastGainedScore;
 
+	public TimeSince SinceGameStart;
+	public TimeSpan TimeSpanSinceGameStart;
+
+
+	protected override void OnEnabled()
+	{
+		SinceGameStart = 0;
+	}
+
 	protected override void OnUpdate()
 	{
 		// Log.Info( "Current Score: " + CurrentScore + " Last score: " + LatestScore );
+		TimeSpanSinceGameStart = TimeSpan.FromSeconds( SinceGameStart );
 	}
 
 	public void IncreaseScore(float amount)
