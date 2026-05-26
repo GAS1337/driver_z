@@ -14,7 +14,23 @@
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
     "OwnerTransfer": 1,
-    "Components": [],
+    "Components": [
+      {
+        "__type": "TemporaryEffect",
+        "__guid": "5961a674-0d39-4d01-99b5-6eb473bc96a1",
+        "__enabled": true,
+        "Flags": 0,
+        "BecomeOrphan": false,
+        "DestroyAfterSeconds": 10,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "WaitForChildEffects": false
+      }
+    ],
     "Children": [
       {
         "__guid": "3f712bb7-bb79-4016-8012-cf5daf4e2293",

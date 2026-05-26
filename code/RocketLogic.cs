@@ -39,7 +39,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 				hit.GameObject.GetComponent<HealthSystem>().Damage( Damage );
 
 				// Zombie Stagger
-				if ( hit.GameObject.GetComponent<ZombieBrain>() != null ) 
+				if ( hit.GameObject.GetComponent<ZombieBrain>() != null )
 				{
 					hit.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 					hit.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 1f, hit.GameObject.GetComponent<ZombieBrain>().KnockBack + 1f );
@@ -61,10 +61,13 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 					hit.GameObject.GetComponent<GhostBrain>().TargetPosition += (hit.GameObject.WorldPosition - GameObject.WorldPosition).Normal * 300;
 					// Rotation?
 				}
-				else if ( hit.GameObject.GetComponent<MonsterSpawner>().IsValid() ) other.GetComponent<HealthSystem>().Damage( Damage * 4 );
+				else if ( hit.GameObject.GetComponent<MonsterSpawner>().IsValid() ) 
+				{
+					if ( other.GetComponent<HealthSystem>().IsValid() ) other.GetComponent<HealthSystem>().Damage( Damage * 4 );
+				}
 
 				// Rigidbody Impulse
-				if ( hit.GameObject.GetComponent<Rigidbody>() != null )
+				if ( hit.GameObject.GetComponent<Rigidbody>().IsValid() )
 				{
 					Rigidbody hitBody = hit.GameObject.GetComponentInParent<Rigidbody>();
 					Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 400 - GameObject.WorldPosition;
@@ -83,12 +86,16 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 
 		}
 
-		RocketBody.Enabled = false;
-		GameObject.GetComponentInChildren<ModelRenderer>().Enabled = false;
-		foreach ( CapsuleCollider collider in GameObject.GetComponents<CapsuleCollider>() ) 
+		foreach ( GameObject go in GameObject.Children ) 
+		{ 
+			go.Enabled = false;
+		}
+		foreach ( CapsuleCollider collider in GameObject.GetComponents<CapsuleCollider>() )
 		{
 			collider.Enabled = false;
 		}
+		RocketBody.Velocity = Vector3.Zero;
+		RocketBody.Enabled = false;
 
 		Sound.Play( "sounds/mediumexplosion.sound", GameObject.WorldPosition );
 		BurstParticle.Enabled = true;

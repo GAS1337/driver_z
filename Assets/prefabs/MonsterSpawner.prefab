@@ -55,7 +55,8 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "SetHealth": 2500
+        "SetHealth": 2500,
+        "SetPoints": 2500
       },
       {
         "__type": "Sandbox.ModelCollider",

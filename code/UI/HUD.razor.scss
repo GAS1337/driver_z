@@ -91,14 +91,29 @@ HUD {
     }
     > .timer {
             position: absolute;
-            right: 10%;
-            bottom: 10%;
+            left: 47%;
+            top: 3%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: flex-start;
             font-weight: bold;
             color: white;
             font-size: 70px;
+    }
+    .multiplier-dial {
+        position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 15vw;
+    height: 15vw;
+
+    // Pfad zu deinem SVG oder PNG
+    background-image: url( "sprites/test-dial.svg" );
+    
+    // Wichtige Eigenschaften für die Skalierung:
+    background-size: contain;     // Bild einpassen ohne Verzerrung
+    background-repeat: no-repeat; // Bild nicht kacheln
+    background-position: center;  // Mittig ausrichten
     }
     // Definition der Fall-Animation
 }

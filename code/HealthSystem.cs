@@ -8,6 +8,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 {
 	CameraComponent MainCamera;
 	[Property] public float SetHealth;
+	[Property] float SetPoints = 500;
 	[Property] SpriteRenderer HealthbarRenderer;
 	IEnumerable<ModelRenderer> ModelRendererList;
 	Color originalTint;
@@ -80,7 +81,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		{
 			if (HealthbarRenderer != null) HealthbarRenderer.Color = HealthbarRenderer.Color.WithAlpha( 0 );
 			// Log.Info( "Killed " + GameObject.Name );
-			if (GameObject.Tags.Has("enemy")) HighscoreManager.IncreaseScore(SetHealth);
+			if (GameObject.Tags.Has("enemy")) HighscoreManager.IncreaseScore(SetPoints);
 			IHealthEvent.PostToGameObject( this.GameObject, x => x.OnDeath() );
 		}
 		if ( GameObject.Tags.Has( "player" ) && enableSound == true )
