@@ -11775,7 +11775,7 @@
               "IdValue": "4481d40e-4003-4d27-a783-80b851b6476a"
             },
             "Property": "Position",
-            "Value": "-44545.5,-11473.5,140.5"
+            "Value": "-47328.75,-10404.75,140"
           }
         ],
         "MovedObjects": []
@@ -11839,7 +11839,7 @@
               "IdValue": "6c996d5c-d4e2-45d5-8ca5-e1a3e7ef1e1b"
             },
             "Property": "Position",
-            "Value": "-45898.5,-9058.5,210.5"
+            "Value": "-47747.25,-10263.25,209.5"
           }
         ],
         "MovedObjects": []
@@ -17616,7 +17616,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation (4)",
-      "Position": "-45425.4062,-10393.2246,707.5",
+      "Position": "-47274.7852,-10257.6621,707.500122",
       "Rotation": "0,-0,-0.965925813,0.258819073",
       "Scale": "1,1,1",
       "Tags": "",
@@ -17651,6 +17651,85 @@
           "Scale": 2,
           "TextScope": {
             "Text": "\uD83D\uDC02 These two are the Cowball and the Chickenball \uD83D\uDC24\nThey fly funny when you ram them\n\nHeres a little area to test them and get used to driving \n",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "4e8d3d28-beae-4b3a-83d2-857262da8a23",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (8)",
+      "Position": "-44370.7695,-12451.582,1172",
+      "Rotation": "0,-0,-0.965925813,0.258819073",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "a6037853-ea7c-4c61-93eb-bd81096e2e27",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Flying and Velocity increase your Points Multiplier\n\nTips and Trick\nDestroy an enemy groups Sawner and finish off the low hp group easily",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -19003,6 +19082,18 @@
               "Type": "Component",
               "IdValue": "4ed29d26-25e1-47d9-838d-766dbf86a099"
             }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "7b79804b-b7e0-476d-b8d1-6000bd1c77ee"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "3011345b-deba-466e-a652-837c56f1bbfd"
+            }
           }
         ],
         "PropertyOverrides": [
@@ -19020,7 +19111,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Position",
-            "Value": "-45716.5039,-12162.96,347.427216"
+            "Value": "-43217.0312,-15604.5479,1126.00195"
           },
           {
             "Target": {
@@ -19028,7 +19119,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Rotation",
-            "Value": "0,0,0.0985371619,0.995134234"
+            "Value": "0,0,0.712331474,0.701843202"
           },
           {
             "Target": {
@@ -19100,6 +19191,22 @@
             "NewContainerProperty": "Children",
             "IsNewContainerArray": true,
             "NewPreviousElement": null
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "2ad8be88-7e0d-4fa1-ae4f-d2ff4eda35a1"
+            },
+            "NewParent": {
+              "Type": "GameObject",
+              "IdValue": "c22ca121-5be9-49eb-aa16-0465ff860947"
+            },
+            "NewContainerProperty": "Children",
+            "IsNewContainerArray": true,
+            "NewPreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "bc413d08-c466-496a-bf2b-33af87f836ad"
+            }
           }
         ]
       },
@@ -19182,7 +19289,7 @@
               "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
             },
             "Property": "Position",
-            "Value": "-44728.6484,-15571.1494,374.177124"
+            "Value": "-44728.6523,-15571.1523,1117.99988"
           },
           {
             "Target": {
@@ -19383,7 +19490,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Position",
-            "Value": "-41207.1406,-13713.2705,385.574646"
+            "Value": "-41564.8281,-14984.5957,1150.00098"
           },
           {
             "Target": {
@@ -19391,7 +19498,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Rotation",
-            "Value": "0,0,0.974938869,0.222474903"
+            "Value": "0,0,0.919379592,0.393371493"
           },
           {
             "Target": {
@@ -29631,8 +29738,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "journal_open",
-      "Position": "-42732,-9592,748",
-      "Rotation": "0,0,0,1",
+      "Position": "-41368.543,-8655.02539,889.999634",
+      "Rotation": "0,0,-0.923879147,0.382683843",
       "Scale": "20,20,20",
       "Tags": "",
       "Enabled": true,
@@ -29698,13 +29805,318 @@
       "Children": []
     },
     {
+      "__guid": "d1d8690f-eaf7-44b7-bc19-d042e01f72bd",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (6)",
+      "Position": "-41983.0312,-14889.9414,224.660156",
+      "Rotation": "-0.679965615,0.121976987,-0.71166724,-0.127663851",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "96a946af-bd9c-42fa-bf19-0335291df02f",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "fdd1ef6f-d9d8-4fc3-815f-262ae252e0c3",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "e3b6b067-acc8-49ab-9e27-33433ff36d17",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "column (4)",
+      "Position": "-43249.2344,-15166.96,-293.108337",
+      "Rotation": "0.0225638449,-0.00304472423,-0.67707628,0.735560656",
+      "Scale": "6,10,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "88d32a2e-54fd-4883-92b4-ac73f61d8fb7",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/mini arena kit/column.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "613c6fcc-c704-44ba-9900-fe966aeaf20b",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (7)",
+      "Position": "-43289.6172,-15177.6963,226.366211",
+      "Rotation": "-0.52503562,0.461468786,-0.555333495,-0.450542986",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "859f9dbf-a56e-4af1-acb7-77c8dc058cb5",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "17a554bc-53cb-438c-91e8-1293ab5d8113",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8c17a4c3-dc8b-48a9-8f01-6156cfa22fe4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "column (5)",
+      "Position": "-44616.5469,-15201.8604,-312.961304",
+      "Rotation": "0.0319101252,-0.0043058712,-0.844126403,0.535176873",
+      "Scale": "6,10,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f7e2b6e2-cf2d-4d21-bdb4-732f9abba683",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/mini arena kit/column.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "adb8d067-99c0-4349-84d2-e7622dc57d0a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (8)",
+      "Position": "-44684.5781,-15193.3359,205.021729",
+      "Rotation": "-0.390536398,0.589475572,-0.416974127,-0.571080387",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "36a2bac8-90a6-4c06-819c-b4c07bb6ed0d",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "78981140-f228-407e-b052-76af8c22d382",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "aebd3552-0fef-47a5-8459-c1d8b251ceb6",
       "__version": 2,
       "Flags": 0,
       "Name": "journal_open (1)",
-      "Position": "-53089.3242,-16169.5303,892",
-      "Rotation": "0,0,0.339476794,0.940614462",
-      "Scale": "20,20,20",
+      "Position": "-50861.0273,-16946.3965,1226",
+      "Rotation": "0,0,0.841935396,0.539578557",
+      "Scale": "30,30,30",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -29769,13 +30181,297 @@
       "Children": []
     },
     {
+      "__guid": "b762decc-a8c1-48e5-89bc-ff0c03333d49",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (5)",
+      "Position": "-52278.7852,-9157.98438,1226.00171",
+      "Rotation": "0,0,-0.747740865,0.66399163",
+      "Scale": "30,30,30",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "74413dab-bad2-4cec-8ff1-d079ecf86417",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "4d79ecd9-9c47-49a0-812d-7e8c826811bc",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "21f88fac-00d9-49c6-95ca-3aa69e4e2b78",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (4)",
+      "Position": "-55504.4531,-10563.3467,1226.00146",
+      "Rotation": "0,0,-0.303285241,0.952900469",
+      "Scale": "30,30,30",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "a8160e53-731b-4c12-b4ba-83f90dda53d1",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "3a1063d0-8c33-46bb-b90c-86cf5360e021",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "deea58f3-bbc2-4969-bc30-25c40994bd41",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (2)",
+      "Position": "-54357.2109,-16550.6445,1226.00024",
+      "Rotation": "0,0,0.447837919,0.894114733",
+      "Scale": "30,30,30",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "84e01ea6-ede8-4b41-a5b7-0e4cad0d7c87",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "0f3aff58-16b5-41f0-a892-48954837345c",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "616a40f1-1f50-4750-9779-bfb973c55f5f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_open (3)",
+      "Position": "-55708.1055,-13645.4023,1225.99988",
+      "Rotation": "0,0,0.024607785,0.999697208",
+      "Scale": "30,30,30",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "14953f65-0470-453f-ba50-849a0c7bd053",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "3caac919-f6b2-44a1-a402-bb95abc0d4fd",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "08a4f859-b2d2-45ec-abad-31d46bb20257",
       "__version": 2,
       "Flags": 0,
       "Name": "journal_closed",
-      "Position": "-42648,-11552,660",
-      "Rotation": "0,0,0,1",
-      "Scale": "10,10,10",
+      "Position": "-44286.25,-9238.72852,472.261963",
+      "Rotation": "0.716107488,-0.10693597,-0.116032682,0.679920018",
+      "Scale": "5,5,5",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -29844,8 +30540,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "column",
-      "Position": "-43964,-15712,128",
-      "Rotation": "0,0,0,1",
+      "Position": "-44836,-15748,128",
+      "Rotation": "0,-0,-0.1984272,0.980115652",
       "Scale": "10,10,10",
       "Tags": "",
       "Enabled": true,
@@ -29858,6 +30554,144 @@
         {
           "__type": "Sandbox.ModelRenderer",
           "__guid": "dff1dbe5-d389-4658-9429-207d5698b78b",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/mini arena kit/column.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8a68a607-31f5-4978-9143-8bff56848b0c",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "column (1)",
+      "Position": "-41506,-15158,128",
+      "Rotation": "0,-0,-0.219079986,0.975706875",
+      "Scale": "10,10,10",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "e89d0007-451a-43a1-b0bd-66316d3b6415",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/mini arena kit/column.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "71770b88-00fe-49f5-8ce1-417d78b105ee",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "column (3)",
+      "Position": "-41988.6094,-14928.1943,-296",
+      "Rotation": "0,-0,-0.219079986,0.975706875",
+      "Scale": "6,10,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "e3f80608-3266-4878-beac-f8177bdee059",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/mini arena kit/column.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "01875526-6a8f-449b-9c2f-95fb3251c573",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "column (2)",
+      "Position": "-43236,-15712,128",
+      "Rotation": "0,0,0,1",
+      "Scale": "10,10,10",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "aed174d3-7c4d-43e3-b64e-dee1556dfcb1",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -29899,7 +30733,15 @@
               "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
             },
             "Property": "Position",
-            "Value": "-42793.0117,-13585.0068,1092"
+            "Value": "-44806.3281,-7751.42334,1092.00012"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.111295469,0.993787348"
           }
         ],
         "MovedObjects": []
@@ -29921,12 +30763,114 @@
       }
     },
     {
+      "__guid": "4a84d123-6a4d-40fc-bed6-c40f26c540aa",
+      "__version": 2,
+      "__Prefab": "prefabs/bookshelf 1.0.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Name",
+            "Value": "bookshelf 1.0 (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Position",
+            "Value": "-44060.2773,-7582.19922,1092.00012"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.111295469,0.993787348"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "156333e7-4573-49db-b5eb-a646b02b1d71": "4a84d123-6a4d-40fc-bed6-c40f26c540aa",
+        "522f3bde-3048-4776-9e69-9301acf3d292": "10bf32b9-e220-4295-a162-2d1bb1e906eb",
+        "047c0375-a280-43c8-af12-599eb3ffdef6": "b3f14c72-bbfc-4ca5-986c-a4f28e1d88c9",
+        "5748326a-5c19-450d-a54c-6139ff724416": "5a9251fd-44e1-43de-a6b3-a899d3c5d78e",
+        "01547101-d56c-45a1-899d-be401f5f882a": "e40d1b4d-72d5-4c7f-b8e7-1d5be934e61d",
+        "407e143c-8537-4f83-9c20-05c03224f35c": "20fc5dd8-22bf-4fbb-bbb7-ea7f5a4e522f",
+        "45f96474-dfa6-4dba-8c21-4705f23dc33b": "01c87254-3894-4dd4-8552-8dbf64b3bdba",
+        "d2390e70-c3eb-4646-9dc6-4278548ddf39": "b5472a02-23d7-400e-99c9-06cc23b0d377",
+        "4138af8a-2437-47e8-884d-46e95f9ebf7d": "b33e863e-3079-4790-8278-7775bfdda819",
+        "ff10c9ca-502c-4568-bcf6-05c949740fc6": "c00dd6a4-e5ee-42e7-85b0-97841ec25ca1",
+        "b1cb9bcf-c3f6-4331-9a9d-41243045e277": "eec996ab-3de5-48ad-9678-71f2351ffc54",
+        "a39bbb34-d91b-4094-ba3b-31b18b5e7e29": "d8bcb905-1b1e-4e94-af56-55adc36b68bb",
+        "55eb2eb5-e1e3-41fb-9566-49e3f3e1b730": "dd67fbc5-090e-4737-8586-adfb349e21a3"
+      }
+    },
+    {
+      "__guid": "9981fd0f-927c-4fb8-8d9a-ad1b36729b71",
+      "__version": 2,
+      "__Prefab": "prefabs/bookshelf 1.0.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Name",
+            "Value": "bookshelf 1.0 (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Position",
+            "Value": "-43288.8047,-7483.52979,1092.00012"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.0239959192,0.99971205"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "156333e7-4573-49db-b5eb-a646b02b1d71": "9981fd0f-927c-4fb8-8d9a-ad1b36729b71",
+        "522f3bde-3048-4776-9e69-9301acf3d292": "5d8a26c9-d09d-4a00-ae28-4c64c811d39f",
+        "047c0375-a280-43c8-af12-599eb3ffdef6": "f307cd26-9008-4a28-8363-f43a81b0cf8f",
+        "5748326a-5c19-450d-a54c-6139ff724416": "5b10c7b3-b1e0-48e7-8abb-6a6a8d887b5f",
+        "01547101-d56c-45a1-899d-be401f5f882a": "c6b78743-9735-4cd5-a51a-668f5bf90549",
+        "407e143c-8537-4f83-9c20-05c03224f35c": "e158c96f-85e9-487c-89a4-b7f4db7b9481",
+        "45f96474-dfa6-4dba-8c21-4705f23dc33b": "64f500a1-d416-4033-83a2-74910f58e4a4",
+        "d2390e70-c3eb-4646-9dc6-4278548ddf39": "09317469-4579-4d3b-b4f5-2b15f8462600",
+        "4138af8a-2437-47e8-884d-46e95f9ebf7d": "95d9074f-2458-4771-bf7f-d75ad6735bd2",
+        "ff10c9ca-502c-4568-bcf6-05c949740fc6": "1732d40f-0a5d-41e2-bd68-2283d96fdd05",
+        "b1cb9bcf-c3f6-4331-9a9d-41243045e277": "d34f714f-d94b-43ad-88ad-fd7678a322d4",
+        "a39bbb34-d91b-4094-ba3b-31b18b5e7e29": "9eed8530-c50d-45c6-beb7-664ad6e4aecc",
+        "55eb2eb5-e1e3-41fb-9566-49e3f3e1b730": "1b9730b0-76eb-486f-a2a0-bbbaae584649"
+      }
+    },
+    {
       "__guid": "8de5eeb5-00f8-4e82-90bf-76422f9325c7",
       "__version": 2,
       "Flags": 0,
       "Name": "hot_chocolate",
-      "Position": "-42186.9922,-14392.998,128.000015",
-      "Rotation": "0,0,0,1",
+      "Position": "-44565.9961,-8880,392",
+      "Rotation": "0,0,-0.60876137,0.793353379",
       "Scale": "5,5,5",
       "Tags": "",
       "Enabled": true,
@@ -29992,83 +30936,12 @@
       "Children": []
     },
     {
-      "__guid": "c1afa8b8-1985-46ee-8a66-f1c2926364ed",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "milk",
-      "Position": "-42297,-13819.998,128",
-      "Rotation": "0,0,0,1",
-      "Scale": "5,5,5",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "1b09025c-2a22-47ee-a11d-11128d871595",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/kaykit_holiday_bits_1.0_free/milk.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "81052314-03d4-430a-ba05-a39753b7e8c6",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/kaykit_holiday_bits_1.0_free/milk.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "0610cb96-1d86-47a8-be56-e9870ec4b804",
       "__version": 2,
       "Flags": 0,
       "Name": "plate_decorated_b",
-      "Position": "-41774.9922,-14365.998,128.000015",
-      "Rotation": "0,0,0,1",
+      "Position": "-44686,-9354,396",
+      "Rotation": "0,0,0.258819103,0.965925813",
       "Scale": "5,5,5",
       "Tags": "",
       "Enabled": true,
@@ -30134,82 +31007,11 @@
       "Children": []
     },
     {
-      "__guid": "44f8c446-8b31-4605-a97e-0b9584b274c6",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "plate_white",
-      "Position": "-42065.9922,-13893.998,128.000015",
-      "Rotation": "0,0,0,1",
-      "Scale": "5,5,5",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "7d7962b3-93ab-4700-a38e-c31878e4bbe8",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/kaykit_holiday_bits_1.0_free/plate_white.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "041b67df-25b3-498b-bc0a-3bd583c7b819",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/kaykit_holiday_bits_1.0_free/plate_white.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "739fcb5f-42ad-4641-8dbb-f6f5b94dc820",
       "__version": 2,
       "Flags": 0,
       "Name": "stool",
-      "Position": "-42367.9922,-13436.998,128.292847",
+      "Position": "-43598,-9592,96",
       "Rotation": "0,0,0,1",
       "Scale": "5,5,5",
       "Tags": "",
@@ -30245,7 +31047,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.88372,0.56312,0.56312,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -30276,12 +31078,83 @@
       "Children": []
     },
     {
+      "__guid": "2e078527-efa8-4950-a1f7-36bf35366414",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "stool (1)",
+      "Position": "-44517.7422,-9071.1709,-436",
+      "Rotation": "0,0,0,1",
+      "Scale": "12,12,12",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "3edb4428-970a-4f88-bbea-b86f6737fd55",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "8caca7ec-d2a2-427f-a144-da74411c3774",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "9616f55a-4600-434e-9c2f-a3f7be0ed7f9",
       "__version": 2,
       "Flags": 0,
       "Name": "footstool_blue",
-      "Position": "-44396,-14056,128.066483",
-      "Rotation": "0,0,0,1",
+      "Position": "-45115.5,-10088.001,128.033249",
+      "Rotation": "0,0,0.424278498,0.905531764",
       "Scale": "5,5,5",
       "Tags": "",
       "Enabled": true,
@@ -30351,8 +31224,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "chair_large_red",
-      "Position": "-45272,-14148,128.000031",
-      "Rotation": "0,0,0.269424111,0.963021636",
+      "Position": "-45817.1328,-8653.4873,128.000076",
+      "Rotation": "0,0,-0.248183176,0.968713403",
       "Scale": "5,5,5",
       "Tags": "",
       "Enabled": true,
@@ -30422,7 +31295,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "bell",
-      "Position": "-42325.9844,-13400.0234,845.99231",
+      "Position": "-43773.9844,-14258.0234,2241.99121",
       "Rotation": "-5.96046448E-08,-9.50267705E-08,0.99999994,-2.85080318E-07",
       "Scale": "5,5,5",
       "Tags": "",
@@ -30841,7 +31714,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence-corner",
-      "Position": "-44854.1523,-11362.3242,-105",
+      "Position": "-47637.4023,-10293.5742,-105.5",
       "Rotation": "0,0,-0.500000119,0.866025329",
       "Scale": "15,15,15",
       "Tags": "",
@@ -30889,148 +31762,6 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": "models/platformer kit/fence-corner.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "fa583e7b-68d6-4beb-a8c3-156f477dcee2",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "fence-corner (1)",
-      "Position": "-46030.6484,-9324.56836,-105",
-      "Rotation": "0,0,-0.965925872,0.258818895",
-      "Scale": "15,15,15",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "443fa82b-9b38-473d-8181-302524bb7b23",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/platformer kit/fence-corner.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "d9b89adb-6351-4927-9b4e-5fca81eb31ea",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/platformer kit/fence-corner.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "85240eb9-2919-4ff8-b34e-3136a7b7eb70",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "fence-straight",
-      "Position": "-45600.1406,-10070.2256,-104.999985",
-      "Rotation": "0,0,-0.965925753,0.258819014",
-      "Scale": "15,15,15",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "8fadf376-6630-4b37-b57d-8e5e68f32429",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/platformer kit/fence-straight.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "435ee7ce-2bc2-4a18-a268-c48494f6c4ae",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/platformer kit/fence-straight.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -40514,7 +41245,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "floor-wood (138)",
-          "Position": "-10361.6484,1046.20215,-3292.99731",
+          "Position": "-10361.6797,1046.19629,-3292.99731",
           "Rotation": "0,0,0.087155737,0.99619472",
           "Scale": "6,6,2",
           "Tags": "",
@@ -74722,8 +75453,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "post_skull",
-      "Position": "-39247.9922,-10294.998,128.000122",
-      "Rotation": "0,0,0,1",
+      "Position": "-25014.502,-10587.2578,128",
+      "Rotation": "0,0,0.879274845,0.476314783",
       "Scale": "3,3,3",
       "Tags": "",
       "Enabled": true,
@@ -75224,14 +75955,14 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
-        }
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "a4096386-b39e-468d-ad73-955d72848141"
         }
       }
     }

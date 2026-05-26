@@ -1,16 +1,16 @@
 {
   "RootObject": {
     "__guid": "33eee7ac-421c-434d-bff0-706085264ede",
-    "__version": 1,
+    "__version": 2,
     "Flags": 0,
-    "Name": "lantern",
+    "Name": "lowlightlantern",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "2,2,2",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
-    "NetworkInterpolation": true,
+    "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
     "OwnerTransfer": 1,
@@ -19,12 +19,17 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "e8ab2cb1-2a49-46f2-920c-767fdaf5bc19",
         "__enabled": true,
+        "Flags": 0,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
         "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Materials": null,
+        "Materials": {
+          "indexed": {
+            "0": "materials/holiday_bits_texture.vmat"
+          }
+        },
         "Model": "models/holiday kit/lantern.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -39,13 +44,14 @@
           "AfterUILayer": false
         },
         "RenderType": "On",
-        "Tint": "1,1,1,1"
+        "Tint": "0.4093,0.4093,0.4093,1"
       },
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "3d9fae39-b85b-44f3-9b49-c48fe9183d9c",
         "__enabled": true,
-        "Center": "0.9999981,0.0000009536743,84",
+        "Flags": 0,
+        "Center": "0.999998093,9.53674316E-07,84",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
@@ -61,13 +67,56 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "24.00001,26,170",
+        "Scale": "24.0000095,26,170",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "c471b9ab-e12a-419b-9e52-5abbf93ea524",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Spot Light",
+        "Position": "-1.00011444,-1,165",
+        "Rotation": "0,0.707106531,0,0.707107008",
+        "Scale": "1,1,1",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "9a32b409-d4d2-4b54-be1b-558b492f8073",
+            "__enabled": true,
+            "Flags": 0,
+            "Attenuation": 1,
+            "ConeInner": 15,
+            "ConeOuter": 45,
+            "Cookie": null,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "5.40279,4.10235,2.51293,1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Radius": 700,
+            "ShadowBias": 0.0005,
+            "ShadowHardness": 0,
+            "Shadows": true
+          }
+        ],
+        "Children": []
+      }
+    ],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
@@ -77,13 +126,15 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []
