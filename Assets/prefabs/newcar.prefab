@@ -128,7 +128,8 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "SetHealth": 10000
+        "SetHealth": 10000,
+        "SetPoints": 500
       },
       {
         "__type": "EngineSounds",
@@ -163,12 +164,6 @@
           "component_id": "e1512333-4284-45fd-bd4c-0654de2d4cd7",
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
           "component_type": "Rigidbody"
-        },
-        "CrosshairSprite": {
-          "_type": "component",
-          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "Decal"
         },
         "DistanceToPlayer": 200,
         "HorizontalOffset": 80,
@@ -217,13 +212,17 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
           "component_type": "Rigidbody"
         },
-        "CrosshairDecal": {
-          "_type": "component",
-          "component_id": "01c5c0a7-5ce6-4933-bbb6-f0bce4de8927",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "Decal"
+        "Crosshair": {
+          "_type": "gameobject",
+          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d"
         },
         "Inaccuracy": 0.015,
+        "LaserBeam": {
+          "_type": "component",
+          "component_id": "b1df2d54-9a3e-43da-9db9-ca17189eb6cd",
+          "go": "3d2b4f42-39de-4a22-891d-2d35f74fd202",
+          "component_type": "BeamEffect"
+        },
         "MainCamera": {
           "_type": "component",
           "component_id": "0228bab7-3855-4e03-9885-0f2e8b9f1604",
@@ -2030,7 +2029,7 @@
                                             "TargetColor": "1,1,1,1",
                                             "CacheToDisk": true
                                           },
-                                          "compiled": "textures/generated/imagefile/e0b2571aea727c97.vtex"
+                                          "compiled": null
                                         },
                                         "BroadcastMessages": []
                                       }
@@ -2043,6 +2042,124 @@
                             },
                             "StartingAnimationName": "Default",
                             "TextureFilter": "Bilinear"
+                          }
+                        ],
+                        "Children": []
+                      },
+                      {
+                        "__guid": "3d2b4f42-39de-4a22-891d-2d35f74fd202",
+                        "__version": 2,
+                        "Flags": 0,
+                        "Name": "LaserBeam",
+                        "Position": "0,0,0",
+                        "Rotation": "0,0,0,1",
+                        "Scale": "1,1,1",
+                        "Tags": "",
+                        "Enabled": true,
+                        "NetworkMode": 2,
+                        "NetworkFlags": 0,
+                        "NetworkOrphaned": 0,
+                        "NetworkTransmit": true,
+                        "OwnerTransfer": 1,
+                        "Components": [
+                          {
+                            "__type": "Sandbox.BeamEffect",
+                            "__guid": "b1df2d54-9a3e-43da-9db9-ca17189eb6cd",
+                            "__enabled": true,
+                            "Flags": 0,
+                            "Additive": false,
+                            "Alpha": 1,
+                            "BeamColor": {
+                              "Type": "Gradient",
+                              "Evaluation": "Life",
+                              "GradientA": {
+                                "blend": "Linear",
+                                "color": [
+                                  {
+                                    "t": 0,
+                                    "c": "0.5451,0,0,1"
+                                  },
+                                  {
+                                    "t": 0.19327731,
+                                    "c": "1,0,0,1"
+                                  },
+                                  {
+                                    "t": 0.38655463,
+                                    "c": "1,0.2,0,1"
+                                  },
+                                  {
+                                    "t": 0.5420168,
+                                    "c": "1,0.15,0,1"
+                                  },
+                                  {
+                                    "t": 0.8046219,
+                                    "c": "1,0,0,1"
+                                  },
+                                  {
+                                    "t": 1,
+                                    "c": "0.5451,0,0,1"
+                                  }
+                                ],
+                                "alpha": [
+                                  {
+                                    "t": 0,
+                                    "a": 1
+                                  },
+                                  {
+                                    "t": 0.5588235,
+                                    "a": 1
+                                  },
+                                  {
+                                    "t": 1,
+                                    "a": 1
+                                  }
+                                ]
+                              },
+                              "GradientB": {
+                                "blend": "Linear",
+                                "color": [
+                                  {
+                                    "t": 0.5,
+                                    "c": "1,1,1,1"
+                                  }
+                                ],
+                                "alpha": []
+                              }
+                            },
+                            "BeamLifetime": 3,
+                            "BeamsPerSecond": 0,
+                            "Brightness": 1,
+                            "DepthFeather": 50,
+                            "FilterMode": "Anisotropic",
+                            "FollowPoints": true,
+                            "InitialBurst": 1,
+                            "Lighting": false,
+                            "Looped": true,
+                            "Material": null,
+                            "MaxBeams": 1,
+                            "OnComponentDestroy": null,
+                            "OnComponentDisabled": null,
+                            "OnComponentEnabled": null,
+                            "OnComponentFixedUpdate": null,
+                            "OnComponentStart": null,
+                            "OnComponentUpdate": null,
+                            "Opaque": false,
+                            "Scale": 0.5,
+                            "Shadows": false,
+                            "TargetGameObject": null,
+                            "TargetPosition": "0,0,0",
+                            "TargetRandom": "0,0,0",
+                            "Texture": null,
+                            "TextureOffset": 1,
+                            "TextureScale": 128,
+                            "TextureScroll": 0,
+                            "TextureScrollSpeed": 0,
+                            "TravelBetweenPoints": false,
+                            "TravelLerp": {
+                              "Type": "Range",
+                              "Evaluation": "Life",
+                              "Constants": "0,1,0,0"
+                            }
                           }
                         ],
                         "Children": []
@@ -4186,129 +4303,7 @@
             "Transient": false
           }
         ],
-        "Children": [
-          {
-            "__guid": "3d2b4f42-39de-4a22-891d-2d35f74fd202",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Beam",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.BeamEffect",
-                "__guid": "b1df2d54-9a3e-43da-9db9-ca17189eb6cd",
-                "__enabled": true,
-                "Flags": 0,
-                "Additive": false,
-                "Alpha": 1,
-                "BeamColor": {
-                  "Type": "Gradient",
-                  "Evaluation": "Life",
-                  "GradientA": {
-                    "blend": "Linear",
-                    "color": [
-                      {
-                        "t": 0,
-                        "c": "0.5451,0,0,1"
-                      },
-                      {
-                        "t": 0.19327731,
-                        "c": "1,0,0,1"
-                      },
-                      {
-                        "t": 0.38655463,
-                        "c": "1,0.2,0,1"
-                      },
-                      {
-                        "t": 0.5420168,
-                        "c": "1,0.15,0,1"
-                      },
-                      {
-                        "t": 0.8046219,
-                        "c": "1,0,0,1"
-                      },
-                      {
-                        "t": 1,
-                        "c": "0.5451,0,0,1"
-                      }
-                    ],
-                    "alpha": [
-                      {
-                        "t": 0,
-                        "a": 1
-                      },
-                      {
-                        "t": 0.5588235,
-                        "a": 1
-                      },
-                      {
-                        "t": 1,
-                        "a": 1
-                      }
-                    ]
-                  },
-                  "GradientB": {
-                    "blend": "Linear",
-                    "color": [
-                      {
-                        "t": 0.5,
-                        "c": "1,1,1,1"
-                      }
-                    ],
-                    "alpha": []
-                  }
-                },
-                "BeamLifetime": 3,
-                "BeamsPerSecond": 0,
-                "Brightness": 1,
-                "DepthFeather": 50,
-                "FilterMode": "Anisotropic",
-                "FollowPoints": true,
-                "InitialBurst": 1,
-                "Lighting": false,
-                "Looped": true,
-                "Material": null,
-                "MaxBeams": 1,
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Opaque": false,
-                "Scale": 0.5,
-                "Shadows": false,
-                "TargetGameObject": {
-                  "_type": "gameobject",
-                  "go": "fccd3e2c-e519-40b8-8c28-3cba0709db3d"
-                },
-                "TargetPosition": "0,0,0",
-                "TargetRandom": "0,0,0",
-                "Texture": null,
-                "TextureOffset": 1,
-                "TextureScale": 128,
-                "TextureScroll": 0,
-                "TextureScrollSpeed": 0,
-                "TravelBetweenPoints": false,
-                "TravelLerp": {
-                  "Type": "Range",
-                  "Evaluation": "Life",
-                  "Constants": "0,1,0,0"
-                }
-              }
-            ],
-            "Children": []
-          }
-        ]
+        "Children": []
       }
     ],
     "__properties": {

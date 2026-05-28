@@ -3,6 +3,7 @@ using Sandbox.Audio;
 using Sandbox.Modals;
 using System;
 using System.Diagnostics;
+using System.Net.Quic;
 using System.Numerics;
 using System.Threading.Tasks;
 using static HealthSystem;
@@ -17,8 +18,9 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] GameObject Turret;
 	[Property] GameObject Muzzle;
 	[Property] CameraComponent MainCamera;
-	[Property] Decal CrosshairDecal;
+	[Property] GameObject Crosshair;
 	[Property] BeamEffect ShootBeam;
+	[Property] BeamEffect LaserBeam;
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
 	[Property] GameObject BulletSparkEnemy;
@@ -34,12 +36,14 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] public float StartRockets = 15;
 	public float CurrentRockets;
 
-	SceneTraceResult ShootTrace;
+	SceneTraceResult SightlineTrace;
+	bool IsAiming;
 
 	GameObject newBulletHole;
 	GameObject newBulletSpark;
 	GameObject newBulletSparkEnemy;
 
+	TimeSince SinceAim;
 	TimeSince SinceGunAnimationStart;
 	Vector3 originalGunScale;
 
@@ -64,6 +68,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	protected override void OnStart()
 	{
+
 		SceneLoader = Scene.Get<SceneLoader>();
 		HighscoreManager = Scene.Get<HighscoreManager>();
 
@@ -76,14 +81,68 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	protected override void OnUpdate()
 	{
 		// Ramming();
-
 		// Wo man hinaimed
-		Ray CameraRay = new Ray(MainCamera.WorldPosition, (CrosshairDecal.WorldPosition - MainCamera.WorldPosition).Normal + random.VectorInSphere(Inaccuracy) );
-		ShootTrace = Scene.Trace.Ray( CameraRay, 20000f )
-			.Radius( 16 )
-			.IgnoreGameObjectHierarchy( GameObject )
-			.WithoutTags("dead")
-			.Run();
+
+		float aimRange = 15000f;
+		float aimWidth = 2000f;
+
+
+		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 20;
+
+		if (!IsAiming)
+		{
+			LaserBeam.TargetGameObject = null;
+			LaserBeam.TargetPosition = Crosshair.WorldPosition;
+		}
+
+		if ( SinceAim > 0.1f ) 
+		{
+			SinceAim = 0;
+			IsAiming = false;
+
+			Rotation coneTraceRotation = Rotation.LookAt( MainCamera.WorldRotation.Up, MainCamera.WorldRotation.Backward ); //CarBody.WorldRotation.Angles().WithPitch(90);
+			IEnumerable<SceneTraceResult> AimConeTrace = Scene.Trace.Cone( aimRange, aimWidth,
+				MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange * 0.5f,
+				MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange * 0.501f )
+				.Rotated( coneTraceRotation )
+				.WithTag( "enemy" )
+				.WithoutTags( "dead" )
+				.IgnoreGameObjectHierarchy( GameObject )
+				.RunAll();
+
+			if ( AimConeTrace.Any() )
+			{
+				Log.Info( $"Found {AimConeTrace.Count()} targets in aim cone" );
+				Vector3 targetPos = Vector3.Zero;
+
+				AimConeTrace = AimConeTrace.OrderBy( x => Muzzle.WorldPosition.Distance( x.GameObject.WorldPosition ) );
+				foreach ( SceneTraceResult hit in AimConeTrace )
+				{
+					Ray TurretRay = new Ray( Muzzle.WorldPosition, (hit.GameObject.WorldPosition + hit.GameObject.WorldRotation.Up * 200) - Muzzle.WorldPosition );
+					SightlineTrace = Scene.Trace.Ray( TurretRay, aimRange )
+						.IgnoreGameObjectHierarchy( GameObject )
+						.Run();
+					//DebugOverlay.Trace( SightlineTrace );
+
+					if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has( "dead" ) )
+					{
+						LaserBeam.TargetPosition = hit.GameObject.WorldPosition + Vector3.Up * 100;
+						IsAiming = true;
+						break;
+					}
+
+				}
+
+			}
+			else
+			{
+				Ray TurretRay = new Ray( Muzzle.WorldPosition, MainCamera.WorldRotation.Forward );
+				SightlineTrace = Scene.Trace.Ray( TurretRay, aimRange )
+				.IgnoreGameObjectHierarchy( GameObject )
+				.Run();
+			}
+		}
+
 		// DebugOverlay.Trace( ShootTrace );
 
 		// Turret Yaw mit Camera Yaw mitdrehen
@@ -97,70 +156,70 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 			FlashMuzzleSprite( 0.05f );
 			AnimateGun( 0.03f);
 
-			if ( ShootTrace.Hit )
+			if ( SightlineTrace.Hit )
 			{
 
-				newBulletHole = BulletHole.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
-				newBulletHole.SetParent( ShootTrace.GameObject );
+				newBulletHole = BulletHole.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
+				if ( SightlineTrace.GameObject.IsValid()) newBulletHole.SetParent( SightlineTrace.GameObject );
 
-				if ( ShootTrace.GameObject.Tags.Has( "enemy" ) )
+				if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has("dead") )
 				{
-					ShootTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
+					if ( SightlineTrace.GameObject.GetComponent<HealthSystem>().IsValid() ) SightlineTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
-					if ( ShootTrace.GameObject.GetComponent<ZombieBrain>() != null )
+					if ( SightlineTrace.GameObject.GetComponent<ZombieBrain>() != null )
 					{
-						ShootTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
-						ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
-						ShootTrace.GameObject.GetComponent<ZombieBrain>().AnimateHit();
+						SightlineTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
+						SightlineTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, SightlineTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
+						SightlineTrace.GameObject.GetComponent<ZombieBrain>().AnimateHit();
 
 					}
-					else if ( ShootTrace.GameObject.GetComponent<VampireBrain>() != null )
+					else if ( SightlineTrace.GameObject.GetComponent<VampireBrain>() != null )
 					{
-						ShootTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
-						ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.1f, ShootTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.1f );
+						SightlineTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
+						SightlineTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.1f, SightlineTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.1f );
 
-						ShootTrace.GameObject.WorldRotation = ShootTrace.GameObject.WorldRotation.Angles().WithYaw( ShootTrace.GameObject.WorldRotation.Yaw() + random.Float( -10, 10 ) );
-						ShootTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += ShootTrace.Direction * 200;
-						ShootTrace.GameObject.GetComponent<VampireBrain>().AnimateHit();
+						SightlineTrace.GameObject.WorldRotation = SightlineTrace.GameObject.WorldRotation.Angles().WithYaw( SightlineTrace.GameObject.WorldRotation.Yaw() + random.Float( -10, 10 ) );
+						SightlineTrace.GameObject.GetComponent<VampireBrain>().TargetPosition += SightlineTrace.Direction * 200;
+						SightlineTrace.GameObject.GetComponent<VampireBrain>().AnimateHit();
 						// Rotation?
 					}
-					else if ( ShootTrace.GameObject.GetComponent<GhostBrain>() != null )
+					else if ( SightlineTrace.GameObject.GetComponent<GhostBrain>() != null )
 					{
-						ShootTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
-						ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0f, ShootTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0f ); // 0f = disabled
+						SightlineTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
+						SightlineTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0f, SightlineTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0f ); // 0f = disabled
 
-						ShootTrace.GameObject.GetComponent<GhostBrain>().AnimateHit();
+						SightlineTrace.GameObject.GetComponent<GhostBrain>().AnimateHit();
 						// ShootTrace.GameObject.GetComponent<GhostBrain>().TargetPosition += ShootTrace.Direction * 200;
 						// Rotation?
 					}
 
 
-					if ( ShootTrace.GameObject.GetComponent<Rigidbody>() != null )
+					if ( SightlineTrace.GameObject.GetComponent<Rigidbody>() != null )
 					{
-						Rigidbody rb = ShootTrace.GameObject.GetComponent<Rigidbody>();
+						Rigidbody rb = SightlineTrace.GameObject.GetComponent<Rigidbody>();
 
 						rb.GravityScale = 1;
 						rb.SmoothRotate( rb.WorldRotation.Angles().WithPitch( random.FromArray<int>( new int[] { -10, -15 } ) )
 							.WithYaw( rb.WorldRotation.Yaw() + random.FromArray<int>( new int[] { -15, 15 } ) ), 0.001f, 1f );
 						// ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyTorque( ShootTrace.GameObject.WorldRotation.Up * 100000 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
-						ShootTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( (ShootTrace.Direction + Vector3.Up) * 100 * ShootTrace.GameObject.GetComponent<Rigidbody>().Mass );
+						SightlineTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( (SightlineTrace.Direction + Vector3.Up) * 100 * SightlineTrace.GameObject.GetComponent<Rigidbody>().Mass );
 					}
 
 
 					// Partikel und Sound und bullethole für Gegner
 					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * random.Float(3, 5); newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX( 4 );
-					newBulletSparkEnemy = BulletSparkEnemy.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+					newBulletSparkEnemy = BulletSparkEnemy.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
 
-					Sound.Play( "sounds/bullet-impact-flesh.sound", ShootTrace.HitPosition );
+					Sound.Play( "sounds/bullet-impact-flesh.sound", SightlineTrace.HitPosition );
 				}
 				else
 				{
 					// normaler Partikel
-					newBulletSpark = BulletSpark.Clone( ShootTrace.HitPosition, Rotation.LookAt( ShootTrace.Normal, Vector3.Up ) );
+					newBulletSpark = BulletSpark.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
 				}
 			}
 
-			ShootBeam.TargetPosition = ShootTrace.EndPosition;
+			ShootBeam.TargetPosition = SightlineTrace.EndPosition;
 			ShootBeam.SpawnBeam();
 
 			NextShot = ShootCooldown;
@@ -210,7 +269,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		Sound.Play( "sounds/grenadelauncher.sound", Muzzle.WorldPosition );
 
 		GameObject newRocket = Rocket.Clone( Muzzle.WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
-		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (ShootTrace.EndPosition - Muzzle.WorldPosition).Normal * RocketSpeed;
+		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (SightlineTrace.EndPosition - Muzzle.WorldPosition).Normal * RocketSpeed;
 	
 		CurrentRockets--;
 	}

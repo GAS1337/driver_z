@@ -18,9 +18,6 @@ public sealed class OrbitalCameraController : Component
 	[Property, Description( "Units one step zooms" )] int ZoomStrength = 0;
 	[Property, Description( "Units one step zooms" )] int AutoZoomStrength = 1;
 
-	[Property] Decal CrosshairSprite;
-
-
 	float crosshairPitch = 0;
 	float Pitch = 30;
 	float Yaw = 180;
@@ -37,8 +34,8 @@ public sealed class OrbitalCameraController : Component
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
 		// Pitch = (Pitch + mouseMove.pitch ).Clamp( 20, -20 );
-		crosshairPitch = (crosshairPitch + mouseMove.pitch ).Clamp( 40, -45 ); // Up&Down clamped in degrees
-		Pitch = (crosshairPitch / 3) + 10;
+		crosshairPitch = (crosshairPitch + mouseMove.pitch ).Clamp( 80, -75 ); // Up&Down clamped in degrees
+		Pitch = (crosshairPitch / 1) + 10;
 		Yaw = Yaw + mouseMove.yaw;
 		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
 		 
@@ -104,7 +101,5 @@ public sealed class OrbitalCameraController : Component
 			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset / 2,  crosshairDir )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
-		CrosshairSprite.WorldPosition = crosshairCheck.EndPosition;
-		CrosshairSprite.WorldRotation = Rotation.LookAt( crosshairCheck.Normal, Vector3.Up );
 	}
 }
