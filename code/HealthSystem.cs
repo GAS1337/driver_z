@@ -12,6 +12,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	[Property] SpriteRenderer HealthbarRenderer;
 	IEnumerable<ModelRenderer> ModelRendererList;
 	Color originalTint;
+	Material dmgMaterial = Material.Load( "materials/primary_white_emissive.vmat_c" );
 
 	List<GameObject> LootList;
 
@@ -97,7 +98,6 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		foreach ( var renderer in ModelRendererList )
 		{
 			renderer.Tint = Color.Average(new Color[] { Color.White, Color.Black, Color.Black} );
-			Material dmgMaterial = Material.Load( "materials/primary_white_emissive.vmat" );
 			renderer.MaterialOverride = dmgMaterial;
 		}
 

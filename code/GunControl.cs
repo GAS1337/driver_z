@@ -27,6 +27,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] SpriteRenderer MuzzleFlashSprite;
 	[Property] ParticleEffect MuzzleFlashEffect;
 	[Property] ParticleSphereEmitter MuzzleFlashEmitter;
+	[Property] float aimRange = 15000f;
+	[Property] float aimWidth = 2000f;
 	[Property] float ShootCooldown = 0.2f;
 	[Property] float Inaccuracy = 0.015f;
 	TimeUntil NextShot;
@@ -83,8 +85,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// Ramming();
 		// Wo man hinaimed
 
-		float aimRange = 15000f;
-		float aimWidth = 2000f;
+
+		DebugOverlay.Sphere( new Sphere( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange, aimWidth ) );
 
 
 		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 20;

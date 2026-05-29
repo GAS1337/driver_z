@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Forest Texture",
+      "Type": "material",
+      "Org": "local",
+      "Ident": "foresttexture",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "duccsoft.forest_ground_tmat#60683"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "materials/forest_texture.vmat"
+      }
+    }
+  }
+}
