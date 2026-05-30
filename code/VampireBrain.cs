@@ -160,8 +160,8 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 				LookAtPlayer();
 
-				if ( (playerPosition - WorldPosition).Length < 1300 && SinceAttack > 0.2f ) { Attack(); SinceAttack = 0; }
-				else { BloodEmitter.Enabled = false; }
+				if ( (playerPosition - WorldPosition).Length < 1300 && SinceAttack > 1f ) { Attack(); SinceAttack = 0 + random.Float(0.05f, 0.1f); }
+				// else { // BloodEmitter.Enabled = false; }
 				
 				if ( (playerPosition - WorldPosition).Length > 10000 ) { CurrentState = VampireState.Idle; }
 				break;
@@ -198,10 +198,11 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	private void Attack()
 	{
-		Player.GetComponentInParent<HealthSystem>().Damage(15, false);
+		Player.GetComponentInParent<HealthSystem>().Damage(80, false);
 		// Particle & Sound
-		BloodEmitter.Enabled = true;
-		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 100;
+
+		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 50;
+		BloodEmitter.ResetEmitter();
 	}
 
 	public async Task AnimateHit()

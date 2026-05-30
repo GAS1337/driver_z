@@ -8,6 +8,8 @@ public sealed class Blitz : Component, MonsterSpawner.IMonsterSpawnerEvent
 	[Property] LineRenderer BlitzLine;
 	[Property] public MonsterSpawner MonsterSpawner;
 
+	public Color MonsterLineColor;
+
 	TimeSince SinceLightningStrike;
 	TimeSince SinceSpawn;
 
@@ -21,7 +23,7 @@ public sealed class Blitz : Component, MonsterSpawner.IMonsterSpawnerEvent
 
 	protected override void OnStart()
 	{
-		Color MonsterLineColor = MonsterSpawner.LineRenderer.Color.Evaluate( 0.5f );
+		if ( MonsterSpawner.IsValid() ) MonsterLineColor = MonsterSpawner.LineRenderer.Color.Evaluate( 0.5f );
 		BlitzLine.Color = Color.Average( new Color[] { MonsterLineColor * 1, Color.White * 4 } );
 	}
 
@@ -34,9 +36,10 @@ public sealed class Blitz : Component, MonsterSpawner.IMonsterSpawnerEvent
 		}
 	}
 
-	async Task LightningStrike()
+	public async Task LightningStrike(float volume = 1)
 	{
-		Sound.Play( "sounds/blitz/thunderclap.sound", WorldPosition );
+		SoundHandle thunderHandle = Sound.Play( "sounds/blitz/thunderclap.sound", WorldPosition );
+		thunderHandle.Volume = volume;
 
 		BlitzLine.Enabled = true; await Task.DelayRealtimeSeconds( 0.3f );
 		BlitzLine.Enabled = false; await Task.DelayRealtimeSeconds( 0.2f );

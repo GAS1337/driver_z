@@ -44,7 +44,8 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "SetHealth": 250
+            "SetHealth": 250,
+            "SetPoints": 500
           },
           {
             "__type": "Sandbox.ModelCollider",
@@ -230,7 +231,7 @@
             "__version": 2,
             "Flags": 0,
             "Name": "Spray",
-            "Position": "237.599899,-0.000157982096,26.9999905",
+            "Position": "300,-0.000169200255,26.9999905",
             "Rotation": "0,0,0.999999881,4.47034807E-07",
             "Scale": "1,1,1",
             "Tags": "particles",
@@ -307,7 +308,7 @@
                 "FollowerPrefab": null,
                 "FollowerPrefabChance": 1,
                 "FollowerPrefabKill": true,
-                "Force": true,
+                "Force": false,
                 "ForceDirection": "0,0,0",
                 "ForceScale": 1,
                 "ForceSpace": "Local",
@@ -319,16 +320,16 @@
                   "ConstantB": "0.46512,0,0,1"
                 },
                 "InitialVelocity": {
-                  "X": 3000,
+                  "X": 0,
                   "Y": 0,
                   "Z": 0
                 },
                 "Lifetime": {
                   "Type": "Range",
                   "Evaluation": "Seed",
-                  "Constants": "0.100000001,0.200000003,0,0"
+                  "Constants": "0.5,1,0,0"
                 },
-                "LocalSpace": 0,
+                "LocalSpace": 0.8000002,
                 "MaxParticles": 5000,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -460,17 +461,17 @@
               {
                 "__type": "Sandbox.ParticleConeEmitter",
                 "__guid": "cebc6f78-3644-4b7b-a651-7e494e43690b",
-                "__enabled": true,
+                "__enabled": false,
                 "Flags": 0,
-                "Burst": 0,
+                "Burst": 100,
                 "CenterBias": 0,
                 "CenterBiasVelocity": 0,
                 "ConeAngle": 5,
                 "ConeFar": 50,
-                "ConeNear": 50,
+                "ConeNear": 500,
                 "Delay": 0,
                 "DestroyOnEnd": false,
-                "Duration": 3,
+                "Duration": 0.5,
                 "InVolume": false,
                 "Loop": true,
                 "OnComponentDestroy": null,
@@ -480,10 +481,52 @@
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
                 "OnEdge": false,
-                "Rate": 1000,
+                "Rate": 0,
                 "RateOverDistance": 0,
                 "VelocityMultiplier": 1,
                 "VelocityRandom": 0
+              },
+              {
+                "__type": "Sandbox.ParticleSphereEmitter",
+                "__guid": "3a596ef0-9499-42b3-b11d-7433d8867e3a",
+                "__enabled": true,
+                "Flags": 0,
+                "Burst": 100,
+                "Delay": 0,
+                "DestroyOnEnd": false,
+                "Duration": 1,
+                "Loop": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "OnEdge": false,
+                "Radius": 20,
+                "Rate": 0,
+                "RateOverDistance": 0,
+                "Velocity": 100
+              },
+              {
+                "__type": "Sandbox.ParticleAttractor",
+                "__guid": "3ec5b444-b136-4015-89c4-63046bb24697",
+                "__enabled": true,
+                "Flags": 0,
+                "Force": 4,
+                "MaxForce": 15,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Radius": 0,
+                "Randomness": 0,
+                "Target": {
+                  "_type": "gameobject",
+                  "go": "78721051-ac7c-4e80-aa37-4f7438f84e6d"
+                }
               }
             ],
             "Children": []

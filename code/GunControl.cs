@@ -24,6 +24,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 	[Property] GameObject BulletHole;
 	[Property] GameObject BulletSpark;
 	[Property] GameObject BulletSparkEnemy;
+	[Property] GameObject BulletSparkEnemyGhost;
 	[Property] SpriteRenderer MuzzleFlashSprite;
 	[Property] ParticleEffect MuzzleFlashEffect;
 	[Property] ParticleSphereEmitter MuzzleFlashEmitter;
@@ -82,70 +83,17 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 	protected override void OnUpdate()
 	{
-		// Ramming();
 		// Wo man hinaimed
 
+		Ray TurretRay = new Ray( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 250, MainCamera.WorldRotation.Forward );
+		SightlineTrace = Scene.Trace.Sphere( 50f, TurretRay, MainCamera.ZFar )
+			.WithoutTags("player", "dead")
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+		// DebugOverlay.Trace( SightlineTrace );
 
-		DebugOverlay.Sphere( new Sphere( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange, aimWidth ) );
-
-
-		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 20;
-
-		if (!IsAiming)
-		{
-			LaserBeam.TargetGameObject = null;
-			LaserBeam.TargetPosition = Crosshair.WorldPosition;
-		}
-
-		if ( SinceAim > 0.1f ) 
-		{
-			SinceAim = 0;
-			IsAiming = false;
-
-			Rotation coneTraceRotation = Rotation.LookAt( MainCamera.WorldRotation.Up, MainCamera.WorldRotation.Backward ); //CarBody.WorldRotation.Angles().WithPitch(90);
-			IEnumerable<SceneTraceResult> AimConeTrace = Scene.Trace.Cone( aimRange, aimWidth,
-				MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange * 0.5f,
-				MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange * 0.501f )
-				.Rotated( coneTraceRotation )
-				.WithTag( "enemy" )
-				.WithoutTags( "dead" )
-				.IgnoreGameObjectHierarchy( GameObject )
-				.RunAll();
-
-			if ( AimConeTrace.Any() )
-			{
-				Log.Info( $"Found {AimConeTrace.Count()} targets in aim cone" );
-				Vector3 targetPos = Vector3.Zero;
-
-				AimConeTrace = AimConeTrace.OrderBy( x => Muzzle.WorldPosition.Distance( x.GameObject.WorldPosition ) );
-				foreach ( SceneTraceResult hit in AimConeTrace )
-				{
-					Ray TurretRay = new Ray( Muzzle.WorldPosition, (hit.GameObject.WorldPosition + hit.GameObject.WorldRotation.Up * 200) - Muzzle.WorldPosition );
-					SightlineTrace = Scene.Trace.Ray( TurretRay, aimRange )
-						.IgnoreGameObjectHierarchy( GameObject )
-						.Run();
-					//DebugOverlay.Trace( SightlineTrace );
-
-					if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has( "dead" ) )
-					{
-						LaserBeam.TargetPosition = hit.GameObject.WorldPosition + Vector3.Up * 100;
-						IsAiming = true;
-						break;
-					}
-
-				}
-
-			}
-			else
-			{
-				Ray TurretRay = new Ray( Muzzle.WorldPosition, MainCamera.WorldRotation.Forward );
-				SightlineTrace = Scene.Trace.Ray( TurretRay, aimRange )
-				.IgnoreGameObjectHierarchy( GameObject )
-				.Run();
-			}
-		}
-
-		// DebugOverlay.Trace( ShootTrace );
+		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 10;
+		LaserBeam.TargetPosition = SightlineTrace.EndPosition;
 
 		// Turret Yaw mit Camera Yaw mitdrehen
 		Turret.WorldRotation = Rotation.LookAt( MainCamera.WorldRotation.Backward, CarBody.WorldRotation.Up );
@@ -170,6 +118,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 					if ( SightlineTrace.GameObject.GetComponent<ZombieBrain>() != null )
 					{
+						newBulletSparkEnemy = BulletSparkEnemy.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
+
 						SightlineTrace.GameObject.GetComponent<ZombieBrain>().CurrentState = ZombieState.Staggered;
 						SightlineTrace.GameObject.GetComponent<ZombieBrain>().KnockBack = Math.Max( 0.1f, SightlineTrace.GameObject.GetComponent<ZombieBrain>().KnockBack + 0.1f );
 						SightlineTrace.GameObject.GetComponent<ZombieBrain>().AnimateHit();
@@ -177,6 +127,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					}
 					else if ( SightlineTrace.GameObject.GetComponent<VampireBrain>() != null )
 					{
+						newBulletSparkEnemy = BulletSparkEnemy.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
+
 						SightlineTrace.GameObject.GetComponent<VampireBrain>().CurrentState = VampireState.Staggered;
 						SightlineTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack = Math.Max( 0.1f, SightlineTrace.GameObject.GetComponent<VampireBrain>().UntilKnockBack + 0.1f );
 
@@ -187,6 +139,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 					}
 					else if ( SightlineTrace.GameObject.GetComponent<GhostBrain>() != null )
 					{
+						newBulletSparkEnemy = BulletSparkEnemyGhost.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
+
 						SightlineTrace.GameObject.GetComponent<GhostBrain>().CurrentState = GhostState.Staggered;
 						SightlineTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack = Math.Max( 0f, SightlineTrace.GameObject.GetComponent<GhostBrain>().UntilKnockBack + 0f ); // 0f = disabled
 
@@ -210,7 +164,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 					// Partikel und Sound und bullethole für Gegner
 					newBulletHole.GetComponent<Decal>().ColorTint = Color.Red * random.Float(3, 5); newBulletHole.WorldScale = (newBulletHole.WorldScale * 3).WithX( 4 );
-					newBulletSparkEnemy = BulletSparkEnemy.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
 
 					Sound.Play( "sounds/bullet-impact-flesh.sound", SightlineTrace.HitPosition );
 				}

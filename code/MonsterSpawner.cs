@@ -32,7 +32,12 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 		foreach (var monster in SpawnedMonsters)
 		{
 			if ( monster == null ) { return; }
-			// BlitzMonster( monster );
+
+			GameObject newBlitz = BlitzPrefab.Clone(monster.GetComponentInChildren<LineRenderer>().Points[0].WorldPosition, monster.WorldRotation.Angles().WithYaw(random.Float(0, 360)), new Vector3(10, 10, 10));
+			newBlitz.SetParent( monster.GetComponentInChildren<LineRenderer>().GameObject );
+			newBlitz.GetComponent<Blitz>().MonsterLineColor = LineRenderer.Color.Evaluate( 0.5f );
+			newBlitz.GetComponent<Blitz>().LightningStrike(0.2f);
+
 
 			// HealthSystem holen, wenn nicht da aus Children holen und damagen
 			HealthSystem healthSystem = monster.GetComponent<HealthSystem>();
