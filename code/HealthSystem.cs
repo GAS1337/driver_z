@@ -12,7 +12,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 	[Property] SpriteRenderer HealthbarRenderer;
 	IEnumerable<ModelRenderer> ModelRendererList;
 	Color originalTint;
-	Material dmgMaterial = Material.Load( "materials/primary_white_emissive.vmat_c" );
+	Material dmgMaterial = Material.Load( "materials/damage-material.vmat" );
 
 	List<GameObject> LootList;
 
@@ -108,10 +108,10 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		}
 
 		TimeSinceLastDamage = 0;
-		await Task.DelaySeconds( 0.02f );
+		await Task.DelaySeconds( 0.03f );
 		
 		if (!this.IsValid) return;
-		if (TimeSinceLastDamage < 0.019f) return;
+		if (TimeSinceLastDamage < 0.029f) return;
 
 		foreach ( var renderer in ModelRendererList )
 		{
