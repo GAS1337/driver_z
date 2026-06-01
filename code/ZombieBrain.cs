@@ -12,17 +12,27 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	[Property] NavMeshAgent Agent;
 	GameObject Player;
 	[Property] Rigidbody Body;
-	[Property] GameObject DeadZombie;
-	[Property] GameObject BloodDecal;
+	[Property] ModelRenderer Model;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
+
+	[Property] GameObject DeadZombie;
+	[Property] GameObject BloodDecal;
 	[Property] ParticleRingEmitter AttackParticle;
 	[Property] ParticleEffect AttackEffect;
+
 	[Property] float MoveCooldown = 1f;
 	float WanderCooldown = 5f;
 	[Property] float LeapCooldown = 5f;
 	[Property] float SlamCooldown = 3f;
 	[Property] float SlamRadius = 350f;
+
+	[Property] int ApproachRange = 7000;
+	[Property] int CulledRange = 15000;
+	[Property] int LeapRange = 2000;
+	[Property] int SlamRange = 1000;
+	int RangeOffset;
+
 
 	// --- Leap-Parameter zum Tunen ---
 	[Property] float LeapFlightTime = 1.5f;         // Konstante Flugzeit in Sekunden
@@ -30,7 +40,6 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	float DistanceToPlayer;
 	Vector3 TargetPos;
-	int SlamCharge;
 
 	public ZombieState CurrentState;
 
@@ -38,8 +47,12 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	TimeUntil NextWander;
 	TimeUntil NextLeap;
 	TimeUntil NextSlam;
+	TimeUntil NextChargeSlam;
 	public TimeUntil KnockBack;
 
+	bool IsChargingSlam;
+	TimeSince SinceLeapAnimationStart;
+	TimeSince SinceSlamAnimationStart;
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
 
@@ -56,6 +69,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		Player = Scene.FindAllWithTag("carbody").First<GameObject>();
 
 		originalScale = WorldScale;
+		RangeOffset = random.Int( -500, 500 );
+		LeapRange += RangeOffset;
 
 		if ( !DebugMode ) { StateDebugText.Enabled = false; }
 		// Log.Info( $"[START] Player found: {Player.Name}" );
@@ -63,7 +78,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
-		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, WorldScale );
+		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, originalScale );
 		foreach (GameObject child in _deadClone.Children )
 		{
 			child.GetComponent<Rigidbody>().Velocity = Body.Velocity;
@@ -94,7 +109,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				Agent.Enabled = false;
 				// DebugOverlay.Sphere(new Sphere(WorldPosition, 15000));
 
-				if ( DistanceToPlayer < 15000 ) 
+				if ( DistanceToPlayer < CulledRange ) 
 				{
 					Agent.Enabled = true;
 					Agent.MoveTo( Body.WorldPosition );
@@ -113,9 +128,9 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 					NextWander = WanderCooldown + random.Float(0f, 0.1f);
 				}
 
-				if ( DistanceToPlayer > 15000 ) { CurrentState = ZombieState.Culled; }
+				if ( DistanceToPlayer > CulledRange ) { CurrentState = ZombieState.Culled; }
 
-				if ( DistanceToPlayer < 7000 ) { CurrentState = ZombieState.Approach; }
+				if ( DistanceToPlayer < ApproachRange ) { CurrentState = ZombieState.Approach; }
 				break;
 
 			case ZombieState.Approach: // STATE IS APPROACH
@@ -135,7 +150,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				LookAtPlayer();
 
 				// Go to wander if player is far
-				if ( DistanceToPlayer > 7000 )
+				if ( DistanceToPlayer > ApproachRange )
 				{
 					Agent.UpdateRotation = true;
 					Agent.MaxSpeed = 240; 
@@ -143,10 +158,10 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				}
 
 				// Go to slam if near and NextSlam
-				if ( DistanceToPlayer < (SlamRadius * 2) && NextSlam ) { CurrentState = ZombieState.Slam; }
+				if ( DistanceToPlayer < (SlamRadius * 2) && NextSlam ) { NextChargeSlam = 1; CurrentState = ZombieState.Slam; }
 
 				// Go to Leap if NextMove, Distance und sightlineCheck 
-				if ( DistanceToPlayer < 2000 && DistanceToPlayer > 1000 && NextLeap && NextSlam ) 
+				if ( DistanceToPlayer < LeapRange && DistanceToPlayer > SlamRadius * 3 && NextLeap && NextSlam ) 
 				{
 					SceneTraceResult checkSightline = Scene.Trace.Sphere( 64, Body.WorldPosition + Vector3.Up * 300, Player.WorldPosition + Vector3.Up * 300 )
 						.IgnoreGameObjectHierarchy( GameObject )
@@ -162,11 +177,11 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				StateDebugText.Text = "Slam";
 				Agent.Stop();
 				LookAtPlayer();
+				if ( !IsChargingSlam ) AnimateSlam();
 				// Increase Charge to 100 then DoSlam()
-				if ( SlamCharge >= 50 ) { SlamCharge = 0; DoSlam(); }
-				else { SlamCharge++; }
-
-				if ( DistanceToPlayer < 7000 && SlamCharge == 0 ) { CurrentState = ZombieState.Approach; }
+				if ( NextChargeSlam ) { IsChargingSlam = false; DoSlam(); }
+				
+				if ( DistanceToPlayer < 7000 && NextChargeSlam ) { CurrentState = ZombieState.Approach; }
 
 				break;
 
@@ -196,7 +211,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				// Einmal am anfang leapen
 				if ( NextLeap ) 
 				{ 
-					DoLeap(); 
+					DoLeap();
+					AnimateLeap();
 				}
 
 				// wenn er wieder aufkommt slammen und zu approach
@@ -316,7 +332,6 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	void DoLeap()
 	{
-
 		Sound.Play( "sounds/whaa.sound", Body.WorldPosition );
 		var playerRb = Player.GetComponent<Rigidbody>();
 
@@ -394,6 +409,55 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		}
 	}
 
+	async Task AnimateLeap()
+	{
+		float duration = LeapFlightTime;
+		SinceLeapAnimationStart = 0;
+
+		while ( SinceLeapAnimationStart < duration * 0.5f )
+		{
+			if ( CurrentState != ZombieState.Leap ) { break; }
+
+			Model.WorldScale = Model.WorldScale.WithZ( Model.WorldScale.z.LerpTo( originalScale.z + 0.2f, 0.01f ) );
+			await Task.FrameEnd();
+		}
+		while ( !groundCheck.Hit )
+		{
+			if ( CurrentState != ZombieState.Leap ) { break; }
+
+			Model.WorldScale = Model.WorldScale.WithZ( Model.WorldScale.z.LerpTo( originalScale.z - 0.5f, 0.01f ) );
+			await Task.FrameEnd();
+		}
+
+		if ( !this.IsValid() ) return;
+		Model.WorldScale = originalScale;
+	}
+
+	async Task AnimateSlam()
+	{
+		float duration = 1f;
+		SinceSlamAnimationStart = 0;
+		IsChargingSlam = true;
+
+		while ( SinceSlamAnimationStart < duration * 0.9f )
+		{
+			if ( CurrentState != ZombieState.Slam ) { IsChargingSlam = false; break; }
+
+			Model.WorldScale = Model.WorldScale.WithZ( Model.WorldScale.z.LerpTo( originalScale.z + 0.2f, 0.01f ) );
+			await Task.FrameEnd();
+		}
+		SinceSlamAnimationStart = 0;
+		while ( SinceSlamAnimationStart < duration * 0.1f )
+		{
+			if ( CurrentState != ZombieState.Slam ) { IsChargingSlam = false; break; }
+
+			Model.WorldScale = Model.WorldScale.WithZ( Model.WorldScale.z.LerpTo( originalScale.z - 0.5f, 0.1f ) );
+			await Task.FrameEnd();
+		}
+
+		if ( !this.IsValid() ) return;
+		Model.WorldScale = originalScale;
+	}
 
 	// Nur für ModelRenderer muss noch gemacht werden
 	public async Task AnimateHit() 
@@ -401,16 +465,16 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 		float duration = 0.1f;
 		SinceHitAnimationStart = 0;
 
-		WorldScale = WorldScale.WithZ( originalScale.z * (1f - 0.15f) );
+		Model.WorldScale = Model.WorldScale.WithZ( originalScale.z * (1f - 0.15f) );
 
 		while (SinceHitAnimationStart < duration) 
 		{ 
-			WorldScale = WorldScale.WithZ(WorldScale.z.LerpTo(originalScale.z, 0.1f));
+			Model.WorldScale = Model.WorldScale.WithZ(Model.WorldScale.z.LerpTo(originalScale.z, 0.1f));
 			await Task.FrameEnd();
 		}
 
 		if ( !this.IsValid() ) return;
-		WorldScale = originalScale;
+		Model.WorldScale = originalScale;
 	}
 
 }
