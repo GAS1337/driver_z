@@ -2,9 +2,32 @@ using Sandbox;
 using System;
 using System.Threading.Tasks;
 
-public sealed class LeaderboardDisplay : Component
+public sealed class LeaderboardDisplay : Component, LeaderboardDisplay.ILeaderboardEvent
 {
 	[Property] TextRenderer boardText;
+
+	public interface ILeaderboardEvent : ISceneEvent<ILeaderboardEvent>
+	{
+		void OnGlobalHit();
+		void OnFriendsHit();
+		void OnCenterMeHit();
+	}
+
+	void ILeaderboardEvent.OnGlobalHit()
+	{
+		DisplayLeaderboard();
+		Log.Info( "Displaying global leaderboard..." );
+	}
+	void ILeaderboardEvent.OnFriendsHit()
+	{
+		DisplayLeaderboard( onlyFriends: true );
+		Log.Info( "Displaying friends leaderboard..." );
+	}
+	void ILeaderboardEvent.OnCenterMeHit()
+	{
+		DisplayLeaderboard( centerMe: true );
+		Log.Info( "Centering on me..." );
+	}
 
 	protected override void OnStart()
 	{
@@ -16,20 +39,35 @@ public sealed class LeaderboardDisplay : Component
 
 	}
 
-	public async Task DisplayLeaderboard()
+	public struct ScoreMetadata
 	{
-		var board = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.graveyard_gunners", "LeaderboardTest" );
-		board.SetAggregationMax();
-		board.SetSortDescending();
-		board.MaxEntries = 15;
+		public double time { get; set; }
+	}
 
-		await board.Refresh();
+	public async Task DisplayLeaderboard(bool onlyFriends = false, bool centerMe = false)
+	{
+		var _scoreBoard = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.graveyard_gunners", "LeaderboardTest" );
+		_scoreBoard.SetAggregationMax();
+		_scoreBoard.SetSortDescending();
+		_scoreBoard.MaxEntries = 15;
+		if ( onlyFriends ) { _scoreBoard.SetFriendsOnly(onlyFriends); }
+		if ( centerMe ) { _scoreBoard.CenterOnMe(); }
+		await _scoreBoard.Refresh();
 		boardText.Text = "👑 Leaderboard 👑";
 
-		foreach ( var entry in board.Entries )
+		foreach ( var entry in _scoreBoard.Entries )
 		{
-			boardText.Text += $"\n#{entry.Rank} {entry.DisplayName}: {Math.Round( entry.Value, 3 )}";
+			/*
+			DateTimeOffset timeStamp = entry.Timestamp;
+			var _timeBoard = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.graveyard_gunners", "TimeTest" );
+			_timeBoard.SetDatePeriod( timeStamp.UtcDateTime );
+			await _timeBoard.Refresh();
+			Log.Info( _timeBoard.Entries[0].ToString() );
+			*/
+			boardText.Text += $"\n{entry.CountryCode} #{entry.Rank} {entry.DisplayName}: {Math.Round( entry.Value, 0 )}";
 			// Log.Info( $"#{entry.Rank} {entry.DisplayName}: {entry.Value}" );
 		}
 	}
+
+
 }

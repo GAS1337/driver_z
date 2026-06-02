@@ -60,6 +60,7 @@ public sealed class HighscoreManager : Component
 	{
 		// add score to leaderboard
 		Sandbox.Services.Stats.SetValue("LeaderboardTest", CurrentScore );
-		ResetScore();
+		Sandbox.Services.Stats.SetValue( "TimeTest", SinceGameStart );
+		LatestScore = CurrentScore;
 	}
 }

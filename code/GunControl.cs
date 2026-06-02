@@ -1,15 +1,17 @@
 using Sandbox;
 using Sandbox.Audio;
 using Sandbox.Modals;
+using Sandbox.ModelEditor.Nodes;
 using System;
 using System.Diagnostics;
 using System.Net.Quic;
 using System.Numerics;
 using System.Threading.Tasks;
 using static HealthSystem;
+using static LeaderboardDisplay;
 using static Sandbox.ModelPhysics;
 
-public sealed class GunControl : Component, HealthSystem.IHealthEvent
+public sealed class GunControl : Component, HealthSystem.IHealthEvent, LeaderboardDisplay.ILeaderboardEvent
 {
 	SceneLoader SceneLoader;
 	HighscoreManager HighscoreManager;
@@ -68,6 +70,18 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		SceneLoader.StartCountdown( 0, 3 );
 	}
 
+	void ILeaderboardEvent.OnGlobalHit()
+	{
+		// Nothing to do
+	}
+	void ILeaderboardEvent.OnFriendsHit()
+	{
+		// Nothing to do
+	}
+	void ILeaderboardEvent.OnCenterMeHit()
+	{
+		// Nothing to do
+	}
 
 	protected override void OnStart()
 	{
@@ -86,7 +100,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 		// Wo man hinaimed
 
 		Ray TurretRay = new Ray( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 250, MainCamera.WorldRotation.Forward );
-		SightlineTrace = Scene.Trace.Sphere( 50f, TurretRay, MainCamera.ZFar )
+		SightlineTrace = Scene.Trace.Sphere( 25f, TurretRay, MainCamera.ZFar )
 			.WithoutTags("player", "dead")
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
@@ -108,6 +122,18 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent
 
 			if ( SightlineTrace.Hit )
 			{
+				if ( SightlineTrace.GameObject.Tags.Has( "button-global" ) )
+				{
+					ILeaderboardEvent.PostToGameObject( SightlineTrace.GameObject.Parent, x => x.OnGlobalHit() );
+				}
+				else if ( SightlineTrace.GameObject.Tags.Has( "button-friends" ) )
+				{
+					ILeaderboardEvent.PostToGameObject( SightlineTrace.GameObject.Parent, x => x.OnFriendsHit() );
+				}
+				else if ( SightlineTrace.GameObject.Tags.Has( "button-centerme" ) )
+				{
+					ILeaderboardEvent.PostToGameObject( SightlineTrace.GameObject.Parent, x => x.OnCenterMeHit() );
+				}
 
 				newBulletHole = BulletHole.Clone( SightlineTrace.HitPosition, Rotation.LookAt( SightlineTrace.Normal, Vector3.Up ) );
 				if ( SightlineTrace.GameObject.IsValid()) newBulletHole.SetParent( SightlineTrace.GameObject );
