@@ -85,7 +85,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 			}
 
 		}
-
+		
 		foreach ( GameObject go in GameObject.Children ) 
 		{ 
 			go.Enabled = false;
@@ -96,7 +96,6 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		}
 		RocketBody.Velocity = Vector3.Zero;
 		RocketBody.Enabled = false;
-
 		Sound.Play( "sounds/mediumexplosion.sound", GameObject.WorldPosition );
 		BurstParticle.Enabled = true;
 	}

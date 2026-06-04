@@ -4,38 +4,11 @@
 @inherits PanelComponent
 @namespace Sandbox
 
-@{
-	var multiplier = HighscoreManager.CalculateMultiplier();
-	float m = Math.Clamp(multiplier, 1f, 2f);
-
-	int r = 255;
-	int g = 255;
-	int b = 255;
-
-	if (m < 1.3f)
-	{
-		float ratio = (m - 1.0f) / 0.3f;
-		b = (int)(255 * (1f - ratio));
-		g = 255;
-	}
-	else if (m < 1.65f)
-	{
-		float ratio = (m - 1.3f) / 0.35f;
-		b = 0;
-		g = (int)(255 - (127 * ratio));
-	}
-	else
-	{
-		float ratio = (m - 1.65f) / 0.35f;
-		b = 0;
-		g = (int)(128 * (1f - ratio));
-	}
-
-	string colorHex = $"rgb({r}, {g}, {b})";
-	float currentScale = m - 0.2f;
-}
 <root>
-	<div class="multiplier-dial"></div>
+        <div class="multiplier-dial">
+        <div class="multiplier-needle" 
+			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, -90, 90) deg );"	</div>
+	</div>
 	<div class="vitals">
 	</div>
 	<div class="timer"> 
@@ -52,9 +25,6 @@
 		}
 		<!-- Wir zeigen hier nun displayedScore an, gerundet auf eine Ganzzahl -->
 		<p class="current-score">@displayedScore.ToString("N0")</p>
-
-		<p class="multiplier" style="@($"color: {colorHex}; transform: scale({currentScale});")">
-		@($"{multiplier}x")</p>
 
 	</div>
 	<div class="meins">
@@ -125,7 +95,7 @@
 					Value = (int)diff,
 					SpawnTime = DateTime.Now,
 					// Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
-					RandomOffset = Random.Shared.Float(-200, 200)
+					RandomOffset = Random.Shared.Float(-100, 100)
 				});
 			}
 			

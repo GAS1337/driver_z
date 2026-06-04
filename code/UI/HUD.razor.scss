@@ -30,6 +30,7 @@ HUD {
         align-items: center;
         font-weight: bold;
         color: darkred;
+
         .ammocount {
             font-size: 64px;
             color: orange;
@@ -59,13 +60,14 @@ HUD {
 
     > .score {
         position: absolute;
-        top: 10%;
+        top: 25%;
         right: 10%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         font-weight: bold;
         color: white;
+
         .gained-score {
             position: absolute;
             font-size: 40px;
@@ -89,39 +91,55 @@ HUD {
             margin-top: -45px;
         }
     }
+
     > .timer {
-            position: absolute;
-            left: 47%;
-            top: 3%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-weight: bold;
-            color: white;
-            font-size: 70px;
+        position: absolute;
+        left: 47%;
+        top: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: bold;
+        color: white;
+        font-size: 70px;
     }
+
     .multiplier-dial {
         position: absolute;
-    top: 1%;
-    right: 1%;
-    width: 15vw;
-    height: 15vw;
-
-    // Pfad zu deinem SVG oder PNG
-    background-image: url( "sprites/test-dial.svg" );
-    
-    // Wichtige Eigenschaften für die Skalierung:
-    background-size: contain;     // Bild einpassen ohne Verzerrung
-    background-repeat: no-repeat; // Bild nicht kacheln
-    background-position: center;  // Mittig ausrichten
+        right: 0%;
+        top: 0%;
+        width: 30vw;
+        height: 15vw;
+        background-image: url( "sprites/multiplier-dial-semi.svg" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
-    // Definition der Fall-Animation
+
+    .multiplier-needle {
+        position: absolute;
+        // Setzt die Nadel horizontal genau in die Mitte
+        left: 25%;
+        bottom: -33%;
+        // Dimensionen deiner Nadel
+        height: 15vw;
+        width: 15vw;
+        // Verschiebt die Nadel um die Hälfte ihrer eigenen Breite nach links, damit sie perfekt zentriert ist.
+        // Zudem wird sie um ihre eigene Länge (100%) nach oben verschoben, damit ihr unteres Ende auf dem Drehpunkt liegt.
+        transition: transform 0.1s ease-out;
+        // WICHTIG: Definiert den Drehpunkt für das C#-Skript.
+        // bottom center sorgt dafür, dass sich die Nadel am unteren Ende dreht.
+        background-image: url( "sprites/rechteck.svg" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 @keyframes score-fall {
     0% {
         opacity: 0;
-        transform: translateY(0)  scale(0.5f);
+        transform: translateY(-120)  scale(0.5f);
     }
 
     20% {
