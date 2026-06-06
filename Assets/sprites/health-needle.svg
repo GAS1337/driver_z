@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   sodipodi:docname="Rechteck.svg"
+   sodipodi:docname="health-needle.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2"
-     inkscape:cx="133"
-     inkscape:cy="170.25"
+     inkscape:zoom="4"
+     inkscape:cx="244"
+     inkscape:cy="274.375"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -57,14 +57,14 @@
        fy="8.6435204"
        r="0.52916664"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(10.000001,0,0,10.000001,14.759292,-22.935108)" />
+       gradientTransform="matrix(10.000001,0,0,10.000001,14.759292,-22.868962)" />
   </defs>
   <g
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="fill:#f0da13;fill-opacity:1;stroke-width:2.64583"
+       style="fill:#ae1c1d;fill-opacity:1;stroke-width:2.64583"
        id="path2"
        cx="63.5"
        cy="63.5"
@@ -72,15 +72,15 @@
     <circle
        style="fill:url(#radialGradient8);fill-rule:nonzero;stroke-width:2.65;stroke-dasharray:none"
        id="path3"
-       cx="63.5"
-       cy="63.5"
+       cx="63.500004"
+       cy="63.566143"
        r="5.2916665" />
     <path
-       style="fill:#b43b3b;fill-opacity:1;fill-rule:nonzero;stroke-width:2.65576;stroke-dasharray:none"
+       style="fill:#589026;fill-opacity:1;fill-rule:nonzero;stroke-width:2.65576;stroke-dasharray:none"
        d="M 68.795845,63.924256 C 63.500448,-79.233098 58.205051,63.678303 58.205051,63.678303 c 0,0 4.951299,-15.912952 10.590794,0.245953 z"
        id="path8" />
     <path
-       style="fill:#5d1e1e;fill-opacity:1;fill-rule:nonzero;stroke-width:1.5406;stroke-dasharray:none"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke-width:1.5406;stroke-dasharray:none"
        d="m 65.570666,57.643297 c -1.974573,-129.1913 -3.949147,-0.221958 -3.949147,-0.221958 0,0 1.846265,-14.360527 3.949147,0.221958 z"
        id="path8-8" />
   </g>

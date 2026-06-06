@@ -5,7 +5,7 @@
 @namespace Sandbox
 
 <root>
-        <div class="multiplier-dial">
+	<div class="multiplier-dial @(HighscoreManager.CalculateMultiplier() > 1.4f ? "on-fire" : "")">
         <div class="multiplier-needle" 
 			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, -90, 90) deg );"	</div>
 	</div>
@@ -27,15 +27,9 @@
 		<p class="current-score">@displayedScore.ToString("N0")</p>
 
 	</div>
-	<div class="meins">
-	<div class="ammocount">
-		<p>@($"🚀 {PlayerGun.CurrentRockets}")</p>
-		</div>
-		<p>@("HEALTH")</p>
-		<div class="health-bar-bg @(isDamaged ? "damaged" : "")">
-			<div class="health-bar-fill" style="width: @($"{PlayerHealth.CurrentHealth / PlayerHealth.SetHealth * 100f}%")"></div>
-		</div>
-	</div>
+	<div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>
+	<div class="health-needle"
+		 style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );" </div>
 </root>
 
 @code
@@ -95,7 +89,7 @@
 					Value = (int)diff,
 					SpawnTime = DateTime.Now,
 					// Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
-					RandomOffset = Random.Shared.Float(-100, 100)
+					RandomOffset = Random.Shared.Float(-5, 5)
 				});
 			}
 			

@@ -20,48 +20,62 @@ HUD {
         color: grey;
     }
 
-    > .meins {
-        position: absolute;
-        bottom: 10%;
-        right: auto;
-        left: 5%;
-        font-size: 48px;
-        flex-direction: column;
-        align-items: center;
-        font-weight: bold;
-        color: darkred;
 
-        .ammocount {
-            font-size: 64px;
-            color: orange;
+    .health-dial-almost {
+        position: absolute;
+        left: -6%;
+        bottom: -6%;
+        width: 36vw;
+        height: 25vw;
+        background-image: url( "sprites/health-dial-almost.svg" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.low-health {
+            animation: shake-tacho-animation 0.4s ease-in-out;
+            animation-iteration-count: infinite;
         }
-        // Der äußere Rahmen/Hintergrund
-        .health-bar-bg {
-            transform-origin: center;
-            width: 400px;
-            height: 60px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border: 6px solid #220000;
-            border-radius: 20px;
-            overflow: hidden; // Wichtig, damit der Fill nicht übersteht
-            // Wenn diese Klasse aktiv ist, wird die Animation ausgeführt
-            &.damaged {
-                animation: shake-animation 0.2s ease-in-out;
-                border-color: white; // Optional: Kurzes Aufblitzen des Rahmens
-            }
-        }
-        // Der eigentliche rote Balken
-        .health-bar-fill {
-            height: 100%;
-            background-color: darkred;
-            transition: width 0.3s ease-out;
+
+        &.super-low-health {
+            animation: shake-tacho-animation 0.1s ease-in-out;
+            animation-iteration-count: infinite;
         }
     }
+
+    .health-needle {
+        position: absolute;
+        // Setzt die Nadel horizontal genau in die Mitte
+        left: 3.5%;
+        bottom: -9%;
+        // Dimensionen deiner Nadel
+        height: 28vw;
+        width: 17vw;
+        // Verschiebt die Nadel um die Hälfte ihrer eigenen Breite nach links, damit sie perfekt zentriert ist.
+        // Zudem wird sie um ihre eigene Länge (100%) nach oben verschoben, damit ihr unteres Ende auf dem Drehpunkt liegt.
+        transition: transform 0.3s ease-out;
+        // WICHTIG: Definiert den Drehpunkt für das C#-Skript.
+        // bottom center sorgt dafür, dass sich die Nadel am unteren Ende dreht.
+        background-image: url( "sprites/health-needle.svg" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.damaged {
+            animation: shake-needle-animation 0.2s ease-in-out;
+        }
+    }
+
+    .ammocount {
+        font-size: 64px;
+        color: orange;
+    }
+
 
     > .score {
         position: absolute;
         top: 25%;
-        right: 10%;
+        right: 3%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -106,21 +120,26 @@ HUD {
 
     .multiplier-dial {
         position: absolute;
-        right: 0%;
-        top: 0%;
-        width: 30vw;
-        height: 15vw;
+        right: -3%;
+        top: -7%;
+        width: 28vw;
+        height: 19vw;
         background-image: url( "sprites/multiplier-dial-semi.svg" );
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
+        &.on-fire {
+            animation: shake-tacho-animation 0.1s ease-in-out;
+            animation-iteration-count: infinite;
+        }
     }
 
     .multiplier-needle {
         position: absolute;
         // Setzt die Nadel horizontal genau in die Mitte
-        left: 25%;
-        bottom: -33%;
+        left: 23.5%;
+        bottom: -9%;
         // Dimensionen deiner Nadel
         height: 15vw;
         width: 15vw;
@@ -139,7 +158,7 @@ HUD {
 @keyframes score-fall {
     0% {
         opacity: 0;
-        transform: translateY(-120)  scale(0.5f);
+        transform: translateY(-100)  scale(0.5f);
     }
 
     20% {
@@ -175,3 +194,43 @@ HUD {
         transform: rotate(0deg);
     }
 }
+// Globale Keyframes für das Wackeln
+@keyframes shake-needle-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(10);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-10);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+    // Globale Keyframes für das Wackeln vom Tacho
+    @keyframes shake-tacho-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-5deg); // Leichte Drehung nach links
+        }
+
+        75% {
+            transform: rotate(5deg); // Leichte Drehung nach rechts
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
