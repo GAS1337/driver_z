@@ -9,11 +9,15 @@
         <div class="multiplier-needle" 
 			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, -90, 90) deg );"	</div>
 	</div>
+	<div class="ammocount @(Input.Pressed("attack2") ? "used" : "")">
+		<p>@($"🚀{PlayerGun.CurrentRockets}")</p>
+	</div>
 	<div class="vitals">
 	</div>
 	<div class="timer"> 
 		<p>@($"{(int)HighscoreManager.TimeSpanSinceGameStart.TotalMinutes:00}:{HighscoreManager.TimeSpanSinceGameStart.Seconds:00}")</p>
 	</div>
+	<div class="timer-house">	</div>
 	<div class="score">
 		@foreach (var popup in activePopups)
 		{
@@ -50,6 +54,9 @@
 	private bool isDamaged;
 	private TimeSince SinceDamage;
 
+	private float lastRocketCount;
+	private bool rocketUsed;
+	private TimeSince SinceRocketUsed;
 	
 	private List<ScorePopup> activePopups = new();
 	private float scoreProcessed;
@@ -106,13 +113,24 @@
 			isDamaged = true;
 			SinceDamage = 0; // Dauer der Animation in Sekunden
 		}
-
+	
 		lastHealth = PlayerHealth.CurrentHealth;
 
 		// Timer herunterzählen, um die Klasse wieder zu entfernen
 		if (SinceDamage > 0.2f)
 		{
 			isDamaged = false;
+		}
+
+		// Rocket-Check
+		if (PlayerGun.CurrentRockets != lastRocketCount)
+		{
+			rocketUsed = true;
+			SinceRocketUsed = 0; // Dauer der Animation in Sekunden
+		}
+		if (SinceRocketUsed > 0.5f)
+		{
+			rocketUsed = false;
 		}
 	}
 

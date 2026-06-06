@@ -23,8 +23,8 @@ HUD {
 
     .health-dial-almost {
         position: absolute;
-        left: -6%;
-        bottom: -6%;
+        left: -1.5%;
+        bottom: -12%;
         width: 36vw;
         height: 25vw;
         background-image: url( "sprites/health-dial-almost.svg" );
@@ -47,7 +47,7 @@ HUD {
         position: absolute;
         // Setzt die Nadel horizontal genau in die Mitte
         left: 3.5%;
-        bottom: -9%;
+        bottom: -15%;
         // Dimensionen deiner Nadel
         height: 28vw;
         width: 17vw;
@@ -67,8 +67,20 @@ HUD {
     }
 
     .ammocount {
-        font-size: 64px;
+        position: absolute;
+        bottom: 5%;
+        left: 21.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-weight: bold;
+        font-size: 54px;
         color: orange;
+
+        &.used {
+            animation: rocket-grow-animation 0.2s;
+            animation-iteration-count: 1;
+        }
     }
 
 
@@ -109,13 +121,25 @@ HUD {
     > .timer {
         position: absolute;
         left: 47%;
-        top: 3%;
+        top: 0%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-weight: bold;
         color: white;
         font-size: 70px;
+    }
+
+    .timer-house {
+        position: absolute;
+        left: 38.4%;
+        top: -13%;
+        width: 26vw;
+        height: 19vw;
+        background-image: url( "sprites/timer-house.svg" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .multiplier-dial {
@@ -216,21 +240,39 @@ HUD {
         transform: translateY(0);
     }
 }
-    // Globale Keyframes für das Wackeln vom Tacho
-    @keyframes shake-tacho-animation {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        25% {
-            transform: rotate(-5deg); // Leichte Drehung nach links
-        }
-
-        75% {
-            transform: rotate(5deg); // Leichte Drehung nach rechts
-        }
-
-        100% {
-            transform: rotate(0deg);
-        }
+// Globale Keyframes für das Wackeln vom Tacho
+@keyframes shake-tacho-animation {
+    0% {
+        transform: rotate(0deg);
     }
+
+    25% {
+        transform: rotate(-5deg); // Leichte Drehung nach links
+    }
+
+    75% {
+        transform: rotate(5deg); // Leichte Drehung nach rechts
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+// Globale Keyframes für das Wackeln vom Tacho
+@keyframes rocket-grow-animation {
+    0% {
+        transform: scale(1.3f);
+    }
+
+    25% {
+        transform: scale(1.3f); // Leichte Drehung nach links
+    }
+
+    75% {
+        transform: scale(1.1); // Leichte Drehung nach rechts
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
