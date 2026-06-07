@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 {
 	CameraComponent MainCamera;
+	[Property] OrbitalCameraController OrbitalCameraController;
 	[Property] public float SetHealth;
 	[Property] float SetPoints = 500;
 	[Property] SpriteRenderer HealthbarRenderer;
@@ -88,6 +89,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		if ( GameObject.Tags.Has( "player" ) && enableSound == true )
 		{
 			Sound.Play( "sounds/metal-hit-cartoon.sound", Scene.FindAllWithTag("carbody").First<GameObject>().WorldPosition );
+			OrbitalCameraController.ShakeCamera(Game.Random.Float(0.08f, 0.12f));
 		}
 	}
 

@@ -1,5 +1,7 @@
 using Sandbox;
+using Sandbox.UI;
 using System;
+using System.Threading.Tasks;
 
 public sealed class OrbitalCameraController : Component
 {
@@ -21,6 +23,10 @@ public sealed class OrbitalCameraController : Component
 	float crosshairPitch = 0;
 	float Pitch = 30;
 	float Yaw = 180;
+	float Roll = 0;
+
+	bool IsShaking = false;
+	TimeSince SinceShake;
 
 	protected override void OnStart() 
 	{ 
@@ -37,7 +43,7 @@ public sealed class OrbitalCameraController : Component
 		crosshairPitch = (crosshairPitch + mouseMove.pitch ).Clamp( 50, -75 ); // Up&Down clamped in degrees
 		Pitch = (crosshairPitch / 1) + 10;
 		Yaw = Yaw + mouseMove.yaw;
-		Rotation rotation = Rotation.From( Pitch, Yaw, 0 );
+		Rotation rotation = Rotation.From( Pitch, Yaw, Roll );
 		 
 		SceneTraceResult checkingSightline = Scene.Trace
 			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * HorizontalOffset, MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 10 )
@@ -101,5 +107,23 @@ public sealed class OrbitalCameraController : Component
 			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset / 2,  crosshairDir )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
+	}
+
+	[Button]
+	public async Task ShakeCamera(float duration = 0.1f) 
+	{
+		if ( IsShaking ) { return; }
+		
+		SinceShake = 0;
+		IsShaking = true;
+
+		while ( SinceShake < duration ) 
+		{ 
+			Roll = (float)Math.Sin(Time.Now * 25f) * 10;
+			await Task.FrameEnd();
+		}
+
+		IsShaking = false;
+		Roll = 0;
 	}
 }

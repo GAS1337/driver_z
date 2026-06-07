@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using static Ballistics;
 using static HealthSystem;
 
-public enum GhostState { Idle, Moving, Attack, Staggered }
+public enum GhostState { Culled, Idle, Moving, Attack, Staggered }
 
 
 public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
@@ -39,6 +39,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
 
+	TimeSince SinceGroundCheck;
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	Random random;
@@ -81,12 +82,17 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
-		GroundTrace = Scene.Trace
-			.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
-			.Radius( 1 )
-			.IgnoreGameObjectHierarchy( GameObject )
-			.WithoutTags( "enemy", "player", "dead" )
-			.Run();
+		if (SinceGroundCheck > 0.3f ) 
+		{
+			GroundTrace = Scene.Trace
+				.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
+				.Radius( 1 )
+				.IgnoreGameObjectHierarchy( GameObject )
+				.WithoutTags( "enemy", "player", "dead" )
+				.Run();
+
+			SinceGroundCheck = 0;
+		}
 
 		Vector3 playerPosition = Player.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 1000).WithY( 0 ).WithX( 0 );

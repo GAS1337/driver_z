@@ -15,16 +15,19 @@ public sealed class LeaderboardDisplay : Component, LeaderboardDisplay.ILeaderbo
 
 	void ILeaderboardEvent.OnGlobalHit()
 	{
+		Sound.Play( "sounds/medikitsound.sound" );
 		DisplayLeaderboard();
 		Log.Info( "Displaying global leaderboard..." );
 	}
 	void ILeaderboardEvent.OnFriendsHit()
 	{
+		Sound.Play( "sounds/medikitsound.sound" );
 		DisplayLeaderboard( onlyFriends: true );
 		Log.Info( "Displaying friends leaderboard..." );
 	}
 	void ILeaderboardEvent.OnCenterMeHit()
 	{
+		Sound.Play( "sounds/medikitsound.sound" );
 		DisplayLeaderboard( centerMe: true );
 		Log.Info( "Centering on me..." );
 	}
@@ -52,8 +55,10 @@ public sealed class LeaderboardDisplay : Component, LeaderboardDisplay.ILeaderbo
 		_scoreBoard.MaxEntries = 15;
 		if ( onlyFriends ) { _scoreBoard.SetFriendsOnly(onlyFriends); }
 		if ( centerMe ) { _scoreBoard.CenterOnMe(); }
+
+		boardText.Text = "LOADING...";
 		await _scoreBoard.Refresh();
-		boardText.Text = "👑 Leaderboard 👑";
+		boardText.Text = "";
 
 		foreach ( var entry in _scoreBoard.Entries )
 		{

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using static Ballistics;
 using static HealthSystem;
 
-public enum VampireState { Idle, Moving, Attack, Staggered }
+public enum VampireState { Culled, Idle, Moving, Attack, Staggered }
 
 
 public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
@@ -36,6 +36,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
 
+	TimeSince SinceGroundCheck;
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	TimeUntil UntilNextIdleSound;
@@ -83,13 +84,17 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
-		GroundTrace = Scene.Trace
+		if ( SinceGroundCheck > 0.3f )
+		{
+			SinceGroundCheck = 0;
+			GroundTrace = Scene.Trace
 			.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
 			.Radius( 1 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player", "dead" )
 			.Run();
-
+			SinceGroundCheck = 0;
+		}
 		Vector3 playerPosition = Player.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 50).WithY( 0 ).WithX( 0 );
 		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 100; }
@@ -136,8 +141,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
 
 				GameObject.WorldRotation = Rotation.LookAt( TargetPosition - GameObject.WorldPosition, Vector3.Up );
-
-				if ( (playerPosition - WorldPosition).Length < 10000 ) { CurrentState = VampireState.Moving; }				
+				if ( (playerPosition - WorldPosition).Length < 8000 ) { CurrentState = VampireState.Moving; }				
 				break;
 
 
@@ -163,7 +167,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 				if ( (playerPosition - WorldPosition).Length < 1300 && SinceAttack > 1f ) { Attack(); SinceAttack = 0 + random.Float(0.05f, 0.1f); }
 				// else { // BloodEmitter.Enabled = false; }
 				
-				if ( (playerPosition - WorldPosition).Length > 10000 ) { CurrentState = VampireState.Idle; }
+				if ( (playerPosition - WorldPosition).Length > 8000 ) { CurrentState = VampireState.Idle; }
 				break;
 
 			// ATTACK
