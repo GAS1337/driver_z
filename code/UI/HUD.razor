@@ -7,7 +7,7 @@
 <root>
 	<div class="multiplier-dial @(HighscoreManager.CalculateMultiplier() > 1.4f ? "on-fire" : "")">
         <div class="multiplier-needle" 
-			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, -90, 90) deg );"	</div>
+			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, 270, 90) deg );"	</div>
 	</div>
 	<div class="ammocount @(Input.Pressed("attack2") ? "used" : "")">
 		<p>@($"🚀{PlayerGun.CurrentRockets}")</p>
@@ -18,7 +18,7 @@
 		<p>@($"{(int)HighscoreManager.TimeSpanSinceGameStart.TotalMinutes:00}:{HighscoreManager.TimeSpanSinceGameStart.Seconds:00}")</p>
 	</div>
 	<div class="timer-house">	</div>
-	<div class="score">
+	<div class="score @(PlayerHealth.CurrentHealth == 0 ? $"Center" : "")">
 		@foreach (var popup in activePopups)
 		{
 			<p class="gained-score"
@@ -28,7 +28,9 @@
 			</p>
 		}
 		<!-- Wir zeigen hier nun displayedScore an, gerundet auf eine Ganzzahl -->
-		<p class="current-score">@displayedScore.ToString("N0")</p>
+		<p class="current-score">@(PlayerHealth.CurrentHealth == 0 ? $"Game Over" : "")</p>
+		<p class="current-score">@($"{(int)displayedScore:00000000}")</p>
+
 
 	</div>
 	<div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>

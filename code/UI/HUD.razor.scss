@@ -86,13 +86,19 @@ HUD {
 
     > .score {
         position: absolute;
-        top: 25%;
-        right: 3%;
+        top: -1%;
+        right: 0.5%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         font-weight: bold;
         color: white;
+
+
+        &.center {
+            animation: score-center 1s forwards;
+            animation-iteration-count: 1;
+        }
 
         .gained-score {
             position: absolute;
@@ -102,11 +108,11 @@ HUD {
             z-index: 2;
             // Die Animation: 0.6 Sekunden lang, wird am Ende langsamer (ease-out)
             // 'both' sorgt dafür, dass das Element am Ende unsichtbar bleibt und die Animation von Anfang an angewendet wird
-            animation: score-fall 1s ease-out forwards;
+            animation: score-fall 2s ease-out forwards;
         }
 
         .current-score {
-            font-size: 100px;
+            font-size: 80px;
         }
 
         .multiplier {
@@ -144,11 +150,11 @@ HUD {
 
     .multiplier-dial {
         position: absolute;
-        right: -3%;
-        top: -7%;
+        right: -5%;
+        top: 0%;
         width: 28vw;
         height: 19vw;
-        background-image: url( "sprites/multiplier-dial-semi.svg" );
+        background-image: url( "sprites/multiplier-dial-semi-score.svg" );
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -162,8 +168,8 @@ HUD {
     .multiplier-needle {
         position: absolute;
         // Setzt die Nadel horizontal genau in die Mitte
-        left: 23.5%;
-        bottom: -9%;
+        left: 22.5%;
+        bottom: 33.5%;
         // Dimensionen deiner Nadel
         height: 15vw;
         width: 15vw;
@@ -182,97 +188,114 @@ HUD {
 @keyframes score-fall {
     0% {
         opacity: 0;
-        transform: translateY(-100)  scale(0.5f);
+        transform: translateY(100) scale(0.8f);
     }
 
     20% {
-        opacity: 1;
+        opacity: 1
         transform: scale(1.5f);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(120px) scale(0.8f) rotate(10deg); // Fällt nach unten
+        transform: translateY(20px) scale(1f) rotate(10deg); // Fällt nach unten
     }
 }
 
-// Globale Keyframes für das Wackeln
-@keyframes shake-animation {
+@keyframes score-center {
     0% {
-        transform: rotate(0deg);
+        color: white;
+        transform: translateY(100) scale(0.8);
     }
 
-    25% {
-        transform: rotate(-5deg); // Leichte Drehung nach links
-    }
-
-    50% {
-        transform: rotate(5deg); // Leichte Drehung nach rechts
-    }
-
-    75% {
-        transform: rotate(-5deg);
+    20% {
+        color: white;
+        opacity: 1;
     }
 
     100% {
-        transform: rotate(0deg);
+        color: red;
+        opacity: 1;
+        transform: translateY(25vw) translateX(-40vw) scale(3) rotate(8deg); // Fällt nach unten
     }
 }
-// Globale Keyframes für das Wackeln
-@keyframes shake-needle-animation {
-    0% {
-        transform: translateY(0);
-    }
+    // Globale Keyframes für das Wackeln
+    @keyframes shake-animation {
+        0% {
+            transform: rotate(0deg);
+        }
 
-    25% {
-        transform: translateY(10);
-    }
+        25% {
+            transform: rotate(-5deg); // Leichte Drehung nach links
+        }
 
-    50% {
-        transform: translateY(0);
-    }
+        50% {
+            transform: rotate(5deg); // Leichte Drehung nach rechts
+        }
 
-    75% {
-        transform: translateY(-10);
-    }
+        75% {
+            transform: rotate(-5deg);
+        }
 
-    100% {
-        transform: translateY(0);
+        100% {
+            transform: rotate(0deg);
+        }
     }
-}
-// Globale Keyframes für das Wackeln vom Tacho
-@keyframes shake-tacho-animation {
-    0% {
-        transform: rotate(0deg);
-    }
+    // Globale Keyframes für das Wackeln
+    @keyframes shake-needle-animation {
+        0% {
+            transform: translateY(0);
+        }
 
-    25% {
-        transform: rotate(-5deg); // Leichte Drehung nach links
-    }
+        25% {
+            transform: translateY(10);
+        }
 
-    75% {
-        transform: rotate(5deg); // Leichte Drehung nach rechts
-    }
+        50% {
+            transform: translateY(0);
+        }
 
-    100% {
-        transform: rotate(0deg);
-    }
-}
-// Globale Keyframes für das Wackeln vom Tacho
-@keyframes rocket-grow-animation {
-    0% {
-        transform: scale(1.3f);
-    }
+        75% {
+            transform: translateY(-10);
+        }
 
-    25% {
-        transform: scale(1.3f); // Leichte Drehung nach links
+        100% {
+            transform: translateY(0);
+        }
     }
+    // Globale Keyframes für das Wackeln vom Tacho
+    @keyframes shake-tacho-animation {
+        0% {
+            transform: rotate(0deg);
+        }
 
-    75% {
-        transform: scale(1.1); // Leichte Drehung nach rechts
-    }
+        25% {
+            transform: rotate(-5deg); // Leichte Drehung nach links
+        }
 
-    100% {
-        transform: scale(1);
+        75% {
+            transform: rotate(5deg); // Leichte Drehung nach rechts
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
     }
-}
+    // Globale Keyframes für das Wackeln vom Tacho
+    @keyframes rocket-grow-animation {
+        0% {
+            transform: scale(1.3f);
+        }
+
+        25% {
+            transform: scale(1.3f); // Leichte Drehung nach links
+        }
+
+        75% {
+            transform: scale(1.1); // Leichte Drehung nach rechts
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }

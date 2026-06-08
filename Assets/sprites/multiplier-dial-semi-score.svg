@@ -83,7 +83,7 @@
        fx="251.3129"
        fy="56.883438"
        r="201.47946"
-       gradientTransform="matrix(0.96447309,0,0,0.19511115,9.3946247,44.386075)"
+       gradientTransform="matrix(0.96286045,0,0,0.24753488,9.7999016,32.172606)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -95,15 +95,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.5165579"
-     inkscape:cx="77.148388"
-     inkscape:cy="141.43871"
+     inkscape:zoom="3.0331158"
+     inkscape:cx="301.83483"
+     inkscape:cy="145.2302"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg18" />
+     inkscape:current-layer="layer1" />
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.21009;stroke-dasharray:none;stroke-opacity:1"
      id="rect28"
@@ -121,12 +121,12 @@
      y="-577.58728"
      transform="matrix(-0.41615974,0.90929152,-0.42928585,-0.90316868,0,0)" />
   <rect
-     style="fill:url(#radialGradient28);stroke:#000000;stroke-width:5;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:url(#radialGradient28);stroke:#000000;stroke-width:5.62709;stroke-dasharray:none;stroke-opacity:1"
      id="rect27"
-     width="375.04401"
-     height="66.381363"
-     x="64.257172"
-     y="22.293978" />
+     width="374.41693"
+     height="84.21714"
+     x="64.570717"
+     y="4.1446595" />
   <path
      style="fill:url(#radialGradient21);stroke:url(#radialGradient19);stroke-width:1.09847"
      id="path18"
@@ -151,37 +151,37 @@
          id="g4"
          transform="rotate(179.99416,255.68916,182.47937)">
         <path
-           d="M 101.80186,266.99955 A 154.25,154.25 0 0 1 146.92878,153.92878"
+           d="M 411.42101,270.0241 A 155.80421,156.64173 0.00584 0 0 365.86274,155.19079"
            stroke="#3a9d2a"
            stroke-width="30"
            fill="none"
            stroke-linecap="butt"
            id="path1"
-           style="stroke:#b1b1b1;stroke-width:30;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#b1b1b1;stroke-width:30.3836;stroke-dasharray:none;stroke-opacity:1" />
         <path
-           d="M 146.92878,153.92878 A 154.25,154.25 0 0 1 256,108.75"
+           d="M 366.19362,154.85587 A 155.80421,156.64173 0.00584 0 0 256.03273,108.95404"
            stroke="#e4c41a"
            stroke-width="30"
            fill="none"
            stroke-linecap="butt"
            id="path2"
-           style="stroke-width:30;stroke-dasharray:none" />
+           style="stroke-width:30.3836;stroke-dasharray:none" />
         <path
-           d="m 256,108.75 a 154.25,154.25 0 0 1 109.07122,45.17878"
+           d="M 256.03273,108.95404 A 155.80421,156.64173 0.00584 0 0 145.8532,154.81083"
            stroke="#ff8800"
            stroke-width="30"
            fill="none"
            stroke-linecap="butt"
            id="path3"
-           style="stroke-width:30;stroke-dasharray:none" />
+           style="stroke-width:30.3836;stroke-dasharray:none" />
         <path
-           d="m 365.07122,153.92878 a 154.25,154.25 0 0 1 45.12692,113.07077"
+           d="M 145.52232,155.14574 A 155.80421,156.64173 0.00584 0 0 99.917343,269.96043"
            stroke="#d63a3a"
            stroke-width="30"
            fill="none"
            stroke-linecap="butt"
            id="path4"
-           style="stroke-width:30;stroke-dasharray:none" />
+           style="stroke-width:30.3836;stroke-dasharray:none" />
       </g>
       <path
          d="m 376.21732,138.58248 12.36414,4.01596 -1.5446,4.75544 -12.36414,-4.01596 a 2.5,2.5 0 0 1 -1.60542,-3.15002 2.5,2.5 0 0 1 3.15002,-1.60542 z"
@@ -289,12 +289,12 @@
      x="430.82208"
      y="91.503067" />
   <rect
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.33456;stroke-dasharray:none;stroke-opacity:1"
      id="rect30"
-     width="3.6266336"
-     height="71.213898"
-     x="440.47113"
-     y="22.254343" />
+     width="3.2920732"
+     height="89.300987"
+     x="440.6384"
+     y="3.9999726" />
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-dasharray:none;stroke-opacity:1"
      id="rect31"
