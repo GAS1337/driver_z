@@ -28,7 +28,7 @@
 			</p>
 		}
 		<!-- Wir zeigen hier nun displayedScore an, gerundet auf eine Ganzzahl -->
-		<p class="current-score">@(PlayerHealth.CurrentHealth == 0 ? $"Game Over" : "")</p>
+		<p class="multiplier">@(PlayerHealth.CurrentHealth == 0 ? $"Game Over" : "")</p>
 		<p class="current-score">@($"{(int)displayedScore:00000000}")</p>
 
 
@@ -98,7 +98,7 @@
 					Value = (int)diff,
 					SpawnTime = DateTime.Now,
 					// Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
-					RandomOffset = Random.Shared.Float(-5, 5)
+					RandomOffset = Random.Shared.Float(150, 155)
 				});
 			}
 			

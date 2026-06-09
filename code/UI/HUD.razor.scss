@@ -86,7 +86,7 @@ HUD {
 
     > .score {
         position: absolute;
-        top: -1%;
+        top: 6%;
         right: 0.5%;
         display: flex;
         flex-direction: column;
@@ -102,6 +102,7 @@ HUD {
 
         .gained-score {
             position: absolute;
+            font-family: Digit Tech 7;
             font-size: 40px;
             color: #4cff00; // Optional: Grün für gewonnene Punkte
             pointer-events: none; // Damit es nicht mit der Maus interagiert
@@ -112,7 +113,8 @@ HUD {
         }
 
         .current-score {
-            font-size: 80px;
+            font-family: Digit Tech 7;
+            font-size: 75px;
         }
 
         .multiplier {
@@ -151,7 +153,7 @@ HUD {
     .multiplier-dial {
         position: absolute;
         right: -5%;
-        top: 0%;
+        top: 1%;
         width: 28vw;
         height: 19vw;
         background-image: url( "sprites/multiplier-dial-semi-score.svg" );
@@ -188,11 +190,11 @@ HUD {
 @keyframes score-fall {
     0% {
         opacity: 0;
-        transform: translateY(100) scale(0.8f);
+        transform: translateY(200px) scale(0.8f);
     }
 
     20% {
-        opacity: 1
+        opacity: 1;
         transform: scale(1.5f);
     }
 

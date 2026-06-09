@@ -67,7 +67,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 		Scene.TimeScale = 0.3f;
 		SceneLoader.SceneLoadOptions.SetScene( SceneLoader.LobbyScene );
-		SceneLoader.StartCountdown( 0, 3 );
+		SceneLoader.StartCountdown( 0, 5 );
 	}
 
 	void ILeaderboardEvent.OnGlobalHit()
