@@ -5,14 +5,17 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/military jets sting.vsnd"
+    "sounds/sounds 11.4.26/freesound_community-big-motor-90117.vsnd"
   ],
+  "OcclusionEnabled": true,
   "Occlusion": true,
+  "ReverbEnabled": true,
+  "Reflections": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
-  "Distance": 15000,
+  "Distance": 7000,
   "Falloff": [
     {
       "x": 0,
@@ -44,8 +47,8 @@
     }
   ],
   "DefaultMixer": {
-    "Name": "unknown",
-    "Id": "00000000-0000-0000-0000-000000000000"
+    "Name": "game",
+    "Id": "aceaa7b3-66fb-4aba-8fbc-57e790c1dbcd"
   },
   "__references": [],
   "__version": 1

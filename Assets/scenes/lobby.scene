@@ -22,6 +22,7 @@
           "__guid": "68aec37c-2af5-49ad-94b9-c159f03d863d",
           "__enabled": true,
           "Flags": 0,
+          "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.43613,0.65116,0.4433,1",
@@ -397,14 +398,6 @@
           {
             "Target": {
               "Type": "Component",
-              "IdValue": "4dc9a492-d691-4b50-903c-a2d1b2800a5c"
-            },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
-              "Type": "Component",
               "IdValue": "794e653f-ecb0-4e2a-a11e-6e4085ae9236"
             },
             "Property": "MainCamera",
@@ -594,7 +587,14 @@
         "8177a266-fa76-4019-8299-51af6200dde3": "60e11b31-81ec-45dd-abb3-7e948f19202e",
         "35630cf7-c3e7-4926-9d48-b1ef85f132d2": "e1a23d90-05bc-4b93-b1b8-cb1bcfc96992",
         "a2750123-67ea-43d5-9ee1-6c3f74769585": "87262b15-4801-4cf6-980b-570a7f3dbc63",
-        "79ee6832-e4f2-42e3-98b9-2b5841ccea7c": "58a6b8d4-6fdf-41d5-a678-160a6624bf94"
+        "79ee6832-e4f2-42e3-98b9-2b5841ccea7c": "58a6b8d4-6fdf-41d5-a678-160a6624bf94",
+        "23d4cf70-a2a0-4333-b62b-d29218488362": "76042631-3e16-46f5-b3bf-8f767f36c63d",
+        "0228bab7-3855-4e03-9885-0f2e8b9f1604": "bb500f2d-9505-476b-8002-b7eb24050f39",
+        "6c6f6733-fc7e-41ea-8997-b0edd0451d36": "97d777b4-6eef-41a9-8023-caafdb962d05",
+        "0f8df567-efaa-4065-afb8-d8081121384e": "6572dc96-1975-4eab-ae70-57b7b44c648d",
+        "6bcecf9c-58df-4f93-baef-b003e8869afa": "d64bf931-e128-4ba8-93af-b8f6761cc08e",
+        "bfd2a291-314f-46d8-891a-75ef365fd6c7": "112abfac-ad1e-4fab-b36d-e07e0a85eb85",
+        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "5ccc7781-1f58-4c5d-a420-38313362f8b2"
       }
     },
     {
@@ -12489,14 +12489,6 @@
             },
             "Property": "Position",
             "Value": "-46477,-14046,135"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "02fc8239-61bd-414f-8b54-1db9a98bc94f"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           }
         ],
         "MovedObjects": []
@@ -12533,14 +12525,6 @@
             },
             "Property": "Position",
             "Value": "-12148.0654,558.279297,126"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "02fc8239-61bd-414f-8b54-1db9a98bc94f"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           }
         ],
         "MovedObjects": []
@@ -12569,14 +12553,6 @@
             },
             "Property": "Position",
             "Value": "-45984,-14596,142"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "03e29a44-8803-4464-90ee-21d315cb9043"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           }
         ],
         "MovedObjects": []
@@ -16460,7 +16436,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text",
-      "Position": "-54995,-14327,994",
+      "Position": "-53928.3125,-14661.4209,1448.99939",
       "Rotation": "0,-0,-0.965925813,0.258819073",
       "Scale": "1,1,1",
       "Tags": "",
@@ -16492,9 +16468,88 @@
             "BloomLayer": false,
             "AfterUILayer": false
           },
-          "Scale": 1,
+          "Scale": 2,
           "TextScope": {
             "Text": "Controls ⌨️\n• Leftclick to Shoot\n• Rightclick to shoot Grenade Launcher\nProtip: Grenade Shells cause Knockback to yourself, but no damage \nand you can use them to rocket jump or unstuck yourself\n• Spacebar for Handbrake \nif youre flying you can hold Spacebar to righten yourself\nYou can also damage enemies by ramming them",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "65754c93-8905-43e5-9206-845cc97ee578",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (17)",
+      "Position": "-51267.5547,-16235.9824,508",
+      "Rotation": "0,-0,-0.557310522,0.830304146",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "a8066c77-f919-4df7-bfa7-25a8c582664f",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "The Game gets progressivly harder ",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -17563,8 +17618,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (1)",
-      "Position": "-54549,-14407,1763",
-      "Rotation": "0,-0,-0.965925813,0.258819073",
+      "Position": "-54184.4883,-11226.2988,1499",
+      "Rotation": "-0,0,-0.994374931,-0.105917409",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -17595,9 +17650,9 @@
             "BloomLayer": false,
             "AfterUILayer": false
           },
-          "Scale": 1,
+          "Scale": 2.5,
           "TextScope": {
-            "Text": "UI  \uD83D\uDDA5️\n• Top right is your Points\n• In the bottom right is your HP\n• In the bottm left you see how many \nGrenades you have",
+            "Text": "UI  \uD83D\uDDA5️\n• Top right is your current\n points and multiplier\n• In the bottom left is your \nHP and Grenade Launcher Ammunition\n",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -17642,7 +17697,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation",
-      "Position": "-42487,-15685,920",
+      "Position": "-42500.4297,-15648.0576,1374.99976",
       "Rotation": "0,-0,-0.573790193,0.81900233",
       "Scale": "1,1,1",
       "Tags": "",
@@ -17721,8 +17776,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation (1)",
-      "Position": "-43061,-15637,1939",
-      "Rotation": "0,0,-0.649646461,0.760236502",
+      "Position": "-41640.5742,-14455.2002,2057",
+      "Rotation": "0,0,-0.301703304,0.953401864",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -17755,7 +17810,7 @@
           },
           "Scale": 2,
           "TextScope": {
-            "Text": "\uD83D\uDC80 Enemies come from Spawners like this one\nOne appearing on the Map is signified with a Lightningstrike ⚡\nThey are quite tanky, but take a lot of extra damage from ramming!\nThey will spawn quite a few enemies unless you destroy them",
+            "Text": "\uD83D\uDC80 Enemies come from Spawners like this one\nOne appearing on the Map is signified with a Lightningstrike ⚡\nThey are quite tanky, but take a lot of extra damage from ramming!\nThey will spawn quite a few enemies, up to a limit, unless you destroy them",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -18196,7 +18251,7 @@
       "Flags": 0,
       "Name": "Enemies Explanation (4)",
       "Position": "-46510,-14997,880",
-      "Rotation": "0,-0,-0.665295601,0.746580005",
+      "Rotation": "0,-0,-0.774668872,0.632367074",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -18308,7 +18363,7 @@
           },
           "Scale": 2,
           "TextScope": {
-            "Text": "Flying and Velocity \nincrease your Points Multiplier\n\nTips and Trick\nDestroy an enemy groups Spawner \nand finish off the low hp group easily",
+            "Text": "Flying and Velocity \nincrease your Points Multiplier\n\n✨ Tips and Trick ✨\nDestroy an enemy groups Spawner \nand the monsters it spawned take damge\nFinish off the low hp group easily \uD83C\uDFC6",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -18432,8 +18487,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Pickups Explanation",
-      "Position": "-48616.4414,-9976,752",
-      "Rotation": "0,0,0.707106769,0.707106769",
+      "Position": "-48582,-9976,642",
+      "Rotation": "0,0,0.736274242,0.676683247",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -19405,14 +19460,6 @@
               "Type": "Component",
               "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
             },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
-            },
             "Property": "SetHealth",
             "Value": 10000
           },
@@ -19571,14 +19618,6 @@
             },
             "Property": "Scale",
             "Value": "1.5,1.5,1.5"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           },
           {
             "Target": {
@@ -19779,14 +19818,6 @@
               "Type": "Component",
               "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
             },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
-            },
             "Property": "SetHealth",
             "Value": 10000
           },
@@ -19961,7 +19992,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Position",
-            "Value": "-41666,-15084,1150.00085"
+            "Value": "-41702,-15113,1132"
           },
           {
             "Target": {
@@ -19978,14 +20009,6 @@
             },
             "Property": "Scale",
             "Value": "1.5,1.5,1.5"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           },
           {
             "Target": {
@@ -20184,14 +20207,6 @@
               "Type": "Component",
               "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
             },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
-            },
             "Property": "SetHealth",
             "Value": 10000
           },
@@ -20347,14 +20362,6 @@
             },
             "Property": "Scale",
             "Value": "1.5,1.5,1.5"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           },
           {
             "Target": {
@@ -32329,6 +32336,77 @@
           "__type": "Sandbox.ModelCollider",
           "__guid": "d4441705-3937-47e1-b379-e2e80ad3aa30",
           "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "fdb9cedf-b9ef-4ba5-bf01-84de9331d63c",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "stool (2)",
+      "Position": "-39748,-10175,-212",
+      "Rotation": "0,0,0,1",
+      "Scale": "5,5,5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "fb6e58db-9579-41bf-bdc6-d07de3a42aa4",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "60c93fba-4615-4eef-9143-c80befed92d0",
+          "__enabled": false,
           "Flags": 0,
           "ColliderFlags": 0,
           "Elasticity": null,
@@ -71342,14 +71420,6 @@
           },
           {
             "Target": {
-              "Type": "Component",
-              "IdValue": "e0df7224-062f-4712-bd11-e8fe7b58ae53"
-            },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
               "Type": "GameObject",
               "IdValue": "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef"
             },
@@ -71603,14 +71673,6 @@
           },
           {
             "Target": {
-              "Type": "Component",
-              "IdValue": "e0df7224-062f-4712-bd11-e8fe7b58ae53"
-            },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
               "Type": "GameObject",
               "IdValue": "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef"
             },
@@ -71822,14 +71884,6 @@
           },
           {
             "Target": {
-              "Type": "Component",
-              "IdValue": "e0df7224-062f-4712-bd11-e8fe7b58ae53"
-            },
-            "Property": "CameraShaker",
-            "Value": null
-          },
-          {
-            "Target": {
               "Type": "GameObject",
               "IdValue": "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef"
             },
@@ -71937,14 +71991,6 @@
               "_type": "gameobject",
               "prefab": "prefabs/zombie.prefab"
             }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "e0df7224-062f-4712-bd11-e8fe7b58ae53"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           },
           {
             "Target": {
@@ -72064,14 +72110,6 @@
               "_type": "gameobject",
               "prefab": "prefabs/ghost.prefab"
             }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "e0df7224-062f-4712-bd11-e8fe7b58ae53"
-            },
-            "Property": "CameraShaker",
-            "Value": null
           },
           {
             "Target": {
@@ -74660,6 +74698,7 @@
               "__enabled": true,
               "Flags": 0,
               "Attenuation": 1,
+              "Contribution": "Diffuse, Specular, Transmissive",
               "FogMode": "WithoutShadows",
               "FogStrength": 1,
               "LightColor": "5,3.13954,0.34884,2",
@@ -77698,7 +77737,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "cookie",
-      "Position": "-39748.9922,-10192.3428,156.337463",
+      "Position": "-39748.9922,-10192.3428,167.737305",
       "Rotation": "-0.0721069276,-0,0,0.997396886",
       "Scale": "1,1,1",
       "Tags": "",
@@ -77769,7 +77808,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "cookie (1)",
-      "Position": "-39749.0586,-10161.2461,165.200317",
+      "Position": "-39749.0586,-10161.2461,176.600159",
       "Rotation": "0.408243716,-0.0024225947,-0.00541704474,0.912853718",
       "Scale": "1,1,1",
       "Tags": "",
@@ -77840,7 +77879,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "detail-bowl",
-      "Position": "-39790,-10144,126",
+      "Position": "-39790,-10144,137.399841",
       "Rotation": "0,0,0,1",
       "Scale": "4,4,3",
       "Tags": "",
@@ -77931,14 +77970,14 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
-        }
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "18a9540b-c827-4d8a-ac7b-1d90752e07ca"
+        }
+      },
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }
