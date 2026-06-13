@@ -44,12 +44,12 @@
     }
   ],
   "IsEmpty": false,
-  "TileSizeEnum": "Size512",
-  "TileRadius": 2,
+  "TileSizeEnum": "Size256",
+  "TileRadius": 1,
   "Scatterer": {
     "Type": "SimpleScatterer",
-    "Scale": "0.800000012 1.20000005",
-    "Density": 0.69214356,
+    "Scale": "0.500000298 0.800000012",
+    "Density": 0.49011698,
     "PlaceOnGround": true,
     "HeightOffset": 0,
     "AlignToNormal": false

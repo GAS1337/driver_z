@@ -1,0 +1,27 @@
+{
+  "Entries": [
+    {
+      "Prefab": {
+        "_type": "gameobject",
+        "prefab": "billboardclutter.prefab"
+      },
+      "Model": null,
+      "Weight": 1,
+      "HasAsset": true,
+      "AssetName": "billboardclutter"
+    }
+  ],
+  "IsEmpty": false,
+  "TileSizeEnum": "Size512",
+  "TileRadius": 2,
+  "Scatterer": {
+    "Type": "SimpleScatterer",
+    "Scale": "1 0.800000012",
+    "Density": 1.6118963,
+    "PlaceOnGround": true,
+    "HeightOffset": 0,
+    "AlignToNormal": false
+  },
+  "__references": [],
+  "__version": 0
+}

@@ -5,7 +5,7 @@
   "Ident": "graveyard_gunners",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": "sprites/*.svg",
+  "Resources": "sprites/*.svg\nsprites/font/*.otf",
   "PackageReferences": [],
   "EditorReferences": null,
   "Mounts": null,
