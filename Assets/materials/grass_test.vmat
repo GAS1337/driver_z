@@ -8,7 +8,7 @@ Layer0
 	TextureAmbientOcclusion "materials/default/default_ao.tga"
 
 	//---- Color ----
-	g_vColorTint "[1.000000 0.752941 0.796079 1.000000]"
+	g_vColorTint "[1.000000 1.000000 1.000000 1.000000]"
 	TextureColor "[0.000000 0.392157 0.000000 1.000000]"
 
 	//---- Fade ----
