@@ -20,7 +20,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 	public void OnTriggerEnter( Collider other )
 	{
 		// Wenn Player disable model und body
-		if ( other.GameObject.Tags.Has( "player" ) ) { return; }
+		if ( other.GameObject.Tags.Has( "player" ) || other.GameObject.Tags.Has( "nograss" ) ) { return; }
 
 		var ExplosionTrace = Scene.Trace.Sphere( 600, GameObject.WorldPosition, GameObject.WorldPosition )
 			.IgnoreGameObjectHierarchy( this.GameObject )
@@ -32,11 +32,15 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		{
 			if ( hit.GameObject.Tags.Has( "enemy" ) )
 			{
+				if ( !hit.GameObject.IsValid ) return;
 				// DebugOverlay.Trace( hit );
 				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );
 
 				// Damage
-				hit.GameObject.GetComponent<HealthSystem>().Damage( Damage );
+				if ( hit.GameObject.GetComponent<HealthSystem>().IsValid() )
+				{
+					hit.GameObject.GetComponent<HealthSystem>().Damage( Damage );
+				}
 
 				// Zombie Stagger
 				if ( hit.GameObject.GetComponent<ZombieBrain>() != null )
