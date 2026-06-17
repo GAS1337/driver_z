@@ -14,10 +14,15 @@
 	</div>
 	<div class="vitals">
 	</div>
-	<div class="timer"> 
-		<p>@($"{(int)HighscoreManager.TimeSpanSinceGameStart.TotalMinutes:00}:{HighscoreManager.TimeSpanSinceGameStart.Seconds:00}")</p>
+	<div class="timer">
+
+		<div class="timer-house">	</div>
+		<p>
+			<span>@($"{(int)HighscoreManager.TimeSpanSinceGameStart.TotalMinutes:00}")</span>
+			<span class="separator">:</span>
+			<span>@($"{HighscoreManager.TimeSpanSinceGameStart.Seconds:00}")</span>
+		</p>
 	</div>
-	<div class="timer-house">	</div>
 	<div class="score @(PlayerHealth.CurrentHealth == 0 ? $"Center" : "")">
 		@foreach (var popup in activePopups)
 		{

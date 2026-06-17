@@ -131,24 +131,37 @@ HUD {
         left: 47%;
         top: 0%;
         display: flex;
+        font-family: Digit Tech 7;
         flex-direction: column;
         align-items: flex-start;
         font-weight: bold;
-        color: white;
-        font-size: 70px;
+        color: darkgray;
+        font-size: 50px;
+
+        .timer-house {
+            position: absolute;
+            left: -132%;
+            top: -200%;
+            width: 26vw;
+            height: 19vw;
+            background-image: url( "sprites/timer-house.svg" );
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        p {
+            display: flex;
+            align-items: center; // Richtet Zahlen und Doppelpunkt vertikal mittig aus
+        }
+
+        .separator {
+            font-family: 'Poppins', sans-serif; // Überschreibt die Schriftart nur für den Doppelpunkt
+            padding: 0 4px; // Optional: Fügt minimalen Abstand links/rechts hinzu, falls nötig
+        }
     }
 
-    .timer-house {
-        position: absolute;
-        left: 38.4%;
-        top: -13%;
-        width: 26vw;
-        height: 19vw;
-        background-image: url( "sprites/timer-house.svg" );
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+
 
     .multiplier-dial {
         position: absolute;
