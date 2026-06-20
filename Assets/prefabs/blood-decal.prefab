@@ -511,7 +511,7 @@
         "Rotation": "0,0,0,1",
         "Scale": "1,13.7999992,12.5200005",
         "Tags": "",
-        "Enabled": false,
+        "Enabled": true,
         "NetworkMode": 2,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
@@ -521,7 +521,7 @@
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "178fca2b-5088-4808-afa9-9039e3170771",
-            "__enabled": true,
+            "__enabled": false,
             "Flags": 0,
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,

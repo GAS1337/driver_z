@@ -4143,41 +4143,6 @@
               }
             ],
             "Children": []
-          },
-          {
-            "__guid": "09948d63-3268-4c22-8566-e662f448a5af",
-            "__version": 2,
-            "__Prefab": "trails.prefab",
-            "__PrefabInstancePatch": {
-              "AddedObjects": [],
-              "RemovedObjects": [],
-              "PropertyOverrides": [
-                {
-                  "Target": {
-                    "Type": "GameObject",
-                    "IdValue": "fd0fe31a-99ed-4c2d-b092-0dba758847d2"
-                  },
-                  "Property": "Enabled",
-                  "Value": false
-                }
-              ],
-              "MovedObjects": []
-            },
-            "__PrefabIdToInstanceId": {
-              "fd0fe31a-99ed-4c2d-b092-0dba758847d2": "09948d63-3268-4c22-8566-e662f448a5af",
-              "dffa22a1-73d9-41cc-8706-8e9aa7722b48": "82731263-7397-4469-b840-dc6f498695a9",
-              "4efbf4dc-68d0-4129-87f3-17997ee4d9dc": "ae53d4b6-40cf-49b0-a7d9-d1b5a9eb2708",
-              "9ab73bec-1ea3-4f84-809a-b03d705cad56": "bee4b38c-2e1b-496d-be12-e5698261cd83",
-              "fce53150-0cc9-4e48-8c80-1ca8010a720e": "e0b8027d-bf1e-4a58-af1d-d4f2a00a2720",
-              "4321096d-72b9-49a0-8144-13496bfcf48d": "bb61e500-b823-431a-bbe4-2f895a04622d",
-              "5fa57ed7-1dc5-480d-83b9-73cd6cea5bdc": "7276effe-92c9-443b-8375-efe98aa50bd8",
-              "394dacc4-8626-4676-8ec5-5841e6d24e55": "549116bf-0f97-414f-91a5-855df3b70a0a",
-              "0fa712ab-c4ec-4c61-bee2-1e41ed659421": "cbd113c6-b9d9-43bc-b45e-12dff3bb0ca6",
-              "0381da7c-d735-4790-a00c-78bc73099f99": "9ed51013-70ca-4c32-8846-30f4c3166b36",
-              "1a516f70-c408-428e-b6e1-75e0acd2b87c": "6ab2bc11-cba3-4d78-b4ce-e25fa8c9985f",
-              "dda68e11-5f61-43a8-b03a-b5acffe53f09": "f4f66575-9d83-4783-9615-b5cf20de5ef9",
-              "f9a703c1-ddca-458a-acd3-8635157bf818": "1f2a0bdc-03eb-40ba-ad20-c132dae77866"
-            }
           }
         ]
       },
