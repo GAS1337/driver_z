@@ -44,7 +44,9 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "SetHealth": 200
+            "OrbitalCameraController": null,
+            "SetHealth": 200,
+            "SetPoints": 500
           },
           {
             "__type": "Sandbox.ModelCollider",
@@ -77,6 +79,10 @@
             "__enabled": true,
             "Flags": 0,
             "AttackSound": "sounds/ghost/ghost-attack.sound",
+            "BloodDecal": {
+              "_type": "gameobject",
+              "prefab": "prefabs/blood-decal.prefab"
+            },
             "DeadGhost": {
               "_type": "gameobject",
               "prefab": "prefabs/dead-ghost.prefab"
@@ -125,6 +131,7 @@
                 "__enabled": true,
                 "Flags": 0,
                 "__version": 2,
+                "Billboard": "None",
                 "BlendMode": "Normal",
                 "FogStrength": 0.1,
                 "HorizontalAlignment": "Center",
@@ -271,9 +278,8 @@
                 "Force2d": false,
                 "MaxRepeatTime": 1,
                 "MinRepeatTime": 1,
-                "Occlusion": false,
+                "OcclusionEnabled": false,
                 "OcclusionOverride": false,
-                "OcclusionRadius": 32,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -282,9 +288,9 @@
                 "OnComponentUpdate": null,
                 "Pitch": 1,
                 "PlayOnStart": true,
-                "ReflectionOverride": false,
-                "Reflections": false,
                 "Repeat": false,
+                "ReverbEnabled": false,
+                "ReverbOverride": false,
                 "SoundEvent": "sounds/ghost/ghost-idle.sound",
                 "SoundOverride": false,
                 "StopOnNew": false,

@@ -26,20 +26,21 @@
       },
       "ConvertHeightToNormals": true,
       "NormalScale": 1,
-      "CacheToDisk": true
+      "CacheToDisk": true,
+      "FormatOverride": null
     },
-    "compiled": null
+    "compiled": "textures/generated/random/b4608bbf277216b.vtex"
   },
   "RoughMetalOcclusionTexture": null,
   "EmissiveTexture": null,
   "EmissionEnergy": 1,
   "HeightTexture": null,
   "ParallaxStrength": 1,
-  "Tint": "1,1,1,1",
+  "Tint": "1,0,0,1",
   "ColorMix": 1,
   "Width": 16,
   "Height": 16,
-  "FilterMode": "Anisotropic",
+  "FilterMode": "Point",
   "__references": [],
   "__version": 0
 }

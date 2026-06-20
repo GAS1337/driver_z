@@ -14,6 +14,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
 	[Property] GameObject ParticleObject;
+	[Property] GameObject BloodDecal;
 	ParticleEmitter BloodEmitter;
 	[Property] GameObject DeathParticle;
 
@@ -45,6 +46,12 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
+		GroundTrace = Scene.Trace.Ray( WorldPosition, WorldPosition + Vector3.Down * 7000 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "dead", "player", "playerclip" )
+			.Run();
+		GameObject newDecal = BloodDecal.Clone( GroundTrace.EndPosition, Rotation.LookAt( GroundTrace.Normal, Vector3.Up ).Angles().WithYaw( random.Int( -180, 180 ) ) );
+
 		Sound.Play( "sounds/vampire/vampire-death.sound", GameObject.WorldPosition );
 		DeathParticle.Clone( GameObject.WorldPosition + Vector3.Up * 150, WorldRotation, WorldScale * 1.5f );
 		GameObject.Parent.Destroy();

@@ -1,5 +1,6 @@
 using Sandbox;
 using System;
+using System.Threading.Tasks;
 
 public sealed class RotationControl : Component
 {
@@ -15,7 +16,10 @@ public sealed class RotationControl : Component
 
 	[Property] float Speed;
 	[Property] GameObject Trails;
+	GameObject currentTrail;
 
+	bool IsTrailing;
+	public bool IsDriving;
 	public bool IsGrounded;
 	int GroundedWheels;
 	public SceneTraceResult groundCheck;
@@ -63,6 +67,7 @@ public sealed class RotationControl : Component
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
+			IsDriving = true;
 		}
 		else if ( Input.Down( "Forward" ) )
 		{
@@ -80,6 +85,7 @@ public sealed class RotationControl : Component
 					GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; 
 				}
 			}
+			IsDriving = true;
 		}
 		else if ( Input.Down( "Backward" ) )
 		{
@@ -95,6 +101,7 @@ public sealed class RotationControl : Component
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
+			IsDriving = true;
 		}
 		else
 		{
@@ -108,6 +115,7 @@ public sealed class RotationControl : Component
 				}
 				else { GroundedWheels = GroundedWheels.Clamp<int>( 1, 3 ) - 1; }
 			}
+			IsDriving = false;
 		}
 
 		if ( GroundedWheels > 2 ) { IsGrounded = true; }
@@ -116,7 +124,6 @@ public sealed class RotationControl : Component
 
 		if ( IsGrounded )
 		{
-			Trails.Enabled = true;
 			Vector3 cheatSteering = Vector3.Zero;
 			if ( Input.Down( "Left" ) )
 			{
@@ -137,9 +144,36 @@ public sealed class RotationControl : Component
 		}
 		else
 		{
-			Trails.Enabled = false;
 			// Air Control
 		}
+
+		if ( IsGrounded && IsDriving )
+		{
+			if ( IsTrailing ) return;
+			IsTrailing = true;
+			currentTrail = Trails.Clone(CarBody.WorldPosition, CarBody.WorldRotation);
+			currentTrail.SetParent( CarBody.GameObject );
+			MakeTrailsEmitDelayed( currentTrail );
+		}
+		else
+		{
+			if ( IsTrailing )
+			{
+				IsTrailing = false;
+
+				if ( currentTrail.IsValid() )
+				{
+					foreach ( TrailRenderer trail in currentTrail.GetComponentsInChildren<TrailRenderer>() )
+					{
+						trail.Emitting = false;
+					}
+					currentTrail.SetParent( Scene );
+				}
+
+				currentTrail = null;
+			}
+		}
+
 	}
 
 	private void ApplyForceToWheel( WheelJoint wheel, float factor )
@@ -182,5 +216,14 @@ public sealed class RotationControl : Component
 
 		// DebugOverlay.Trace( groundCheck );
 		return groundCheck;
+	}
+
+	async Task MakeTrailsEmitDelayed( GameObject trails )
+	{
+		await Task.Delay( 100 );
+		foreach ( TrailRenderer trail in trails.GetComponentsInChildren<TrailRenderer>() )
+		{
+			trail.Emitting = true;
+		}
 	}
 }

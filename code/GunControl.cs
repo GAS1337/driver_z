@@ -228,7 +228,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 	async Task FlashMuzzleSprite(float time)
 	{
-		MuzzleFlashSprite.WorldRotation = MuzzleFlashSprite.WorldRotation.Angles().WithRoll( random.Int(-10, 15) );
+		MuzzleFlashSprite.WorldRotation = MuzzleFlashSprite.WorldRotation.Angles().WithRoll( random.Int(-45, 45) );
 		MuzzleFlashSprite.Enabled = true;
 		await Task.DelayRealtimeSeconds( time );
 		MuzzleFlashSprite.Enabled = false;

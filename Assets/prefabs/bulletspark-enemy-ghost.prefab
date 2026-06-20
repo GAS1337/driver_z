@@ -256,7 +256,7 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Opaque": false,
+            "Opaque": true,
             "PlaybackSpeed": 1,
             "RenderOptions": {
               "GameLayer": true,
@@ -313,7 +313,8 @@
                             "Hue": 0,
                             "Colorize": false,
                             "TargetColor": "0,1,0,1",
-                            "CacheToDisk": true
+                            "CacheToDisk": true,
+                            "FormatOverride": "RGBA8888"
                           },
                           "compiled": null
                         },

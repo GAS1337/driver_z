@@ -15,6 +15,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	[Property] GameObject DeadGhost;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
+	[Property] GameObject BloodDecal;
 	[Property] SoundEvent AttackSound;
 	[Property] SoundEvent IdleSound;
 	[Property] SoundEvent DeathSound;
@@ -46,6 +47,13 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
+		GroundTrace = Scene.Trace.Ray( WorldPosition, WorldPosition + Vector3.Down * 7000 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "dead", "player", "playerclip" )
+			.Run();
+		GameObject newDecal = BloodDecal.Clone( GroundTrace.EndPosition, Rotation.LookAt( GroundTrace.Normal, Vector3.Up ).Angles().WithYaw( random.Int( -180, 180 ) ) );
+
+
 		Sound.Play(DeathSound, WorldPosition);
 		DeadGhost.Clone( WorldPosition + Vector3.Up * 100, GameObject.WorldRotation, GameObject.WorldScale );
 		GameObject.Parent.Destroy();

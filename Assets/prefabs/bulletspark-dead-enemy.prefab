@@ -258,9 +258,9 @@
               "AfterUILayer": false
             },
             "RotationOffset": 0,
-            "Scale": 25,
+            "Scale": 40,
             "Shadows": false,
-            "SortMode": "Unsorted",
+            "SortMode": "ByDistance",
             "Sprite": {
               "$compiler": "embed",
               "$source": null,
@@ -306,9 +306,10 @@
                             "Hue": 0,
                             "Colorize": false,
                             "TargetColor": "0,1,0,1",
-                            "CacheToDisk": true
+                            "CacheToDisk": true,
+                            "FormatOverride": "RGBA8888"
                           },
-                          "compiled": null
+                          "compiled": "textures/generated/imagefile/b1ef9c9c7a0a663f.vtex"
                         },
                         "BroadcastMessages": []
                       }
@@ -320,7 +321,7 @@
               "compiled": null
             },
             "StartingAnimationName": "Default",
-            "TextureFilter": "Bilinear"
+            "TextureFilter": "Point"
           },
           {
             "__type": "Sandbox.ParticleSphereEmitter",
@@ -339,7 +340,7 @@
             "OnComponentStart": null,
             "OnComponentUpdate": null,
             "OnEdge": false,
-            "Radius": 1,
+            "Radius": 50,
             "Rate": 0,
             "RateOverDistance": 0,
             "Velocity": 100

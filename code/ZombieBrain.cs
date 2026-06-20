@@ -78,6 +78,11 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath()
 	{
+		groundCheck = Scene.Trace.Ray( WorldPosition, WorldPosition + Vector3.Down * 3500 )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.WithoutTags( "enemy", "dead", "player", "playerclip" )
+			.Run();
+		GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ).Angles().WithYaw(random.Int(-180, 180)) );		
 		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, originalScale );
 		foreach (GameObject child in _deadClone.Children )
 		{
@@ -86,7 +91,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
-		// GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ) );
+
 		Sound.Play( "sounds/zombie-dies.sound", _deadClone.WorldPosition );
 	}
 

@@ -108,7 +108,7 @@
         "Speed": 2300000,
         "Trails": {
           "_type": "gameobject",
-          "go": "b20ca5d4-bd5f-40f1-97b0-643ccdf70c84"
+          "prefab": "trails.prefab"
         }
       },
       {
@@ -3678,6 +3678,7 @@
                 "Attenuation": 0.5,
                 "ConeInner": 5,
                 "ConeOuter": 20,
+                "Contribution": "Diffuse, Specular, Transmissive",
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
@@ -3767,6 +3768,7 @@
                 "Attenuation": 0.5,
                 "ConeInner": 5,
                 "ConeOuter": 20,
+                "Contribution": "Diffuse, Specular, Transmissive",
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
@@ -3826,445 +3828,6 @@
                     },
                     "RenderType": "Off",
                     "Tint": "1,1,0,1"
-                  }
-                ],
-                "Children": []
-              }
-            ]
-          },
-          {
-            "__guid": "b20ca5d4-bd5f-40f1-97b0-643ccdf70c84",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Trails",
-            "Position": "-76.9194336,-77.0155029,12",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "trail",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [],
-            "Children": [
-              {
-                "__guid": "50a4937d-040d-488c-ae40-37a8f5776260",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Trail",
-                "Position": "-3.08056593,154.043701,0",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [
-                  {
-                    "__type": "Sandbox.TrailRenderer",
-                    "__guid": "10ec7784-d865-4865-a537-5c604f434ddd",
-                    "__enabled": true,
-                    "Flags": 0,
-                    "BlendMode": "Normal",
-                    "CastShadows": false,
-                    "Color": {
-                      "blend": "Linear",
-                      "color": [
-                        {
-                          "t": 0,
-                          "c": "0.09302,0.09302,0.09302,1"
-                        },
-                        {
-                          "t": 1,
-                          "c": "0.1814,0.1814,0.1814,1"
-                        }
-                      ],
-                      "alpha": [
-                        {
-                          "t": 0,
-                          "a": 1
-                        },
-                        {
-                          "t": 0.9978992,
-                          "a": 0
-                        }
-                      ]
-                    },
-                    "Emitting": true,
-                    "Face": "Normal",
-                    "LifeTime": 1,
-                    "MaxPoints": 64,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null,
-                    "Opaque": false,
-                    "PointDistance": 8,
-                    "RenderOptions": {
-                      "GameLayer": true,
-                      "OverlayLayer": false,
-                      "BloomLayer": false,
-                      "AfterUILayer": false
-                    },
-                    "Texturing": {
-                      "Texture": null,
-                      "Material": null,
-                      "WorldSpace": true,
-                      "UnitsPerTexture": 10,
-                      "Scale": 1,
-                      "Offset": 0,
-                      "Scroll": 0,
-                      "FilterMode": "Anisotropic",
-                      "TextureAddressMode": "Wrap",
-                      "Clamp": false
-                    },
-                    "Width": {
-                      "rangey": "0,50",
-                      "frames": [
-                        {
-                          "x": 0.5,
-                          "y": 1,
-                          "in": 0,
-                          "out": 0,
-                          "mode": "Mirrored"
-                        }
-                      ]
-                    },
-                    "Wireframe": false
-                  },
-                  {
-                    "__type": "TrailGroundFinder",
-                    "__guid": "37fe3098-1a7f-47c9-a1e7-d1c3876eae1f",
-                    "__enabled": false,
-                    "Flags": 0,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null
-                  }
-                ],
-                "Children": []
-              },
-              {
-                "__guid": "cdf8264e-182b-41c7-8ea1-bb1cd0c3ede5",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Trail",
-                "Position": "140.916,6.9382019,0",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [
-                  {
-                    "__type": "Sandbox.TrailRenderer",
-                    "__guid": "23177636-7315-44a0-9d7d-82fb7e494e36",
-                    "__enabled": true,
-                    "Flags": 0,
-                    "BlendMode": "Normal",
-                    "CastShadows": false,
-                    "Color": {
-                      "blend": "Linear",
-                      "color": [
-                        {
-                          "t": 0,
-                          "c": "0.09302,0.09302,0.09302,1"
-                        },
-                        {
-                          "t": 1,
-                          "c": "0.1814,0.1814,0.1814,1"
-                        }
-                      ],
-                      "alpha": [
-                        {
-                          "t": 0,
-                          "a": 1
-                        },
-                        {
-                          "t": 0.9978992,
-                          "a": 0
-                        }
-                      ]
-                    },
-                    "Emitting": true,
-                    "Face": "Normal",
-                    "LifeTime": 1,
-                    "MaxPoints": 64,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null,
-                    "Opaque": false,
-                    "PointDistance": 8,
-                    "RenderOptions": {
-                      "GameLayer": true,
-                      "OverlayLayer": false,
-                      "BloomLayer": false,
-                      "AfterUILayer": false
-                    },
-                    "Texturing": {
-                      "Texture": null,
-                      "Material": null,
-                      "WorldSpace": true,
-                      "UnitsPerTexture": 10,
-                      "Scale": 1,
-                      "Offset": 0,
-                      "Scroll": 0,
-                      "FilterMode": "Anisotropic",
-                      "TextureAddressMode": "Wrap",
-                      "Clamp": false
-                    },
-                    "Width": {
-                      "rangey": "0,50",
-                      "frames": [
-                        {
-                          "x": 0.5,
-                          "y": 1,
-                          "in": 0,
-                          "out": 0,
-                          "mode": "Mirrored"
-                        }
-                      ]
-                    },
-                    "Wireframe": false
-                  },
-                  {
-                    "__type": "TrailGroundFinder",
-                    "__guid": "0095deb0-7dec-4cd2-be4b-2280bcc33459",
-                    "__enabled": false,
-                    "Flags": 0,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null
-                  }
-                ],
-                "Children": []
-              },
-              {
-                "__guid": "6780f50d-4948-43af-b0b0-c63ff07de5c5",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Trail",
-                "Position": "140.916,140.006897,0",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [
-                  {
-                    "__type": "Sandbox.TrailRenderer",
-                    "__guid": "8efcb99a-b6e8-4928-abc6-82bbdd937101",
-                    "__enabled": true,
-                    "Flags": 0,
-                    "BlendMode": "Normal",
-                    "CastShadows": false,
-                    "Color": {
-                      "blend": "Linear",
-                      "color": [
-                        {
-                          "t": 0,
-                          "c": "0.09302,0.09302,0.09302,1"
-                        },
-                        {
-                          "t": 1,
-                          "c": "0.1814,0.1814,0.1814,1"
-                        }
-                      ],
-                      "alpha": [
-                        {
-                          "t": 0,
-                          "a": 1
-                        },
-                        {
-                          "t": 0.9978992,
-                          "a": 0
-                        }
-                      ]
-                    },
-                    "Emitting": true,
-                    "Face": "Normal",
-                    "LifeTime": 1,
-                    "MaxPoints": 64,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null,
-                    "Opaque": false,
-                    "PointDistance": 8,
-                    "RenderOptions": {
-                      "GameLayer": true,
-                      "OverlayLayer": false,
-                      "BloomLayer": false,
-                      "AfterUILayer": false
-                    },
-                    "Texturing": {
-                      "Texture": null,
-                      "Material": null,
-                      "WorldSpace": true,
-                      "UnitsPerTexture": 10,
-                      "Scale": 1,
-                      "Offset": 0,
-                      "Scroll": 0,
-                      "FilterMode": "Anisotropic",
-                      "TextureAddressMode": "Wrap",
-                      "Clamp": false
-                    },
-                    "Width": {
-                      "rangey": "0,50",
-                      "frames": [
-                        {
-                          "x": 0.5,
-                          "y": 1,
-                          "in": 0,
-                          "out": 0,
-                          "mode": "Mirrored"
-                        }
-                      ]
-                    },
-                    "Wireframe": false
-                  },
-                  {
-                    "__type": "TrailGroundFinder",
-                    "__guid": "38336227-6ec3-48fe-a995-3e586acd3986",
-                    "__enabled": false,
-                    "Flags": 0,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null
-                  }
-                ],
-                "Children": []
-              },
-              {
-                "__guid": "b37ab3d9-f8bf-4228-b629-c9187a806cf3",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Trail",
-                "Position": "0,0,0",
-                "Rotation": "0,0,0,1",
-                "Scale": "1,1,1",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [
-                  {
-                    "__type": "Sandbox.TrailRenderer",
-                    "__guid": "61da1da3-fb85-4ac9-b8bb-2b4bec7b145b",
-                    "__enabled": true,
-                    "Flags": 0,
-                    "BlendMode": "Normal",
-                    "CastShadows": false,
-                    "Color": {
-                      "blend": "Linear",
-                      "color": [
-                        {
-                          "t": 0,
-                          "c": "0.09302,0.09302,0.09302,1"
-                        },
-                        {
-                          "t": 1,
-                          "c": "0.1814,0.1814,0.1814,1"
-                        }
-                      ],
-                      "alpha": [
-                        {
-                          "t": 0,
-                          "a": 1
-                        },
-                        {
-                          "t": 0.9978992,
-                          "a": 0
-                        }
-                      ]
-                    },
-                    "Emitting": true,
-                    "Face": "Normal",
-                    "LifeTime": 1,
-                    "MaxPoints": 64,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null,
-                    "Opaque": false,
-                    "PointDistance": 8,
-                    "RenderOptions": {
-                      "GameLayer": true,
-                      "OverlayLayer": false,
-                      "BloomLayer": false,
-                      "AfterUILayer": false
-                    },
-                    "Texturing": {
-                      "Texture": null,
-                      "Material": null,
-                      "WorldSpace": true,
-                      "UnitsPerTexture": 10,
-                      "Scale": 1,
-                      "Offset": 0,
-                      "Scroll": 0,
-                      "FilterMode": "Anisotropic",
-                      "TextureAddressMode": "Wrap",
-                      "Clamp": false
-                    },
-                    "Width": {
-                      "rangey": "0,50",
-                      "frames": [
-                        {
-                          "x": 0.5,
-                          "y": 1,
-                          "in": 0,
-                          "out": 0,
-                          "mode": "Mirrored"
-                        }
-                      ]
-                    },
-                    "Wireframe": false
-                  },
-                  {
-                    "__type": "TrailGroundFinder",
-                    "__guid": "7cf6304b-b4ba-4f5e-9cb2-a67fed9f0b2e",
-                    "__enabled": false,
-                    "Flags": 0,
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null
                   }
                 ],
                 "Children": []
@@ -4580,6 +4143,41 @@
               }
             ],
             "Children": []
+          },
+          {
+            "__guid": "09948d63-3268-4c22-8566-e662f448a5af",
+            "__version": 2,
+            "__Prefab": "trails.prefab",
+            "__PrefabInstancePatch": {
+              "AddedObjects": [],
+              "RemovedObjects": [],
+              "PropertyOverrides": [
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "fd0fe31a-99ed-4c2d-b092-0dba758847d2"
+                  },
+                  "Property": "Enabled",
+                  "Value": false
+                }
+              ],
+              "MovedObjects": []
+            },
+            "__PrefabIdToInstanceId": {
+              "fd0fe31a-99ed-4c2d-b092-0dba758847d2": "09948d63-3268-4c22-8566-e662f448a5af",
+              "dffa22a1-73d9-41cc-8706-8e9aa7722b48": "82731263-7397-4469-b840-dc6f498695a9",
+              "4efbf4dc-68d0-4129-87f3-17997ee4d9dc": "ae53d4b6-40cf-49b0-a7d9-d1b5a9eb2708",
+              "9ab73bec-1ea3-4f84-809a-b03d705cad56": "bee4b38c-2e1b-496d-be12-e5698261cd83",
+              "fce53150-0cc9-4e48-8c80-1ca8010a720e": "e0b8027d-bf1e-4a58-af1d-d4f2a00a2720",
+              "4321096d-72b9-49a0-8144-13496bfcf48d": "bb61e500-b823-431a-bbe4-2f895a04622d",
+              "5fa57ed7-1dc5-480d-83b9-73cd6cea5bdc": "7276effe-92c9-443b-8375-efe98aa50bd8",
+              "394dacc4-8626-4676-8ec5-5841e6d24e55": "549116bf-0f97-414f-91a5-855df3b70a0a",
+              "0fa712ab-c4ec-4c61-bee2-1e41ed659421": "cbd113c6-b9d9-43bc-b45e-12dff3bb0ca6",
+              "0381da7c-d735-4790-a00c-78bc73099f99": "9ed51013-70ca-4c32-8846-30f4c3166b36",
+              "1a516f70-c408-428e-b6e1-75e0acd2b87c": "6ab2bc11-cba3-4d78-b4ce-e25fa8c9985f",
+              "dda68e11-5f61-43a8-b03a-b5acffe53f09": "f4f66575-9d83-4783-9615-b5cf20de5ef9",
+              "f9a703c1-ddca-458a-acd3-8635157bf818": "1f2a0bdc-03eb-40ba-ad20-c132dae77866"
+            }
           }
         ]
       },
