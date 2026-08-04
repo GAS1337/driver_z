@@ -22,6 +22,7 @@
           "__guid": "68aec37c-2af5-49ad-94b9-c159f03d863d",
           "__enabled": true,
           "Flags": 0,
+          "ContactShadows": true,
           "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
@@ -11023,8 +11024,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Countdown",
-          "Position": "-1586,-0.000427246094,301",
-          "Rotation": "0,0,-1,1.49011612E-07",
+          "Position": "-20.1092148,93.0576782,125.332764",
+          "Rotation": "0.653281629,-0.270597994,-0.653281569,-0.270598024",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -12006,7 +12007,51 @@
           "OnComponentUpdate": null
         }
       ],
-      "Children": []
+      "Children": [
+        {
+          "__guid": "2d098227-a0dc-45a8-b88d-df9eef8b6287",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "hint",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "TutorialHint",
+              "__guid": "207df28b-ef36-4baa-b4cc-7b446e20efdc",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            },
+            {
+              "__type": "UIHint",
+              "__guid": "58b6b1b3-7817-41ac-a840-03983dc2b569",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     },
     {
       "__guid": "0e1547b7-b03f-460e-8c33-8f1a489ced48",
@@ -13114,129 +13159,9 @@
           "HideInGame": false,
           "IsTrigger": false,
           "Mesh": {
-            "Topology": "H4sIAAAAAAAACl2QCQ4CMQwDB7rAct/H/z9aNMKVIipVVWPHcTwDH2DN7yyBKf8Z2AEH4AQscuXUcwVWqbf0U7iP1Ft4/7PepWdTdFu4t3Dt3cZT771P8XgvnvfxKy5f7itaah+zi7h8uc9oq3GOprh8uZeys7ta9+8rpubo14saIwu9D8x5ztKjmPmYje/IzyxqVnp359GvLzWty1XvC8YUFhrEAQAA",
-            "Positions": [
-              "-12544,-11648,64",
-              "12544,-11648,64",
-              "12544,11648,64",
-              "-12544,11648,64",
-              "-12544,11648,-64",
-              "12544,11648,-64",
-              "12544,-11648,-64",
-              "-12544,-11648,-64"
-            ],
-            "Blends": [
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0"
-            ],
-            "Colors": [
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0"
-            ],
-            "TextureCoord": [
-              "30,151",
-              "-166,-1",
-              "30,-31",
-              "-151,-1",
-              "-166,-31",
-              "-30,-1",
-              "-166,151",
-              "-31,-1",
-              "30,-31",
-              "166,0",
-              "30,151",
-              "31,0",
-              "-166,151",
-              "30,0",
-              "-166,-31",
-              "151,0",
-              "151,-1",
-              "-166,0",
-              "-31,0",
-              "166,-1",
-              "-151,0",
-              "30,-1",
-              "31,-1",
-              "-30,0"
-            ],
-            "MaterialIndex": [
-              0,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            "EdgeFlags": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
+            "Data": {
+              "$blob": "5e1eba02-a3b8-48b0-89cc-92c11c24cfa1"
+            },
             "Materials": [
               "materials/dev/green.vmat",
               "materials/dev/reflectivity_30.vmat"
@@ -13294,6 +13219,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -13421,6 +13347,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -13545,129 +13472,9 @@
           "HideInGame": false,
           "IsTrigger": false,
           "Mesh": {
-            "Topology": "H4sIAAAAAAAACl2QCQ4CMQwDB7rAct/H/z9aNMKVIipVVWPHcTwDH2DN7yyBKf8Z2AEH4AQscuXUcwVWqbf0U7iP1Ft4/7PepWdTdFu4t3Dt3cZT771P8XgvnvfxKy5f7itaah+zi7h8uc9oq3GOprh8uZeys7ta9+8rpubo14saIwu9D8x5ztKjmPmYje/IzyxqVnp359GvLzWty1XvC8YUFhrEAQAA",
-            "Positions": [
-              "-12544,-11648,64",
-              "12544,-11648,64",
-              "12544,11648,64",
-              "-12544,11648,64",
-              "-12544,11648,-64",
-              "12544,11648,-64",
-              "12544,-11648,-64",
-              "-12544,-11648,-64"
-            ],
-            "Blends": [
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0"
-            ],
-            "Colors": [
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0",
-              "0,0,0,0"
-            ],
-            "TextureCoord": [
-              "30,151",
-              "-166,-1",
-              "30,-31",
-              "-151,-1",
-              "-166,-31",
-              "-30,-1",
-              "-166,151",
-              "-31,-1",
-              "30,-31",
-              "166,0",
-              "30,151",
-              "31,0",
-              "-166,151",
-              "30,0",
-              "-166,-31",
-              "151,0",
-              "151,-1",
-              "-166,0",
-              "-31,0",
-              "166,-1",
-              "-151,0",
-              "30,-1",
-              "31,-1",
-              "-30,0"
-            ],
-            "MaterialIndex": [
-              0,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            "EdgeFlags": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
+            "Data": {
+              "$blob": "a4f0b1b3-e79f-459e-b765-639dabd83366"
+            },
             "Materials": [
               "materials/dev/green.vmat",
               "materials/dev/reflectivity_30.vmat"
@@ -16628,7 +16435,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "WASD Text",
-      "Position": "-4656,335.999542,480",
+      "Position": "-13184,320.000092,928",
       "Rotation": "0,0,1,-4.37113883E-08",
       "Scale": "1,1,1",
       "Tags": "",
@@ -16647,7 +16454,7 @@
           "__version": 2,
           "Billboard": "None",
           "BlendMode": "Normal",
-          "FogStrength": 1,
+          "FogStrength": 0.49579832,
           "HorizontalAlignment": "Center",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -16663,10 +16470,10 @@
           },
           "Scale": 1,
           "TextScope": {
-            "Text": "\nIf its your first time check out the Tutorial on the left",
-            "TextColor": "1.65936,1.68264,1.74884,1",
+            "Text": "\uD83D\uDED1\uD83D\uDED1\uD83D\uDED1\nIf its your first time \ncheck out the Tutorial \non the left\n⬅⬅⬅",
+            "TextColor": "1.74884,0,0,1",
             "FontName": "Poppins",
-            "FontSize": 64,
+            "FontSize": 136.76924,
             "FontWeight": 800,
             "FontItalic": false,
             "FontVariantNumeric": "Normal",
@@ -16677,7 +16484,7 @@
             "FontSmooth": "Auto",
             "Outline": {
               "Enabled": true,
-              "Size": 4,
+              "Size": 16,
               "Color": "0,0,0,1"
             },
             "Shadow": {
@@ -16699,6 +16506,18 @@
             }
           },
           "VerticalAlignment": "Center"
+        },
+        {
+          "__type": "TutorialHint",
+          "__guid": "19639f3c-8624-4e00-9a7f-d98e73b7a48a",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -17164,6 +16983,8 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -17361,6 +17182,8 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -19022,7 +18845,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Zombie Explanation",
-      "Position": "-9305.00098,-27111.998,456.000427",
+      "Position": "-9887.41211,-25869.3965,224.000229",
       "Rotation": "0,0,0.814435482,-0.580254912",
       "Scale": "1,1,1",
       "Tags": "",
@@ -19916,6 +19739,22 @@
           },
           {
             "Target": {
+              "Type": "GameObject",
+              "IdValue": "c22ca121-5be9-49eb-aa16-0465ff860947"
+            },
+            "Property": "Tags",
+            "Value": ""
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
+            },
+            "Property": "__enabled",
+            "Value": false
+          },
+          {
+            "Target": {
               "Type": "Component",
               "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
             },
@@ -20647,6 +20486,22 @@
           },
           {
             "Target": {
+              "Type": "GameObject",
+              "IdValue": "b655254f-7b15-4a6d-95de-9498d581256a"
+            },
+            "Property": "Tags",
+            "Value": ""
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "17ff12ae-afb1-4a66-b6ad-353a2d610f8b"
+            },
+            "Property": "__enabled",
+            "Value": false
+          },
+          {
+            "Target": {
               "Type": "Component",
               "IdValue": "17ff12ae-afb1-4a66-b6ad-353a2d610f8b"
             },
@@ -20657,6 +20512,14 @@
             "Target": {
               "Type": "Component",
               "IdValue": "a97474c9-a4d9-402d-9aad-4fcfef224888"
+            },
+            "Property": "__enabled",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "1d9edf18-cd90-40ba-8ba1-6ed1a499db3b"
             },
             "Property": "__enabled",
             "Value": false
@@ -20824,6 +20687,22 @@
           },
           {
             "Target": {
+              "Type": "GameObject",
+              "IdValue": "c22ca121-5be9-49eb-aa16-0465ff860947"
+            },
+            "Property": "Tags",
+            "Value": ""
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
+            },
+            "Property": "__enabled",
+            "Value": false
+          },
+          {
+            "Target": {
               "Type": "Component",
               "IdValue": "142b927a-bce3-49eb-8473-110ba86cef3d"
             },
@@ -20939,6 +20818,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21066,6 +20946,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21193,6 +21074,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21320,6 +21202,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21571,6 +21454,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21698,6 +21582,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21825,6 +21710,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -21952,6 +21838,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -25700,6 +25587,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -26074,6 +25962,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -27822,6 +27711,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -27949,6 +27839,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -28076,6 +27967,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -28203,6 +28095,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -28330,6 +28223,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -28840,6 +28734,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -30507,6 +30402,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -33307,6 +33203,8 @@
                   "FrameRate": 15,
                   "Origin": "0.5,0.5",
                   "LoopMode": "Loop",
+                  "LoopStart": -1,
+                  "LoopEnd": -1,
                   "Frames": [
                     {
                       "Texture": {
@@ -33423,6 +33321,8 @@
                   "FrameRate": 15,
                   "Origin": "0.5,0.5",
                   "LoopMode": "Loop",
+                  "LoopStart": -1,
+                  "LoopEnd": -1,
                   "Frames": [
                     {
                       "Texture": {
@@ -33539,6 +33439,8 @@
                   "FrameRate": 15,
                   "Origin": "0.5,0.5",
                   "LoopMode": "Loop",
+                  "LoopStart": -1,
+                  "LoopEnd": -1,
                   "Frames": [
                     {
                       "Texture": {
@@ -71132,6 +71034,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -71401,6 +71304,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -71815,6 +71719,8 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": "textures/shapes/ring1.vtex",
@@ -72279,6 +72185,8 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": "textures/shapes/ring1.vtex",
@@ -72647,12 +72555,12 @@
       }
     },
     {
-      "__guid": "cf02b3dc-9342-47c8-864c-d0c7b0596749",
+      "__guid": "1713d390-0fcd-42ad-835d-39597ad914f4",
       "__version": 2,
       "Flags": 0,
-      "Name": "keyboard_shift_outline",
-      "Position": "-3948.45215,-367.999939,169.079834",
-      "Rotation": "0,-0.5,0,0.866025388",
+      "Name": "Controls",
+      "Position": "-10400,-3648,160",
+      "Rotation": "0.0652631,-0.495722443,0.113039002,0.858616412",
       "Scale": "30,30,30",
       "Tags": "",
       "Enabled": true,
@@ -72661,115 +72569,811 @@
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
-      "Components": [
+      "Components": [],
+      "Children": [
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "ca2f8837-4198-451f-9c0e-053d647870f4",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "cf02b3dc-9342-47c8-864c-d0c7b0596749",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "keyboard_shift_outline",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "ca2f8837-4198-451f-9c0e-053d647870f4",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/567eb33fb1b1bc36.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "c4b96de2-75c7-4e5c-9eb0-d0d91dfdb706",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "A_key_sprite",
+          "Position": "-0.484134406,7.73333073,4.99329805",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "8abcba96-208e-4a02-9ca4-db831d079af0",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "dd2f276b-4a0d-44e7-8fd6-1577ecfb4d57",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "D_key_sprite",
+          "Position": "-0.484127313,15.4666643,4.99330187",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "cded3d04-24b4-4150-96ec-e496f9ab17d0",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "d8d01fad-33c1-4c4c-a56f-62b45a8ae9ad",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "S_key_sprite",
+          "Position": "-0.484149158,11.5999975,4.99329853",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "c0b00fcf-6d61-439c-92af-fa98cb9318ef",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_s_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true
+                            },
+                            "compiled": "textures/generated/imagefile/a2615cebd699fd37.vtex"
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "f43d63ad-80d2-47c0-aa82-704003166bac",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "W_key_sprite",
+          "Position": "-0.406702667,11.5999975,8.84620285",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "aad0e69c-1796-47b5-842e-e59c322336e2",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "1c4a17bc-27dc-4ad0-93fb-28bf09fcb237",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "mouse_move",
+          "Position": "-0.406713605,34.1333275,5.33330584",
+          "Rotation": "0,0,0,1",
+          "Scale": "1.66666663,1.66666663,1.66666663",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "016fa50a-16ab-4cc5-9957-3bdc237ffe2f",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "25dfaaa7-db2e-43f4-8937-cedf6e47f424",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Text",
+          "Position": "-0.167372644,20.800169,18.2104073",
+          "Rotation": "-0.382683873,-3.51487074E-07,-0.923879802,-4.33704827E-07",
+          "Scale": "0.0333333351,0.0333333351,0.0333333351",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "408a8838-ce9e-4aa5-9e79-a4975ddf8d85",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Billboard": "None",
+              "BlendMode": "Normal",
+              "FogStrength": 0.33613446,
+              "HorizontalAlignment": "Center",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 1,
+              "TextScope": {
+                "Text": "Controls",
+                "TextColor": "0.86977,0.86977,0.86977,1",
+                "FontName": "Poppins",
+                "FontSize": 256,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "FontVariantNumeric": "Normal",
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "FilterMode": "Anisotropic",
+                "FontSmooth": "Always",
+                "Outline": {
+                  "Enabled": true,
+                  "Size": 32,
+                  "Color": "0,0,0,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
                 }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
+              },
+              "VerticalAlignment": "Center"
+            }
+          ],
+          "Children": []
         }
-      ],
-      "Children": []
+      ]
     },
     {
-      "__guid": "c4b96de2-75c7-4e5c-9eb0-d0d91dfdb706",
+      "__guid": "eaefa51d-a2d9-455a-aa61-3f485b095403",
       "__version": 2,
       "Flags": 0,
-      "Name": "A_key_sprite",
-      "Position": "-4085.44385,-136,231.401123",
-      "Rotation": "0,-0.5,0,0.866025388",
-      "Scale": "15,15,15",
+      "Name": "Controls (1)",
+      "Position": "-29472,-3392,160",
+      "Rotation": "-0.129409939,-0.482962817,-0.224144578,0.836516082",
+      "Scale": "30,30,30",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -72777,570 +73381,802 @@
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
-      "Components": [
+      "Components": [],
+      "Children": [
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "8abcba96-208e-4a02-9ca4-db831d079af0",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "50f350cf-90a1-4790-a9dd-def3e964e2fd",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "keyboard_shift_outline",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "c36b42ef-c5f8-4d16-837e-94f30d5a0fb0",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/119cd797c247e03.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "dd2f276b-4a0d-44e7-8fd6-1577ecfb4d57",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "D_key_sprite",
-      "Position": "-4085.44385,96.0000076,231.401367",
-      "Rotation": "0,-0.5,0,0.866025388",
-      "Scale": "15,15,15",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "cded3d04-24b4-4150-96ec-e496f9ab17d0",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "3daaaa95-96c2-4db9-9d86-1c891b5d1a18",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "A_key_sprite",
+          "Position": "-0.484134406,7.73333073,4.99329805",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "b3f2d721-3f69-43b5-adc1-40ffb2049bea",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/2735e50a83dfbee1.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "d8d01fad-33c1-4c4c-a56f-62b45a8ae9ad",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "S_key_sprite",
-      "Position": "-4085.44409,-20,231.400757",
-      "Rotation": "0,-0.5,0,0.866025388",
-      "Scale": "15,15,15",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "c0b00fcf-6d61-439c-92af-fa98cb9318ef",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "d544582d-8b9d-4a6f-84d4-d297abf1fdd2",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "D_key_sprite",
+          "Position": "-0.484127313,15.4666643,4.99330187",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "2ce78bf1-3ee4-44c5-b974-d03d7b88ab64",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/keyboard_s_outline.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/a2615cebd699fd37.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "f43d63ad-80d2-47c0-aa82-704003166bac",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "W_key_sprite",
-      "Position": "-4184.38379,-19.9999981,291.206421",
-      "Rotation": "0,-0.5,0,0.866025388",
-      "Scale": "15,15,15",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "aad0e69c-1796-47b5-842e-e59c322336e2",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "08d9d527-36aa-4932-91a1-f9d15e30b8ec",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "S_key_sprite",
+          "Position": "-0.484149158,11.5999975,4.99329853",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "8e812d32-faca-4590-9fd4-7320efcc95b1",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_s_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true
+                            },
+                            "compiled": "textures/generated/imagefile/a2615cebd699fd37.vtex"
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/8f117c824f05021f.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "1c4a17bc-27dc-4ad0-93fb-28bf09fcb237",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "mouse_move",
-      "Position": "-4093.11621,656,238.512695",
-      "Rotation": "0,-0.5,0,0.866025388",
-      "Scale": "50,50,50",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
         {
-          "__type": "Sandbox.SpriteRenderer",
-          "__guid": "016fa50a-16ab-4cc5-9957-3bdc237ffe2f",
-          "__enabled": true,
-          "Flags": 0,
+          "__guid": "a0ce257f-0649-48a7-abee-9ae27f492d6b",
           "__version": 2,
-          "Additive": false,
-          "AlphaCutoff": 0.1,
-          "Billboard": "None",
-          "Color": "1,1,1,1",
-          "DepthFeather": 0,
-          "FlipHorizontal": false,
-          "FlipVertical": false,
-          "FogStrength": 1,
-          "IsSorted": false,
-          "Lighting": false,
-          "OnAnimationEnd": null,
-          "OnAnimationStart": null,
-          "OnBroadcastMessage": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opaque": true,
-          "OverlayColor": "1,1,1,0",
-          "PlaybackSpeed": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Shadows": false,
-          "Size": "10,10",
-          "Sprite": {
-            "$compiler": "embed",
-            "$source": null,
-            "data": {
-              "Animations": [
-                {
-                  "Name": "Default",
-                  "FrameRate": 15,
-                  "Origin": "0.5,0.5",
-                  "LoopMode": "Loop",
-                  "Frames": [
+          "Flags": 0,
+          "Name": "W_key_sprite",
+          "Position": "-0.406702667,11.5999975,8.84620285",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "6e0ad53c-5553-4488-adb9-9f051dc48310",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
                     {
-                      "Texture": {
-                        "$compiler": "texture",
-                        "$source": "imagefile",
-                        "data": {
-                          "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
-                          "MaxSize": 4096,
-                          "ConvertHeightToNormals": false,
-                          "NormalScale": 1,
-                          "Rotate": 0,
-                          "FlipVertical": false,
-                          "FlipHorizontal": false,
-                          "Cropping": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
                           },
-                          "Padding": {
-                            "Left": 0,
-                            "Top": 0,
-                            "Right": 0,
-                            "Bottom": 0
-                          },
-                          "InvertColor": false,
-                          "Tint": "1,1,1,1",
-                          "Blur": 0,
-                          "Sharpen": 0,
-                          "Brightness": 1,
-                          "Contrast": 1,
-                          "Saturation": 1,
-                          "Hue": 0,
-                          "Colorize": false,
-                          "TargetColor": "1,1,1,1",
-                          "CacheToDisk": true
-                        },
-                        "compiled": "textures/generated/imagefile/60a36aa9cc8685d2.vtex"
-                      },
-                      "BroadcastMessages": []
+                          "BroadcastMessages": []
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "0315bf31-d80d-4217-8907-3fc6fe1fce71",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "mouse_move",
+          "Position": "-0.406713605,34.1333275,5.33330584",
+          "Rotation": "0,0,0,1",
+          "Scale": "1.66666663,1.66666663,1.66666663",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "1372b2cc-62b4-495e-8a27-e8423d3277a2",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "ffba3184-9e4a-41cb-8d83-56db7ab4aa3f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Text",
+          "Position": "-0.167372644,20.800169,18.2104073",
+          "Rotation": "-0.382683873,-3.51487074E-07,-0.923879802,-4.33704827E-07",
+          "Scale": "0.0333333351,0.0333333351,0.0333333351",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "e0201648-60b4-4253-b40a-46beee2ad342",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Billboard": "None",
+              "BlendMode": "Normal",
+              "FogStrength": 0.33613446,
+              "HorizontalAlignment": "Center",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 1,
+              "TextScope": {
+                "Text": "Controls",
+                "TextColor": "0.86977,0.86977,0.86977,1",
+                "FontName": "Poppins",
+                "FontSize": 256,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "FontVariantNumeric": "Normal",
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "FilterMode": "Anisotropic",
+                "FontSmooth": "Always",
+                "Outline": {
+                  "Enabled": true,
+                  "Size": 32,
+                  "Color": "0,0,0,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
                 }
-              ],
-              "__references": []
-            },
-            "compiled": null
-          },
-          "StartingAnimationName": "Default",
-          "TextureFilter": "Anisotropic"
+              },
+              "VerticalAlignment": "Center"
+            }
+          ],
+          "Children": []
         }
-      ],
-      "Children": []
+      ]
     },
     {
       "__guid": "62967bdf-ac81-4e15-b9fd-153af2d0ec93",
@@ -77741,6 +78577,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "OnGibsCreated": null,
           "OnPropBreak": null,
           "OnPropTakeDamage": null,
           "StartAsleep": false,
@@ -78125,7 +78962,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "trunk-long",
-      "Position": "-16928,-34208,128",
+      "Position": "-16960,-34048,128",
       "Rotation": "0,0,0,1",
       "Scale": "8,8,8",
       "Tags": "",
@@ -78403,6 +79240,345 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "c0bed393-d168-453e-a252-371bb4fc9957",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "GlassCube",
+      "Position": "-7008,-24448,480.000031",
+      "Rotation": "0,0,0.49999997,0.866025388",
+      "Scale": "13.2069893,10,15.965126",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "aa5bb6d8-d2d5-418b-84e8-74cabf229be0",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/primary_white_trans.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.51487,0.7987,0.93023,0.46"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "f4071300-ed36-4cd4-b886-d42822a1caa0",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "eae3a47d-f0f6-4422-9646-40f4c496287f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "GlassCube (1)",
+      "Position": "-10520.1191,-26322.6152,479.999908",
+      "Rotation": "0,0,0.866025269,0.5",
+      "Scale": "13.2069893,10,15.965126",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c97fab8e-7252-4092-9595-2dae9d068992",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/primary_white_trans.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.51487,0.7987,0.93023,0.46"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "b0cd8f46-fb63-4416-ab02-f2d0558f6afd",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "913928af-8326-43ad-add5-d1a0b7254dcf",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "GlassCube (2)",
+      "Position": "-11590.6426,-22904.7168,479.999969",
+      "Rotation": "0,0,0.766045511,0.642786086",
+      "Scale": "13.2069893,10,15.965126",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f13984e8-a54e-4b58-a8fa-f7bc6f546bf5",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/primary_white_trans.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.51487,0.7987,0.93023,0.46"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "54995324-96f3-400f-a2d6-f10e857ec8e0",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "4b4810bd-921a-4c80-ac03-0c83de55a0ca",
+      "__version": 2,
+      "__Prefab": "prefabs/monsterspawner.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Position",
+            "Value": "-18112,-30624,128"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-1.1920929E-07,1"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "9c60fded-5a65-4d82-8787-3d7eae97769f"
+            },
+            "Property": "MonsterPrefab",
+            "Value": {
+              "_type": "gameobject",
+              "prefab": "prefabs/vampire.prefab"
+            }
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "41cc3270-ffca-4c3e-9a83-058eb4014968"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,1"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a336f4c6-87ef-476f-b08a-093bf344f53f"
+            },
+            "Property": "Color",
+            "Value": {
+              "blend": "Linear",
+              "color": [
+                {
+                  "t": 0.44537815,
+                  "c": "10,0,0,1"
+                }
+              ],
+              "alpha": []
+            }
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "45b66178-4a13-4a9d-b0d8-b0b9654fd0d3": "4b4810bd-921a-4c80-ac03-0c83de55a0ca",
+        "9c60fded-5a65-4d82-8787-3d7eae97769f": "275fdeb7-4a5d-4158-8f2d-adf9232ca2f8",
+        "e0df7224-062f-4712-bd11-e8fe7b58ae53": "be010899-c82d-4f0e-a2ef-2b5bee830002",
+        "be0f85d9-3854-415e-b919-d60ddd6814ed": "f626960f-b6ec-4e2b-a028-5357c052893f",
+        "8e15c5d5-7490-4338-b3ea-8aa591723a5f": "987e9a31-df5b-42e2-ab54-08d95889a4c4",
+        "48374d5f-c6af-4e79-92e4-6f4cf7cc73be": "f8f3f976-1c72-4544-a7a6-0dafaf909cb6",
+        "aa8cb107-ea3b-4989-b37e-4a51350c926c": "bc4559fe-804a-4bdf-80e6-b1acb10803c1",
+        "3191d0d3-d74d-4104-ba19-e8876d9e3fcb": "e62401b0-9d4a-48b8-a995-cf31e0aee796",
+        "35c7216f-ebbf-4b50-ab2c-1f0af2b158ef": "55a2c70e-732c-48a7-94a4-f05f10096170",
+        "d195629a-2b5b-4d28-aa35-adfb05f51187": "3c883bf2-088f-4ffc-a5d6-57dc2338263c",
+        "0e40485b-52d6-4156-8139-85ad1d8bc4b6": "b6a5d732-de9f-46b2-94ce-14d0bc36216e",
+        "02ff6917-9b37-4ca9-8098-03116cb98e87": "a325de17-4eba-48ad-b6e0-164ef48d3f30",
+        "24204ca3-33b2-4f81-8a63-1e3fec19e850": "b38e5e8c-b432-48c1-a3af-fbeff0c2a49b",
+        "ffc3a8d8-5904-4ff5-ade5-9c10981c9ee9": "665328f7-9e50-4c4c-8301-d408e89b1235",
+        "1fe56367-4312-4e19-9951-b654dc847e4b": "2e4a3e04-d8f4-4bb8-bcee-23fd7c692d98",
+        "3f249a1b-3920-4c64-8e08-88126c0fdc4d": "07f7b48f-b256-43ac-802d-7e0f6265c643",
+        "41cc3270-ffca-4c3e-9a83-058eb4014968": "13ebcfcf-ce84-4f75-a4f9-06ec46954541",
+        "a336f4c6-87ef-476f-b08a-093bf344f53f": "b7a164f1-0192-4fd4-aab7-cafdc8d84eee",
+        "d0721b92-a63f-4ba7-aaa4-190628c3d289": "577f2c4a-bb39-4751-a25d-0e2c630299aa",
+        "ee212a72-44be-4509-b323-11ac1435c2c2": "ae10d4b7-fcd6-4d45-bc84-31be5dfe2c88",
+        "c582d33a-7e65-4f03-a7f3-be7efdc8cb53": "bbcb7a32-58a5-4370-9753-b71a512f4242",
+        "c8eaa04b-6c94-479b-9e0f-8152ca024069": "452bd519-621d-4acf-8968-566ca8d334cc",
+        "ac1c1466-bd16-44dc-950f-148b34fe9717": "7b209b6d-cb98-434b-84db-3fd82500cd35",
+        "0b1cc28d-8dd8-46ee-9974-751811cb7940": "25dc38db-77c5-4417-b6da-732585003748",
+        "164b213e-618b-4f75-ba46-0b02bfa7b1d9": "ec1e7be5-b518-4cc0-ac3a-b05f7bab1415",
+        "21581105-778a-4ebd-b8fc-3f95d2dc3198": "689abc02-4f2b-4a13-9a6d-32ae13a12dc1",
+        "d124dbac-496c-4af7-bd52-cb608b750c0a": "aa2e11c8-290a-4106-a390-5e8e3a5bc304",
+        "e04743f0-b0f5-4643-abc8-1b4a2fa888bf": "649895c0-aa82-4ee0-93dd-1ac81d779270",
+        "a59c46e7-e3b9-4f66-88bc-f90523c875ef": "9fc554cd-0ebe-4f85-b0c0-cc7ed87cc65b",
+        "05a7082c-89f4-46cb-807a-a7cc33e7d398": "c521a74e-d8e3-4c06-9d8c-47fae39c1424",
+        "f7a0801f-d5df-4c2a-9d5b-5e975867e685": "d42b9365-2c08-4dd8-9612-0bb0eadefcea",
+        "513443e1-8023-4af6-a175-56d089e875c5": "7847f52b-8e7e-4570-b188-3f6f786644df",
+        "2e811a4d-e533-49dd-bd1d-7500fb618f09": "103fef63-2c2e-4f7a-a8d3-5bc55fb857a5",
+        "38c925f4-ee12-4c64-ade6-7df03447ef4d": "6fc9f86c-b0bd-49d0-9d52-5947d6cb5d74",
+        "00865528-5a9d-49e3-98a4-d9229237fc0e": "2977d2a9-972c-4784-aa4d-7edc92f23d4c",
+        "7425fe36-7425-403c-ab11-951511228238": "f641a217-aeb3-43df-964e-b7332f69c678",
+        "ce5b28f7-756f-495b-a156-dbbf634d16b6": "aebec140-f73a-494f-b60c-620bd6a24fdc"
+      }
     }
   ],
   "SceneProperties": {
@@ -78429,14 +79605,14 @@
       }
     },
     "GameObjectSystems": {
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
-        }
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "18a9540b-c827-4d8a-ac7b-1d90752e07ca"
+        }
+      },
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }

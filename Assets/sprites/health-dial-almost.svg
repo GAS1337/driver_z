@@ -61,11 +61,11 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.72767857"
-     inkscape:cx="759.26381"
-     inkscape:cy="-8.9325154"
+     inkscape:cx="120.2454"
+     inkscape:cy="183.46012"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -143,6 +143,17 @@
        sodipodi:arc-type="arc"
        d="m 119.10218,430.03964 a 220,220 0 0 1 7.15488,-307.40263 220,220 0 0 1 307.48588,1e-5 220,220 0 0 1 7.15487,307.40262"
        sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift, @wght=700,wdth=90';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wdth' 90, 'wght' 700;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:51.3399"
+       x="223.60815"
+       y="426.69937"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="223.60815"
+         y="426.69937"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift, @wght=700,wdth=90';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wdth' 90, 'wght' 700;stroke-width:51.3399">HP</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

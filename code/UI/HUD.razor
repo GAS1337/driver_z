@@ -38,9 +38,9 @@
 
 
 	</div>
-	<div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>
-	<div class="health-needle"
-		 style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );" </div>
+    <div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>
+    <div class="health-needle"
+         style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );" </div>
 </root>
 
 @code

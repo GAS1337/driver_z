@@ -50,7 +50,7 @@ public sealed class RotationControl : Component
 		// DebugOverlay.Line( VelLine );
 		if ( LogSpeed )
 		{
-			Log.Info( "Speed/4: " + VelLine.Delta.Length );
+			// Log.Info( "Speed/4: " + VelLine.Delta.Length );
 			LogSpeed = +1;
 		}
 
