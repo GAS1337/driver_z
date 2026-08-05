@@ -421,6 +421,74 @@
               "go": "9eb0996d-3830-47c9-9f05-18834f772ea5",
               "component_type": "CameraComponent"
             }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0c78e7a4-23ce-4983-9223-965dc7f8e352"
+            },
+            "Property": "Sprite",
+            "Value": {
+              "$compiler": "embed",
+              "$source": null,
+              "data": {
+                "Animations": [
+                  {
+                    "Name": "Default",
+                    "FrameRate": 15,
+                    "Origin": "0.5,0.5",
+                    "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
+                    "Frames": [
+                      {
+                        "Texture": {
+                          "$compiler": "texture",
+                          "$source": "imagefile",
+                          "data": {
+                            "FilePath": "sprites/crosshairpng/light (2×)/crosshair-027.png",
+                            "MaxSize": 4096,
+                            "ConvertHeightToNormals": false,
+                            "NormalScale": 1,
+                            "Rotate": 0,
+                            "FlipVertical": false,
+                            "FlipHorizontal": false,
+                            "Cropping": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "Padding": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "InvertColor": false,
+                            "Tint": "1,1,1,1",
+                            "Blur": 0,
+                            "Sharpen": 0,
+                            "Brightness": 1,
+                            "Contrast": 1,
+                            "Saturation": 1,
+                            "Hue": 0,
+                            "Colorize": false,
+                            "TargetColor": "1,1,1,1",
+                            "CacheToDisk": true,
+                            "FormatOverride": "RGBA8888"
+                          },
+                          "compiled": "textures/generated/imagefile/9c9d63a0be11f295.vtex"
+                        },
+                        "BroadcastMessages": []
+                      }
+                    ]
+                  }
+                ],
+                "__references": []
+              },
+              "compiled": null
+            }
           }
         ],
         "MovedObjects": [
@@ -582,7 +650,15 @@
         "0f8df567-efaa-4065-afb8-d8081121384e": "6572dc96-1975-4eab-ae70-57b7b44c648d",
         "6bcecf9c-58df-4f93-baef-b003e8869afa": "d64bf931-e128-4ba8-93af-b8f6761cc08e",
         "bfd2a291-314f-46d8-891a-75ef365fd6c7": "112abfac-ad1e-4fab-b36d-e07e0a85eb85",
-        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "5ccc7781-1f58-4c5d-a420-38313362f8b2"
+        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "5ccc7781-1f58-4c5d-a420-38313362f8b2",
+        "edf94095-896a-4457-af33-7a8bd10f6398": "9428e7b4-18dc-800f-ac74-f62e8607215c",
+        "028231be-5034-4f75-be7a-1da5f3fad249": "31b65969-f237-827d-a7f7-888782fb4cbd",
+        "292fcc40-0d26-492a-9e1b-ed249375dc28": "b877dd1c-62d5-8adf-aba8-8016433edaef",
+        "232e03ba-2294-42f8-8146-06d487680553": "d933d322-a272-8513-8840-a912c86b72b7",
+        "284d7e3f-2bfa-4604-bb03-f8dcb3167675": "445b1f7c-ec9f-83aa-a6c5-9fae03af1337",
+        "70f8123b-ea68-4e83-a622-40b7b8fdbc1c": "415f8336-0651-8af1-b907-3bc002fab529",
+        "67176dc4-9bdd-445b-8c09-e61d24567eaa": "5acdfec3-92dc-8aae-ace7-9971a79f985f",
+        "758dc18a-d7cb-4f81-83c8-698623955ac3": "e7a13208-18e2-88bf-8e8e-06a98b762b21"
       }
     },
     {
@@ -13160,7 +13236,7 @@
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "5e1eba02-a3b8-48b0-89cc-92c11c24cfa1"
+              "$blob": "b82c38b1-e58d-4cc5-8fc9-0a69d7df1b02"
             },
             "Materials": [
               "materials/dev/green.vmat",
@@ -13473,7 +13549,7 @@
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "a4f0b1b3-e79f-459e-b765-639dabd83366"
+              "$blob": "83c4090e-3ae9-4211-9714-29b6a5f81184"
             },
             "Materials": [
               "materials/dev/green.vmat",
@@ -72673,7 +72749,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -72792,7 +72868,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/e3226ff36483c2c9.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -72911,7 +72987,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/cb67bf00136b6a75.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73148,7 +73224,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/be551191bac3abf8.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73267,7 +73343,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/a66d56ee5fb4bf3a.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73485,7 +73561,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73604,7 +73680,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/e3226ff36483c2c9.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73723,7 +73799,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/cb67bf00136b6a75.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73960,7 +74036,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/be551191bac3abf8.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74079,7 +74155,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/a66d56ee5fb4bf3a.vtex"
                           },
                           "BroadcastMessages": []
                         }
