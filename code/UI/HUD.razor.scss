@@ -161,7 +161,43 @@ HUD {
         }
     }
 
+    .crosshair {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3vw; // Breite des Fadenkreuzes
+        height: 3vw; // Höhe des Fadenkreuzes
+        background-image: url( "sprites/crosshair.png" );
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
 
+        &.on-target {
+            background-image: url( "sprites/crosshair-enemy.png" );
+        }
+
+        &.on-shot {
+            animation: crosshair-shot 0.1s ease-out;
+            animation-iteration-count: 1;
+        }
+    }
+
+    .hitmarker {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2vw; // Breite des Fadenkreuzes
+        height: 2vw; // Höhe des Fadenkreuzes
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.active {
+            background-image: url( "sprites/crosshair-hitmarker.png" );
+        }
+    }
 
     .multiplier-dial {
         position: absolute;
@@ -197,6 +233,25 @@ HUD {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+}
+
+@keyframes hitmarker-fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes crosshair-shot {
+    0% {
+        transform: translate(-50%, -50%) scale(1.3f);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1f);  
     }
 }
 

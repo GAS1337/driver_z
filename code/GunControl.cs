@@ -43,11 +43,17 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 	SceneTraceResult SightlineTrace;
 	bool IsAiming;
+	public bool IsTargetingEnemy;
+	public bool IsHitmarkerActive = false;
+	public bool HasShot = false;
+
 
 	GameObject newBulletHole;
 	GameObject newBulletSpark;
 	GameObject newBulletSparkEnemy;
 
+	public TimeSince SinceShot = 10;
+	TimeSince SinceHit = 10;
 	TimeSince SinceAim;
 	TimeSince SinceGunAnimationStart;
 	Vector3 originalGunScale;
@@ -106,7 +112,24 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 			.Run();
 		// DebugOverlay.Trace( SightlineTrace );
 
-		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 10;
+		if ( SightlineTrace.Hit && SightlineTrace.GameObject.Tags.Has("enemy") && !SightlineTrace.GameObject.Tags.Has("dead"))
+		{
+			IsTargetingEnemy = true;
+		}
+		else
+		{
+			IsTargetingEnemy = false;
+		}
+		if ( SinceHit < 0.2f )
+		{
+			IsHitmarkerActive = true;
+		}
+		else
+		{
+			IsHitmarkerActive = false;
+		}
+
+		// Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 10;
 		LaserBeam.TargetPosition = SightlineTrace.EndPosition;
 
 		// Turret Yaw mit Camera Yaw mitdrehen
@@ -119,6 +142,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 			MuzzleFlashEmitter.Emit( MuzzleFlashEffect );
 			FlashMuzzleSprite( 0.05f );
 			AnimateGun( 0.03f);
+
+			SinceShot = 0;
 
 			if ( SightlineTrace.Hit )
 			{
@@ -140,6 +165,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 				if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has("dead") )
 				{
+					SinceHit = 0;
+
 					if ( SightlineTrace.GameObject.GetComponent<HealthSystem>().IsValid() ) SightlineTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					if ( SightlineTrace.GameObject.GetComponent<ZombieBrain>() != null )

@@ -5,9 +5,11 @@
 @namespace Sandbox
 
 <root>
+    <div class="crosshair @(PlayerGun.IsTargetingEnemy ? "on-target" : "") @(PlayerGun.SinceShot < 0.1f ? "on-shot" : "") "></div>
+    <div class="hitmarker @(PlayerGun.IsHitmarkerActive ? "active" : "")"></div>
 	<div class="multiplier-dial @(HighscoreManager.CalculateMultiplier() > 1.4f ? "on-fire" : "")">
         <div class="multiplier-needle" 
-			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, 270, 90) deg );"	</div>
+			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, 270, 90) deg );"></div>
 	</div>
 	<div class="ammocount @(Input.Pressed("attack2") ? "used" : "")">
 		<p>@($"🚀{PlayerGun.CurrentRockets}")</p>
@@ -40,115 +42,122 @@
 	</div>
 	<div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>
 	<div class="health-needle"
-		 style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );" </div>
+		 style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );"> </div>
 </root>
 
 @code
 {
-	public class ScorePopup
-	{
-		public Guid Id { get; set; } = Guid.NewGuid();
-		public int Value { get; set; }
-		public DateTime SpawnTime { get; set; }
-		public float RandomOffset { get; set; } // Für horizontale Streuung
-	}
+    public class ScorePopup
+    {
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public int Value { get; set; }
+        public DateTime SpawnTime { get; set; }
+        public float RandomOffset { get; set; } // Für horizontale Streuung
+    }
 
-	[Property] HighscoreManager HighscoreManager { get; set; }
-	HealthSystem PlayerHealth { get; set; }
-	GunControl PlayerGun { get; set; }
+    [Property] HighscoreManager HighscoreManager { get; set; }
+    HealthSystem PlayerHealth { get; set; }
+    GunControl PlayerGun { get; set; }
 
-	private float lastHealth;
-	private bool isDamaged;
-	private TimeSince SinceDamage;
+    private float lastHealth;
+    private bool isDamaged;
+    private TimeSince SinceDamage;
 
-	private float lastRocketCount;
-	private bool rocketUsed;
-	private TimeSince SinceRocketUsed;
-	
-	private List<ScorePopup> activePopups = new();
-	private float scoreProcessed;
-	private float displayedScore = 0f; // Der Wert, der momentan angezeigt wird
+    private float lastRocketCount;
+    private bool rocketUsed;
+    private TimeSince SinceRocketUsed;
 
-	protected override void OnStart()
-	{
-		HighscoreManager = Scene.Get<HighscoreManager>();
-		PlayerHealth = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
-		PlayerGun = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<GunControl>();
-        
-		lastHealth = PlayerHealth.CurrentHealth;
-		// Initialisierung, damit der Score nicht bei 0 startet, wenn man einsteigt
-		displayedScore = HighscoreManager.CurrentScore;
-	}
+    private List<ScorePopup> activePopups = new();
+    private float scoreProcessed;
+    private float displayedScore = 0f; // Der Wert, der momentan angezeigt wird
 
-	protected override void OnUpdate()
-	{
-		// Wir nähern displayedScore dem echten Score an.
-		// 5f ist die Geschwindigkeit. Höhere Werte = schnelleres Hochzählen.
-		displayedScore = MathX.Lerp(displayedScore, HighscoreManager.CurrentScore, Time.Delta * 5f);
-        
-		// Kleiner Fix: Wenn die Differenz winzig ist, hart setzen, um Flackern zu vermeiden
-		if (Math.Abs(displayedScore - HighscoreManager.CurrentScore) < 0.5f)
-		{
-			displayedScore = HighscoreManager.CurrentScore;
-		}
-		
-		// 2. Neue Punkte erkennen und Popup hinzufügen
-		if (HighscoreManager.CurrentScore > scoreProcessed)
-		{
-			int diff = (int)(HighscoreManager.CurrentScore - scoreProcessed);
-			if (diff > 0)
-			{
-				activePopups.Add(new ScorePopup
+    protected override void OnStart()
+    {
+        HighscoreManager = Scene.Get<HighscoreManager>();
+        PlayerHealth = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
+        PlayerGun = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<GunControl>();
+
+        lastHealth = PlayerHealth.CurrentHealth;
+        // Initialisierung, damit der Score nicht bei 0 startet, wenn man einsteigt
+        displayedScore = HighscoreManager.CurrentScore;
+    }
+
+    protected override void OnUpdate()
+    {
+        // Wir nähern displayedScore dem echten Score an.
+        // 5f ist die Geschwindigkeit. Höhere Werte = schnelleres Hochzählen.
+        displayedScore = MathX.Lerp(displayedScore, HighscoreManager.CurrentScore, Time.Delta * 5f);
+
+        // Kleiner Fix: Wenn die Differenz winzig ist, hart setzen, um Flackern zu vermeiden
+        if (Math.Abs(displayedScore - HighscoreManager.CurrentScore) < 0.5f)
+        {
+            displayedScore = HighscoreManager.CurrentScore;
+        }
+
+        // 2. Neue Punkte erkennen und Popup hinzufügen
+        if (HighscoreManager.CurrentScore > scoreProcessed)
+        {
+            int diff = (int)(HighscoreManager.CurrentScore - scoreProcessed);
+            if (diff > 0)
+            {
+                activePopups.Add(new ScorePopup
 				{
 					Value = (int)diff,
 					SpawnTime = DateTime.Now,
-					// Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
+                    // Ein zufälliger Versatz, damit die Zahlen nicht alle exakt übereinander liegen
 					RandomOffset = Random.Shared.Float(150, 155)
 				});
-			}
-			
-			scoreProcessed = HighscoreManager.CurrentScore;
-		}
+            }
 
-		// 3. Alte Popups entfernen (nach 0.6 Sekunden, passend zur CSS Animation)
-		activePopups.RemoveAll(p => (DateTime.Now - p.SpawnTime).TotalSeconds > 1);
+            scoreProcessed = HighscoreManager.CurrentScore;
+        }
 
-		// Schadens-Check
-		if (PlayerHealth.CurrentHealth < lastHealth)
-		{
-			// Schaden wurde erkannt!
-			isDamaged = true;
-			SinceDamage = 0; // Dauer der Animation in Sekunden
-		}
-	
-		lastHealth = PlayerHealth.CurrentHealth;
+        // 3. Alte Popups entfernen (nach 0.6 Sekunden, passend zur CSS Animation)
+        activePopups.RemoveAll(p => (DateTime.Now - p.SpawnTime).TotalSeconds > 1);
 
-		// Timer herunterzählen, um die Klasse wieder zu entfernen
-		if (SinceDamage > 0.2f)
-		{
-			isDamaged = false;
-		}
+        // Schadens-Check
+        if (PlayerHealth.CurrentHealth < lastHealth)
+        {
+            // Schaden wurde erkannt!
+            isDamaged = true;
+            SinceDamage = 0; // Dauer der Animation in Sekunden
+        }
 
-		// Rocket-Check
-		if (PlayerGun.CurrentRockets != lastRocketCount)
-		{
-			rocketUsed = true;
-			SinceRocketUsed = 0; // Dauer der Animation in Sekunden
-		}
-		if (SinceRocketUsed > 0.5f)
-		{
-			rocketUsed = false;
-		}
-	}
+        lastHealth = PlayerHealth.CurrentHealth;
 
-	protected override int BuildHash() => System.HashCode.Combine(
-		displayedScore, // Wichtig: Damit das UI bei jeder Änderung von displayedScore aktualisiert wird
-		HighscoreManager.LastGainedScore,
-		HighscoreManager.TimeSpanSinceGameStart.Seconds,
-		activePopups.Count,
-		HighscoreManager.CalculateMultiplier(),
-		PlayerHealth.CurrentHealth,
-		isDamaged,
-		PlayerGun.CurrentRockets
-	);
+        // Timer herunterzählen, um die Klasse wieder zu entfernen
+        if (SinceDamage > 0.2f)
+        {
+            isDamaged = false;
+        }
+
+        // Rocket-Check
+        if (PlayerGun.CurrentRockets != lastRocketCount)
+        {
+            rocketUsed = true;
+            SinceRocketUsed = 0; // Dauer der Animation in Sekunden
+        }
+        if (SinceRocketUsed > 0.5f)
+        {
+            rocketUsed = false;
+        }
+    }
+
+    protected override int BuildHash() {
+
+        var hash = new System.HashCode();
+        hash.Add(displayedScore);
+        hash.Add(HighscoreManager.LastGainedScore);
+        hash.Add(HighscoreManager.TimeSpanSinceGameStart.Seconds);
+        hash.Add(activePopups.Count);
+        hash.Add(HighscoreManager.CalculateMultiplier());
+        hash.Add(PlayerHealth.CurrentHealth);
+        hash.Add(isDamaged);
+        hash.Add(PlayerGun.CurrentRockets);
+        hash.Add(PlayerGun.IsTargetingEnemy);
+        hash.Add(PlayerGun.IsHitmarkerActive);
+        hash.Add(PlayerGun.SinceShot);
+
+        return hash.ToHashCode(); 
+    }
 }
