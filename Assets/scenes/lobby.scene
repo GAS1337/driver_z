@@ -81,7 +81,7 @@
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "BakedTexture": "scenes/lobby_scene_data/envmap/bake_c96bd31c-eed6-46ad-a3cb-b71f66efbbc6.vtex",
+          "BakedTexture": null,
           "Bounds": {
             "Mins": "-42673.6211,-27774.7891,-512",
             "Maxs": "26016.4199,26518.4297,5235.86523"
@@ -241,8 +241,6 @@
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "Filter": "Bilinear",
-          "Gamma": 2.2,
           "Mode": "Additive",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -13038,7 +13036,7 @@
               "IdValue": "4481d40e-4003-4d27-a783-80b851b6476a"
             },
             "Property": "Position",
-            "Value": "-46477,-14046,135"
+            "Value": "-46477,-14092,135"
           }
         ],
         "MovedObjects": []
@@ -13102,7 +13100,7 @@
               "IdValue": "6c996d5c-d4e2-45d5-8ca5-e1a3e7ef1e1b"
             },
             "Property": "Position",
-            "Value": "-45984,-14596,142"
+            "Value": "-45965,-14491,142"
           }
         ],
         "MovedObjects": []
@@ -13236,7 +13234,7 @@
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "b82c38b1-e58d-4cc5-8fc9-0a69d7df1b02"
+              "$blob": "f2fcf642-d6d9-8676-aefa-620867089c5e"
             },
             "Materials": [
               "materials/dev/green.vmat",
@@ -13396,9 +13394,9 @@
       "__version": 2,
       "Flags": 0,
       "Name": "post_skull (2)",
-      "Position": "-30213,-2602.38281,96",
+      "Position": "-30134,-2602.38281,65",
       "Rotation": "0,-0,-0.65612483,0.754652381",
-      "Scale": "3,3,3",
+      "Scale": "3.5,3.5,3.5",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -13549,7 +13547,7 @@
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "83c4090e-3ae9-4211-9714-29b6a5f81184"
+              "$blob": "f2fcf642-d6d9-8676-aefa-620867089c5e"
             },
             "Materials": [
               "materials/dev/green.vmat",
@@ -16923,7 +16921,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (2)",
-      "Position": "-10939.2451,-30242.4102,256.000122",
+      "Position": "-10840.4561,-30505.8867,256.25",
       "Rotation": "0,0,-0.819152355,0.573576391",
       "Scale": "1,1,1",
       "Tags": "",
@@ -17002,7 +17000,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "LeftClick",
-          "Position": "2.40180969,210.424637,-24.4999866",
+          "Position": "2.40180969,210.424637,13.7499924",
           "Rotation": "0,0,0,1",
           "Scale": "36,36,36",
           "Tags": "",
@@ -17096,9 +17094,10 @@
                               "Hue": 0,
                               "Colorize": false,
                               "TargetColor": "1,1,1,1",
-                              "CacheToDisk": true
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
                             },
-                            "compiled": "textures/generated/imagefile/d8c318648662b690.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -27108,7 +27107,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Line (3)",
-      "Position": "-31025.832,-3563.2627,936",
+      "Position": "-30072,-2860,936",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -27235,7 +27234,301 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Point 2",
-          "Position": "-3574.16797,-1520.7373,-272",
+          "Position": "-1724.16797,-728.737305,-272",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "cf9facad-efe6-4ee9-9bcf-0e316c3e2614",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Line (6)",
+      "Position": "-33457,-4453,936",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.LineRenderer",
+          "__guid": "2aa8d1ed-5a40-4406-ba5a-9a21cf0facf8",
+          "__enabled": true,
+          "Flags": 0,
+          "Additive": false,
+          "AutoCalculateNormals": true,
+          "CastShadows": true,
+          "Color": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "2,1.68627,0,1"
+              }
+            ],
+            "alpha": [
+              {
+                "t": 0,
+                "a": 1
+              },
+              {
+                "t": 1,
+                "a": 1
+              }
+            ]
+          },
+          "CylinderSegments": 12,
+          "DepthFeather": 0,
+          "EndCap": "None",
+          "Face": "Camera",
+          "FogStrength": 1,
+          "Lighting": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opaque": false,
+          "Points": [
+            {
+              "_type": "gameobject",
+              "go": "b1c94a9f-3720-411a-bce6-22338f8995c2"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e08af714-499a-4f43-b1d0-e12812061365"
+            },
+            null,
+            null
+          ],
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "SplineBias": 0,
+          "SplineContinuity": 0,
+          "SplineInterpolation": 8,
+          "SplineTension": 0,
+          "StartCap": "Arrow",
+          "Texturing": {
+            "Texture": null,
+            "Material": null,
+            "WorldSpace": true,
+            "UnitsPerTexture": 10,
+            "Scale": 1,
+            "Offset": 0,
+            "Scroll": 0,
+            "FilterMode": "Anisotropic",
+            "TextureAddressMode": "Wrap",
+            "Clamp": false
+          },
+          "UseVectorPoints": false,
+          "VectorPoints": [],
+          "Width": {
+            "rangey": "0,300",
+            "frames": [
+              {
+                "x": 0,
+                "y": 1,
+                "in": 0,
+                "out": 0,
+                "mode": "Mirrored"
+              }
+            ]
+          },
+          "Wireframe": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "b1c94a9f-3720-411a-bce6-22338f8995c2",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Point 1",
+          "Position": "-810.167969,-300.737305,-272",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "e08af714-499a-4f43-b1d0-e12812061365",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Point 2",
+          "Position": "-1724.16797,-728.737305,-272",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "409bf72a-5ae4-4ff3-a0cb-aae538426ebb",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Line (7)",
+      "Position": "-31733,-3661,936",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.LineRenderer",
+          "__guid": "c3efecdd-8505-4da5-b561-99e3e451eb7f",
+          "__enabled": true,
+          "Flags": 0,
+          "Additive": false,
+          "AutoCalculateNormals": true,
+          "CastShadows": true,
+          "Color": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "2,1.68627,0,1"
+              }
+            ],
+            "alpha": [
+              {
+                "t": 0,
+                "a": 1
+              },
+              {
+                "t": 1,
+                "a": 1
+              }
+            ]
+          },
+          "CylinderSegments": 12,
+          "DepthFeather": 0,
+          "EndCap": "None",
+          "Face": "Camera",
+          "FogStrength": 1,
+          "Lighting": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opaque": false,
+          "Points": [
+            {
+              "_type": "gameobject",
+              "go": "ec83b41a-ed44-493d-9d8a-ed2b9fb58809"
+            },
+            {
+              "_type": "gameobject",
+              "go": "0773a7ef-6ef6-467a-8bfb-ddb939cb38eb"
+            },
+            null,
+            null
+          ],
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "SplineBias": 0,
+          "SplineContinuity": 0,
+          "SplineInterpolation": 8,
+          "SplineTension": 0,
+          "StartCap": "Arrow",
+          "Texturing": {
+            "Texture": null,
+            "Material": null,
+            "WorldSpace": true,
+            "UnitsPerTexture": 10,
+            "Scale": 1,
+            "Offset": 0,
+            "Scroll": 0,
+            "FilterMode": "Anisotropic",
+            "TextureAddressMode": "Wrap",
+            "Clamp": false
+          },
+          "UseVectorPoints": false,
+          "VectorPoints": [],
+          "Width": {
+            "rangey": "0,300",
+            "frames": [
+              {
+                "x": 0,
+                "y": 1,
+                "in": 0,
+                "out": 0,
+                "mode": "Mirrored"
+              }
+            ]
+          },
+          "Wireframe": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ec83b41a-ed44-493d-9d8a-ed2b9fb58809",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Point 1",
+          "Position": "-810.167969,-300.737305,-272",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "0773a7ef-6ef6-467a-8bfb-ddb939cb38eb",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Point 2",
+          "Position": "-1724.16797,-728.737305,-272",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -31022,77 +31315,6 @@
       "Children": []
     },
     {
-      "__guid": "b762decc-a8c1-48e5-89bc-ff0c03333d49",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "journal_open (5)",
-      "Position": "-52278.7852,-9157.98438,1226.00171",
-      "Rotation": "0,0,-0.747740865,0.66399163",
-      "Scale": "30,30,30",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "74413dab-bad2-4cec-8ff1-d079ecf86417",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "4d79ecd9-9c47-49a0-812d-7e8c826811bc",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_open.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "21f88fac-00d9-49c6-95ca-3aa69e4e2b78",
       "__version": 2,
       "Flags": 0,
@@ -31346,7 +31568,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,0.70233,0.70233,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31417,7 +31639,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.69767,0.69767,0.69767,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31559,7 +31781,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.86512,0.64381,0.64381,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31630,7 +31852,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.87442,0.61006,0.61006,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31701,7 +31923,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.70698,0.67409,0.67409,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31772,7 +31994,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.7907,0.7907,0.7907,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31843,7 +32065,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.55349,0.55349,0.55349,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -31914,7 +32136,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,0.85116,0.85116,1"
         },
         {
           "__type": "Sandbox.ModelCollider",
@@ -32087,6 +32309,148 @@
       "Children": []
     },
     {
+      "__guid": "2a5cc981-5334-40ee-9b6a-cb9a41e413b4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_closed (14)",
+      "Position": "-53003.4922,-9010.26172,819",
+      "Rotation": "0,-0,-0.744544327,-0.667573035",
+      "Scale": "4,4,4",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b6730439-7070-45e1-96a7-1d64a49ae389",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.81395,0.60195,0.60195,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "4333fb4d-bee1-4a4f-80f5-70b44ba1bf6b",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "b087147f-680c-45d8-af25-9155bdf9b30f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_closed (13)",
+      "Position": "-52852.5078,-8991.73828,819",
+      "Rotation": "0,-0,-0.744544327,-0.667573035",
+      "Scale": "4,4,4",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d5d063c4-dc4e-4ab7-95d8-978bc903da9e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "9769089c-2f33-4bac-8c7e-d15261be603e",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "6b5ef9ee-607c-4175-951b-1491bb03d607",
       "__version": 2,
       "Flags": 0,
@@ -32127,7 +32491,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.79535,0.79535,0.79535,1"
         }
       ],
       "Children": []
@@ -32265,7 +32629,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.89767,0.89767,0.89767,1"
         }
       ],
       "Children": []
@@ -32474,6 +32838,199 @@
         "b1cb9bcf-c3f6-4331-9a9d-41243045e277": "99110a0e-ae37-482e-8aa4-42d2b489d8a7",
         "a39bbb34-d91b-4094-ba3b-31b18b5e7e29": "5038ad67-8038-4b71-8231-ee3a1811dd12",
         "55eb2eb5-e1e3-41fb-9566-49e3f3e1b730": "6d3035d6-19f2-4643-8697-9ef125c14b88"
+      }
+    },
+    {
+      "__guid": "6607ee0e-e4bd-4d67-a84d-3b31dd580061",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_closed (12)",
+      "Position": "-52973.1602,-9011.8916,1189",
+      "Rotation": "0.497383058,0.502603292,0.502603292,0.497383058",
+      "Scale": "4,4,4",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "339a3087-aebb-4d57-b04f-39e666d0fec0",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.99535,0.81017,0.81017,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "2d8ddd30-feed-4b30-829e-6a9dc2a9fc4d",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "6e9ba33a-3832-4b88-82ac-af843658f374",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "journal_closed (11)",
+      "Position": "-53246.8438,-9050.74609,374.800232",
+      "Rotation": "0.253955692,0.256621063,-0.662846744,-0.655962169",
+      "Scale": "4,4,4",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "2f92b766-adce-4ecb-bac6-82eb69705c3c",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.78605,0.78605,0.78605,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "9b2b9cc8-f249-4c33-aa8b-9795c8cba0d7",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_rpgtoolsbits_1.0_free/journal_closed.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "fd6508b5-ba2b-4070-baa4-ef0adf731050",
+      "__version": 2,
+      "__Prefab": "prefabs/bookshelf 1.0.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Name",
+            "Value": "bookshelf 1.0 (3)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Position",
+            "Value": "-53066.9883,-8971.25391,1091.50146"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "156333e7-4573-49db-b5eb-a646b02b1d71"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.0622526519,0.998060405"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "156333e7-4573-49db-b5eb-a646b02b1d71": "fd6508b5-ba2b-4070-baa4-ef0adf731050",
+        "522f3bde-3048-4776-9e69-9301acf3d292": "097181ae-2b19-4a4a-8943-b6afec143e89",
+        "047c0375-a280-43c8-af12-599eb3ffdef6": "3db1abb3-70bc-45ac-ae6d-442ec6c1f0fa",
+        "5748326a-5c19-450d-a54c-6139ff724416": "60a91380-2e95-49e3-8f92-01e32ad7b5da",
+        "01547101-d56c-45a1-899d-be401f5f882a": "54732a68-3da9-4922-822c-5a432341a5cf",
+        "407e143c-8537-4f83-9c20-05c03224f35c": "79ba6057-f10c-4075-95d2-84e49e64e1e2",
+        "45f96474-dfa6-4dba-8c21-4705f23dc33b": "50f40c20-07d7-4b27-9016-d96bfdd1f6a1",
+        "d2390e70-c3eb-4646-9dc6-4278548ddf39": "51e833bc-4c83-449e-b350-c8d82fc5242d",
+        "4138af8a-2437-47e8-884d-46e95f9ebf7d": "49ce85b0-b660-4b35-bec1-c4931294a647",
+        "ff10c9ca-502c-4568-bcf6-05c949740fc6": "6f6fa2db-88b2-46d5-80b0-0462c32aa8e3",
+        "b1cb9bcf-c3f6-4331-9a9d-41243045e277": "2577105c-be08-432f-81f2-1dc730bdfcb2",
+        "a39bbb34-d91b-4094-ba3b-31b18b5e7e29": "e61b60b7-ad5f-4481-ac9d-2cca2a4d125f",
+        "55eb2eb5-e1e3-41fb-9566-49e3f3e1b730": "acb2fe2a-024d-4f09-a5c9-d9e84266b62f"
       }
     },
     {
@@ -32837,6 +33394,77 @@
         {
           "__type": "Sandbox.ModelCollider",
           "__guid": "60c93fba-4615-4eef-9143-c80befed92d0",
+          "__enabled": false,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "daf80dc4-6823-4b8f-8bc7-e1a5031ef14d",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "stool (3)",
+      "Position": "-46629,-14784,-1121",
+      "Rotation": "0,0,0,1",
+      "Scale": "18,18,18",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "56fd1927-eb5b-4200-a6da-8314e6f1a84d",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/kaykit_holiday_bits_1.0_free/stool.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.06667,1,0,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "e5a7e5bb-dbdc-471b-b717-579d81b77aa4",
           "__enabled": false,
           "Flags": 0,
           "ColliderFlags": 0,
@@ -33576,9 +34204,9 @@
       "__version": 2,
       "Flags": 0,
       "Name": "fence-corner",
-      "Position": "-46530,-14700,94",
+      "Position": "-46530,-14788,94",
       "Rotation": "0,-0,-0.683400691,0.73004353",
-      "Scale": "10,10,10",
+      "Scale": "8,10,10",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -73464,7 +74092,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "keyboard_shift_outline",
-          "Position": "0,0,0",
+          "Position": "0.461880207,0,0.266666621",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -73561,7 +74189,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -74177,7 +74805,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Text",
-          "Position": "-0.167372644,20.800169,18.2104073",
+          "Position": "0.328932703,20.800169,18.4969387",
           "Rotation": "-0.382683873,-3.51487074E-07,-0.923879802,-4.33704827E-07",
           "Scale": "0.0333333351,0.0333333351,0.0333333351",
           "Tags": "",
@@ -79655,6 +80283,481 @@
         "7425fe36-7425-403c-ab11-951511228238": "f641a217-aeb3-43df-964e-b7332f69c678",
         "ce5b28f7-756f-495b-a156-dbbf634d16b6": "aebec140-f73a-494f-b60c-620bd6a24fdc"
       }
+    },
+    {
+      "__guid": "7376da08-ef21-4882-aecf-b635b70bc612",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow",
+      "Position": "-46576,-14860,92.0001678",
+      "Rotation": "0,0,0,1",
+      "Scale": "2,2,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "043ddd29-0408-4d7d-8374-a23a84804987",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "e28829e8-93fb-4118-aa9a-834f4c53acd9",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (1)",
+      "Position": "-46385,-14914,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "12ab6e51-9b71-4527-a078-7c9341bda381",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "5c157eb3-cebe-43ed-8bdd-9fb6018b02d3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (2)",
+      "Position": "-46044,-14756,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "144ca335-bdd1-4bcd-a30e-7ee0d24c1c26",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8e68ff0f-2d4e-46b8-94ad-110b26d4cce3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (3)",
+      "Position": "-46324,-14257,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ca5109b0-f6de-4c21-be77-ef74625db9b7",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "213ebcb5-46ec-46fb-9226-f4dec073e8f6",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (5)",
+      "Position": "-46939,-14280,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "dea510c0-7184-4077-92f3-649e7900127c",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "ca127181-d518-40b6-a1e5-f6c30695be5e",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (6)",
+      "Position": "-45950,-14979,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "bc76e6da-3d02-4a99-8902-942be2d532d7",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "428d647c-8d9a-43a1-9c9b-29d725c0db46",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "block-grass-low-narrow (4)",
+      "Position": "-46503,-14532,92",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "26b8885d-8f28-4659-86c8-5979b9e2935a",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/platformer kit/block-grass-low-narrow.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "f4554d24-46ca-4997-a969-88f6ff5754e3",
+      "__version": 2,
+      "__Prefab": "prefabs/grass patch mark1.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "60a3692d-921e-4fa2-8af2-5e31364030d4"
+            },
+            "Property": "Position",
+            "Value": "-46821,-14411,110.999924"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "471aa3b3-8812-49b4-b118-962ef72d4622"
+            },
+            "Property": "Position",
+            "Value": "-418,-250,-0.167068481"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "e0f09c24-6510-462b-81c1-d3de38b6516e"
+            },
+            "Property": "Position",
+            "Value": "707,59,-0.999923706"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0fbefd87-e634-4fb1-9ceb-a110b27e630d"
+            },
+            "Property": "Position",
+            "Value": "792,-195,-1.64703369"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "0a52c62e-7e01-4ef0-8c2a-77aed43b3ae2"
+            },
+            "Property": "Position",
+            "Value": "97,230,7.62939453E-05"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "e0798100-ce3e-4f12-9a53-bb49e7cf3827"
+            },
+            "Property": "Position",
+            "Value": "364,185,-1.6469574"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1fa897d0-9454-41b2-a567-04256aef594a"
+            },
+            "Property": "Position",
+            "Value": "-268,88,-1.99992371"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "7f13bdf6-c0c6-4b8a-b648-eec4da03c29a"
+            },
+            "Property": "Position",
+            "Value": "618,-518,-1.99992371"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "b295143e-210a-4caa-9692-950ebc5550cb"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.537373066,0.843344629"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "65b76187-d485-45c3-8f0a-0a54d411e66f"
+            },
+            "Property": "Position",
+            "Value": "918,-163,7.62939453E-05"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "43b561e6-e91d-41ec-8b7f-b0ef20d90398"
+            },
+            "Property": "Position",
+            "Value": "903,-416,-0.55657196"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "60a3692d-921e-4fa2-8af2-5e31364030d4": "f4554d24-46ca-4997-a969-88f6ff5754e3",
+        "ca26b616-b3cc-4f75-9ed7-362ff73ae394": "cfd933b2-6940-4d9c-90be-4e83060e0bbb",
+        "733db631-3659-411a-8e27-d5b21686a541": "9d946532-d268-4dc8-9c37-5ac794555b18",
+        "471aa3b3-8812-49b4-b118-962ef72d4622": "e4c662f7-537c-4cfe-83ae-c4947484ca4b",
+        "6be188d3-b1f9-42d1-99c8-3235852b1ad4": "f5e493cb-f735-4a44-81a5-33700c31aa70",
+        "e0f09c24-6510-462b-81c1-d3de38b6516e": "adf7d34f-e209-497c-871f-561b3e0b73b2",
+        "00d9e26b-e5b4-4837-8235-f83df575e0ca": "69576252-1269-41c8-8049-9722fb311326",
+        "afc36b7f-15e8-4281-921f-b5e4adffe7d7": "009ed558-2463-4502-aea6-c36506cf7f9d",
+        "1edb5371-8f3c-4631-8c3f-baf1dcffdd66": "d7573a0d-d006-4d8a-bd13-a0a0ebfbf9d3",
+        "0fbefd87-e634-4fb1-9ceb-a110b27e630d": "282976ef-49c7-48fe-b39e-d74011d9f242",
+        "dc2ce0a2-0f06-41ef-9e42-a0dcc66c36b0": "6250bf7c-de28-413f-9bac-608d05b55606",
+        "185da4b3-0060-4c34-b823-5c4af43d895c": "4c7e2896-e64b-40b9-ac27-cc8c2179d26b",
+        "d97924a5-1e3c-406d-81e8-d5e18ec0e522": "4d84b695-84c1-4a30-afe1-11689170abf2",
+        "35efb1df-b3d6-4328-b084-3f42adde09d6": "8231d8b7-b683-4bbc-9720-6163702c17e0",
+        "69d76100-05b7-44d4-8e07-bb9d4dde59c2": "32065f5c-030b-4481-922b-4e5dfcb6d41e",
+        "d43de2c7-ce86-43ce-83c5-ad0acf88a60e": "24138983-2136-4858-a286-0adc4ce83556",
+        "0a0e41c4-f3b2-4e38-8c7c-dd0d2a52b345": "b84a3697-e3d0-4cc0-b131-4fc77ce7bc22",
+        "008559b7-9a8d-4f60-a954-376111476a1f": "a134a224-630d-4f98-97af-fc358832e79e",
+        "1f1f3630-510e-49e4-a937-92a00da7186a": "a7236b93-6900-428e-839a-edf3ddba334c",
+        "0a52c62e-7e01-4ef0-8c2a-77aed43b3ae2": "f24ee071-0ecd-4950-8313-3b81b2b487c6",
+        "2be8d38c-89d1-4212-8f77-7a70a4d9712d": "63309f52-9143-4a0b-862e-451d5c5a4a1c",
+        "ffce5751-d587-4969-8ebb-8191a463fe73": "87f1acc5-7ac6-4d75-9d12-638f5ba540c6",
+        "11ed7c65-f76b-4946-b7b9-6c81c5ce780c": "9a32b0fd-9336-4708-9a84-7649399de880",
+        "6c2217c4-1f7c-40e7-a6a7-d9eb9e0640b0": "8a07a95b-b28b-46ba-bf34-94f77dc62f30",
+        "c3dc4573-552a-465f-9478-4498f5a2a7d8": "d0f4a4a3-67bb-4e42-82be-d3a619e7d65a",
+        "3f802b7a-e290-4f9d-95f6-56a8f212c367": "72a305c8-8025-40d4-9321-9e0cf7620afb",
+        "900c6500-f9dc-478b-afde-1e7e59708a7b": "0c312de4-837c-4773-bb3b-25ff69bdfe7d",
+        "3141d4e9-0cdd-4bbc-bfbb-ca8115766d3b": "b98666a1-de8e-4eab-bd35-ababdae6a27b",
+        "1165309a-5fd0-4ce1-8af2-69799c6cc919": "8d57d1fb-e5e8-45a6-adc1-fb6163a64cdc",
+        "e0798100-ce3e-4f12-9a53-bb49e7cf3827": "40a29b83-973a-4664-89b3-387e0936e9c0",
+        "5d6b7ce2-781b-471e-b1d8-b770fb1896f9": "1dc44469-e1f0-453d-8cd0-cd880fa12df7",
+        "bb39f746-53da-4233-8cff-fb58f9994bbe": "a79039a1-23a1-4d38-b4a2-7f154dbd9ac9",
+        "41919304-246e-45cf-a471-2db37088e907": "52c91419-ebcb-45ad-8407-6aa5add07e60",
+        "1fa897d0-9454-41b2-a567-04256aef594a": "d8be492b-123e-4d65-9aef-62aae4d40b8c",
+        "b5e311cc-c076-416b-be1b-e0bba7b75e5e": "b85ddf83-7056-4861-83a7-5cdf24997dc4",
+        "109284f9-6332-45cd-aaa4-eebe94f117cc": "68519a62-0a04-4091-b8df-b678c59113ca",
+        "847a9fe5-f50d-4bcc-a49d-7732eb51ab92": "60b876e6-a414-416d-9d77-546a38707a4c",
+        "7f13bdf6-c0c6-4b8a-b648-eec4da03c29a": "523b2487-8e53-49e0-8b88-1e21bd0063eb",
+        "0772cd7b-1c89-472a-a778-e149e9aca7de": "ebaca2b8-703a-499f-8481-c8834138fdda",
+        "b295143e-210a-4caa-9692-950ebc5550cb": "c49059a0-d3d8-4a39-99f1-e372ab06bcdc",
+        "1fa536dc-d840-4001-b0d3-9085077851db": "e5c7ace6-431d-4d88-b504-a372add05fc4",
+        "b0d0c383-413c-4e82-91a4-d6f4487ef3fd": "6e1c22cf-fb14-4956-8580-8bd5c0f4169d",
+        "bd41104e-d445-4f73-a3f9-3d73007beb08": "b22804e9-18a4-4aa2-92ba-4b37139f2ba5",
+        "3a2ed086-0e51-4cb6-ab8c-c279b6986a5e": "5c88986c-244c-46ea-95c9-2e0e3ce60e7c",
+        "01205404-2724-4c20-bed2-6e51c6a346c1": "2aaeb175-12fb-4ce7-b870-21a02f968b84",
+        "2c82d1cb-7ed8-45d9-8bf0-8589ab15ab0d": "05bafe87-9b9c-44d0-9365-b440d29d9e63",
+        "0ae6575f-336f-4ea3-ad37-b94868e7efea": "3b8e5b20-f15c-4ea8-9cb7-c5b2fbc895f0",
+        "65b76187-d485-45c3-8f0a-0a54d411e66f": "4b16b030-83c5-4a52-b1ae-d78276721023",
+        "7a6d09fe-5a22-46bc-aa39-42c90fae74cb": "448678bf-11cf-4a9b-a39b-0545e2b18b31",
+        "43b561e6-e91d-41ec-8b7f-b0ef20d90398": "f81a57de-02f7-4e48-b078-9bee1b85ad51",
+        "7d3a8a96-4b42-4871-b079-8f7404935702": "e70ab410-869d-4aec-bf5f-70f0ae15fe28"
+      }
     }
   ],
   "SceneProperties": {
@@ -79683,7 +80786,8 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "18a9540b-c827-4d8a-ac7b-1d90752e07ca"
+          "$blob": "64db792e-5935-8fbc-8cfa-050cd49fa7fd",
+          "$refs": []
         }
       },
       "Sandbox.SelectionSetsSystem": {
