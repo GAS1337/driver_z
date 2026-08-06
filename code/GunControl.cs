@@ -114,19 +114,24 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 			.Run();
 		// DebugOverlay.Trace( SightlineTrace );
 
-		var hud = Scene.Camera.Hud;
-		var _crosshairSize = CrosshairSize * SinceShot.Relative.Remap(0, 0.3f, 1.1f, 1);
-		if ( SightlineTrace.Hit && SightlineTrace.GameObject.Tags.Has( "enemy" ) )
+		/*
+		if ( Scene.Camera is not null ) 
 		{
-			hud.DrawTexture( CrosshairTargetRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
-		else {
-			hud.DrawTexture( CrosshairRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
-		if (SinceHit < 0.1f)
-		{
-			hud.DrawTexture( HitmarkerRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
+			var hud = Scene.Camera.Hud;
+			var _crosshairSize = CrosshairSize * SinceShot.Relative.Remap( 0, 0.3f, 1.1f, 1 );
+			if ( SightlineTrace.Hit && SightlineTrace.GameObject.Tags.Has( "enemy" ) )
+			{
+				hud.DrawTexture( CrosshairTargetRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
+			}
+			else
+			{
+				hud.DrawTexture( CrosshairRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
+			}
+			if ( SinceHit < 0.1f )
+			{
+				hud.DrawTexture( HitmarkerRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
+			}
+		}*/
 
 		// Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange/100;
 		LaserBeam.TargetPosition = SightlineTrace.EndPosition;
