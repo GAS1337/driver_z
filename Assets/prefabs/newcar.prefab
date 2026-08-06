@@ -228,25 +228,6 @@
           "_type": "gameobject",
           "go": "003c4b3e-6884-43a6-afb4-bc92f479632d"
         },
-        "CrosshairRenderer": {
-          "_type": "component",
-          "component_id": "0c78e7a4-23ce-4983-9223-965dc7f8e352",
-          "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
-          "component_type": "SpriteRenderer"
-        },
-        "CrosshairSize": 50,
-        "CrosshairTargetRenderer": {
-          "_type": "component",
-          "component_id": "232e03ba-2294-42f8-8146-06d487680553",
-          "go": "292fcc40-0d26-492a-9e1b-ed249375dc28",
-          "component_type": "SpriteRenderer"
-        },
-        "HitmarkerRenderer": {
-          "_type": "component",
-          "component_id": "028231be-5034-4f75-be7a-1da5f3fad249",
-          "go": "edf94095-896a-4457-af33-7a8bd10f6398",
-          "component_type": "SpriteRenderer"
-        },
         "Inaccuracy": 0.015,
         "LaserBeam": {
           "_type": "component",
@@ -1882,7 +1863,7 @@
               {
                 "__guid": "b473f506-c727-4b3a-9198-4f7bf9f6ac38",
                 "__version": 2,
-                "Flags": 0,
+                "Flags": 4,
                 "Name": "AnchorBone",
                 "Position": "0,0,0",
                 "Rotation": "0,0,0,1",
@@ -1899,7 +1880,7 @@
                   {
                     "__guid": "cb26fefa-ccc6-48bd-a5f2-2859195549d5",
                     "__version": 2,
-                    "Flags": 0,
+                    "Flags": 4,
                     "Name": "MiddleLinkBone",
                     "Position": "0,0,0",
                     "Rotation": "0,0,0,1",
@@ -1916,7 +1897,7 @@
                       {
                         "__guid": "3da1ebb2-0343-4e13-8b8a-f80294e82890",
                         "__version": 2,
-                        "Flags": 0,
+                        "Flags": 4,
                         "Name": "BottomLinkBone",
                         "Position": "0,0,0",
                         "Rotation": "0,0,0,1",
@@ -1933,7 +1914,7 @@
                           {
                             "__guid": "8177a266-fa76-4019-8299-51af6200dde3",
                             "__version": 2,
-                            "Flags": 0,
+                            "Flags": 4,
                             "Name": "LanternBone",
                             "Position": "0,0,0",
                             "Rotation": "0,0,0,1",
@@ -2042,7 +2023,7 @@
                         "Additive": false,
                         "Alpha": 1,
                         "BeamColor": "1,1,1,1",
-                        "BeamLifetime": 0.050000012,
+                        "BeamLifetime": 0.1,
                         "BeamsPerSecond": 0,
                         "Brightness": 1,
                         "DepthFeather": 0,
@@ -2302,8 +2283,6 @@
                                     "FrameRate": 15,
                                     "Origin": "0.5,0.5",
                                     "LoopMode": "Loop",
-                                    "LoopStart": -1,
-                                    "LoopEnd": -1,
                                     "Frames": [
                                       {
                                         "Texture": "textures/shapes/splotch1.vtex",
@@ -2406,8 +2385,6 @@
                                     "FrameRate": 15,
                                     "Origin": "0.5,0.5",
                                     "LoopMode": "Loop",
-                                    "LoopStart": -1,
-                                    "LoopEnd": -1,
                                     "Frames": [
                                       {
                                         "Texture": {
@@ -3659,8 +3636,6 @@
                         "FrameRate": 15,
                         "Origin": "0.5,0.5",
                         "LoopMode": "Loop",
-                        "LoopStart": -1,
-                        "LoopEnd": -1,
                         "Frames": [
                           {
                             "Texture": null,
@@ -3707,7 +3682,7 @@
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "300,266.093,73.95349,1",
+                "LightColor": "150,133.0465,36.97674,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -3797,7 +3772,7 @@
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "300,266.093,73.95349,1",
+                "LightColor": "150,133.0465,36.97674,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -3853,96 +3828,6 @@
                     },
                     "RenderType": "Off",
                     "Tint": "1,1,0,1"
-                  }
-                ],
-                "Children": []
-              }
-            ]
-          },
-          {
-            "__guid": "284d7e3f-2bfa-4604-bb03-f8dcb3167675",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Rearlight",
-            "Position": "77.562973,-4.5616398E-06,105.630295",
-            "Rotation": "-4.79013309E-08,-0.382683158,1.45207395E-07,-0.923879743",
-            "Scale": "1,1,1",
-            "Tags": "light_spot,light",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SpotLight",
-                "__guid": "67176dc4-9bdd-445b-8c09-e61d24567eaa",
-                "__enabled": true,
-                "Flags": 0,
-                "Attenuation": 0.5,
-                "ConeInner": 5,
-                "ConeOuter": 20,
-                "Contribution": "Diffuse, Specular, Transmissive",
-                "Cookie": null,
-                "FogMode": "Enabled",
-                "FogStrength": 1,
-                "LightColor": "150,36.97675,36.97675,1",
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Radius": 5000,
-                "ShadowBias": 0.0005,
-                "ShadowHardness": 0,
-                "Shadows": true
-              }
-            ],
-            "Children": [
-              {
-                "__guid": "70f8123b-ea68-4e83-a622-40b7b8fdbc1c",
-                "__version": 2,
-                "Flags": 0,
-                "Name": "Licht",
-                "Position": "-9.2486496,-5.88473813E-06,7.60146809",
-                "Rotation": "0.653281391,0.65328145,0.270598203,0.270597935",
-                "Scale": "1.5,1,0.750000238",
-                "Tags": "",
-                "Enabled": true,
-                "NetworkMode": 2,
-                "NetworkFlags": 0,
-                "NetworkOrphaned": 0,
-                "NetworkTransmit": true,
-                "OwnerTransfer": 1,
-                "Components": [
-                  {
-                    "__type": "Sandbox.ModelRenderer",
-                    "__guid": "758dc18a-d7cb-4f81-83c8-698623955ac3",
-                    "__enabled": true,
-                    "Flags": 0,
-                    "BodyGroups": 18446744073709551615,
-                    "CreateAttachments": false,
-                    "LodOverride": null,
-                    "MaterialGroup": null,
-                    "MaterialOverride": null,
-                    "Materials": null,
-                    "Model": "models/graveyard kit/lantern-glass.vmdl",
-                    "OnComponentDestroy": null,
-                    "OnComponentDisabled": null,
-                    "OnComponentEnabled": null,
-                    "OnComponentFixedUpdate": null,
-                    "OnComponentStart": null,
-                    "OnComponentUpdate": null,
-                    "RenderOptions": {
-                      "GameLayer": true,
-                      "OverlayLayer": false,
-                      "BloomLayer": false,
-                      "AfterUILayer": false
-                    },
-                    "RenderType": "Off",
-                    "Tint": "1,0,0,1"
                   }
                 ],
                 "Children": []
@@ -4141,8 +4026,6 @@
                         "FrameRate": 15,
                         "Origin": "0.5,0.5",
                         "LoopMode": "Loop",
-                        "LoopStart": -1,
-                        "LoopEnd": -1,
                         "Frames": [
                           {
                             "Texture": "textures/particles/smoke/smoke_loop_a.vtex",
@@ -4325,54 +4208,15 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
-                    "LoopStart": -1,
-                    "LoopEnd": -1,
                     "Frames": [
                       {
-                        "Texture": {
-                          "$compiler": "texture",
-                          "$source": "imagefile",
-                          "data": {
-                            "FilePath": "sprites/crosshairpng/light (2×)/crosshair-027.png",
-                            "MaxSize": 4096,
-                            "ConvertHeightToNormals": false,
-                            "NormalScale": 1,
-                            "Rotate": 0,
-                            "FlipVertical": false,
-                            "FlipHorizontal": false,
-                            "Cropping": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "Padding": {
-                              "Left": 0,
-                              "Top": 0,
-                              "Right": 0,
-                              "Bottom": 0
-                            },
-                            "InvertColor": false,
-                            "Tint": "1,1,1,1",
-                            "Blur": 0,
-                            "Sharpen": 0,
-                            "Brightness": 1,
-                            "Contrast": 1,
-                            "Saturation": 1,
-                            "Hue": 0,
-                            "Colorize": true,
-                            "TargetColor": "1,0,0,1",
-                            "CacheToDisk": true,
-                            "FormatOverride": "RGBA8888"
-                          },
-                          "compiled": "textures/generated/imagefile/34155e030770f245.vtex"
-                        },
+                        "Texture": "textures/shapes/ring-dot1.vtex",
                         "BroadcastMessages": []
                       }
                     ]
                   }
                 ],
-                "__references": []
+                "__references": null
               },
               "compiled": null
             },
@@ -4388,8 +4232,6 @@
             "AttenuationAngle": 0.1,
             "ColorMix": 1,
             "ColorTint": "150,0,0,1",
-            "CoverageAmount": 1,
-            "CoverageRange": 0.07,
             "Decals": [
               "decals/circle.decal"
             ],
@@ -4416,246 +4258,7 @@
             "Transient": false
           }
         ],
-        "Children": [
-          {
-            "__guid": "edf94095-896a-4457-af33-7a8bd10f6398",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Hitmarker",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SpriteRenderer",
-                "__guid": "028231be-5034-4f75-be7a-1da5f3fad249",
-                "__enabled": true,
-                "Flags": 0,
-                "__version": 2,
-                "Additive": false,
-                "AlphaCutoff": 0.5,
-                "Billboard": "Always",
-                "Color": "1,1,1,1",
-                "DepthFeather": 0,
-                "FlipHorizontal": false,
-                "FlipVertical": false,
-                "FogStrength": 1,
-                "IsSorted": false,
-                "Lighting": false,
-                "OnAnimationEnd": null,
-                "OnAnimationStart": null,
-                "OnBroadcastMessage": null,
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Opaque": false,
-                "OverlayColor": "1,1,1,0",
-                "PlaybackSpeed": 1,
-                "RenderOptions": {
-                  "GameLayer": true,
-                  "OverlayLayer": false,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "Shadows": false,
-                "Size": "10,10",
-                "Sprite": {
-                  "$compiler": "embed",
-                  "$source": null,
-                  "data": {
-                    "Animations": [
-                      {
-                        "Name": "Default",
-                        "FrameRate": 15,
-                        "Origin": "0.5,0.5",
-                        "LoopMode": "Loop",
-                        "LoopStart": -1,
-                        "LoopEnd": -1,
-                        "Frames": [
-                          {
-                            "Texture": {
-                              "$compiler": "texture",
-                              "$source": "imagefile",
-                              "data": {
-                                "FilePath": "sprites/crosshairpng/light (2×)/crosshair-036.png",
-                                "MaxSize": 4096,
-                                "ConvertHeightToNormals": false,
-                                "NormalScale": 1,
-                                "Rotate": 0,
-                                "FlipVertical": false,
-                                "FlipHorizontal": false,
-                                "Cropping": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "Padding": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "InvertColor": false,
-                                "Tint": "1,1,1,1",
-                                "Blur": 0,
-                                "Sharpen": 0,
-                                "Brightness": 1,
-                                "Contrast": 1,
-                                "Saturation": 1,
-                                "Hue": 0,
-                                "Colorize": false,
-                                "TargetColor": "1,1,1,1",
-                                "CacheToDisk": true,
-                                "FormatOverride": "RGBA8888"
-                              },
-                              "compiled": "textures/generated/imagefile/c7d6a94654e9fd8a.vtex"
-                            },
-                            "BroadcastMessages": []
-                          }
-                        ]
-                      }
-                    ],
-                    "__references": null
-                  },
-                  "compiled": null
-                },
-                "StartingAnimationName": "Default",
-                "TextureFilter": "Bilinear"
-              }
-            ],
-            "Children": []
-          },
-          {
-            "__guid": "292fcc40-0d26-492a-9e1b-ed249375dc28",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "TargetCrosshair",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SpriteRenderer",
-                "__guid": "232e03ba-2294-42f8-8146-06d487680553",
-                "__enabled": true,
-                "Flags": 0,
-                "__version": 2,
-                "Additive": false,
-                "AlphaCutoff": 0.1,
-                "Billboard": "Always",
-                "Color": "1,1,1,1",
-                "DepthFeather": 0,
-                "FlipHorizontal": false,
-                "FlipVertical": false,
-                "FogStrength": 0,
-                "IsSorted": false,
-                "Lighting": false,
-                "OnAnimationEnd": null,
-                "OnAnimationStart": null,
-                "OnBroadcastMessage": null,
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Opaque": true,
-                "OverlayColor": "1,1,1,1",
-                "PlaybackSpeed": 1,
-                "RenderOptions": {
-                  "GameLayer": false,
-                  "OverlayLayer": true,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "Shadows": false,
-                "Size": "75,75",
-                "Sprite": {
-                  "$compiler": "embed",
-                  "$source": null,
-                  "data": {
-                    "Animations": [
-                      {
-                        "Name": "Default",
-                        "FrameRate": 15,
-                        "Origin": "0.5,0.5",
-                        "LoopMode": "Loop",
-                        "LoopStart": -1,
-                        "LoopEnd": -1,
-                        "Frames": [
-                          {
-                            "Texture": {
-                              "$compiler": "texture",
-                              "$source": "imagefile",
-                              "data": {
-                                "FilePath": "sprites/crosshairpng/light (2×)/crosshair-027-red.png",
-                                "MaxSize": 4096,
-                                "ConvertHeightToNormals": false,
-                                "NormalScale": 1,
-                                "Rotate": 0,
-                                "FlipVertical": false,
-                                "FlipHorizontal": false,
-                                "Cropping": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "Padding": {
-                                  "Left": 0,
-                                  "Top": 0,
-                                  "Right": 0,
-                                  "Bottom": 0
-                                },
-                                "InvertColor": false,
-                                "Tint": "1,1,1,1",
-                                "Blur": 0,
-                                "Sharpen": 0,
-                                "Brightness": 1,
-                                "Contrast": 1,
-                                "Saturation": 1,
-                                "Hue": 0,
-                                "Colorize": false,
-                                "TargetColor": "1,1,1,1",
-                                "CacheToDisk": true,
-                                "FormatOverride": "RGBA8888"
-                              },
-                              "compiled": null
-                            },
-                            "BroadcastMessages": []
-                          }
-                        ]
-                      }
-                    ],
-                    "__references": []
-                  },
-                  "compiled": null
-                },
-                "StartingAnimationName": "Default",
-                "TextureFilter": "Anisotropic"
-              }
-            ],
-            "Children": []
-          }
-        ]
+        "Children": []
       }
     ],
     "__properties": {

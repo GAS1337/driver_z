@@ -2,7 +2,6 @@ using Sandbox;
 using Sandbox.Audio;
 using Sandbox.Modals;
 using Sandbox.ModelEditor.Nodes;
-using Sandbox.UI;
 using System;
 using System.Diagnostics;
 using System.Net.Quic;
@@ -22,9 +21,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 	[Property] GameObject Muzzle;
 	[Property] CameraComponent MainCamera;
 	[Property] GameObject Crosshair;
-	[Property] SpriteRenderer CrosshairRenderer;
-	[Property] SpriteRenderer CrosshairTargetRenderer;
-	[Property] SpriteRenderer HitmarkerRenderer;
 	[Property] BeamEffect ShootBeam;
 	[Property] BeamEffect LaserBeam;
 	[Property] GameObject BulletHole;
@@ -34,8 +30,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 	[Property] SpriteRenderer MuzzleFlashSprite;
 	[Property] ParticleEffect MuzzleFlashEffect;
 	[Property] ParticleSphereEmitter MuzzleFlashEmitter;
-
-	[Property] float CrosshairSize = 50f;
 	[Property] float aimRange = 15000f;
 	[Property] float aimWidth = 2000f;
 	[Property] float ShootCooldown = 0.2f;
@@ -54,8 +48,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 	GameObject newBulletSpark;
 	GameObject newBulletSparkEnemy;
 
-	TimeSince SinceShot = 10;
-	TimeSince SinceHit = 10;
 	TimeSince SinceAim;
 	TimeSince SinceGunAnimationStart;
 	Vector3 originalGunScale;
@@ -114,21 +106,7 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 			.Run();
 		// DebugOverlay.Trace( SightlineTrace );
 
-		var hud = Scene.Camera.Hud;
-		var _crosshairSize = CrosshairSize * SinceShot.Relative.Remap(0, 0.3f, 1.1f, 1);
-		if ( SightlineTrace.Hit && SightlineTrace.GameObject.Tags.Has( "enemy" ) )
-		{
-			hud.DrawTexture( CrosshairTargetRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
-		else {
-			hud.DrawTexture( CrosshairRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
-		if (SinceHit < 0.1f)
-		{
-			hud.DrawTexture( HitmarkerRenderer.Texture, new Rect( Screen.Width / 2 - _crosshairSize / 2, Screen.Height / 2 - _crosshairSize / 2, _crosshairSize, _crosshairSize ) );
-		}
-
-		// Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange/100;
+		Crosshair.WorldPosition = MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * aimRange / 10;
 		LaserBeam.TargetPosition = SightlineTrace.EndPosition;
 
 		// Turret Yaw mit Camera Yaw mitdrehen
@@ -141,7 +119,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 			MuzzleFlashEmitter.Emit( MuzzleFlashEffect );
 			FlashMuzzleSprite( 0.05f );
 			AnimateGun( 0.03f);
-			SinceShot = 0;
 
 			if ( SightlineTrace.Hit )
 			{
@@ -163,8 +140,6 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 				if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has("dead") )
 				{
-					SinceHit = 0;
-					
 					if ( SightlineTrace.GameObject.GetComponent<HealthSystem>().IsValid() ) SightlineTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
 
 					if ( SightlineTrace.GameObject.GetComponent<ZombieBrain>() != null )
