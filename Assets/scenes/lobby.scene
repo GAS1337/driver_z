@@ -17097,7 +17097,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": "textures/generated/imagefile/eba87c6d4cc9b.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -74189,7 +74189,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }

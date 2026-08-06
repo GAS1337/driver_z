@@ -359,6 +359,8 @@
             "__enabled": true,
             "Flags": 0,
             "__version": 1,
+            "Filter": "Bilinear",
+            "Gamma": 2.2,
             "Mode": "Additive",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -4280,7 +4282,7 @@
           {
             "__type": "Sandbox.SpriteRenderer",
             "__guid": "0c78e7a4-23ce-4983-9223-965dc7f8e352",
-            "__enabled": false,
+            "__enabled": true,
             "Flags": 0,
             "__version": 2,
             "Additive": false,
@@ -4358,12 +4360,12 @@
                             "Contrast": 1,
                             "Saturation": 1,
                             "Hue": 0,
-                            "Colorize": false,
+                            "Colorize": true,
                             "TargetColor": "1,0,0,1",
                             "CacheToDisk": true,
                             "FormatOverride": "RGBA8888"
                           },
-                          "compiled": null
+                          "compiled": "textures/generated/imagefile/34155e030770f245.vtex"
                         },
                         "BroadcastMessages": []
                       }
@@ -4434,7 +4436,7 @@
               {
                 "__type": "Sandbox.SpriteRenderer",
                 "__guid": "028231be-5034-4f75-be7a-1da5f3fad249",
-                "__enabled": false,
+                "__enabled": true,
                 "Flags": 0,
                 "__version": 2,
                 "Additive": false,
@@ -4553,7 +4555,7 @@
               {
                 "__type": "Sandbox.SpriteRenderer",
                 "__guid": "232e03ba-2294-42f8-8146-06d487680553",
-                "__enabled": false,
+                "__enabled": true,
                 "Flags": 0,
                 "__version": 2,
                 "Additive": false,
@@ -4636,7 +4638,7 @@
                                 "CacheToDisk": true,
                                 "FormatOverride": "RGBA8888"
                               },
-                              "compiled": "textures/generated/imagefile/a5a531ca6c1262a5.vtex"
+                              "compiled": null
                             },
                             "BroadcastMessages": []
                           }
