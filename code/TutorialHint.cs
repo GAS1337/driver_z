@@ -3,7 +3,6 @@ using Sandbox.Services;
 
 public sealed class TutorialHint : Component
 {
-	/*
 	protected override void OnEnabled()
 	{
 		Stats.PlayerStat _leaderboardTest = Sandbox.Services.Stats.LocalPlayer.Get( "LeaderboardTest" );
@@ -16,5 +15,5 @@ public sealed class TutorialHint : Component
 		{
 			GameObject.Enabled = false;
 		}
-	}*/
+	}
 }

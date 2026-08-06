@@ -234,7 +234,7 @@
           "go": "003c4b3e-6884-43a6-afb4-bc92f479632d",
           "component_type": "SpriteRenderer"
         },
-        "CrosshairSize": 30,
+        "CrosshairSize": 50,
         "CrosshairTargetRenderer": {
           "_type": "component",
           "component_id": "232e03ba-2294-42f8-8146-06d487680553",
@@ -4363,7 +4363,7 @@
                             "CacheToDisk": true,
                             "FormatOverride": "RGBA8888"
                           },
-                          "compiled": "textures/generated/imagefile/c8786d272e5498e1.vtex"
+                          "compiled": null
                         },
                         "BroadcastMessages": []
                       }

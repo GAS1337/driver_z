@@ -1,11 +1,13 @@
-﻿@using System;
+﻿@using Sandbox;
+@using Sandbox.UI;
+@using System;
 @inherits PanelComponent
 @namespace Sandbox
 
 <root>
 	<div class="multiplier-dial @(HighscoreManager.CalculateMultiplier() > 1.4f ? "on-fire" : "")">
         <div class="multiplier-needle" 
-			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, 270, 90) deg );"></div>
+			style="transform: rotate( @HighscoreManager.CalculateMultiplier().Remap( 1, 2, 270, 90) deg );"	</div>
 	</div>
 	<div class="ammocount @(Input.Pressed("attack2") ? "used" : "")">
 		<p>@($"🚀{PlayerGun.CurrentRockets}")</p>
@@ -38,7 +40,7 @@
 	</div>
     <div class="health-dial-almost @(PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.2f ? "super-low-health" : PlayerHealth.CurrentHealth < PlayerHealth.SetHealth * 0.4f ? "low-health" : "")"></div>
     <div class="health-needle"
-         style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );"></div>
+         style="transform: rotate( @PlayerHealth.CurrentHealth.Remap(0, PlayerHealth.SetHealth, -140, 138) deg );" </div>
 </root>
 
 @code

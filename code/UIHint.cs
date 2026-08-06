@@ -18,7 +18,7 @@ public sealed class UIHint : Component
 		}
 
 
-		/*
+
 		if ( Scene.Camera is null )
 			return;
 
@@ -29,7 +29,6 @@ public sealed class UIHint : Component
 			hud.DrawText( new TextRendering.Scope( "This is your health!", Color.Red, 32, "Poppins", 800 ), new Vector2( Screen.Width * 0.05f, Screen.Height * 0.65f ) );
 			hud.DrawText( new TextRendering.Scope( "This is your score \nand multiplier!", Color.Red, 32, "Poppins", 800 ), new Vector2( Screen.Width * 0.8f, Screen.Height * 0.3f ) );
 		}
-		else { GameObject.Enabled = false; } 
-		*/
+		else { GameObject.Enabled = false; }
 	}
 }
