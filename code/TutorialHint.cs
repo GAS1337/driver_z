@@ -5,7 +5,7 @@ public sealed class TutorialHint : Component
 {
 	protected override void OnEnabled()
 	{
-		Stats.PlayerStat _leaderboardTest = Sandbox.Services.Stats.LocalPlayer.Get( "LeaderboardTest0" );
+		Stats.PlayerStat _leaderboardTest = Sandbox.Services.Stats.LocalPlayer.Get( "LeaderboardTest" );
 
 		if ( _leaderboardTest.Avg == 0 )
 		{
