@@ -1627,6 +1627,108 @@
                     ]
                   }
                 ]
+              },
+              {
+                "__guid": "267d181d-7758-440f-bdde-02929db8457b",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "car-vinyl (1)",
+                "Position": "20.9849586,10.0094147,68.5114746",
+                "Rotation": "0,0,-2.98023224E-08,1.00000012",
+                "Scale": "8.33333302,0.333333343,0.880000114",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.Decal",
+                    "__guid": "6601913f-749b-4fac-aaeb-4d95e372880d",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "__version": 3,
+                    "AttenuationAngle": 0,
+                    "ColorMix": 1,
+                    "ColorTint": "0.83721,0.83721,0.83721,1",
+                    "CoverageAmount": 1,
+                    "CoverageRange": 0.07,
+                    "Decals": [
+                      "decals/car-vinyl.decal"
+                    ],
+                    "Depth": 8,
+                    "LifeTime": 0,
+                    "Looped": false,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Parallax": 1,
+                    "Rotation": 0,
+                    "Scale": 1,
+                    "SequenceId": 0,
+                    "SheetSequence": false,
+                    "Size": "1,1",
+                    "SortLayer": 0,
+                    "Transient": false
+                  }
+                ],
+                "Children": []
+              },
+              {
+                "__guid": "083dcdc7-351d-4388-80f7-c9609cb9044d",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "car-vinyl",
+                "Position": "16.4534073,6.02732229,68.5110245",
+                "Rotation": "0,0,0.246571362,0.969124675",
+                "Scale": "8.33333302,0.333333343,0.880000114",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.Decal",
+                    "__guid": "7916907e-6789-4375-9a79-ddb716f5a9c1",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "__version": 3,
+                    "AttenuationAngle": 0,
+                    "ColorMix": 1,
+                    "ColorTint": "0.72558,0.02362,0.02362,1",
+                    "CoverageAmount": 1,
+                    "CoverageRange": 0.07,
+                    "Decals": [
+                      "decals/car-vinyl.decal"
+                    ],
+                    "Depth": 8,
+                    "LifeTime": 0,
+                    "Looped": false,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Parallax": 1,
+                    "Rotation": 0,
+                    "Scale": 1,
+                    "SequenceId": 0,
+                    "SheetSequence": false,
+                    "Size": "1,1",
+                    "SortLayer": 0,
+                    "Transient": false
+                  }
+                ],
+                "Children": []
               }
             ]
           },
@@ -2114,7 +2216,7 @@
                             "ApplyRotation": false,
                             "ApplyShape": true,
                             "Bounce": 1,
-                            "Brightness": 250,
+                            "Brightness": 1,
                             "Bumpiness": 0,
                             "Collision": false,
                             "CollisionIgnore": null,
@@ -2141,7 +2243,7 @@
                             "Gradient": {
                               "Type": "Range",
                               "Evaluation": "Life",
-                              "ConstantA": "200,100,0,1",
+                              "ConstantA": "1,0.5,0,1",
                               "ConstantB": "0.46512,0.23256,0,1"
                             },
                             "InitialVelocity": {
@@ -2228,7 +2330,7 @@
                             "Stretch": 0,
                             "TimeScale": 1,
                             "Timing": "GameTime",
-                            "Tint": "1,1,1,1",
+                            "Tint": "85,85,85,1",
                             "UsePrefabFeature": false,
                             "Yaw": {
                               "Type": "Range",
@@ -2259,7 +2361,7 @@
                             "OnComponentFixedUpdate": null,
                             "OnComponentStart": null,
                             "OnComponentUpdate": null,
-                            "Opaque": false,
+                            "Opaque": true,
                             "PlaybackSpeed": 1,
                             "RenderOptions": {
                               "GameLayer": true,
@@ -2348,7 +2450,7 @@
                             "Additive": false,
                             "AlphaCutoff": 0.1,
                             "Billboard": "Particle",
-                            "Color": "100,100,100,1",
+                            "Color": "45,45,45,1",
                             "DepthFeather": 0,
                             "FlipHorizontal": false,
                             "FlipVertical": false,
@@ -2422,9 +2524,10 @@
                                             "Hue": 0,
                                             "Colorize": false,
                                             "TargetColor": "1,1,1,1",
-                                            "CacheToDisk": true
+                                            "CacheToDisk": true,
+                                            "FormatOverride": "RGBA8888"
                                           },
-                                          "compiled": "textures/generated/imagefile/e0b2571aea727c97.vtex"
+                                          "compiled": "textures/generated/imagefile/7bbe3e6480c9111e.vtex"
                                         },
                                         "BroadcastMessages": []
                                       }
@@ -3659,6 +3762,96 @@
             "Children": []
           },
           {
+            "__guid": "d99c5624-654f-4b0e-9fb7-b6a36f410f0d",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Headlight",
+            "Position": "-144,-58.2357368,64",
+            "Rotation": "-0.130526498,2.54144492E-08,0.991444886,1.93041402E-07",
+            "Scale": "1,1,1",
+            "Tags": "light_spot,light",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.SpotLight",
+                "__guid": "b8b1bdca-f16f-4ac3-aaac-c08cb1cb3d5d",
+                "__enabled": true,
+                "Flags": 0,
+                "Attenuation": 0.5,
+                "ConeInner": 5,
+                "ConeOuter": 38,
+                "Contribution": "Diffuse, Specular, Transmissive",
+                "Cookie": null,
+                "FogMode": "Enabled",
+                "FogStrength": 1,
+                "LightColor": "300,266.093,73.95349,1",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Radius": 5000,
+                "ShadowBias": 0.0005,
+                "ShadowHardness": 0,
+                "Shadows": true
+              }
+            ],
+            "Children": [
+              {
+                "__guid": "a19edc93-3da2-43e8-817b-f430a494eb49",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "Licht",
+                "Position": "-11.7299213,-0.466582805,10.0202904",
+                "Rotation": "0.701057374,0.701057374,0.0922961012,0.092295818",
+                "Scale": "1.5,1,0.750000238",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.ModelRenderer",
+                    "__guid": "e0938227-395b-4bba-b9ad-b60678660ed3",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "BodyGroups": 18446744073709551615,
+                    "CreateAttachments": false,
+                    "LodOverride": null,
+                    "MaterialGroup": null,
+                    "MaterialOverride": null,
+                    "Materials": null,
+                    "Model": "models/graveyard kit/lantern-glass.vmdl",
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "RenderOptions": {
+                      "GameLayer": true,
+                      "OverlayLayer": false,
+                      "BloomLayer": false,
+                      "AfterUILayer": false
+                    },
+                    "RenderType": "Off",
+                    "Tint": "1,1,0,1"
+                  }
+                ],
+                "Children": []
+              }
+            ]
+          },
+          {
             "__guid": "c365209d-8b37-469a-88a0-7da04418d244",
             "__version": 2,
             "Flags": 0,
@@ -3681,12 +3874,12 @@
                 "Flags": 0,
                 "Attenuation": 0.5,
                 "ConeInner": 5,
-                "ConeOuter": 20,
+                "ConeOuter": 38,
                 "Contribution": "Diffuse, Specular, Transmissive",
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "150,133.0465,36.97674,1",
+                "LightColor": "300,266.093,73.95349,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -3749,12 +3942,12 @@
             ]
           },
           {
-            "__guid": "d99c5624-654f-4b0e-9fb7-b6a36f410f0d",
+            "__guid": "560b1a45-8aa7-412a-81b4-918f3afc425b",
             "__version": 2,
             "Flags": 0,
-            "Name": "Headlight",
-            "Position": "-144,-58.2357368,64",
-            "Rotation": "-0.130526498,2.54144492E-08,0.991444886,1.93041402E-07",
+            "Name": "Backlight",
+            "Position": "78,-1,106",
+            "Rotation": "0.707107067,9.7353535E-08,-0.70710659,-1.68621398E-07",
             "Scale": "1,1,1",
             "Tags": "light_spot,light",
             "Enabled": true,
@@ -3766,24 +3959,24 @@
             "Components": [
               {
                 "__type": "Sandbox.SpotLight",
-                "__guid": "b8b1bdca-f16f-4ac3-aaac-c08cb1cb3d5d",
+                "__guid": "8324b2c0-5e14-459c-99a5-ede4eb5e42d8",
                 "__enabled": true,
                 "Flags": 0,
                 "Attenuation": 0.5,
                 "ConeInner": 5,
-                "ConeOuter": 20,
+                "ConeOuter": 45,
                 "Contribution": "Diffuse, Specular, Transmissive",
                 "Cookie": null,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
-                "LightColor": "150,133.0465,36.97674,1",
+                "LightColor": "500,142.093,123.2558,1",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
                 "OnComponentFixedUpdate": null,
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
-                "Radius": 5000,
+                "Radius": 1000,
                 "ShadowBias": 0.0005,
                 "ShadowHardness": 0,
                 "Shadows": true
@@ -3791,12 +3984,12 @@
             ],
             "Children": [
               {
-                "__guid": "a19edc93-3da2-43e8-817b-f430a494eb49",
+                "__guid": "86832a15-0da8-4432-935f-936984d92552",
                 "__version": 2,
                 "Flags": 0,
                 "Name": "Licht",
-                "Position": "-11.7299213,-0.466582805,10.0202904",
-                "Rotation": "0.701057374,0.701057374,0.0922961012,0.092295818",
+                "Position": "-10.4079437,-3.6329031E-05,-1.00000715",
+                "Rotation": "0.499999911,0.50000006,0.500000477,0.499999762",
                 "Scale": "1.5,1,0.750000238",
                 "Tags": "",
                 "Enabled": true,
@@ -3808,7 +4001,7 @@
                 "Components": [
                   {
                     "__type": "Sandbox.ModelRenderer",
-                    "__guid": "e0938227-395b-4bba-b9ad-b60678660ed3",
+                    "__guid": "32fcf34e-137c-4654-b6bc-f4e73be929a7",
                     "__enabled": true,
                     "Flags": 0,
                     "BodyGroups": 18446744073709551615,

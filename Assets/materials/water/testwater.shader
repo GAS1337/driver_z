@@ -109,7 +109,7 @@ PS
 		m.Albedo = l_2.xyz;
 		m.Opacity = 1;
 		m.Normal = l_5.xyz;
-		m.Roughness = 0.46575317;
+		m.Roughness = 0.52040815;
 		m.Metalness = 0;
 		m.AmbientOcclusion = 1;
 		

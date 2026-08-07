@@ -648,7 +648,15 @@
         "0f8df567-efaa-4065-afb8-d8081121384e": "6572dc96-1975-4eab-ae70-57b7b44c648d",
         "6bcecf9c-58df-4f93-baef-b003e8869afa": "d64bf931-e128-4ba8-93af-b8f6761cc08e",
         "bfd2a291-314f-46d8-891a-75ef365fd6c7": "112abfac-ad1e-4fab-b36d-e07e0a85eb85",
-        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "5ccc7781-1f58-4c5d-a420-38313362f8b2"
+        "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467": "5ccc7781-1f58-4c5d-a420-38313362f8b2",
+        "560b1a45-8aa7-412a-81b4-918f3afc425b": "b1dd257d-9d3e-81fd-9c70-64626ac29f0b",
+        "86832a15-0da8-4432-935f-936984d92552": "c8a506ee-91d4-893c-b0c9-099429e0f7b9",
+        "8324b2c0-5e14-459c-99a5-ede4eb5e42d8": "b77f8ce7-5ea2-852f-993a-8983dd8045d0",
+        "32fcf34e-137c-4654-b6bc-f4e73be929a7": "01ace1b1-fcea-8b7f-a30c-8ada0fafc2d2",
+        "083dcdc7-351d-4388-80f7-c9609cb9044d": "133a898f-e634-8e94-944e-98941edebf4e",
+        "7916907e-6789-4375-9a79-ddb716f5a9c1": "ec9880cb-701b-8e6a-8ee6-67e22302ab2e",
+        "267d181d-7758-440f-bdde-02929db8457b": "85ab7ff6-137c-8c3a-b6ed-e1f8c11c2b51",
+        "6601913f-749b-4fac-aaeb-4d95e372880d": "cacd0610-426c-8137-8fb8-9eebe9aac231"
       }
     },
     {
@@ -3532,8 +3540,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "block-grass-overhang-large-slope-steep (4)",
-          "Position": "4794.64795,-2438.24097,-338.426086",
-          "Rotation": "0,0,0.991444886,-0.1305269",
+          "Position": "2031.98291,2774.75391,-338.426086",
+          "Rotation": "0,0,0.258818388,-0.965926111",
           "Scale": "5,5,3",
           "Tags": "",
           "Enabled": true,
@@ -3603,8 +3611,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "block-grass-overhang-large-slope-steep (5)",
-          "Position": "6697.33008,-2897.4353,-338.426086",
-          "Rotation": "0,0,0.991444886,-0.1305269",
+          "Position": "875.48291,2154.25391,-338.426086",
+          "Rotation": "0,0,0.991456211,0.130439967",
           "Scale": "5,5,3",
           "Tags": "",
           "Enabled": true,
@@ -3674,8 +3682,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "block-grass-overhang-large-slope-steep (3)",
-          "Position": "8209.7168,-769.850952,-338.426086",
-          "Rotation": "0,0,-0.965925813,0.258819103",
+          "Position": "1649.98291,1953.75403,-338.426086",
+          "Rotation": "0,0,-0.130526572,0.991444945",
           "Scale": "5,5,3",
           "Tags": "",
           "Enabled": true,
@@ -11107,7 +11115,7 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
+              "Billboard": "YOnly",
               "BlendMode": "Normal",
               "FogStrength": 0.7,
               "HorizontalAlignment": "Center",
@@ -16536,7 +16544,7 @@
           },
           "Scale": 1,
           "TextScope": {
-            "Text": "\uD83D\uDED1\uD83D\uDED1\uD83D\uDED1\nIf its your first time \ncheck out the Tutorial \non the left\n⬅⬅⬅",
+            "Text": "\nIf its your first time \ncheck out the Tutorial \non the left\n",
             "TextColor": "1.74884,0,0,1",
             "FontName": "Poppins",
             "FontSize": 136.76924,
@@ -16572,18 +16580,166 @@
             }
           },
           "VerticalAlignment": "Center"
-        },
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "c2b028c9-9adc-4a45-ab7d-cbeb4d61871a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "WASD Text (4)",
+      "Position": "-13225,320.000092,1397",
+      "Rotation": "0,0,1,-4.37113883E-08",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
         {
-          "__type": "TutorialHint",
-          "__guid": "19639f3c-8624-4e00-9a7f-d98e73b7a48a",
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "c7b43532-5f18-42e8-8043-7dd1dcd3c9c9",
           "__enabled": true,
           "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 0.49579832,
+          "HorizontalAlignment": "Center",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "\uD83D\uDED1\n",
+            "TextColor": "1.74884,0,0,0.07",
+            "FontName": "Poppins",
+            "FontSize": 450,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 16,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "b2b27cf6-31e5-4eb1-8b7e-7c4059471926",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "WASD Text (3)",
+      "Position": "-13184,320.000092,475",
+      "Rotation": "0,0,1,-4.37113883E-08",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "ab74aa27-77b4-4f0d-821c-df733df6df43",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 0.49579832,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "⬅",
+            "TextColor": "1.74884,0,0,1",
+            "FontName": "Poppins",
+            "FontSize": 800,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 16,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
         }
       ],
       "Children": []
@@ -20357,7 +20513,7 @@
               "IdValue": "574225c4-6a62-4d22-8553-f63be84cd34a"
             },
             "Property": "Position",
-            "Value": "-41702,-15113,1132"
+            "Value": "-41689.2227,-15126.3838,1132"
           },
           {
             "Target": {
@@ -73387,6 +73543,125 @@
           "Children": []
         },
         {
+          "__guid": "0686729c-cd1e-4eae-861d-769b99105dca",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keyboard_shift_outline (1)",
+          "Position": "-368.305267,-515.453857,682.941528",
+          "Rotation": "-0.237834886,0.477482796,-0.560379326,0.633577168",
+          "Scale": "2,2,2",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "b07697e7-2eb3-4eda-a9f5-0225bc410ec6",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Additive": false,
+              "AlphaCutoff": 0.1,
+              "Billboard": "None",
+              "Color": "1,1,1,0.73",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "IsSorted": false,
+              "Lighting": false,
+              "OnAnimationEnd": null,
+              "OnAnimationStart": null,
+              "OnBroadcastMessage": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": true,
+              "OverlayColor": "1,1,1,0",
+              "PlaybackSpeed": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Shadows": false,
+              "Size": "10,10",
+              "Sprite": {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "Animations": [
+                    {
+                      "Name": "Default",
+                      "FrameRate": 15,
+                      "Origin": "0.5,0.5",
+                      "LoopMode": "Loop",
+                      "LoopStart": -1,
+                      "LoopEnd": -1,
+                      "Frames": [
+                        {
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
+                          },
+                          "BroadcastMessages": []
+                        }
+                      ]
+                    }
+                  ],
+                  "__references": []
+                },
+                "compiled": null
+              },
+              "StartingAnimationName": "Default",
+              "TextureFilter": "Anisotropic"
+            }
+          ],
+          "Children": []
+        },
+        {
           "__guid": "c4b96de2-75c7-4e5c-9eb0-d0d91dfdb706",
           "__version": 2,
           "Flags": 0,
@@ -80139,6 +80414,82 @@
         {
           "__type": "Sandbox.BoxCollider",
           "__guid": "54995324-96f3-400f-a2d6-f10e857ec8e0",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "fa10cf1d-0b60-4f54-96d9-ea4572c69515",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "GlassCube (3)",
+      "Position": "-40670.1602,-14141.8643,1420.99951",
+      "Rotation": "0,0,0.559206128,0.829028428",
+      "Scale": "10.4469795,10.9799805,12.2651262",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "3163ed28-6336-4b26-bd89-4351ae95c206",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/primary_white_trans.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.51487,0.7987,0.93023,0.46"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "470d8e25-7f93-40ba-9d66-2653ef6b0ad4",
           "__enabled": true,
           "Flags": 0,
           "Center": "0,0,0",

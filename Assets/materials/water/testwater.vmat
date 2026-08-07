@@ -1,6 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
 
 Layer0
 {
-	shader "materials/water/testwater.shader_c"
+	shader "materials/water/testwater.shader"
 
+	Texture_ps_0 "materials/water/sea.color.png"
+	Texture_ps_2 "materials/water/water.normal.pillow.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
 }
