@@ -340,367 +340,7 @@
       "__version": 2,
       "__Prefab": "prefabs/newcar.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "284d7e3f-2bfa-4604-bb03-f8dcb3167675"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-            },
-            "PreviousElement": {
-              "Type": "GameObject",
-              "IdValue": "d99c5624-654f-4b0e-9fb7-b6a36f410f0d"
-            },
-            "ContainerProperty": "Children",
-            "IsContainerArray": true,
-            "Data": {
-              "__guid": "284d7e3f-2bfa-4604-bb03-f8dcb3167675",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "Rearlight",
-              "Position": "77.562973,-4.5616398E-06,105.630295",
-              "Rotation": "-4.79013309E-08,-0.382683158,1.45207395E-07,-0.923879743",
-              "Scale": "1,1,1",
-              "Tags": "light_spot,light",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": []
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "67176dc4-9bdd-445b-8c09-e61d24567eaa"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "284d7e3f-2bfa-4604-bb03-f8dcb3167675"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "67176dc4-9bdd-445b-8c09-e61d24567eaa",
-              "__enabled": true,
-              "Flags": 0,
-              "Attenuation": 0.5,
-              "ConeInner": 5,
-              "ConeOuter": 20,
-              "Contribution": "Diffuse, Specular, Transmissive",
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "150,36.97675,36.97675,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 5000,
-              "ShadowBias": 0.0005,
-              "ShadowHardness": 0,
-              "Shadows": true
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "70f8123b-ea68-4e83-a622-40b7b8fdbc1c"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "284d7e3f-2bfa-4604-bb03-f8dcb3167675"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Children",
-            "IsContainerArray": true,
-            "Data": {
-              "__guid": "70f8123b-ea68-4e83-a622-40b7b8fdbc1c",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "Licht",
-              "Position": "-9.2486496,-5.88473813E-06,7.60146809",
-              "Rotation": "0.653281391,0.65328145,0.270598203,0.270597935",
-              "Scale": "1.5,1,0.750000238",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": []
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "758dc18a-d7cb-4f81-83c8-698623955ac3"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "70f8123b-ea68-4e83-a622-40b7b8fdbc1c"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "758dc18a-d7cb-4f81-83c8-698623955ac3",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "CreateAttachments": false,
-              "LodOverride": null,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Materials": null,
-              "Model": "models/graveyard kit/lantern-glass.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "Off",
-              "Tint": "1,0,0,1"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "edf94095-896a-4457-af33-7a8bd10f6398"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "003c4b3e-6884-43a6-afb4-bc92f479632d"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Children",
-            "IsContainerArray": true,
-            "Data": {
-              "__guid": "edf94095-896a-4457-af33-7a8bd10f6398",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "Hitmarker",
-              "Position": "0,0,0",
-              "Rotation": "0,0,0,1",
-              "Scale": "1,1,1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": []
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "028231be-5034-4f75-be7a-1da5f3fad249"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "edf94095-896a-4457-af33-7a8bd10f6398"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "Sandbox.SpriteRenderer",
-              "__guid": "028231be-5034-4f75-be7a-1da5f3fad249",
-              "__enabled": false,
-              "Flags": 0,
-              "__version": 2,
-              "Additive": false,
-              "AlphaCutoff": 0.5,
-              "Billboard": "Always",
-              "Color": "1,1,1,1",
-              "DepthFeather": 0,
-              "FlipHorizontal": false,
-              "FlipVertical": false,
-              "FogStrength": 1,
-              "IsSorted": false,
-              "Lighting": false,
-              "OnAnimationEnd": null,
-              "OnAnimationStart": null,
-              "OnBroadcastMessage": null,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Opaque": false,
-              "OverlayColor": "1,1,1,0",
-              "PlaybackSpeed": 1,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "Shadows": false,
-              "Size": "10,10",
-              "Sprite": {
-                "$compiler": "embed",
-                "$source": null,
-                "data": {
-                  "Animations": [
-                    {
-                      "Name": "Default",
-                      "FrameRate": 15,
-                      "Origin": "0.5,0.5",
-                      "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
-                      "Frames": [
-                        {
-                          "Texture": null,
-                          "BroadcastMessages": []
-                        }
-                      ]
-                    }
-                  ],
-                  "__references": null
-                },
-                "compiled": null
-              },
-              "StartingAnimationName": "Default",
-              "TextureFilter": "Bilinear"
-            }
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "292fcc40-0d26-492a-9e1b-ed249375dc28"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "003c4b3e-6884-43a6-afb4-bc92f479632d"
-            },
-            "PreviousElement": {
-              "Type": "GameObject",
-              "IdValue": "edf94095-896a-4457-af33-7a8bd10f6398"
-            },
-            "ContainerProperty": "Children",
-            "IsContainerArray": true,
-            "Data": {
-              "__guid": "292fcc40-0d26-492a-9e1b-ed249375dc28",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "TargetCrosshair",
-              "Position": "0,0,0",
-              "Rotation": "0,0,0,1",
-              "Scale": "1,1,1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": []
-            }
-          },
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "232e03ba-2294-42f8-8146-06d487680553"
-            },
-            "Parent": {
-              "Type": "GameObject",
-              "IdValue": "292fcc40-0d26-492a-9e1b-ed249375dc28"
-            },
-            "PreviousElement": null,
-            "ContainerProperty": "Components",
-            "IsContainerArray": true,
-            "Data": {
-              "__type": "Sandbox.SpriteRenderer",
-              "__guid": "232e03ba-2294-42f8-8146-06d487680553",
-              "__enabled": false,
-              "Flags": 0,
-              "__version": 2,
-              "Additive": false,
-              "AlphaCutoff": 0.1,
-              "Billboard": "Always",
-              "Color": "1,1,1,1",
-              "DepthFeather": 0,
-              "FlipHorizontal": false,
-              "FlipVertical": false,
-              "FogStrength": 0,
-              "IsSorted": false,
-              "Lighting": false,
-              "OnAnimationEnd": null,
-              "OnAnimationStart": null,
-              "OnBroadcastMessage": null,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Opaque": true,
-              "OverlayColor": "1,1,1,1",
-              "PlaybackSpeed": 1,
-              "RenderOptions": {
-                "GameLayer": false,
-                "OverlayLayer": true,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "Shadows": false,
-              "Size": "75,75",
-              "Sprite": {
-                "$compiler": "embed",
-                "$source": null,
-                "data": {
-                  "Animations": [
-                    {
-                      "Name": "Default",
-                      "FrameRate": 15,
-                      "Origin": "0.5,0.5",
-                      "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
-                      "Frames": [
-                        {
-                          "Texture": null,
-                          "BroadcastMessages": []
-                        }
-                      ]
-                    }
-                  ],
-                  "__references": []
-                },
-                "compiled": null
-              },
-              "StartingAnimationName": "Default",
-              "TextureFilter": "Anisotropic"
-            }
-          }
-        ],
+        "AddedObjects": [],
         "RemovedObjects": [
           {
             "Id": {
@@ -783,38 +423,6 @@
           {
             "Target": {
               "Type": "Component",
-              "IdValue": "1186ee3b-6c21-4ebb-be4d-b2dc4d4cd88f"
-            },
-            "Property": "BeamLifetime",
-            "Value": 0.050000012
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "70fcb6ea-607e-4f08-b361-918478dc2f77"
-            },
-            "Property": "LightColor",
-            "Value": "300,266.093,73.95349,1"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "b8b1bdca-f16f-4ac3-aaac-c08cb1cb3d5d"
-            },
-            "Property": "LightColor",
-            "Value": "300,266.093,73.95349,1"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "0c78e7a4-23ce-4983-9223-965dc7f8e352"
-            },
-            "Property": "__enabled",
-            "Value": false
-          },
-          {
-            "Target": {
-              "Type": "Component",
               "IdValue": "0c78e7a4-23ce-4983-9223-965dc7f8e352"
             },
             "Property": "Sprite",
@@ -832,7 +440,44 @@
                     "LoopEnd": -1,
                     "Frames": [
                       {
-                        "Texture": null,
+                        "Texture": {
+                          "$compiler": "texture",
+                          "$source": "imagefile",
+                          "data": {
+                            "FilePath": "sprites/crosshairpng/light (2×)/crosshair-027.png",
+                            "MaxSize": 4096,
+                            "ConvertHeightToNormals": false,
+                            "NormalScale": 1,
+                            "Rotate": 0,
+                            "FlipVertical": false,
+                            "FlipHorizontal": false,
+                            "Cropping": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "Padding": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Right": 0,
+                              "Bottom": 0
+                            },
+                            "InvertColor": false,
+                            "Tint": "1,1,1,1",
+                            "Blur": 0,
+                            "Sharpen": 0,
+                            "Brightness": 1,
+                            "Contrast": 1,
+                            "Saturation": 1,
+                            "Hue": 0,
+                            "Colorize": false,
+                            "TargetColor": "1,1,1,1",
+                            "CacheToDisk": true,
+                            "FormatOverride": "RGBA8888"
+                          },
+                          "compiled": "textures/generated/imagefile/9c9d63a0be11f295.vtex"
+                        },
                         "BroadcastMessages": []
                       }
                     ]
@@ -857,22 +502,6 @@
             "NewContainerProperty": "Children",
             "IsNewContainerArray": true,
             "NewPreviousElement": null
-          },
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "f17ce882-9639-4677-b7eb-013015d7e7a0"
-            },
-            "NewParent": {
-              "Type": "GameObject",
-              "IdValue": "04875a1e-ce23-4f83-871e-ae2ac363593f"
-            },
-            "NewContainerProperty": "Children",
-            "IsNewContainerArray": true,
-            "NewPreviousElement": {
-              "Type": "GameObject",
-              "IdValue": "284d7e3f-2bfa-4604-bb03-f8dcb3167675"
-            }
           }
         ]
       },
@@ -12454,13 +12083,38 @@
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
-          "Enabled": false,
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkFlags": 0,
           "NetworkOrphaned": 0,
           "NetworkTransmit": true,
           "OwnerTransfer": 1,
-          "Components": [],
+          "Components": [
+            {
+              "__type": "TutorialHint",
+              "__guid": "207df28b-ef36-4baa-b4cc-7b446e20efdc",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            },
+            {
+              "__type": "UIHint",
+              "__guid": "58b6b1b3-7817-41ac-a840-03983dc2b569",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
           "Children": []
         }
       ]
@@ -13543,13 +13197,13 @@
       "Children": []
     },
     {
-      "__guid": "2fd4a0b7-82e0-4e9a-93b8-ced1c8893186",
+      "__guid": "9526dbc3-e201-47dd-9721-1885fc6f204f",
       "__version": 2,
       "Flags": 0,
-      "Name": "DA GROUND (1)",
-      "Position": "-22144,-8460.96875,64",
-      "Rotation": "0,0,0,1",
-      "Scale": "2.4000001,2.20000005,1",
+      "Name": "DA GROUND",
+      "Position": "-29944.6641,-8432.1543,63.9999962",
+      "Rotation": "0,0,0.258819044,0.965925813",
+      "Scale": "4.48000002,2.6899991,1",
       "Tags": "world",
       "Enabled": true,
       "NetworkMode": 2,
@@ -13560,19 +13214,19 @@
       "Components": [
         {
           "__type": "Sandbox.MeshComponent",
-          "__guid": "50051f63-9d89-4c2c-b231-65aad2469cd0",
+          "__guid": "4377c259-816b-4b1d-ad6f-e3ee80c58c36",
           "__enabled": true,
           "Flags": 0,
           "ColliderFlags": 0,
           "Collision": "Hull",
-          "Color": "0.11376,0.16744,0.09891,1",
+          "Color": "0.79535,0.27837,0,1",
           "Elasticity": null,
           "Friction": null,
           "HideInGame": false,
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "e68feb0c-5585-8fe9-b769-468af4b45764"
+              "$blob": "f2fcf642-d6d9-8676-aefa-620867089c5e"
             },
             "Materials": [
               "materials/dev/green.vmat",
@@ -13885,8 +13539,12 @@
           "IsTrigger": false,
           "Mesh": {
             "Data": {
-              "$blob": "8cff326c-251f-8c33-8a82-51d132c7c24f"
-            }
+              "$blob": "f2fcf642-d6d9-8676-aefa-620867089c5e"
+            },
+            "Materials": [
+              "materials/dev/green.vmat",
+              "materials/dev/reflectivity_30.vmat"
+            ]
           },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -16842,7 +16500,7 @@
       "__guid": "07dd51ae-01ba-456e-887d-e168e3d9970d",
       "__version": 2,
       "Flags": 0,
-      "Name": "PLAY TUTORIAL",
+      "Name": "WASD Text",
       "Position": "-13184,320.000092,928",
       "Rotation": "0,0,1,-4.37113883E-08",
       "Scale": "1,1,1",
@@ -16914,6 +16572,18 @@
             }
           },
           "VerticalAlignment": "Center"
+        },
+        {
+          "__type": "TutorialHint",
+          "__guid": "19639f3c-8624-4e00-9a7f-d98e73b7a48a",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -17419,7 +17089,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/eba87c6d4cc9b.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73699,7 +73369,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73818,7 +73488,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/e3226ff36483c2c9.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -73937,7 +73607,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/cb67bf00136b6a75.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74174,7 +73844,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/be551191bac3abf8.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74293,7 +73963,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/a66d56ee5fb4bf3a.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74393,12 +74063,12 @@
       ]
     },
     {
-      "__guid": "0a92c091-4a5b-4653-be5e-1f170d7fc18c",
+      "__guid": "eaefa51d-a2d9-455a-aa61-3f485b095403",
       "__version": 2,
       "Flags": 0,
       "Name": "Controls (1)",
-      "Position": "-29440,-3008,160",
-      "Rotation": "-0.129409567,-0.482962936,-0.224143937,0.836516321",
+      "Position": "-29472,-3392,160",
+      "Rotation": "-0.129409939,-0.482962817,-0.224144578,0.836516082",
       "Scale": "30,30,30",
       "Tags": "",
       "Enabled": true,
@@ -74410,11 +74080,11 @@
       "Components": [],
       "Children": [
         {
-          "__guid": "9700aadb-6a0a-4d90-a410-160235be5c01",
+          "__guid": "50f350cf-90a1-4790-a9dd-def3e964e2fd",
           "__version": 2,
           "Flags": 0,
           "Name": "keyboard_shift_outline",
-          "Position": "0,0,0",
+          "Position": "0.461880207,0,0.266666621",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -74427,7 +74097,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "ac48057b-9591-4c59-b21e-7132a48c0c01",
+              "__guid": "c36b42ef-c5f8-4d16-837e-94f30d5a0fb0",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74511,7 +74181,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/8ee2b6c7dd6996d6.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74529,7 +74199,7 @@
           "Children": []
         },
         {
-          "__guid": "687e1dec-c861-4eb5-b621-bacd67204323",
+          "__guid": "3daaaa95-96c2-4db9-9d86-1c891b5d1a18",
           "__version": 2,
           "Flags": 0,
           "Name": "A_key_sprite",
@@ -74546,7 +74216,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "b960cc5e-d43f-4f8a-8050-839d0e15bc53",
+              "__guid": "b3f2d721-3f69-43b5-adc1-40ffb2049bea",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74630,7 +74300,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/e3226ff36483c2c9.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74648,7 +74318,7 @@
           "Children": []
         },
         {
-          "__guid": "ce19940f-d8ff-43be-a86e-78e16bfde64a",
+          "__guid": "d544582d-8b9d-4a6f-84d4-d297abf1fdd2",
           "__version": 2,
           "Flags": 0,
           "Name": "D_key_sprite",
@@ -74665,7 +74335,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "2af40333-eb3b-493c-98b7-0733af77d424",
+              "__guid": "2ce78bf1-3ee4-44c5-b974-d03d7b88ab64",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74749,7 +74419,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/cb67bf00136b6a75.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -74767,7 +74437,7 @@
           "Children": []
         },
         {
-          "__guid": "b7b376d0-7bc5-4bc0-abf6-af39d5bdc13b",
+          "__guid": "08d9d527-36aa-4932-91a1-f9d15e30b8ec",
           "__version": 2,
           "Flags": 0,
           "Name": "S_key_sprite",
@@ -74784,7 +74454,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "32947c1d-9cef-4c82-abf9-38558373a10e",
+              "__guid": "8e812d32-faca-4590-9fd4-7320efcc95b1",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74885,7 +74555,7 @@
           "Children": []
         },
         {
-          "__guid": "2f7e9e42-32b4-4cd7-83b7-efa929a69e3f",
+          "__guid": "a0ce257f-0649-48a7-abee-9ae27f492d6b",
           "__version": 2,
           "Flags": 0,
           "Name": "W_key_sprite",
@@ -74902,7 +74572,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "88472c63-6d88-4b3a-a3a1-71a71f007ca7",
+              "__guid": "6e0ad53c-5553-4488-adb9-9f051dc48310",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74986,7 +74656,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/be551191bac3abf8.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -75004,7 +74674,7 @@
           "Children": []
         },
         {
-          "__guid": "c770ae70-4398-4f4e-b0b2-c24edcfac684",
+          "__guid": "0315bf31-d80d-4217-8907-3fc6fe1fce71",
           "__version": 2,
           "Flags": 0,
           "Name": "mouse_move",
@@ -75021,7 +74691,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "0c8546c9-3967-4b10-a0d3-8159c9f0bc25",
+              "__guid": "1372b2cc-62b4-495e-8a27-e8423d3277a2",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -75105,7 +74775,7 @@
                               "CacheToDisk": true,
                               "FormatOverride": "RGBA8888"
                             },
-                            "compiled": null
+                            "compiled": "textures/generated/imagefile/a66d56ee5fb4bf3a.vtex"
                           },
                           "BroadcastMessages": []
                         }
@@ -75123,11 +74793,11 @@
           "Children": []
         },
         {
-          "__guid": "8fbc7add-bd2d-4fe7-96d1-13b3ace735a5",
+          "__guid": "ffba3184-9e4a-41cb-8d83-56db7ab4aa3f",
           "__version": 2,
           "Flags": 0,
           "Name": "Text",
-          "Position": "-0.167372644,20.800169,18.2104073",
+          "Position": "0.328932703,20.800169,18.4969387",
           "Rotation": "-0.382683873,-3.51487074E-07,-0.923879802,-4.33704827E-07",
           "Scale": "0.0333333351,0.0333333351,0.0333333351",
           "Tags": "",
@@ -75140,7 +74810,7 @@
           "Components": [
             {
               "__type": "Sandbox.TextRenderer",
-              "__guid": "17cc7502-959d-4423-87ee-5a4b092837b6",
+              "__guid": "e0201648-60b4-4253-b40a-46beee2ad342",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
