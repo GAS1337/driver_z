@@ -5,7 +5,8 @@
 @namespace Sandbox
 
 <root>
-    <div class="crosshair @(PlayerGun.IsTargetingEnemy ? "on-target" : "") @(PlayerGun.SinceShot < 0.1f ? "on-shot" : "") "></div>
+    <div class="crosshair @(PlayerGun.IsTargetingEnemy ? "on-target" : "")" 
+        style="transform: translate(-50%, -50%) scale(@PlayerGun.SinceShot.Relative.Remap(0f, 0.1f, 1.3f, 1f));"></div>
     <div class="hitmarker @(PlayerGun.IsHitmarkerActive ? "active" : "")"></div>
 	<div class="multiplier-dial @(HighscoreManager.CalculateMultiplier() > 1.4f ? "on-fire" : "")">
         <div class="multiplier-needle" 
@@ -156,7 +157,7 @@
         hash.Add(PlayerGun.CurrentRockets);
         hash.Add(PlayerGun.IsTargetingEnemy);
         hash.Add(PlayerGun.IsHitmarkerActive);
-        hash.Add(PlayerGun.SinceShot);
+        hash.Add(PlayerGun.SinceShot.Relative);
 
         return hash.ToHashCode(); 
     }

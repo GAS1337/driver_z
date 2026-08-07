@@ -340,8 +340,6 @@
             "__enabled": true,
             "Flags": 0,
             "__version": 1,
-            "Filter": "Bilinear",
-            "Gamma": 2.2,
             "Mode": "Additive",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -1863,7 +1861,7 @@
               {
                 "__guid": "b473f506-c727-4b3a-9198-4f7bf9f6ac38",
                 "__version": 2,
-                "Flags": 4,
+                "Flags": 0,
                 "Name": "AnchorBone",
                 "Position": "0,0,0",
                 "Rotation": "0,0,0,1",
@@ -1880,7 +1878,7 @@
                   {
                     "__guid": "cb26fefa-ccc6-48bd-a5f2-2859195549d5",
                     "__version": 2,
-                    "Flags": 4,
+                    "Flags": 0,
                     "Name": "MiddleLinkBone",
                     "Position": "0,0,0",
                     "Rotation": "0,0,0,1",
@@ -1897,7 +1895,7 @@
                       {
                         "__guid": "3da1ebb2-0343-4e13-8b8a-f80294e82890",
                         "__version": 2,
-                        "Flags": 4,
+                        "Flags": 0,
                         "Name": "BottomLinkBone",
                         "Position": "0,0,0",
                         "Rotation": "0,0,0,1",
@@ -1914,7 +1912,7 @@
                           {
                             "__guid": "8177a266-fa76-4019-8299-51af6200dde3",
                             "__version": 2,
-                            "Flags": 4,
+                            "Flags": 0,
                             "Name": "LanternBone",
                             "Position": "0,0,0",
                             "Rotation": "0,0,0,1",
@@ -2283,6 +2281,8 @@
                                     "FrameRate": 15,
                                     "Origin": "0.5,0.5",
                                     "LoopMode": "Loop",
+                                    "LoopStart": -1,
+                                    "LoopEnd": -1,
                                     "Frames": [
                                       {
                                         "Texture": "textures/shapes/splotch1.vtex",
@@ -2385,6 +2385,8 @@
                                     "FrameRate": 15,
                                     "Origin": "0.5,0.5",
                                     "LoopMode": "Loop",
+                                    "LoopStart": -1,
+                                    "LoopEnd": -1,
                                     "Frames": [
                                       {
                                         "Texture": {
@@ -3636,6 +3638,8 @@
                         "FrameRate": 15,
                         "Origin": "0.5,0.5",
                         "LoopMode": "Loop",
+                        "LoopStart": -1,
+                        "LoopEnd": -1,
                         "Frames": [
                           {
                             "Texture": null,
@@ -4026,6 +4030,8 @@
                         "FrameRate": 15,
                         "Origin": "0.5,0.5",
                         "LoopMode": "Loop",
+                        "LoopStart": -1,
+                        "LoopEnd": -1,
                         "Frames": [
                           {
                             "Texture": "textures/particles/smoke/smoke_loop_a.vtex",
@@ -4155,7 +4161,7 @@
         "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "",
-        "Enabled": true,
+        "Enabled": false,
         "NetworkMode": 2,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
@@ -4208,6 +4214,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": "textures/shapes/ring-dot1.vtex",
@@ -4232,6 +4240,8 @@
             "AttenuationAngle": 0.1,
             "ColorMix": 1,
             "ColorTint": "150,0,0,1",
+            "CoverageAmount": 1,
+            "CoverageRange": 0.07,
             "Decals": [
               "decals/circle.decal"
             ],

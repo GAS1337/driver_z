@@ -17383,7 +17383,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_left.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -73626,7 +73663,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -73708,7 +73782,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -73790,7 +73901,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -73990,7 +74138,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74072,7 +74257,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74171,12 +74393,12 @@
       ]
     },
     {
-      "__guid": "eaefa51d-a2d9-455a-aa61-3f485b095403",
+      "__guid": "0a92c091-4a5b-4653-be5e-1f170d7fc18c",
       "__version": 2,
       "Flags": 0,
       "Name": "Controls (1)",
-      "Position": "-29472,-3392,160",
-      "Rotation": "-0.129409939,-0.482962817,-0.224144578,0.836516082",
+      "Position": "-29440,-3008,160",
+      "Rotation": "-0.129409567,-0.482962936,-0.224143937,0.836516321",
       "Scale": "30,30,30",
       "Tags": "",
       "Enabled": true,
@@ -74188,11 +74410,11 @@
       "Components": [],
       "Children": [
         {
-          "__guid": "50f350cf-90a1-4790-a9dd-def3e964e2fd",
+          "__guid": "9700aadb-6a0a-4d90-a410-160235be5c01",
           "__version": 2,
           "Flags": 0,
           "Name": "keyboard_shift_outline",
-          "Position": "0.461880207,0,0.266666621",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -74205,7 +74427,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "c36b42ef-c5f8-4d16-837e-94f30d5a0fb0",
+              "__guid": "ac48057b-9591-4c59-b21e-7132a48c0c01",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74253,7 +74475,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_shift_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74270,7 +74529,7 @@
           "Children": []
         },
         {
-          "__guid": "3daaaa95-96c2-4db9-9d86-1c891b5d1a18",
+          "__guid": "687e1dec-c861-4eb5-b621-bacd67204323",
           "__version": 2,
           "Flags": 0,
           "Name": "A_key_sprite",
@@ -74287,7 +74546,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "b3f2d721-3f69-43b5-adc1-40ffb2049bea",
+              "__guid": "b960cc5e-d43f-4f8a-8050-839d0e15bc53",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74335,7 +74594,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_a_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74352,7 +74648,7 @@
           "Children": []
         },
         {
-          "__guid": "d544582d-8b9d-4a6f-84d4-d297abf1fdd2",
+          "__guid": "ce19940f-d8ff-43be-a86e-78e16bfde64a",
           "__version": 2,
           "Flags": 0,
           "Name": "D_key_sprite",
@@ -74369,7 +74665,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "2ce78bf1-3ee4-44c5-b974-d03d7b88ab64",
+              "__guid": "2af40333-eb3b-493c-98b7-0733af77d424",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74417,7 +74713,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_d_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74434,7 +74767,7 @@
           "Children": []
         },
         {
-          "__guid": "08d9d527-36aa-4932-91a1-f9d15e30b8ec",
+          "__guid": "b7b376d0-7bc5-4bc0-abf6-af39d5bdc13b",
           "__version": 2,
           "Flags": 0,
           "Name": "S_key_sprite",
@@ -74451,7 +74784,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "8e812d32-faca-4590-9fd4-7320efcc95b1",
+              "__guid": "32947c1d-9cef-4c82-abf9-38558373a10e",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74552,7 +74885,7 @@
           "Children": []
         },
         {
-          "__guid": "a0ce257f-0649-48a7-abee-9ae27f492d6b",
+          "__guid": "2f7e9e42-32b4-4cd7-83b7-efa929a69e3f",
           "__version": 2,
           "Flags": 0,
           "Name": "W_key_sprite",
@@ -74569,7 +74902,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "6e0ad53c-5553-4488-adb9-9f051dc48310",
+              "__guid": "88472c63-6d88-4b3a-a3a1-71a71f007ca7",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74617,7 +74950,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/keyboard_w_outline.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74634,7 +75004,7 @@
           "Children": []
         },
         {
-          "__guid": "0315bf31-d80d-4217-8907-3fc6fe1fce71",
+          "__guid": "c770ae70-4398-4f4e-b0b2-c24edcfac684",
           "__version": 2,
           "Flags": 0,
           "Name": "mouse_move",
@@ -74651,7 +75021,7 @@
           "Components": [
             {
               "__type": "Sandbox.SpriteRenderer",
-              "__guid": "1372b2cc-62b4-495e-8a27-e8423d3277a2",
+              "__guid": "0c8546c9-3967-4b10-a0d3-8159c9f0bc25",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -74699,7 +75069,44 @@
                       "LoopEnd": -1,
                       "Frames": [
                         {
-                          "Texture": null,
+                          "Texture": {
+                            "$compiler": "texture",
+                            "$source": "imagefile",
+                            "data": {
+                              "FilePath": "sprites/input-promtps-kenney/mouse_move.png",
+                              "MaxSize": 4096,
+                              "ConvertHeightToNormals": false,
+                              "NormalScale": 1,
+                              "Rotate": 0,
+                              "FlipVertical": false,
+                              "FlipHorizontal": false,
+                              "Cropping": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "Padding": {
+                                "Left": 0,
+                                "Top": 0,
+                                "Right": 0,
+                                "Bottom": 0
+                              },
+                              "InvertColor": false,
+                              "Tint": "1,1,1,1",
+                              "Blur": 0,
+                              "Sharpen": 0,
+                              "Brightness": 1,
+                              "Contrast": 1,
+                              "Saturation": 1,
+                              "Hue": 0,
+                              "Colorize": false,
+                              "TargetColor": "1,1,1,1",
+                              "CacheToDisk": true,
+                              "FormatOverride": "RGBA8888"
+                            },
+                            "compiled": null
+                          },
                           "BroadcastMessages": []
                         }
                       ]
@@ -74716,11 +75123,11 @@
           "Children": []
         },
         {
-          "__guid": "ffba3184-9e4a-41cb-8d83-56db7ab4aa3f",
+          "__guid": "8fbc7add-bd2d-4fe7-96d1-13b3ace735a5",
           "__version": 2,
           "Flags": 0,
           "Name": "Text",
-          "Position": "0.328932703,20.800169,18.4969387",
+          "Position": "-0.167372644,20.800169,18.2104073",
           "Rotation": "-0.382683873,-3.51487074E-07,-0.923879802,-4.33704827E-07",
           "Scale": "0.0333333351,0.0333333351,0.0333333351",
           "Tags": "",
@@ -74733,7 +75140,7 @@
           "Components": [
             {
               "__type": "Sandbox.TextRenderer",
-              "__guid": "e0201648-60b4-4253-b40a-46beee2ad342",
+              "__guid": "17cc7502-959d-4423-87ee-5a4b092837b6",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
