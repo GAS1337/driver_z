@@ -1,13 +1,16 @@
 {
   "UI": false,
   "Volume": "1",
-  "Pitch": "0.75000024 1",
+  "Pitch": "0.750000238 1",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
     "sounds/mediumexplosion.vsnd"
   ],
+  "OcclusionEnabled": true,
   "Occlusion": true,
+  "ReverbEnabled": true,
+  "Reflections": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
@@ -22,15 +25,15 @@
       "mode": "Mirrored"
     },
     {
-      "x": 0.05,
-      "y": 0.22,
-      "in": 3.5,
-      "out": -3.5,
+      "x": 0.2171875,
+      "y": 0.3088889,
+      "in": 0.96623355,
+      "out": -0.96623355,
       "mode": "Mirrored"
     },
     {
-      "x": 0.2,
-      "y": 0.04,
+      "x": 0.6640625,
+      "y": 0.13999999,
       "in": 0.16,
       "out": -0.16,
       "mode": "Mirrored"

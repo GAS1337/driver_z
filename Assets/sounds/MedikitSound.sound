@@ -1,7 +1,7 @@
 {
   "UI": false,
-  "Volume": "0.5",
-  "Pitch": "0.7000003 0.85000014",
+  "Volume": "0.659999847",
+  "Pitch": "0.700000286 0.850000143",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
@@ -10,7 +10,10 @@
     "sounds/kenney/ui/confirmation_003.vsnd",
     "sounds/kenney/ui/confirmation_004.vsnd"
   ],
+  "OcclusionEnabled": true,
   "Occlusion": true,
+  "ReverbEnabled": true,
+  "Reflections": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,

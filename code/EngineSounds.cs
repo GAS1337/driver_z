@@ -19,6 +19,8 @@ public sealed class EngineSounds : Component
 
 	float reifenSpeed;
 
+	TimeSince SinceSoundRestart;
+
 	protected override void OnStart()
 	{
 		WheelController = GameObject.GetComponent<WheelController>();
@@ -48,17 +50,19 @@ public sealed class EngineSounds : Component
 
 	protected override void OnUpdate()
 	{
+
 		// Reifen Speed Durchschitt
 		reifenSpeed = (WheelController.RearLeft.SpinSpeed + WheelController.RearRight.SpinSpeed + WheelController.FrontLeft.SpinSpeed + WheelController.FrontRight.SpinSpeed) * 0.25f;
 
 		idleHandle.Volume = CarBody.Velocity.Length.Remap(0, 3600, 0.2f, 0.4f);
 		//gasHandle.Volume = reifenSpeed.Remap( 100, 3000, 0.1f, 1 );
-		vollGasHandle.Volume = CarBody.Velocity.Length.Remap( 2000, 3600, 0, 0.6f );
+		vollGasHandle.Volume = CarBody.Velocity.Length.Remap( 2000, 3200, 0, 0.6f );
 		reifenHandle.Volume = CarBody.Velocity.Length.Remap( 100, 3000, 0, 0.5f );
 
 		idleHandle.Pitch = CarBody.Velocity.Length.Remap( 1000, 3600, 0.8f, 1.6f );
 		// gasHandle.Pitch = reifenSpeed.Remap( 100, 3000, 0.1f, 1 );
-		vollGasHandle.Pitch = CarBody.Velocity.Length.Remap( 2000, 3600, 0.8f, 1.2f );
+		vollGasHandle.Pitch = CarBody.Velocity.Length.Remap( 2000, 3200, 0.8f, 1.2f );
 		// reifenHandle.Pitch = reifenSpeed.Remap( 100, 6000, 0, 1 );
 	}
+
 }

@@ -1,6 +1,6 @@
 {
   "UI": false,
-  "Volume": "0.280000001",
+  "Volume": "0.200000003",
   "Pitch": "0.920000017 1.00999999",
   "Decibels": 70,
   "SelectionMode": "Random",
@@ -8,7 +8,10 @@
     "sounds/gunsounds/mutantcannonv3.vsnd",
     "sounds/gunsounds/mutantcannonv4.vsnd"
   ],
+  "OcclusionEnabled": true,
   "Occlusion": true,
+  "ReverbEnabled": true,
+  "Reflections": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,
