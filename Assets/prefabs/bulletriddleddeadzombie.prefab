@@ -1,0 +1,554 @@
+{
+  "RootObject": {
+    "__guid": "16197375-e316-44f1-b2ef-25835067f8b9",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "BulletRiddledDeadZombie",
+    "Position": "0,0,0",
+    "Rotation": "-0.548663139,-0.445709765,-0.532257199,0.465847313",
+    "Scale": "0.899999976,0.899999976,0.899999976",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "c9926a4a-39b8-451c-a843-0b8d1938350a",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "char-zombie (4)",
+        "Position": "0,0,-1.65568466E-08",
+        "Rotation": "-1.49011612E-08,0,-1.49011612E-08,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "1fa7b6af-b96e-44a6-8d02-3920a6659e45",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/characters/char-zombie.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "0.67907,0.67907,0.67907,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "f05990f4-f39b-4488-b004-9f9f5c491351",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (6)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "30.119091,-23.0425816,172.81662"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "0.493850559,0.505711079,0.494990855,0.505323768"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "f05990f4-f39b-4488-b004-9f9f5c491351",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "01b9f1d4-f919-454a-88ff-838d9a8e3663"
+        }
+      },
+      {
+        "__guid": "ca5c688d-6443-472a-b11b-e9030c65eca4",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (10)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "40.686451,-6.85811806,227.514221"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "-0.178658605,0.695874572,-0.21054101,0.662957251"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "ca5c688d-6443-472a-b11b-e9030c65eca4",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "313f35a1-f48d-43f6-9809-e0cd16fe30e2"
+        }
+      },
+      {
+        "__guid": "c8811086-3074-4f63-a1ae-5f6f54972f71",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (11)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "41.4573669,14.565896,253.731216"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "-0.555521011,0.430610687,-0.592593908,0.393450677"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "c8811086-3074-4f63-a1ae-5f6f54972f71",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "00f7354a-e23d-4eb4-8369-768b4ccf3dc3"
+        }
+      },
+      {
+        "__guid": "2ee7d799-04d8-419c-90bb-364a8f69b024",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (12)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "41.710186,20.6225357,205.168716"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "0.68850553,0.0842276588,0.71232605,0.107039928"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "2ee7d799-04d8-419c-90bb-364a8f69b024",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "44dedcae-9e4a-47bc-bbb5-bae588bd6fbc"
+        }
+      },
+      {
+        "__guid": "059492eb-6f2a-42f5-ab7b-a66b5b85acd1",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (9)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "10.9893064,-59.7318268,159.609985"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "-0.178658605,0.695874572,-0.21054101,0.662957251"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "059492eb-6f2a-42f5-ab7b-a66b5b85acd1",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "b9dbbbb8-ce7a-4a3b-bf8e-73783919c8eb"
+        }
+      },
+      {
+        "__guid": "3f177bd9-ec98-4ec3-9aa1-6163ef2a88c2",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (13)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "11.1457739,64.7506256,112.179893"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "0.68850553,0.0842276588,0.71232605,0.107039928"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "3f177bd9-ec98-4ec3-9aa1-6163ef2a88c2",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "b6020354-db42-4aae-93f9-b78d880b6cc3"
+        }
+      },
+      {
+        "__guid": "ab20448e-cd4d-4e0f-be13-fd56cb43d704",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (7)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "30.4423046,-15.1419201,120.061012"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "-0.682258546,0.127300546,-0.713410258,0.0967672467"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "ab20448e-cd4d-4e0f-be13-fd56cb43d704",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "c9c05a40-dcff-4d79-a275-bdf7bd889398"
+        }
+      },
+      {
+        "__guid": "9eb43165-aa54-4088-9d60-b54379c7a843",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (14)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "20.1203804,5.73778486,72.8345795"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "0.68850553,0.0842276588,0.71232605,0.107039928"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "9eb43165-aa54-4088-9d60-b54379c7a843",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "e3bf9005-dd2d-4e30-9658-bd040bd0fe7b"
+        }
+      },
+      {
+        "__guid": "275a3340-5772-4d49-b9c1-3831fceccbd9",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (15)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "20.1246834,-25.1422405,29.2228737"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "0.0902461633,0.714200735,0.0681889355,0.690741062"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "275a3340-5772-4d49-b9c1-3831fceccbd9",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "be759e04-412a-49e5-b2b2-866118553db8"
+        }
+      },
+      {
+        "__guid": "1144fe0f-668a-4061-b8e9-1a4fc1d46c03",
+        "__version": 2,
+        "__Prefab": "prefabs/fakemapbloodpuddle.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Name",
+              "Value": "FakeMapBloodPuddle (8)"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Position",
+              "Value": "31.4764957,13.4109058,144.117798"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Rotation",
+              "Value": "-0.303236008,0.647582293,-0.338244975,0.611780643"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af"
+              },
+              "Property": "Scale",
+              "Value": "0.111111119,0.111111119,0.333333343"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "dbb6d9cc-92d8-4602-9fd2-167e5c1834af": "1144fe0f-668a-4061-b8e9-1a4fc1d46c03",
+          "1dbbdb88-53fb-41ff-b240-c5908aba4efb": "973e881d-52ba-428a-92ad-55f64e7c0b50"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

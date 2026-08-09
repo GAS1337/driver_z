@@ -1,0 +1,59 @@
+{
+  "RootObject": {
+    "__guid": "dbb6d9cc-92d8-4602-9fd2-167e5c1834af",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "FakeMapBloodPuddle",
+    "Position": "0,0,0",
+    "Rotation": "0.17035991,0.0265915468,-0.0925394595,0.980666518",
+    "Scale": "0.300000012,0.520000339,0.300000012",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "1dbbdb88-53fb-41ff-b240-c5908aba4efb",
+        "__enabled": true,
+        "Flags": 0,
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "LodOverride": null,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Materials": {
+          "indexed": {
+            "0": "materials/damage-material.vmat"
+          }
+        },
+        "Model": "models/survival kit/patch-grass.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "0.23442,0.05234,0.05234,1"
+      }
+    ],
+    "Children": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
