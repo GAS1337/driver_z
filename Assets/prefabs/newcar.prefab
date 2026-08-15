@@ -171,7 +171,7 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
           "component_type": "Rigidbody"
         },
-        "DistanceToPlayer": 200,
+        "DistanceToPlayer": 400,
         "HorizontalOffset": 80,
         "MainCamera": {
           "_type": "component",
@@ -179,8 +179,8 @@
           "go": "23d4cf70-a2a0-4333-b62b-d29218488362",
           "component_type": "CameraComponent"
         },
-        "MaxDistanceToPlayer": 400,
-        "MinDistanceToPlayer": 200,
+        "MaxDistanceToPlayer": 500,
+        "MinDistanceToPlayer": 350,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -191,7 +191,7 @@
           "_type": "gameobject",
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f"
         },
-        "TargetDistanceToPlayer": 200,
+        "TargetDistanceToPlayer": 400,
         "VerticalOffset": 170,
         "ZoomStrength": 0
       },
