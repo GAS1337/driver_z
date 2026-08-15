@@ -49,7 +49,7 @@ public sealed class OrbitalCameraController : Component
 			.Ray( Player.WorldPosition + Vector3.Up * VerticalOffset + Player.WorldRotation.Forward * HorizontalOffset, MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 10 )
 			.Radius(1)
 			.IgnoreGameObjectHierarchy(GameObject) // Ignores itself. Use tags depending on your setup
-			.WithoutTags("enemy")
+			.WithoutTags("enemy", "dead")
 			.Run();
 		// DebugOverlay.Trace( checkingSightline );
 
@@ -66,9 +66,13 @@ public sealed class OrbitalCameraController : Component
 
 		// Zoom out when GroundCheck fails
 		if ( !RotationControl.IsGrounded ) 
-		{ 
-			TargetDistanceToPlayer = MaxDistanceToPlayer;
-			VerticalOffset = Math.Max( VerticalOffset - AutoZoomStrength, 100 ); ;
+		{
+			TargetDistanceToPlayer = (int)CarBody.Velocity.Length.Remap( 0, 4000, MinDistanceToPlayer, MaxDistanceToPlayer );
+			MainCamera.FieldOfView = 90 + (CarBody.Velocity.Length.Remap( 0, 4000, 0, 20 ));
+			VerticalOffset = Math.Min( VerticalOffset + AutoZoomStrength, 200 );
+
+			//TargetDistanceToPlayer = MaxDistanceToPlayer;
+			//VerticalOffset = Math.Max( VerticalOffset - AutoZoomStrength, 100 ); ;
 		}
 		// When on ground zoom depending on speed
 		else 

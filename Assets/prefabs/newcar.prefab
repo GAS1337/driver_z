@@ -148,16 +148,31 @@
           "go": "04875a1e-ce23-4f83-871e-ae2ac363593f",
           "component_type": "Rigidbody"
         },
-        "GasSound": "sounds/engine 3.sound",
-        "IdleSound": "sounds/engineidle.sound",
+        "GasSound": null,
+        "IdleSound": {
+          "_type": "component",
+          "component_id": "516185a3-7943-4f31-853c-99e94ad139da",
+          "go": "023469b6-7b4a-4114-882f-a27e7687b092",
+          "component_type": "SoundPointComponent"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "ReifenSound": "sounds/reifen.sound",
-        "VollGasSound": "sounds/engine 2.sound"
+        "ReifenSound": {
+          "_type": "component",
+          "component_id": "77a935e7-58dc-460e-9ece-45e8d80a305b",
+          "go": "c5d7244b-a1ef-43b9-9def-f83d916e88f8",
+          "component_type": "SoundPointComponent"
+        },
+        "VollGasSound": {
+          "_type": "component",
+          "component_id": "337e2e26-1128-4aaa-8ead-74b0b25ebc7e",
+          "go": "99200505-d1db-4bc3-9ded-7d623cf769b6",
+          "component_type": "SoundPointComponent"
+        }
       },
       {
         "__type": "OrbitalCameraController",
@@ -4341,7 +4356,212 @@
                 "Volume": 1
               }
             ],
-            "Children": []
+            "Children": [
+              {
+                "__guid": "023469b6-7b4a-4114-882f-a27e7687b092",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "EngineIdle",
+                "Position": "0,0,0",
+                "Rotation": "0,0,0,1",
+                "Scale": "1,1,1",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.SoundPointComponent",
+                    "__guid": "516185a3-7943-4f31-853c-99e94ad139da",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "Distance": 1000,
+                    "DistanceAttenuation": true,
+                    "DistanceAttenuationOverride": false,
+                    "Falloff": [
+                      {
+                        "x": 0,
+                        "y": 1,
+                        "in": 3.1415927,
+                        "out": -3.1415927,
+                        "mode": "Mirrored"
+                      },
+                      {
+                        "x": 1,
+                        "y": 0,
+                        "in": 0,
+                        "out": 0,
+                        "mode": "Mirrored"
+                      }
+                    ],
+                    "Force2d": false,
+                    "MaxRepeatTime": 1,
+                    "MinRepeatTime": 1,
+                    "OcclusionEnabled": false,
+                    "OcclusionOverride": false,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Pitch": 1,
+                    "PlayOnStart": true,
+                    "Repeat": false,
+                    "ReverbEnabled": false,
+                    "ReverbOverride": false,
+                    "SoundEvent": "sounds/engineidle.sound",
+                    "SoundOverride": true,
+                    "StopOnNew": false,
+                    "TargetMixer": {
+                      "Name": "game",
+                      "Id": "260b6eac-82a4-47a2-93fc-fdcd1b8e16bd"
+                    },
+                    "Volume": 0.1
+                  }
+                ],
+                "Children": []
+              },
+              {
+                "__guid": "99200505-d1db-4bc3-9ded-7d623cf769b6",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "EngineGas",
+                "Position": "0,0,0",
+                "Rotation": "0,0,0,1",
+                "Scale": "1,1,1",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.SoundPointComponent",
+                    "__guid": "337e2e26-1128-4aaa-8ead-74b0b25ebc7e",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "Distance": 1000,
+                    "DistanceAttenuation": true,
+                    "DistanceAttenuationOverride": false,
+                    "Falloff": [
+                      {
+                        "x": 0,
+                        "y": 1,
+                        "in": 3.1415927,
+                        "out": -3.1415927,
+                        "mode": "Mirrored"
+                      },
+                      {
+                        "x": 1,
+                        "y": 0,
+                        "in": 0,
+                        "out": 0,
+                        "mode": "Mirrored"
+                      }
+                    ],
+                    "Force2d": false,
+                    "MaxRepeatTime": 1,
+                    "MinRepeatTime": 1,
+                    "OcclusionEnabled": false,
+                    "OcclusionOverride": false,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Pitch": 1,
+                    "PlayOnStart": true,
+                    "Repeat": false,
+                    "ReverbEnabled": false,
+                    "ReverbOverride": false,
+                    "SoundEvent": "sounds/engine 2.sound",
+                    "SoundOverride": true,
+                    "StopOnNew": false,
+                    "TargetMixer": {
+                      "Name": "game",
+                      "Id": "260b6eac-82a4-47a2-93fc-fdcd1b8e16bd"
+                    },
+                    "Volume": 0.1
+                  }
+                ],
+                "Children": []
+              },
+              {
+                "__guid": "c5d7244b-a1ef-43b9-9def-f83d916e88f8",
+                "__version": 2,
+                "Flags": 0,
+                "Name": "WheelSound",
+                "Position": "0,0,0",
+                "Rotation": "0,0,0,1",
+                "Scale": "1,1,1",
+                "Tags": "",
+                "Enabled": true,
+                "NetworkMode": 2,
+                "NetworkFlags": 0,
+                "NetworkOrphaned": 0,
+                "NetworkTransmit": true,
+                "OwnerTransfer": 1,
+                "Components": [
+                  {
+                    "__type": "Sandbox.SoundPointComponent",
+                    "__guid": "77a935e7-58dc-460e-9ece-45e8d80a305b",
+                    "__enabled": true,
+                    "Flags": 0,
+                    "Distance": 1000,
+                    "DistanceAttenuation": true,
+                    "DistanceAttenuationOverride": false,
+                    "Falloff": [
+                      {
+                        "x": 0,
+                        "y": 1,
+                        "in": 3.1415927,
+                        "out": -3.1415927,
+                        "mode": "Mirrored"
+                      },
+                      {
+                        "x": 1,
+                        "y": 0,
+                        "in": 0,
+                        "out": 0,
+                        "mode": "Mirrored"
+                      }
+                    ],
+                    "Force2d": false,
+                    "MaxRepeatTime": 1,
+                    "MinRepeatTime": 1,
+                    "OcclusionEnabled": false,
+                    "OcclusionOverride": false,
+                    "OnComponentDestroy": null,
+                    "OnComponentDisabled": null,
+                    "OnComponentEnabled": null,
+                    "OnComponentFixedUpdate": null,
+                    "OnComponentStart": null,
+                    "OnComponentUpdate": null,
+                    "Pitch": 1,
+                    "PlayOnStart": true,
+                    "Repeat": false,
+                    "ReverbEnabled": false,
+                    "ReverbOverride": false,
+                    "SoundEvent": "sounds/reifen.sound",
+                    "SoundOverride": true,
+                    "StopOnNew": false,
+                    "TargetMixer": {
+                      "Name": "game",
+                      "Id": "260b6eac-82a4-47a2-93fc-fdcd1b8e16bd"
+                    },
+                    "Volume": 0.1
+                  }
+                ],
+                "Children": []
+              }
+            ]
           }
         ]
       },
