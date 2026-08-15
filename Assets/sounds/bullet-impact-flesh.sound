@@ -1,15 +1,18 @@
 {
   "UI": false,
-  "Volume": "1 1.29999995",
+  "Volume": "0.5 0.699999988",
   "Pitch": "1 1.10000002",
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/bulletimpacts/zzz-8freesound_community-086558_bullet-39737.vsnd",
-    "sounds/bulletimpacts/zzzimpactfulshortfleshsound.vsnd",
-    "sounds/bulletimpacts/zzzmegamutantfusionbulletfleshhit.vsnd"
+    "sounds/bulletimpacts/used-bb-bullet-impact.vsnd",
+    "sounds/bulletimpacts/used-bb-impactfulshortfleshsound.vsnd",
+    "sounds/bulletimpacts/used-bb-megamutantfusionbulletfleshhit.vsnd"
   ],
+  "OcclusionEnabled": true,
   "Occlusion": true,
+  "ReverbEnabled": true,
+  "Reflections": true,
   "AirAbsorption": true,
   "Transmission": true,
   "OcclusionRadius": 64,

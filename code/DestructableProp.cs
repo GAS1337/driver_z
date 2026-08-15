@@ -7,7 +7,10 @@ public sealed class DestructableProp : Component, HealthSystem.IHealthEvent
 
 	public void OnDeath()
 	{
-		GameObject _deadClone = DestroyedPrefab.Clone(WorldPosition, Rotation.Identity, Vector3.One);
+		GameObject _deadClone = DestroyedPrefab.Clone(WorldPosition, WorldRotation, WorldScale);
+		Rigidbody _rb = _deadClone.GetComponent<Rigidbody>();
+		_rb.ApplyImpulse( Vector3.Up * 300 * _rb.Mass );
+
 		GameObject.Destroy();
 	}
 

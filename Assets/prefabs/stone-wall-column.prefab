@@ -2,12 +2,12 @@
   "RootObject": {
     "__guid": "36a945e6-c069-4ebb-89b4-110e24ed5d13",
     "__version": 2,
-    "Flags": 0,
+    "Flags": 32768,
     "Name": "stone-wall-column",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "2,2,2",
-    "Tags": "",
+    "Tags": "enemy,prop",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -66,6 +66,38 @@
         "Static": true,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "HealthSystem",
+        "__guid": "bd0876e0-d70e-400b-b4be-71a2f190aea0",
+        "__enabled": true,
+        "Flags": 0,
+        "HealthbarRenderer": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OrbitalCameraController": null,
+        "SetHealth": 50,
+        "SetPoints": 5
+      },
+      {
+        "__type": "DestructableProp",
+        "__guid": "3f601437-9583-4090-814a-9c6a65637a23",
+        "__enabled": true,
+        "Flags": 0,
+        "DestroyedPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/stone-wall-column-dead.prefab"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [],
@@ -78,13 +110,15 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []

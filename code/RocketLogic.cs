@@ -25,7 +25,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		var ExplosionTrace = Scene.Trace.Sphere( 600, GameObject.WorldPosition, GameObject.WorldPosition )
 			.IgnoreGameObjectHierarchy( this.GameObject )
 			.WithoutTags("ignoreplayer")
-			.WithAnyTags("enemy", "carbody")	
+			.WithAnyTags("enemy", "carbody", "dead")	
 			.RunAll();
 
 		foreach ( SceneTraceResult hit in ExplosionTrace )
@@ -79,6 +79,15 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 				}
 			}
 			else if ( hit.GameObject.Tags.Has( "carbody" ) )
+			{
+				if ( !hit.GameObject.IsValid ) return;
+
+				Rigidbody hitBody = hit.GameObject.GetComponent<Rigidbody>();
+				Vector3 targetDir = hitBody.WorldPosition + Vector3.Up * 150 - GameObject.WorldPosition;
+				hitBody.ApplyImpulse( (targetDir.Normal + Vector3.Up) * (KnockbackPower * hitBody.Mass * 0.5f) );
+				// hit.GameObject.GetComponentInParent<HealthSystem>().Damage( 0f );
+			}
+			else if ( hit.GameObject.Tags.Has( "dead" ) )
 			{
 				if ( !hit.GameObject.IsValid ) return;
 

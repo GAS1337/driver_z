@@ -6,7 +6,7 @@
     "Name": "fence-with-hp-dead",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "5.125,5.125,5.125",
+    "Scale": "1,1,1",
     "Tags": "dead",
     "Enabled": true,
     "NetworkMode": 2,

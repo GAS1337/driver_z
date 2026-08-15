@@ -31,7 +31,7 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 
 	void IHealthEvent.OnDeath() 
 	{
-		if ( GameObject.Tags.Has( "enemy" ) )
+		if ( GameObject.Tags.Has( "enemy" ) && !GameObject.Tags.Has( "prop" ))
 		{
 			if ( Random.Int( 1, 10 ) > 7 )
 			{
@@ -53,7 +53,8 @@ public sealed class HealthSystem : Component, HealthSystem.IHealthEvent
 		CurrentHealth = SetHealth;
 
 		// LootList wird nur für Gegner erstellt, da Spieler keine Lootdrops haben
-		if ( !GameObject.Tags.Has( "enemy" ) ) return;
+		if ( !GameObject.Tags.Has( "enemy" ) ) return; 
+		if ( GameObject.Tags.Has( "prop" ) ) return;
 
 		Random = new Random();
 		LootList = new List<GameObject>();
