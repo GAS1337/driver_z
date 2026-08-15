@@ -74,7 +74,7 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "SpawnCooldown": 10
+            "SpawnCooldown": 22
           }
         ],
         "Children": []
@@ -103,6 +103,7 @@
             "Attenuation": 1,
             "ConeInner": 0,
             "ConeOuter": 15,
+            "Contribution": "Diffuse, Specular, Transmissive",
             "Cookie": null,
             "FogMode": "Enabled",
             "FogStrength": 1,
@@ -351,6 +352,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": "textures/shapes/arrow6.vtex",
