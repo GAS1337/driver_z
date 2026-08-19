@@ -145,6 +145,12 @@
         "LeapFlightTime": 2,
         "LeapMaxHeightOffset": 400,
         "LeapRange": 2000,
+        "LeftArmModel": {
+          "_type": "component",
+          "component_id": "08dc09fd-1677-4165-be7b-088fc5683859",
+          "go": "afc34a5f-c470-4111-bc2f-3c981079863c",
+          "component_type": "ModelRenderer"
+        },
         "Model": {
           "_type": "component",
           "component_id": "0e26615d-16c7-4fbf-8ed4-85bd6db664dd",
@@ -158,6 +164,12 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "RightArmModel": {
+          "_type": "component",
+          "component_id": "040dadca-acb6-4436-8dc1-5a7f23df1d04",
+          "go": "ff8307e0-6458-4efc-9754-336e4492c99c",
+          "component_type": "ModelRenderer"
+        },
         "SlamCooldown": 4,
         "SlamRadius": 350,
         "SlamRange": 1000,
@@ -225,7 +237,7 @@
             "MaterialGroup": null,
             "MaterialOverride": null,
             "Materials": null,
-            "Model": "models/characters/char-zombie.vmdl",
+            "Model": "models/characters/char-zombie-no-arms.vmdl",
             "Morphs": {},
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -458,6 +470,98 @@
                 "Children": []
               }
             ]
+          },
+          {
+            "__guid": "afc34a5f-c470-4111-bc2f-3c981079863c",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "LeftArm",
+            "Position": "-10,40,180",
+            "Rotation": "0,-0.707106769,0,0.707106769",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "08dc09fd-1677-4165-be7b-088fc5683859",
+                "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/characters/zombieleftarm.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
+          },
+          {
+            "__guid": "ff8307e0-6458-4efc-9754-336e4492c99c",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "RightArm",
+            "Position": "-10,-40,180",
+            "Rotation": "0,-0.707106769,0,0.707106769",
+            "Scale": "1,1,1",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "040dadca-acb6-4436-8dc1-5a7f23df1d04",
+                "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/characters/zombierightarm.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
           }
         ]
       },
@@ -761,6 +865,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": {
@@ -799,7 +905,7 @@
                             "CacheToDisk": true,
                             "FormatOverride": "RGBA8888"
                           },
-                          "compiled": null
+                          "compiled": "textures/generated/imagefile/b1ef9c9c7a0a663f.vtex"
                         },
                         "BroadcastMessages": []
                       }

@@ -51,7 +51,7 @@ public sealed class EngineSounds : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if (SinceSoundRestart > 30f)
+		if (SinceSoundRestart > 10f)
 		{
 			Log.Info( "Restarting Engine Sounds" );
 

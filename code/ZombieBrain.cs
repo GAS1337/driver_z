@@ -13,6 +13,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	GameObject Player;
 	[Property] Rigidbody Body;
 	[Property] ModelRenderer Model;
+	[Property] ModelRenderer LeftArmModel;
+	[Property] ModelRenderer RightArmModel;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
 
@@ -55,6 +57,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	TimeSince SinceSlamAnimationStart;
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
+	int HitFlailCounter = 0;
 
 	Random random = new Random();
 
@@ -153,6 +156,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 					NextMove = MoveCooldown + random.Float(0f, 0.1f);
 				}
 				LookAtPlayer();
+				AnimateArms();
 
 				// Go to wander if player is far
 				if ( DistanceToPlayer > ApproachRange )
@@ -210,7 +214,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				}
 				else
 				{
-					Body.SmoothRotate( Rotation.LookAt( Body.WorldPosition + Body.WorldRotation.Forward * 10, Vector3.Up ), 0.5f, 0.01f );
+					Body.SmoothRotate( Rotation.LookAt( Body.WorldPosition + Body.Velocity.WithZ(0) * 1000, Vector3.Up ), 0.5f, 0.01f );
+					AnimateArms(0, -165);
 				}
 
 				// Einmal am anfang leapen
@@ -269,6 +274,9 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player", "world" )
 			.Run();
+
+		// Animate Arms
+		// AnimateArms();
 
 		if ( !wanderTrace.Hit )
 		{
@@ -468,18 +476,34 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	public async Task AnimateHit() 
 	{
 		float duration = 0.1f;
-		SinceHitAnimationStart = 0;
 
+		SinceHitAnimationStart = 0;
 		Model.WorldScale = Model.WorldScale.WithZ( originalScale.z * (1f - 0.15f) );
 
 		while (SinceHitAnimationStart < duration) 
 		{ 
 			Model.WorldScale = Model.WorldScale.WithZ(Model.WorldScale.z.LerpTo(originalScale.z, 0.1f));
+
+			if ( HitFlailCounter == 0 )
+			{
+				LeftArmModel.WorldRotation = Model.WorldRotation.Angles().WithRoll( Game.Random.Int( 60, 135 ) ).WithPitch( Game.Random.Int( -45, 45 ) );
+				RightArmModel.WorldRotation = Model.WorldRotation.Angles().WithRoll( Game.Random.Int( -135, -65 ) ).WithPitch( Game.Random.Int( -45, 45 ) );
+			}
+
 			await Task.FrameEnd();
 		}
 
 		if ( !this.IsValid() ) return;
 		Model.WorldScale = originalScale;
+
+		HitFlailCounter++;
+		if (HitFlailCounter == 2) HitFlailCounter = 0;
+	}
+
+	void AnimateArms(int roll = 0, int pitch = -90)
+	{
+		LeftArmModel.WorldRotation = Model.WorldRotation.Angles().WithRoll( roll ).WithPitch( pitch );
+		RightArmModel.WorldRotation = Model.WorldRotation.Angles().WithRoll( roll ).WithPitch( pitch );
 	}
 
 }
