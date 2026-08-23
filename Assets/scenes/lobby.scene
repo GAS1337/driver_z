@@ -383,6 +383,42 @@
               "Type": "Component",
               "IdValue": "5cf5cee0-ee46-46cc-ad0b-b2de3fca7467"
             }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "023469b6-7b4a-4114-882f-a27e7687b092"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "516185a3-7943-4f31-853c-99e94ad139da"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "99200505-d1db-4bc3-9ded-7d623cf769b6"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "337e2e26-1128-4aaa-8ead-74b0b25ebc7e"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "c5d7244b-a1ef-43b9-9def-f83d916e88f8"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "77a935e7-58dc-460e-9ece-45e8d80a305b"
+            }
           }
         ],
         "PropertyOverrides": [
@@ -393,6 +429,30 @@
             },
             "Property": "Position",
             "Value": "-3376,288,137"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "7e1d9b55-9b9c-4374-ad2f-bef2bdcdc465"
+            },
+            "Property": "IdleSound",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "7e1d9b55-9b9c-4374-ad2f-bef2bdcdc465"
+            },
+            "Property": "ReifenSound",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "7e1d9b55-9b9c-4374-ad2f-bef2bdcdc465"
+            },
+            "Property": "VollGasSound",
+            "Value": null
           },
           {
             "Target": {
@@ -419,6 +479,22 @@
               "go": "9eb0996d-3830-47c9-9f05-18834f772ea5",
               "component_type": "CameraComponent"
             }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b3a73fe3-d158-471b-89ec-cb2741b66679"
+            },
+            "Property": "Center",
+            "Value": "-3.89375091,0,2.87126207"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "b3a73fe3-d158-471b-89ec-cb2741b66679"
+            },
+            "Property": "Scale",
+            "Value": "57.7874985,210,98.8069916"
           },
           {
             "Target": {
@@ -656,13 +732,7 @@
         "083dcdc7-351d-4388-80f7-c9609cb9044d": "133a898f-e634-8e94-944e-98941edebf4e",
         "7916907e-6789-4375-9a79-ddb716f5a9c1": "ec9880cb-701b-8e6a-8ee6-67e22302ab2e",
         "267d181d-7758-440f-bdde-02929db8457b": "85ab7ff6-137c-8c3a-b6ed-e1f8c11c2b51",
-        "6601913f-749b-4fac-aaeb-4d95e372880d": "cacd0610-426c-8137-8fb8-9eebe9aac231",
-        "023469b6-7b4a-4114-882f-a27e7687b092": "9b4ec1bf-860e-86c3-9d77-7a6fa5844e35",
-        "99200505-d1db-4bc3-9ded-7d623cf769b6": "7a505095-5342-8237-bbc9-e4285f1d6820",
-        "c5d7244b-a1ef-43b9-9def-f83d916e88f8": "6f0ca31a-4311-8651-9665-8d2346bc28ad",
-        "516185a3-7943-4f31-853c-99e94ad139da": "c72b83ee-b322-8d3e-99f2-3c20f426c8cf",
-        "337e2e26-1128-4aaa-8ead-74b0b25ebc7e": "9dcf5579-2978-8389-8e34-644f82c6216d",
-        "77a935e7-58dc-460e-9ece-45e8d80a305b": "b32e66fc-61ed-83e1-a116-e988b0d42667"
+        "6601913f-749b-4fac-aaeb-4d95e372880d": "cacd0610-426c-8137-8fb8-9eebe9aac231"
       }
     },
     {
@@ -7595,6 +7665,77 @@
           "Children": []
         },
         {
+          "__guid": "2309496e-44fb-4d5e-9404-c05169553632",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "pillar-obelisk (2)",
+          "Position": "-7569.75244,6540.84277,6853.57324",
+          "Rotation": "0.612372398,0.353553385,-0.353553355,-0.612372398",
+          "Scale": "20,20,10",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "e9733a7b-be68-4735-9ea4-89aba676e02a",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/graveyard kit/pillar-obelisk.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "48d0e099-9c9c-4c75-b261-31beabe4d3d4",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/graveyard kit/pillar-obelisk.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
+        },
+        {
           "__guid": "ef20ff92-6ae9-4d74-b64e-c6a3371a3119",
           "__version": 2,
           "Flags": 0,
@@ -9960,7 +10101,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Text (5)",
-          "Position": "-6444.00146,6048.7832,4468.08594",
+          "Position": "-7552.66357,6451.47852,6675.26514",
           "Rotation": "-0.0100229569,-0.0453854613,0.965073228,0.257824302",
           "Scale": "100,100,100",
           "Tags": "",
@@ -9974,6 +10115,86 @@
             {
               "__type": "Sandbox.TextRenderer",
               "__guid": "35f5d793-4636-42ea-97b4-235327cf3bfb",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Billboard": "None",
+              "BlendMode": "Normal",
+              "FogStrength": 0.1,
+              "HorizontalAlignment": "Center",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 0.07,
+              "TextScope": {
+                "Text": "Leaderboard",
+                "TextColor": "1.35309,1.41447,1.5891,1",
+                "FontName": "Poppins",
+                "FontSize": 64,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "FontVariantNumeric": "Normal",
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "FilterMode": "Bilinear",
+                "FontSmooth": "Auto",
+                "Outline": {
+                  "Enabled": true,
+                  "Size": 12,
+                  "Color": "0,0,0,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                }
+              },
+              "VerticalAlignment": "Center"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "c900b781-0a2a-445f-81c6-3af86e720695",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Text (8)",
+          "Position": "-6463.29248,5995.47363,-55.4260864",
+          "Rotation": "0,0,0.966141701,0.258012146",
+          "Scale": "100,100,100",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "c6781890-e858-4812-b79d-6f05295d7a69",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -10573,7 +10794,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "platform_long",
-          "Position": "-4454.52002,9624.57031,3325.06201",
+          "Position": "-5563.18213,10027.2656,5532.24121",
           "Rotation": "0.212631494,0.674380481,-0.153045505,0.690344989",
           "Scale": "100,200,100",
           "Tags": "",
@@ -10614,6 +10835,77 @@
             {
               "__type": "Sandbox.ModelCollider",
               "__guid": "10f82861-8774-4a4f-a318-3cee07df109b",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/space kit/platform_long.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "51a8a2c3-8147-4378-a392-ac47ecbe5c8c",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "platform_long (6)",
+          "Position": "-4505.27783,9546.08594,-1552.1394",
+          "Rotation": "0.186836764,0.681977391,-0.179182842,0.684026778",
+          "Scale": "100,200,100",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0694c302-02d8-4dd6-bb8c-aa56dcf4c500",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/space kit/platform_long.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "0.77674,0.60694,0.09754,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "2b7374f6-ac8f-4a03-bfd2-45e84b390774",
               "__enabled": true,
               "Flags": 0,
               "ColliderFlags": 0,
@@ -11175,7 +11467,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Countdown",
-          "Position": "-20.1092148,93.0576782,125.332764",
+          "Position": "-20.1092148,93.0576782,193.333435",
           "Rotation": "0.653281629,-0.270597994,-0.653281569,-0.270598024",
           "Scale": "1,1,1",
           "Tags": "",
@@ -17066,7 +17358,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (17)",
-      "Position": "-51267.5547,-16235.9824,508",
+      "Position": "-51277.1484,-16212.5439,439.000031",
       "Rotation": "0,-0,-0.557310522,0.830304146",
       "Scale": "1,1,1",
       "Tags": "",
@@ -17142,12 +17434,412 @@
       "Children": []
     },
     {
+      "__guid": "8f6eb9c9-1f56-45ab-8ad5-97f70bbc623f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (22)",
+      "Position": "-52832.6797,-9191.19336,550",
+      "Rotation": "0,0,0.791118026,0.61166352",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "b587a931-00b4-4c2b-9a97-3e8ed1044640",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1.5,
+          "TextScope": {
+            "Text": "Destroying Gravestones\nDamages the Enemies it has spawned\nMaking it easy to clear them out!",
+            "TextColor": "0.69248,0.81979,4.51163,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 6,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "06147d1d-356d-4d85-a812-88343e04b919",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (18)",
+      "Position": "-51332.5234,-16235.21,854",
+      "Rotation": "0,-0,-0.557310522,0.830304146",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "e122cd18-0bdb-4b45-9ec6-780f2b53a648",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Some of the Environment like Fences \nare destructible",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "1ca7842c-b57d-4c74-b5ab-dec67cdb6d9a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (19)",
+      "Position": "-51354.3672,-16197.6807,1433.99988",
+      "Rotation": "0,-0,-0.557310522,0.830304146",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "d71afc9c-2323-403d-a007-c8894bebb625",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Use the Lightning and dark Clouds over Graves \nto chase them down from a Distance",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "9e15afc5-644a-4bc4-a00b-7da2e6dc0c3b",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (21)",
+      "Position": "-51354.3672,-16197.6807,1992",
+      "Rotation": "0,-0,-0.557310522,0.830304146",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "d16fa249-57b2-4c82-9a2c-21fa4fae8742",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Monsters far away will patrol\n rather than chase you you all across the map",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "c16c968d-6c4d-4beb-a6a9-577fa3269b21",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (20)",
+      "Position": "-41001.9453,-13935.9941,535.999939",
+      "Rotation": "0,-0,-0.195519239,0.980699837",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "1e071edf-c7dd-4cae-8873-5ddec41c9688",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "They take a lot of damage from\n Grenade Launchers too",
+            "TextColor": "5,4.5,0,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "bf82028c-f92d-4182-b039-2e4d192ef40a",
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (2)",
-      "Position": "-10840.4561,-30505.8867,256.25",
-      "Rotation": "0,0,-0.819152355,0.573576391",
+      "Position": "-10828.1895,-30510.3516,312.000183",
+      "Rotation": "-0.00202114391,0.00288649532,-0.819147229,0.573572755",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -17181,7 +17873,7 @@
           },
           "Scale": 3.5,
           "TextScope": {
-            "Text": "Shoot",
+            "Text": "Shoot ➜",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -18185,8 +18877,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Big Explanation Text (1)",
-      "Position": "-54184.4883,-11226.2988,1499",
-      "Rotation": "-0,0,-0.994374931,-0.105917409",
+      "Position": "-54299.832,-11201.4443,1499",
+      "Rotation": "0,0,0.988546669,0.150915518",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -18301,7 +18993,7 @@
           "Scale": 2,
           "TextScope": {
             "Text": "Enemies\nDANGER",
-            "TextColor": "5,0,0,1",
+            "TextColor": "10,0,0,2",
             "FontName": "Poppins",
             "FontSize": 64,
             "FontWeight": 800,
@@ -18381,6 +19073,326 @@
           "Scale": 2,
           "TextScope": {
             "Text": "\uD83D\uDC80 Enemies come from Spawners like this one\nOne appearing on the Map is signified with a Lightningstrike ⚡\nThey are quite tanky, but take a lot of extra damage from ramming!\nThey will spawn quite a few enemies, up to a limit, unless you destroy them",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "b9d7f5cd-587c-4fa5-b906-dd57ffede12f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (10)",
+      "Position": "-41848.6406,-14921.1689,643",
+      "Rotation": "0,0,-0.464686722,0.885475159",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "d4ec78e1-7e95-481c-97fc-71d64a2a6898",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Vampires are Bloodsuckers \nthat cling to you\nThey can be annoying and do a lot of \ndamage over time, but it doesnt take \nlong to make them scatter into Bats",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "b4608683-7469-4b76-8700-a060d8e6340b",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (12)",
+      "Position": "-43150.1484,-15310.2334,768",
+      "Rotation": "0,0,-0.653155327,0.757223964",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "c0175b22-be39-4006-88dd-2864fa0fe92a",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Glasscanoon Ghosts stalk you from afar\nTheir blue eyes shining through the Fog\nBeware their Ectoplasmatic Projectiles, they \nare very dangerous!",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "37363272-bf88-49c6-b168-5abb57ab2a7f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (13)",
+      "Position": "-44648.1211,-15374.7637,767.999939",
+      "Rotation": "0,0,-0.826146662,0.563455105",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "9270c178-efbd-4b40-b34a-181546b47d9b",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Zombies form the Bulk and Frontline \nof the Undead Forces threatening our World\nThey are not too fast, but take a beating\nBeware their Stomps",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "484d8549-7c3c-4a6f-931f-7d52d9dcb60f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (11)",
+      "Position": "-41010.8633,-13912.7031,852",
+      "Rotation": "0,0,-0.217802033,0.975992978",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "072b1356-d379-47ef-87ea-b3b7fcc801b1",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Gravestones are the Root of all evil\nSpawning Monsters over time",
             "TextColor": "5,5,5,1",
             "FontName": "Poppins",
             "FontSize": 64,
@@ -18825,8 +19837,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation (4)",
-      "Position": "-46510,-14997,880",
-      "Rotation": "0,-0,-0.774668872,0.632367074",
+      "Position": "-47117.0312,-14872.9453,940",
+      "Rotation": "0,-0,-0.793937564,0.607999325",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -20328,6 +21340,30 @@
           {
             "Id": {
               "Type": "GameObject",
+              "IdValue": "afc34a5f-c470-4111-bc2f-3c981079863c"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "08dc09fd-1677-4165-be7b-088fc5683859"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "ff8307e0-6458-4efc-9754-336e4492c99c"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "040dadca-acb6-4436-8dc1-5a7f23df1d04"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
               "IdValue": "48fa4b4a-275d-4270-ab43-cbc7f58a8548"
             }
           },
@@ -20464,6 +21500,22 @@
               "Type": "Component",
               "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
             },
+            "Property": "LeftArmModel",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "RightArmModel",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
             "Property": "StateDebugText",
             "Value": null
           },
@@ -20474,22 +21526,17 @@
             },
             "Property": "Static",
             "Value": true
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0e26615d-16c7-4fbf-8ed4-85bd6db664dd"
+            },
+            "Property": "Model",
+            "Value": "models/characters/char-zombie.vmdl"
           }
         ],
         "MovedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "afc34a5f-c470-4111-bc2f-3c981079863c"
-            },
-            "NewParent": {
-              "Type": "GameObject",
-              "IdValue": "cbca859a-9981-4b45-a0da-f11917689619"
-            },
-            "NewContainerProperty": "Children",
-            "IsNewContainerArray": true,
-            "NewPreviousElement": null
-          },
           {
             "Id": {
               "Type": "GameObject",
@@ -20529,11 +21576,7 @@
         "f6468f09-9775-4cf9-a5f8-e6eabd7a0cad": "4765d90a-2660-4d3c-9b90-6c6bd82162de",
         "978f9949-de87-4a92-bf31-1a347f35adfa": "2ba1caba-8cd7-4bd8-a137-20aee688fa4c",
         "1149416b-a6a8-4d67-83b6-7e94493dd744": "aa66b35c-d9b9-4a3b-84d6-01fbda4fbb42",
-        "c6418662-079e-4cd6-b016-3784379cddbf": "c8692460-04e4-4f17-9add-44876b905f8b",
-        "afc34a5f-c470-4111-bc2f-3c981079863c": "c45cc1f8-268c-8b60-a5dd-0a703a7263df",
-        "ff8307e0-6458-4efc-9754-336e4492c99c": "16460946-f054-867f-bc1d-01cd5f768f11",
-        "08dc09fd-1677-4165-be7b-088fc5683859": "bec502db-bfdc-8c9c-a2eb-59e56de324e3",
-        "040dadca-acb6-4436-8dc1-5a7f23df1d04": "91e49b8a-93c5-8e75-b50c-67cb8c6fe429"
+        "c6418662-079e-4cd6-b016-3784379cddbf": "c8692460-04e4-4f17-9add-44876b905f8b"
       }
     },
     {
@@ -20734,6 +21777,30 @@
           {
             "Id": {
               "Type": "GameObject",
+              "IdValue": "afc34a5f-c470-4111-bc2f-3c981079863c"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "08dc09fd-1677-4165-be7b-088fc5683859"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "ff8307e0-6458-4efc-9754-336e4492c99c"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "040dadca-acb6-4436-8dc1-5a7f23df1d04"
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
               "IdValue": "48fa4b4a-275d-4270-ab43-cbc7f58a8548"
             }
           },
@@ -20894,6 +21961,22 @@
               "Type": "Component",
               "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
             },
+            "Property": "LeftArmModel",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
+            "Property": "RightArmModel",
+            "Value": null
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "00b5dd71-fb65-495e-8f2f-1bd8c05cbdfa"
+            },
             "Property": "StateDebugText",
             "Value": null
           },
@@ -20904,22 +21987,17 @@
             },
             "Property": "Static",
             "Value": true
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "0e26615d-16c7-4fbf-8ed4-85bd6db664dd"
+            },
+            "Property": "Model",
+            "Value": "models/characters/char-zombie.vmdl"
           }
         ],
         "MovedObjects": [
-          {
-            "Id": {
-              "Type": "GameObject",
-              "IdValue": "afc34a5f-c470-4111-bc2f-3c981079863c"
-            },
-            "NewParent": {
-              "Type": "GameObject",
-              "IdValue": "cbca859a-9981-4b45-a0da-f11917689619"
-            },
-            "NewContainerProperty": "Children",
-            "IsNewContainerArray": true,
-            "NewPreviousElement": null
-          },
           {
             "Id": {
               "Type": "GameObject",
@@ -20959,11 +22037,7 @@
         "f6468f09-9775-4cf9-a5f8-e6eabd7a0cad": "b092c2d4-4fb1-4425-a93b-9f18a7d42898",
         "978f9949-de87-4a92-bf31-1a347f35adfa": "49522cc1-dcef-4c86-8619-d2c0a503eba8",
         "1149416b-a6a8-4d67-83b6-7e94493dd744": "ea768796-0b8f-48be-950a-22d6802a092e",
-        "c6418662-079e-4cd6-b016-3784379cddbf": "e6220096-f1aa-43aa-b998-2ffaeacace10",
-        "afc34a5f-c470-4111-bc2f-3c981079863c": "075cd84f-8c3b-8758-ab91-105166756624",
-        "ff8307e0-6458-4efc-9754-336e4492c99c": "8ab07c96-98b1-8a82-b70d-b5dd3a558575",
-        "08dc09fd-1677-4165-be7b-088fc5683859": "91c843f5-ff4b-82b9-958e-195e5982322b",
-        "040dadca-acb6-4436-8dc1-5a7f23df1d04": "25639581-a225-8c9a-852a-cacf57f390bf"
+        "c6418662-079e-4cd6-b016-3784379cddbf": "e6220096-f1aa-43aa-b998-2ffaeacace10"
       }
     },
     {
@@ -27843,6 +28917,108 @@
         "cbbe59a3-c45f-42ca-bb81-e286bc5891e5": "c98a2b52-d845-4692-9393-f463d32963c0",
         "a2aa6628-5874-4741-b7a0-eb43c5029b24": "ca18077c-1368-44bd-9d6d-e287a9784374",
         "24cc328c-ae05-4390-a4ec-75ff2c06f345": "bdd230e5-a920-45cf-967f-127212cbef80"
+      }
+    },
+    {
+      "__guid": "f3afbe9b-d89d-420d-967b-6b2fea895772",
+      "__version": 2,
+      "__Prefab": "prefabs/lantern-glass+light.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Name",
+            "Value": "lantern-glass+light (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Position",
+            "Value": "-53815.9961,-9745.60742,130.999954"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.344806582,0.938673735"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "c52c8237-453c-418b-85c8-fd73087a5a1e": "f3afbe9b-d89d-420d-967b-6b2fea895772",
+        "3e207a87-1f1b-4992-bc03-d915c6a1830f": "4a7f79e6-0e30-40b5-8a52-b30b101c8da5",
+        "cbbe59a3-c45f-42ca-bb81-e286bc5891e5": "80af07c8-95e5-4b41-b1b4-2e27f2a57311",
+        "a2aa6628-5874-4741-b7a0-eb43c5029b24": "32d4890c-2e96-418b-9e79-aed7550ab70d",
+        "24cc328c-ae05-4390-a4ec-75ff2c06f345": "992b2eb7-6a7c-480c-8525-52184b3f5519"
+      }
+    },
+    {
+      "__guid": "15b28b72-ef39-4afd-b7a4-e4278f02d680",
+      "__version": 2,
+      "__Prefab": "prefabs/lantern-glass+light.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Name",
+            "Value": "lantern-glass+light (2)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Position",
+            "Value": "-52071.9609,-9369.37793,132.000107"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.612493277,0.790475845"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c52c8237-453c-418b-85c8-fd73087a5a1e"
+            },
+            "Property": "Scale",
+            "Value": "6,6,6"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "c52c8237-453c-418b-85c8-fd73087a5a1e": "15b28b72-ef39-4afd-b7a4-e4278f02d680",
+        "3e207a87-1f1b-4992-bc03-d915c6a1830f": "bcf80bb4-101b-4c03-b2b3-5805b2a11704",
+        "cbbe59a3-c45f-42ca-bb81-e286bc5891e5": "2716821c-15dd-4605-80c6-d8c07ec3a265",
+        "a2aa6628-5874-4741-b7a0-eb43c5029b24": "b9d24481-78de-4335-9d2c-2e8feb84a2d8",
+        "24cc328c-ae05-4390-a4ec-75ff2c06f345": "5b56f4dc-73a7-412a-8f07-26e2cf4f76ef"
       }
     },
     {
@@ -77009,7 +78185,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "lantern_standing",
-      "Position": "-13296,-32048,176",
+      "Position": "-13252,-32201,130.000015",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
