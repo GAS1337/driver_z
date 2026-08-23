@@ -2,12 +2,12 @@
   "RootObject": {
     "__guid": "7217831f-c594-4739-8132-8243b65e6ab8",
     "__version": 2,
-    "Flags": 0,
+    "Flags": 32768,
     "Name": "fence-straight",
     "Position": "0,0,0",
-    "Rotation": "0,0,0.7071067,0.7071068",
+    "Rotation": "0,0,0.707106709,0.707106829",
     "Scale": "4,4,4",
-    "Tags": "",
+    "Tags": "enemy,prop",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -43,15 +43,15 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Sandbox.BoxCollider",
-        "__guid": "699489bb-d750-4a3d-bbcc-5ae557a89609",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "91e5ac16-5052-4754-9742-8a57c34e9665",
         "__enabled": true,
         "Flags": 0,
-        "Center": "42.00002,0,23.5",
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
+        "Model": "models/platformer kit/fence-straight.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -63,10 +63,41 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "13.99999,100,37.00001",
-        "Static": false,
+        "Static": true,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "HealthSystem",
+        "__guid": "4e52a8f5-24c7-486b-8941-e8f1d662f7b1",
+        "__enabled": true,
+        "Flags": 0,
+        "HealthbarRenderer": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OrbitalCameraController": null,
+        "SetHealth": 50,
+        "SetPoints": 5
+      },
+      {
+        "__type": "DestructableProp",
+        "__guid": "f6478511-7f37-4867-935f-4c9fde84a562",
+        "__enabled": true,
+        "Flags": 0,
+        "DestroyedPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/fence-straight-dead.prefab"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [],
@@ -79,13 +110,15 @@
         "Enabled": false,
         "IncludeStaticBodies": true,
         "IncludeKeyframedBodies": true,
-        "EditorAutoUpdate": true,
+        "EditorAutoUpdate": false,
         "AgentHeight": 64,
         "AgentRadius": 16,
         "AgentStepSize": 18,
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
-        "IncludedBodies": ""
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
       }
     },
     "__variables": []

@@ -7,7 +7,7 @@
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "2,2,2",
-    "Tags": "",
+    "Tags": "ghost-ball",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -62,6 +62,7 @@
         "OnComponentUpdate": null,
         "OverrideMassCenter": false,
         "RigidbodyFlags": "DisableCollisionSounds",
+        "SleepThreshold": 2,
         "StartAsleep": false
       },
       {
@@ -95,6 +96,10 @@
         "__guid": "cca81e7f-270e-4d51-b6cc-17e5fcb38049",
         "__enabled": true,
         "Flags": 0,
+        "ExplosionEffect": {
+          "_type": "gameobject",
+          "prefab": "prefabs/ghost-ball-explosion.prefab"
+        },
         "ExplosionModel": {
           "_type": "component",
           "component_id": "e74de9c8-954f-4e5c-9025-2ab74ff4b705",
@@ -392,6 +397,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": "textures/shapes/circle1.vtex",
@@ -633,6 +640,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": "textures/shapes/circle1.vtex",

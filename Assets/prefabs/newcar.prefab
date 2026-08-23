@@ -2704,7 +2704,7 @@
                 "__guid": "b3a73fe3-d158-471b-89ec-cb2741b66679",
                 "__enabled": true,
                 "Flags": 0,
-                "Center": "-3.89375091,0,2.87126207",
+                "Center": "-3.89374924,0,2.8712616",
                 "ColliderFlags": 0,
                 "Elasticity": null,
                 "Friction": null,
@@ -2720,7 +2720,7 @@
                 "OnTriggerEnter": null,
                 "OnTriggerExit": null,
                 "RollingResistance": null,
-                "Scale": "57.7874985,210,98.8069916",
+                "Scale": "57.7874985,256,98.8069916",
                 "Static": false,
                 "Surface": null,
                 "SurfaceVelocity": "0,0,0"

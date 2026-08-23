@@ -5,6 +5,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 {
 	[Property] ModelRenderer ExplosionModel;
 	[Property] TemporaryEffect temporaryEffect;
+	[Property] GameObject ExplosionEffect;
 
 	public SoundHandle attackSoundHandle;
 
@@ -18,9 +19,12 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 		attackSoundHandle.FollowParent = true;
 	}
 	public void OnTriggerEnter( GameObject other ) 
-	{ 
-		if ( other.Tags.HasAny( "enemy" ) ) return;
-		if (GameObject.IsValid()) Explode();
+	{
+		if ( !other.Tags.HasAny( "enemy", "ghost-ball", "nograss", "dead" ) )
+		{
+			Log.Info( $"Hit {other.Name}" );
+			Explode();
+		}
 	}
 
 	void Explode() 
@@ -43,6 +47,7 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 		attackSoundHandle.Volume = 0;
 
 		GetComponent<TemporaryEffect>().DestroyAfterSeconds = 0.1f;
+		GameObject _newExplosion = ExplosionEffect.Clone(WorldTransform);
 	}
 
 }

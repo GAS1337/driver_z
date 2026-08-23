@@ -209,11 +209,11 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			.WithoutTags( "enemy", "player", "world" )
 			.Run();
 
-		if ( sightlineCheck.Hit ) 
+		if ( sightlineCheck.Hit )
 		{
-			Log.Info( "No line of sight to player, skipping attack" );
+			// Log.Info( "No line of sight to player, skipping attack" );
 			HorizontalOffset = (Vector3)random.VectorInCircle( 1000 );
-			return; 
+			return;
 		}
 
 		GameObject newBall = GhostBall.Clone( WorldPosition );
