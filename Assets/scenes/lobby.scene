@@ -315,22 +315,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Scale": 0.0001
-        },
-        {
-          "__type": "EZCameraShake.CameraShaker",
-          "__guid": "1a85eb78-ccb0-4080-86bf-fc631883f78e",
-          "__enabled": true,
-          "Flags": 0,
-          "DefaultPosInfluence": "0.150000006,0.150000006,0.150000006",
-          "DefaultRotInfluence": "1,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RestPositionOffset": "0,0,0",
-          "RestRotationOffset": "0,0,0"
         }
       ],
       "Children": []
@@ -11585,10 +11569,10 @@
         {
           "__guid": "88c418e6-f15d-4a1d-8716-a76e8eeef2b0",
           "__version": 2,
-          "Flags": 0,
+          "Flags": 32768,
           "Name": "button-global",
-          "Position": "188.52301,2273.35547,-1503.99988",
-          "Rotation": "0,0,0,1",
+          "Position": "-364.080811,3477.97876,-1396",
+          "Rotation": "0,0,0.419592798,0.907712519",
           "Scale": "5,5,5",
           "Tags": "button-global",
           "Enabled": true,
@@ -11603,7 +11587,7 @@
               "__guid": "74497144-ce54-4796-ab90-67a90557a14b",
               "__enabled": true,
               "Flags": 0,
-              "Center": "-7.61244392,0,0",
+              "Center": "-7.50000095,0,0",
               "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
@@ -11619,8 +11603,8 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "RollingResistance": null,
-              "Scale": "15.1727066,50,50",
-              "Static": false,
+              "Scale": "15.0000057,50,50",
+              "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
             }
@@ -11757,10 +11741,10 @@
         {
           "__guid": "767d5194-0199-401b-8ddc-2e50d0379b3f",
           "__version": 2,
-          "Flags": 0,
+          "Flags": 32768,
           "Name": "button-friends",
-          "Position": "188.524536,2273.35693,-1951.99988",
-          "Rotation": "0,0,0,1",
+          "Position": "-351.334595,3492.96216,-1843.99976",
+          "Rotation": "0,0,0.419592798,0.907712519",
           "Scale": "5,5,5",
           "Tags": "button-friends",
           "Enabled": true,
@@ -11775,7 +11759,7 @@
               "__guid": "706ea7a1-dbcc-4c19-940a-6135c7332185",
               "__enabled": true,
               "Flags": 0,
-              "Center": "-7.61244392,0,0",
+              "Center": "-7.50000095,0,0",
               "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
@@ -11791,8 +11775,8 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "RollingResistance": null,
-              "Scale": "15.1727066,50,50",
-              "Static": false,
+              "Scale": "15.0000057,50,50",
+              "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
             }
@@ -11929,10 +11913,10 @@
         {
           "__guid": "7e92fcec-0d01-4cb6-a11f-582c282e036e",
           "__version": 2,
-          "Flags": 0,
+          "Flags": 32768,
           "Name": "button-centerme",
-          "Position": "188.52301,2273.35547,-2432.00024",
-          "Rotation": "0,0,0,1",
+          "Position": "-346.15271,3499.05762,-2323.99927",
+          "Rotation": "0,0,0.419592798,0.907712519",
           "Scale": "5,5,5",
           "Tags": "button-centerme",
           "Enabled": true,
@@ -11947,7 +11931,7 @@
               "__guid": "eafb0713-167b-4c53-8ce5-0e15341c60b8",
               "__enabled": true,
               "Flags": 0,
-              "Center": "-7.61244392,0,0",
+              "Center": "-7.50000095,0,0",
               "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
@@ -11963,8 +11947,8 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "RollingResistance": null,
-              "Scale": "15.1727066,50,50",
-              "Static": false,
+              "Scale": "15.0000057,50,50",
+              "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
             }
@@ -12158,51 +12142,7 @@
           "OnComponentUpdate": null
         }
       ],
-      "Children": [
-        {
-          "__guid": "2d098227-a0dc-45a8-b88d-df9eef8b6287",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "hint",
-          "Position": "0,0,0",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [
-            {
-              "__type": "TutorialHint",
-              "__guid": "207df28b-ef36-4baa-b4cc-7b446e20efdc",
-              "__enabled": true,
-              "Flags": 0,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            },
-            {
-              "__type": "UIHint",
-              "__guid": "58b6b1b3-7817-41ac-a840-03983dc2b569",
-              "__enabled": true,
-              "Flags": 0,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        }
-      ]
+      "Children": []
     },
     {
       "__guid": "0e1547b7-b03f-460e-8c33-8f1a489ced48",

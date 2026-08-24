@@ -52,7 +52,7 @@ public sealed class LeaderboardDisplay : Component, LeaderboardDisplay.ILeaderbo
 		var _scoreBoard = Sandbox.Services.Leaderboards.GetFromStat( "straightgas.graveyard_gunners", "LeaderboardTest" );
 		_scoreBoard.SetAggregationMax();
 		_scoreBoard.SetSortDescending();
-		_scoreBoard.MaxEntries = 15;
+		_scoreBoard.MaxEntries = 13;
 		if ( onlyFriends ) { _scoreBoard.SetFriendsOnly(onlyFriends); }
 		if ( centerMe ) { _scoreBoard.CenterOnMe(); }
 
