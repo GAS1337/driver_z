@@ -9944,8 +9944,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Text (5)",
-          "Position": "-6444.00146,6048.7832,4468.08594",
-          "Rotation": "-0.0100229569,-0.0453854613,0.965073228,0.257824302",
+          "Position": "-6392.80908,6158.83252,33.5706787",
+          "Rotation": "0,0,0.966141701,0.258012146",
           "Scale": "100,100,100",
           "Tags": "",
           "Enabled": true,
@@ -9958,6 +9958,86 @@
             {
               "__type": "Sandbox.TextRenderer",
               "__guid": "35f5d793-4636-42ea-97b4-235327cf3bfb",
+              "__enabled": true,
+              "Flags": 0,
+              "__version": 2,
+              "Billboard": "None",
+              "BlendMode": "Normal",
+              "FogStrength": 0.1,
+              "HorizontalAlignment": "Center",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 0.07,
+              "TextScope": {
+                "Text": "Leaderboard",
+                "TextColor": "1.35309,1.41447,1.5891,1",
+                "FontName": "Poppins",
+                "FontSize": 64,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "FontVariantNumeric": "Normal",
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "FilterMode": "Bilinear",
+                "FontSmooth": "Auto",
+                "Outline": {
+                  "Enabled": true,
+                  "Size": 12,
+                  "Color": "0,0,0,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                }
+              },
+              "VerticalAlignment": "Center"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "6f08d0bd-3789-48c6-bed0-49200a45e857",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Text (8)",
+          "Position": "-7989.77686,6759.1875,6280.57324",
+          "Rotation": "-0.00432283245,-0.0161871016,0.9660061,0.257975936",
+          "Scale": "100,100,100",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "b99fe606-5960-492c-b4f0-fc7300e75ffb",
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
@@ -10557,8 +10637,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "platform_long",
-          "Position": "-4454.52002,9624.57031,3325.06201",
-          "Rotation": "0.212631494,0.674380481,-0.153045505,0.690344989",
+          "Position": "-6018.64111,10295.3955,4916.08008",
+          "Rotation": "0.194864094,0.679697156,-0.170957938,0.686158419",
           "Scale": "100,200,100",
           "Tags": "",
           "Enabled": true,
@@ -11159,7 +11239,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Countdown",
-          "Position": "-20.1092148,93.0576782,125.332764",
+          "Position": "-20.1092148,93.0576782,183.333435",
           "Rotation": "0.653281629,-0.270597994,-0.653281569,-0.270598024",
           "Scale": "1,1,1",
           "Tags": "",
@@ -17082,6 +17162,86 @@
       "Children": []
     },
     {
+      "__guid": "9878e006-e736-4c1f-8fae-7e55d0898e1e",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (18)",
+      "Position": "-51308.2109,-16136.6553,1651.99988",
+      "Rotation": "0,-0,-0.557310522,0.830304146",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "fb8fd6b8-b41a-4cef-afdb-551ef3f5afc4",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Monsters far away will patrol \nrather than chase you all across the map\n\nUse the Lightning and dark Clouds over Graves \nto chase them down from a Distance\n\nSome of the Environment like Fences \nare destructible and can open up ways\nto use later\n",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "bf82028c-f92d-4182-b039-2e4d192ef40a",
       "__version": 2,
       "Flags": 0,
@@ -18201,11 +18361,91 @@
       "Children": []
     },
     {
+      "__guid": "4c86b03f-66fb-4955-8ace-9614d124d862",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (19)",
+      "Position": "-52544.5234,-9571.08105,696.000061",
+      "Rotation": "0,0,0.789244592,0.614078939",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "f135009b-c1b0-4ef3-82ea-1463c191ee00",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 2,
+          "TextScope": {
+            "Text": "Destroying Gravestones\nDamages the Enemies it has spawned\nMaking it easy to clear them out!",
+            "TextColor": "4.83721,4.63247,0.74246,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 6,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 6,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "970af1c0-ec35-4fca-b4c4-ec5ff53d46ed",
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation",
-      "Position": "-42500.4297,-15648.0576,1374.99976",
+      "Position": "-42500.4297,-15648.0576,1496.99988",
       "Rotation": "0,-0,-0.573790193,0.81900233",
       "Scale": "1,1,1",
       "Tags": "",
@@ -18322,6 +18562,406 @@
           "TextScope": {
             "Text": "\uD83D\uDC80 Enemies come from Spawners like this one\nOne appearing on the Map is signified with a Lightningstrike ⚡\nThey are quite tanky, but take a lot of extra damage from ramming!\nThey will spawn quite a few enemies, up to a limit, unless you destroy them",
             "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "72e356aa-8aa6-4666-9940-8b399f7248ce",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (10)",
+      "Position": "-40891.0273,-13515.6279,900",
+      "Rotation": "0,0,-0.318544596,0.947907865",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "e9750b1a-71eb-443f-ac0e-f9da9bd3d0b3",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1.2,
+          "TextScope": {
+            "Text": "Gravestones are the Root of all evil \nSpawning Monsters over time",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8dcc39b4-7b56-4ee5-8561-2662c12c21fa",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (12)",
+      "Position": "-41837.7617,-14886.3975,797",
+      "Rotation": "0,0,-0.405379862,0.914148331",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "fbbf4fe9-42ba-4e27-8dd5-2a2129de8683",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Vampires are Bloodsuckers that cling to you\nThey can be annoying and do a lot of \ndamage over time, but it doesnt take\nlong to make them scatter into bats",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "2c0cd23f-0543-4ed9-aec0-07b33f7be7f9",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (13)",
+      "Position": "-43305.7344,-15339.7773,731",
+      "Rotation": "0,0,-0.693023503,0.72091502",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "5c8fdbf2-69a0-4f57-a4f8-66088a78dc84",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Glasscannon Ghosts stalk you from afar\nTheir blue Eyes shining through the Fog\nBeware their Ectoplasmatic Projectiles, they\nare very dangerous!",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "a0b4f7f4-fd4c-4c63-929e-a1cd7c6d7285",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (14)",
+      "Position": "-44941.0234,-15285.5928,703",
+      "Rotation": "0,0,-0.806134343,0.591732562",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "c0515fdb-44fb-453c-a201-217412f0b5ab",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1,
+          "TextScope": {
+            "Text": "Zombies form the Bulk and Frontline \nof the Undead Forces threatening our World\nThey are not too fast, but take a beating\nBeware their Stomps",
+            "TextColor": "5,5,5,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "cacf3001-fa0e-4508-969f-a083a5a8a9ae",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemies Explanation (11)",
+      "Position": "-40945.6758,-13601.1826,515",
+      "Rotation": "0,0,-0.274965137,0.961454213",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "ee268af2-9654-4bd1-a7d2-e1eb272e248e",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 1.2,
+          "TextScope": {
+            "Text": "They take a lot of damage from\nGrenade Launchers",
+            "TextColor": "5,4.06512,0.32558,1",
             "FontName": "Poppins",
             "FontSize": 64,
             "FontWeight": 800,
@@ -18765,8 +19405,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Enemies Explanation (4)",
-      "Position": "-46510,-14997,880",
-      "Rotation": "0,-0,-0.774668872,0.632367074",
+      "Position": "-47106.2539,-14875.1484,933.999939",
+      "Rotation": "0,-0,-0.815986574,0.578070879",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
