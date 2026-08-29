@@ -81792,6 +81792,382 @@
         "43b561e6-e91d-41ec-8b7f-b0ef20d90398": "f81a57de-02f7-4e48-b078-9bee1b85ad51",
         "7d3a8a96-4b42-4871-b079-8f7404935702": "e70ab410-869d-4aec-bf5f-70f0ae15fe28"
       }
+    },
+    {
+      "__guid": "a5dd6732-a5b3-4f8f-9c79-93503d7c6bf8",
+      "__version": 2,
+      "__Prefab": "prefabs/achievement-triggerzone.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "3dc4d030-8289-483c-850d-ae09888a1885"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "ac4dee51-8ab7-491b-a233-8d02ead95215"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8",
+              "__version": 2,
+              "Flags": 32768,
+              "Name": "Sphere",
+              "Position": "-21268.248,-9302.64648,3332",
+              "Rotation": "0,0,0.232732847,0.972540796",
+              "Scale": "125,30,75",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "3d96c7ec-ace0-4b34-8b7c-cad813e3becc"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "3d96c7ec-ace0-4b34-8b7c-cad813e3becc",
+              "__enabled": false,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": {
+                "indexed": {
+                  "0": "materials/dev/primary_white_trans.vmat"
+                }
+              },
+              "Model": "models/dev/sphere.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "0.59535,0.54574,0,0.19"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "19a52dc4-e166-4dc1-b61e-37ca521a761a"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "3d96c7ec-ace0-4b34-8b7c-cad813e3becc"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "19a52dc4-e166-4dc1-b61e-37ca521a761a",
+              "__enabled": true,
+              "Flags": 0,
+              "Center": "0,0,0",
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Radius": 32,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "d4a6664f-b9b6-42de-a6d5-d3a2eaaf2f31"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "19a52dc4-e166-4dc1-b61e-37ca521a761a"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "AchievementTriggerzone",
+              "__guid": "d4a6664f-b9b6-42de-a6d5-d3a2eaaf2f31",
+              "__enabled": true,
+              "Flags": 0,
+              "AchievementName": "completed_tutorial",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "SendTime": true
+            }
+          },
+          {
+            "Id": {
+              "Type": "GameObject",
+              "IdValue": "5da83e7c-8d4f-47e1-a5f1-dab0dbbc3a6e"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "3dc4d030-8289-483c-850d-ae09888a1885"
+            },
+            "PreviousElement": {
+              "Type": "GameObject",
+              "IdValue": "f1c0a9a0-4ab6-4bee-8f0b-d991843995b8"
+            },
+            "ContainerProperty": "Children",
+            "IsContainerArray": true,
+            "Data": {
+              "__guid": "5da83e7c-8d4f-47e1-a5f1-dab0dbbc3a6e",
+              "__version": 2,
+              "Flags": 32768,
+              "Name": "Sphere",
+              "Position": "-28373.0566,-2566.62793,620.000122",
+              "Rotation": "0,0,0.793353021,0.608761966",
+              "Scale": "75,25,50",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "cf8ebf4e-4d47-490e-8687-99b54000fffa"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "5da83e7c-8d4f-47e1-a5f1-dab0dbbc3a6e"
+            },
+            "PreviousElement": null,
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "cf8ebf4e-4d47-490e-8687-99b54000fffa",
+              "__enabled": false,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": {
+                "indexed": {
+                  "0": "materials/dev/primary_white_trans.vmat"
+                }
+              },
+              "Model": "models/dev/sphere.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "0.59535,0.54574,0,0.19"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "5c1f27fb-de5f-4e2a-b113-700841b71fd1"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "5da83e7c-8d4f-47e1-a5f1-dab0dbbc3a6e"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "cf8ebf4e-4d47-490e-8687-99b54000fffa"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "5c1f27fb-de5f-4e2a-b113-700841b71fd1",
+              "__enabled": true,
+              "Flags": 0,
+              "Center": "0,0,0",
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Radius": 32,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "3e2dcce8-06ae-4663-b4eb-dd8d11f9bc41"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "5da83e7c-8d4f-47e1-a5f1-dab0dbbc3a6e"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "5c1f27fb-de5f-4e2a-b113-700841b71fd1"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "AchievementTriggerzone",
+              "__guid": "3e2dcce8-06ae-4663-b4eb-dd8d11f9bc41",
+              "__enabled": true,
+              "Flags": 0,
+              "AchievementName": "entered_library",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "SendTime": true
+            }
+          }
+        ],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3dc4d030-8289-483c-850d-ae09888a1885"
+            },
+            "Property": "Position",
+            "Value": "-11783.998,-8387.99805,160"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ac4dee51-8ab7-491b-a233-8d02ead95215"
+            },
+            "Property": "Position",
+            "Value": "-828.401367,-1401.32129,-32"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ac4dee51-8ab7-491b-a233-8d02ead95215"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.5,0.866025329"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "ac4dee51-8ab7-491b-a233-8d02ead95215"
+            },
+            "Property": "Scale",
+            "Value": "25,75,50"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "4e01f120-c223-495e-8384-9bb32c3143c3"
+            },
+            "Property": "__enabled",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "60cde9d2-e39b-4042-a59d-67aa6da5c8bb"
+            },
+            "Property": "AchievementName",
+            "Value": "entered_tutorial"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "60cde9d2-e39b-4042-a59d-67aa6da5c8bb"
+            },
+            "Property": "SendTime",
+            "Value": true
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3dc4d030-8289-483c-850d-ae09888a1885": "a5dd6732-a5b3-4f8f-9c79-93503d7c6bf8",
+        "ac4dee51-8ab7-491b-a233-8d02ead95215": "842149db-2067-4e6e-bb4f-4291a6cc27a7",
+        "4e01f120-c223-495e-8384-9bb32c3143c3": "849db38a-b60b-4f2f-9cb2-616bce6f491f",
+        "bc5e09ff-0098-48ff-a1e0-94995c4a3c78": "54bda000-26df-4f2c-b23c-8529403a136a",
+        "60cde9d2-e39b-4042-a59d-67aa6da5c8bb": "1788a984-12f0-4d68-baf8-894d9189d5f2"
+      }
     }
   ],
   "SceneProperties": {
