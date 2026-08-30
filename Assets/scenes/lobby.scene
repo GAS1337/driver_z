@@ -28555,6 +28555,120 @@
       }
     },
     {
+      "__guid": "c8fb3ec5-c028-4677-9d58-80b4ba0547e9",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (8)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-23013.75,-30449.5879,2339"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.504150629,0.863615751"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-12609,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,280946,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "c8fb3ec5-c028-4677-9d58-80b4ba0547e9",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "3968fa33-db80-4dc2-8dc9-c3d1b0f734b9",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "ed45186d-3d16-4ba0-ba78-ff0ce4ac7a81"
+      }
+    },
+    {
+      "__guid": "a386e048-585a-478e-a1dd-7242a6961697",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (7)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-10504.1035,-34652.0625,2920"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.504150629,0.863615751"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-12609,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,280946,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "a386e048-585a-478e-a1dd-7242a6961697",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "86c3d724-ecd9-4e2e-9650-98c4817b2343",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "cc623133-f086-40cf-adc5-3812f9d9470c"
+      }
+    },
+    {
       "__guid": "c3b5bb24-8257-4198-a8ef-40dc2e66c3c4",
       "__version": 2,
       "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
@@ -28840,6 +28954,918 @@
       }
     },
     {
+      "__guid": "98a3aaf1-3904-440a-bd79-a23d926b0a91",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (15)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-29793.7344,2613.9895,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.0822860673,0.996608734"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "98a3aaf1-3904-440a-bd79-a23d926b0a91",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "527ed4c5-57ae-47d1-9ddd-250f9afb901c",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "5fa8cb3a-6027-486f-ae48-52745fdde632"
+      }
+    },
+    {
+      "__guid": "49363355-e56f-449d-8a06-1c0ec1c4d50d",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (16)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-37976.3672,-3738.14795,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.613458216,0.789727211"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "49363355-e56f-449d-8a06-1c0ec1c4d50d",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "26de850a-ed0e-4a37-bbb4-d0994045c518",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "7f97e961-c363-4558-b1bc-62246b1bf297"
+      }
+    },
+    {
+      "__guid": "f87360ba-8554-415e-95ad-33353d6b8bc4",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (17)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-25899.2852,4562.89209,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.613458216,0.789727211"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "f87360ba-8554-415e-95ad-33353d6b8bc4",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "e210f8d2-38f2-4ff1-a119-c101a6b621de",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "344c3c3e-368d-402c-92bf-fbc603a82afa"
+      }
+    },
+    {
+      "__guid": "069403cd-144f-481a-8223-4a148bc339f1",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (18)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-20769.207,8222.3418,2504"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.858109713,0.513466358"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "069403cd-144f-481a-8223-4a148bc339f1",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "05ee0849-02f9-4aa7-98e6-6856870e07e4",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "4fb0e936-8f63-4778-888c-66bf4d0ffcaa"
+      }
+    },
+    {
+      "__guid": "572f0b5c-d6d3-4365-8773-01bbd7600513",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (20)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-25619.8184,4624.56006,2504"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.627691686,0.778462052"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "572f0b5c-d6d3-4365-8773-01bbd7600513",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "86e84bd0-6e08-4e58-829f-e8376ddddf77",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "ef4f0e8b-649b-4578-97ca-5d0b3ab54058"
+      }
+    },
+    {
+      "__guid": "4ab51127-87d0-45b2-8db5-bf94624b3200",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (19)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-11153.3867,11667.8877,2504"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "-0,0,-0.975110769,-0.221718371"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "4ab51127-87d0-45b2-8db5-bf94624b3200",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "f2cd91ec-f85b-48b4-b61d-ef9f31c7d874",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "0cb4ec2b-6543-49f4-8a57-6544bfec272e"
+      }
+    },
+    {
+      "__guid": "4aa8dbac-511c-4cac-b842-5c6d6f8e23ec",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (21)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-2721.31689,10636.2295,2504"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.610352218,0.792130172"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "4aa8dbac-511c-4cac-b842-5c6d6f8e23ec",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "bedce202-6fa6-405c-ba9e-b2c18067a6db",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "deb4560d-58fa-4167-8f41-7516d3044d3b"
+      }
+    },
+    {
+      "__guid": "9c188e99-5ad8-4d29-848b-7661dda42a05",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (23)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "7493.32422,-706.94873,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.0331547447,0.999450207"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "9c188e99-5ad8-4d29-848b-7661dda42a05",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "2d329ed4-7566-4f04-be71-aba9f8f0089e",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "fbbd1046-5b38-448b-972d-084ac7e26c02"
+      }
+    },
+    {
+      "__guid": "a07ed54f-2b40-4297-add0-024cef753149",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (25)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "5313.26562,5574.82324,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.244630054,0.969616473"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "a07ed54f-2b40-4297-add0-024cef753149",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "a02c9a03-83e2-43b3-a1a0-afee49d8b888",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "1d9ac765-b456-4393-a00b-4f098faae5f0"
+      }
+    },
+    {
+      "__guid": "48622b57-5772-4487-8ad8-f4d5d3f5c99e",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (28)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "2452.46826,-6207.17383,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.714533865,0.699600875"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "48622b57-5772-4487-8ad8-f4d5d3f5c99e",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "d5a9c9e6-1487-4339-b9bb-01e345338d4a",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "9b2c8860-e4c5-45b8-ad60-bbaea95e6945"
+      }
+    },
+    {
+      "__guid": "ed20a6c2-616e-442e-85c4-1a0e638a5ba4",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (26)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "5091.69824,-4460.67188,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.333478212,0.942757785"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "ed20a6c2-616e-442e-85c4-1a0e638a5ba4",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "9683f4c1-39f8-47df-8e2c-2d73de14e59b",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "3cf7a9f2-735e-476e-bc28-e53ff9b21794"
+      }
+    },
+    {
+      "__guid": "1c4d625d-2bef-466f-a96d-3a329267e5ee",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (27)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-1110.65027,-16281.0625,2503.99976"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.632367492,0.774668574"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "1c4d625d-2bef-466f-a96d-3a329267e5ee",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "df935490-475a-48c3-8417-2f5bb65b66d9",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "20d6b5b5-dad5-4e10-a0f0-163d4e7805e4"
+      }
+    },
+    {
+      "__guid": "deb8e421-9ca8-45ae-aaca-48429bf256b8",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (24)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "215.536987,-14217.957,2504"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.143837512,0.989601314"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,15319.5,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,126249,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "deb8e421-9ca8-45ae-aaca-48429bf256b8",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "dfc967cf-403a-4b97-bddc-102f8211f84a",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "55514282-45f7-44d9-8901-d219a3b87090"
+      }
+    },
+    {
+      "__guid": "8c8f92ba-53dd-4229-b304-0933ba23f785",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (22)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "2549.82275,7734.99219,2504.00024"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.700659871,0.713495493"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-2789,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,90032,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "8c8f92ba-53dd-4229-b304-0933ba23f785",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "f602ea9a-c743-4fea-b0eb-3d8a895eb2ec",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "52408a90-309e-4b30-a2df-50f83651ae87"
+      }
+    },
+    {
+      "__guid": "bbca370b-220f-43b2-a7ee-74c9c66ea7fc",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (29)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-1494.97192,8719.57324,2504.00024"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.106264688,0.994337857"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,6479,58299"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,28674,117098"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "bbca370b-220f-43b2-a7ee-74c9c66ea7fc",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "2909a809-a49f-4d94-afd5-a2ed27425ba3",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "8d5a8cc0-2365-4145-a68a-b7de3bb4eadb"
+      }
+    },
+    {
+      "__guid": "b3b153f3-fab6-45a3-95ad-0e777b4301df",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall SKYBOXWALL"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-20320.3359,-22424.8887,12673"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,-0,-0.485496819,0.874238431"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "-69052.5,51737,5793"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "-525923,620888,12086"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "b3b153f3-fab6-45a3-95ad-0e777b4301df",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "ab142c7b-afc6-4c8c-90fe-a71b6ec35129",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "cee7b09f-8d36-4545-af8a-1df4f675b96b"
+      }
+    },
+    {
       "__guid": "4d0ddf3b-f217-4e72-aee4-f595a5a8f892",
       "__version": 2,
       "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
@@ -28877,7 +29903,7 @@
               "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
             },
             "Property": "Center",
-            "Value": "1252,1759.5,51288.5"
+            "Value": "1252,-65818.5,51288.5"
           },
           {
             "Target": {
@@ -28885,7 +29911,7 @@
               "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
             },
             "Property": "Scale",
-            "Value": "3004,142615,103077"
+            "Value": "3004,277771,103077"
           }
         ],
         "MovedObjects": []
@@ -28894,6 +29920,348 @@
         "78c08b6d-1fc6-453a-8c53-f7704678343e": "4d0ddf3b-f217-4e72-aee4-f595a5a8f892",
         "1aeecc8c-f749-4d67-9596-874a1a78f330": "ff7376d2-9f39-4e95-a876-d21a0063e58f",
         "dc12a421-5022-48cf-85e1-86d3f286e15c": "e5d2df40-af74-4da6-b638-4553e76b44fd"
+      }
+    },
+    {
+      "__guid": "5fe574e6-28b6-47d0-b1ce-fde3d7cf274f",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (11)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-21789.168,-1921.4668,2340"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.255108595,0.966912389"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-138012,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,133384,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "5fe574e6-28b6-47d0-b1ce-fde3d7cf274f",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "1108f033-7836-42c0-9a09-c35bdb1831a1",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "16fa0dd7-7703-4534-b3d3-5c1426216f41"
+      }
+    },
+    {
+      "__guid": "3052d8ed-eff3-4b3a-a62c-1b5bf36c87b2",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (12)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-29043.627,-6035.8833,2340"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.255108595,0.966912389"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-159130.5,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,91147,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "3052d8ed-eff3-4b3a-a62c-1b5bf36c87b2",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "cecfda89-dbc6-477e-a934-8f1e51b07654",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "ec93c99c-b35b-4748-9676-e712dddefc8c"
+      }
+    },
+    {
+      "__guid": "23ed8646-37fb-4938-9f6e-82a6bf789be0",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (13)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-29895.4297,-976.584473,2340"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.255108595,0.966912389"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-159130.5,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,91147,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "23ed8646-37fb-4938-9f6e-82a6bf789be0",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "eb3dfca4-d1b9-4827-b9bb-f73679839c2a",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "52a8bb62-76c5-44ee-a1e8-c5c0afa93be0"
+      }
+    },
+    {
+      "__guid": "6d4aa1ee-6709-4b86-bd32-ba273dd187e6",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (14)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-5327.97461,-5662.51221,2339.99927"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,-0.503321171,0.864099205"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-162964,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,83480,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "6d4aa1ee-6709-4b86-bd32-ba273dd187e6",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "8bbd4a4a-80fe-463a-83e3-b3c6a3159a2e",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "b48ca0aa-15bb-42c3-9250-87387e8ecbec"
+      }
+    },
+    {
+      "__guid": "a53c965b-bcea-46e2-b7fc-ca64848ca8fe",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (9)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-33622.3125,-23888.4102,2340"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.255108595,0.966912389"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-65818.5,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,277771,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "a53c965b-bcea-46e2-b7fc-ca64848ca8fe",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "702dd4a3-bc6f-4961-a7f3-2777001e95ff",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "a9c3de68-8130-4a11-b5f3-2897c851da3b"
+      }
+    },
+    {
+      "__guid": "f602d14b-7625-42a8-b295-48879574086f",
+      "__version": 2,
+      "__Prefab": "prefabs/homemadeinvisiblewall.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Name",
+            "Value": "homemadeinvisiblewall (10)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Position",
+            "Value": "-24305.0273,-36039.4531,2340"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.255108595,0.966912389"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Center",
+            "Value": "1252,-65818.5,51288.5"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
+            },
+            "Property": "Scale",
+            "Value": "3004,277771,103077"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "78c08b6d-1fc6-453a-8c53-f7704678343e": "f602d14b-7625-42a8-b295-48879574086f",
+        "1aeecc8c-f749-4d67-9596-874a1a78f330": "87f126f9-e27d-446c-a7a1-505c46a0599d",
+        "dc12a421-5022-48cf-85e1-86d3f286e15c": "ccab9730-1745-4617-9824-cefd222a154a"
       }
     },
     {
