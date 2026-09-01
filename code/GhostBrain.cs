@@ -40,7 +40,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
 
-	TimeSince SinceGroundCheck;
+	TimeSince SinceGroundCheck = 0;
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	Random random;
@@ -90,7 +90,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
-		if (SinceGroundCheck > 0.3f ) 
+		if (SinceGroundCheck > 0.3f && CurrentState != GhostState.Idle ) 
 		{
 			GroundTrace = Scene.Trace
 				.Ray( TargetPosition, TargetPosition + Vector3.Down * 3000 )
@@ -138,9 +138,13 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 				
 				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
 				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
-				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+				Transform transform = new Transform(
+					SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance),
+					Rotation.LookAt( TargetPosition - SchwebeMittelPunkt, Vector3.Up ),
+					WorldScale
+				);
 
-				GameObject.WorldRotation = Rotation.LookAt( TargetPosition - SchwebeMittelPunkt, Vector3.Up );
+				WorldTransform = transform;
 
 				if ( (playerPosition - WorldPosition).Length < 10000 ) { CurrentState = GhostState.Moving; }	
 

@@ -37,7 +37,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 	TimeSince SinceHitAnimationStart;
 	Vector3 originalScale;
 
-	TimeSince SinceGroundCheck;
+	TimeSince SinceGroundCheck = 0;
 	public TimeUntil UntilKnockBack;
 	TimeUntil NextOffset;
 	TimeUntil UntilNextIdleSound;
@@ -91,7 +91,7 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
-		if ( SinceGroundCheck > 0.3f )
+		if ( SinceGroundCheck > 0.3f && CurrentState != VampireState.Idle )
 		{
 			SinceGroundCheck = 0;
 			GroundTrace = Scene.Trace
@@ -145,9 +145,11 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 				
 				// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, 
 				// dann mit Distanz multiplizieren und auf MittelPunkt addieren
-				GameObject.WorldPosition = SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance);
+				Transform transform = new Transform(
+					SchwebeMittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * (SchwebeFrequenz) ) * SchwebeDistance),
+					Rotation.LookAt( TargetPosition - GameObject.WorldPosition, Vector3.Up ),
+					WorldScale);
 
-				GameObject.WorldRotation = Rotation.LookAt( TargetPosition - GameObject.WorldPosition, Vector3.Up );
 				if ( (playerPosition - WorldPosition).Length < 8000 ) { CurrentState = VampireState.Moving; }				
 				break;
 

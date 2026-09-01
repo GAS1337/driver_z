@@ -31,5 +31,6 @@ public sealed class KitSpawner : Component
 	{
 		// Particle Effekt, Sound?
 		currentKit = KitPrefab.Clone( WorldPosition + Vector3.Up * 500 );
+		currentKit.GetComponent<TemporaryEffect>().Enabled = false;
 	}
 }

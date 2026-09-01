@@ -25,12 +25,18 @@ public sealed class Ammokit : Component, Component.ITriggerListener
 		GameObject.WorldPosition = MittelPunkt;
 	}
 
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
-		GameObject.WorldRotation = Rotation.From( 0, GameObject.WorldRotation.Yaw() + 0.2f, 0 );
-
+		// Rotiert das Kit langsam um die Y-Achse
 		// Zeit schiebt Sinusfunktion(Welle) voran, multipliziert mit Frequenz für enge oder weite Wellen, dann mit Distanz multiplizieren und auf MittelPunkt addieren
-		GameObject.WorldPosition = MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * SchwebeFrequenz ) * SchwebeDistance);
+
+		Transform transform = new Transform(
+			MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * SchwebeFrequenz ) * SchwebeDistance),
+			Rotation.From( 0, GameObject.WorldRotation.Yaw() + 0.2f, 0 ),
+			WorldScale
+		);
+
+		WorldTransform = transform;
 	}
 
 	public void OnTriggerEnter( GameObject other )
