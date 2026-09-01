@@ -8289,6 +8289,219 @@
           "Children": []
         },
         {
+          "__guid": "5308039e-6046-4c14-ab43-20691b115f8a",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "stone-wall-column (17)",
+          "Position": "-18757.0156,525.964722,-314.426086",
+          "Rotation": "0,0,-0.409114301,0.912483156",
+          "Scale": "30,60,40",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "4f417099-cf79-42dc-a477-5dcbbbef7a9d",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "7d42e8d8-50f6-4476-8cb6-3ef6341b4538",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "ba6fc8c6-f9ac-4b39-bf86-b412fb972fbc",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "stone-wall-column (18)",
+          "Position": "-18757.0156,525.964722,-314.426086",
+          "Rotation": "0,0,-0.409114301,0.912483156",
+          "Scale": "30,60,40",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "e73fa3fa-a74f-466b-9a37-6114ca87afc0",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "0d025c68-20e3-4faf-ba6a-7fc17fe679c8",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "e264436e-c76a-4873-be13-b9480d751940",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "stone-wall-column (19)",
+          "Position": "-22552.832,-2856.16992,-314.426086",
+          "Rotation": "0,0,-0.409114301,0.912483156",
+          "Scale": "30,60,40",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b7808be3-96ec-4fe6-9ab3-7ff38edf34f5",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "9377af3b-ce1d-4647-b3e9-f9f2b62594b5",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/graveyard kit/stone-wall-column.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
+        },
+        {
           "__guid": "8b429aa0-f0d9-44d3-be6f-c6335dc0d890",
           "__version": 2,
           "Flags": 0,
@@ -18281,6 +18494,86 @@
       "Children": []
     },
     {
+      "__guid": "863adc72-46d2-41b6-821f-4fcecce3e1c4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Big Explanation Text (20)",
+      "Position": "-25727.2363,889.768311,1712.41272",
+      "Rotation": "-0.00537821418,-0.0159597844,0.947505295,0.319296241",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "05ce236f-0039-4116-9e0f-a9027e04cf48",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Billboard": "None",
+          "BlendMode": "Normal",
+          "FogStrength": 0.1,
+          "HorizontalAlignment": "Center",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 4.5,
+          "TextScope": {
+            "Text": "Monsters spawn exponentially faster\n\nSo take a minute to explore the Map \nwhen its calm",
+            "TextColor": "3.39102,1.28622,0.91479,5",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "FontItalic": false,
+            "FontVariantNumeric": "Normal",
+            "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
+            "FilterMode": "Bilinear",
+            "FontSmooth": "Auto",
+            "Outline": {
+              "Enabled": true,
+              "Size": 4,
+              "Color": "0,0,0,1"
+            },
+            "Shadow": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Enabled": false,
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          },
+          "VerticalAlignment": "Center"
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "7bc95b61-7774-4e66-a02c-cd89695047fe",
       "__version": 2,
       "Flags": 0,
@@ -27125,7 +27418,7 @@
               "IdValue": "d2a9b172-78a9-4748-a832-e901aeb753c7"
             },
             "Property": "Position",
-            "Value": "-29769.084,-1657.5459,120.000061"
+            "Value": "-29603.2812,-1931.2478,120.000107"
           },
           {
             "Target": {
@@ -29944,7 +30237,7 @@
               "IdValue": "78c08b6d-1fc6-453a-8c53-f7704678343e"
             },
             "Property": "Position",
-            "Value": "-21789.168,-1921.4668,2340"
+            "Value": "-21789.168,-1921.4668,11228.999"
           },
           {
             "Target": {
@@ -29960,7 +30253,7 @@
               "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
             },
             "Property": "Center",
-            "Value": "1252,-138012,51288.5"
+            "Value": "1252,-138012,6425"
           },
           {
             "Target": {
@@ -29968,7 +30261,7 @@
               "IdValue": "dc12a421-5022-48cf-85e1-86d3f286e15c"
             },
             "Property": "Scale",
-            "Value": "3004,133384,103077"
+            "Value": "3004,133384,192804"
           }
         ],
         "MovedObjects": []
