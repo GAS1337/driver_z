@@ -34,16 +34,16 @@ public sealed class HighscoreManager : Component
 		switch (CurrentScore)
 		{
 			case >= 1000000:
-				Sandbox.Services.Achievements.Unlock( "one_million_points" );
+				Sandbox.Services.Achievements.Unlock( "million_points" );
 				break;
 			case >= 666666:
 				Sandbox.Services.Achievements.Unlock( "six_hundred_thousand_points" );
 				break;
 			case >= 333333:
-				Sandbox.Services.Achievements.Unlock( "three_hundredthousand_points" );
+				Sandbox.Services.Achievements.Unlock( "three_hundred_thousand_points" );
 				break;
 			case >= 100000:
-				Sandbox.Services.Achievements.Unlock( "one_hundred_thousand_points" );
+				Sandbox.Services.Achievements.Unlock( "hundred_thousand_points" );
 				break;
 			case >= 50000:
 				Sandbox.Services.Achievements.Unlock( "fifty_thousand_points" );

@@ -45,7 +45,7 @@ VS
         float3 windDirection = float3( 1.0f, 0.5f, 0.0f ); 
         float windSpeed = 0.15f;        
         float windFrequency = 0.00008f;  
-        float swayAmplitude = 150.0f;   
+        float swayAmplitude = 50.0f;   
 
         // 2. Welt-Sway Logik
         float worldSample = dot( i.vPositionWs.xy, windDirection.xy ) * windFrequency;

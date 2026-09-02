@@ -32,10 +32,10 @@ public sealed class Medikit : Component, Component.ITriggerListener
 
 		Transform transform = new Transform(
 			MittelPunkt + Vector3.Up * (MathF.Sin( Time.Now * SchwebeFrequenz ) * SchwebeDistance),
-			Rotation.From( 0, GameObject.WorldRotation.Yaw() + 0.2f, 0 ),
+			Rotation.From( 0, WorldRotation.Yaw() + 0.2f, 0 ),
 			WorldScale
 		);
-
+		//DebugOverlay.Sphere(new Sphere( MittelPunkt, 50 ));
 		WorldTransform = transform;
 	}
 

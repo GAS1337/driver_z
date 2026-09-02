@@ -146,6 +146,11 @@
 
     protected override int BuildHash() {
 
+        if (HighscoreManager == null || PlayerHealth == null || PlayerGun == null)
+        {
+            return 0;
+        }
+
         var hash = new System.HashCode();
         hash.Add(displayedScore);
         hash.Add(HighscoreManager.LastGainedScore);

@@ -43,7 +43,7 @@ VS
 		PixelInput i = ProcessVertex( v );
 		
 		// Deine bestehende Vertex-Transformation (Skalierung)
-		float scale = sin(g_flTime * 3.0f) * 0.03f + 1.0f;
+		float scale = 1; // sin(g_flTime * 3.0f) * 0.03f + 1.0f;
 		i.vPositionPs.xyz *= scale; 
 		
 		i.vPositionOs = v.vPositionOs.xyz * scale;
@@ -72,7 +72,7 @@ PS
         // --- STREIFEN LOGIK ---
         float speed = 3.0f;       // Wie schnell der Streifen fällt
         float frequency = 0.02f;  // Sehr kleine Zahl für wenige, breite Wellen
-        float thickness = 0.01f;  // Schwellenwert für die Dicke des Streifens
+        float thickness = 0.015f;  // Schwellenwert für die Dicke des Streifens
 
         // i.vPositionOs.z ist die Oben/Unten-Achse in S&box.
         // Das Minus-Zeichen (-) sorgt dafür, dass er von Oben nach Unten läuft.
