@@ -1,4 +1,5 @@
 using Sandbox;
+using System.Threading.Tasks;
 
 public sealed class KitSpawner : Component
 {
@@ -6,7 +7,7 @@ public sealed class KitSpawner : Component
 	[Property] float SpawnCooldown;
 
 	GameObject currentKit;
-
+	int _id = 0;
 	TimeUntil NextSpawn;
 
 	protected override void OnStart()

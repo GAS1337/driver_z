@@ -7,6 +7,7 @@ public sealed class Medikit : Component, Component.ITriggerListener
 
 	SceneTraceResult GroundTrace;
 
+	int id = 0;
 	Vector3 MittelPunkt;
 	float SchwebeDistance = 50;
 	float SchwebeFrequenz = 1f;
@@ -42,6 +43,8 @@ public sealed class Medikit : Component, Component.ITriggerListener
 	public void OnTriggerEnter( GameObject other )
 	{
 		if ( !other.Tags.Has( "player" ) ) return;
+		id++;
+		if ( id > 1 ) return;
 		Log.Info( $"Collided with {other.Name}" );
 		
 		if ( other.GetComponentInParent<HealthSystem>().CurrentHealth < other.GetComponentInParent<HealthSystem>().SetHealth )

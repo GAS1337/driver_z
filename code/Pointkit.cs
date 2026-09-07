@@ -8,7 +8,7 @@ public sealed class Pointkit : Component, Component.ITriggerListener
 	HighscoreManager HighscoreManager;
 
 	SceneTraceResult GroundTrace;
-
+	int id = 0;
 	Vector3 MittelPunkt;
 	float SchwebeDistance = 50;
 	float SchwebeFrequenz = 1f;
@@ -47,6 +47,8 @@ public sealed class Pointkit : Component, Component.ITriggerListener
 	public void OnTriggerEnter( GameObject other )
 	{
 		if ( !other.Tags.Has( "player" ) ) return;
+		id++;
+		if ( id > 1 ) return;
 		Log.Info( $"Collided with {other.Name}" );
 
 		HighscoreManager.IncreaseScore( PointAmount );

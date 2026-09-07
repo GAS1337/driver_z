@@ -6,7 +6,7 @@ public sealed class Ammokit : Component, Component.ITriggerListener
 	[Property] float RocketAmount = 5f;
 
 	SceneTraceResult GroundTrace;
-
+	int id = 0;
 	Vector3 MittelPunkt;
 	float SchwebeDistance = 50;
 	float SchwebeFrequenz = 1f;
@@ -42,8 +42,9 @@ public sealed class Ammokit : Component, Component.ITriggerListener
 	public void OnTriggerEnter( GameObject other )
 	{
 		if ( !other.Tags.Has( "player" ) ) return;
+		id++;
+		if ( id > 1 ) return;
 		Log.Info( $"Collided with {other.Name}" );
-		
 		other.GetComponentInParent<GunControl>().CurrentRockets += RocketAmount;
 		Sound.Play( "sounds/medikitsound.sound", WorldPosition );
 
