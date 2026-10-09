@@ -32,6 +32,7 @@ public sealed class RocketLogic : Component, Component.ITriggerListener
 		{
 			if ( hit.GameObject.Tags.Has( "enemy" ) )
 			{
+				hit.GameObject.Network.TakeOwnership();
 				if ( !hit.GameObject.IsValid ) return;
 				// DebugOverlay.Trace( hit );
 				Log.Info( hit.GameObject.Name + " - " + hit.GameObject.Tags.Has( "enemy" ) );

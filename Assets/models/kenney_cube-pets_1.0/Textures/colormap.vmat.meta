@@ -1,4 +1,5 @@
 {
+  "guid": "8b440000-0247-0000-0600-0000fa7f0000",
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
@@ -16,7 +17,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "models/kenney_cube-pets_1.0/textures/colormap.vmat"
+        "SingleAssetSource": "models/kenney_cube-pets_1.0/textures/colormap.vmat",
+        "ParentPackage": "straightgas.graveyard_gunners"
       }
     }
   }

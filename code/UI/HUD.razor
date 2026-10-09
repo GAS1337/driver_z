@@ -1,10 +1,11 @@
-﻿@using Sandbox;
+@using Sandbox;
 @using Sandbox.UI;
 @using System;
+@using System.Linq;
 @inherits PanelComponent
 @namespace Sandbox
 
-@if(PlayerGun != null && PlayerHealth != null && HighscoreManager != null)
+@if(PlayerGun.IsValid() && PlayerHealth.IsValid() && HighscoreManager.IsValid())
 {
 <root>
     <div class="crosshair @(PlayerGun?.IsTargetingEnemy == true ? "on-target" : "")" 
@@ -59,9 +60,10 @@
         public float RandomOffset { get; set; } // Für horizontale Streuung
     }
 
-    [Property] HighscoreManager HighscoreManager { get; set; }
-    HealthSystem PlayerHealth { get; set; }
-    GunControl PlayerGun { get; set; }
+    [Property] public LobbyManager LobbyManager { get; set; }
+    [Property] public HighscoreManager HighscoreManager { get; set; }
+    public HealthSystem PlayerHealth { get; set; }
+    public GunControl PlayerGun { get; set; }
 
     private float lastHealth;
     private bool isDamaged;
@@ -72,22 +74,75 @@
     private TimeSince SinceRocketUsed;
 
     private List<ScorePopup> activePopups = new();
-    private float scoreProcessed;
+    private float scoreProcessed = 0f;
     private float displayedScore = 0f; // Der Wert, der momentan angezeigt wird
 
     protected override void OnStart()
     {
-        HighscoreManager = Scene.Get<HighscoreManager>();
-        PlayerHealth = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<HealthSystem>();
-        PlayerGun = Scene.FindAllWithTag("player").First<GameObject>().GetComponent<GunControl>();
+        if ( !HighscoreManager.IsValid() )
+            HighscoreManager = Scene.GetAllComponents<HighscoreManager>().FirstOrDefault();
 
-        lastHealth = PlayerHealth.CurrentHealth;
-        // Initialisierung, damit der Score nicht bei 0 startet, wenn man einsteigt
-        displayedScore = HighscoreManager.CurrentScore;
+        if ( !LobbyManager.IsValid() )
+            LobbyManager = Scene.GetAllComponents<LobbyManager>().FirstOrDefault();
+
+        TryFindLocalPlayer();
+
+        if ( PlayerHealth.IsValid() )
+        {
+            lastHealth = PlayerHealth.CurrentHealth;
+        }
+
+        if ( PlayerGun.IsValid() )
+        {
+            lastRocketCount = PlayerGun.CurrentRockets;
+        }
+
+        displayedScore = HighscoreManager.IsValid() ? HighscoreManager.CurrentScore : 0f;
+        scoreProcessed = displayedScore;
+    }
+
+    private void TryFindLocalPlayer()
+    {
+        if ( !LobbyManager.IsValid() )
+            LobbyManager = Scene.GetAllComponents<LobbyManager>().FirstOrDefault();
+
+        if ( LobbyManager.IsValid() && LobbyManager.ConnectedPlayers != null && Connection.Local != null )
+        {
+            if ( LobbyManager.ConnectedPlayers.TryGetValue( Connection.Local.SteamId, out var playerObj ) && playerObj.IsValid() )
+            {
+                if ( !PlayerHealth.IsValid() )
+                {
+                    PlayerHealth = playerObj.Components.Get<HealthSystem>();
+                    if ( PlayerHealth.IsValid() )
+                        lastHealth = PlayerHealth.CurrentHealth;
+                }
+                if ( !PlayerGun.IsValid() )
+                {
+                    PlayerGun = playerObj.Components.Get<GunControl>();
+                    if ( PlayerGun.IsValid() )
+                        lastRocketCount = PlayerGun.CurrentRockets;
+                }
+            }
+        }
     }
 
     protected override void OnUpdate()
     {
+        if ( !HighscoreManager.IsValid() )
+        {
+            HighscoreManager = Scene.GetAllComponents<HighscoreManager>().FirstOrDefault();
+        }
+
+        if ( !PlayerHealth.IsValid() || !PlayerGun.IsValid() )
+        {
+            TryFindLocalPlayer();
+        }
+
+        if ( !HighscoreManager.IsValid() || !PlayerHealth.IsValid() || !PlayerGun.IsValid() )
+        {
+            return;
+        }
+        
         // Wir nähern displayedScore dem echten Score an.
         // 5f ist die Geschwindigkeit. Höhere Werte = schnelleres Hochzählen.
         displayedScore = MathX.Lerp(displayedScore, HighscoreManager.CurrentScore, Time.Delta * 5f);
@@ -140,6 +195,7 @@
         {
             rocketUsed = true;
             SinceRocketUsed = 0; // Dauer der Animation in Sekunden
+            lastRocketCount = PlayerGun.CurrentRockets;
         }
         if (SinceRocketUsed > 0.5f)
         {
@@ -149,7 +205,7 @@
 
     protected override int BuildHash() {
 
-        if (HighscoreManager == null || PlayerHealth == null || PlayerGun == null)
+        if (!HighscoreManager.IsValid() || !PlayerHealth.IsValid() || !PlayerGun.IsValid())
         {
             return 0;
         }

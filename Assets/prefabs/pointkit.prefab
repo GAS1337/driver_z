@@ -9,11 +9,11 @@
     "Scale": "1.5,1.5,1.5",
     "Tags": "playerclip",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "TemporaryEffect",
@@ -114,9 +114,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-prototype-kit.vmat",
+                "MaterialOverride": {
+                  "Id": "3f40dd20-1ff4-4f49-acb6-bd757524101d",
+                  "Path": "shader/scanner-pulse-prototype-kit.vmat"
+                },
                 "Materials": null,
-                "Model": "models/prototype kit/number-double-5.vmdl",
+                "Model": {
+                  "Id": "c8514caf-2cd4-48b7-84b0-1f66778ff731",
+                  "Path": "models/prototype kit/number-double-5.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -160,9 +166,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-prototype-kit.vmat",
+                "MaterialOverride": {
+                  "Id": "3f40dd20-1ff4-4f49-acb6-bd757524101d",
+                  "Path": "shader/scanner-pulse-prototype-kit.vmat"
+                },
                 "Materials": null,
-                "Model": "models/prototype kit/number-double-0.vmdl",
+                "Model": {
+                  "Id": "b924dc24-b113-4a2d-8831-b201a0287308",
+                  "Path": "models/prototype kit/number-double-0.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -206,9 +218,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-prototype-kit.vmat",
+                "MaterialOverride": {
+                  "Id": "3f40dd20-1ff4-4f49-acb6-bd757524101d",
+                  "Path": "shader/scanner-pulse-prototype-kit.vmat"
+                },
                 "Materials": null,
-                "Model": "models/prototype kit/number-double-0.vmdl",
+                "Model": {
+                  "Id": "b924dc24-b113-4a2d-8831-b201a0287308",
+                  "Path": "models/prototype kit/number-double-0.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -232,6 +250,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

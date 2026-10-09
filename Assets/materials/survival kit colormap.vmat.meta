@@ -1,4 +1,5 @@
 {
+  "guid": "b8c42a85-a51a-4650-a429-e3c320f25a8d",
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
@@ -16,7 +17,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "materials/survival kit colormap.vmat"
+        "SingleAssetSource": "materials/survival kit colormap.vmat",
+        "ParentPackage": "straightgas.graveyard_gunners"
       }
     }
   }

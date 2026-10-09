@@ -9,11 +9,11 @@
     "Scale": "6,6,6",
     "Tags": "light_spot,light,enemy,prop",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
@@ -26,7 +26,10 @@
         "MaterialGroup": null,
         "MaterialOverride": null,
         "Materials": null,
-        "Model": "models/kaykit_city_builder_bits_1.0_free/streetlight.vmdl",
+        "Model": {
+          "Id": "6c91154e-5de2-45fa-a526-ec7100b0f124",
+          "Path": "models/kaykit_city_builder_bits_1.0_free/streetlight.vmdl"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -51,7 +54,10 @@
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/kaykit_city_builder_bits_1.0_free/streetlight.vmdl",
+        "Model": {
+          "Id": "6c91154e-5de2-45fa-a526-ec7100b0f124",
+          "Path": "models/kaykit_city_builder_bits_1.0_free/streetlight.vmdl"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -147,6 +153,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

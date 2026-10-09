@@ -9,11 +9,11 @@
     "Scale": "0.666666687,0.666666687,0.666666687",
     "Tags": "",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [],
     "Children": [
       {
@@ -26,7 +26,7 @@
         "Scale": "5,5,5",
         "Tags": "enemy",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -57,7 +57,10 @@
             "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
-            "Model": "models/graveyard kit/character-vampire.vmdl",
+            "Model": {
+              "Id": "6501f18f-ff1f-4c16-a7d5-162bafc721e0",
+              "Path": "models/graveyard kit/character-vampire.vmdl"
+            },
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -82,6 +85,7 @@
               "_type": "gameobject",
               "prefab": "prefabs/blood-decal.prefab"
             },
+            "ClosestPlayer": null,
             "DeathParticle": {
               "_type": "gameobject",
               "prefab": "prefabs/dead-vampire.prefab"
@@ -116,7 +120,7 @@
             "Scale": "1,1,1",
             "Tags": "",
             "Enabled": true,
-            "NetworkMode": 2,
+            "NetworkMode": 1,
             "NetworkFlags": 0,
             "NetworkOrphaned": 0,
             "NetworkTransmit": true,
@@ -196,7 +200,7 @@
             "Scale": "1,1,1",
             "Tags": "",
             "Enabled": true,
-            "NetworkMode": 2,
+            "NetworkMode": 1,
             "NetworkFlags": 0,
             "NetworkOrphaned": 0,
             "NetworkTransmit": true,
@@ -213,7 +217,10 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/graveyard kit/character-vampire.vmdl",
+                "Model": {
+                  "Id": "6501f18f-ff1f-4c16-a7d5-162bafc721e0",
+                  "Path": "models/graveyard kit/character-vampire.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -242,7 +249,7 @@
             "Scale": "1,1,1",
             "Tags": "particles",
             "Enabled": true,
-            "NetworkMode": 2,
+            "NetworkMode": 1,
             "NetworkFlags": 0,
             "NetworkOrphaned": 0,
             "NetworkTransmit": true,
@@ -325,11 +332,15 @@
                   "ConstantA": "0.56744,0,0,1",
                   "ConstantB": "0.46512,0,0,1"
                 },
+                "InitialPitch": 0,
+                "InitialRoll": 0,
+                "InitialScale": 1,
                 "InitialVelocity": {
                   "X": 0,
                   "Y": 0,
                   "Z": 0
                 },
+                "InitialYaw": 0,
                 "Lifetime": {
                   "Type": "Range",
                   "Evaluation": "Seed",
@@ -382,6 +393,7 @@
                     }
                   ]
                 },
+                "SequenceFitToLifetime": false,
                 "SequenceId": 0,
                 "SequenceSpeed": 1,
                 "SequenceTime": 1,
@@ -415,6 +427,8 @@
                 "BlurAmount": 1,
                 "BlurOpacity": 0.5,
                 "BlurSpacing": 0.5,
+                "CameraFadeFar": 0,
+                "CameraFadeNear": 0,
                 "DepthFeather": 10,
                 "FaceVelocity": false,
                 "FogStrength": 1,
@@ -449,6 +463,8 @@
                         "FrameRate": 15,
                         "Origin": "0.5,0.5",
                         "LoopMode": "Loop",
+                        "LoopStart": -1,
+                        "LoopEnd": -1,
                         "Frames": [
                           {
                             "Texture": "textures/shapes/sphere1.vtex",
@@ -500,6 +516,7 @@
                 "Burst": 100,
                 "Delay": 0,
                 "DestroyOnEnd": false,
+                "DistanceBias": "1,1,1",
                 "Duration": 1,
                 "Loop": false,
                 "OnComponentDestroy": null,
@@ -509,6 +526,7 @@
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
                 "OnEdge": false,
+                "OneSidedAxes": "None",
                 "Radius": 20,
                 "Rate": 0,
                 "RateOverDistance": 0,
@@ -547,7 +565,7 @@
             "Scale": "1,1,1",
             "Tags": "",
             "Enabled": true,
-            "NetworkMode": 2,
+            "NetworkMode": 1,
             "NetworkFlags": 0,
             "NetworkOrphaned": 0,
             "NetworkTransmit": true,
@@ -636,7 +654,7 @@
             "Scale": "0.200000003,0.200000003,0.200000003",
             "Tags": "",
             "Enabled": true,
-            "NetworkMode": 2,
+            "NetworkMode": 1,
             "NetworkFlags": 0,
             "NetworkOrphaned": 0,
             "NetworkTransmit": true,
@@ -832,6 +850,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

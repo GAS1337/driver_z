@@ -106,6 +106,10 @@
           "go": "c8048c85-de35-4602-ae81-efba74b952ec",
           "component_type": "ModelRenderer"
         },
+        "FlyingSound": {
+          "Id": "55dfced9-ee59-49f1-bf3a-08ba80adecef",
+          "Path": "sounds/ghost/ghost-attack.sound"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -264,11 +268,15 @@
               "ConstantA": "0,0,0.98515,1",
               "ConstantB": "1,0,0.5,1"
             },
+            "InitialPitch": 0,
+            "InitialRoll": 0,
+            "InitialScale": 1,
             "InitialVelocity": {
               "X": 0,
               "Y": 0,
               "Z": 0
             },
+            "InitialYaw": 0,
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
@@ -334,6 +342,7 @@
                 }
               ]
             },
+            "SequenceFitToLifetime": false,
             "SequenceId": 0,
             "SequenceSpeed": 1,
             "SequenceTime": 1,
@@ -363,6 +372,8 @@
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
             "BlurSpacing": 0.73,
+            "CameraFadeFar": 0,
+            "CameraFadeNear": 0,
             "DepthFeather": 5,
             "FaceVelocity": false,
             "FogStrength": 0.3,
@@ -422,6 +433,7 @@
             "Burst": 0,
             "Delay": 0,
             "DestroyOnEnd": false,
+            "DistanceBias": "1,1,1",
             "Duration": 10,
             "Loop": true,
             "OnComponentDestroy": null,
@@ -431,6 +443,7 @@
             "OnComponentStart": null,
             "OnComponentUpdate": null,
             "OnEdge": false,
+            "OneSidedAxes": "None",
             "Radius": 32,
             "Rate": 100,
             "RateOverDistance": 0,
@@ -520,11 +533,15 @@
             "ForceSpace": "World",
             "Friction": 1,
             "Gradient": "0,0,0,1",
+            "InitialPitch": 0,
+            "InitialRoll": 0,
+            "InitialScale": 1,
             "InitialVelocity": {
               "X": 0,
               "Y": 0,
               "Z": 0
             },
+            "InitialYaw": 0,
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
@@ -577,6 +594,7 @@
                 }
               ]
             },
+            "SequenceFitToLifetime": false,
             "SequenceId": 0,
             "SequenceSpeed": 1,
             "SequenceTime": 1,
@@ -606,6 +624,8 @@
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
             "BlurSpacing": 0.73,
+            "CameraFadeFar": 0,
+            "CameraFadeNear": 0,
             "DepthFeather": 5,
             "FaceVelocity": false,
             "FogStrength": 0.8,
@@ -735,6 +755,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

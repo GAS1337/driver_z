@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 public sealed class RotationControl : Component
 {
-	[Property] Rigidbody CarBody;
+	[Property] public Rigidbody CarBody;
 
 	[Property] WheelJoint FrontLeft;
 	[Property] WheelJoint FrontRight;
@@ -46,6 +46,8 @@ public sealed class RotationControl : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( Network.IsProxy ) { return; }
+
 		Line VelLine = new Line( CarBody.WorldPosition + Vector3.Up * 100, CarBody.WorldPosition + CarBody.Velocity * 0.25f + Vector3.Up * 100 );
 		// DebugOverlay.Line( VelLine );
 		if ( LogSpeed )

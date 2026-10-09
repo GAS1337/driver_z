@@ -30,6 +30,7 @@ public sealed class OrbitalCameraController : Component
 
 	protected override void OnStart() 
 	{ 
+		MainCamera = Scene.Get<CameraComponent>();
 		RotationControl = GameObject.GetComponent<RotationControl>();
 		Yaw = Rotation.LookAt(CarBody.WorldRotation.Backward, Vector3.Up).Yaw();
 		MainCamera.FieldOfView = 90;
@@ -37,6 +38,7 @@ public sealed class OrbitalCameraController : Component
 
 	protected override void OnUpdate()
 	{
+		if (Network.IsProxy) { return; }
 		// Capture mouse and add to pitch and yaw angles
 		Angles mouseMove = Input.AnalogLook;
 		// Pitch = (Pitch + mouseMove.pitch ).Clamp( 20, -20 );

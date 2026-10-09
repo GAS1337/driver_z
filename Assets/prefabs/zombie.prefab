@@ -9,11 +9,11 @@
     "Scale": "1,1,1",
     "Tags": "enemy",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.Rigidbody",
@@ -135,6 +135,7 @@
           "go": "b655254f-7b15-4a6d-95de-9498d581256a",
           "component_type": "Rigidbody"
         },
+        "ClosestPlayer": null,
         "CulledRange": 15000,
         "DeadZombie": {
           "_type": "gameobject",
@@ -189,7 +190,10 @@
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/characters/char-zombie.vmdl",
+        "Model": {
+          "Id": "4dcc9853-7cc3-4b48-be83-856a9e71aebd",
+          "Path": "models/characters/char-zombie.vmdl"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -217,7 +221,7 @@
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -237,7 +241,10 @@
             "MaterialGroup": null,
             "MaterialOverride": null,
             "Materials": null,
-            "Model": "models/characters/char-zombie-no-arms.vmdl",
+            "Model": {
+              "Id": "9178d1b0-8448-4ef6-a4d4-bd2d6b139eea",
+              "Path": "models/characters/char-zombie-no-arms.vmdl"
+            },
             "Morphs": {},
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -498,7 +505,10 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/characters/zombieleftarm.vmdl",
+                "Model": {
+                  "Id": "c110b234-16a8-4c2b-94e2-1c2eb29028df",
+                  "Path": "models/characters/zombieleftarm.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -544,7 +554,10 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/characters/zombierightarm.vmdl",
+                "Model": {
+                  "Id": "cc243058-6915-487a-8635-edda807c2e5e",
+                  "Path": "models/characters/zombierightarm.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -575,7 +588,7 @@
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -655,7 +668,7 @@
         "Scale": "1,1,1",
         "Tags": "particles",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -731,11 +744,15 @@
               "ConstantA": "0.23721,0.13681,0.08275,1",
               "ConstantB": "0.2186,0.0911,0.0061,1"
             },
+            "InitialPitch": 0,
+            "InitialRoll": 0,
+            "InitialScale": 1,
             "InitialVelocity": {
               "X": 0,
               "Y": 0,
               "Z": 150
             },
+            "InitialYaw": 0,
             "Lifetime": {
               "Type": "Range",
               "Evaluation": "Seed",
@@ -798,6 +815,7 @@
                 }
               ]
             },
+            "SequenceFitToLifetime": false,
             "SequenceId": 0,
             "SequenceSpeed": 1,
             "SequenceTime": 1,
@@ -831,6 +849,8 @@
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
             "BlurSpacing": 0.73,
+            "CameraFadeFar": 0,
+            "CameraFadeNear": 0,
             "DepthFeather": 0,
             "FaceVelocity": false,
             "FogStrength": 1,
@@ -951,6 +971,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

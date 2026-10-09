@@ -29,7 +29,9 @@ public sealed class MonsterManager : Component
 
     protected override void OnStart()
     {
-        ActiveZombieSpawner = new List<GameObject>();
+		GameObject.Network.AssignOwnership( Connection.Host );
+
+		ActiveZombieSpawner = new List<GameObject>();
         ActiveGhostSpawner = new List<GameObject>();
         ActiveVampireSpawner = new List<GameObject>();
 
@@ -44,6 +46,12 @@ public sealed class MonsterManager : Component
 		// DebugOverlay.Box( SpawnArea, Color.Green );
 		// Listen aufräumen bevor neue Spawner gecloned werden
 
+		if ( !Networking.IsHost )
+		{
+			Log.Info( $"Owner is wrong?! {GameObject.Network.Owner} != {Connection.Host}" );
+			return;
+		}
+		// Log.Info( $"{GameObject.Network.Owner} == {Connection.Host}" );
 		ActiveZombieSpawner.RemoveAll( x => !x.IsValid );
         ActiveGhostSpawner.RemoveAll( x => !x.IsValid );
         ActiveVampireSpawner.RemoveAll( x => !x.IsValid );
@@ -160,5 +168,7 @@ public sealed class MonsterManager : Component
 				newSpawner.GetComponent<MonsterSpawner>().MaxMonsterSpawns = random.Int(2, 4);
                 break;
         }
-    }
+
+		newSpawner.NetworkSpawn();
+	}
 }

@@ -53,6 +53,7 @@ public sealed class WheelController : Component
 
 	protected override void OnUpdate()
 	{
+		if ( Network.IsProxy ) { return; }
 		// Log.Info( $"{Math.Round( FrontLeft.SpinSpeed, 0 )}  {Math.Round( FrontRight.SpinSpeed, 0 )}  {Math.Round( RearLeft.SpinSpeed, 0 )} {Math.Round( RearRight.SpinSpeed, 0 )}" );
 		TurnMotorOn( false );
 		TargetSpinSpeed = 0;
@@ -60,6 +61,7 @@ public sealed class WheelController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( Network.IsProxy ) { return; }
 		SetSpeedAndTorque( TargetSpinSpeed );
 		SteeringBoost = CarBody.Velocity.Length.Remap(0, 2000, 20, 0);
 

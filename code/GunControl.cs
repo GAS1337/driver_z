@@ -92,6 +92,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 	protected override void OnStart()
 	{
 
+		MainCamera = Scene.Get<CameraComponent>();
+
 		SceneLoader = Scene.Get<SceneLoader>();
 		HighscoreManager = Scene.Get<HighscoreManager>();
 
@@ -103,6 +105,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 	protected override void OnUpdate()
 	{
+		if ( Network.IsProxy ) { return; }
+
 		// Wo man hinaimed
 
 		Ray TurretRay = new Ray( MainCamera.WorldPosition + MainCamera.WorldRotation.Forward * 250, MainCamera.WorldRotation.Forward );
@@ -165,6 +169,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 				if ( SightlineTrace.GameObject.Tags.Has( "enemy" ) && !SightlineTrace.GameObject.Tags.Has("dead") )
 				{
+					SightlineTrace.GameObject.Network.TakeOwnership();
+
 					SinceHit = 0;
 
 					if ( SightlineTrace.GameObject.GetComponent<HealthSystem>().IsValid() ) SightlineTrace.GameObject.GetComponent<HealthSystem>().Damage( 50f );
@@ -278,7 +284,8 @@ public sealed class GunControl : Component, HealthSystem.IHealthEvent, Leaderboa
 
 		GameObject newRocket = Rocket.Clone( Muzzle.WorldPosition, Rotation.LookAt( MainCamera.WorldRotation.Forward, Vector3.Up ) );
 		newRocket.GetComponentInChildren<Rigidbody>().Velocity = (SightlineTrace.EndPosition - Muzzle.WorldPosition).Normal * RocketSpeed;
-	
+		newRocket.NetworkSpawn();
+
 		CurrentRockets--;
 	}
 

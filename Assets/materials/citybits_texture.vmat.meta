@@ -1,4 +1,5 @@
 {
+  "guid": "99a865b8-630b-4516-8bd7-1ae0fffd319a",
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
@@ -16,7 +17,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "materials/citybits_texture.vmat"
+        "SingleAssetSource": "materials/citybits_texture.vmat",
+        "ParentPackage": "straightgas.graveyard_gunners"
       }
     }
   }

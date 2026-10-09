@@ -9,11 +9,11 @@
     "Scale": "2,2,2",
     "Tags": "playerclip",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "TemporaryEffect",
@@ -114,9 +114,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-ressource-bits.vmat",
+                "MaterialOverride": {
+                  "Id": "a939a219-beb4-49fb-8e16-f50d658a956b",
+                  "Path": "shader/scanner-pulse-ressource-bits.vmat"
+                },
                 "Materials": null,
-                "Model": "models/kaykit_resourcebits_1.0_free/parts_pile_medium.vmdl",
+                "Model": {
+                  "Id": "75598213-25dc-4627-913c-c8493f89a3bc",
+                  "Path": "models/kaykit_resourcebits_1.0_free/parts_pile_medium.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -140,6 +146,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

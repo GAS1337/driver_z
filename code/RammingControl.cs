@@ -11,6 +11,8 @@ public sealed class RammingControl : Component, Component.ITriggerListener
 		if (CarBody.Velocity.Length < 800) return;
 		Log.Info( $"Rammed {other.Name}" );
 
+		other.Network.TakeOwnership();
+
 		// Stagger and Knock Zombie
 		if ( other.GetComponent<ZombieBrain>() != null )
 		{

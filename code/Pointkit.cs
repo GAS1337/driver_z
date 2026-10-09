@@ -53,7 +53,7 @@ public sealed class Pointkit : Component, Component.ITriggerListener
 
 		HighscoreManager.IncreaseScore( PointAmount );
 		Sound.Play( "sounds/medikitsound.sound", WorldPosition );
-
+		other.Network.TakeOwnership();
 		GameObject.Parent.Destroy();
 
 	}

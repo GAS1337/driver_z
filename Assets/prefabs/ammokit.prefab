@@ -9,11 +9,11 @@
     "Scale": "2,2,2",
     "Tags": "playerclip",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "TemporaryEffect",
@@ -114,9 +114,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-tower-defense.vmat",
+                "MaterialOverride": {
+                  "Id": "9fdb3e6b-49fe-4ea1-8adc-ddd6cc708c48",
+                  "Path": "shader/scanner-pulse-tower-defense.vmat"
+                },
                 "Materials": null,
-                "Model": "models/tower defense kit/weapon-ammo-bullet.vmdl",
+                "Model": {
+                  "Id": "e730be49-88cb-4f77-a164-613e0590bf92",
+                  "Path": "models/tower defense kit/weapon-ammo-bullet.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -160,9 +166,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-tower-defense.vmat",
+                "MaterialOverride": {
+                  "Id": "9fdb3e6b-49fe-4ea1-8adc-ddd6cc708c48",
+                  "Path": "shader/scanner-pulse-tower-defense.vmat"
+                },
                 "Materials": null,
-                "Model": "models/tower defense kit/weapon-ammo-bullet.vmdl",
+                "Model": {
+                  "Id": "e730be49-88cb-4f77-a164-613e0590bf92",
+                  "Path": "models/tower defense kit/weapon-ammo-bullet.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -206,9 +218,15 @@
                 "CreateAttachments": false,
                 "LodOverride": null,
                 "MaterialGroup": null,
-                "MaterialOverride": "shader/scanner-pulse-tower-defense.vmat",
+                "MaterialOverride": {
+                  "Id": "9fdb3e6b-49fe-4ea1-8adc-ddd6cc708c48",
+                  "Path": "shader/scanner-pulse-tower-defense.vmat"
+                },
                 "Materials": null,
-                "Model": "models/tower defense kit/weapon-ammo-bullet.vmdl",
+                "Model": {
+                  "Id": "e730be49-88cb-4f77-a164-613e0590bf92",
+                  "Path": "models/tower defense kit/weapon-ammo-bullet.vmdl"
+                },
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
@@ -232,6 +250,7 @@
     ],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

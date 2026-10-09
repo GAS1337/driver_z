@@ -9,7 +9,8 @@ public enum VampireState { Culled, Idle, Moving, Attack, Staggered }
 
 public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 {
-	GameObject Player;
+	LobbyManager LobbyManager;
+	[Property] GameObject ClosestPlayer;
 	Rigidbody PlayerBody;
 	[Property] TextRenderer StateDebugText;
 	[Property] bool DebugMode;
@@ -51,22 +52,26 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 			.WithoutTags( "enemy", "dead", "player", "playerclip" )
 			.Run();
 		GameObject newDecal = BloodDecal.Clone( GroundTrace.EndPosition, Rotation.LookAt( GroundTrace.Normal, Vector3.Up ).Angles().WithYaw( random.Int( -180, 180 ) ) );
+		newDecal.NetworkSpawn();
 
 		Sound.Play( "sounds/vampire/vampire-death.sound", GameObject.WorldPosition );
-		DeathParticle.Clone( GameObject.WorldPosition + Vector3.Up * 150, WorldRotation, WorldScale * 1.5f );
+		GameObject deathParticle = DeathParticle.Clone( GameObject.WorldPosition + Vector3.Up * 150, WorldRotation, WorldScale * 1.5f );
+		deathParticle.NetworkSpawn();
+
 		GameObject.Parent.Destroy();
 	}
 
 	protected override void OnStart()
 	{
+		LobbyManager = Scene.Get<LobbyManager>();
 		random = new Random();
 
 		originalScale = WorldScale;
 
 		if ( !DebugMode ) { StateDebugText.Enabled = false; }
 		
-		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
-		PlayerBody = Player.GetComponent<Rigidbody>();
+		ClosestPlayer = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
+		PlayerBody = ClosestPlayer.GetComponent<Rigidbody>();
 		BloodEmitter = ParticleObject.GetComponent<ParticleEmitter>();
 		// Log.Info(Player.Name);
 
@@ -91,6 +96,24 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
+		float minDistanceSq = float.MaxValue;
+		foreach ( GameObject player in LobbyManager.ConnectedPlayers.Values )
+		{
+			if ( !player.IsValid() ) return;
+			float distSq = WorldPosition.DistanceSquared( player.GetComponent<RotationControl>().CarBody.WorldPosition );
+			//Log.Info( player.Name + " is " + distSq + " far away" );
+
+
+			if ( distSq < minDistanceSq )
+			{
+				minDistanceSq = distSq;
+				if ( !player.IsValid() ) return;
+				ClosestPlayer = player.GetComponent<RotationControl>().CarBody.GameObject;
+				PlayerBody = player.GetComponent<RotationControl>().CarBody;
+				// Log.Info( "ClosestPlayer: " +ClosestPlayer.Network.Owner.Name + " is " + distSq + " far away" );
+			}
+		}
+
 		if ( SinceGroundCheck > 0.3f && CurrentState != VampireState.Idle )
 		{
 			SinceGroundCheck = 0;
@@ -102,10 +125,9 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 			.Run();
 			SinceGroundCheck = 0;
 		}
-		Vector3 playerPosition = Player.WorldPosition;
+		Vector3 playerPosition = ClosestPlayer.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 50).WithY( 0 ).WithX( 0 );
 		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 100; }
-
 		switch ( CurrentState ) 
 		{
 			default: 
@@ -203,15 +225,15 @@ public sealed class VampireBrain : Component, HealthSystem.IHealthEvent
 
 	private void LookAtPlayer()
 	{
-		if ( GameObject.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+		if ( GameObject.WorldRotation.Forward.Angle( ClosestPlayer.WorldPosition - GameObject.WorldPosition ) > 1 )
 		{
-			GameObject.WorldRotation = GameObject.WorldRotation.LerpTo( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f );
+			GameObject.WorldRotation = GameObject.WorldRotation.LerpTo( Rotation.LookAt( ClosestPlayer.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f );
 		}
 	}
 
 	private void Attack()
 	{
-		Player.GetComponentInParent<HealthSystem>().Damage(80, false);
+		ClosestPlayer.GetComponentInParent<HealthSystem>().Damage(80, false);
 		// Particle & Sound
 
 		ParticleObject.WorldPosition = PlayerBody.WorldPosition + Vector3.Up * 50;

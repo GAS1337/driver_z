@@ -3,6 +3,7 @@ using System;
 
 public sealed class GhostBallLogic : Component, Component.ITriggerListener
 {
+	[Property] SoundEvent FlyingSound;
 	[Property] ModelRenderer ExplosionModel;
 	[Property] TemporaryEffect temporaryEffect;
 	[Property] GameObject ExplosionEffect;
@@ -14,8 +15,8 @@ public sealed class GhostBallLogic : Component, Component.ITriggerListener
 	protected override void OnStart()
 	{
 		random = new Random();
-
-		attackSoundHandle.Parent = GameObject; 
+		attackSoundHandle = Sound.Play(FlyingSound);
+		attackSoundHandle.Parent = GameObject;
 		attackSoundHandle.FollowParent = true;
 	}
 	public void OnTriggerEnter( GameObject other ) 

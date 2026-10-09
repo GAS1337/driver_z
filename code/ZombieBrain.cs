@@ -9,8 +9,9 @@ public enum ZombieState { Wander, Approach, Leap, Slam, Staggered, Culled }
 
 public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 {
+	LobbyManager LobbyManager;
 	[Property] NavMeshAgent Agent;
-	GameObject Player;
+	[Property] GameObject ClosestPlayer;
 	[Property] Rigidbody Body;
 	[Property] ModelRenderer Model;
 	[Property] ModelRenderer LeftArmModel;
@@ -67,9 +68,11 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnStart()
 	{
+		LobbyManager = Scene.Get<LobbyManager>(); 
+
 		CurrentState = ZombieState.Wander;
 		Agent.MoveTo( Body.WorldPosition );
-		Player = Scene.FindAllWithTag("carbody").First<GameObject>();
+		ClosestPlayer = Scene.FindAllWithTag("carbody").First<GameObject>();
 
 		originalScale = WorldScale;
 		RangeOffset = random.Int( -500, 500 );
@@ -85,7 +88,8 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "dead", "player", "playerclip" )
 			.Run();
-		GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ).Angles().WithYaw(random.Int(-180, 180)) );		
+		GameObject newDecal = BloodDecal.Clone( groundCheck.EndPosition, Rotation.LookAt( groundCheck.Normal, Vector3.Up ).Angles().WithYaw(random.Int(-180, 180)) );
+		newDecal.NetworkSpawn();
 		GameObject _deadClone = DeadZombie.Clone( WorldPosition, WorldRotation, originalScale );
 		foreach (GameObject child in _deadClone.Children )
 		{
@@ -94,15 +98,33 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			child.GetComponent<Rigidbody>().AngularVelocity = random.VectorInSphere( random.Float( 3, 5) );
 			// child.Enabled = random.NextDouble() >= 0.5;
 		}
+		_deadClone.NetworkSpawn();
 
 		Sound.Play( "sounds/zombie-dies.sound", _deadClone.WorldPosition );
 	}
 
 	protected override void OnFixedUpdate()
 	{
+		float minDistanceSq = float.MaxValue;
+		foreach ( GameObject player in LobbyManager.ConnectedPlayers.Values )
+		{
+			if ( !player.IsValid() ) return;
+			float distSq = WorldPosition.DistanceSquared( player.GetComponent<RotationControl>().CarBody.WorldPosition );
+			// Log.Info( player.Name + " is " + distSq + " far away" ); 
+
+
+			if ( distSq < minDistanceSq )
+			{
+				minDistanceSq = distSq;
+				if ( !player.IsValid() ) return;
+				ClosestPlayer = player.GetComponent<RotationControl>().CarBody.GameObject;
+				// Log.Info( "ClosestPlayer: " +ClosestPlayer.Name + " is " + distSq + " far away" );
+
+			}
+		}
 
 		// DebugOverlay.Sphere( new Sphere( Body.WorldPosition, SlamRadius ), Color.Orange );
-		DistanceToPlayer = (Player.WorldPosition - WorldPosition).Length;
+		DistanceToPlayer = (ClosestPlayer.WorldPosition - WorldPosition).Length;
 
 		switch ( CurrentState ) 
 		{
@@ -152,7 +174,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				// Walk to Player and rotate
 				if ( NextMove )
 				{
-					Agent.MoveTo( Player.WorldPosition + (Body.WorldPosition - Player.WorldPosition).Normal * 200 );
+					Agent.MoveTo( ClosestPlayer.WorldPosition + (Body.WorldPosition - ClosestPlayer.WorldPosition).Normal * 200 );
 					NextMove = MoveCooldown + random.Float(0f, 0.1f);
 				}
 				LookAtPlayer();
@@ -172,7 +194,7 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 				// Go to Leap if NextMove, Distance und sightlineCheck 
 				if ( DistanceToPlayer < LeapRange && DistanceToPlayer > SlamRadius * 3 && NextLeap && NextSlam ) 
 				{
-					SceneTraceResult checkSightline = Scene.Trace.Sphere( 64, Body.WorldPosition + Vector3.Up * 300, Player.WorldPosition + Vector3.Up * 300 )
+					SceneTraceResult checkSightline = Scene.Trace.Sphere( 64, Body.WorldPosition + Vector3.Up * 300, ClosestPlayer.WorldPosition + Vector3.Up * 300 )
 						.IgnoreGameObjectHierarchy( GameObject )
 						.WithoutTags( "enemy", "player", "world" )
 						.Run();
@@ -260,9 +282,9 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 
 	private void LookAtPlayer()
 	{
-		if ( Body.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+		if ( Body.WorldRotation.Forward.Angle( ClosestPlayer.WorldPosition - GameObject.WorldPosition ) > 1 )
 		{
-			Body.SmoothRotate( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ).Angles().WithPitch(0), 0.5f, 0.01f );
+			Body.SmoothRotate( Rotation.LookAt( ClosestPlayer.WorldPosition - GameObject.WorldPosition, Vector3.Up ).Angles().WithPitch(0), 0.5f, 0.01f );
 		}
 	}
 
@@ -331,11 +353,11 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 			attackTrace.GameObject.GetComponentInParent<HealthSystem>().Damage( 500 );
 
 			if ( !attackTrace.GameObject.GetComponent<Rigidbody>().IsValid ) return;
-			if (Player.GetComponent<Rigidbody>().Velocity.z < 100 ) 
+			if (ClosestPlayer.GetComponent<Rigidbody>().Velocity.z < 100 ) 
 			{ 
-				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (Player.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 300000 );
+				attackTrace.GameObject.GetComponent<Rigidbody>().ApplyImpulse( Vector3.Up * 50000 + (ClosestPlayer.WorldPosition.WithZ(0) - Body.WorldPosition.WithZ(0)).Normal * 300000 );
 				attackTrace.GameObject.GetComponent<Rigidbody>().AngularVelocity 
-					= attackTrace.GameObject.WorldRotation.Forward * attackTrace.GameObject.GetComponent<Rigidbody>().Mass * 5 * attackTrace.GameObject.WorldRotation.Right.Dot( ( Player.WorldPosition - Body.WorldPosition ).Normal);
+					= attackTrace.GameObject.WorldRotation.Forward * attackTrace.GameObject.GetComponent<Rigidbody>().Mass * 5 * attackTrace.GameObject.WorldRotation.Right.Dot( ( ClosestPlayer.WorldPosition - Body.WorldPosition ).Normal);
 			}
 		}
 
@@ -346,10 +368,10 @@ public sealed class ZombieBrain : Component, HealthSystem.IHealthEvent
 	void DoLeap()
 	{
 		Sound.Play( "sounds/whaa.sound", Body.WorldPosition );
-		var playerRb = Player.GetComponent<Rigidbody>();
+		var playerRb = ClosestPlayer.GetComponent<Rigidbody>();
 
 		// find ground below player to get accurate target position and flight time
-		SceneTraceResult findGround = Scene.Trace.Ray( Player.WorldPosition, Player.WorldPosition + Vector3.Down * 5000 )
+		SceneTraceResult findGround = Scene.Trace.Ray( ClosestPlayer.WorldPosition, ClosestPlayer.WorldPosition + Vector3.Down * 5000 )
 			.Radius( 32 )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "enemy", "player" )

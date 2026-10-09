@@ -1,4 +1,5 @@
 {
+  "guid": "8787eace-dff0-4211-8946-0d9bd0745620",
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
@@ -16,7 +17,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "materials/fence.vmat"
+        "SingleAssetSource": "materials/fence.vmat",
+        "ParentPackage": "straightgas.graveyard_gunners"
       }
     }
   }

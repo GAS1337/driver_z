@@ -132,6 +132,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           }
         ],
@@ -237,6 +238,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           }
         ],
@@ -342,6 +344,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           }
         ],
@@ -447,6 +450,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           }
         ],
@@ -527,6 +531,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           },
           {
@@ -632,6 +637,7 @@
             "OnComponentUpdate": null,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,
+            "SleepThreshold": 2,
             "StartAsleep": false
           },
           {

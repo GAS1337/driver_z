@@ -3,13 +3,15 @@ using System;
 using System.Threading.Tasks;
 using static Ballistics;
 using static HealthSystem;
+using static Sandbox.PhysicsContact;
 
 public enum GhostState { Culled, Idle, Moving, Attack, Staggered }
 
 
 public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 {
-	GameObject Player;
+	LobbyManager LobbyManager;
+	[Property] GameObject ClosestPlayer;
 	Rigidbody PlayerBody;
 	[Property] GameObject GhostBall;
 	[Property] GameObject DeadGhost;
@@ -52,19 +54,22 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			.WithoutTags( "enemy", "dead", "player", "playerclip" )
 			.Run();
 		GameObject newDecal = BloodDecal.Clone( GroundTrace.EndPosition, Rotation.LookAt( GroundTrace.Normal, Vector3.Up ).Angles().WithYaw( random.Int( -180, 180 ) ) );
-
+		newDecal.NetworkSpawn();
 
 		Sound.Play(DeathSound, WorldPosition);
-		DeadGhost.Clone( WorldPosition + Vector3.Up * 100, GameObject.WorldRotation, GameObject.WorldScale );
+		GameObject _deadGhost = DeadGhost.Clone( WorldPosition + Vector3.Up * 100, GameObject.WorldRotation, GameObject.WorldScale );
+		_deadGhost.NetworkSpawn();
+
 		GameObject.Parent.Destroy();
 	}
 
 	protected override void OnStart()
 	{
+		LobbyManager = Scene.Get<LobbyManager>();
 		random = new Random();
 
-		Player = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
-		PlayerBody = Player.GetComponent<Rigidbody>();
+		ClosestPlayer = Scene.FindAllWithTag( "carbody" ).First<GameObject>();
+		PlayerBody = ClosestPlayer.GetComponent<Rigidbody>();
 
 		originalScale = WorldScale;
 
@@ -90,6 +95,24 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	protected override void OnFixedUpdate()
 	{
+		float minDistanceSq = float.MaxValue;
+		foreach (GameObject player in LobbyManager.ConnectedPlayers.Values )
+		{
+			if ( !player.IsValid() ) return;
+			float distSq = WorldPosition.DistanceSquared( player.GetComponent<RotationControl>().CarBody.WorldPosition );
+			// Log.Info( player.Name + " is " + distSq + " far away" ); 
+			
+
+			if ( distSq < minDistanceSq )
+			{
+				minDistanceSq = distSq;
+				if ( !player.IsValid() ) return;
+				ClosestPlayer = player.GetComponent<RotationControl>().CarBody.GameObject;
+				PlayerBody = player.GetComponent<RotationControl>().CarBody;
+				// Log.Info( "ClosestPlayer: " +ClosestPlayer.Network.Owner.Name + " is " + distSq + " far away" );
+			}
+		}
+
 		if (SinceGroundCheck > 0.3f && CurrentState != GhostState.Idle ) 
 		{
 			GroundTrace = Scene.Trace
@@ -102,7 +125,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			SinceGroundCheck = 0;
 		}
 
-		Vector3 playerPosition = Player.WorldPosition;
+		Vector3 playerPosition = ClosestPlayer.WorldPosition;
 		Vector3 hoverHeight = (GroundTrace.EndPosition + Vector3.Up * 1000).WithY( 0 ).WithX( 0 );
 		if ( !GroundTrace.Hit ) { hoverHeight = Vector3.Up * 1000; }
 
@@ -199,9 +222,9 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 
 	private void LookAtPlayer()
 	{
-		if ( GameObject.WorldRotation.Forward.Angle( Player.WorldPosition - GameObject.WorldPosition ) > 1 )
+		if ( GameObject.WorldRotation.Forward.Angle( PlayerBody.WorldPosition - GameObject.WorldPosition ) > 1 )
 		{
-			GameObject.WorldRotation = GameObject.WorldRotation.LerpTo( Rotation.LookAt( Player.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f );
+			GameObject.WorldRotation = GameObject.WorldRotation.LerpTo( Rotation.LookAt( PlayerBody.WorldPosition - GameObject.WorldPosition, Vector3.Up ), 0.5f );
 		}
 	}
 
@@ -224,12 +247,9 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 		Rigidbody newBody = newBall.GetComponent<Rigidbody>();
 		// newBody.Velocity = Vector3.Down * 100;
 
-		// Sound
-		newBall.GetComponent<GhostBallLogic>().attackSoundHandle = Sound.Play( AttackSound, newBall.WorldPosition );
-
 		// Unity Conversion
 		Vector3 UnityProjPos = new Vector3( WorldPosition.x, WorldPosition.z, WorldPosition.y );
-		Vector3 UnityTargetPos = new Vector3( Player.WorldPosition.x, Player.WorldPosition.z + 100, Player.WorldPosition.y ) + random.VectorInSphere(1);
+		Vector3 UnityTargetPos = new Vector3( ClosestPlayer.WorldPosition.x, ClosestPlayer.WorldPosition.z + 100, ClosestPlayer.WorldPosition.y ) + random.VectorInSphere(1);
 		Vector3 UnityTargetVel = new Vector3( PlayerBody.Velocity.x, PlayerBody.Velocity.z, PlayerBody.Velocity.y );
 		if ( UnityTargetVel.Length < 1 ) { UnityTargetVel = Vector3.Forward; }
 
@@ -246,6 +266,7 @@ public sealed class GhostBrain : Component, HealthSystem.IHealthEvent
 			//Apply Velocity
 			newBody.Velocity = solutionVelocity;
 		}
+		if ( !IsProxy ) newBall.NetworkSpawn();
 	}
 
 	public async Task AnimateHit()

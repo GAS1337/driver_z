@@ -1,4 +1,5 @@
 {
+  "guid": "1719a478-0ff3-4134-a790-c09f386e671d",
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
@@ -16,7 +17,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "materials/tankco.vmat"
+        "SingleAssetSource": "materials/tankco.vmat",
+        "ParentPackage": "straightgas.graveyard_gunners"
       }
     }
   }

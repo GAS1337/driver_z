@@ -34,6 +34,7 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 			if ( monster == null ) { return; }
 
 			GameObject newBlitz = BlitzPrefab.Clone(monster.GetComponentInChildren<LineRenderer>().Points[0].WorldPosition, monster.WorldRotation.Angles().WithYaw(random.Float(0, 360)), new Vector3(10, 10, 10));
+			newBlitz.NetworkSpawn();
 			newBlitz.SetParent( monster.GetComponentInChildren<LineRenderer>().GameObject );
 			newBlitz.GetComponent<Blitz>().MonsterLineColor = LineRenderer.Color.Evaluate( 0.5f );
 			newBlitz.GetComponent<Blitz>().LightningStrike(0.2f);
@@ -45,6 +46,7 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 			else { monster.GetComponentInChildren<HealthSystem>().Damage( monster.GetComponentInChildren<HealthSystem>().CurrentHealth * 0.8f ); }
 		}
 		GameObject newDeadMonsterSpawner = DeadMonsterSpawner.Clone(WorldPosition + Vector3.Up, WorldRotation, WorldScale);
+		newDeadMonsterSpawner.NetworkSpawn();
 		foreach ( GameObject child in newDeadMonsterSpawner.Children ) 
 		{
 			child.GetComponent<Rigidbody>().ApplyImpulse( (child.WorldPosition - GameObject.WorldPosition).Normal * 3 * child.GetComponent<Rigidbody>().Mass );
@@ -83,8 +85,10 @@ public sealed class MonsterSpawner : Component, HealthSystem.IHealthEvent
 
 	void SpawnMonster()
 	{
+		if ( Network.IsProxy ) return;
 		// Particle Effekt, Sound?
 		GameObject currentMonster = MonsterPrefab.Clone( WorldPosition + (Vector3)random.VectorInCircle() * random.Int(200, 500), WorldRotation, Vector3.One * MonsterScaleFactor * random.Float(0.9f, 1.1f) );
+		currentMonster.NetworkSpawn();
 		SpawnedMonsters.Add(currentMonster);
 		IMonsterSpawnerEvent.PostToGameObject( this.GameObject, x => x.OnMonsterSpawn() );
 	}

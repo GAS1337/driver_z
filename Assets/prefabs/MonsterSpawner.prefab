@@ -9,7 +9,7 @@
     "Scale": "5,5,5",
     "Tags": "enemy",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
@@ -55,6 +55,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "OrbitalCameraController": null,
         "SetHealth": 2500,
         "SetPoints": 2500
       },
@@ -95,7 +96,7 @@
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -155,6 +156,8 @@
                 "AttenuationAngle": 1,
                 "ColorMix": 1,
                 "ColorTint": "0.09412,0.08627,0.12941,1",
+                "CoverageAmount": 1,
+                "CoverageRange": 0.07,
                 "Decals": [
                   "decals/bullethole.decal"
                 ],
@@ -204,6 +207,8 @@
                 "AttenuationAngle": 1,
                 "ColorMix": 1,
                 "ColorTint": "0.09412,0.08627,0.12941,1",
+                "CoverageAmount": 1,
+                "CoverageRange": 0.07,
                 "Decals": [
                   "decals/bullethole.decal"
                 ],
@@ -253,6 +258,8 @@
                 "AttenuationAngle": 1,
                 "ColorMix": 1,
                 "ColorTint": "0.09725,0.08783,0.13023,1",
+                "CoverageAmount": 1,
+                "CoverageRange": 0.07,
                 "Decals": [
                   "decals/bullethole.decal"
                 ],
@@ -302,6 +309,8 @@
                 "AttenuationAngle": 1,
                 "ColorMix": 1,
                 "ColorTint": "0.09725,0.08783,0.13023,1",
+                "CoverageAmount": 1,
+                "CoverageRange": 0.07,
                 "Decals": [
                   "decals/bullethole.decal"
                 ],
@@ -351,6 +360,8 @@
                 "AttenuationAngle": 1,
                 "ColorMix": 1,
                 "ColorTint": "0.09725,0.08783,0.13023,1",
+                "CoverageAmount": 1,
+                "CoverageRange": 0.07,
                 "Decals": [
                   "decals/bullethole.decal"
                 ],
@@ -387,7 +398,7 @@
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -671,7 +682,7 @@
         "Scale": "1,1,1",
         "Tags": "particles",
         "Enabled": true,
-        "NetworkMode": 2,
+        "NetworkMode": 1,
         "NetworkFlags": 0,
         "NetworkOrphaned": 0,
         "NetworkTransmit": true,
@@ -823,6 +834,8 @@
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
             "BlurSpacing": 0.73,
+            "CameraFadeFar": 0,
+            "CameraFadeNear": 0,
             "DepthFeather": 0,
             "FaceVelocity": false,
             "FogStrength": 1,
@@ -857,6 +870,8 @@
                     "FrameRate": 15,
                     "Origin": "0.5,0.5",
                     "LoopMode": "Loop",
+                    "LoopStart": -1,
+                    "LoopEnd": -1,
                     "Frames": [
                       {
                         "Texture": "textures/particles/smoke/smoke_loop_a.vtex",
@@ -880,6 +895,7 @@
             "Burst": 0,
             "Delay": 0,
             "DestroyOnEnd": false,
+            "DistanceBias": "1,1,1",
             "Duration": 5,
             "Loop": true,
             "OnComponentDestroy": null,
@@ -889,6 +905,7 @@
             "OnComponentStart": null,
             "OnComponentUpdate": null,
             "OnEdge": false,
+            "OneSidedAxes": "None",
             "Radius": 100,
             "Rate": 2,
             "RateOverDistance": 0,

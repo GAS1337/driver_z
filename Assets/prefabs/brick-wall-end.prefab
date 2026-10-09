@@ -9,11 +9,11 @@
     "Scale": "1,1,1",
     "Tags": "enemy,prop",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
-    "OwnerTransfer": 1,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
@@ -26,7 +26,10 @@
         "MaterialGroup": null,
         "MaterialOverride": null,
         "Materials": null,
-        "Model": "models/graveyard kit/brick-wall-end.vmdl",
+        "Model": {
+          "Id": "fd03f7ff-412b-443c-bbae-e82b891fce0c",
+          "Path": "models/graveyard kit/brick-wall-end.vmdl"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -51,7 +54,10 @@
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/graveyard kit/brick-wall-end.vmdl",
+        "Model": {
+          "Id": "fd03f7ff-412b-443c-bbae-e82b891fce0c",
+          "Path": "models/graveyard kit/brick-wall-end.vmdl"
+        },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -103,6 +109,7 @@
     "Children": [],
     "__properties": {
       "NetworkInterpolation": true,
+      "PhysicsMode": "Physics3D",
       "TimeScale": 1,
       "WantsSystemScene": true,
       "Metadata": {},

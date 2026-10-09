@@ -51,7 +51,7 @@ public sealed class Medikit : Component, Component.ITriggerListener
 		{
 			other.GetComponentInParent<HealthSystem>().Damage( -HealAmount, false );
 			Sound.Play( "sounds/medikitsound.sound", WorldPosition );
-
+			other.Network.TakeOwnership();
 			GameObject.Parent.Destroy();
 		}
 	}

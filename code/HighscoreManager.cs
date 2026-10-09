@@ -3,10 +3,12 @@ using System;
 
 public sealed class HighscoreManager : Component
 {
-	[Property] Rigidbody CarBody;
-	[Property] RotationControl RotationControl;
+	[Property] public LobbyManager LobbyManager { get; set; }
+	[Property] public GameObject Screen { get; set; }
+	Rigidbody CarBody;
+	RotationControl RotationControl;
 
-	public float CurrentScore;
+	[Sync] public float CurrentScore { get; set; } = 0;
 	float LatestScore;
 	public float LastGainedScore;
 
@@ -16,17 +18,54 @@ public sealed class HighscoreManager : Component
 
 	protected override void OnEnabled()
 	{
+		var hud = Screen?.Components.Get<HUD>() ?? Scene.GetAllComponents<HUD>().FirstOrDefault();
+		if ( hud.IsValid() )
+		{
+			hud.HighscoreManager = this;
+		}
+
+		TryFindLocalCar();
+
 		SinceGameStart = 0;
 	}
 
 	protected override void OnUpdate()
 	{
-		// Log.Info( "Current Score: " + CurrentScore + " Last score: " + LatestScore );
+		if ( RotationControl == null || CarBody == null )
+		{
+			TryFindLocalCar();
+		}
+
+		var hud = Screen?.Components.Get<HUD>() ?? Scene.GetAllComponents<HUD>().FirstOrDefault();
+		if ( hud.IsValid() && hud.HighscoreManager != this )
+		{
+			hud.HighscoreManager = this;
+		}
+
 		TimeSpanSinceGameStart = TimeSpan.FromSeconds( SinceGameStart );
 	}
 
+	private void TryFindLocalCar()
+	{
+		if ( !LobbyManager.IsValid() )
+		{
+			LobbyManager = Scene.GetAllComponents<LobbyManager>().FirstOrDefault();
+		}
+
+		if ( LobbyManager.IsValid() && LobbyManager.ConnectedPlayers != null && Connection.Local != null )
+		{
+			if ( LobbyManager.ConnectedPlayers.TryGetValue( Connection.Local.SteamId, out var localPlayer ) && localPlayer.IsValid() )
+			{
+				RotationControl = localPlayer.Components.Get<RotationControl>();
+				CarBody = RotationControl?.CarBody;
+			}
+		}
+	}
+
+	[Rpc.Broadcast]
 	public void IncreaseScore(float amount)
 	{
+		if ( IsProxy ) return;
 		amount *= CalculateMultiplier();
 		amount = (float)Math.Round(amount, 0);
 		CurrentScore += amount;
@@ -63,6 +102,9 @@ public sealed class HighscoreManager : Component
 	public float CalculateMultiplier()
 	{
 		float multiplier = 1f;
+
+		if ( !CarBody.IsValid() || !RotationControl.IsValid() )
+			return multiplier;
 
 		multiplier += CarBody.Velocity.Length.Remap( 1000, 3500, 0, 0.5f );
 		if (!RotationControl.IsGrounded) { multiplier += 0.5f; }

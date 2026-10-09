@@ -47,8 +47,7 @@ public sealed class Ammokit : Component, Component.ITriggerListener
 		Log.Info( $"Collided with {other.Name}" );
 		other.GetComponentInParent<GunControl>().CurrentRockets += RocketAmount;
 		Sound.Play( "sounds/medikitsound.sound", WorldPosition );
-
+		other.Network.TakeOwnership();
 		GameObject.Parent.Destroy();
-
 	}
 }
